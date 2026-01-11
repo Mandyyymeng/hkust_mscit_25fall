@@ -1,0 +1,46 @@
+================================================================================
+CLIP ZERO-SHOT CLASSIFICATION EXPERIMENT REPORT
+================================================================================
+
+EXPERIMENT SETUP
+----------------------------------------
+Model: ViT-B/32
+Dataset: Caltech101
+Number of Classes: 102
+Simple Templates: 1
+Ensemble Templates: 34
+
+BASELINE COMPARISON (Feature Averaging Method)
+--------------------------------------------------
+Method               Accuracy     Templates  Time(s)   
+--------------------------------------------------
+simple_baseline      0.8740       1          47.10     
+ensemble_baseline    0.8735       34         60.81     
+
+ENSEMBLE IMPLEMENTATION METHODS COMPARISON
+----------------------------------------------------------------------
+Method               Accuracy     Time(s)    Description                             
+----------------------------------------------------------------------
+feature_average      0.8735       2587.29    Average text features across all templ  
+prediction_average   0.8676       1409.96    Average prediction scores across templ  
+majority_voting      0.8740       1405.44    Each template votes for one class, maj  
+weighted_prediction  0.8760       1392.74    Weighted average of predictions based   
+learned_weighting    0.8676       1436.93    Logistic regression learned weights fo  
+selective_ensemble   0.8740       45.16      Baseline with 8 template(s) using feat  
+
+OVERALL PERFORMANCE RANKING
+------------------------------------------------------------
+Rank   Method               Accuracy     Time(s)    Type      
+------------------------------------------------------------
+1      weighted_prediction  0.8760       1392.74    ensemble  
+2      simple_baseline      0.8740       47.10      baseline  
+3      majority_voting      0.8740       1405.44    ensemble  
+4      selective_ensemble   0.8740       45.16      ensemble  
+5      ensemble_baseline    0.8735       60.81      baseline  
+6      feature_average      0.8735       2587.29    ensemble  
+7      prediction_average   0.8676       1409.96    ensemble  
+8      learned_weighting    0.8676       1436.93    ensemble  
+
+IMPROVEMENT ANALYSIS
+----------------------------------------
+Simple → Ensemble Baseline: +-0.0005 

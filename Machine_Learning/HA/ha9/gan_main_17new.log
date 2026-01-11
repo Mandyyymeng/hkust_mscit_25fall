@@ -1,0 +1,143 @@
+nohup: ignoring input
+/ssddata/zzhanglc/miniconda3/envs/ml39/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/ssddata/zzhanglc/miniconda3/envs/ml39/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=Inception_V3_Weights.IMAGENET1K_V1`. You can also use `weights=Inception_V3_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+2025-11-11 22:38:17,895 - INFO - Starting experiment: exp14_gradient_penalty_improved
+2025-11-11 22:38:17,895 - INFO - Config: {'use_gradient_penalty': True, 'loss_function': 'wasserstein', 'gp_weight': 10.0, 'n_critic': 3, 'd_lr': 0.0001, 'g_lr': 0.0001, 'num_epochs': 20, 'description': 'WGAN-GP with balanced training'}
+2025-11-11 22:38:18,009 - INFO - Discriminator LR: 0.0001, Generator LR: 0.0001
+2025-11-11 22:38:28,995 - INFO - Epoch [0/20], Step [200/469], d_loss: 1.4743, g_loss: -0.1992, D(x): 0.60, D(G(z)): 0.25
+2025-11-11 22:38:38,924 - INFO - Epoch [0/20], Step [400/469], d_loss: 1.5357, g_loss: -0.2200, D(x): 0.46, D(G(z)): 0.20
+2025-11-11 22:38:52,453 - INFO - Epoch [1/20], Step [200/469], d_loss: 0.8513, g_loss: -0.2535, D(x): 0.44, D(G(z)): 0.23
+2025-11-11 22:39:02,506 - INFO - Epoch [1/20], Step [400/469], d_loss: 0.7925, g_loss: -0.3707, D(x): 0.42, D(G(z)): 0.23
+2025-11-11 22:39:15,672 - INFO - Epoch [2/20], Step [200/469], d_loss: 0.5962, g_loss: -0.3628, D(x): 0.43, D(G(z)): 0.21
+2025-11-11 22:39:24,878 - INFO - Epoch [2/20], Step [400/469], d_loss: 0.7788, g_loss: -0.3567, D(x): 0.37, D(G(z)): 0.22
+2025-11-11 22:39:38,374 - INFO - Epoch [3/20], Step [200/469], d_loss: 0.5942, g_loss: -0.3363, D(x): 0.44, D(G(z)): 0.24
+2025-11-11 22:39:48,619 - INFO - Epoch [3/20], Step [400/469], d_loss: 0.5095, g_loss: -0.3757, D(x): 0.44, D(G(z)): 0.19
+2025-11-11 22:40:01,929 - INFO - Epoch [4/20], Step [200/469], d_loss: 0.4092, g_loss: -0.3308, D(x): 0.45, D(G(z)): 0.23
+2025-11-11 22:40:12,330 - INFO - Epoch [4/20], Step [400/469], d_loss: 0.2437, g_loss: -0.3382, D(x): 0.49, D(G(z)): 0.18
+2025-11-11 22:40:25,453 - INFO - Epoch [5/20], Step [200/469], d_loss: 0.1083, g_loss: -0.2326, D(x): 0.59, D(G(z)): 0.19
+2025-11-11 22:40:35,227 - INFO - Epoch [5/20], Step [400/469], d_loss: -0.0413, g_loss: -0.3465, D(x): 0.55, D(G(z)): 0.19
+2025-11-11 22:40:48,159 - INFO - Epoch [6/20], Step [200/469], d_loss: -0.0925, g_loss: -0.2538, D(x): 0.65, D(G(z)): 0.24
+2025-11-11 22:40:58,295 - INFO - Epoch [6/20], Step [400/469], d_loss: -0.0465, g_loss: -0.3754, D(x): 0.57, D(G(z)): 0.26
+2025-11-11 22:41:11,642 - INFO - Epoch [7/20], Step [200/469], d_loss: -0.1205, g_loss: -0.3162, D(x): 0.57, D(G(z)): 0.22
+2025-11-11 22:41:21,665 - INFO - Epoch [7/20], Step [400/469], d_loss: -0.1030, g_loss: -0.3097, D(x): 0.64, D(G(z)): 0.27
+2025-11-11 22:41:35,050 - INFO - Epoch [8/20], Step [200/469], d_loss: -0.1570, g_loss: -0.2625, D(x): 0.74, D(G(z)): 0.31
+2025-11-11 22:41:45,382 - INFO - Epoch [8/20], Step [400/469], d_loss: -0.1989, g_loss: -0.3092, D(x): 0.71, D(G(z)): 0.33
+2025-11-11 22:41:58,284 - INFO - Epoch [9/20], Step [200/469], d_loss: -0.2129, g_loss: -0.2766, D(x): 0.71, D(G(z)): 0.29
+2025-11-11 22:42:08,160 - INFO - Epoch [9/20], Step [400/469], d_loss: -0.0925, g_loss: -0.1625, D(x): 0.82, D(G(z)): 0.44
+2025-11-11 22:42:11,717 - INFO - Saved checkpoint at epoch 10
+2025-11-11 22:42:21,804 - INFO - Epoch [10/20], Step [200/469], d_loss: -0.1537, g_loss: -0.2807, D(x): 0.73, D(G(z)): 0.36
+2025-11-11 22:42:31,865 - INFO - Epoch [10/20], Step [400/469], d_loss: -0.1550, g_loss: -0.2745, D(x): 0.78, D(G(z)): 0.42
+2025-11-11 22:42:45,429 - INFO - Epoch [11/20], Step [200/469], d_loss: -0.2259, g_loss: -0.3671, D(x): 0.71, D(G(z)): 0.32
+2025-11-11 22:42:55,149 - INFO - Epoch [11/20], Step [400/469], d_loss: -0.1892, g_loss: -0.2438, D(x): 0.74, D(G(z)): 0.36
+2025-11-11 22:43:08,469 - INFO - Epoch [12/20], Step [200/469], d_loss: -0.0812, g_loss: -0.2532, D(x): 0.77, D(G(z)): 0.40
+2025-11-11 22:43:18,420 - INFO - Epoch [12/20], Step [400/469], d_loss: -0.1523, g_loss: -0.3022, D(x): 0.76, D(G(z)): 0.36
+2025-11-11 22:43:31,655 - INFO - Epoch [13/20], Step [200/469], d_loss: -0.1492, g_loss: -0.3129, D(x): 0.73, D(G(z)): 0.39
+2025-11-11 22:43:40,556 - INFO - Epoch [13/20], Step [400/469], d_loss: -0.1679, g_loss: -0.2801, D(x): 0.71, D(G(z)): 0.36
+2025-11-11 22:43:54,040 - INFO - Epoch [14/20], Step [200/469], d_loss: -0.1485, g_loss: -0.3401, D(x): 0.67, D(G(z)): 0.30
+2025-11-11 22:44:03,827 - INFO - Epoch [14/20], Step [400/469], d_loss: 0.0006, g_loss: -0.3288, D(x): 0.74, D(G(z)): 0.46
+2025-11-11 22:44:16,379 - INFO - Epoch [15/20], Step [200/469], d_loss: -0.0922, g_loss: -0.3760, D(x): 0.64, D(G(z)): 0.33
+2025-11-11 22:44:25,812 - INFO - Epoch [15/20], Step [400/469], d_loss: -0.1151, g_loss: -0.3904, D(x): 0.65, D(G(z)): 0.31
+2025-11-11 22:44:39,325 - INFO - Epoch [16/20], Step [200/469], d_loss: -0.0456, g_loss: -0.4635, D(x): 0.55, D(G(z)): 0.28
+2025-11-11 22:44:49,042 - INFO - Epoch [16/20], Step [400/469], d_loss: 0.0532, g_loss: -0.3802, D(x): 0.61, D(G(z)): 0.28
+2025-11-11 22:45:02,344 - INFO - Epoch [17/20], Step [200/469], d_loss: -0.0691, g_loss: -0.3407, D(x): 0.61, D(G(z)): 0.31
+2025-11-11 22:45:12,587 - INFO - Epoch [17/20], Step [400/469], d_loss: -0.1265, g_loss: -0.3397, D(x): 0.69, D(G(z)): 0.35
+2025-11-11 22:45:25,507 - INFO - Epoch [18/20], Step [200/469], d_loss: -0.1842, g_loss: -0.3444, D(x): 0.76, D(G(z)): 0.39
+2025-11-11 22:45:34,997 - INFO - Epoch [18/20], Step [400/469], d_loss: -0.1827, g_loss: -0.3696, D(x): 0.69, D(G(z)): 0.33
+2025-11-11 22:45:47,993 - INFO - Epoch [19/20], Step [200/469], d_loss: -0.2379, g_loss: -0.3514, D(x): 0.68, D(G(z)): 0.31
+2025-11-11 22:45:56,848 - INFO - Epoch [19/20], Step [400/469], d_loss: -0.2031, g_loss: -0.3557, D(x): 0.73, D(G(z)): 0.41
+2025-11-11 22:46:00,028 - INFO - Saved checkpoint at epoch 20
+2025-11-11 22:46:00,735 - INFO - Calculating FID score...
+2025-11-11 22:46:16,514 - INFO - Analyzing latent space...
+2025-11-11 22:46:16,515 - ERROR - Experiment exp14_gradient_penalty_improved failed: name 'analyze_latent_space' is not defined
+2025-11-11 22:46:16,522 - INFO - Starting experiment: exp15_pure_capacity
+2025-11-11 22:46:16,522 - INFO - Config: {'hidden_size': 512, 'latent_size': 128, 'num_epochs': 10, 'lr': 0.0001, 'description': 'Pure Capacity: Only hidden_size↑ from 256→512, all else equal'}
+2025-11-11 22:46:16,606 - INFO - Discriminator LR: 0.0001, Generator LR: 0.0001
+2025-11-11 22:46:23,133 - INFO - Epoch [0/10], Step [200/469], d_loss: 0.5082, g_loss: 1.3948, D(x): 0.93, D(G(z)): 0.35
+2025-11-11 22:46:30,332 - INFO - Epoch [0/10], Step [400/469], d_loss: 0.3565, g_loss: 2.3668, D(x): 0.84, D(G(z)): 0.10
+2025-11-11 22:46:37,847 - INFO - Epoch [1/10], Step [200/469], d_loss: 0.3092, g_loss: 5.1100, D(x): 0.93, D(G(z)): 0.17
+2025-11-11 22:46:44,897 - INFO - Epoch [1/10], Step [400/469], d_loss: 0.2615, g_loss: 3.3646, D(x): 0.92, D(G(z)): 0.11
+2025-11-11 22:46:53,894 - INFO - Epoch [2/10], Step [200/469], d_loss: 0.3848, g_loss: 3.1382, D(x): 0.89, D(G(z)): 0.17
+2025-11-11 22:47:01,006 - INFO - Epoch [2/10], Step [400/469], d_loss: 0.3687, g_loss: 3.0649, D(x): 0.88, D(G(z)): 0.16
+2025-11-11 22:47:10,401 - INFO - Epoch [3/10], Step [200/469], d_loss: 0.5048, g_loss: 3.1215, D(x): 0.83, D(G(z)): 0.14
+2025-11-11 22:47:17,517 - INFO - Epoch [3/10], Step [400/469], d_loss: 0.2985, g_loss: 3.4346, D(x): 0.90, D(G(z)): 0.13
+2025-11-11 22:47:27,202 - INFO - Epoch [4/10], Step [200/469], d_loss: 0.3762, g_loss: 3.6838, D(x): 0.82, D(G(z)): 0.04
+2025-11-11 22:47:34,257 - INFO - Epoch [4/10], Step [400/469], d_loss: 0.3317, g_loss: 3.0526, D(x): 0.88, D(G(z)): 0.11
+2025-11-11 22:47:43,078 - INFO - Epoch [5/10], Step [200/469], d_loss: 0.4302, g_loss: 4.7369, D(x): 0.85, D(G(z)): 0.03
+2025-11-11 22:47:49,492 - INFO - Epoch [5/10], Step [400/469], d_loss: 0.4066, g_loss: 4.0382, D(x): 0.89, D(G(z)): 0.20
+2025-11-11 22:47:56,899 - INFO - Epoch [6/10], Step [200/469], d_loss: 0.4383, g_loss: 2.5187, D(x): 0.81, D(G(z)): 0.11
+2025-11-11 22:48:03,057 - INFO - Epoch [6/10], Step [400/469], d_loss: 0.2765, g_loss: 3.4264, D(x): 0.92, D(G(z)): 0.13
+2025-11-11 22:48:12,223 - INFO - Epoch [7/10], Step [200/469], d_loss: 0.5349, g_loss: 2.4466, D(x): 0.81, D(G(z)): 0.08
+2025-11-11 22:48:17,901 - INFO - Epoch [7/10], Step [400/469], d_loss: 0.6954, g_loss: 3.1593, D(x): 0.73, D(G(z)): 0.05
+2025-11-11 22:48:26,423 - INFO - Epoch [8/10], Step [200/469], d_loss: 0.4217, g_loss: 3.0796, D(x): 0.86, D(G(z)): 0.14
+2025-11-11 22:48:33,029 - INFO - Epoch [8/10], Step [400/469], d_loss: 0.4173, g_loss: 2.7775, D(x): 0.85, D(G(z)): 0.14
+2025-11-11 22:48:41,801 - INFO - Epoch [9/10], Step [200/469], d_loss: 0.5024, g_loss: 2.4578, D(x): 0.77, D(G(z)): 0.06
+2025-11-11 22:48:48,422 - INFO - Epoch [9/10], Step [400/469], d_loss: 0.5214, g_loss: 3.2539, D(x): 0.85, D(G(z)): 0.22
+2025-11-11 22:48:50,914 - INFO - Saved checkpoint at epoch 10
+2025-11-11 22:48:51,487 - INFO - Calculating FID score...
+2025-11-11 22:49:06,597 - INFO - Analyzing latent space...
+2025-11-11 22:49:06,597 - ERROR - Experiment exp15_pure_capacity failed: name 'analyze_latent_space' is not defined
+2025-11-11 22:49:06,604 - INFO - Starting experiment: exp16_capacity_adapted
+2025-11-11 22:49:06,605 - INFO - Config: {'hidden_size': 512, 'latent_size': 128, 'num_epochs': 20, 'lr': 5e-05, 'd_lr': 4e-05, 'g_lr': 6e-05, 'description': 'Capacity Adapted: hidden_size↑ + longer training + refined LR'}
+2025-11-11 22:49:06,703 - INFO - Discriminator LR: 4e-05, Generator LR: 6e-05
+2025-11-11 22:49:12,333 - INFO - Epoch [0/20], Step [200/469], d_loss: 0.8711, g_loss: 0.8441, D(x): 0.83, D(G(z)): 0.49
+2025-11-11 22:49:18,458 - INFO - Epoch [0/20], Step [400/469], d_loss: 0.8412, g_loss: 1.0017, D(x): 0.80, D(G(z)): 0.44
+2025-11-11 22:49:25,699 - INFO - Epoch [1/20], Step [200/469], d_loss: 0.6482, g_loss: 1.3772, D(x): 0.81, D(G(z)): 0.34
+2025-11-11 22:49:31,878 - INFO - Epoch [1/20], Step [400/469], d_loss: 0.5881, g_loss: 1.6602, D(x): 0.83, D(G(z)): 0.29
+2025-11-11 22:49:40,645 - INFO - Epoch [2/20], Step [200/469], d_loss: 0.4894, g_loss: 2.0729, D(x): 0.83, D(G(z)): 0.21
+2025-11-11 22:49:46,984 - INFO - Epoch [2/20], Step [400/469], d_loss: 0.3265, g_loss: 2.3734, D(x): 0.91, D(G(z)): 0.19
+2025-11-11 22:49:55,576 - INFO - Epoch [3/20], Step [200/469], d_loss: 0.4078, g_loss: 2.8149, D(x): 0.91, D(G(z)): 0.24
+2025-11-11 22:50:02,128 - INFO - Epoch [3/20], Step [400/469], d_loss: 0.2747, g_loss: 3.1004, D(x): 0.90, D(G(z)): 0.08
+2025-11-11 22:50:10,869 - INFO - Epoch [4/20], Step [200/469], d_loss: 0.3173, g_loss: 2.6355, D(x): 0.90, D(G(z)): 0.13
+2025-11-11 22:50:17,015 - INFO - Epoch [4/20], Step [400/469], d_loss: 0.3713, g_loss: 2.4013, D(x): 0.86, D(G(z)): 0.10
+2025-11-11 22:50:26,319 - INFO - Epoch [5/20], Step [200/469], d_loss: 0.3835, g_loss: 3.2828, D(x): 0.91, D(G(z)): 0.21
+2025-11-11 22:50:33,425 - INFO - Epoch [5/20], Step [400/469], d_loss: 0.4846, g_loss: 3.0715, D(x): 0.86, D(G(z)): 0.23
+2025-11-11 22:50:42,157 - INFO - Epoch [6/20], Step [200/469], d_loss: 0.5912, g_loss: 2.3341, D(x): 0.81, D(G(z)): 0.25
+2025-11-11 22:50:47,417 - INFO - Epoch [6/20], Step [400/469], d_loss: 0.5042, g_loss: 2.2779, D(x): 0.83, D(G(z)): 0.17
+2025-11-11 22:50:55,215 - INFO - Epoch [7/20], Step [200/469], d_loss: 0.5846, g_loss: 2.3165, D(x): 0.78, D(G(z)): 0.19
+2025-11-11 22:51:01,408 - INFO - Epoch [7/20], Step [400/469], d_loss: 0.5260, g_loss: 2.7214, D(x): 0.87, D(G(z)): 0.28
+2025-11-11 22:51:10,210 - INFO - Epoch [8/20], Step [200/469], d_loss: 0.5137, g_loss: 2.3899, D(x): 0.76, D(G(z)): 0.14
+2025-11-11 22:51:15,874 - INFO - Epoch [8/20], Step [400/469], d_loss: 0.5025, g_loss: 2.5682, D(x): 0.84, D(G(z)): 0.22
+2025-11-11 22:51:24,706 - INFO - Epoch [9/20], Step [200/469], d_loss: 0.5138, g_loss: 2.2865, D(x): 0.82, D(G(z)): 0.21
+2025-11-11 22:51:31,334 - INFO - Epoch [9/20], Step [400/469], d_loss: 0.4231, g_loss: 3.0140, D(x): 0.85, D(G(z)): 0.18
+2025-11-11 22:51:33,411 - INFO - Saved checkpoint at epoch 10
+2025-11-11 22:51:39,247 - INFO - Epoch [10/20], Step [200/469], d_loss: 0.4343, g_loss: 2.9911, D(x): 0.89, D(G(z)): 0.23
+2025-11-11 22:51:46,177 - INFO - Epoch [10/20], Step [400/469], d_loss: 0.4494, g_loss: 2.5824, D(x): 0.84, D(G(z)): 0.14
+2025-11-11 22:51:54,786 - INFO - Epoch [11/20], Step [200/469], d_loss: 0.7372, g_loss: 2.2072, D(x): 0.76, D(G(z)): 0.21
+2025-11-11 22:52:01,521 - INFO - Epoch [11/20], Step [400/469], d_loss: 0.5888, g_loss: 2.3220, D(x): 0.81, D(G(z)): 0.24
+2025-11-11 22:52:08,825 - INFO - Epoch [12/20], Step [200/469], d_loss: 0.4878, g_loss: 2.1407, D(x): 0.80, D(G(z)): 0.15
+2025-11-11 22:52:14,531 - INFO - Epoch [12/20], Step [400/469], d_loss: 0.6482, g_loss: 2.4539, D(x): 0.79, D(G(z)): 0.26
+2025-11-11 22:52:22,524 - INFO - Epoch [13/20], Step [200/469], d_loss: 0.7095, g_loss: 2.1462, D(x): 0.80, D(G(z)): 0.30
+2025-11-11 22:52:29,913 - INFO - Epoch [13/20], Step [400/469], d_loss: 0.5451, g_loss: 2.4626, D(x): 0.82, D(G(z)): 0.23
+2025-11-11 22:52:38,960 - INFO - Epoch [14/20], Step [200/469], d_loss: 0.5953, g_loss: 2.2363, D(x): 0.80, D(G(z)): 0.21
+2025-11-11 22:52:45,702 - INFO - Epoch [14/20], Step [400/469], d_loss: 0.6517, g_loss: 1.8269, D(x): 0.77, D(G(z)): 0.20
+2025-11-11 22:52:54,484 - INFO - Epoch [15/20], Step [200/469], d_loss: 0.6297, g_loss: 1.9133, D(x): 0.81, D(G(z)): 0.24
+2025-11-11 22:53:01,372 - INFO - Epoch [15/20], Step [400/469], d_loss: 0.6078, g_loss: 2.6573, D(x): 0.81, D(G(z)): 0.22
+2025-11-11 22:53:09,883 - INFO - Epoch [16/20], Step [200/469], d_loss: 0.5588, g_loss: 2.7891, D(x): 0.84, D(G(z)): 0.24
+2025-11-11 22:53:16,695 - INFO - Epoch [16/20], Step [400/469], d_loss: 0.8287, g_loss: 1.7017, D(x): 0.72, D(G(z)): 0.23
+2025-11-11 22:53:25,100 - INFO - Epoch [17/20], Step [200/469], d_loss: 0.8107, g_loss: 2.4088, D(x): 0.76, D(G(z)): 0.33
+2025-11-11 22:53:30,368 - INFO - Epoch [17/20], Step [400/469], d_loss: 0.6498, g_loss: 2.2182, D(x): 0.77, D(G(z)): 0.19
+2025-11-11 22:53:38,598 - INFO - Epoch [18/20], Step [200/469], d_loss: 0.7122, g_loss: 1.8411, D(x): 0.75, D(G(z)): 0.22
+2025-11-11 22:53:44,633 - INFO - Epoch [18/20], Step [400/469], d_loss: 0.8293, g_loss: 1.7238, D(x): 0.71, D(G(z)): 0.25
+2025-11-11 22:53:53,643 - INFO - Epoch [19/20], Step [200/469], d_loss: 0.6275, g_loss: 2.0396, D(x): 0.79, D(G(z)): 0.23
+2025-11-11 22:54:00,061 - INFO - Epoch [19/20], Step [400/469], d_loss: 0.7960, g_loss: 1.6654, D(x): 0.70, D(G(z)): 0.21
+2025-11-11 22:54:02,409 - INFO - Saved checkpoint at epoch 20
+2025-11-11 22:54:03,395 - INFO - Calculating FID score...
+2025-11-11 22:54:20,148 - INFO - Analyzing latent space...
+2025-11-11 22:54:20,149 - ERROR - Experiment exp16_capacity_adapted failed: name 'analyze_latent_space' is not defined
+2025-11-11 22:54:20,164 - INFO - 
+=== EXPERIMENT SUMMARY ===
+2025-11-11 22:54:20,165 - INFO - 
+All models saved to: saved_models
+2025-11-11 22:54:20,165 - INFO - All experiments completed!
+InceptionV3特征提取器初始化完成
+提取真实图像特征... (1000 张)
+提取生成图像特征... (1000 张)
+特征提取完成: 真实1000个, 生成1000个
+提取真实图像特征... (1000 张)
+提取生成图像特征... (1000 张)
+特征提取完成: 真实1000个, 生成1000个
+提取真实图像特征... (1000 张)
+提取生成图像特征... (1000 张)
+特征提取完成: 真实1000个, 生成1000个

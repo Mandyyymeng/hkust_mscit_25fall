@@ -1,0 +1,174 @@
+nohup: ignoring input
+Using device: cuda
+Loading IMDB dataset...
+Dataset loaded successfully. Shape: (50000, 2)
+Sampling 10,000 examples for faster experimentation...
+Dataset Info:
+Total samples: 10000
+Positive reviews: 5049
+Negative reviews: 4951
+Preloading BERT model and tokenizer...
+BERT model and tokenizer loaded successfully.
+Preprocessing data...
+Training samples: 7000
+Validation samples: 1500
+Test samples: 1500
+Tokenizing with max_seq_len=64...
+Tokenizing with max_seq_len=128...
+Tokenizing with max_seq_len=256...
+Data preprocessing completed.
+Starting all experiments...
+
+============================================================
+EXPERIMENT 1: Baseline: 30% data, frozen BERT, CLS token
+============================================================
+Config: train_size=0.3, freeze_bert=True
+         lr=1e-05, batch_size=16
+         epochs=3, seq_len=128
+         use_cls_token=True, token_position=cls
+Starting training for 3 epochs...
+Epochs:   0%|          | 0/3 [00:00<?, ?it/s]Epoch 1/3:   0%|          | 0/3 [00:00<?, ?it/s]Epoch 1/3:   0%|          | 0/3 [00:08<?, ?it/s, train_loss=0.688, val_loss=0.682, train_acc=0.495, val_acc=0.531, best_val=0.682]Epoch 2/3:   0%|          | 0/3 [00:08<?, ?it/s, train_loss=0.688, val_loss=0.682, train_acc=0.495, val_acc=0.531, best_val=0.682]Epoch 2/3:   0%|          | 0/3 [00:17<?, ?it/s, train_loss=0.680, val_loss=0.675, train_acc=0.503, val_acc=0.596, best_val=0.675]Epoch 3/3:   0%|          | 0/3 [00:17<?, ?it/s, train_loss=0.680, val_loss=0.675, train_acc=0.503, val_acc=0.596, best_val=0.675]Epoch 3/3:   0%|          | 0/3 [00:19<?, ?it/s, train_loss=0.680, val_loss=0.675, train_acc=0.503, val_acc=0.596, best_val=0.675]Epoch 3/3:   0%|          | 0/3 [00:26<?, ?it/s, train_loss=0.675, val_loss=0.667, train_acc=0.501, val_acc=0.609, best_val=0.667]Epoch 3/3: 100%|██████████| 3/3 [00:26<00:00,  8.89s/it, train_loss=0.675, val_loss=0.667, train_acc=0.501, val_acc=0.609, best_val=0.667]Epoch 3/3: 100%|██████████| 3/3 [00:26<00:00,  8.89s/it, train_loss=0.675, val_loss=0.667, train_acc=0.501, val_acc=0.609, best_val=0.667]
+
+Test Results - Loss: 0.667, Accuracy: 0.6253, F1: 0.6078
+✓ Experiment 1 completed successfully.
+
+============================================================
+EXPERIMENT 2: More data: 70% data, frozen BERT
+============================================================
+Config: train_size=0.7, freeze_bert=True
+         lr=1e-05, batch_size=32
+         epochs=5, seq_len=128
+         use_cls_token=True, token_position=cls
+Starting training for 5 epochs...
+Epochs:   0%|          | 0/5 [00:00<?, ?it/s]Epoch 1/5:   0%|          | 0/5 [00:00<?, ?it/s]Epoch 1/5:   0%|          | 0/5 [00:13<?, ?it/s, train_loss=0.687, val_loss=0.678, train_acc=0.496, val_acc=0.573, best_val=0.678]Epoch 2/5:   0%|          | 0/5 [00:13<?, ?it/s, train_loss=0.687, val_loss=0.678, train_acc=0.496, val_acc=0.573, best_val=0.678]Epoch 2/5:   0%|          | 0/5 [00:18<?, ?it/s, train_loss=0.687, val_loss=0.678, train_acc=0.496, val_acc=0.573, best_val=0.678]Epoch 2/5:   0%|          | 0/5 [00:27<?, ?it/s, train_loss=0.675, val_loss=0.671, train_acc=0.514, val_acc=0.569, best_val=0.671]Epoch 2/5:  40%|████      | 2/5 [00:27<00:41, 13.98s/it, train_loss=0.675, val_loss=0.671, train_acc=0.514, val_acc=0.569, best_val=0.671]Epoch 3/5:  40%|████      | 2/5 [00:27<00:41, 13.98s/it, train_loss=0.675, val_loss=0.671, train_acc=0.514, val_acc=0.569, best_val=0.671]Epoch 3/5:  40%|████      | 2/5 [00:42<00:41, 13.98s/it, train_loss=0.667, val_loss=0.661, train_acc=0.510, val_acc=0.594, best_val=0.661]Epoch 3/5:  60%|██████    | 3/5 [00:42<00:28, 14.13s/it, train_loss=0.667, val_loss=0.661, train_acc=0.510, val_acc=0.594, best_val=0.661]Epoch 4/5:  60%|██████    | 3/5 [00:42<00:28, 14.13s/it, train_loss=0.667, val_loss=0.661, train_acc=0.510, val_acc=0.594, best_val=0.661]Epoch 4/5:  60%|██████    | 3/5 [00:56<00:28, 14.13s/it, train_loss=0.658, val_loss=0.657, train_acc=0.491, val_acc=0.587, best_val=0.657]Epoch 4/5:  80%|████████  | 4/5 [00:56<00:14, 14.17s/it, train_loss=0.658, val_loss=0.657, train_acc=0.491, val_acc=0.587, best_val=0.657]Epoch 5/5:  80%|████████  | 4/5 [00:56<00:14, 14.17s/it, train_loss=0.658, val_loss=0.657, train_acc=0.491, val_acc=0.587, best_val=0.657]Epoch 5/5:  80%|████████  | 4/5 [01:10<00:14, 14.17s/it, train_loss=0.652, val_loss=0.648, train_acc=0.500, val_acc=0.615, best_val=0.648]Epoch 5/5: 100%|██████████| 5/5 [01:10<00:00, 14.18s/it, train_loss=0.652, val_loss=0.648, train_acc=0.500, val_acc=0.615, best_val=0.648]Epoch 5/5: 100%|██████████| 5/5 [01:10<00:00, 14.15s/it, train_loss=0.652, val_loss=0.648, train_acc=0.500, val_acc=0.615, best_val=0.648]
+
+Test Results - Loss: 0.644, Accuracy: 0.6440, F1: 0.6168
+✓ Experiment 2 completed successfully.
+
+============================================================
+EXPERIMENT 3: Full fine-tuning: unfrozen BERT, higher LR
+============================================================
+Config: train_size=0.7, freeze_bert=False
+         lr=2e-05, batch_size=16
+         epochs=3, seq_len=128
+         use_cls_token=True, token_position=cls
+Starting training for 3 epochs...
+Epochs:   0%|          | 0/3 [00:00<?, ?it/s]Epoch 1/3:   0%|          | 0/3 [00:00<?, ?it/s]Epoch 1/3:   0%|          | 0/3 [00:14<?, ?it/s]Epoch 1/3:   0%|          | 0/3 [00:41<?, ?it/s, train_loss=0.429, val_loss=0.331, train_acc=0.501, val_acc=0.855, best_val=0.331]Epoch 1/3:  33%|███▎      | 1/3 [00:41<01:22, 41.07s/it, train_loss=0.429, val_loss=0.331, train_acc=0.501, val_acc=0.855, best_val=0.331]Epoch 2/3:  33%|███▎      | 1/3 [00:41<01:22, 41.07s/it, train_loss=0.429, val_loss=0.331, train_acc=0.501, val_acc=0.855, best_val=0.331]Epoch 2/3:  33%|███▎      | 1/3 [01:24<01:22, 41.07s/it, train_loss=0.257, val_loss=0.410, train_acc=0.508, val_acc=0.863, best_val=0.331]Epoch 2/3:  67%|██████▋   | 2/3 [01:24<00:42, 42.17s/it, train_loss=0.257, val_loss=0.410, train_acc=0.508, val_acc=0.863, best_val=0.331]Epoch 3/3:  67%|██████▋   | 2/3 [01:24<00:42, 42.17s/it, train_loss=0.257, val_loss=0.410, train_acc=0.508, val_acc=0.863, best_val=0.331]Epoch 3/3:  67%|██████▋   | 2/3 [02:07<00:42, 42.17s/it, train_loss=0.156, val_loss=0.579, train_acc=0.515, val_acc=0.860, best_val=0.331]Epoch 3/3: 100%|██████████| 3/3 [02:07<00:00, 42.66s/it, train_loss=0.156, val_loss=0.579, train_acc=0.515, val_acc=0.860, best_val=0.331]Epoch 3/3: 100%|██████████| 3/3 [02:07<00:00, 42.42s/it, train_loss=0.156, val_loss=0.579, train_acc=0.515, val_acc=0.860, best_val=0.331]
+
+Test Results - Loss: 0.301, Accuracy: 0.8800, F1: 0.8799
+✓ Experiment 3 completed successfully.
+
+============================================================
+EXPERIMENT 4: Higher learning rate
+============================================================
+Config: train_size=0.7, freeze_bert=True
+         lr=5e-05, batch_size=32
+         epochs=5, seq_len=128
+         use_cls_token=True, token_position=cls
+Starting training for 5 epochs...
+Epochs:   0%|          | 0/5 [00:00<?, ?it/s]Epoch 1/5:   0%|          | 0/5 [00:00<?, ?it/s]Epoch 1/5:   0%|          | 0/5 [00:13<?, ?it/s]Epoch 1/5:   0%|          | 0/5 [00:14<?, ?it/s, train_loss=0.672, val_loss=0.647, train_acc=0.499, val_acc=0.650, best_val=0.647]Epoch 1/5:  20%|██        | 1/5 [00:14<00:59, 14.81s/it, train_loss=0.672, val_loss=0.647, train_acc=0.499, val_acc=0.650, best_val=0.647]Epoch 2/5:  20%|██        | 1/5 [00:14<00:59, 14.81s/it, train_loss=0.672, val_loss=0.647, train_acc=0.499, val_acc=0.650, best_val=0.647]Epoch 2/5:  20%|██        | 1/5 [00:29<00:59, 14.81s/it, train_loss=0.641, val_loss=0.633, train_acc=0.491, val_acc=0.624, best_val=0.633]Epoch 2/5:  40%|████      | 2/5 [00:29<00:45, 15.01s/it, train_loss=0.641, val_loss=0.633, train_acc=0.491, val_acc=0.624, best_val=0.633]Epoch 3/5:  40%|████      | 2/5 [00:29<00:45, 15.01s/it, train_loss=0.641, val_loss=0.633, train_acc=0.491, val_acc=0.624, best_val=0.633]Epoch 3/5:  40%|████      | 2/5 [00:45<00:45, 15.01s/it, train_loss=0.616, val_loss=0.595, train_acc=0.498, val_acc=0.694, best_val=0.595]Epoch 3/5:  60%|██████    | 3/5 [00:45<00:30, 15.08s/it, train_loss=0.616, val_loss=0.595, train_acc=0.498, val_acc=0.694, best_val=0.595]Epoch 4/5:  60%|██████    | 3/5 [00:45<00:30, 15.08s/it, train_loss=0.616, val_loss=0.595, train_acc=0.498, val_acc=0.694, best_val=0.595]Epoch 4/5:  60%|██████    | 3/5 [01:00<00:30, 15.08s/it, train_loss=0.596, val_loss=0.577, train_acc=0.494, val_acc=0.707, best_val=0.577]Epoch 4/5:  80%|████████  | 4/5 [01:00<00:15, 15.01s/it, train_loss=0.596, val_loss=0.577, train_acc=0.494, val_acc=0.707, best_val=0.577]Epoch 5/5:  80%|████████  | 4/5 [01:00<00:15, 15.01s/it, train_loss=0.596, val_loss=0.577, train_acc=0.494, val_acc=0.707, best_val=0.577]Epoch 5/5:  80%|████████  | 4/5 [01:14<00:15, 15.01s/it, train_loss=0.584, val_loss=0.555, train_acc=0.493, val_acc=0.726, best_val=0.555]Epoch 5/5: 100%|██████████| 5/5 [01:14<00:00, 14.90s/it, train_loss=0.584, val_loss=0.555, train_acc=0.493, val_acc=0.726, best_val=0.555]Epoch 5/5: 100%|██████████| 5/5 [01:14<00:00, 14.95s/it, train_loss=0.584, val_loss=0.555, train_acc=0.493, val_acc=0.726, best_val=0.555]
+
+Test Results - Loss: 0.543, Accuracy: 0.7393, F1: 0.7390
+✓ Experiment 4 completed successfully.
+
+============================================================
+EXPERIMENT 5: Larger batch size
+============================================================
+Config: train_size=0.7, freeze_bert=True
+         lr=1e-05, batch_size=64
+         epochs=5, seq_len=128
+         use_cls_token=True, token_position=cls
+Starting training for 5 epochs...
+Epochs:   0%|          | 0/5 [00:00<?, ?it/s]Epoch 1/5:   0%|          | 0/5 [00:00<?, ?it/s]Epoch 1/5:   0%|          | 0/5 [00:14<?, ?it/s, train_loss=0.686, val_loss=0.680, train_acc=0.505, val_acc=0.567, best_val=0.680]Epoch 2/5:   0%|          | 0/5 [00:14<?, ?it/s, train_loss=0.686, val_loss=0.680, train_acc=0.505, val_acc=0.567, best_val=0.680]Epoch 2/5:   0%|          | 0/5 [00:15<?, ?it/s, train_loss=0.686, val_loss=0.680, train_acc=0.505, val_acc=0.567, best_val=0.680]Epoch 2/5:   0%|          | 0/5 [00:28<?, ?it/s, train_loss=0.676, val_loss=0.674, train_acc=0.501, val_acc=0.563, best_val=0.674]Epoch 2/5:  40%|████      | 2/5 [00:28<00:42, 14.26s/it, train_loss=0.676, val_loss=0.674, train_acc=0.501, val_acc=0.563, best_val=0.674]Epoch 3/5:  40%|████      | 2/5 [00:28<00:42, 14.26s/it, train_loss=0.676, val_loss=0.674, train_acc=0.501, val_acc=0.563, best_val=0.674]Epoch 3/5:  40%|████      | 2/5 [00:43<00:42, 14.26s/it, train_loss=0.671, val_loss=0.669, train_acc=0.504, val_acc=0.582, best_val=0.669]Epoch 3/5:  60%|██████    | 3/5 [00:43<00:28, 14.43s/it, train_loss=0.671, val_loss=0.669, train_acc=0.504, val_acc=0.582, best_val=0.669]Epoch 4/5:  60%|██████    | 3/5 [00:43<00:28, 14.43s/it, train_loss=0.671, val_loss=0.669, train_acc=0.504, val_acc=0.582, best_val=0.669]Epoch 4/5:  60%|██████    | 3/5 [00:57<00:28, 14.43s/it, train_loss=0.667, val_loss=0.661, train_acc=0.497, val_acc=0.622, best_val=0.661]Epoch 4/5:  80%|████████  | 4/5 [00:57<00:14, 14.45s/it, train_loss=0.667, val_loss=0.661, train_acc=0.497, val_acc=0.622, best_val=0.661]Epoch 5/5:  80%|████████  | 4/5 [00:57<00:14, 14.45s/it, train_loss=0.667, val_loss=0.661, train_acc=0.497, val_acc=0.622, best_val=0.661]Epoch 5/5:  80%|████████  | 4/5 [01:12<00:14, 14.45s/it, train_loss=0.660, val_loss=0.656, train_acc=0.502, val_acc=0.635, best_val=0.656]Epoch 5/5: 100%|██████████| 5/5 [01:12<00:00, 14.45s/it, train_loss=0.660, val_loss=0.656, train_acc=0.502, val_acc=0.635, best_val=0.656]Epoch 5/5: 100%|██████████| 5/5 [01:12<00:00, 14.42s/it, train_loss=0.660, val_loss=0.656, train_acc=0.502, val_acc=0.635, best_val=0.656]
+
+Test Results - Loss: 0.653, Accuracy: 0.6353, F1: 0.6285
+✓ Experiment 5 completed successfully.
+
+============================================================
+EXPERIMENT 6: Higher dropout for regularization
+============================================================
+Config: train_size=0.7, freeze_bert=True
+         lr=1e-05, batch_size=32
+         epochs=5, seq_len=128
+         use_cls_token=True, token_position=cls
+Starting training for 5 epochs...
+Epochs:   0%|          | 0/5 [00:00<?, ?it/s]Epoch 1/5:   0%|          | 0/5 [00:00<?, ?it/s]Epoch 1/5:   0%|          | 0/5 [00:14<?, ?it/s, train_loss=0.683, val_loss=0.680, train_acc=0.494, val_acc=0.556, best_val=0.680]Epoch 2/5:   0%|          | 0/5 [00:14<?, ?it/s, train_loss=0.683, val_loss=0.680, train_acc=0.494, val_acc=0.556, best_val=0.680]Epoch 2/5:   0%|          | 0/5 [00:19<?, ?it/s, train_loss=0.683, val_loss=0.680, train_acc=0.494, val_acc=0.556, best_val=0.680]Epoch 2/5:   0%|          | 0/5 [00:28<?, ?it/s, train_loss=0.674, val_loss=0.670, train_acc=0.501, val_acc=0.583, best_val=0.670]Epoch 2/5:  40%|████      | 2/5 [00:28<00:42, 14.28s/it, train_loss=0.674, val_loss=0.670, train_acc=0.501, val_acc=0.583, best_val=0.670]Epoch 3/5:  40%|████      | 2/5 [00:28<00:42, 14.28s/it, train_loss=0.674, val_loss=0.670, train_acc=0.501, val_acc=0.583, best_val=0.670]Epoch 3/5:  40%|████      | 2/5 [00:43<00:42, 14.28s/it, train_loss=0.668, val_loss=0.666, train_acc=0.498, val_acc=0.573, best_val=0.666]Epoch 3/5:  60%|██████    | 3/5 [00:43<00:28, 14.45s/it, train_loss=0.668, val_loss=0.666, train_acc=0.498, val_acc=0.573, best_val=0.666]Epoch 4/5:  60%|██████    | 3/5 [00:43<00:28, 14.45s/it, train_loss=0.668, val_loss=0.666, train_acc=0.498, val_acc=0.573, best_val=0.666]Epoch 4/5:  60%|██████    | 3/5 [00:57<00:28, 14.45s/it, train_loss=0.662, val_loss=0.654, train_acc=0.494, val_acc=0.638, best_val=0.654]Epoch 4/5:  80%|████████  | 4/5 [00:57<00:14, 14.44s/it, train_loss=0.662, val_loss=0.654, train_acc=0.494, val_acc=0.638, best_val=0.654]Epoch 5/5:  80%|████████  | 4/5 [00:57<00:14, 14.44s/it, train_loss=0.662, val_loss=0.654, train_acc=0.494, val_acc=0.638, best_val=0.654]Epoch 5/5:  80%|████████  | 4/5 [01:12<00:14, 14.44s/it, train_loss=0.655, val_loss=0.650, train_acc=0.495, val_acc=0.622, best_val=0.650]Epoch 5/5: 100%|██████████| 5/5 [01:12<00:00, 14.47s/it, train_loss=0.655, val_loss=0.650, train_acc=0.495, val_acc=0.622, best_val=0.650]Epoch 5/5: 100%|██████████| 5/5 [01:12<00:00, 14.44s/it, train_loss=0.655, val_loss=0.650, train_acc=0.495, val_acc=0.622, best_val=0.650]
+
+Test Results - Loss: 0.647, Accuracy: 0.6427, F1: 0.6227
+✓ Experiment 6 completed successfully.
+
+============================================================
+EXPERIMENT 7: More training epochs
+============================================================
+Config: train_size=0.7, freeze_bert=True
+         lr=1e-05, batch_size=32
+         epochs=8, seq_len=128
+         use_cls_token=True, token_position=cls
+Starting training for 8 epochs...
+Epochs:   0%|          | 0/8 [00:00<?, ?it/s]Epoch 1/8:   0%|          | 0/8 [00:00<?, ?it/s]Epoch 1/8:   0%|          | 0/8 [00:13<?, ?it/s, train_loss=0.684, val_loss=0.683, train_acc=0.514, val_acc=0.538, best_val=0.683]Epoch 2/8:   0%|          | 0/8 [00:13<?, ?it/s, train_loss=0.684, val_loss=0.683, train_acc=0.514, val_acc=0.538, best_val=0.683]Epoch 2/8:   0%|          | 0/8 [00:14<?, ?it/s, train_loss=0.684, val_loss=0.683, train_acc=0.514, val_acc=0.538, best_val=0.683]Epoch 2/8:   0%|          | 0/8 [00:28<?, ?it/s, train_loss=0.674, val_loss=0.670, train_acc=0.507, val_acc=0.612, best_val=0.670]Epoch 2/8:  25%|██▌       | 2/8 [00:28<01:24, 14.01s/it, train_loss=0.674, val_loss=0.670, train_acc=0.507, val_acc=0.612, best_val=0.670]Epoch 3/8:  25%|██▌       | 2/8 [00:28<01:24, 14.01s/it, train_loss=0.674, val_loss=0.670, train_acc=0.507, val_acc=0.612, best_val=0.670]Epoch 3/8:  25%|██▌       | 2/8 [00:42<01:24, 14.01s/it, train_loss=0.668, val_loss=0.662, train_acc=0.486, val_acc=0.609, best_val=0.662]Epoch 3/8:  38%|███▊      | 3/8 [00:42<01:10, 14.15s/it, train_loss=0.668, val_loss=0.662, train_acc=0.486, val_acc=0.609, best_val=0.662]Epoch 4/8:  38%|███▊      | 3/8 [00:42<01:10, 14.15s/it, train_loss=0.668, val_loss=0.662, train_acc=0.486, val_acc=0.609, best_val=0.662]Epoch 4/8:  38%|███▊      | 3/8 [00:56<01:10, 14.15s/it, train_loss=0.661, val_loss=0.653, train_acc=0.507, val_acc=0.645, best_val=0.653]Epoch 4/8:  50%|█████     | 4/8 [00:56<00:56, 14.21s/it, train_loss=0.661, val_loss=0.653, train_acc=0.507, val_acc=0.645, best_val=0.653]Epoch 5/8:  50%|█████     | 4/8 [00:56<00:56, 14.21s/it, train_loss=0.661, val_loss=0.653, train_acc=0.507, val_acc=0.645, best_val=0.653]Epoch 5/8:  50%|█████     | 4/8 [01:10<00:56, 14.21s/it, train_loss=0.651, val_loss=0.646, train_acc=0.501, val_acc=0.654, best_val=0.646]Epoch 5/8:  62%|██████▎   | 5/8 [01:10<00:42, 14.22s/it, train_loss=0.651, val_loss=0.646, train_acc=0.501, val_acc=0.654, best_val=0.646]Epoch 6/8:  62%|██████▎   | 5/8 [01:10<00:42, 14.22s/it, train_loss=0.651, val_loss=0.646, train_acc=0.501, val_acc=0.654, best_val=0.646]Epoch 6/8:  62%|██████▎   | 5/8 [01:25<00:42, 14.22s/it, train_loss=0.647, val_loss=0.641, train_acc=0.505, val_acc=0.642, best_val=0.641]Epoch 6/8:  75%|███████▌  | 6/8 [01:25<00:28, 14.24s/it, train_loss=0.647, val_loss=0.641, train_acc=0.505, val_acc=0.642, best_val=0.641]Epoch 7/8:  75%|███████▌  | 6/8 [01:25<00:28, 14.24s/it, train_loss=0.647, val_loss=0.641, train_acc=0.505, val_acc=0.642, best_val=0.641]Epoch 7/8:  75%|███████▌  | 6/8 [01:39<00:28, 14.24s/it, train_loss=0.639, val_loss=0.629, train_acc=0.496, val_acc=0.679, best_val=0.629]Epoch 7/8:  88%|████████▊ | 7/8 [01:39<00:14, 14.23s/it, train_loss=0.639, val_loss=0.629, train_acc=0.496, val_acc=0.679, best_val=0.629]Epoch 8/8:  88%|████████▊ | 7/8 [01:39<00:14, 14.23s/it, train_loss=0.639, val_loss=0.629, train_acc=0.496, val_acc=0.679, best_val=0.629]Epoch 8/8:  88%|████████▊ | 7/8 [01:52<00:14, 14.23s/it, train_loss=0.635, val_loss=0.630, train_acc=0.506, val_acc=0.652, best_val=0.629]Epoch 8/8: 100%|██████████| 8/8 [01:52<00:00, 13.93s/it, train_loss=0.635, val_loss=0.630, train_acc=0.506, val_acc=0.652, best_val=0.629]Epoch 8/8: 100%|██████████| 8/8 [01:52<00:00, 14.09s/it, train_loss=0.635, val_loss=0.630, train_acc=0.506, val_acc=0.652, best_val=0.629]
+
+Test Results - Loss: 0.625, Accuracy: 0.6993, F1: 0.6983
+✓ Experiment 7 completed successfully.
+
+============================================================
+EXPERIMENT 8: Mean pooling instead of CLS token
+============================================================
+Config: train_size=0.7, freeze_bert=True
+         lr=1e-05, batch_size=32
+         epochs=5, seq_len=128
+         use_cls_token=False, token_position=mean
+Starting training for 5 epochs...
+Epochs:   0%|          | 0/5 [00:00<?, ?it/s]Epoch 1/5:   0%|          | 0/5 [00:00<?, ?it/s]Epoch 1/5:   0%|          | 0/5 [00:13<?, ?it/s, train_loss=0.677, val_loss=0.656, train_acc=0.494, val_acc=0.740, best_val=0.656]Epoch 2/5:   0%|          | 0/5 [00:13<?, ?it/s, train_loss=0.677, val_loss=0.656, train_acc=0.494, val_acc=0.740, best_val=0.656]Epoch 2/5:   0%|          | 0/5 [00:18<?, ?it/s, train_loss=0.677, val_loss=0.656, train_acc=0.494, val_acc=0.740, best_val=0.656]Epoch 2/5:   0%|          | 0/5 [00:28<?, ?it/s, train_loss=0.640, val_loss=0.618, train_acc=0.494, val_acc=0.755, best_val=0.618]Epoch 2/5:  40%|████      | 2/5 [00:28<00:42, 14.22s/it, train_loss=0.640, val_loss=0.618, train_acc=0.494, val_acc=0.755, best_val=0.618]Epoch 3/5:  40%|████      | 2/5 [00:28<00:42, 14.22s/it, train_loss=0.640, val_loss=0.618, train_acc=0.494, val_acc=0.755, best_val=0.618]Epoch 3/5:  40%|████      | 2/5 [00:42<00:42, 14.22s/it, train_loss=0.604, val_loss=0.580, train_acc=0.496, val_acc=0.763, best_val=0.580]Epoch 3/5:  60%|██████    | 3/5 [00:42<00:28, 14.31s/it, train_loss=0.604, val_loss=0.580, train_acc=0.496, val_acc=0.763, best_val=0.580]Epoch 4/5:  60%|██████    | 3/5 [00:42<00:28, 14.31s/it, train_loss=0.604, val_loss=0.580, train_acc=0.496, val_acc=0.763, best_val=0.580]Epoch 4/5:  60%|██████    | 3/5 [00:57<00:28, 14.31s/it, train_loss=0.571, val_loss=0.549, train_acc=0.500, val_acc=0.775, best_val=0.549]Epoch 4/5:  80%|████████  | 4/5 [00:57<00:14, 14.32s/it, train_loss=0.571, val_loss=0.549, train_acc=0.500, val_acc=0.775, best_val=0.549]Epoch 5/5:  80%|████████  | 4/5 [00:57<00:14, 14.32s/it, train_loss=0.571, val_loss=0.549, train_acc=0.500, val_acc=0.775, best_val=0.549]Epoch 5/5:  80%|████████  | 4/5 [01:11<00:14, 14.32s/it, train_loss=0.542, val_loss=0.521, train_acc=0.499, val_acc=0.775, best_val=0.521]Epoch 5/5: 100%|██████████| 5/5 [01:11<00:00, 14.36s/it, train_loss=0.542, val_loss=0.521, train_acc=0.499, val_acc=0.775, best_val=0.521]Epoch 5/5: 100%|██████████| 5/5 [01:11<00:00, 14.33s/it, train_loss=0.542, val_loss=0.521, train_acc=0.499, val_acc=0.775, best_val=0.521]
+
+Test Results - Loss: 0.518, Accuracy: 0.7960, F1: 0.7960
+✓ Experiment 8 completed successfully.
+
+============================================================
+EXPERIMENT 9: Max pooling instead of CLS token
+============================================================
+Config: train_size=0.7, freeze_bert=True
+         lr=1e-05, batch_size=32
+         epochs=5, seq_len=128
+         use_cls_token=False, token_position=max
+Starting training for 5 epochs...
+Epochs:   0%|          | 0/5 [00:00<?, ?it/s]Epoch 1/5:   0%|          | 0/5 [00:00<?, ?it/s]Epoch 1/5:   0%|          | 0/5 [00:13<?, ?it/s]Epoch 1/5:   0%|          | 0/5 [00:13<?, ?it/s, train_loss=0.691, val_loss=0.679, train_acc=0.506, val_acc=0.638, best_val=0.679]Epoch 1/5:  20%|██        | 1/5 [00:13<00:54, 13.72s/it, train_loss=0.691, val_loss=0.679, train_acc=0.506, val_acc=0.638, best_val=0.679]Epoch 2/5:  20%|██        | 1/5 [00:13<00:54, 13.72s/it, train_loss=0.691, val_loss=0.679, train_acc=0.506, val_acc=0.638, best_val=0.679]Epoch 2/5:  20%|██        | 1/5 [00:27<00:54, 13.72s/it, train_loss=0.678, val_loss=0.668, train_acc=0.507, val_acc=0.681, best_val=0.668]Epoch 2/5:  40%|████      | 2/5 [00:27<00:42, 14.00s/it, train_loss=0.678, val_loss=0.668, train_acc=0.507, val_acc=0.681, best_val=0.668]Epoch 3/5:  40%|████      | 2/5 [00:27<00:42, 14.00s/it, train_loss=0.678, val_loss=0.668, train_acc=0.507, val_acc=0.681, best_val=0.668]Epoch 3/5:  40%|████      | 2/5 [00:42<00:42, 14.00s/it, train_loss=0.667, val_loss=0.660, train_acc=0.499, val_acc=0.684, best_val=0.660]Epoch 3/5:  60%|██████    | 3/5 [00:42<00:28, 14.11s/it, train_loss=0.667, val_loss=0.660, train_acc=0.499, val_acc=0.684, best_val=0.660]Epoch 4/5:  60%|██████    | 3/5 [00:42<00:28, 14.11s/it, train_loss=0.667, val_loss=0.660, train_acc=0.499, val_acc=0.684, best_val=0.660]Epoch 4/5:  60%|██████    | 3/5 [00:56<00:28, 14.11s/it, train_loss=0.657, val_loss=0.655, train_acc=0.502, val_acc=0.595, best_val=0.655]Epoch 4/5:  80%|████████  | 4/5 [00:56<00:14, 14.19s/it, train_loss=0.657, val_loss=0.655, train_acc=0.502, val_acc=0.595, best_val=0.655]Epoch 5/5:  80%|████████  | 4/5 [00:56<00:14, 14.19s/it, train_loss=0.657, val_loss=0.655, train_acc=0.502, val_acc=0.595, best_val=0.655]Epoch 5/5:  80%|████████  | 4/5 [01:10<00:14, 14.19s/it, train_loss=0.651, val_loss=0.643, train_acc=0.484, val_acc=0.687, best_val=0.643]Epoch 5/5: 100%|██████████| 5/5 [01:10<00:00, 14.19s/it, train_loss=0.651, val_loss=0.643, train_acc=0.484, val_acc=0.687, best_val=0.643]Epoch 5/5: 100%|██████████| 5/5 [01:10<00:00, 14.13s/it, train_loss=0.651, val_loss=0.643, train_acc=0.484, val_acc=0.687, best_val=0.643]
+
+Test Results - Loss: 0.640, Accuracy: 0.6913, F1: 0.6709
+✓ Experiment 9 completed successfully.
+
+============================================================
+EXPERIMENT 10: Best combination: more data, unfrozen, tuned params
+============================================================
+Config: train_size=0.8, freeze_bert=False
+         lr=2e-05, batch_size=32
+         epochs=5, seq_len=128
+         use_cls_token=True, token_position=cls
+Starting training for 5 epochs...
+Epochs:   0%|          | 0/5 [00:00<?, ?it/s]Epoch 1/5:   0%|          | 0/5 [00:00<?, ?it/s]Epoch 1/5:   0%|          | 0/5 [00:19<?, ?it/s]Epoch 1/5:   0%|          | 0/5 [00:36<?, ?it/s, train_loss=0.430, val_loss=0.337, train_acc=0.491, val_acc=0.845, best_val=0.337]Epoch 1/5:  20%|██        | 1/5 [00:36<02:25, 36.43s/it, train_loss=0.430, val_loss=0.337, train_acc=0.491, val_acc=0.845, best_val=0.337]Epoch 2/5:  20%|██        | 1/5 [00:36<02:25, 36.43s/it, train_loss=0.430, val_loss=0.337, train_acc=0.491, val_acc=0.845, best_val=0.337]Epoch 2/5:  20%|██        | 1/5 [01:13<02:25, 36.43s/it, train_loss=0.243, val_loss=0.334, train_acc=0.488, val_acc=0.860, best_val=0.334]Epoch 2/5:  40%|████      | 2/5 [01:13<01:50, 36.79s/it, train_loss=0.243, val_loss=0.334, train_acc=0.488, val_acc=0.860, best_val=0.334]Epoch 3/5:  40%|████      | 2/5 [01:13<01:50, 36.79s/it, train_loss=0.243, val_loss=0.334, train_acc=0.488, val_acc=0.860, best_val=0.334]Epoch 3/5:  40%|████      | 2/5 [01:49<01:50, 36.79s/it, train_loss=0.154, val_loss=0.386, train_acc=0.507, val_acc=0.859, best_val=0.334]Epoch 3/5:  60%|██████    | 3/5 [01:49<01:12, 36.45s/it, train_loss=0.154, val_loss=0.386, train_acc=0.507, val_acc=0.859, best_val=0.334]Epoch 4/5:  60%|██████    | 3/5 [01:49<01:12, 36.45s/it, train_loss=0.154, val_loss=0.386, train_acc=0.507, val_acc=0.859, best_val=0.334]Epoch 4/5:  60%|██████    | 3/5 [02:25<01:12, 36.45s/it, train_loss=0.086, val_loss=0.590, train_acc=0.505, val_acc=0.867, best_val=0.334]Epoch 4/5:  80%|████████  | 4/5 [02:25<00:36, 36.29s/it, train_loss=0.086, val_loss=0.590, train_acc=0.505, val_acc=0.867, best_val=0.334]Epoch 5/5:  80%|████████  | 4/5 [02:25<00:36, 36.29s/it, train_loss=0.086, val_loss=0.590, train_acc=0.505, val_acc=0.867, best_val=0.334]Epoch 5/5:  80%|████████  | 4/5 [03:01<00:36, 36.29s/it, train_loss=0.044, val_loss=0.739, train_acc=0.500, val_acc=0.855, best_val=0.334]Epoch 5/5: 100%|██████████| 5/5 [03:01<00:00, 36.20s/it, train_loss=0.044, val_loss=0.739, train_acc=0.500, val_acc=0.855, best_val=0.334]Epoch 5/5: 100%|██████████| 5/5 [03:01<00:00, 36.32s/it, train_loss=0.044, val_loss=0.739, train_acc=0.500, val_acc=0.855, best_val=0.334]
+
+Test Results - Loss: 0.277, Accuracy: 0.8873, F1: 0.8872
+✓ Experiment 10 completed successfully.
+
+Completed 10 out of 10 experiments.
+
+Saving results to CSV...
+Results saved to: experiment_results_20251029_102031/experiment_results.csv
+Detailed training history saved to: experiment_results_20251029_102031/training_history.csv
+
+Experiment Results Summary:
+ exp_id                                         description  test_accuracy  test_f1  test_loss
+      1          Baseline: 30% data, frozen BERT, CLS token       0.625333 0.607790   0.666551
+      2                    More data: 70% data, frozen BERT       0.644000 0.616828   0.644136
+      3          Full fine-tuning: unfrozen BERT, higher LR       0.880000 0.879904   0.301424
+      4                                Higher learning rate       0.739333 0.738975   0.542524
+      5                                   Larger batch size       0.635333 0.628460   0.653222
+      6                   Higher dropout for regularization       0.642667 0.622670   0.646856
+      7                                More training epochs       0.699333 0.698301   0.624911
+      8                   Mean pooling instead of CLS token       0.796000 0.796002   0.517650
+      9                    Max pooling instead of CLS token       0.691333 0.670930   0.639958
+     10 Best combination: more data, unfrozen, tuned params       0.887333 0.887210   0.276821
+
+Creating visualizations...
+
+All results and visualizations saved to: experiment_results_20251029_102031
+Experiment completed successfully!

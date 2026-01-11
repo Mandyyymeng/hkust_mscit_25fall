@@ -1,0 +1,39 @@
+CLIP Zero-Shot Classification Performance Summary
+============================================================
+
+OVERALL PERFORMANCE RANKING:
+----------------------------------------
+1. weighted_prediction  Accuracy: 0.8760 Time: 1392.74s Efficiency: 0.0006
+2. simple_baseline      Accuracy: 0.8740 Time: 47.10s Efficiency: 0.0186
+3. majority_voting      Accuracy: 0.8740 Time: 1405.44s Efficiency: 0.0006
+4. selective_ensemble   Accuracy: 0.8740 Time: 45.16s Efficiency: 0.0194
+5. ensemble_baseline    Accuracy: 0.8735 Time: 60.81s Efficiency: 0.0144
+6. feature_average      Accuracy: 0.8735 Time: 2587.29s Efficiency: 0.0003
+7. prediction_average   Accuracy: 0.8676 Time: 1409.96s Efficiency: 0.0006
+8. learned_weighting    Accuracy: 0.8676 Time: 1436.93s Efficiency: 0.0006
+
+BEST PERFORMING CLASSES:
+----------------------------------------
+motorbike                      1.0000
+barrel                         1.0000
+bonsai                         1.0000
+brain                          1.0000
+buddha                         1.0000
+side of a car                  1.0000
+dalmatian                      1.0000
+dollar bill                    1.0000
+dolphin                        1.0000
+euphonium                      1.0000
+
+WORST PERFORMING CLASSES:
+----------------------------------------
+wild cat                       0.0500
+background                     0.1000
+head of a  crocodile           0.2500
+ketch                          0.2500
+centered face                  0.3500
+anchor                         0.3500
+lobster                        0.4000
+chair                          0.4500
+lotus                          0.6000
+off-center face                0.6500

@@ -1,0 +1,18 @@
+================================================================================
+IMAGE CLASSIFICATION MODEL COMPARISON REPORT
+================================================================================
+
+📊 OVERALL STATISTICS
+   Total Images: 10
+   Total Predictions: 60
+   Models Evaluated: 6
+
+🏆 MODEL PERFORMANCE RANKING
+       model  accuracy  correct_count  total_predictions  avg_confidence
+ DenseNet121       0.9              9                 10           0.821
+Inception V3       0.9              9                 10           0.847
+ MobileNetV2       0.9              9                 10           0.793
+       VGG16       0.9              9                 10           0.823
+    ResNet50       0.8              8                 10           0.773
+     AlexNet       0.7              7                 10           0.738
+

@@ -1,0 +1,13 @@
+nohup: ignoring input
+2025-11-02 10:02:57,230 - INFO - Starting experiment: exp1_baseline
+2025-11-02 10:02:57,231 - INFO - Config: {'description': 'Baseline: Standard GAN with BCE loss'}
+2025-11-02 10:03:04,390 - INFO - Epoch [0/10], Step [200/469], d_loss: 0.8704, g_loss: 0.9554, D(x): 0.80, D(G(z)): 0.46
+2025-11-02 10:03:10,982 - INFO - Epoch [0/10], Step [400/469], d_loss: 0.3842, g_loss: 1.9444, D(x): 0.95, D(G(z)): 0.28
+2025-11-02 10:03:19,795 - INFO - Epoch [1/10], Step [200/469], d_loss: 0.2380, g_loss: 3.3328, D(x): 0.91, D(G(z)): 0.08
+2025-11-02 10:03:26,207 - INFO - Epoch [1/10], Step [400/469], d_loss: 0.2745, g_loss: 2.6676, D(x): 0.92, D(G(z)): 0.14
+2025-11-02 10:03:34,911 - INFO - Epoch [2/10], Step [200/469], d_loss: 0.3481, g_loss: 3.2908, D(x): 0.91, D(G(z)): 0.17
+2025-11-02 10:03:41,354 - INFO - Epoch [2/10], Step [400/469], d_loss: 0.3969, g_loss: 2.8729, D(x): 0.84, D(G(z)): 0.13
+2025-11-02 10:03:50,120 - INFO - Epoch [3/10], Step [200/469], d_loss: 0.4559, g_loss: 3.5077, D(x): 0.91, D(G(z)): 0.25
+2025-11-02 10:03:56,569 - INFO - Epoch [3/10], Step [400/469], d_loss: 0.4304, g_loss: 2.6391, D(x): 0.84, D(G(z)): 0.14
+2025-11-02 10:04:05,331 - INFO - Epoch [4/10], Step [200/469], d_loss: 0.3874, g_loss: 3.6723, D(x): 0.93, D(G(z)): 0.24
+2025-11-02 10:04:11,745 - INFO - Epoch [4/10], Step [400/469], d_loss: 0.3984, g_loss: 3.4807, D(x): 0.88, D(G(z)): 0.18

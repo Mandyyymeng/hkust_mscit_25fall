@@ -1,0 +1,50 @@
+1.png:
+  1. screw (0.0513)
+  2. matchstick (0.0340)
+  3. nematode (0.0298)
+
+10.png:
+  1. nematode (0.0557)
+  2. matchstick (0.0332)
+  3. nail (0.0284)
+
+2.png:
+  1. nematode (0.0952)
+  2. matchstick (0.0251)
+  3. nail (0.0250)
+
+3.png:
+  1. nematode (0.0398)
+  2. binder (0.0217)
+  3. dishwasher (0.0188)
+
+4.JPEG:
+  1. television (0.1771)
+  2. monitor (0.0494)
+  3. nematode (0.0287)
+
+5.JPEG:
+  1. nematode (0.0742)
+  2. matchstick (0.0365)
+  3. ballpoint (0.0250)
+
+6.png:
+  1. nematode (0.0655)
+  2. matchstick (0.0330)
+  3. ballpoint (0.0312)
+
+7.png:
+  1. nematode (0.0715)
+  2. matchstick (0.0423)
+  3. screw (0.0354)
+
+8.png:
+  1. nematode (0.1392)
+  2. oboe (0.0301)
+  3. cleaver (0.0294)
+
+9.png:
+  1. nematode (0.1192)
+  2. cleaver (0.0543)
+  3. oboe (0.0281)
+

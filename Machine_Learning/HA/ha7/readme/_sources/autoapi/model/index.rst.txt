@@ -1,0 +1,221 @@
+model
+=====
+
+.. py:module:: model
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   model.SelfAttention
+   model.SFLM
+
+
+Module Contents
+---------------
+
+.. py:class:: SelfAttention(emb_dim, key_dim, val_dim)
+
+
+
+   A self-attention layer.
+
+   This module takes inputs :math:`X\in\mathbb R^{N\times L\times D_e}`, and projects them into
+   queries :math:`Q\in\mathbb R^{N\times L\times D_k}`, keys :math:`K\in\mathbb R^{N\times L\times D_k}`,
+   and values :math:`V\in\mathbb R^{N\times L\times D_v}`, where
+   :math:`N` is the batch size, :math:`L` is the padded sequence length.
+   Accordingly the layer outputs in shape :math:`(N, L, D_v)`.
+
+   :param emb_dim: The dimension of embeddings, i.e. D_e.
+   :param key_dim: The dimension of keys, i.e. D_k.
+   :param val_dim: The dimension of values, i.e. D_v.
+
+
+   .. py:attribute:: emb_dim
+      :type:  int
+
+      The dimension of embedings, i.e. :math:`D_e`.
+
+
+   .. py:attribute:: key_dim
+      :type:  int
+
+      The dimension of keys, i.e. :math:`D_k`.
+      r
+
+
+   .. py:attribute:: val_dim
+      :type:  int
+
+      The dimension of values, i.e. :math:`D_v`.
+
+
+   .. py:attribute:: proj_q
+      :type:  torch.nn.Parameter
+
+      The projection matrix for queries :math:`M_q\in\mathbb R^{D_e, D_v}`.
+
+
+   .. py:attribute:: proj_k
+      :type:  torch.nn.Parameter
+
+      The projection matrix for keys :math:`M_k\in\mathbb R^{D_e, D_k}`.
+
+
+   .. py:attribute:: proj_v
+      :type:  torch.nn.Parameter
+
+      The projection matrix for values :math:`M_v\in\mathbb R^{D_e, D_v}`.
+
+
+   .. py:method:: forward(x, attn_mask = None)
+
+      Compute self-attention output.
+
+      .. todo::
+
+         #. Compute queries :math:`Q`, keys :math:`K`,
+            and values :math:`V` with input embeddings :math:`x`.
+         #. Compute the (masked) self-attention map.
+         #. Compute the last output.
+
+      :param x: The input of shape :math:`(N, L, D_e)`.
+      :param attn_mask: The optional attention mask of shape :math:`(N, L, L)`.
+
+      :returns: The self-attention output of shape :math:`(N, L, D_v)`.
+
+
+
+.. py:class:: SFLM(vocab_size, emb_dim, block_size)
+
+
+
+   A Small formal language model.
+
+   This module takes sequences of indices of tokens in shape :math:`(N, L)`, where :math:`N` is the batch size,
+   :math:`L` is the padded length of sequences, and outputs logits of shape :math:`(N, L, V)` for predicting next
+   token at each position, where :math:`L` is the size of the vocabulary.
+
+   .. _SFLM_structure:
+   .. figure:: /../SFLM_architecture.png
+       :width: 50%
+
+       The model structure.
+
+   :param vocab_size: The size of the vocabulary, i.e. :math:`V`.
+   :param emb_dim: The dimension of embeddings.
+   :param block_size: The maximum length of input sequences, i.e. maximum value of :math:`L`.
+
+
+   .. py:attribute:: vocab_size
+      :type:  int
+
+      The size of the vocabulary, i.e. V.
+
+
+   .. py:attribute:: emb_dim
+      :type:  int
+
+      The dimension of embeddings.
+
+
+   .. py:attribute:: block_size
+      :type:  int
+
+      The maximum length of input sequences.
+
+
+   .. py:attribute:: tok_embedding
+      :type:  torch.nn.Embedding
+
+      The embedding layer for translating token indices into embeddings.
+
+
+   .. py:attribute:: pos_embedding
+      :type:  torch.nn.Embedding
+
+      The embedding layer for encoding the position of the corresponding token.
+
+
+   .. py:attribute:: self_attention
+      :type:  SelfAttention
+
+      The self-attention layer. Here, the dimension of keys and values are set to emb_dim.
+
+
+   .. py:attribute:: layer_norm_1
+      :type:  torch.nn.LayerNorm
+
+      The layer normalization for self-attention layer.
+
+
+   .. py:attribute:: fnn
+      :type:  torch.nn.Sequential
+
+      The FNN layer.
+
+
+   .. py:attribute:: layer_norm_2
+      :type:  torch.nn.LayerNorm
+
+      The layer normalization for FNN layer.
+
+
+   .. py:attribute:: head
+      :type:  torch.nn.Linear
+
+      The linear layer project embeddings into logits for predicting the next token at each position.
+
+
+   .. py:method:: forward(idx)
+
+      Compute logits of the next token.
+
+      Denote input as :math:`S`, and output as :math:`Z`,
+      :math:`Z_{i,j,k}` represents the logit of :math:`S_{i,j+1}`
+      to be the :math:`k`-th token given :math:`S_{i,1:j}`.
+
+
+      .. _SFLM_forward:
+      .. figure:: /../SFLM_forward.png
+
+          The forward process.
+
+      .. todo::
+
+         Complete the forward function of this SFLM model.
+         Refer to the architecture illustrated :ref:`here<SFLM_structure>`.
+         
+         The model must be **CAUSAL** in the aspect of the sequence order as
+         shown :ref:`above<SFLM_forward>`,
+         i.e. at each position, the model cannot access any token after it.
+         You can achieve this requirement by applying a proper attention mask.
+
+      :param idx: The input of shape :math:`(N, L)`.
+
+      :returns: The language model output of shape :math:`(N, L, V)` for predicting the next token.
+
+
+
+   .. py:method:: generate(cond_idx, steps, temperature = 1.0)
+
+      Conditional sample from this language model.
+
+      .. _SFLM_generation:
+      .. figure:: /../SFLM_generate.png
+
+          Given a single BOS as the condition, a sample "abcc" is generated.
+
+      :param cond_idx: The input of shape :math:`(N, L)`.
+                       It represents the indices of the first :math:`L` token given as condition.
+      :param steps: The steps for generation.
+      :param temperature: The temperature for sampling, default to 1.0.
+                          For greedy strategy, just give 0.0.
+
+      :returns: The sampled indices of shape :math:`(N, L + \textit{steps})`. When :math:`L + \textit{steps}` is greater than
+                block_size, the generation would always depends the last block_size tokens in a moving window.
+
+
+

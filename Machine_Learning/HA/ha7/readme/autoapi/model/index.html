@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>model &#8212; SFLM  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="utils" href="../utils/index.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-model">
+<span id="model"></span><h1>model<a class="headerlink" href="#module-model" title="Link to this heading">¶</a></h1>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#model.SelfAttention" title="model.SelfAttention"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SelfAttention</span></code></a></p></td>
+<td><p>A self-attention layer.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#model.SFLM" title="model.SFLM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SFLM</span></code></a></p></td>
+<td><p>A Small formal language model.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="model.SelfAttention">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">model.</span></span><span class="sig-name descname"><span class="pre">SelfAttention</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">emb_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val_dim</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#model.SelfAttention" title="Link to this definition">¶</a></dt>
+<dd><p>A self-attention layer.</p>
+<p>This module takes inputs <span class="math notranslate nohighlight">\(X\in\mathbb R^{N\times L\times D_e}\)</span>, and projects them into
+queries <span class="math notranslate nohighlight">\(Q\in\mathbb R^{N\times L\times D_k}\)</span>, keys <span class="math notranslate nohighlight">\(K\in\mathbb R^{N\times L\times D_k}\)</span>,
+and values <span class="math notranslate nohighlight">\(V\in\mathbb R^{N\times L\times D_v}\)</span>, where
+<span class="math notranslate nohighlight">\(N\)</span> is the batch size, <span class="math notranslate nohighlight">\(L\)</span> is the padded sequence length.
+Accordingly the layer outputs in shape <span class="math notranslate nohighlight">\((N, L, D_v)\)</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>emb_dim</strong> (<em>int</em>) – The dimension of embeddings, i.e. D_e.</p></li>
+<li><p><strong>key_dim</strong> (<em>int</em>) – The dimension of keys, i.e. D_k.</p></li>
+<li><p><strong>val_dim</strong> (<em>int</em>) – The dimension of values, i.e. D_v.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.SelfAttention.emb_dim">
+<span class="sig-name descname"><span class="pre">emb_dim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#model.SelfAttention.emb_dim" title="Link to this definition">¶</a></dt>
+<dd><p>The dimension of embedings, i.e. <span class="math notranslate nohighlight">\(D_e\)</span>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.SelfAttention.key_dim">
+<span class="sig-name descname"><span class="pre">key_dim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#model.SelfAttention.key_dim" title="Link to this definition">¶</a></dt>
+<dd><p>The dimension of keys, i.e. <span class="math notranslate nohighlight">\(D_k\)</span>.
+r</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.SelfAttention.val_dim">
+<span class="sig-name descname"><span class="pre">val_dim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#model.SelfAttention.val_dim" title="Link to this definition">¶</a></dt>
+<dd><p>The dimension of values, i.e. <span class="math notranslate nohighlight">\(D_v\)</span>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.SelfAttention.proj_q">
+<span class="sig-name descname"><span class="pre">proj_q</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">torch.nn.Parameter</span></em><a class="headerlink" href="#model.SelfAttention.proj_q" title="Link to this definition">¶</a></dt>
+<dd><p>The projection matrix for queries <span class="math notranslate nohighlight">\(M_q\in\mathbb R^{D_e, D_v}\)</span>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.SelfAttention.proj_k">
+<span class="sig-name descname"><span class="pre">proj_k</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">torch.nn.Parameter</span></em><a class="headerlink" href="#model.SelfAttention.proj_k" title="Link to this definition">¶</a></dt>
+<dd><p>The projection matrix for keys <span class="math notranslate nohighlight">\(M_k\in\mathbb R^{D_e, D_k}\)</span>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.SelfAttention.proj_v">
+<span class="sig-name descname"><span class="pre">proj_v</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">torch.nn.Parameter</span></em><a class="headerlink" href="#model.SelfAttention.proj_v" title="Link to this definition">¶</a></dt>
+<dd><p>The projection matrix for values <span class="math notranslate nohighlight">\(M_v\in\mathbb R^{D_e, D_v}\)</span>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="model.SelfAttention.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attn_mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#model.SelfAttention.forward" title="Link to this definition">¶</a></dt>
+<dd><p>Compute self-attention output.</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<ol class="arabic simple">
+<li><p>Compute queries <span class="math notranslate nohighlight">\(Q\)</span>, keys <span class="math notranslate nohighlight">\(K\)</span>,
+and values <span class="math notranslate nohighlight">\(V\)</span> with input embeddings <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
+<li><p>Compute the (masked) self-attention map.</p></li>
+<li><p>Compute the last output.</p></li>
+</ol>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>torch.FloatTensor</em>) – The input of shape <span class="math notranslate nohighlight">\((N, L, D_e)\)</span>.</p></li>
+<li><p><strong>attn_mask</strong> (<em>Optional</em><em>[</em><em>torch.BoolTensor</em><em>]</em>) – The optional attention mask of shape <span class="math notranslate nohighlight">\((N, L, L)\)</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The self-attention output of shape <span class="math notranslate nohighlight">\((N, L, D_v)\)</span>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>torch.FloatTensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="model.SFLM">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">model.</span></span><span class="sig-name descname"><span class="pre">SFLM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vocab_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">emb_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#model.SFLM" title="Link to this definition">¶</a></dt>
+<dd><p>A Small formal language model.</p>
+<p>This module takes sequences of indices of tokens in shape <span class="math notranslate nohighlight">\((N, L)\)</span>, where <span class="math notranslate nohighlight">\(N\)</span> is the batch size,
+<span class="math notranslate nohighlight">\(L\)</span> is the padded length of sequences, and outputs logits of shape <span class="math notranslate nohighlight">\((N, L, V)\)</span> for predicting next
+token at each position, where <span class="math notranslate nohighlight">\(L\)</span> is the size of the vocabulary.</p>
+<figure class="align-default" id="id3">
+<span id="sflm-structure"></span><a class="reference internal image-reference" href="../../_images/SFLM_architecture.png"><img alt="../../_images/SFLM_architecture.png" src="../../_images/SFLM_architecture.png" style="width: 50%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">The model structure.</span><a class="headerlink" href="#id3" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vocab_size</strong> (<em>int</em>) – The size of the vocabulary, i.e. <span class="math notranslate nohighlight">\(V\)</span>.</p></li>
+<li><p><strong>emb_dim</strong> (<em>int</em>) – The dimension of embeddings.</p></li>
+<li><p><strong>block_size</strong> (<em>int</em>) – The maximum length of input sequences, i.e. maximum value of <span class="math notranslate nohighlight">\(L\)</span>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.SFLM.vocab_size">
+<span class="sig-name descname"><span class="pre">vocab_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#model.SFLM.vocab_size" title="Link to this definition">¶</a></dt>
+<dd><p>The size of the vocabulary, i.e. V.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.SFLM.emb_dim">
+<span class="sig-name descname"><span class="pre">emb_dim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#model.SFLM.emb_dim" title="Link to this definition">¶</a></dt>
+<dd><p>The dimension of embeddings.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.SFLM.block_size">
+<span class="sig-name descname"><span class="pre">block_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#model.SFLM.block_size" title="Link to this definition">¶</a></dt>
+<dd><p>The maximum length of input sequences.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.SFLM.tok_embedding">
+<span class="sig-name descname"><span class="pre">tok_embedding</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">torch.nn.Embedding</span></em><a class="headerlink" href="#model.SFLM.tok_embedding" title="Link to this definition">¶</a></dt>
+<dd><p>The embedding layer for translating token indices into embeddings.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.SFLM.pos_embedding">
+<span class="sig-name descname"><span class="pre">pos_embedding</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">torch.nn.Embedding</span></em><a class="headerlink" href="#model.SFLM.pos_embedding" title="Link to this definition">¶</a></dt>
+<dd><p>The embedding layer for encoding the position of the corresponding token.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.SFLM.self_attention">
+<span class="sig-name descname"><span class="pre">self_attention</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#model.SelfAttention" title="model.SelfAttention"><span class="pre">SelfAttention</span></a></em><a class="headerlink" href="#model.SFLM.self_attention" title="Link to this definition">¶</a></dt>
+<dd><p>The self-attention layer. Here, the dimension of keys and values are set to emb_dim.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.SFLM.layer_norm_1">
+<span class="sig-name descname"><span class="pre">layer_norm_1</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">torch.nn.LayerNorm</span></em><a class="headerlink" href="#model.SFLM.layer_norm_1" title="Link to this definition">¶</a></dt>
+<dd><p>The layer normalization for self-attention layer.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.SFLM.fnn">
+<span class="sig-name descname"><span class="pre">fnn</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">torch.nn.Sequential</span></em><a class="headerlink" href="#model.SFLM.fnn" title="Link to this definition">¶</a></dt>
+<dd><p>The FNN layer.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.SFLM.layer_norm_2">
+<span class="sig-name descname"><span class="pre">layer_norm_2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">torch.nn.LayerNorm</span></em><a class="headerlink" href="#model.SFLM.layer_norm_2" title="Link to this definition">¶</a></dt>
+<dd><p>The layer normalization for FNN layer.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.SFLM.head">
+<span class="sig-name descname"><span class="pre">head</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">torch.nn.Linear</span></em><a class="headerlink" href="#model.SFLM.head" title="Link to this definition">¶</a></dt>
+<dd><p>The linear layer project embeddings into logits for predicting the next token at each position.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="model.SFLM.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#model.SFLM.forward" title="Link to this definition">¶</a></dt>
+<dd><p>Compute logits of the next token.</p>
+<p>Denote input as <span class="math notranslate nohighlight">\(S\)</span>, and output as <span class="math notranslate nohighlight">\(Z\)</span>,
+<span class="math notranslate nohighlight">\(Z_{i,j,k}\)</span> represents the logit of <span class="math notranslate nohighlight">\(S_{i,j+1}\)</span>
+to be the <span class="math notranslate nohighlight">\(k\)</span>-th token given <span class="math notranslate nohighlight">\(S_{i,1:j}\)</span>.</p>
+<figure class="align-default" id="id4">
+<span id="sflm-forward"></span><img alt="../../_images/SFLM_forward.png" src="../../_images/SFLM_forward.png" />
+<figcaption>
+<p><span class="caption-text">The forward process.</span><a class="headerlink" href="#id4" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>Complete the forward function of this SFLM model.
+Refer to the architecture illustrated <a class="reference internal" href="#sflm-structure"><span class="std std-ref">here</span></a>.</p>
+<p>The model must be <strong>CAUSAL</strong> in the aspect of the sequence order as
+shown <a class="reference internal" href="#sflm-forward"><span class="std std-ref">above</span></a>,
+i.e. at each position, the model cannot access any token after it.
+You can achieve this requirement by applying a proper attention mask.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>idx</strong> (<em>torch.LongTensor</em>) – The input of shape <span class="math notranslate nohighlight">\((N, L)\)</span>.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The language model output of shape <span class="math notranslate nohighlight">\((N, L, V)\)</span> for predicting the next token.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>torch.FloatTensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="model.SFLM.generate">
+<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cond_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#model.SFLM.generate" title="Link to this definition">¶</a></dt>
+<dd><p>Conditional sample from this language model.</p>
+<figure class="align-default" id="id5">
+<span id="sflm-generation"></span><img alt="../../_images/SFLM_generate.png" src="../../_images/SFLM_generate.png" />
+<figcaption>
+<p><span class="caption-text">Given a single BOS as the condition, a sample “abcc” is generated.</span><a class="headerlink" href="#id5" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cond_idx</strong> (<em>torch.LongTensor</em>) – The input of shape <span class="math notranslate nohighlight">\((N, L)\)</span>.
+It represents the indices of the first <span class="math notranslate nohighlight">\(L\)</span> token given as condition.</p></li>
+<li><p><strong>steps</strong> (<em>int</em>) – The steps for generation.</p></li>
+<li><p><strong>temperature</strong> (<em>Optional</em><em>[</em><em>float</em><em>]</em>) – The temperature for sampling, default to 1.0.
+For greedy strategy, just give 0.0.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The sampled indices of shape <span class="math notranslate nohighlight">\((N, L + \textit{steps})\)</span>. When <span class="math notranslate nohighlight">\(L + \textit{steps}\)</span> is greater than
+block_size, the generation would always depends the last block_size tokens in a moving window.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>torch.LongTensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, COMP5212.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../_sources/autoapi/model/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

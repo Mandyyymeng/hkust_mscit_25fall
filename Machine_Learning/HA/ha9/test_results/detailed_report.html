@@ -1,0 +1,221 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>GAN Experiment Detailed Report</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; }
+                .header { background: #f0f0f0; padding: 20px; border-radius: 5px; }
+                .metric-card { background: white; border: 1px solid #ddd; border-radius: 5px; padding: 15px; margin: 10px 0; }
+                .best { background: #d4edda; border-color: #c3e6cb; }
+                .worst { background: #f8d7da; border-color: #f5c6cb; }
+                table { width: 100%; border-collapse: collapse; }
+                th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
+                th { background-color: #f2f2f2; }
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <h1>GAN Model Experiment Detailed Report</h1>
+                <p>Generated: 2025-11-23 21:43:33</p>
+                <p>Total Experiments: 16</p>
+            </div>
+        
+            <div class="metric-card best">
+                <h2>🎉 Best Model: exp8_mse_loss</h2>
+                <p><strong>FID Score:</strong> 24.4023</p>
+                <p><strong>Configuration:</strong> hidden_size=256, 
+                latent_size=128, 
+                lr=0.0001</p>
+            </div>
+            
+            <div class="metric-card">
+                <h2>📊 Detailed Experiment Results</h2>
+                <table>
+                    <tr>
+                        <th>Experiment Name</th>
+                        <th>FID Score</th>
+                        <th>Hidden Size</th>
+                        <th>Latent Size</th>
+                        <th>Learning Rate</th>
+                        <th>n_critic</th>
+                        <th>Stability Techniques</th>
+                    </tr>
+        
+                    <tr>
+                        <td>exp8_mse_loss</td>
+                        <td>24.4023</td>
+                        <td>256</td>
+                        <td>128</td>
+                        <td>0.0001</td>
+                        <td>1</td>
+                        <td>None</td>
+                    </tr>
+            
+                    <tr>
+                        <td>exp3_large_latent</td>
+                        <td>25.7028</td>
+                        <td>256</td>
+                        <td>256</td>
+                        <td>0.0001</td>
+                        <td>1</td>
+                        <td>None</td>
+                    </tr>
+            
+                    <tr>
+                        <td>exp2_small_latent</td>
+                        <td>26.7985</td>
+                        <td>256</td>
+                        <td>64</td>
+                        <td>0.0001</td>
+                        <td>1</td>
+                        <td>None</td>
+                    </tr>
+            
+                    <tr>
+                        <td>exp1_baseline</td>
+                        <td>30.5310</td>
+                        <td>256</td>
+                        <td>128</td>
+                        <td>0.0001</td>
+                        <td>1</td>
+                        <td>None</td>
+                    </tr>
+            
+                    <tr>
+                        <td>exp6_higher_lr</td>
+                        <td>30.9849</td>
+                        <td>256</td>
+                        <td>128</td>
+                        <td>0.001</td>
+                        <td>1</td>
+                        <td>None</td>
+                    </tr>
+            
+                    <tr>
+                        <td>exp10_gradient_penalty</td>
+                        <td>40.7927</td>
+                        <td>256</td>
+                        <td>128</td>
+                        <td>0.0001</td>
+                        <td>5</td>
+                        <td>GP</td>
+                    </tr>
+            
+                    <tr>
+                        <td>exp12_g_larger_lr</td>
+                        <td>45.3237</td>
+                        <td>256</td>
+                        <td>128</td>
+                        <td>0.0001</td>
+                        <td>1</td>
+                        <td>None</td>
+                    </tr>
+            
+                    <tr>
+                        <td>exp13_g_smaller_lr</td>
+                        <td>48.0737</td>
+                        <td>256</td>
+                        <td>128</td>
+                        <td>0.0001</td>
+                        <td>1</td>
+                        <td>None</td>
+                    </tr>
+            
+                    <tr>
+                        <td>exp11_equal_lr</td>
+                        <td>55.1005</td>
+                        <td>256</td>
+                        <td>128</td>
+                        <td>0.0001</td>
+                        <td>1</td>
+                        <td>None</td>
+                    </tr>
+            
+                    <tr>
+                        <td>exp16_capacity_adapted</td>
+                        <td>63.4433</td>
+                        <td>512</td>
+                        <td>128</td>
+                        <td>5e-05</td>
+                        <td>1</td>
+                        <td>None</td>
+                    </tr>
+            
+                    <tr>
+                        <td>exp7_more_epochs</td>
+                        <td>70.5686</td>
+                        <td>256</td>
+                        <td>128</td>
+                        <td>0.0001</td>
+                        <td>1</td>
+                        <td>None</td>
+                    </tr>
+            
+                    <tr>
+                        <td>exp5_tanh_activation</td>
+                        <td>75.5015</td>
+                        <td>256</td>
+                        <td>128</td>
+                        <td>0.0001</td>
+                        <td>1</td>
+                        <td>None</td>
+                    </tr>
+            
+                    <tr>
+                        <td>exp4_elu_activation</td>
+                        <td>82.0534</td>
+                        <td>256</td>
+                        <td>128</td>
+                        <td>0.0001</td>
+                        <td>1</td>
+                        <td>None</td>
+                    </tr>
+            
+                    <tr>
+                        <td>exp15_pure_capacity</td>
+                        <td>86.1413</td>
+                        <td>512</td>
+                        <td>128</td>
+                        <td>0.0001</td>
+                        <td>1</td>
+                        <td>None</td>
+                    </tr>
+            
+                    <tr>
+                        <td>exp14_gradient_penalty_improved</td>
+                        <td>137.1211</td>
+                        <td>256</td>
+                        <td>128</td>
+                        <td>0.0001</td>
+                        <td>3</td>
+                        <td>GP</td>
+                    </tr>
+            
+                    <tr>
+                        <td>exp9_wasserstein_loss</td>
+                        <td>270.4681</td>
+                        <td>256</td>
+                        <td>128</td>
+                        <td>0.0001</td>
+                        <td>1</td>
+                        <td>None</td>
+                    </tr>
+            
+                </table>
+            </div>
+            
+            <div class="metric-card">
+                <h2>📈 Visualization Charts</h2>
+                <p>The following charts have been generated in the test_results/ directory:</p>
+                <ul>
+                    <li>main_metrics_comparison.png - Main metrics comparison</li>
+                    <li>config_impact_analysis.png - Configuration parameter impact analysis</li>
+                    <li>model_comparison_samples.png - Model sample comparison</li>
+                    <li>training_stability_analysis.png - Training stability analysis</li>
+                </ul>
+            </div>
+        </body>
+        </html>
+        

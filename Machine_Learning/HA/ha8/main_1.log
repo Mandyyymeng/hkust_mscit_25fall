@@ -1,0 +1,92 @@
+nohup: ignoring input
+2025-11-11 23:30:13,437 - INFO - Initializing CLIP experiment with model: ViT-B/32
+2025-11-11 23:30:13,437 - INFO - Using device: cuda
+2025-11-11 23:30:19,253 - INFO - CLIP model loaded successfully
+2025-11-11 23:30:19,253 - INFO - Starting CALTECH101 zero-shot classification experiment
+2025-11-11 23:30:19,253 - INFO - Using dataset path: ./caltech-101
+2025-11-11 23:30:19,253 - INFO - === RUNNING BASELINE EXPERIMENTS ===
+2025-11-11 23:30:19,253 - INFO - Evaluating baseline: simple_baseline
+2025-11-11 23:30:19,254 - INFO - Found 102 class folders in dataset
+2025-11-11 23:31:06,357 - INFO - Baseline simple_baseline completed: Accuracy = 0.8740, Matched 102/102 classes, Time = 47.10s
+2025-11-11 23:31:06,357 - INFO - Evaluating baseline: ensemble_baseline
+2025-11-11 23:31:06,358 - INFO - Found 102 class folders in dataset
+2025-11-11 23:32:07,163 - INFO - Baseline ensemble_baseline completed: Accuracy = 0.8735, Matched 102/102 classes, Time = 60.81s
+2025-11-11 23:32:07,163 - INFO - === RUNNING ENSEMBLE IMPLEMENTATION EXPERIMENTS ===
+2025-11-11 23:32:07,164 - INFO - Evaluating ensemble method: feature_average
+2025-11-12 00:15:14,454 - INFO - Ensemble method feature_average completed: Accuracy = 0.8735, Matched 102/102 classes, Time = 2587.29s
+2025-11-12 00:15:14,454 - INFO - Evaluating ensemble method: prediction_average
+2025-11-12 00:38:44,419 - INFO - Ensemble method prediction_average completed: Accuracy = 0.8676, Matched 102/102 classes, Time = 1409.96s
+2025-11-12 00:38:44,420 - INFO - Evaluating ensemble method: majority_voting
+2025-11-12 01:02:09,862 - INFO - Ensemble method majority_voting completed: Accuracy = 0.8740, Matched 102/102 classes, Time = 1405.44s
+2025-11-12 01:02:09,862 - INFO - Evaluating ensemble method: weighted_prediction
+2025-11-12 01:25:22,598 - INFO - Ensemble method weighted_prediction completed: Accuracy = 0.8760, Matched 102/102 classes, Time = 1392.74s
+2025-11-12 01:25:22,599 - INFO - Evaluating ensemble method: learned_weighting
+2025-11-12 01:25:22,600 - INFO - Learning template weights using logistic regression...
+2025-11-12 01:26:01,751 - WARNING - Weight learning failed: name 'LogisticRegression' is not defined, using uniform weights
+2025-11-12 01:49:19,526 - INFO - Ensemble method learned_weighting completed: Accuracy = 0.8676, Matched 102/102 classes, Time = 1436.93s
+2025-11-12 01:49:19,526 - INFO - Fast analysis of template effectiveness...
+2025-11-12 01:49:19,526 - INFO - Testing template 1/15: a photo of a {}.
+2025-11-12 01:49:20,846 - INFO - Template 'a photo of a {}....' accuracy: 0.9000
+2025-11-12 01:49:20,846 - INFO - Testing template 2/15: a painting of a {}.
+2025-11-12 01:49:22,059 - INFO - Template 'a painting of a {}....' accuracy: 0.9000
+2025-11-12 01:49:22,059 - INFO - Testing template 3/15: a plastic {}.
+2025-11-12 01:49:22,794 - INFO - Template 'a plastic {}....' accuracy: 0.9333
+2025-11-12 01:49:22,795 - INFO - Testing template 4/15: a sculpture of a {}.
+2025-11-12 01:49:23,447 - INFO - Template 'a sculpture of a {}....' accuracy: 0.8667
+2025-11-12 01:49:23,447 - INFO - Testing template 5/15: a sketch of a {}.
+2025-11-12 01:49:24,036 - INFO - Template 'a sketch of a {}....' accuracy: 0.9000
+2025-11-12 01:49:24,036 - INFO - Testing template 6/15: a tattoo of a {}.
+2025-11-12 01:49:24,760 - INFO - Template 'a tattoo of a {}....' accuracy: 0.9000
+2025-11-12 01:49:24,761 - INFO - Testing template 7/15: a toy {}.
+2025-11-12 01:49:25,501 - INFO - Template 'a toy {}....' accuracy: 0.9000
+2025-11-12 01:49:25,501 - INFO - Testing template 8/15: a rendition of a {}.
+2025-11-12 01:49:26,159 - INFO - Template 'a rendition of a {}....' accuracy: 0.8667
+2025-11-12 01:49:26,159 - INFO - Testing template 9/15: a embroidered {}.
+2025-11-12 01:49:27,736 - INFO - Template 'a embroidered {}....' accuracy: 0.9333
+2025-11-12 01:49:27,736 - INFO - Testing template 10/15: a cartoon {}.
+2025-11-12 01:49:28,209 - INFO - Template 'a cartoon {}....' accuracy: 0.9333
+2025-11-12 01:49:28,209 - INFO - Testing template 11/15: a {} in a video game.
+2025-11-12 01:49:28,568 - INFO - Template 'a {} in a video game....' accuracy: 0.9000
+2025-11-12 01:49:28,568 - INFO - Testing template 12/15: a plushie {}.
+2025-11-12 01:49:28,922 - INFO - Template 'a plushie {}....' accuracy: 0.9000
+2025-11-12 01:49:28,922 - INFO - Testing template 13/15: a origami {}.
+2025-11-12 01:49:29,271 - INFO - Template 'a origami {}....' accuracy: 0.8667
+2025-11-12 01:49:29,271 - INFO - Testing template 14/15: art of a {}.
+2025-11-12 01:49:29,619 - INFO - Template 'art of a {}....' accuracy: 0.8333
+2025-11-12 01:49:29,619 - INFO - Testing template 15/15: graffiti of a {}.
+2025-11-12 01:49:29,959 - INFO - Template 'graffiti of a {}....' accuracy: 0.9333
+2025-11-12 01:49:29,960 - INFO - Top template effectiveness ranking (fast analysis):
+2025-11-12 01:49:29,960 - INFO -   0.9333: a plastic {}.
+2025-11-12 01:49:29,960 - INFO -   0.9333: a embroidered {}.
+2025-11-12 01:49:29,960 - INFO -   0.9333: a cartoon {}.
+2025-11-12 01:49:29,960 - INFO -   0.9333: graffiti of a {}.
+2025-11-12 01:49:29,960 - INFO -   0.9000: a photo of a {}.
+2025-11-12 01:49:29,960 - INFO -   0.9000: a painting of a {}.
+2025-11-12 01:49:29,960 - INFO -   0.9000: a sketch of a {}.
+2025-11-12 01:49:29,960 - INFO -   0.9000: a tattoo of a {}.
+2025-11-12 01:49:29,960 - INFO - Using top-8 templates for selective ensemble:
+2025-11-12 01:49:29,960 - INFO -   a plastic {}.
+2025-11-12 01:49:29,960 - INFO -   a embroidered {}.
+2025-11-12 01:49:29,960 - INFO -   a cartoon {}.
+2025-11-12 01:49:29,960 - INFO -   graffiti of a {}.
+2025-11-12 01:49:29,960 - INFO -   a photo of a {}.
+2025-11-12 01:49:29,960 - INFO -   a painting of a {}.
+2025-11-12 01:49:29,960 - INFO -   a sketch of a {}.
+2025-11-12 01:49:29,960 - INFO -   a tattoo of a {}.
+2025-11-12 01:49:29,960 - INFO - Evaluating baseline: selective_ensemble_top8
+2025-11-12 01:49:29,961 - INFO - Found 102 class folders in dataset
+2025-11-12 01:50:15,123 - INFO - Baseline selective_ensemble_top8 completed: Accuracy = 0.8740, Matched 102/102 classes, Time = 45.16s
+2025-11-12 01:50:15,127 - INFO - Detailed results saved to: experiment_results/detailed_results.json
+2025-11-12 01:50:15,127 - INFO - Summary results saved to: experiment_results/summary_results.csv
+2025-11-12 01:50:15,128 - INFO - ======================================================================
+2025-11-12 01:50:15,128 - INFO - EXPERIMENT COMPLETED SUCCESSFULLY
+2025-11-12 01:50:15,128 - INFO - ======================================================================
+2025-11-12 01:50:15,128 - INFO - OVERALL RESULTS RANKING:
+2025-11-12 01:50:15,128 - INFO -  1. weighted_prediction  : 0.8760
+2025-11-12 01:50:15,128 - INFO -  2. simple_baseline      : 0.8740
+2025-11-12 01:50:15,128 - INFO -  3. majority_voting      : 0.8740
+2025-11-12 01:50:15,128 - INFO -  4. selective_ensemble   : 0.8740
+2025-11-12 01:50:15,128 - INFO -  5. ensemble_baseline    : 0.8735
+2025-11-12 01:50:15,128 - INFO -  6. feature_average      : 0.8735
+2025-11-12 01:50:15,128 - INFO -  7. prediction_average   : 0.8676
+2025-11-12 01:50:15,128 - INFO -  8. learned_weighting    : 0.8676

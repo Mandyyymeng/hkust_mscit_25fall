@@ -1,0 +1,100 @@
+utils
+=====
+
+.. py:module:: utils
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   utils.LangABC
+   utils.TokenizerABC
+
+
+Module Contents
+---------------
+
+.. py:class:: LangABC(size, max_len, transform = None)
+
+
+
+   A dummy dataset of a simple formal language.
+
+   FORMAL LANGUAGE NOTE
+   Given an alphabet :math:`\Sigma`, a formal language :math:`L` is defined as a subset of :math:`\Sigma^*`.
+
+   This is a NONDETERMINISTIC dummy dataset for generating strings in a formal language L,
+   where :math:`L=\{w| |w| \leq \textit{max_len}, |w|_a + |w|_b = |w|_c\}, \Sigma=\{a, b, c\}`.
+
+   Attributes:
+
+   :param size: The dummy size of the dataset, would affect the # for each epoch.
+   :param max_len: The maximum length of strings defined for this language.
+                   Note: BOS and EOS not included.
+   :param transform: The transform function for preprocessing.
+
+
+   .. py:attribute:: size
+      :type:  int
+
+      The dummy size of the dataset,
+      required to specify how many steps for each epoch.
+
+
+   .. py:attribute:: max_len
+      :type:  int
+
+      The maximum length of strings defined for this language.
+      Note: SOS and EOS not included.
+
+
+   .. py:attribute:: transform
+      :type:  Optional[Callable[str, Any]]
+      :value: None
+
+
+      The transform function for preprocessing.
+
+
+.. py:class:: TokenizerABC
+
+   A simple predefined tokenizer with 5 tokens: a, b, c, ^(BOS), and $(EOS).
+
+
+   .. py:attribute:: num_tokens
+      :type:  int
+      :value: 5
+
+
+      The number of tokens.
+
+
+   .. py:method:: encode(s, pad_to_length = None)
+
+      Translate a string into a Tensor of indices of tokens.
+
+      The input string s would be padded with BOS and EOS(s).
+      For example, if s is :code:`"abc"`, and pad_to_length is 10, s would be first padded as :code:`"^abc$$$$$$"`.
+
+      :param s: The input string.
+      :param pad_to_length: If given, the input would be padded with tailling EOSs
+                            till its length, including BOS and EOSs, meets this value.
+
+      :returns: The indices of tokens stored in an 1D tensor.
+
+
+
+   .. py:method:: decode(idx, truncate = False, remove_special_token = False)
+
+      Translate a Tensor of indices of tokens back to string.
+
+      :param idx: The indices of tokens stored in an 1D tensor.
+      :param truncate: If set to True, all contents after the first EOS would be removed.
+      :param remove_special_token: BOS and EOS would be removed if set to True.
+
+      :returns: The decoded string.
+
+
+

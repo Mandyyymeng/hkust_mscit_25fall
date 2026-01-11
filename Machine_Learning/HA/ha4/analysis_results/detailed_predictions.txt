@@ -1,0 +1,123 @@
+IMAGE CLASSIFICATION PREDICTIONS
+================================================================================
+
+IMAGE: 1
+TRUE LABEL: golfcart (ID: n03445924)
+--------------------------------------------------
+AlexNet         → sunscreen                      [0.2120] ✗ WRONG
+VGG16           → golfcart                       [0.7300] ✓ CORRECT
+ResNet50        → barrow                         [0.3523] ✗ WRONG
+Inception V3    → golfcart                       [1.0000] ✓ CORRECT
+DenseNet121     → golfcart                       [0.2394] ✓ CORRECT
+MobileNetV2     → golfcart                       [0.6981] ✓ CORRECT
+
+================================================================================
+
+IMAGE: 10
+TRUE LABEL: carousel (ID: n02966193)
+--------------------------------------------------
+AlexNet         → carousel                       [1.0000] ✓ CORRECT
+VGG16           → carousel                       [1.0000] ✓ CORRECT
+ResNet50        → carousel                       [1.0000] ✓ CORRECT
+Inception V3    → carousel                       [0.9783] ✓ CORRECT
+DenseNet121     → carousel                       [1.0000] ✓ CORRECT
+MobileNetV2     → carousel                       [1.0000] ✓ CORRECT
+
+================================================================================
+
+IMAGE: 2
+TRUE LABEL: water_bottle (ID: n04557648)
+--------------------------------------------------
+AlexNet         → pop_bottle                     [0.1321] ✗ WRONG
+VGG16           → vacuum                         [0.2545] ✗ WRONG
+ResNet50        → water_bottle                   [0.3702] ✓ CORRECT
+Inception V3    → water_bottle                   [0.4319] ✓ CORRECT
+DenseNet121     → water_bottle                   [0.8169] ✓ CORRECT
+MobileNetV2     → tennis_ball                    [0.1077] ✗ WRONG
+
+================================================================================
+
+IMAGE: 3
+TRUE LABEL: library (ID: n03661043)
+--------------------------------------------------
+AlexNet         → library                        [0.7063] ✓ CORRECT
+VGG16           → library                        [0.9486] ✓ CORRECT
+ResNet50        → library                        [0.7547] ✓ CORRECT
+Inception V3    → library                        [0.8743] ✓ CORRECT
+DenseNet121     → library                        [0.9107] ✓ CORRECT
+MobileNetV2     → library                        [0.8926] ✓ CORRECT
+
+================================================================================
+
+IMAGE: 4
+TRUE LABEL: car_mirror (ID: n02965783)
+--------------------------------------------------
+AlexNet         → car_mirror                     [0.9935] ✓ CORRECT
+VGG16           → car_mirror                     [0.9903] ✓ CORRECT
+ResNet50        → car_mirror                     [0.9859] ✓ CORRECT
+Inception V3    → car_mirror                     [0.9987] ✓ CORRECT
+DenseNet121     → car_mirror                     [0.9805] ✓ CORRECT
+MobileNetV2     → car_mirror                     [0.9837] ✓ CORRECT
+
+================================================================================
+
+IMAGE: 5
+TRUE LABEL: desktop_computer (ID: n03180011)
+--------------------------------------------------
+AlexNet         → oscilloscope                   [0.3488] ✗ WRONG
+VGG16           → desktop_computer               [0.3030] ✓ CORRECT
+ResNet50        → desk                           [0.2679] ✗ WRONG
+Inception V3    → notebook                       [0.2639] ✗ WRONG
+DenseNet121     → notebook                       [0.2593] ✗ WRONG
+MobileNetV2     → desktop_computer               [0.2458] ✓ CORRECT
+
+================================================================================
+
+IMAGE: 6
+TRUE LABEL: zebra (ID: n02391049)
+--------------------------------------------------
+AlexNet         → zebra                          [0.9999] ✓ CORRECT
+VGG16           → zebra                          [1.0000] ✓ CORRECT
+ResNet50        → zebra                          [1.0000] ✓ CORRECT
+Inception V3    → zebra                          [0.9873] ✓ CORRECT
+DenseNet121     → zebra                          [1.0000] ✓ CORRECT
+MobileNetV2     → zebra                          [1.0000] ✓ CORRECT
+
+================================================================================
+
+IMAGE: 7
+TRUE LABEL: school_bus (ID: n04146614)
+--------------------------------------------------
+AlexNet         → school_bus                     [1.0000] ✓ CORRECT
+VGG16           → school_bus                     [1.0000] ✓ CORRECT
+ResNet50        → school_bus                     [1.0000] ✓ CORRECT
+Inception V3    → school_bus                     [0.9936] ✓ CORRECT
+DenseNet121     → school_bus                     [1.0000] ✓ CORRECT
+MobileNetV2     → school_bus                     [1.0000] ✓ CORRECT
+
+================================================================================
+
+IMAGE: 8
+TRUE LABEL: pillow (ID: n03938244)
+--------------------------------------------------
+AlexNet         → pillow                         [0.9878] ✓ CORRECT
+VGG16           → pillow                         [1.0000] ✓ CORRECT
+ResNet50        → pillow                         [1.0000] ✓ CORRECT
+Inception V3    → pillow                         [0.9700] ✓ CORRECT
+DenseNet121     → pillow                         [1.0000] ✓ CORRECT
+MobileNetV2     → pillow                         [1.0000] ✓ CORRECT
+
+================================================================================
+
+IMAGE: 9
+TRUE LABEL: fireboat (ID: n03344393)
+--------------------------------------------------
+AlexNet         → fireboat                       [1.0000] ✓ CORRECT
+VGG16           → fireboat                       [1.0000] ✓ CORRECT
+ResNet50        → fireboat                       [1.0000] ✓ CORRECT
+Inception V3    → fireboat                       [0.9725] ✓ CORRECT
+DenseNet121     → fireboat                       [1.0000] ✓ CORRECT
+MobileNetV2     → fireboat                       [1.0000] ✓ CORRECT
+
+================================================================================
+

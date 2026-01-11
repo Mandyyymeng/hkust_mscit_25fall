@@ -1,0 +1,2939 @@
+Loading IMDB dataset...
+Dataset loaded successfully. Shape: (50000, 2)
+Dataset shuffled successfully
+Dataset Info:
+Total samples: 50000
+Positive reviews: 25000
+Negative reviews: 25000
+Preloading BERT model and tokenizer...
+BERT model and tokenizer loaded successfully.
+Preprocessing data...
+Training samples: 35000
+Validation samples: 7500
+Test samples: 7500
+Tokenizing with max_seq_len=128...
+Data preprocessing completed.
+Starting all experiments...
+
+>>> Starting Experiment 1
+
+============================================================
+EXPERIMENT 1: 30 percent data, frozen BERT, baseline
+============================================================
+Config: train_size=0.3, freeze_layers=-1
+         lr=2e-05, batch_size=32
+         dropout=0.1, epochs=20
+         use_cls_token=True, token_position=cls
+         class_weights=True, scheduler=True
+Froze all BERT layers
+Using class weights: [1. 1.]
+Starting training for 20 epochs...
+
+Epoch 1/20
+--------------------------------------------------
+Training Loss: 0.687 | Training Accuracy: 0.501
+Validation Loss: 0.674 | Validation Accuracy: 0.634
+Best Validation Loss: 0.674
+
+Epoch 2/20
+--------------------------------------------------
+Training Loss: 0.663 | Training Accuracy: 0.498
+Validation Loss: 0.646 | Validation Accuracy: 0.657
+Best Validation Loss: 0.646
+
+Epoch 3/20
+--------------------------------------------------
+Training Loss: 0.633 | Training Accuracy: 0.503
+Validation Loss: 0.618 | Validation Accuracy: 0.697
+Best Validation Loss: 0.618
+
+Epoch 4/20
+--------------------------------------------------
+Training Loss: 0.612 | Training Accuracy: 0.499
+Validation Loss: 0.600 | Validation Accuracy: 0.699
+Best Validation Loss: 0.600
+
+Epoch 5/20
+--------------------------------------------------
+Training Loss: 0.593 | Training Accuracy: 0.496
+Validation Loss: 0.585 | Validation Accuracy: 0.698
+Best Validation Loss: 0.585
+
+Epoch 6/20
+--------------------------------------------------
+Training Loss: 0.581 | Training Accuracy: 0.505
+Validation Loss: 0.569 | Validation Accuracy: 0.714
+Best Validation Loss: 0.569
+
+Epoch 7/20
+--------------------------------------------------
+Training Loss: 0.570 | Training Accuracy: 0.504
+Validation Loss: 0.559 | Validation Accuracy: 0.724
+Best Validation Loss: 0.559
+
+Epoch 8/20
+--------------------------------------------------
+Training Loss: 0.562 | Training Accuracy: 0.495
+Validation Loss: 0.551 | Validation Accuracy: 0.728
+Best Validation Loss: 0.551
+
+Epoch 9/20
+--------------------------------------------------
+Training Loss: 0.556 | Training Accuracy: 0.504
+Validation Loss: 0.553 | Validation Accuracy: 0.723
+Best Validation Loss: 0.551
+
+Epoch 10/20
+--------------------------------------------------
+Training Loss: 0.549 | Training Accuracy: 0.498
+Validation Loss: 0.543 | Validation Accuracy: 0.734
+Best Validation Loss: 0.543
+
+Epoch 11/20
+--------------------------------------------------
+Training Loss: 0.544 | Training Accuracy: 0.507
+Validation Loss: 0.535 | Validation Accuracy: 0.739
+Best Validation Loss: 0.535
+
+Epoch 12/20
+--------------------------------------------------
+Training Loss: 0.539 | Training Accuracy: 0.506
+Validation Loss: 0.532 | Validation Accuracy: 0.741
+Best Validation Loss: 0.532
+
+Epoch 13/20
+--------------------------------------------------
+Training Loss: 0.534 | Training Accuracy: 0.502
+Validation Loss: 0.532 | Validation Accuracy: 0.740
+Best Validation Loss: 0.532
+
+Epoch 14/20
+--------------------------------------------------
+Training Loss: 0.532 | Training Accuracy: 0.500
+Validation Loss: 0.527 | Validation Accuracy: 0.743
+Best Validation Loss: 0.527
+
+Epoch 15/20
+--------------------------------------------------
+Training Loss: 0.533 | Training Accuracy: 0.497
+Validation Loss: 0.524 | Validation Accuracy: 0.747
+Best Validation Loss: 0.524
+
+Epoch 16/20
+--------------------------------------------------
+Training Loss: 0.530 | Training Accuracy: 0.497
+Validation Loss: 0.524 | Validation Accuracy: 0.748
+Best Validation Loss: 0.524
+
+Epoch 17/20
+--------------------------------------------------
+Training Loss: 0.527 | Training Accuracy: 0.504
+Validation Loss: 0.521 | Validation Accuracy: 0.747
+Best Validation Loss: 0.521
+
+Epoch 18/20
+--------------------------------------------------
+Training Loss: 0.526 | Training Accuracy: 0.505
+Validation Loss: 0.522 | Validation Accuracy: 0.749
+Best Validation Loss: 0.521
+
+Epoch 19/20
+--------------------------------------------------
+Training Loss: 0.526 | Training Accuracy: 0.497
+Validation Loss: 0.520 | Validation Accuracy: 0.748
+Best Validation Loss: 0.520
+
+Epoch 20/20
+--------------------------------------------------
+Training Loss: 0.526 | Training Accuracy: 0.506
+Validation Loss: 0.520 | Validation Accuracy: 0.748
+Best Validation Loss: 0.520
+
+Test Results - Loss: 0.508, Accuracy: 0.7531, F1: 0.7529
+>>> ✓ Experiment 1 completed successfully.
+
+>>> Starting Experiment 2
+
+============================================================
+EXPERIMENT 2: 50 percent data, frozen BERT
+============================================================
+Config: train_size=0.5, freeze_layers=-1
+         lr=2e-05, batch_size=32
+         dropout=0.1, epochs=20
+         use_cls_token=True, token_position=cls
+         class_weights=True, scheduler=True
+Froze all BERT layers
+Using class weights: [1. 1.]
+Starting training for 20 epochs...
+
+Epoch 1/20
+--------------------------------------------------
+Training Loss: 0.684 | Training Accuracy: 0.501
+Validation Loss: 0.667 | Validation Accuracy: 0.627
+Best Validation Loss: 0.667
+
+Epoch 2/20
+--------------------------------------------------
+Training Loss: 0.651 | Training Accuracy: 0.499
+Validation Loss: 0.630 | Validation Accuracy: 0.660
+Best Validation Loss: 0.630
+
+Epoch 3/20
+--------------------------------------------------
+Training Loss: 0.613 | Training Accuracy: 0.498
+Validation Loss: 0.593 | Validation Accuracy: 0.700
+Best Validation Loss: 0.593
+
+Epoch 4/20
+--------------------------------------------------
+Training Loss: 0.586 | Training Accuracy: 0.501
+Validation Loss: 0.569 | Validation Accuracy: 0.721
+Best Validation Loss: 0.569
+
+Epoch 5/20
+--------------------------------------------------
+Training Loss: 0.566 | Training Accuracy: 0.503
+Validation Loss: 0.549 | Validation Accuracy: 0.734
+Best Validation Loss: 0.549
+
+Epoch 6/20
+--------------------------------------------------
+Training Loss: 0.552 | Training Accuracy: 0.496
+Validation Loss: 0.538 | Validation Accuracy: 0.739
+Best Validation Loss: 0.538
+
+Epoch 7/20
+--------------------------------------------------
+Training Loss: 0.541 | Training Accuracy: 0.495
+Validation Loss: 0.527 | Validation Accuracy: 0.746
+Best Validation Loss: 0.527
+
+Epoch 8/20
+--------------------------------------------------
+Training Loss: 0.537 | Training Accuracy: 0.498
+Validation Loss: 0.524 | Validation Accuracy: 0.747
+Best Validation Loss: 0.524
+
+Epoch 9/20
+--------------------------------------------------
+Training Loss: 0.528 | Training Accuracy: 0.499
+Validation Loss: 0.518 | Validation Accuracy: 0.751
+Best Validation Loss: 0.518
+
+Epoch 10/20
+--------------------------------------------------
+Training Loss: 0.526 | Training Accuracy: 0.500
+Validation Loss: 0.510 | Validation Accuracy: 0.757
+Best Validation Loss: 0.510
+
+Epoch 11/20
+--------------------------------------------------
+Training Loss: 0.523 | Training Accuracy: 0.501
+Validation Loss: 0.505 | Validation Accuracy: 0.756
+Best Validation Loss: 0.505
+
+Epoch 12/20
+--------------------------------------------------
+Training Loss: 0.517 | Training Accuracy: 0.497
+Validation Loss: 0.503 | Validation Accuracy: 0.757
+Best Validation Loss: 0.503
+
+Epoch 13/20
+--------------------------------------------------
+Training Loss: 0.516 | Training Accuracy: 0.498
+Validation Loss: 0.500 | Validation Accuracy: 0.761
+Best Validation Loss: 0.500
+
+Epoch 14/20
+--------------------------------------------------
+Training Loss: 0.515 | Training Accuracy: 0.502
+Validation Loss: 0.499 | Validation Accuracy: 0.761
+Best Validation Loss: 0.499
+
+Epoch 15/20
+--------------------------------------------------
+Training Loss: 0.511 | Training Accuracy: 0.499
+Validation Loss: 0.497 | Validation Accuracy: 0.763
+Best Validation Loss: 0.497
+
+Epoch 16/20
+--------------------------------------------------
+Training Loss: 0.507 | Training Accuracy: 0.502
+Validation Loss: 0.496 | Validation Accuracy: 0.763
+Best Validation Loss: 0.496
+
+Epoch 17/20
+--------------------------------------------------
+Training Loss: 0.508 | Training Accuracy: 0.501
+Validation Loss: 0.494 | Validation Accuracy: 0.764
+Best Validation Loss: 0.494
+
+Epoch 18/20
+--------------------------------------------------
+Training Loss: 0.505 | Training Accuracy: 0.506
+Validation Loss: 0.493 | Validation Accuracy: 0.764
+Best Validation Loss: 0.493
+
+Epoch 19/20
+--------------------------------------------------
+Training Loss: 0.509 | Training Accuracy: 0.500
+Validation Loss: 0.494 | Validation Accuracy: 0.764
+Best Validation Loss: 0.493
+
+Epoch 20/20
+--------------------------------------------------
+Training Loss: 0.507 | Training Accuracy: 0.501
+Validation Loss: 0.493 | Validation Accuracy: 0.764
+Best Validation Loss: 0.493
+
+Test Results - Loss: 0.481, Accuracy: 0.7709, F1: 0.7709
+>>> ✓ Experiment 2 completed successfully.
+
+>>> Starting Experiment 3
+
+============================================================
+EXPERIMENT 3: 70 percent data, frozen BERT
+============================================================
+Config: train_size=0.7, freeze_layers=-1
+         lr=2e-05, batch_size=32
+         dropout=0.1, epochs=20
+         use_cls_token=True, token_position=cls
+         class_weights=True, scheduler=True
+Froze all BERT layers
+Using class weights: [1. 1.]
+Starting training for 20 epochs...
+
+Epoch 1/20
+--------------------------------------------------
+Training Loss: 0.682 | Training Accuracy: 0.498
+Validation Loss: 0.663 | Validation Accuracy: 0.631
+Best Validation Loss: 0.663
+
+Epoch 2/20
+--------------------------------------------------
+Training Loss: 0.641 | Training Accuracy: 0.501
+Validation Loss: 0.613 | Validation Accuracy: 0.681
+Best Validation Loss: 0.613
+
+Epoch 3/20
+--------------------------------------------------
+Training Loss: 0.593 | Training Accuracy: 0.499
+Validation Loss: 0.567 | Validation Accuracy: 0.720
+Best Validation Loss: 0.567
+
+Epoch 4/20
+--------------------------------------------------
+Training Loss: 0.562 | Training Accuracy: 0.502
+Validation Loss: 0.545 | Validation Accuracy: 0.734
+Best Validation Loss: 0.545
+
+Epoch 5/20
+--------------------------------------------------
+Training Loss: 0.543 | Training Accuracy: 0.506
+Validation Loss: 0.526 | Validation Accuracy: 0.745
+Best Validation Loss: 0.526
+
+Epoch 6/20
+--------------------------------------------------
+Training Loss: 0.531 | Training Accuracy: 0.506
+Validation Loss: 0.514 | Validation Accuracy: 0.753
+Best Validation Loss: 0.514
+
+Epoch 7/20
+--------------------------------------------------
+Training Loss: 0.522 | Training Accuracy: 0.498
+Validation Loss: 0.520 | Validation Accuracy: 0.743
+Best Validation Loss: 0.514
+
+Epoch 8/20
+--------------------------------------------------
+Training Loss: 0.514 | Training Accuracy: 0.495
+Validation Loss: 0.501 | Validation Accuracy: 0.760
+Best Validation Loss: 0.501
+
+Epoch 9/20
+--------------------------------------------------
+Training Loss: 0.510 | Training Accuracy: 0.505
+Validation Loss: 0.495 | Validation Accuracy: 0.763
+Best Validation Loss: 0.495
+
+Epoch 10/20
+--------------------------------------------------
+Training Loss: 0.507 | Training Accuracy: 0.501
+Validation Loss: 0.492 | Validation Accuracy: 0.765
+Best Validation Loss: 0.492
+
+Epoch 11/20
+--------------------------------------------------
+Training Loss: 0.501 | Training Accuracy: 0.497
+Validation Loss: 0.488 | Validation Accuracy: 0.767
+Best Validation Loss: 0.488
+
+Epoch 12/20
+--------------------------------------------------
+Training Loss: 0.500 | Training Accuracy: 0.504
+Validation Loss: 0.485 | Validation Accuracy: 0.767
+Best Validation Loss: 0.485
+
+Epoch 13/20
+--------------------------------------------------
+Training Loss: 0.498 | Training Accuracy: 0.503
+Validation Loss: 0.484 | Validation Accuracy: 0.767
+Best Validation Loss: 0.484
+
+Epoch 14/20
+--------------------------------------------------
+Training Loss: 0.497 | Training Accuracy: 0.497
+Validation Loss: 0.483 | Validation Accuracy: 0.768
+Best Validation Loss: 0.483
+
+Epoch 15/20
+--------------------------------------------------
+Training Loss: 0.495 | Training Accuracy: 0.504
+Validation Loss: 0.481 | Validation Accuracy: 0.772
+Best Validation Loss: 0.481
+
+Epoch 16/20
+--------------------------------------------------
+Training Loss: 0.495 | Training Accuracy: 0.496
+Validation Loss: 0.480 | Validation Accuracy: 0.770
+Best Validation Loss: 0.480
+
+Epoch 17/20
+--------------------------------------------------
+Training Loss: 0.493 | Training Accuracy: 0.496
+Validation Loss: 0.479 | Validation Accuracy: 0.770
+Best Validation Loss: 0.479
+
+Epoch 18/20
+--------------------------------------------------
+Training Loss: 0.492 | Training Accuracy: 0.499
+Validation Loss: 0.479 | Validation Accuracy: 0.771
+Best Validation Loss: 0.479
+
+Epoch 19/20
+--------------------------------------------------
+Training Loss: 0.490 | Training Accuracy: 0.501
+Validation Loss: 0.478 | Validation Accuracy: 0.771
+Best Validation Loss: 0.478
+
+Epoch 20/20
+--------------------------------------------------
+Training Loss: 0.490 | Training Accuracy: 0.502
+Validation Loss: 0.478 | Validation Accuracy: 0.771
+Best Validation Loss: 0.478
+
+Test Results - Loss: 0.466, Accuracy: 0.7789, F1: 0.7789
+>>> ✓ Experiment 3 completed successfully.
+
+>>> Starting Experiment 4
+
+============================================================
+EXPERIMENT 4: 100 percent data, frozen BERT
+============================================================
+Config: train_size=1.0, freeze_layers=-1
+         lr=2e-05, batch_size=32
+         dropout=0.1, epochs=20
+         use_cls_token=True, token_position=cls
+         class_weights=True, scheduler=True
+Froze all BERT layers
+Using class weights: [1. 1.]
+Starting training for 20 epochs...
+
+Epoch 1/20
+--------------------------------------------------
+Training Loss: 0.685 | Training Accuracy: 0.502
+Validation Loss: 0.664 | Validation Accuracy: 0.619
+Best Validation Loss: 0.664
+
+Epoch 2/20
+--------------------------------------------------
+Training Loss: 0.641 | Training Accuracy: 0.501
+Validation Loss: 0.610 | Validation Accuracy: 0.694
+Best Validation Loss: 0.610
+
+Epoch 3/20
+--------------------------------------------------
+Training Loss: 0.593 | Training Accuracy: 0.499
+Validation Loss: 0.568 | Validation Accuracy: 0.723
+Best Validation Loss: 0.568
+
+Epoch 4/20
+--------------------------------------------------
+Training Loss: 0.561 | Training Accuracy: 0.497
+Validation Loss: 0.542 | Validation Accuracy: 0.737
+Best Validation Loss: 0.542
+
+Epoch 5/20
+--------------------------------------------------
+Training Loss: 0.543 | Training Accuracy: 0.499
+Validation Loss: 0.533 | Validation Accuracy: 0.739
+Best Validation Loss: 0.533
+
+Epoch 6/20
+--------------------------------------------------
+Training Loss: 0.531 | Training Accuracy: 0.497
+Validation Loss: 0.520 | Validation Accuracy: 0.748
+Best Validation Loss: 0.520
+
+Epoch 7/20
+--------------------------------------------------
+Training Loss: 0.522 | Training Accuracy: 0.501
+Validation Loss: 0.507 | Validation Accuracy: 0.758
+Best Validation Loss: 0.507
+
+Epoch 8/20
+--------------------------------------------------
+Training Loss: 0.514 | Training Accuracy: 0.496
+Validation Loss: 0.499 | Validation Accuracy: 0.761
+Best Validation Loss: 0.499
+
+Epoch 9/20
+--------------------------------------------------
+Training Loss: 0.508 | Training Accuracy: 0.498
+Validation Loss: 0.494 | Validation Accuracy: 0.762
+Best Validation Loss: 0.494
+
+Epoch 10/20
+--------------------------------------------------
+Training Loss: 0.506 | Training Accuracy: 0.499
+Validation Loss: 0.491 | Validation Accuracy: 0.765
+Best Validation Loss: 0.491
+
+Epoch 11/20
+--------------------------------------------------
+Training Loss: 0.504 | Training Accuracy: 0.500
+Validation Loss: 0.493 | Validation Accuracy: 0.762
+Best Validation Loss: 0.491
+
+Epoch 12/20
+--------------------------------------------------
+Training Loss: 0.498 | Training Accuracy: 0.501
+Validation Loss: 0.485 | Validation Accuracy: 0.767
+Best Validation Loss: 0.485
+
+Epoch 13/20
+--------------------------------------------------
+Training Loss: 0.498 | Training Accuracy: 0.499
+Validation Loss: 0.483 | Validation Accuracy: 0.768
+Best Validation Loss: 0.483
+
+Epoch 14/20
+--------------------------------------------------
+Training Loss: 0.494 | Training Accuracy: 0.507
+Validation Loss: 0.481 | Validation Accuracy: 0.770
+Best Validation Loss: 0.481
+
+Epoch 15/20
+--------------------------------------------------
+Training Loss: 0.492 | Training Accuracy: 0.498
+Validation Loss: 0.479 | Validation Accuracy: 0.771
+Best Validation Loss: 0.479
+
+Epoch 16/20
+--------------------------------------------------
+Training Loss: 0.492 | Training Accuracy: 0.499
+Validation Loss: 0.480 | Validation Accuracy: 0.772
+Best Validation Loss: 0.479
+
+Epoch 17/20
+--------------------------------------------------
+Training Loss: 0.492 | Training Accuracy: 0.501
+Validation Loss: 0.478 | Validation Accuracy: 0.773
+Best Validation Loss: 0.478
+
+Epoch 18/20
+--------------------------------------------------
+Training Loss: 0.492 | Training Accuracy: 0.497
+Validation Loss: 0.479 | Validation Accuracy: 0.771
+Best Validation Loss: 0.478
+
+Epoch 19/20
+--------------------------------------------------
+Training Loss: 0.491 | Training Accuracy: 0.495
+Validation Loss: 0.477 | Validation Accuracy: 0.773
+Best Validation Loss: 0.477
+
+Epoch 20/20
+--------------------------------------------------
+Training Loss: 0.490 | Training Accuracy: 0.499
+Validation Loss: 0.477 | Validation Accuracy: 0.771
+Best Validation Loss: 0.477
+
+Test Results - Loss: 0.465, Accuracy: 0.7780, F1: 0.7780
+>>> ✓ Experiment 4 completed successfully.
+
+>>> Starting Experiment 5
+
+============================================================
+EXPERIMENT 5: Freeze all BERT layers
+============================================================
+Config: train_size=0.7, freeze_layers=-1
+         lr=2e-05, batch_size=32
+         dropout=0.1, epochs=20
+         use_cls_token=True, token_position=cls
+         class_weights=True, scheduler=True
+Froze all BERT layers
+Using class weights: [1. 1.]
+Starting training for 20 epochs...
+
+Epoch 1/20
+--------------------------------------------------
+Training Loss: 0.685 | Training Accuracy: 0.498
+Validation Loss: 0.664 | Validation Accuracy: 0.625
+Best Validation Loss: 0.664
+
+Epoch 2/20
+--------------------------------------------------
+Training Loss: 0.641 | Training Accuracy: 0.499
+Validation Loss: 0.612 | Validation Accuracy: 0.683
+Best Validation Loss: 0.612
+
+Epoch 3/20
+--------------------------------------------------
+Training Loss: 0.592 | Training Accuracy: 0.501
+Validation Loss: 0.566 | Validation Accuracy: 0.724
+Best Validation Loss: 0.566
+
+Epoch 4/20
+--------------------------------------------------
+Training Loss: 0.561 | Training Accuracy: 0.502
+Validation Loss: 0.554 | Validation Accuracy: 0.721
+Best Validation Loss: 0.554
+
+Epoch 5/20
+--------------------------------------------------
+Training Loss: 0.542 | Training Accuracy: 0.500
+Validation Loss: 0.527 | Validation Accuracy: 0.745
+Best Validation Loss: 0.527
+
+Epoch 6/20
+--------------------------------------------------
+Training Loss: 0.528 | Training Accuracy: 0.503
+Validation Loss: 0.517 | Validation Accuracy: 0.751
+Best Validation Loss: 0.517
+
+Epoch 7/20
+--------------------------------------------------
+Training Loss: 0.519 | Training Accuracy: 0.502
+Validation Loss: 0.505 | Validation Accuracy: 0.758
+Best Validation Loss: 0.505
+
+Epoch 8/20
+--------------------------------------------------
+Training Loss: 0.515 | Training Accuracy: 0.494
+Validation Loss: 0.508 | Validation Accuracy: 0.754
+Best Validation Loss: 0.505
+
+Epoch 9/20
+--------------------------------------------------
+Training Loss: 0.510 | Training Accuracy: 0.497
+Validation Loss: 0.506 | Validation Accuracy: 0.754
+Best Validation Loss: 0.505
+
+Epoch 10/20
+--------------------------------------------------
+Training Loss: 0.506 | Training Accuracy: 0.498
+Validation Loss: 0.491 | Validation Accuracy: 0.765
+Best Validation Loss: 0.491
+
+Epoch 11/20
+--------------------------------------------------
+Training Loss: 0.500 | Training Accuracy: 0.499
+Validation Loss: 0.489 | Validation Accuracy: 0.764
+Best Validation Loss: 0.489
+
+Epoch 12/20
+--------------------------------------------------
+Training Loss: 0.501 | Training Accuracy: 0.504
+Validation Loss: 0.485 | Validation Accuracy: 0.767
+Best Validation Loss: 0.485
+
+Epoch 13/20
+--------------------------------------------------
+Training Loss: 0.497 | Training Accuracy: 0.500
+Validation Loss: 0.483 | Validation Accuracy: 0.770
+Best Validation Loss: 0.483
+
+Epoch 14/20
+--------------------------------------------------
+Training Loss: 0.496 | Training Accuracy: 0.502
+Validation Loss: 0.483 | Validation Accuracy: 0.768
+Best Validation Loss: 0.483
+
+Epoch 15/20
+--------------------------------------------------
+Training Loss: 0.491 | Training Accuracy: 0.500
+Validation Loss: 0.482 | Validation Accuracy: 0.771
+Best Validation Loss: 0.482
+
+Epoch 16/20
+--------------------------------------------------
+Training Loss: 0.493 | Training Accuracy: 0.502
+Validation Loss: 0.479 | Validation Accuracy: 0.770
+Best Validation Loss: 0.479
+
+Epoch 17/20
+--------------------------------------------------
+Training Loss: 0.492 | Training Accuracy: 0.502
+Validation Loss: 0.478 | Validation Accuracy: 0.771
+Best Validation Loss: 0.478
+
+Epoch 18/20
+--------------------------------------------------
+Training Loss: 0.492 | Training Accuracy: 0.503
+Validation Loss: 0.478 | Validation Accuracy: 0.772
+Best Validation Loss: 0.478
+
+Epoch 19/20
+--------------------------------------------------
+Training Loss: 0.492 | Training Accuracy: 0.501
+Validation Loss: 0.478 | Validation Accuracy: 0.772
+Best Validation Loss: 0.478
+
+Epoch 20/20
+--------------------------------------------------
+Training Loss: 0.489 | Training Accuracy: 0.495
+Validation Loss: 0.477 | Validation Accuracy: 0.773
+Best Validation Loss: 0.477
+
+Test Results - Loss: 0.465, Accuracy: 0.7788, F1: 0.7787
+>>> ✓ Experiment 5 completed successfully.
+
+>>> Starting Experiment 6
+
+============================================================
+EXPERIMENT 6: Freeze first 8 BERT layers
+============================================================
+Config: train_size=0.7, freeze_layers=8
+         lr=2e-05, batch_size=32
+         dropout=0.1, epochs=20
+         use_cls_token=True, token_position=cls
+         class_weights=True, scheduler=True
+Froze first 8 BERT layers
+Using class weights: [1. 1.]
+Starting training for 20 epochs...
+
+Epoch 1/20
+--------------------------------------------------
+Training Loss: 0.480 | Training Accuracy: 0.500
+Validation Loss: 0.343 | Validation Accuracy: 0.848
+Best Validation Loss: 0.343
+
+Epoch 2/20
+--------------------------------------------------
+Training Loss: 0.302 | Training Accuracy: 0.502
+Validation Loss: 0.288 | Validation Accuracy: 0.881
+Best Validation Loss: 0.288
+
+Epoch 3/20
+--------------------------------------------------
+Training Loss: 0.245 | Training Accuracy: 0.500
+Validation Loss: 0.296 | Validation Accuracy: 0.886
+Best Validation Loss: 0.288
+
+Epoch 4/20
+--------------------------------------------------
+Training Loss: 0.185 | Training Accuracy: 0.501
+Validation Loss: 0.323 | Validation Accuracy: 0.879
+Best Validation Loss: 0.288
+
+Epoch 5/20
+--------------------------------------------------
+Training Loss: 0.132 | Training Accuracy: 0.500
+Validation Loss: 0.344 | Validation Accuracy: 0.888
+Best Validation Loss: 0.288
+
+Epoch 6/20
+--------------------------------------------------
+Training Loss: 0.100 | Training Accuracy: 0.499
+Validation Loss: 0.464 | Validation Accuracy: 0.889
+Best Validation Loss: 0.288
+
+Epoch 7/20
+--------------------------------------------------
+Training Loss: 0.070 | Training Accuracy: 0.505
+Validation Loss: 0.520 | Validation Accuracy: 0.886
+Best Validation Loss: 0.288
+
+Epoch 8/20
+--------------------------------------------------
+Training Loss: 0.059 | Training Accuracy: 0.506
+Validation Loss: 0.596 | Validation Accuracy: 0.891
+Best Validation Loss: 0.288
+
+Epoch 9/20
+--------------------------------------------------
+Training Loss: 0.046 | Training Accuracy: 0.503
+Validation Loss: 0.690 | Validation Accuracy: 0.889
+Best Validation Loss: 0.288
+
+Epoch 10/20
+--------------------------------------------------
+Training Loss: 0.038 | Training Accuracy: 0.509
+Validation Loss: 0.706 | Validation Accuracy: 0.888
+Best Validation Loss: 0.288
+
+Epoch 11/20
+--------------------------------------------------
+Training Loss: 0.029 | Training Accuracy: 0.500
+Validation Loss: 0.760 | Validation Accuracy: 0.889
+Best Validation Loss: 0.288
+
+Epoch 12/20
+--------------------------------------------------
+Training Loss: 0.023 | Training Accuracy: 0.501
+Validation Loss: 0.819 | Validation Accuracy: 0.891
+Best Validation Loss: 0.288
+
+Epoch 13/20
+--------------------------------------------------
+Training Loss: 0.019 | Training Accuracy: 0.499
+Validation Loss: 0.886 | Validation Accuracy: 0.889
+Best Validation Loss: 0.288
+
+Epoch 14/20
+--------------------------------------------------
+Training Loss: 0.016 | Training Accuracy: 0.498
+Validation Loss: 0.946 | Validation Accuracy: 0.890
+Best Validation Loss: 0.288
+
+Epoch 15/20
+--------------------------------------------------
+Training Loss: 0.012 | Training Accuracy: 0.501
+Validation Loss: 1.006 | Validation Accuracy: 0.893
+Best Validation Loss: 0.288
+
+Epoch 16/20
+--------------------------------------------------
+Training Loss: 0.012 | Training Accuracy: 0.497
+Validation Loss: 0.992 | Validation Accuracy: 0.891
+Best Validation Loss: 0.288
+
+Epoch 17/20
+--------------------------------------------------
+Training Loss: 0.008 | Training Accuracy: 0.504
+Validation Loss: 1.048 | Validation Accuracy: 0.893
+Best Validation Loss: 0.288
+
+Epoch 18/20
+--------------------------------------------------
+Training Loss: 0.007 | Training Accuracy: 0.502
+Validation Loss: 1.072 | Validation Accuracy: 0.891
+Best Validation Loss: 0.288
+
+Epoch 19/20
+--------------------------------------------------
+Training Loss: 0.005 | Training Accuracy: 0.497
+Validation Loss: 1.059 | Validation Accuracy: 0.892
+Best Validation Loss: 0.288
+
+Epoch 20/20
+--------------------------------------------------
+Training Loss: 0.004 | Training Accuracy: 0.492
+Validation Loss: 1.061 | Validation Accuracy: 0.892
+Best Validation Loss: 0.288
+
+Test Results - Loss: 0.270, Accuracy: 0.8893, F1: 0.8893
+>>> ✓ Experiment 6 completed successfully.
+
+>>> Starting Experiment 7
+
+============================================================
+EXPERIMENT 7: No freezing
+============================================================
+Config: train_size=0.7, freeze_layers=None
+         lr=2e-05, batch_size=32
+         dropout=0.1, epochs=20
+         use_cls_token=True, token_position=cls
+         class_weights=True, scheduler=True
+Using class weights: [1. 1.]
+Starting training for 20 epochs...
+
+Epoch 1/20
+--------------------------------------------------
+Training Loss: 0.464 | Training Accuracy: 0.500
+Validation Loss: 0.303 | Validation Accuracy: 0.875
+Best Validation Loss: 0.303
+
+Epoch 2/20
+--------------------------------------------------
+Training Loss: 0.273 | Training Accuracy: 0.503
+Validation Loss: 0.274 | Validation Accuracy: 0.889
+Best Validation Loss: 0.274
+
+Epoch 3/20
+--------------------------------------------------
+Training Loss: 0.186 | Training Accuracy: 0.503
+Validation Loss: 0.322 | Validation Accuracy: 0.881
+Best Validation Loss: 0.274
+
+Epoch 4/20
+--------------------------------------------------
+Training Loss: 0.114 | Training Accuracy: 0.502
+Validation Loss: 0.408 | Validation Accuracy: 0.887
+Best Validation Loss: 0.274
+
+Epoch 5/20
+--------------------------------------------------
+Training Loss: 0.073 | Training Accuracy: 0.498
+Validation Loss: 0.507 | Validation Accuracy: 0.891
+Best Validation Loss: 0.274
+
+Epoch 6/20
+--------------------------------------------------
+Training Loss: 0.049 | Training Accuracy: 0.501
+Validation Loss: 0.589 | Validation Accuracy: 0.893
+Best Validation Loss: 0.274
+
+Epoch 7/20
+--------------------------------------------------
+Training Loss: 0.036 | Training Accuracy: 0.494
+Validation Loss: 0.574 | Validation Accuracy: 0.885
+Best Validation Loss: 0.274
+
+Epoch 8/20
+--------------------------------------------------
+Training Loss: 0.028 | Training Accuracy: 0.502
+Validation Loss: 0.659 | Validation Accuracy: 0.892
+Best Validation Loss: 0.274
+
+Epoch 9/20
+--------------------------------------------------
+Training Loss: 0.025 | Training Accuracy: 0.503
+Validation Loss: 0.748 | Validation Accuracy: 0.892
+Best Validation Loss: 0.274
+
+Epoch 10/20
+--------------------------------------------------
+Training Loss: 0.018 | Training Accuracy: 0.500
+Validation Loss: 0.850 | Validation Accuracy: 0.894
+Best Validation Loss: 0.274
+
+Epoch 11/20
+--------------------------------------------------
+Training Loss: 0.014 | Training Accuracy: 0.504
+Validation Loss: 0.834 | Validation Accuracy: 0.891
+Best Validation Loss: 0.274
+
+Epoch 12/20
+--------------------------------------------------
+Training Loss: 0.013 | Training Accuracy: 0.501
+Validation Loss: 0.811 | Validation Accuracy: 0.894
+Best Validation Loss: 0.274
+
+Epoch 13/20
+--------------------------------------------------
+Training Loss: 0.010 | Training Accuracy: 0.494
+Validation Loss: 0.814 | Validation Accuracy: 0.895
+Best Validation Loss: 0.274
+
+Epoch 14/20
+--------------------------------------------------
+Training Loss: 0.008 | Training Accuracy: 0.501
+Validation Loss: 0.890 | Validation Accuracy: 0.896
+Best Validation Loss: 0.274
+
+Epoch 15/20
+--------------------------------------------------
+Training Loss: 0.005 | Training Accuracy: 0.496
+Validation Loss: 0.967 | Validation Accuracy: 0.897
+Best Validation Loss: 0.274
+
+Epoch 16/20
+--------------------------------------------------
+Training Loss: 0.005 | Training Accuracy: 0.503
+Validation Loss: 0.978 | Validation Accuracy: 0.895
+Best Validation Loss: 0.274
+
+Epoch 17/20
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.499
+Validation Loss: 1.049 | Validation Accuracy: 0.895
+Best Validation Loss: 0.274
+
+Epoch 18/20
+--------------------------------------------------
+Training Loss: 0.001 | Training Accuracy: 0.501
+Validation Loss: 1.091 | Validation Accuracy: 0.895
+Best Validation Loss: 0.274
+
+Epoch 19/20
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.501
+Validation Loss: 1.052 | Validation Accuracy: 0.898
+Best Validation Loss: 0.274
+
+Epoch 20/20
+--------------------------------------------------
+Training Loss: 0.001 | Training Accuracy: 0.500
+Validation Loss: 1.055 | Validation Accuracy: 0.899
+Best Validation Loss: 0.274
+
+Test Results - Loss: 0.260, Accuracy: 0.8945, F1: 0.8945
+>>> ✓ Experiment 7 completed successfully.
+
+>>> Starting Experiment 8
+
+============================================================
+EXPERIMENT 8: Low learning rate 1e-5
+============================================================
+Config: train_size=0.7, freeze_layers=None
+         lr=1e-05, batch_size=32
+         dropout=0.1, epochs=20
+         use_cls_token=True, token_position=cls
+         class_weights=True, scheduler=True
+Using class weights: [1. 1.]
+Starting training for 20 epochs...
+
+Epoch 1/20
+--------------------------------------------------
+Training Loss: 0.496 | Training Accuracy: 0.500
+Validation Loss: 0.333 | Validation Accuracy: 0.855
+Best Validation Loss: 0.333
+
+Epoch 2/20
+--------------------------------------------------
+Training Loss: 0.293 | Training Accuracy: 0.496
+Validation Loss: 0.291 | Validation Accuracy: 0.880
+Best Validation Loss: 0.291
+
+Epoch 3/20
+--------------------------------------------------
+Training Loss: 0.219 | Training Accuracy: 0.497
+Validation Loss: 0.301 | Validation Accuracy: 0.884
+Best Validation Loss: 0.291
+
+Epoch 4/20
+--------------------------------------------------
+Training Loss: 0.151 | Training Accuracy: 0.503
+Validation Loss: 0.346 | Validation Accuracy: 0.887
+Best Validation Loss: 0.291
+
+Epoch 5/20
+--------------------------------------------------
+Training Loss: 0.107 | Training Accuracy: 0.502
+Validation Loss: 0.407 | Validation Accuracy: 0.889
+Best Validation Loss: 0.291
+
+Epoch 6/20
+--------------------------------------------------
+Training Loss: 0.075 | Training Accuracy: 0.497
+Validation Loss: 0.567 | Validation Accuracy: 0.886
+Best Validation Loss: 0.291
+
+Epoch 7/20
+--------------------------------------------------
+Training Loss: 0.057 | Training Accuracy: 0.502
+Validation Loss: 0.564 | Validation Accuracy: 0.890
+Best Validation Loss: 0.291
+
+Epoch 8/20
+--------------------------------------------------
+Training Loss: 0.039 | Training Accuracy: 0.499
+Validation Loss: 0.578 | Validation Accuracy: 0.890
+Best Validation Loss: 0.291
+
+Epoch 9/20
+--------------------------------------------------
+Training Loss: 0.032 | Training Accuracy: 0.498
+Validation Loss: 0.667 | Validation Accuracy: 0.888
+Best Validation Loss: 0.291
+
+Epoch 10/20
+--------------------------------------------------
+Training Loss: 0.027 | Training Accuracy: 0.500
+Validation Loss: 0.729 | Validation Accuracy: 0.888
+Best Validation Loss: 0.291
+
+Epoch 11/20
+--------------------------------------------------
+Training Loss: 0.026 | Training Accuracy: 0.499
+Validation Loss: 0.736 | Validation Accuracy: 0.888
+Best Validation Loss: 0.291
+
+Epoch 12/20
+--------------------------------------------------
+Training Loss: 0.017 | Training Accuracy: 0.494
+Validation Loss: 0.784 | Validation Accuracy: 0.887
+Best Validation Loss: 0.291
+
+Epoch 13/20
+--------------------------------------------------
+Training Loss: 0.015 | Training Accuracy: 0.503
+Validation Loss: 0.853 | Validation Accuracy: 0.887
+Best Validation Loss: 0.291
+
+Epoch 14/20
+--------------------------------------------------
+Training Loss: 0.012 | Training Accuracy: 0.500
+Validation Loss: 0.895 | Validation Accuracy: 0.891
+Best Validation Loss: 0.291
+
+Epoch 15/20
+--------------------------------------------------
+Training Loss: 0.008 | Training Accuracy: 0.497
+Validation Loss: 0.970 | Validation Accuracy: 0.888
+Best Validation Loss: 0.291
+
+Epoch 16/20
+--------------------------------------------------
+Training Loss: 0.009 | Training Accuracy: 0.497
+Validation Loss: 1.006 | Validation Accuracy: 0.887
+Best Validation Loss: 0.291
+
+Epoch 17/20
+--------------------------------------------------
+Training Loss: 0.006 | Training Accuracy: 0.499
+Validation Loss: 1.008 | Validation Accuracy: 0.889
+Best Validation Loss: 0.291
+
+Epoch 18/20
+--------------------------------------------------
+Training Loss: 0.007 | Training Accuracy: 0.500
+Validation Loss: 0.973 | Validation Accuracy: 0.891
+Best Validation Loss: 0.291
+
+Epoch 19/20
+--------------------------------------------------
+Training Loss: 0.003 | Training Accuracy: 0.500
+Validation Loss: 1.003 | Validation Accuracy: 0.890
+Best Validation Loss: 0.291
+
+Epoch 20/20
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.498
+Validation Loss: 1.024 | Validation Accuracy: 0.892
+Best Validation Loss: 0.291
+
+Test Results - Loss: 0.272, Accuracy: 0.8913, F1: 0.8913
+>>> ✓ Experiment 8 completed successfully.
+
+>>> Starting Experiment 9
+
+============================================================
+EXPERIMENT 9: Medium learning rate 2e-5
+============================================================
+Config: train_size=0.7, freeze_layers=None
+         lr=2e-05, batch_size=32
+         dropout=0.1, epochs=20
+         use_cls_token=True, token_position=cls
+         class_weights=True, scheduler=True
+Using class weights: [1. 1.]
+Starting training for 20 epochs...
+
+Epoch 1/20
+--------------------------------------------------
+Training Loss: 0.443 | Training Accuracy: 0.499
+Validation Loss: 0.310 | Validation Accuracy: 0.867
+Best Validation Loss: 0.310
+
+Epoch 2/20
+--------------------------------------------------
+Training Loss: 0.275 | Training Accuracy: 0.497
+Validation Loss: 0.275 | Validation Accuracy: 0.883
+Best Validation Loss: 0.275
+
+Epoch 3/20
+--------------------------------------------------
+Training Loss: 0.189 | Training Accuracy: 0.499
+Validation Loss: 0.334 | Validation Accuracy: 0.889
+Best Validation Loss: 0.275
+
+Epoch 4/20
+--------------------------------------------------
+Training Loss: 0.113 | Training Accuracy: 0.499
+Validation Loss: 0.372 | Validation Accuracy: 0.889
+Best Validation Loss: 0.275
+
+Epoch 5/20
+--------------------------------------------------
+Training Loss: 0.072 | Training Accuracy: 0.500
+Validation Loss: 0.458 | Validation Accuracy: 0.890
+Best Validation Loss: 0.275
+
+Epoch 6/20
+--------------------------------------------------
+Training Loss: 0.049 | Training Accuracy: 0.499
+Validation Loss: 0.568 | Validation Accuracy: 0.892
+Best Validation Loss: 0.275
+
+Epoch 7/20
+--------------------------------------------------
+Training Loss: 0.037 | Training Accuracy: 0.499
+Validation Loss: 0.546 | Validation Accuracy: 0.890
+Best Validation Loss: 0.275
+
+Epoch 8/20
+--------------------------------------------------
+Training Loss: 0.032 | Training Accuracy: 0.496
+Validation Loss: 0.663 | Validation Accuracy: 0.892
+Best Validation Loss: 0.275
+
+Epoch 9/20
+--------------------------------------------------
+Training Loss: 0.023 | Training Accuracy: 0.501
+Validation Loss: 0.692 | Validation Accuracy: 0.894
+Best Validation Loss: 0.275
+
+Epoch 10/20
+--------------------------------------------------
+Training Loss: 0.017 | Training Accuracy: 0.504
+Validation Loss: 0.785 | Validation Accuracy: 0.894
+Best Validation Loss: 0.275
+
+Epoch 11/20
+--------------------------------------------------
+Training Loss: 0.012 | Training Accuracy: 0.496
+Validation Loss: 0.781 | Validation Accuracy: 0.898
+Best Validation Loss: 0.275
+
+Epoch 12/20
+--------------------------------------------------
+Training Loss: 0.011 | Training Accuracy: 0.500
+Validation Loss: 0.826 | Validation Accuracy: 0.895
+Best Validation Loss: 0.275
+
+Epoch 13/20
+--------------------------------------------------
+Training Loss: 0.009 | Training Accuracy: 0.498
+Validation Loss: 0.898 | Validation Accuracy: 0.892
+Best Validation Loss: 0.275
+
+Epoch 14/20
+--------------------------------------------------
+Training Loss: 0.009 | Training Accuracy: 0.497
+Validation Loss: 0.811 | Validation Accuracy: 0.896
+Best Validation Loss: 0.275
+
+Epoch 15/20
+--------------------------------------------------
+Training Loss: 0.006 | Training Accuracy: 0.497
+Validation Loss: 0.958 | Validation Accuracy: 0.894
+Best Validation Loss: 0.275
+
+Epoch 16/20
+--------------------------------------------------
+Training Loss: 0.005 | Training Accuracy: 0.504
+Validation Loss: 0.993 | Validation Accuracy: 0.893
+Best Validation Loss: 0.275
+
+Epoch 17/20
+--------------------------------------------------
+Training Loss: 0.004 | Training Accuracy: 0.496
+Validation Loss: 0.971 | Validation Accuracy: 0.896
+Best Validation Loss: 0.275
+
+Epoch 18/20
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.497
+Validation Loss: 1.032 | Validation Accuracy: 0.895
+Best Validation Loss: 0.275
+
+Epoch 19/20
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.502
+Validation Loss: 1.058 | Validation Accuracy: 0.895
+Best Validation Loss: 0.275
+
+Epoch 20/20
+--------------------------------------------------
+Training Loss: 0.001 | Training Accuracy: 0.500
+Validation Loss: 1.063 | Validation Accuracy: 0.895
+Best Validation Loss: 0.275
+
+Test Results - Loss: 0.262, Accuracy: 0.8880, F1: 0.8879
+>>> ✓ Experiment 9 completed successfully.
+
+>>> Starting Experiment 10
+
+============================================================
+EXPERIMENT 10: High learning rate 5e-5
+============================================================
+Config: train_size=0.7, freeze_layers=None
+         lr=5e-05, batch_size=32
+         dropout=0.1, epochs=20
+         use_cls_token=True, token_position=cls
+         class_weights=True, scheduler=True
+Using class weights: [1. 1.]
+Starting training for 20 epochs...
+
+Epoch 1/20
+--------------------------------------------------
+Training Loss: 0.400 | Training Accuracy: 0.495
+Validation Loss: 0.301 | Validation Accuracy: 0.873
+Best Validation Loss: 0.301
+
+Epoch 2/20
+--------------------------------------------------
+Training Loss: 0.256 | Training Accuracy: 0.498
+Validation Loss: 0.346 | Validation Accuracy: 0.868
+Best Validation Loss: 0.301
+
+Epoch 3/20
+--------------------------------------------------
+Training Loss: 0.173 | Training Accuracy: 0.497
+Validation Loss: 0.307 | Validation Accuracy: 0.887
+Best Validation Loss: 0.301
+
+Epoch 4/20
+--------------------------------------------------
+Training Loss: 0.101 | Training Accuracy: 0.504
+Validation Loss: 0.438 | Validation Accuracy: 0.887
+Best Validation Loss: 0.301
+
+Epoch 5/20
+--------------------------------------------------
+Training Loss: 0.068 | Training Accuracy: 0.502
+Validation Loss: 0.447 | Validation Accuracy: 0.889
+Best Validation Loss: 0.301
+
+Epoch 6/20
+--------------------------------------------------
+Training Loss: 0.050 | Training Accuracy: 0.504
+Validation Loss: 0.623 | Validation Accuracy: 0.884
+Best Validation Loss: 0.301
+
+Epoch 7/20
+--------------------------------------------------
+Training Loss: 0.040 | Training Accuracy: 0.502
+Validation Loss: 0.549 | Validation Accuracy: 0.890
+Best Validation Loss: 0.301
+
+Epoch 8/20
+--------------------------------------------------
+Training Loss: 0.029 | Training Accuracy: 0.494
+Validation Loss: 0.641 | Validation Accuracy: 0.894
+Best Validation Loss: 0.301
+
+Epoch 9/20
+--------------------------------------------------
+Training Loss: 0.025 | Training Accuracy: 0.501
+Validation Loss: 0.780 | Validation Accuracy: 0.885
+Best Validation Loss: 0.301
+
+Epoch 10/20
+--------------------------------------------------
+Training Loss: 0.021 | Training Accuracy: 0.500
+Validation Loss: 0.646 | Validation Accuracy: 0.892
+Best Validation Loss: 0.301
+
+Epoch 11/20
+--------------------------------------------------
+Training Loss: 0.015 | Training Accuracy: 0.502
+Validation Loss: 0.892 | Validation Accuracy: 0.883
+Best Validation Loss: 0.301
+
+Epoch 12/20
+--------------------------------------------------
+Training Loss: 0.014 | Training Accuracy: 0.499
+Validation Loss: 0.934 | Validation Accuracy: 0.883
+Best Validation Loss: 0.301
+
+Epoch 13/20
+--------------------------------------------------
+Training Loss: 0.008 | Training Accuracy: 0.497
+Validation Loss: 0.898 | Validation Accuracy: 0.892
+Best Validation Loss: 0.301
+
+Epoch 14/20
+--------------------------------------------------
+Training Loss: 0.006 | Training Accuracy: 0.501
+Validation Loss: 0.914 | Validation Accuracy: 0.895
+Best Validation Loss: 0.301
+
+Epoch 15/20
+--------------------------------------------------
+Training Loss: 0.006 | Training Accuracy: 0.497
+Validation Loss: 0.927 | Validation Accuracy: 0.891
+Best Validation Loss: 0.301
+
+Epoch 16/20
+--------------------------------------------------
+Training Loss: 0.003 | Training Accuracy: 0.497
+Validation Loss: 1.006 | Validation Accuracy: 0.895
+Best Validation Loss: 0.301
+
+Epoch 17/20
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.498
+Validation Loss: 1.043 | Validation Accuracy: 0.896
+Best Validation Loss: 0.301
+
+Epoch 18/20
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.500
+Validation Loss: 1.125 | Validation Accuracy: 0.892
+Best Validation Loss: 0.301
+
+Epoch 19/20
+--------------------------------------------------
+Training Loss: 0.001 | Training Accuracy: 0.499
+Validation Loss: 1.116 | Validation Accuracy: 0.896
+Best Validation Loss: 0.301
+
+Epoch 20/20
+--------------------------------------------------
+Training Loss: 0.000 | Training Accuracy: 0.502
+Validation Loss: 1.126 | Validation Accuracy: 0.896
+Best Validation Loss: 0.301
+
+Test Results - Loss: 0.291, Accuracy: 0.8804, F1: 0.8800
+>>> ✓ Experiment 10 completed successfully.
+
+>>> Starting Experiment 11
+
+============================================================
+EXPERIMENT 11: Low dropout 0.1
+============================================================
+Config: train_size=0.7, freeze_layers=None
+         lr=2e-05, batch_size=32
+         dropout=0.1, epochs=20
+         use_cls_token=True, token_position=cls
+         class_weights=True, scheduler=True
+Using class weights: [1. 1.]
+Starting training for 20 epochs...
+
+Epoch 1/20
+--------------------------------------------------
+Training Loss: 0.440 | Training Accuracy: 0.499
+Validation Loss: 0.311 | Validation Accuracy: 0.867
+Best Validation Loss: 0.311
+
+Epoch 2/20
+--------------------------------------------------
+Training Loss: 0.273 | Training Accuracy: 0.497
+Validation Loss: 0.287 | Validation Accuracy: 0.885
+Best Validation Loss: 0.287
+
+Epoch 3/20
+--------------------------------------------------
+Training Loss: 0.189 | Training Accuracy: 0.496
+Validation Loss: 0.328 | Validation Accuracy: 0.882
+Best Validation Loss: 0.287
+
+Epoch 4/20
+--------------------------------------------------
+Training Loss: 0.112 | Training Accuracy: 0.500
+Validation Loss: 0.426 | Validation Accuracy: 0.891
+Best Validation Loss: 0.287
+
+Epoch 5/20
+--------------------------------------------------
+Training Loss: 0.072 | Training Accuracy: 0.503
+Validation Loss: 0.460 | Validation Accuracy: 0.890
+Best Validation Loss: 0.287
+
+Epoch 6/20
+--------------------------------------------------
+Training Loss: 0.051 | Training Accuracy: 0.500
+Validation Loss: 0.572 | Validation Accuracy: 0.890
+Best Validation Loss: 0.287
+
+Epoch 7/20
+--------------------------------------------------
+Training Loss: 0.040 | Training Accuracy: 0.504
+Validation Loss: 0.586 | Validation Accuracy: 0.891
+Best Validation Loss: 0.287
+
+Epoch 8/20
+--------------------------------------------------
+Training Loss: 0.033 | Training Accuracy: 0.499
+Validation Loss: 0.586 | Validation Accuracy: 0.892
+Best Validation Loss: 0.287
+
+Epoch 9/20
+--------------------------------------------------
+Training Loss: 0.023 | Training Accuracy: 0.503
+Validation Loss: 0.665 | Validation Accuracy: 0.891
+Best Validation Loss: 0.287
+
+Epoch 10/20
+--------------------------------------------------
+Training Loss: 0.017 | Training Accuracy: 0.496
+Validation Loss: 0.753 | Validation Accuracy: 0.890
+Best Validation Loss: 0.287
+
+Epoch 11/20
+--------------------------------------------------
+Training Loss: 0.016 | Training Accuracy: 0.497
+Validation Loss: 0.811 | Validation Accuracy: 0.891
+Best Validation Loss: 0.287
+
+Epoch 12/20
+--------------------------------------------------
+Training Loss: 0.011 | Training Accuracy: 0.499
+Validation Loss: 0.848 | Validation Accuracy: 0.890
+Best Validation Loss: 0.287
+
+Epoch 13/20
+--------------------------------------------------
+Training Loss: 0.012 | Training Accuracy: 0.501
+Validation Loss: 0.788 | Validation Accuracy: 0.894
+Best Validation Loss: 0.287
+
+Epoch 14/20
+--------------------------------------------------
+Training Loss: 0.006 | Training Accuracy: 0.502
+Validation Loss: 0.985 | Validation Accuracy: 0.887
+Best Validation Loss: 0.287
+
+Epoch 15/20
+--------------------------------------------------
+Training Loss: 0.006 | Training Accuracy: 0.500
+Validation Loss: 1.002 | Validation Accuracy: 0.893
+Best Validation Loss: 0.287
+
+Epoch 16/20
+--------------------------------------------------
+Training Loss: 0.005 | Training Accuracy: 0.502
+Validation Loss: 0.952 | Validation Accuracy: 0.895
+Best Validation Loss: 0.287
+
+Epoch 17/20
+--------------------------------------------------
+Training Loss: 0.004 | Training Accuracy: 0.498
+Validation Loss: 0.959 | Validation Accuracy: 0.899
+Best Validation Loss: 0.287
+
+Epoch 18/20
+--------------------------------------------------
+Training Loss: 0.003 | Training Accuracy: 0.503
+Validation Loss: 1.002 | Validation Accuracy: 0.898
+Best Validation Loss: 0.287
+
+Epoch 19/20
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.499
+Validation Loss: 1.013 | Validation Accuracy: 0.898
+Best Validation Loss: 0.287
+
+Epoch 20/20
+--------------------------------------------------
+Training Loss: 0.001 | Training Accuracy: 0.502
+Validation Loss: 1.021 | Validation Accuracy: 0.899
+Best Validation Loss: 0.287
+
+Test Results - Loss: 0.273, Accuracy: 0.8876, F1: 0.8874
+>>> ✓ Experiment 11 completed successfully.
+
+>>> Starting Experiment 12
+
+============================================================
+EXPERIMENT 12: High dropout 0.3
+============================================================
+Config: train_size=0.7, freeze_layers=None
+         lr=2e-05, batch_size=32
+         dropout=0.3, epochs=20
+         use_cls_token=True, token_position=cls
+         class_weights=True, scheduler=True
+Using class weights: [1. 1.]
+Starting training for 20 epochs...
+
+Epoch 1/20
+--------------------------------------------------
+Training Loss: 0.466 | Training Accuracy: 0.501
+Validation Loss: 0.303 | Validation Accuracy: 0.870
+Best Validation Loss: 0.303
+
+Epoch 2/20
+--------------------------------------------------
+Training Loss: 0.275 | Training Accuracy: 0.505
+Validation Loss: 0.293 | Validation Accuracy: 0.888
+Best Validation Loss: 0.293
+
+Epoch 3/20
+--------------------------------------------------
+Training Loss: 0.194 | Training Accuracy: 0.501
+Validation Loss: 0.299 | Validation Accuracy: 0.892
+Best Validation Loss: 0.293
+
+Epoch 4/20
+--------------------------------------------------
+Training Loss: 0.114 | Training Accuracy: 0.496
+Validation Loss: 0.455 | Validation Accuracy: 0.880
+Best Validation Loss: 0.293
+
+Epoch 5/20
+--------------------------------------------------
+Training Loss: 0.070 | Training Accuracy: 0.501
+Validation Loss: 0.497 | Validation Accuracy: 0.890
+Best Validation Loss: 0.293
+
+Epoch 6/20
+--------------------------------------------------
+Training Loss: 0.052 | Training Accuracy: 0.495
+Validation Loss: 0.598 | Validation Accuracy: 0.887
+Best Validation Loss: 0.293
+
+Epoch 7/20
+--------------------------------------------------
+Training Loss: 0.037 | Training Accuracy: 0.498
+Validation Loss: 0.610 | Validation Accuracy: 0.891
+Best Validation Loss: 0.293
+
+Epoch 8/20
+--------------------------------------------------
+Training Loss: 0.031 | Training Accuracy: 0.502
+Validation Loss: 0.602 | Validation Accuracy: 0.891
+Best Validation Loss: 0.293
+
+Epoch 9/20
+--------------------------------------------------
+Training Loss: 0.027 | Training Accuracy: 0.500
+Validation Loss: 0.762 | Validation Accuracy: 0.891
+Best Validation Loss: 0.293
+
+Epoch 10/20
+--------------------------------------------------
+Training Loss: 0.019 | Training Accuracy: 0.498
+Validation Loss: 0.789 | Validation Accuracy: 0.889
+Best Validation Loss: 0.293
+
+Epoch 11/20
+--------------------------------------------------
+Training Loss: 0.013 | Training Accuracy: 0.502
+Validation Loss: 0.840 | Validation Accuracy: 0.895
+Best Validation Loss: 0.293
+
+Epoch 12/20
+--------------------------------------------------
+Training Loss: 0.010 | Training Accuracy: 0.499
+Validation Loss: 0.938 | Validation Accuracy: 0.892
+Best Validation Loss: 0.293
+
+Epoch 13/20
+--------------------------------------------------
+Training Loss: 0.009 | Training Accuracy: 0.501
+Validation Loss: 0.852 | Validation Accuracy: 0.891
+Best Validation Loss: 0.293
+
+Epoch 14/20
+--------------------------------------------------
+Training Loss: 0.008 | Training Accuracy: 0.497
+Validation Loss: 0.920 | Validation Accuracy: 0.896
+Best Validation Loss: 0.293
+
+Epoch 15/20
+--------------------------------------------------
+Training Loss: 0.006 | Training Accuracy: 0.502
+Validation Loss: 1.029 | Validation Accuracy: 0.895
+Best Validation Loss: 0.293
+
+Epoch 16/20
+--------------------------------------------------
+Training Loss: 0.004 | Training Accuracy: 0.498
+Validation Loss: 1.026 | Validation Accuracy: 0.894
+Best Validation Loss: 0.293
+
+Epoch 17/20
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.500
+Validation Loss: 1.093 | Validation Accuracy: 0.893
+Best Validation Loss: 0.293
+
+Epoch 18/20
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.498
+Validation Loss: 1.091 | Validation Accuracy: 0.894
+Best Validation Loss: 0.293
+
+Epoch 19/20
+--------------------------------------------------
+Training Loss: 0.003 | Training Accuracy: 0.500
+Validation Loss: 1.060 | Validation Accuracy: 0.897
+Best Validation Loss: 0.293
+
+Epoch 20/20
+--------------------------------------------------
+Training Loss: 0.001 | Training Accuracy: 0.503
+Validation Loss: 1.063 | Validation Accuracy: 0.898
+Best Validation Loss: 0.293
+
+Test Results - Loss: 0.275, Accuracy: 0.8960, F1: 0.8960
+>>> ✓ Experiment 12 completed successfully.
+
+>>> Starting Experiment 13
+
+============================================================
+EXPERIMENT 13: 30 epochs training
+============================================================
+Config: train_size=0.7, freeze_layers=None
+         lr=2e-05, batch_size=32
+         dropout=0.1, epochs=30
+         use_cls_token=True, token_position=cls
+         class_weights=True, scheduler=True
+Using class weights: [1. 1.]
+Starting training for 30 epochs...
+
+Epoch 1/30
+--------------------------------------------------
+Training Loss: 0.477 | Training Accuracy: 0.500
+Validation Loss: 0.301 | Validation Accuracy: 0.874
+Best Validation Loss: 0.301
+
+Epoch 2/30
+--------------------------------------------------
+Training Loss: 0.282 | Training Accuracy: 0.499
+Validation Loss: 0.270 | Validation Accuracy: 0.885
+Best Validation Loss: 0.270
+
+Epoch 3/30
+--------------------------------------------------
+Training Loss: 0.212 | Training Accuracy: 0.498
+Validation Loss: 0.299 | Validation Accuracy: 0.888
+Best Validation Loss: 0.270
+
+Epoch 4/30
+--------------------------------------------------
+Training Loss: 0.146 | Training Accuracy: 0.503
+Validation Loss: 0.328 | Validation Accuracy: 0.887
+Best Validation Loss: 0.270
+
+Epoch 5/30
+--------------------------------------------------
+Training Loss: 0.087 | Training Accuracy: 0.502
+Validation Loss: 0.442 | Validation Accuracy: 0.891
+Best Validation Loss: 0.270
+
+Epoch 6/30
+--------------------------------------------------
+Training Loss: 0.061 | Training Accuracy: 0.503
+Validation Loss: 0.579 | Validation Accuracy: 0.886
+Best Validation Loss: 0.270
+
+Epoch 7/30
+--------------------------------------------------
+Training Loss: 0.047 | Training Accuracy: 0.502
+Validation Loss: 0.661 | Validation Accuracy: 0.887
+Best Validation Loss: 0.270
+
+Epoch 8/30
+--------------------------------------------------
+Training Loss: 0.039 | Training Accuracy: 0.496
+Validation Loss: 0.723 | Validation Accuracy: 0.885
+Best Validation Loss: 0.270
+
+Epoch 9/30
+--------------------------------------------------
+Training Loss: 0.031 | Training Accuracy: 0.500
+Validation Loss: 0.683 | Validation Accuracy: 0.887
+Best Validation Loss: 0.270
+
+Epoch 10/30
+--------------------------------------------------
+Training Loss: 0.025 | Training Accuracy: 0.500
+Validation Loss: 0.785 | Validation Accuracy: 0.885
+Best Validation Loss: 0.270
+
+Epoch 11/30
+--------------------------------------------------
+Training Loss: 0.019 | Training Accuracy: 0.496
+Validation Loss: 0.836 | Validation Accuracy: 0.883
+Best Validation Loss: 0.270
+
+Epoch 12/30
+--------------------------------------------------
+Training Loss: 0.018 | Training Accuracy: 0.505
+Validation Loss: 0.873 | Validation Accuracy: 0.888
+Best Validation Loss: 0.270
+
+Epoch 13/30
+--------------------------------------------------
+Training Loss: 0.014 | Training Accuracy: 0.502
+Validation Loss: 0.967 | Validation Accuracy: 0.883
+Best Validation Loss: 0.270
+
+Epoch 14/30
+--------------------------------------------------
+Training Loss: 0.012 | Training Accuracy: 0.497
+Validation Loss: 0.942 | Validation Accuracy: 0.890
+Best Validation Loss: 0.270
+
+Epoch 15/30
+--------------------------------------------------
+Training Loss: 0.010 | Training Accuracy: 0.502
+Validation Loss: 0.981 | Validation Accuracy: 0.891
+Best Validation Loss: 0.270
+
+Epoch 16/30
+--------------------------------------------------
+Training Loss: 0.011 | Training Accuracy: 0.499
+Validation Loss: 0.820 | Validation Accuracy: 0.894
+Best Validation Loss: 0.270
+
+Epoch 17/30
+--------------------------------------------------
+Training Loss: 0.008 | Training Accuracy: 0.495
+Validation Loss: 0.888 | Validation Accuracy: 0.892
+Best Validation Loss: 0.270
+
+Epoch 18/30
+--------------------------------------------------
+Training Loss: 0.008 | Training Accuracy: 0.505
+Validation Loss: 1.008 | Validation Accuracy: 0.889
+Best Validation Loss: 0.270
+
+Epoch 19/30
+--------------------------------------------------
+Training Loss: 0.006 | Training Accuracy: 0.500
+Validation Loss: 1.015 | Validation Accuracy: 0.890
+Best Validation Loss: 0.270
+
+Epoch 20/30
+--------------------------------------------------
+Training Loss: 0.007 | Training Accuracy: 0.501
+Validation Loss: 1.057 | Validation Accuracy: 0.892
+Best Validation Loss: 0.270
+
+Epoch 21/30
+--------------------------------------------------
+Training Loss: 0.005 | Training Accuracy: 0.500
+Validation Loss: 1.208 | Validation Accuracy: 0.888
+Best Validation Loss: 0.270
+
+Epoch 22/30
+--------------------------------------------------
+Training Loss: 0.004 | Training Accuracy: 0.502
+Validation Loss: 1.105 | Validation Accuracy: 0.892
+Best Validation Loss: 0.270
+
+Epoch 23/30
+--------------------------------------------------
+Training Loss: 0.003 | Training Accuracy: 0.502
+Validation Loss: 1.042 | Validation Accuracy: 0.892
+Best Validation Loss: 0.270
+
+Epoch 24/30
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.500
+Validation Loss: 1.056 | Validation Accuracy: 0.896
+Best Validation Loss: 0.270
+
+Epoch 25/30
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.502
+Validation Loss: 1.127 | Validation Accuracy: 0.892
+Best Validation Loss: 0.270
+
+Epoch 26/30
+--------------------------------------------------
+Training Loss: 0.003 | Training Accuracy: 0.502
+Validation Loss: 1.107 | Validation Accuracy: 0.893
+Best Validation Loss: 0.270
+
+Epoch 27/30
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.500
+Validation Loss: 1.110 | Validation Accuracy: 0.896
+Best Validation Loss: 0.270
+
+Epoch 28/30
+--------------------------------------------------
+Training Loss: 0.001 | Training Accuracy: 0.502
+Validation Loss: 1.173 | Validation Accuracy: 0.895
+Best Validation Loss: 0.270
+
+Epoch 29/30
+--------------------------------------------------
+Training Loss: 0.000 | Training Accuracy: 0.500
+Validation Loss: 1.188 | Validation Accuracy: 0.896
+Best Validation Loss: 0.270
+
+Epoch 30/30
+--------------------------------------------------
+Training Loss: 0.000 | Training Accuracy: 0.499
+Validation Loss: 1.200 | Validation Accuracy: 0.895
+Best Validation Loss: 0.270
+
+Test Results - Loss: 0.255, Accuracy: 0.8951, F1: 0.8950
+>>> ✓ Experiment 13 completed successfully.
+
+>>> Starting Experiment 14
+
+============================================================
+EXPERIMENT 14: 60 epochs training
+============================================================
+Config: train_size=0.7, freeze_layers=None
+         lr=2e-05, batch_size=32
+         dropout=0.1, epochs=60
+         use_cls_token=True, token_position=cls
+         class_weights=True, scheduler=True
+Using class weights: [1. 1.]
+Starting training for 60 epochs...
+
+Epoch 1/60
+--------------------------------------------------
+Training Loss: 0.519 | Training Accuracy: 0.497
+Validation Loss: 0.347 | Validation Accuracy: 0.856
+Best Validation Loss: 0.347
+
+Epoch 2/60
+--------------------------------------------------
+Training Loss: 0.309 | Training Accuracy: 0.499
+Validation Loss: 0.295 | Validation Accuracy: 0.876
+Best Validation Loss: 0.295
+
+Epoch 3/60
+--------------------------------------------------
+Training Loss: 0.246 | Training Accuracy: 0.501
+Validation Loss: 0.297 | Validation Accuracy: 0.888
+Best Validation Loss: 0.295
+
+Epoch 4/60
+--------------------------------------------------
+Training Loss: 0.187 | Training Accuracy: 0.501
+Validation Loss: 0.314 | Validation Accuracy: 0.887
+Best Validation Loss: 0.295
+
+Epoch 5/60
+--------------------------------------------------
+Training Loss: 0.135 | Training Accuracy: 0.499
+Validation Loss: 0.364 | Validation Accuracy: 0.887
+Best Validation Loss: 0.295
+
+Epoch 6/60
+--------------------------------------------------
+Training Loss: 0.104 | Training Accuracy: 0.504
+Validation Loss: 0.520 | Validation Accuracy: 0.878
+Best Validation Loss: 0.295
+
+Epoch 7/60
+--------------------------------------------------
+Training Loss: 0.084 | Training Accuracy: 0.498
+Validation Loss: 0.455 | Validation Accuracy: 0.885
+Best Validation Loss: 0.295
+
+Epoch 8/60
+--------------------------------------------------
+Training Loss: 0.063 | Training Accuracy: 0.501
+Validation Loss: 0.530 | Validation Accuracy: 0.889
+Best Validation Loss: 0.295
+
+Epoch 9/60
+--------------------------------------------------
+Training Loss: 0.048 | Training Accuracy: 0.501
+Validation Loss: 0.572 | Validation Accuracy: 0.891
+Best Validation Loss: 0.295
+
+Epoch 10/60
+--------------------------------------------------
+Training Loss: 0.042 | Training Accuracy: 0.497
+Validation Loss: 0.578 | Validation Accuracy: 0.892
+Best Validation Loss: 0.295
+
+Epoch 11/60
+--------------------------------------------------
+Training Loss: 0.034 | Training Accuracy: 0.499
+Validation Loss: 0.640 | Validation Accuracy: 0.889
+Best Validation Loss: 0.295
+
+Epoch 12/60
+--------------------------------------------------
+Training Loss: 0.030 | Training Accuracy: 0.501
+Validation Loss: 0.854 | Validation Accuracy: 0.886
+Best Validation Loss: 0.295
+
+Epoch 13/60
+--------------------------------------------------
+Training Loss: 0.024 | Training Accuracy: 0.502
+Validation Loss: 0.805 | Validation Accuracy: 0.892
+Best Validation Loss: 0.295
+
+Epoch 14/60
+--------------------------------------------------
+Training Loss: 0.022 | Training Accuracy: 0.502
+Validation Loss: 0.774 | Validation Accuracy: 0.893
+Best Validation Loss: 0.295
+
+Epoch 15/60
+--------------------------------------------------
+Training Loss: 0.021 | Training Accuracy: 0.501
+Validation Loss: 0.809 | Validation Accuracy: 0.894
+Best Validation Loss: 0.295
+
+Epoch 16/60
+--------------------------------------------------
+Training Loss: 0.020 | Training Accuracy: 0.502
+Validation Loss: 0.839 | Validation Accuracy: 0.890
+Best Validation Loss: 0.295
+
+Epoch 17/60
+--------------------------------------------------
+Training Loss: 0.016 | Training Accuracy: 0.499
+Validation Loss: 0.834 | Validation Accuracy: 0.891
+Best Validation Loss: 0.295
+
+Epoch 18/60
+--------------------------------------------------
+Training Loss: 0.017 | Training Accuracy: 0.500
+Validation Loss: 0.688 | Validation Accuracy: 0.893
+Best Validation Loss: 0.295
+
+Epoch 19/60
+--------------------------------------------------
+Training Loss: 0.013 | Training Accuracy: 0.501
+Validation Loss: 0.903 | Validation Accuracy: 0.888
+Best Validation Loss: 0.295
+
+Epoch 20/60
+--------------------------------------------------
+Training Loss: 0.010 | Training Accuracy: 0.498
+Validation Loss: 1.035 | Validation Accuracy: 0.888
+Best Validation Loss: 0.295
+
+Epoch 21/60
+--------------------------------------------------
+Training Loss: 0.013 | Training Accuracy: 0.500
+Validation Loss: 0.935 | Validation Accuracy: 0.893
+Best Validation Loss: 0.295
+
+Epoch 22/60
+--------------------------------------------------
+Training Loss: 0.012 | Training Accuracy: 0.500
+Validation Loss: 0.962 | Validation Accuracy: 0.894
+Best Validation Loss: 0.295
+
+Epoch 23/60
+--------------------------------------------------
+Training Loss: 0.010 | Training Accuracy: 0.499
+Validation Loss: 0.953 | Validation Accuracy: 0.887
+Best Validation Loss: 0.295
+
+Epoch 24/60
+--------------------------------------------------
+Training Loss: 0.009 | Training Accuracy: 0.495
+Validation Loss: 0.819 | Validation Accuracy: 0.893
+Best Validation Loss: 0.295
+
+Epoch 25/60
+--------------------------------------------------
+Training Loss: 0.008 | Training Accuracy: 0.501
+Validation Loss: 0.911 | Validation Accuracy: 0.891
+Best Validation Loss: 0.295
+
+Epoch 26/60
+--------------------------------------------------
+Training Loss: 0.008 | Training Accuracy: 0.496
+Validation Loss: 0.941 | Validation Accuracy: 0.894
+Best Validation Loss: 0.295
+
+Epoch 27/60
+--------------------------------------------------
+Training Loss: 0.007 | Training Accuracy: 0.500
+Validation Loss: 0.976 | Validation Accuracy: 0.895
+Best Validation Loss: 0.295
+
+Epoch 28/60
+--------------------------------------------------
+Training Loss: 0.006 | Training Accuracy: 0.503
+Validation Loss: 1.115 | Validation Accuracy: 0.889
+Best Validation Loss: 0.295
+
+Epoch 29/60
+--------------------------------------------------
+Training Loss: 0.005 | Training Accuracy: 0.502
+Validation Loss: 1.068 | Validation Accuracy: 0.895
+Best Validation Loss: 0.295
+
+Epoch 30/60
+--------------------------------------------------
+Training Loss: 0.007 | Training Accuracy: 0.500
+Validation Loss: 0.887 | Validation Accuracy: 0.896
+Best Validation Loss: 0.295
+
+Epoch 31/60
+--------------------------------------------------
+Training Loss: 0.006 | Training Accuracy: 0.500
+Validation Loss: 0.938 | Validation Accuracy: 0.894
+Best Validation Loss: 0.295
+
+Epoch 32/60
+--------------------------------------------------
+Training Loss: 0.005 | Training Accuracy: 0.496
+Validation Loss: 1.035 | Validation Accuracy: 0.896
+Best Validation Loss: 0.295
+
+Epoch 33/60
+--------------------------------------------------
+Training Loss: 0.003 | Training Accuracy: 0.500
+Validation Loss: 1.149 | Validation Accuracy: 0.893
+Best Validation Loss: 0.295
+
+Epoch 34/60
+--------------------------------------------------
+Training Loss: 0.004 | Training Accuracy: 0.500
+Validation Loss: 1.019 | Validation Accuracy: 0.897
+Best Validation Loss: 0.295
+
+Epoch 35/60
+--------------------------------------------------
+Training Loss: 0.004 | Training Accuracy: 0.497
+Validation Loss: 1.138 | Validation Accuracy: 0.894
+Best Validation Loss: 0.295
+
+Epoch 36/60
+--------------------------------------------------
+Training Loss: 0.004 | Training Accuracy: 0.499
+Validation Loss: 1.052 | Validation Accuracy: 0.891
+Best Validation Loss: 0.295
+
+Epoch 37/60
+--------------------------------------------------
+Training Loss: 0.003 | Training Accuracy: 0.500
+Validation Loss: 1.075 | Validation Accuracy: 0.896
+Best Validation Loss: 0.295
+
+Epoch 38/60
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.500
+Validation Loss: 1.074 | Validation Accuracy: 0.894
+Best Validation Loss: 0.295
+
+Epoch 39/60
+--------------------------------------------------
+Training Loss: 0.004 | Training Accuracy: 0.501
+Validation Loss: 1.114 | Validation Accuracy: 0.892
+Best Validation Loss: 0.295
+
+Epoch 40/60
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.502
+Validation Loss: 1.155 | Validation Accuracy: 0.897
+Best Validation Loss: 0.295
+
+Epoch 41/60
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.502
+Validation Loss: 1.222 | Validation Accuracy: 0.898
+Best Validation Loss: 0.295
+
+Epoch 42/60
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.497
+Validation Loss: 1.240 | Validation Accuracy: 0.896
+Best Validation Loss: 0.295
+
+Epoch 43/60
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.496
+Validation Loss: 1.131 | Validation Accuracy: 0.896
+Best Validation Loss: 0.295
+
+Epoch 44/60
+--------------------------------------------------
+Training Loss: 0.001 | Training Accuracy: 0.503
+Validation Loss: 1.277 | Validation Accuracy: 0.895
+Best Validation Loss: 0.295
+
+Epoch 45/60
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.503
+Validation Loss: 1.275 | Validation Accuracy: 0.894
+Best Validation Loss: 0.295
+
+Epoch 46/60
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.503
+Validation Loss: 1.195 | Validation Accuracy: 0.895
+Best Validation Loss: 0.295
+
+Epoch 47/60
+--------------------------------------------------
+Training Loss: 0.001 | Training Accuracy: 0.507
+Validation Loss: 1.178 | Validation Accuracy: 0.897
+Best Validation Loss: 0.295
+
+Epoch 48/60
+--------------------------------------------------
+Training Loss: 0.001 | Training Accuracy: 0.500
+Validation Loss: 1.166 | Validation Accuracy: 0.897
+Best Validation Loss: 0.295
+
+Epoch 49/60
+--------------------------------------------------
+Training Loss: 0.001 | Training Accuracy: 0.499
+Validation Loss: 1.227 | Validation Accuracy: 0.898
+Best Validation Loss: 0.295
+
+Epoch 50/60
+--------------------------------------------------
+Training Loss: 0.001 | Training Accuracy: 0.500
+Validation Loss: 1.149 | Validation Accuracy: 0.898
+Best Validation Loss: 0.295
+
+Epoch 51/60
+--------------------------------------------------
+Training Loss: 0.000 | Training Accuracy: 0.509
+Validation Loss: 1.229 | Validation Accuracy: 0.898
+Best Validation Loss: 0.295
+
+Epoch 52/60
+--------------------------------------------------
+Training Loss: 0.001 | Training Accuracy: 0.504
+Validation Loss: 1.179 | Validation Accuracy: 0.897
+Best Validation Loss: 0.295
+
+Epoch 53/60
+--------------------------------------------------
+Training Loss: 0.001 | Training Accuracy: 0.501
+Validation Loss: 1.138 | Validation Accuracy: 0.898
+Best Validation Loss: 0.295
+
+Epoch 54/60
+--------------------------------------------------
+Training Loss: 0.000 | Training Accuracy: 0.500
+Validation Loss: 1.205 | Validation Accuracy: 0.899
+Best Validation Loss: 0.295
+
+Epoch 55/60
+--------------------------------------------------
+Training Loss: 0.000 | Training Accuracy: 0.501
+Validation Loss: 1.274 | Validation Accuracy: 0.897
+Best Validation Loss: 0.295
+
+Epoch 56/60
+--------------------------------------------------
+Training Loss: 0.000 | Training Accuracy: 0.503
+Validation Loss: 1.247 | Validation Accuracy: 0.900
+Best Validation Loss: 0.295
+
+Epoch 57/60
+--------------------------------------------------
+Training Loss: 0.000 | Training Accuracy: 0.497
+Validation Loss: 1.268 | Validation Accuracy: 0.899
+Best Validation Loss: 0.295
+
+Epoch 58/60
+--------------------------------------------------
+Training Loss: 0.000 | Training Accuracy: 0.504
+Validation Loss: 1.325 | Validation Accuracy: 0.897
+Best Validation Loss: 0.295
+
+Epoch 59/60
+--------------------------------------------------
+Training Loss: 0.000 | Training Accuracy: 0.500
+Validation Loss: 1.288 | Validation Accuracy: 0.900
+Best Validation Loss: 0.295
+
+Epoch 60/60
+--------------------------------------------------
+Training Loss: 0.000 | Training Accuracy: 0.496
+Validation Loss: 1.285 | Validation Accuracy: 0.899
+Best Validation Loss: 0.295
+
+Test Results - Loss: 0.274, Accuracy: 0.8871, F1: 0.8870
+>>> ✓ Experiment 14 completed successfully.
+
+>>> Starting Experiment 15
+
+============================================================
+EXPERIMENT 15: Small batch size 16
+============================================================
+Config: train_size=0.7, freeze_layers=None
+         lr=2e-05, batch_size=16
+         dropout=0.1, epochs=20
+         use_cls_token=True, token_position=cls
+         class_weights=True, scheduler=True
+Using class weights: [1. 1.]
+Starting training for 20 epochs...
+
+Epoch 1/20
+--------------------------------------------------
+Training Loss: 0.593 | Training Accuracy: 0.500
+Validation Loss: 0.391 | Validation Accuracy: 0.838
+Best Validation Loss: 0.391
+
+Epoch 2/20
+--------------------------------------------------
+Training Loss: 0.336 | Training Accuracy: 0.500
+Validation Loss: 0.300 | Validation Accuracy: 0.873
+Best Validation Loss: 0.300
+
+Epoch 3/20
+--------------------------------------------------
+Training Loss: 0.271 | Training Accuracy: 0.500
+Validation Loss: 0.288 | Validation Accuracy: 0.879
+Best Validation Loss: 0.288
+
+Epoch 4/20
+--------------------------------------------------
+Training Loss: 0.221 | Training Accuracy: 0.502
+Validation Loss: 0.299 | Validation Accuracy: 0.885
+Best Validation Loss: 0.288
+
+Epoch 5/20
+--------------------------------------------------
+Training Loss: 0.168 | Training Accuracy: 0.501
+Validation Loss: 0.347 | Validation Accuracy: 0.877
+Best Validation Loss: 0.288
+
+Epoch 6/20
+--------------------------------------------------
+Training Loss: 0.119 | Training Accuracy: 0.501
+Validation Loss: 0.349 | Validation Accuracy: 0.891
+Best Validation Loss: 0.288
+
+Epoch 7/20
+--------------------------------------------------
+Training Loss: 0.086 | Training Accuracy: 0.502
+Validation Loss: 0.395 | Validation Accuracy: 0.887
+Best Validation Loss: 0.288
+
+Epoch 8/20
+--------------------------------------------------
+Training Loss: 0.068 | Training Accuracy: 0.500
+Validation Loss: 0.513 | Validation Accuracy: 0.883
+Best Validation Loss: 0.288
+
+Epoch 9/20
+--------------------------------------------------
+Training Loss: 0.067 | Training Accuracy: 0.495
+Validation Loss: 0.537 | Validation Accuracy: 0.881
+Best Validation Loss: 0.288
+
+Epoch 10/20
+--------------------------------------------------
+Training Loss: 0.047 | Training Accuracy: 0.501
+Validation Loss: 0.589 | Validation Accuracy: 0.888
+Best Validation Loss: 0.288
+
+Epoch 11/20
+--------------------------------------------------
+Training Loss: 0.040 | Training Accuracy: 0.499
+Validation Loss: 0.603 | Validation Accuracy: 0.883
+Best Validation Loss: 0.288
+
+Epoch 12/20
+--------------------------------------------------
+Training Loss: 0.035 | Training Accuracy: 0.505
+Validation Loss: 0.640 | Validation Accuracy: 0.891
+Best Validation Loss: 0.288
+
+Epoch 13/20
+--------------------------------------------------
+Training Loss: 0.027 | Training Accuracy: 0.504
+Validation Loss: 0.669 | Validation Accuracy: 0.888
+Best Validation Loss: 0.288
+
+Epoch 14/20
+--------------------------------------------------
+Training Loss: 0.024 | Training Accuracy: 0.498
+Validation Loss: 0.697 | Validation Accuracy: 0.886
+Best Validation Loss: 0.288
+
+Epoch 15/20
+--------------------------------------------------
+Training Loss: 0.021 | Training Accuracy: 0.503
+Validation Loss: 0.676 | Validation Accuracy: 0.890
+Best Validation Loss: 0.288
+
+Epoch 16/20
+--------------------------------------------------
+Training Loss: 0.017 | Training Accuracy: 0.500
+Validation Loss: 0.716 | Validation Accuracy: 0.889
+Best Validation Loss: 0.288
+
+Epoch 17/20
+--------------------------------------------------
+Training Loss: 0.017 | Training Accuracy: 0.502
+Validation Loss: 0.761 | Validation Accuracy: 0.892
+Best Validation Loss: 0.288
+
+Epoch 18/20
+--------------------------------------------------
+Training Loss: 0.016 | Training Accuracy: 0.504
+Validation Loss: 0.770 | Validation Accuracy: 0.892
+Best Validation Loss: 0.288
+
+Epoch 19/20
+--------------------------------------------------
+Training Loss: 0.013 | Training Accuracy: 0.505
+Validation Loss: 0.895 | Validation Accuracy: 0.891
+Best Validation Loss: 0.288
+
+Epoch 20/20
+--------------------------------------------------
+Training Loss: 0.013 | Training Accuracy: 0.498
+Validation Loss: 0.766 | Validation Accuracy: 0.893
+Best Validation Loss: 0.288
+
+Test Results - Loss: 0.273, Accuracy: 0.8873, F1: 0.8871
+>>> ✓ Experiment 15 completed successfully.
+
+>>> Starting Experiment 16
+
+============================================================
+EXPERIMENT 16: Large batch size 64
+============================================================
+Config: train_size=0.7, freeze_layers=None
+         lr=2e-05, batch_size=64
+         dropout=0.1, epochs=20
+         use_cls_token=True, token_position=cls
+         class_weights=True, scheduler=True
+Using class weights: [1. 1.]
+Starting training for 20 epochs...
+
+Epoch 1/20
+--------------------------------------------------
+Training Loss: 0.476 | Training Accuracy: 0.497
+Validation Loss: 0.309 | Validation Accuracy: 0.869
+Best Validation Loss: 0.309
+
+Epoch 2/20
+--------------------------------------------------
+Training Loss: 0.282 | Training Accuracy: 0.501
+Validation Loss: 0.274 | Validation Accuracy: 0.883
+Best Validation Loss: 0.274
+
+Epoch 3/20
+--------------------------------------------------
+Training Loss: 0.197 | Training Accuracy: 0.503
+Validation Loss: 0.285 | Validation Accuracy: 0.889
+Best Validation Loss: 0.274
+
+Epoch 4/20
+--------------------------------------------------
+Training Loss: 0.117 | Training Accuracy: 0.496
+Validation Loss: 0.335 | Validation Accuracy: 0.892
+Best Validation Loss: 0.274
+
+Epoch 5/20
+--------------------------------------------------
+Training Loss: 0.072 | Training Accuracy: 0.502
+Validation Loss: 0.437 | Validation Accuracy: 0.885
+Best Validation Loss: 0.274
+
+Epoch 6/20
+--------------------------------------------------
+Training Loss: 0.051 | Training Accuracy: 0.498
+Validation Loss: 0.436 | Validation Accuracy: 0.890
+Best Validation Loss: 0.274
+
+Epoch 7/20
+--------------------------------------------------
+Training Loss: 0.039 | Training Accuracy: 0.502
+Validation Loss: 0.543 | Validation Accuracy: 0.892
+Best Validation Loss: 0.274
+
+Epoch 8/20
+--------------------------------------------------
+Training Loss: 0.031 | Training Accuracy: 0.502
+Validation Loss: 0.566 | Validation Accuracy: 0.885
+Best Validation Loss: 0.274
+
+Epoch 9/20
+--------------------------------------------------
+Training Loss: 0.024 | Training Accuracy: 0.501
+Validation Loss: 0.622 | Validation Accuracy: 0.886
+Best Validation Loss: 0.274
+
+Epoch 10/20
+--------------------------------------------------
+Training Loss: 0.018 | Training Accuracy: 0.500
+Validation Loss: 0.609 | Validation Accuracy: 0.892
+Best Validation Loss: 0.274
+
+Epoch 11/20
+--------------------------------------------------
+Training Loss: 0.017 | Training Accuracy: 0.501
+Validation Loss: 0.630 | Validation Accuracy: 0.892
+Best Validation Loss: 0.274
+
+Epoch 12/20
+--------------------------------------------------
+Training Loss: 0.013 | Training Accuracy: 0.500
+Validation Loss: 0.664 | Validation Accuracy: 0.893
+Best Validation Loss: 0.274
+
+Epoch 13/20
+--------------------------------------------------
+Training Loss: 0.008 | Training Accuracy: 0.502
+Validation Loss: 0.772 | Validation Accuracy: 0.894
+Best Validation Loss: 0.274
+
+Epoch 14/20
+--------------------------------------------------
+Training Loss: 0.006 | Training Accuracy: 0.502
+Validation Loss: 0.809 | Validation Accuracy: 0.893
+Best Validation Loss: 0.274
+
+Epoch 15/20
+--------------------------------------------------
+Training Loss: 0.006 | Training Accuracy: 0.502
+Validation Loss: 0.884 | Validation Accuracy: 0.888
+Best Validation Loss: 0.274
+
+Epoch 16/20
+--------------------------------------------------
+Training Loss: 0.004 | Training Accuracy: 0.500
+Validation Loss: 0.853 | Validation Accuracy: 0.894
+Best Validation Loss: 0.274
+
+Epoch 17/20
+--------------------------------------------------
+Training Loss: 0.003 | Training Accuracy: 0.500
+Validation Loss: 0.910 | Validation Accuracy: 0.893
+Best Validation Loss: 0.274
+
+Epoch 18/20
+--------------------------------------------------
+Training Loss: 0.003 | Training Accuracy: 0.503
+Validation Loss: 0.925 | Validation Accuracy: 0.892
+Best Validation Loss: 0.274
+
+Epoch 19/20
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.504
+Validation Loss: 0.938 | Validation Accuracy: 0.894
+Best Validation Loss: 0.274
+
+Epoch 20/20
+--------------------------------------------------
+Training Loss: 0.001 | Training Accuracy: 0.497
+Validation Loss: 0.940 | Validation Accuracy: 0.894
+Best Validation Loss: 0.274
+
+Test Results - Loss: 0.260, Accuracy: 0.8932, F1: 0.8931
+>>> ✓ Experiment 16 completed successfully.
+
+>>> Starting Experiment 17
+
+============================================================
+EXPERIMENT 17: Mean pooling
+============================================================
+Config: train_size=0.7, freeze_layers=None
+         lr=2e-05, batch_size=32
+         dropout=0.1, epochs=20
+         use_cls_token=False, token_position=mean
+         class_weights=True, scheduler=True
+Using class weights: [1. 1.]
+Starting training for 20 epochs...
+
+Epoch 1/20
+--------------------------------------------------
+Training Loss: 0.427 | Training Accuracy: 0.499
+Validation Loss: 0.306 | Validation Accuracy: 0.867
+Best Validation Loss: 0.306
+
+Epoch 2/20
+--------------------------------------------------
+Training Loss: 0.270 | Training Accuracy: 0.500
+Validation Loss: 0.276 | Validation Accuracy: 0.888
+Best Validation Loss: 0.276
+
+Epoch 3/20
+--------------------------------------------------
+Training Loss: 0.186 | Training Accuracy: 0.495
+Validation Loss: 0.290 | Validation Accuracy: 0.888
+Best Validation Loss: 0.276
+
+Epoch 4/20
+--------------------------------------------------
+Training Loss: 0.109 | Training Accuracy: 0.501
+Validation Loss: 0.384 | Validation Accuracy: 0.891
+Best Validation Loss: 0.276
+
+Epoch 5/20
+--------------------------------------------------
+Training Loss: 0.062 | Training Accuracy: 0.503
+Validation Loss: 0.520 | Validation Accuracy: 0.891
+Best Validation Loss: 0.276
+
+Epoch 6/20
+--------------------------------------------------
+Training Loss: 0.047 | Training Accuracy: 0.500
+Validation Loss: 0.539 | Validation Accuracy: 0.891
+Best Validation Loss: 0.276
+
+Epoch 7/20
+--------------------------------------------------
+Training Loss: 0.033 | Training Accuracy: 0.502
+Validation Loss: 0.578 | Validation Accuracy: 0.892
+Best Validation Loss: 0.276
+
+Epoch 8/20
+--------------------------------------------------
+Training Loss: 0.027 | Training Accuracy: 0.504
+Validation Loss: 0.674 | Validation Accuracy: 0.891
+Best Validation Loss: 0.276
+
+Epoch 9/20
+--------------------------------------------------
+Training Loss: 0.020 | Training Accuracy: 0.499
+Validation Loss: 0.806 | Validation Accuracy: 0.887
+Best Validation Loss: 0.276
+
+Epoch 10/20
+--------------------------------------------------
+Training Loss: 0.019 | Training Accuracy: 0.498
+Validation Loss: 0.810 | Validation Accuracy: 0.889
+Best Validation Loss: 0.276
+
+Epoch 11/20
+--------------------------------------------------
+Training Loss: 0.012 | Training Accuracy: 0.503
+Validation Loss: 0.823 | Validation Accuracy: 0.890
+Best Validation Loss: 0.276
+
+Epoch 12/20
+--------------------------------------------------
+Training Loss: 0.011 | Training Accuracy: 0.501
+Validation Loss: 0.857 | Validation Accuracy: 0.894
+Best Validation Loss: 0.276
+
+Epoch 13/20
+--------------------------------------------------
+Training Loss: 0.010 | Training Accuracy: 0.495
+Validation Loss: 0.973 | Validation Accuracy: 0.891
+Best Validation Loss: 0.276
+
+Epoch 14/20
+--------------------------------------------------
+Training Loss: 0.009 | Training Accuracy: 0.501
+Validation Loss: 0.873 | Validation Accuracy: 0.893
+Best Validation Loss: 0.276
+
+Epoch 15/20
+--------------------------------------------------
+Training Loss: 0.005 | Training Accuracy: 0.503
+Validation Loss: 0.967 | Validation Accuracy: 0.894
+Best Validation Loss: 0.276
+
+Epoch 16/20
+--------------------------------------------------
+Training Loss: 0.003 | Training Accuracy: 0.499
+Validation Loss: 1.046 | Validation Accuracy: 0.896
+Best Validation Loss: 0.276
+
+Epoch 17/20
+--------------------------------------------------
+Training Loss: 0.004 | Training Accuracy: 0.500
+Validation Loss: 1.012 | Validation Accuracy: 0.895
+Best Validation Loss: 0.276
+
+Epoch 18/20
+--------------------------------------------------
+Training Loss: 0.001 | Training Accuracy: 0.496
+Validation Loss: 1.062 | Validation Accuracy: 0.897
+Best Validation Loss: 0.276
+
+Epoch 19/20
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.506
+Validation Loss: 1.078 | Validation Accuracy: 0.895
+Best Validation Loss: 0.276
+
+Epoch 20/20
+--------------------------------------------------
+Training Loss: 0.001 | Training Accuracy: 0.502
+Validation Loss: 1.088 | Validation Accuracy: 0.894
+Best Validation Loss: 0.276
+
+Test Results - Loss: 0.258, Accuracy: 0.8932, F1: 0.8932
+>>> ✓ Experiment 17 completed successfully.
+
+>>> Starting Experiment 18
+
+============================================================
+EXPERIMENT 18: Max pooling
+============================================================
+Config: train_size=0.7, freeze_layers=None
+         lr=2e-05, batch_size=32
+         dropout=0.1, epochs=20
+         use_cls_token=False, token_position=max
+         class_weights=True, scheduler=True
+Using class weights: [1. 1.]
+Starting training for 20 epochs...
+
+Epoch 1/20
+--------------------------------------------------
+Training Loss: 0.467 | Training Accuracy: 0.499
+Validation Loss: 0.304 | Validation Accuracy: 0.869
+Best Validation Loss: 0.304
+
+Epoch 2/20
+--------------------------------------------------
+Training Loss: 0.274 | Training Accuracy: 0.502
+Validation Loss: 0.286 | Validation Accuracy: 0.884
+Best Validation Loss: 0.286
+
+Epoch 3/20
+--------------------------------------------------
+Training Loss: 0.191 | Training Accuracy: 0.502
+Validation Loss: 0.278 | Validation Accuracy: 0.887
+Best Validation Loss: 0.278
+
+Epoch 4/20
+--------------------------------------------------
+Training Loss: 0.114 | Training Accuracy: 0.498
+Validation Loss: 0.341 | Validation Accuracy: 0.883
+Best Validation Loss: 0.278
+
+Epoch 5/20
+--------------------------------------------------
+Training Loss: 0.072 | Training Accuracy: 0.503
+Validation Loss: 0.431 | Validation Accuracy: 0.889
+Best Validation Loss: 0.278
+
+Epoch 6/20
+--------------------------------------------------
+Training Loss: 0.045 | Training Accuracy: 0.503
+Validation Loss: 0.565 | Validation Accuracy: 0.890
+Best Validation Loss: 0.278
+
+Epoch 7/20
+--------------------------------------------------
+Training Loss: 0.036 | Training Accuracy: 0.500
+Validation Loss: 0.616 | Validation Accuracy: 0.891
+Best Validation Loss: 0.278
+
+Epoch 8/20
+--------------------------------------------------
+Training Loss: 0.030 | Training Accuracy: 0.501
+Validation Loss: 0.652 | Validation Accuracy: 0.891
+Best Validation Loss: 0.278
+
+Epoch 9/20
+--------------------------------------------------
+Training Loss: 0.025 | Training Accuracy: 0.500
+Validation Loss: 0.648 | Validation Accuracy: 0.895
+Best Validation Loss: 0.278
+
+Epoch 10/20
+--------------------------------------------------
+Training Loss: 0.018 | Training Accuracy: 0.502
+Validation Loss: 0.724 | Validation Accuracy: 0.894
+Best Validation Loss: 0.278
+
+Epoch 11/20
+--------------------------------------------------
+Training Loss: 0.013 | Training Accuracy: 0.500
+Validation Loss: 0.758 | Validation Accuracy: 0.893
+Best Validation Loss: 0.278
+
+Epoch 12/20
+--------------------------------------------------
+Training Loss: 0.012 | Training Accuracy: 0.500
+Validation Loss: 0.814 | Validation Accuracy: 0.894
+Best Validation Loss: 0.278
+
+Epoch 13/20
+--------------------------------------------------
+Training Loss: 0.008 | Training Accuracy: 0.499
+Validation Loss: 0.804 | Validation Accuracy: 0.896
+Best Validation Loss: 0.278
+
+Epoch 14/20
+--------------------------------------------------
+Training Loss: 0.007 | Training Accuracy: 0.502
+Validation Loss: 0.912 | Validation Accuracy: 0.892
+Best Validation Loss: 0.278
+
+Epoch 15/20
+--------------------------------------------------
+Training Loss: 0.005 | Training Accuracy: 0.499
+Validation Loss: 0.891 | Validation Accuracy: 0.898
+Best Validation Loss: 0.278
+
+Epoch 16/20
+--------------------------------------------------
+Training Loss: 0.006 | Training Accuracy: 0.500
+Validation Loss: 0.938 | Validation Accuracy: 0.895
+Best Validation Loss: 0.278
+
+Epoch 17/20
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.503
+Validation Loss: 0.994 | Validation Accuracy: 0.893
+Best Validation Loss: 0.278
+
+Epoch 18/20
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.500
+Validation Loss: 0.998 | Validation Accuracy: 0.896
+Best Validation Loss: 0.278
+
+Epoch 19/20
+--------------------------------------------------
+Training Loss: 0.001 | Training Accuracy: 0.501
+Validation Loss: 1.013 | Validation Accuracy: 0.898
+Best Validation Loss: 0.278
+
+Epoch 20/20
+--------------------------------------------------
+Training Loss: 0.001 | Training Accuracy: 0.494
+Validation Loss: 1.023 | Validation Accuracy: 0.896
+Best Validation Loss: 0.278
+
+Test Results - Loss: 0.263, Accuracy: 0.8937, F1: 0.8937
+>>> ✓ Experiment 18 completed successfully.
+
+>>> Starting Experiment 19
+
+============================================================
+EXPERIMENT 19: First+Last concat
+============================================================
+Config: train_size=0.7, freeze_layers=None
+         lr=2e-05, batch_size=32
+         dropout=0.1, epochs=20
+         use_cls_token=False, token_position=first_last
+         class_weights=True, scheduler=True
+Using class weights: [1. 1.]
+Starting training for 20 epochs...
+
+Epoch 1/20
+--------------------------------------------------
+Training Loss: 0.440 | Training Accuracy: 0.499
+Validation Loss: 0.309 | Validation Accuracy: 0.876
+Best Validation Loss: 0.309
+
+Epoch 2/20
+--------------------------------------------------
+Training Loss: 0.269 | Training Accuracy: 0.501
+Validation Loss: 0.282 | Validation Accuracy: 0.883
+Best Validation Loss: 0.282
+
+Epoch 3/20
+--------------------------------------------------
+Training Loss: 0.185 | Training Accuracy: 0.502
+Validation Loss: 0.326 | Validation Accuracy: 0.889
+Best Validation Loss: 0.282
+
+Epoch 4/20
+--------------------------------------------------
+Training Loss: 0.105 | Training Accuracy: 0.504
+Validation Loss: 0.361 | Validation Accuracy: 0.893
+Best Validation Loss: 0.282
+
+Epoch 5/20
+--------------------------------------------------
+Training Loss: 0.061 | Training Accuracy: 0.498
+Validation Loss: 0.528 | Validation Accuracy: 0.886
+Best Validation Loss: 0.282
+
+Epoch 6/20
+--------------------------------------------------
+Training Loss: 0.042 | Training Accuracy: 0.503
+Validation Loss: 0.618 | Validation Accuracy: 0.890
+Best Validation Loss: 0.282
+
+Epoch 7/20
+--------------------------------------------------
+Training Loss: 0.030 | Training Accuracy: 0.501
+Validation Loss: 0.698 | Validation Accuracy: 0.891
+Best Validation Loss: 0.282
+
+Epoch 8/20
+--------------------------------------------------
+Training Loss: 0.024 | Training Accuracy: 0.500
+Validation Loss: 0.749 | Validation Accuracy: 0.891
+Best Validation Loss: 0.282
+
+Epoch 9/20
+--------------------------------------------------
+Training Loss: 0.020 | Training Accuracy: 0.497
+Validation Loss: 0.845 | Validation Accuracy: 0.893
+Best Validation Loss: 0.282
+
+Epoch 10/20
+--------------------------------------------------
+Training Loss: 0.016 | Training Accuracy: 0.500
+Validation Loss: 0.917 | Validation Accuracy: 0.892
+Best Validation Loss: 0.282
+
+Epoch 11/20
+--------------------------------------------------
+Training Loss: 0.014 | Training Accuracy: 0.504
+Validation Loss: 0.903 | Validation Accuracy: 0.888
+Best Validation Loss: 0.282
+
+Epoch 12/20
+--------------------------------------------------
+Training Loss: 0.011 | Training Accuracy: 0.495
+Validation Loss: 0.799 | Validation Accuracy: 0.894
+Best Validation Loss: 0.282
+
+Epoch 13/20
+--------------------------------------------------
+Training Loss: 0.007 | Training Accuracy: 0.500
+Validation Loss: 0.941 | Validation Accuracy: 0.897
+Best Validation Loss: 0.282
+
+Epoch 14/20
+--------------------------------------------------
+Training Loss: 0.006 | Training Accuracy: 0.501
+Validation Loss: 0.884 | Validation Accuracy: 0.897
+Best Validation Loss: 0.282
+
+Epoch 15/20
+--------------------------------------------------
+Training Loss: 0.007 | Training Accuracy: 0.500
+Validation Loss: 0.944 | Validation Accuracy: 0.895
+Best Validation Loss: 0.282
+
+Epoch 16/20
+--------------------------------------------------
+Training Loss: 0.004 | Training Accuracy: 0.504
+Validation Loss: 1.005 | Validation Accuracy: 0.896
+Best Validation Loss: 0.282
+
+Epoch 17/20
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.502
+Validation Loss: 1.092 | Validation Accuracy: 0.895
+Best Validation Loss: 0.282
+
+Epoch 18/20
+--------------------------------------------------
+Training Loss: 0.002 | Training Accuracy: 0.500
+Validation Loss: 1.166 | Validation Accuracy: 0.893
+Best Validation Loss: 0.282
+
+Epoch 19/20
+--------------------------------------------------
+Training Loss: 0.001 | Training Accuracy: 0.498
+Validation Loss: 1.142 | Validation Accuracy: 0.897
+Best Validation Loss: 0.282
+
+Epoch 20/20
+--------------------------------------------------
+Training Loss: 0.001 | Training Accuracy: 0.502
+Validation Loss: 1.164 | Validation Accuracy: 0.896
+Best Validation Loss: 0.282
+
+Test Results - Loss: 0.268, Accuracy: 0.8921, F1: 0.8921
+>>> ✓ Experiment 19 completed successfully.
+
+Completed 19 out of 19 experiments.
+
+Saving results to CSV...
+Results saved to: experiment_results_20251031_110215/experiment_results.csv
+Detailed training history saved to: experiment_results_20251031_110215/training_history.csv
+
+Experiment Results Summary:
+ exp_id                            description  test_accuracy  test_f1  test_loss
+      1 30 percent data, frozen BERT, baseline       0.753067 0.752887   0.508465
+      2           50 percent data, frozen BERT       0.770933 0.770907   0.480786
+      3           70 percent data, frozen BERT       0.778933 0.778896   0.466224
+      4          100 percent data, frozen BERT       0.778000 0.777999   0.464834
+      5                 Freeze all BERT layers       0.778800 0.778750   0.465433
+      6             Freeze first 8 BERT layers       0.889333 0.889313   0.270318
+      7                            No freezing       0.894533 0.894516   0.259513
+      8                 Low learning rate 1e-5       0.891333 0.891274   0.272160
+      9              Medium learning rate 2e-5       0.888000 0.887928   0.261792
+     10                High learning rate 5e-5       0.880400 0.880000   0.290595
+     11                        Low dropout 0.1       0.887600 0.887409   0.273256
+     12                       High dropout 0.3       0.896000 0.896000   0.275067
+     13                     30 epochs training       0.895067 0.895006   0.255271
+     14                     60 epochs training       0.887067 0.887037   0.274472
+     15                    Small batch size 16       0.887333 0.887092   0.272642
+     16                    Large batch size 64       0.893200 0.893097   0.259747
+     17                           Mean pooling       0.893200 0.893153   0.257897
+     18                            Max pooling       0.893733 0.893700   0.262633
+     19                      First+Last concat       0.892133 0.892108   0.268111
+
+Creating visualizations...
+
+All results and visualizations saved to: experiment_results_20251031_110215
+Experiment completed successfully!

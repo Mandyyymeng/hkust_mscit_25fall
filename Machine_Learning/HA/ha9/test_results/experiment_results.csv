@@ -1,0 +1,17 @@
+experiment,fid_score,hidden_size,latent_size,lr,n_critic,use_gradient_penalty,use_spectral_norm,loss_function
+exp1_baseline,30.531029708274037,256,128,0.0001,1,False,False,bce
+exp2_small_latent,26.798467032531747,256,64,0.0001,1,False,False,bce
+exp3_large_latent,25.702828118179852,256,256,0.0001,1,False,False,bce
+exp4_elu_activation,82.05339832060835,256,128,0.0001,1,False,False,bce
+exp5_tanh_activation,75.50146428479313,256,128,0.0001,1,False,False,bce
+exp6_higher_lr,30.984875851701,256,128,0.001,1,False,False,bce
+exp7_more_epochs,70.5685527911853,256,128,0.0001,1,False,False,bce
+exp8_mse_loss,24.402345174718235,256,128,0.0001,1,False,False,mse
+exp9_wasserstein_loss,270.46809820551,256,128,0.0001,1,False,False,wasserstein
+exp10_gradient_penalty,40.792684262018184,256,128,0.0001,5,True,False,wasserstein
+exp12_g_larger_lr,45.32372958525534,256,128,0.0001,1,False,False,bce
+exp13_g_smaller_lr,48.0737081716207,256,128,0.0001,1,False,False,bce
+exp11_equal_lr,55.10051882954272,256,128,0.0001,1,False,False,bce
+exp15_pure_capacity,86.1412957808387,512,128,0.0001,1,False,False,bce
+exp16_capacity_adapted,63.44333572959308,512,128,5e-05,1,False,False,bce
+exp14_gradient_penalty_improved,137.1210641162806,256,128,0.0001,3,True,False,wasserstein

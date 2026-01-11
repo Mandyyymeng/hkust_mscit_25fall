@@ -1,0 +1,126 @@
+.. SFLM documentation master file, created by
+   sphinx-quickstart on Sat Mar 15 12:42:00 2025.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+SFLM
+====
+
+In this assignment, you will need to complete the code for a small language model for a formal language,
+called Small Formal Language Model.
+This small language model is implemented as a transformer as illustrated in the following figure.
+
+.. _structure:
+.. figure:: /../SFLM_architecture.png
+   :width: 40%
+
+   The structure of SFLM.
+
+The formal language :math:`L` to be modeled is defined as
+
+.. math:: L = \{w | |w| \leq 20, |w|_a + |w|_b = |w|_c, w\in \Sigma^*\}, \Sigma=\{a, b, c\}. 
+
+For example, :math:`aabbcccc\in L`, while :math:`cccab\notin L`.
+
+The goal is to train a SFLM to fit :math:`L` such that it can accurately generate :math:`w\in L`.
+
+Dependencies
+------------
+To install dependencies for this Assignment, run
+
+.. code-block:: console
+
+   $ pip3 install -r requirements.txt
+
+.
+
+
+Tasks
+-----
+The code skeleton is given. It consists of 4 files:
+
+- ``src/model.py``: It includes two pytorch modules:
+   - :py:class:`SelfAttention<model.SelfAttention>`: It defines the Self-Attention layer used in SFLM.
+   - :py:class:`SFLM<model.SFLM>`: It defines the transformer illustrated in the :ref:`figure<structure>` above.
+
+- ``src/utils.py``: It includes two helper classes:
+   - :py:class:`LangABC<utils.LangABC>`: It's a Dummy dataset to generate :math:`w\in L` online.
+   - :py:class:`TokenizerABC<utils.TokenizerABC>`: It's a simple predefined tokenizer which translates between human-readable strings and SFLM-readable token indices
+
+- ``train.py``: A script for training a SFLM to fit :math:`L`.
+
+- ``infer.py``: A script for using a saved SFLM to conditionally generate :math:`w\in L` in an interactive way.
+
+Your tasks in this assignment are:
+
+#. Complete the forward functions of the two modules in the ``src/model.py`` file.
+   You can refer to their API documentations for their functionalities:
+
+   - :py:meth:`model.SelfAttention.forward`,
+   - :py:meth:`model.SFLM.forward`.
+
+#. Train a SFLM to fit :math:`L` with the ``train.py`` script.
+
+
+
+.. toctree::
+   :maxdepth: 1
+
+
+.. .. literalinclude:: /../src/model.py
+..    :pyobject: SelfAttention.forward
+
+Usage
+-----
+After you have **finished** the two ``forward`` functions in the ``model.py`` file, you can train your SFLM with the default options by running
+
+
+.. code-block:: console
+
+   $ python3 train.py
+
+.
+
+   .. _SFLM_train:
+   .. figure:: /../SFLM_teacher_forcing.png
+      :width: 75%
+
+      The ``train.py`` file applies teacher forcing to train the SFLM.
+
+For more available configurations, check
+
+.. code-block:: console
+
+   $ python3 train.py -h
+
+.
+
+With the default setting, the training should finish within an hour even on CPU.
+Once the training is done, the model would be saved in ``model.sav`` file by default.
+
+You can interact with your saved model, by run
+
+.. code-block:: console
+
+   $ python3 infer.py
+
+.
+
+This will load model from the default path. To specify the model file, run
+
+.. code-block:: console
+
+   $ python3 infer.py --save-path <path_to_your_model>
+
+.
+
+
+Submission&Grading
+------------------
+
+Please pack your finished **model.py** file and saved **model.sav** file
+in a zip file and submit through canvas.
+
+The TA will check your code and test your trained model. Your assignment would be graded
+based on your code quality, and also the output quality of your model.
+

@@ -1,0 +1,96 @@
+nohup: ignoring input
+/ssddata/zzhanglc/miniconda3/envs/ml39/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/ssddata/zzhanglc/miniconda3/envs/ml39/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=Inception_V3_Weights.IMAGENET1K_V1`. You can also use `weights=Inception_V3_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+2025-11-12 11:18:40,093 - INFO - Starting experiment: exp14_gradient_penalty_improved
+2025-11-12 11:18:40,094 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:18:40,094 - INFO - Config: {'use_gradient_penalty': True, 'loss_function': 'wasserstein', 'gp_weight': 10.0, 'n_critic': 3, 'd_lr': 0.0001, 'g_lr': 0.0001, 'num_epochs': 20, 'description': 'WGAN-GP with balanced training'}
+2025-11-12 11:18:40,094 - INFO - Final models already exist for exp14_gradient_penalty_improved, skipping this experiment
+2025-11-12 11:18:40,094 - INFO - Starting experiment: exp15_pure_capacity
+2025-11-12 11:18:40,094 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:18:40,094 - INFO - Config: {'hidden_size': 512, 'latent_size': 128, 'num_epochs': 10, 'lr': 0.0001, 'description': 'Pure Capacity: Only hidden_size↑ from 256→512, all else equal'}
+2025-11-12 11:18:40,094 - INFO - Final models already exist for exp15_pure_capacity, skipping this experiment
+2025-11-12 11:18:40,094 - INFO - Starting experiment: exp16_capacity_adapted
+2025-11-12 11:18:40,094 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:18:40,094 - INFO - Config: {'hidden_size': 512, 'latent_size': 128, 'num_epochs': 20, 'lr': 5e-05, 'd_lr': 4e-05, 'g_lr': 6e-05, 'description': 'Capacity Adapted: hidden_size↑ + longer training + refined LR'}
+2025-11-12 11:18:40,095 - INFO - Final models already exist for exp16_capacity_adapted, skipping this experiment
+2025-11-12 11:18:40,095 - INFO - Starting experiment: exp1_baseline
+2025-11-12 11:18:40,095 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:18:40,095 - INFO - Config: {'description': 'Baseline: Standard GAN with BCE loss'}
+2025-11-12 11:18:40,095 - INFO - Final models already exist for exp1_baseline, skipping this experiment
+2025-11-12 11:18:40,095 - INFO - Starting experiment: exp2_small_latent
+2025-11-12 11:18:40,095 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:18:40,095 - INFO - Config: {'latent_size': 64, 'description': 'Latent: Smaller latent dimension (64)'}
+2025-11-12 11:18:40,095 - INFO - Final models already exist for exp2_small_latent, skipping this experiment
+2025-11-12 11:18:40,095 - INFO - Starting experiment: exp3_large_latent
+2025-11-12 11:18:40,095 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:18:40,095 - INFO - Config: {'latent_size': 256, 'description': 'Latent: Larger latent dimension (256)'}
+2025-11-12 11:18:40,095 - INFO - Final models already exist for exp3_large_latent, skipping this experiment
+2025-11-12 11:18:40,095 - INFO - Starting experiment: exp4_elu_activation
+2025-11-12 11:18:40,096 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:18:40,096 - INFO - Config: {'activation': 'elu', 'description': 'Architecture: ELU activation instead of ReLU/LeakyReLU'}
+2025-11-12 11:18:40,096 - INFO - Final models already exist for exp4_elu_activation, skipping this experiment
+2025-11-12 11:18:40,096 - INFO - Starting experiment: exp5_tanh_activation
+2025-11-12 11:18:40,096 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:18:40,096 - INFO - Config: {'activation': 'tanh', 'description': 'Architecture: Tanh activation in hidden layers'}
+2025-11-12 11:18:40,096 - INFO - Final models already exist for exp5_tanh_activation, skipping this experiment
+2025-11-12 11:18:40,096 - INFO - Starting experiment: exp6_higher_lr
+2025-11-12 11:18:40,096 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:18:40,096 - INFO - Config: {'lr': 0.001, 'description': 'Training: Higher learning rate (1e-3)'}
+2025-11-12 11:18:40,096 - INFO - Final models already exist for exp6_higher_lr, skipping this experiment
+2025-11-12 11:18:40,096 - INFO - Starting experiment: exp7_more_epochs
+2025-11-12 11:18:40,096 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:18:40,096 - INFO - Config: {'num_epochs': 80, 'lr': 0.0001, 'description': 'Training: More epochs (80) with lower LR'}
+2025-11-12 11:18:40,096 - INFO - Final models already exist for exp7_more_epochs, skipping this experiment
+2025-11-12 11:18:40,097 - INFO - Starting experiment: exp8_mse_loss
+2025-11-12 11:18:40,097 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:18:40,097 - INFO - Config: {'loss_function': 'mse', 'description': 'Loss: MSE instead of BCE'}
+2025-11-12 11:18:40,097 - INFO - Final models already exist for exp8_mse_loss, skipping this experiment
+2025-11-12 11:18:40,097 - INFO - Starting experiment: exp9_wasserstein_loss
+2025-11-12 11:18:40,097 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:18:40,097 - INFO - Config: {'loss_function': 'wasserstein', 'description': 'Loss: Wasserstein loss (remove sigmoid)'}
+2025-11-12 11:18:40,097 - INFO - Final models already exist for exp9_wasserstein_loss, skipping this experiment
+2025-11-12 11:18:40,097 - INFO - Starting experiment: exp10_gradient_penalty
+2025-11-12 11:18:40,097 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:18:40,097 - INFO - Config: {'use_gradient_penalty': True, 'gp_weight': 10.0, 'n_critic': 5, 'loss_function': 'wasserstein', 'description': 'Stability: WGAN-GP with gradient penalty'}
+2025-11-12 11:18:40,097 - INFO - Final models already exist for exp10_gradient_penalty, skipping this experiment
+2025-11-12 11:18:40,097 - INFO - Starting experiment: exp11_equal_lr
+2025-11-12 11:18:40,097 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:18:40,097 - INFO - Config: {'d_lr': 0.0002, 'g_lr': 0.0002, 'description': 'LR: G_lr = D_lr (balanced)'}
+2025-11-12 11:18:40,193 - INFO - Searching for checkpoints for experiment: exp11_equal_lr
+2025-11-12 11:18:40,193 - INFO - Found related file: exp11_equal_lr_G_final.pth
+2025-11-12 11:18:40,193 - INFO - Found related file: exp11_equal_lr_G_epoch_10.pth
+2025-11-12 11:18:40,193 - INFO - Found checkpoint: exp11_equal_lr_G_epoch_10.pth -> epoch 10
+2025-11-12 11:18:40,193 - INFO - New max epoch: 10
+2025-11-12 11:18:40,193 - INFO - Found related file: exp11_equal_lr_D_epoch_10.pth
+2025-11-12 11:18:40,193 - INFO - Found related file: exp11_equal_lr_optimizer_epoch_10.pth
+2025-11-12 11:18:40,193 - INFO - Final max epoch found: 10, checkpoint: exp11_equal_lr_G_epoch_10.pth
+2025-11-12 11:18:40,193 - INFO - Loading generator from: saved_models/exp11_equal_lr_G_epoch_10.pth
+2025-11-12 11:18:40,197 - INFO - Loading discriminator from: saved_models/exp11_equal_lr_D_epoch_10.pth
+2025-11-12 11:18:40,208 - INFO - Loading optimizer state from: saved_models/exp11_equal_lr_optimizer_epoch_10.pth
+2025-11-12 11:18:40,229 - INFO - Successfully reloaded from epoch 10
+2025-11-12 11:18:40,229 - INFO - Training already completed (epoch 10/10), skipping to evaluation
+2025-11-12 11:18:40,229 - INFO - Calculating FID score...
+2025-11-12 11:18:40,422 - INFO - Using latent_size: 128 for FID calculation
+2025-11-12 11:18:55,467 - INFO - Analyzing latent space...
+2025-11-12 11:18:55,555 - INFO - Saved final models to saved_models
+2025-11-12 11:18:55,555 - INFO - Experiment exp11_equal_lr completed. FID: 51.26
+2025-11-12 11:18:55,558 - INFO - Starting experiment: exp12_g_larger_lr
+2025-11-12 11:18:55,558 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:18:55,558 - INFO - Config: {'d_lr': 0.0001, 'g_lr': 0.0004, 'description': 'LR: G_lr > D_lr (1:4 ratio)'}
+2025-11-12 11:18:55,640 - INFO - Searching for checkpoints for experiment: exp12_g_larger_lr
+2025-11-12 11:18:55,640 - INFO - Found related file: exp12_g_larger_lr_G_final.pth
+2025-11-12 11:18:55,640 - INFO - Found related file: exp12_g_larger_lr_G_epoch_10.pth
+2025-11-12 11:18:55,641 - INFO - Found checkpoint: exp12_g_larger_lr_G_epoch_10.pth -> epoch 10
+2025-11-12 11:18:55,641 - INFO - New max epoch: 10
+2025-11-12 11:18:55,641 - INFO - Found related file: exp12_g_larger_lr_D_epoch_10.pth
+2025-11-12 11:18:55,641 - INFO - Found related file: exp12_g_larger_lr_optimizer_epoch_10.pth
+2025-11-12 11:18:55,641 - INFO - Final max epoch found: 10, checkpoint: exp12_g_larger_lr_G_epoch_10.pth
+2025-11-12 11:18:55,641 - INFO - Loading generator from: saved_models/exp12_g_larger_lr_G_epoch_10.pth
+2025-11-12 11:18:55,647 - INFO - Loading discriminator from: saved_models/exp12_g_larger_lr_D_epoch_10.pth
+2025-11-12 11:18:55,654 - INFO - Loading optimizer state from: saved_models/exp12_g_larger_lr_optimizer_epoch_10.pth
+2025-11-12 11:18:55,674 - INFO - Successfully reloaded from epoch 10
+2025-11-12 11:18:55,674 - INFO - Training already completed (epoch 10/10), skipping to evaluation
+2025-11-12 11:18:55,674 - INFO - Calculating FID score...
+2025-11-12 11:18:55,878 - INFO - Using latent_size: 128 for FID calculation

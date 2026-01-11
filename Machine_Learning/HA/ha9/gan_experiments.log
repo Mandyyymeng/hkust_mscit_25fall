@@ -1,0 +1,1276 @@
+2025-11-01 10:26:14,618 - INFO - Starting experiment: exp1_baseline
+2025-11-01 10:26:14,618 - INFO - Config: {'description': 'Baseline model from tutorial'}
+2025-11-01 10:26:34,590 - INFO - Epoch [0/20], Step [500], d_loss: 0.0194, g_loss: 6.4139, D(x): 0.99, D(G(z)): 0.01
+2025-11-01 10:26:58,787 - INFO - Starting experiment: exp1_baseline
+2025-11-01 10:26:58,787 - INFO - Config: {'description': 'Baseline model from tutorial'}
+2025-11-01 10:27:10,524 - INFO - Epoch [0/20], Step [500], d_loss: 0.0366, g_loss: 5.3449, D(x): 0.99, D(G(z)): 0.02
+2025-11-01 10:27:23,518 - INFO - Epoch [1/20], Step [500], d_loss: 0.0527, g_loss: 4.5532, D(x): 0.99, D(G(z)): 0.04
+2025-11-01 10:27:35,548 - INFO - Epoch [2/20], Step [500], d_loss: 0.1102, g_loss: 5.8969, D(x): 0.97, D(G(z)): 0.02
+2025-11-01 10:27:47,595 - INFO - Epoch [3/20], Step [500], d_loss: 0.1737, g_loss: 5.8041, D(x): 0.98, D(G(z)): 0.10
+2025-11-01 10:28:00,685 - INFO - Epoch [4/20], Step [500], d_loss: 0.0440, g_loss: 6.4006, D(x): 0.98, D(G(z)): 0.02
+2025-11-01 10:28:13,838 - INFO - Epoch [5/20], Step [500], d_loss: 0.0534, g_loss: 5.3533, D(x): 0.98, D(G(z)): 0.02
+2025-11-01 10:28:26,991 - INFO - Epoch [6/20], Step [500], d_loss: 0.1905, g_loss: 5.7487, D(x): 0.94, D(G(z)): 0.02
+2025-11-01 10:28:40,214 - INFO - Epoch [7/20], Step [500], d_loss: 0.0678, g_loss: 6.3693, D(x): 0.98, D(G(z)): 0.04
+2025-11-01 10:28:53,410 - INFO - Epoch [8/20], Step [500], d_loss: 0.2476, g_loss: 5.4659, D(x): 0.97, D(G(z)): 0.14
+2025-11-01 10:29:06,613 - INFO - Epoch [9/20], Step [500], d_loss: 0.1930, g_loss: 4.1451, D(x): 0.95, D(G(z)): 0.06
+2025-11-01 10:29:19,834 - INFO - Epoch [10/20], Step [500], d_loss: 0.3414, g_loss: 4.8254, D(x): 0.92, D(G(z)): 0.09
+2025-11-01 10:29:33,491 - INFO - Epoch [11/20], Step [500], d_loss: 0.3508, g_loss: 3.5962, D(x): 0.89, D(G(z)): 0.07
+2025-11-01 10:29:46,881 - INFO - Epoch [12/20], Step [500], d_loss: 0.1806, g_loss: 4.6187, D(x): 0.96, D(G(z)): 0.07
+2025-11-01 10:30:00,483 - INFO - Epoch [13/20], Step [500], d_loss: 0.4147, g_loss: 3.9327, D(x): 0.91, D(G(z)): 0.07
+2025-11-01 10:30:13,676 - INFO - Epoch [14/20], Step [500], d_loss: 0.2741, g_loss: 3.4200, D(x): 0.92, D(G(z)): 0.07
+2025-11-01 10:30:27,280 - INFO - Epoch [15/20], Step [500], d_loss: 0.1607, g_loss: 4.8070, D(x): 0.96, D(G(z)): 0.09
+2025-11-01 10:30:40,477 - INFO - Epoch [16/20], Step [500], d_loss: 0.2521, g_loss: 3.9828, D(x): 0.91, D(G(z)): 0.07
+2025-11-01 10:30:53,699 - INFO - Epoch [17/20], Step [500], d_loss: 0.2563, g_loss: 3.7825, D(x): 0.96, D(G(z)): 0.15
+2025-11-01 10:31:06,856 - INFO - Epoch [18/20], Step [500], d_loss: 0.2605, g_loss: 3.9743, D(x): 0.93, D(G(z)): 0.10
+2025-11-01 10:31:19,880 - INFO - Epoch [19/20], Step [500], d_loss: 0.2696, g_loss: 4.4407, D(x): 0.90, D(G(z)): 0.03
+2025-11-01 10:31:22,076 - INFO - Calculating FID score...
+2025-11-01 10:31:23,743 - ERROR - FID calculation failed: Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same or input should be a MKLDNN tensor and weight is a dense tensor
+2025-11-01 10:31:23,824 - INFO - Analyzing latent space...
+2025-11-01 10:31:23,830 - INFO - Experiment exp1_baseline completed. FID: inf
+2025-11-01 10:31:23,834 - INFO - Starting experiment: exp2_small_latent
+2025-11-01 10:31:23,834 - INFO - Config: {'latent_size': 32, 'description': 'Small latent space (z_dim=32)'}
+2025-11-01 10:31:35,113 - INFO - Epoch [0/20], Step [500], d_loss: 0.0129, g_loss: 6.0109, D(x): 1.00, D(G(z)): 0.01
+2025-11-01 10:31:48,613 - INFO - Epoch [1/20], Step [500], d_loss: 0.0564, g_loss: 4.6100, D(x): 1.00, D(G(z)): 0.05
+2025-11-01 10:32:01,975 - INFO - Epoch [2/20], Step [500], d_loss: 0.0057, g_loss: 7.0678, D(x): 1.00, D(G(z)): 0.00
+2025-11-01 10:32:15,337 - INFO - Epoch [3/20], Step [500], d_loss: 0.0067, g_loss: 8.4233, D(x): 0.99, D(G(z)): 0.00
+2025-11-01 10:32:28,572 - INFO - Epoch [4/20], Step [500], d_loss: 0.0388, g_loss: 7.6028, D(x): 0.98, D(G(z)): 0.01
+2025-11-01 10:32:41,742 - INFO - Epoch [5/20], Step [500], d_loss: 0.0826, g_loss: 6.0435, D(x): 0.97, D(G(z)): 0.02
+2025-11-01 10:32:54,990 - INFO - Epoch [6/20], Step [500], d_loss: 0.2325, g_loss: 5.4909, D(x): 0.94, D(G(z)): 0.04
+2025-11-01 10:33:08,023 - INFO - Epoch [7/20], Step [500], d_loss: 0.0810, g_loss: 4.4331, D(x): 1.00, D(G(z)): 0.07
+2025-11-01 10:33:21,195 - INFO - Epoch [8/20], Step [500], d_loss: 0.0836, g_loss: 5.9849, D(x): 0.98, D(G(z)): 0.05
+2025-11-01 10:33:34,323 - INFO - Epoch [9/20], Step [500], d_loss: 0.0831, g_loss: 4.9355, D(x): 0.98, D(G(z)): 0.03
+2025-11-01 10:33:47,489 - INFO - Epoch [10/20], Step [500], d_loss: 0.1449, g_loss: 4.8183, D(x): 0.97, D(G(z)): 0.06
+2025-11-01 10:34:00,430 - INFO - Epoch [11/20], Step [500], d_loss: 0.1979, g_loss: 4.5138, D(x): 0.96, D(G(z)): 0.10
+2025-11-01 10:34:13,545 - INFO - Epoch [12/20], Step [500], d_loss: 0.3386, g_loss: 3.7585, D(x): 0.88, D(G(z)): 0.04
+2025-11-01 10:34:26,611 - INFO - Epoch [13/20], Step [500], d_loss: 0.3070, g_loss: 4.4238, D(x): 0.92, D(G(z)): 0.06
+2025-11-01 10:34:39,728 - INFO - Epoch [14/20], Step [500], d_loss: 0.1792, g_loss: 3.8987, D(x): 0.95, D(G(z)): 0.08
+2025-11-01 10:34:52,874 - INFO - Epoch [15/20], Step [500], d_loss: 0.2419, g_loss: 4.4457, D(x): 0.89, D(G(z)): 0.05
+2025-11-01 10:35:06,012 - INFO - Epoch [16/20], Step [500], d_loss: 0.2702, g_loss: 4.8707, D(x): 0.94, D(G(z)): 0.11
+2025-11-01 10:35:19,191 - INFO - Epoch [17/20], Step [500], d_loss: 0.2890, g_loss: 3.8653, D(x): 0.93, D(G(z)): 0.13
+2025-11-01 10:36:59,695 - INFO - Starting experiment: exp1_baseline
+2025-11-01 10:36:59,695 - INFO - Config: {'description': 'Baseline model from tutorial'}
+2025-11-01 10:37:12,767 - INFO - Epoch [0/20], Step [500], d_loss: 0.0924, g_loss: 5.4044, D(x): 0.96, D(G(z)): 0.04
+2025-11-01 10:37:46,788 - INFO - Starting experiment: exp1_baseline
+2025-11-01 10:37:46,788 - INFO - Config: {'description': 'Baseline model from tutorial'}
+2025-11-01 10:37:58,247 - INFO - Epoch [0/20], Step [500], d_loss: 0.0556, g_loss: 5.5786, D(x): 0.98, D(G(z)): 0.02
+2025-11-01 10:38:11,021 - INFO - Epoch [1/20], Step [500], d_loss: 0.0405, g_loss: 4.6332, D(x): 1.00, D(G(z)): 0.03
+2025-11-01 10:38:23,628 - INFO - Epoch [2/20], Step [500], d_loss: 0.1720, g_loss: 4.2512, D(x): 0.98, D(G(z)): 0.10
+2025-11-01 10:38:36,536 - INFO - Epoch [3/20], Step [500], d_loss: 0.1208, g_loss: 4.4455, D(x): 0.97, D(G(z)): 0.07
+2025-11-01 10:38:49,301 - INFO - Epoch [4/20], Step [500], d_loss: 0.1010, g_loss: 4.7434, D(x): 0.98, D(G(z)): 0.06
+2025-11-01 10:39:02,448 - INFO - Epoch [5/20], Step [500], d_loss: 0.1818, g_loss: 4.7264, D(x): 0.97, D(G(z)): 0.10
+2025-11-01 10:39:15,560 - INFO - Epoch [6/20], Step [500], d_loss: 0.1521, g_loss: 4.7072, D(x): 0.97, D(G(z)): 0.08
+2025-11-01 10:39:28,594 - INFO - Epoch [7/20], Step [500], d_loss: 0.0922, g_loss: 5.8702, D(x): 0.98, D(G(z)): 0.02
+2025-11-01 10:39:41,647 - INFO - Epoch [8/20], Step [500], d_loss: 0.2356, g_loss: 4.8235, D(x): 0.98, D(G(z)): 0.11
+2025-11-01 10:39:54,596 - INFO - Epoch [9/20], Step [500], d_loss: 0.1067, g_loss: 6.8921, D(x): 0.96, D(G(z)): 0.02
+2025-11-01 10:40:07,600 - INFO - Epoch [10/20], Step [500], d_loss: 0.3123, g_loss: 3.4902, D(x): 0.93, D(G(z)): 0.11
+2025-11-01 10:43:22,168 - INFO - Starting experiment: exp1_baseline
+2025-11-01 10:43:22,168 - INFO - Config: {'description': 'Baseline model from tutorial'}
+2025-11-01 10:43:34,472 - INFO - Epoch [0/20], Step [500], d_loss: 0.4256, g_loss: 2.5932, D(x): 0.87, D(G(z)): 0.19
+2025-11-01 10:43:48,328 - INFO - Epoch [1/20], Step [500], d_loss: 0.0842, g_loss: 3.2557, D(x): 0.99, D(G(z)): 0.07
+2025-11-01 10:44:02,326 - INFO - Epoch [2/20], Step [500], d_loss: 0.0794, g_loss: 3.7652, D(x): 0.98, D(G(z)): 0.04
+2025-11-01 10:44:15,928 - INFO - Epoch [3/20], Step [500], d_loss: 0.1387, g_loss: 4.4279, D(x): 0.96, D(G(z)): 0.04
+2025-11-01 10:44:29,404 - INFO - Epoch [4/20], Step [500], d_loss: 0.1493, g_loss: 5.3686, D(x): 0.95, D(G(z)): 0.04
+2025-11-01 10:44:42,650 - INFO - Epoch [5/20], Step [500], d_loss: 0.2597, g_loss: 3.6848, D(x): 0.92, D(G(z)): 0.07
+2025-11-01 10:44:55,795 - INFO - Epoch [6/20], Step [500], d_loss: 0.0932, g_loss: 5.4494, D(x): 0.96, D(G(z)): 0.02
+2025-11-01 10:45:09,199 - INFO - Epoch [7/20], Step [500], d_loss: 0.2114, g_loss: 4.2708, D(x): 0.96, D(G(z)): 0.11
+2025-11-01 10:45:22,449 - INFO - Epoch [8/20], Step [500], d_loss: 0.1436, g_loss: 3.8414, D(x): 0.94, D(G(z)): 0.06
+2025-11-01 10:45:35,661 - INFO - Epoch [9/20], Step [500], d_loss: 0.2069, g_loss: 3.8352, D(x): 0.94, D(G(z)): 0.08
+2025-11-01 10:45:48,947 - INFO - Epoch [10/20], Step [500], d_loss: 0.3611, g_loss: 4.3054, D(x): 0.86, D(G(z)): 0.05
+2025-11-01 10:46:02,162 - INFO - Epoch [11/20], Step [500], d_loss: 0.3476, g_loss: 3.1968, D(x): 0.91, D(G(z)): 0.13
+2025-11-01 10:46:15,375 - INFO - Epoch [12/20], Step [500], d_loss: 0.4517, g_loss: 3.3622, D(x): 0.81, D(G(z)): 0.06
+2025-11-01 10:46:29,859 - INFO - Epoch [13/20], Step [500], d_loss: 0.4832, g_loss: 3.2593, D(x): 0.82, D(G(z)): 0.12
+2025-11-01 10:46:43,041 - INFO - Epoch [14/20], Step [500], d_loss: 0.5878, g_loss: 2.6132, D(x): 0.79, D(G(z)): 0.12
+2025-11-01 10:46:56,300 - INFO - Epoch [15/20], Step [500], d_loss: 0.6224, g_loss: 2.8931, D(x): 0.77, D(G(z)): 0.17
+2025-11-01 10:47:09,715 - INFO - Epoch [16/20], Step [500], d_loss: 0.5305, g_loss: 2.6945, D(x): 0.82, D(G(z)): 0.16
+2025-11-01 10:47:23,217 - INFO - Epoch [17/20], Step [500], d_loss: 0.5759, g_loss: 2.7562, D(x): 0.80, D(G(z)): 0.18
+2025-11-01 10:47:36,957 - INFO - Epoch [18/20], Step [500], d_loss: 0.6817, g_loss: 2.4897, D(x): 0.77, D(G(z)): 0.18
+2025-11-01 10:47:52,252 - INFO - Epoch [19/20], Step [500], d_loss: 0.6001, g_loss: 2.6308, D(x): 0.78, D(G(z)): 0.16
+2025-11-01 10:47:54,473 - INFO - Calculating FID score...
+2025-11-01 10:47:56,840 - INFO - Analyzing latent space...
+2025-11-01 10:47:56,847 - INFO - Experiment exp1_baseline completed. FID: 991.47
+2025-11-01 10:47:56,852 - INFO - Starting experiment: exp2_small_latent
+2025-11-01 10:47:56,853 - INFO - Config: {'latent_size': 32, 'description': 'Small latent space (z_dim=32)'}
+2025-11-01 10:48:07,982 - INFO - Epoch [0/20], Step [500], d_loss: 0.4592, g_loss: 2.6969, D(x): 0.87, D(G(z)): 0.20
+2025-11-01 10:48:20,181 - INFO - Epoch [1/20], Step [500], d_loss: 0.0961, g_loss: 3.3957, D(x): 0.98, D(G(z)): 0.06
+2025-11-01 10:48:33,296 - INFO - Epoch [2/20], Step [500], d_loss: 0.2147, g_loss: 3.1880, D(x): 0.97, D(G(z)): 0.11
+2025-11-01 10:48:46,463 - INFO - Epoch [3/20], Step [500], d_loss: 0.0398, g_loss: 5.0208, D(x): 0.99, D(G(z)): 0.02
+2025-11-01 10:48:59,597 - INFO - Epoch [4/20], Step [500], d_loss: 0.1712, g_loss: 4.8858, D(x): 0.94, D(G(z)): 0.04
+2025-11-01 10:49:12,784 - INFO - Epoch [5/20], Step [500], d_loss: 0.1976, g_loss: 5.1145, D(x): 0.93, D(G(z)): 0.04
+2025-11-01 10:49:25,995 - INFO - Epoch [6/20], Step [500], d_loss: 0.1494, g_loss: 5.2025, D(x): 0.94, D(G(z)): 0.05
+2025-11-01 10:49:39,082 - INFO - Epoch [7/20], Step [500], d_loss: 0.1094, g_loss: 4.7507, D(x): 0.96, D(G(z)): 0.04
+2025-11-01 10:49:52,287 - INFO - Epoch [8/20], Step [500], d_loss: 0.1861, g_loss: 2.9950, D(x): 0.95, D(G(z)): 0.09
+2025-11-01 10:50:05,433 - INFO - Epoch [9/20], Step [500], d_loss: 0.2925, g_loss: 3.9273, D(x): 0.91, D(G(z)): 0.06
+2025-11-01 10:50:18,708 - INFO - Epoch [10/20], Step [500], d_loss: 0.3127, g_loss: 2.9906, D(x): 0.92, D(G(z)): 0.13
+2025-11-01 10:50:31,841 - INFO - Epoch [11/20], Step [500], d_loss: 0.4611, g_loss: 3.1181, D(x): 0.87, D(G(z)): 0.14
+2025-11-01 10:50:45,002 - INFO - Epoch [12/20], Step [500], d_loss: 0.4759, g_loss: 3.3013, D(x): 0.87, D(G(z)): 0.12
+2025-11-01 10:50:58,159 - INFO - Epoch [13/20], Step [500], d_loss: 0.5313, g_loss: 3.2094, D(x): 0.82, D(G(z)): 0.12
+2025-11-01 10:51:11,324 - INFO - Epoch [14/20], Step [500], d_loss: 0.4639, g_loss: 3.1964, D(x): 0.86, D(G(z)): 0.11
+2025-11-01 10:51:24,428 - INFO - Epoch [15/20], Step [500], d_loss: 0.3829, g_loss: 3.2230, D(x): 0.86, D(G(z)): 0.11
+2025-11-01 10:51:37,630 - INFO - Epoch [16/20], Step [500], d_loss: 0.3799, g_loss: 2.9734, D(x): 0.88, D(G(z)): 0.12
+2025-11-01 10:51:50,782 - INFO - Epoch [17/20], Step [500], d_loss: 0.5072, g_loss: 2.3076, D(x): 0.83, D(G(z)): 0.16
+2025-11-01 10:52:03,872 - INFO - Epoch [18/20], Step [500], d_loss: 0.5518, g_loss: 2.8708, D(x): 0.87, D(G(z)): 0.19
+2025-11-01 10:52:16,993 - INFO - Epoch [19/20], Step [500], d_loss: 0.5431, g_loss: 2.2456, D(x): 0.80, D(G(z)): 0.12
+2025-11-01 10:52:19,209 - INFO - Calculating FID score...
+2025-11-01 10:52:21,404 - INFO - Analyzing latent space...
+2025-11-01 10:52:21,409 - INFO - Experiment exp2_small_latent completed. FID: 962.44
+2025-11-01 10:52:21,413 - INFO - Starting experiment: exp3_large_latent
+2025-11-01 10:52:21,413 - INFO - Config: {'latent_size': 128, 'description': 'Large latent space (z_dim=128)'}
+2025-11-01 10:52:34,593 - INFO - Epoch [0/20], Step [500], d_loss: 0.5800, g_loss: 2.6908, D(x): 0.79, D(G(z)): 0.20
+2025-11-01 10:52:50,372 - INFO - Epoch [1/20], Step [500], d_loss: 0.0393, g_loss: 4.1004, D(x): 0.99, D(G(z)): 0.03
+2025-11-01 10:53:05,268 - INFO - Epoch [2/20], Step [500], d_loss: 0.0610, g_loss: 4.0385, D(x): 0.98, D(G(z)): 0.03
+2025-11-01 10:53:18,546 - INFO - Epoch [3/20], Step [500], d_loss: 0.1665, g_loss: 4.3152, D(x): 0.95, D(G(z)): 0.05
+2025-11-01 10:53:31,848 - INFO - Epoch [4/20], Step [500], d_loss: 0.1802, g_loss: 4.4672, D(x): 0.93, D(G(z)): 0.06
+2025-11-01 10:53:45,205 - INFO - Epoch [5/20], Step [500], d_loss: 0.2267, g_loss: 4.1801, D(x): 0.92, D(G(z)): 0.06
+2025-11-01 10:53:58,546 - INFO - Epoch [6/20], Step [500], d_loss: 0.2954, g_loss: 5.2421, D(x): 0.90, D(G(z)): 0.04
+2025-11-01 10:54:11,803 - INFO - Epoch [7/20], Step [500], d_loss: 0.1713, g_loss: 4.1490, D(x): 0.97, D(G(z)): 0.08
+2025-11-01 10:54:25,055 - INFO - Epoch [8/20], Step [500], d_loss: 0.2096, g_loss: 4.3057, D(x): 0.92, D(G(z)): 0.08
+2025-11-01 10:54:38,294 - INFO - Epoch [9/20], Step [500], d_loss: 0.2040, g_loss: 4.0729, D(x): 0.95, D(G(z)): 0.10
+2025-11-01 10:56:15,675 - INFO - Starting experiment: exp1_baseline_optimized
+2025-11-01 10:56:15,675 - INFO - Config: {'description': 'Optimized baseline with batchnorm and dropout'}
+2025-11-01 10:56:16,129 - ERROR - Experiment exp1_baseline_optimized failed: __init__() got an unexpected keyword argument 'hidden_size_disc'
+2025-11-01 10:56:16,132 - INFO - Starting experiment: exp2_small_latent
+2025-11-01 10:56:16,133 - INFO - Config: {'latent_size': 32, 'hidden_size_gen': 512, 'description': 'Small latent space with larger generator'}
+2025-11-01 10:56:16,198 - ERROR - Experiment exp2_small_latent failed: __init__() got an unexpected keyword argument 'hidden_size_disc'
+2025-11-01 10:56:16,202 - INFO - Starting experiment: exp3_large_latent
+2025-11-01 10:56:16,202 - INFO - Config: {'latent_size': 128, 'hidden_size_gen': 128, 'description': 'Large latent space with balanced generator'}
+2025-11-01 10:56:16,262 - ERROR - Experiment exp3_large_latent failed: __init__() got an unexpected keyword argument 'hidden_size_disc'
+2025-11-01 10:56:16,266 - INFO - Starting experiment: exp4_weaker_discriminator
+2025-11-01 10:56:16,266 - INFO - Config: {'hidden_size_disc': 128, 'hidden_size_gen': 256, 'use_dropout': False, 'description': 'Weaker discriminator architecture'}
+2025-11-01 10:56:16,327 - ERROR - Experiment exp4_weaker_discriminator failed: __init__() got an unexpected keyword argument 'hidden_size_disc'
+2025-11-01 10:56:16,330 - INFO - Starting experiment: exp5_stronger_generator
+2025-11-01 10:56:16,330 - INFO - Config: {'hidden_size_disc': 256, 'hidden_size_gen': 512, 'use_batchnorm': True, 'description': 'Stronger generator architecture'}
+2025-11-01 10:56:16,396 - ERROR - Experiment exp5_stronger_generator failed: __init__() got an unexpected keyword argument 'hidden_size_disc'
+2025-11-01 10:56:16,400 - INFO - Starting experiment: exp6_deeper_networks
+2025-11-01 10:56:16,400 - INFO - Config: {'num_layers': 4, 'use_dropout': True, 'dropout_rate': 0.4, 'description': 'Deeper network architecture'}
+2025-11-01 10:56:16,463 - ERROR - Experiment exp6_deeper_networks failed: __init__() got an unexpected keyword argument 'hidden_size_disc'
+2025-11-01 10:56:16,467 - INFO - Starting experiment: exp7_high_dropout
+2025-11-01 10:56:16,467 - INFO - Config: {'use_dropout': True, 'dropout_rate': 0.5, 'use_batchnorm': False, 'description': 'High dropout for regularization'}
+2025-11-01 10:56:16,528 - ERROR - Experiment exp7_high_dropout failed: __init__() got an unexpected keyword argument 'hidden_size_disc'
+2025-11-01 10:56:16,532 - INFO - Starting experiment: exp8_more_epochs
+2025-11-01 10:56:16,532 - INFO - Config: {'num_epochs': 60, 'lr': 0.00015, 'description': 'More training epochs with adjusted LR'}
+2025-11-01 10:56:16,593 - ERROR - Experiment exp8_more_epochs failed: __init__() got an unexpected keyword argument 'hidden_size_disc'
+2025-11-01 10:56:16,597 - INFO - Starting experiment: exp9_adjusted_lr
+2025-11-01 10:56:16,597 - INFO - Config: {'lr': 0.0003, 'use_batchnorm': True, 'description': 'Larger learning rate for faster convergence'}
+2025-11-01 10:56:16,659 - ERROR - Experiment exp9_adjusted_lr failed: __init__() got an unexpected keyword argument 'hidden_size_disc'
+2025-11-01 10:56:16,663 - INFO - Starting experiment: exp10_mse_loss
+2025-11-01 10:56:16,663 - INFO - Config: {'loss_function': 'mse', 'lr': 0.0001, 'description': 'MSE loss with smaller learning rate'}
+2025-11-01 10:56:16,726 - ERROR - Experiment exp10_mse_loss failed: __init__() got an unexpected keyword argument 'hidden_size_disc'
+2025-11-01 10:56:16,731 - INFO - All experiments completed!
+2025-11-01 10:56:16,731 - INFO - === EXPERIMENT SUMMARY ===
+2025-11-01 11:00:40,420 - INFO - Starting experiment: exp1_baseline_optimized
+2025-11-01 11:00:40,420 - INFO - Config: {'description': 'Optimized baseline with batchnorm and dropout'}
+2025-11-01 11:04:08,798 - INFO - Starting experiment: exp1_baseline_optimized
+2025-11-01 11:04:08,798 - INFO - Config: {'description': 'Optimized baseline with batchnorm and dropout'}
+2025-11-01 11:05:02,403 - INFO - Starting experiment: exp1_baseline_optimized
+2025-11-01 11:05:02,403 - INFO - Config: {'description': 'Optimized baseline with batchnorm and dropout'}
+2025-11-01 11:13:37,740 - INFO - Calculating FID score...
+2025-11-01 11:13:40,153 - INFO - Analyzing latent space...
+2025-11-01 11:13:40,162 - INFO - Experiment exp1_baseline_optimized completed. FID: 686.39
+2025-11-01 11:13:40,168 - INFO - Starting experiment: exp2_small_latent
+2025-11-01 11:13:40,168 - INFO - Config: {'latent_size': 32, 'hidden_size': 384, 'description': 'Small latent space with larger network'}
+2025-11-01 11:23:13,240 - INFO - Starting experiment: exp1_baseline_128
+2025-11-01 11:23:13,240 - INFO - Config: {'description': 'Baseline: 128D latent space'}
+2025-11-01 11:23:13,939 - ERROR - Experiment exp1_baseline_128 failed: name 'G' is not defined
+2025-11-01 11:23:13,943 - INFO - Starting experiment: exp2_latent_64
+2025-11-01 11:23:13,943 - INFO - Config: {'latent_size': 64, 'description': 'Ablation: Smaller latent space (64D vs 128D baseline)'}
+2025-11-01 11:23:14,040 - ERROR - Experiment exp2_latent_64 failed: name 'G' is not defined
+2025-11-01 11:23:14,045 - INFO - Starting experiment: exp3_latent_256
+2025-11-01 11:23:14,045 - INFO - Config: {'latent_size': 256, 'description': 'Ablation: Larger latent space (256D vs 128D baseline)'}
+2025-11-01 11:23:14,140 - ERROR - Experiment exp3_latent_256 failed: name 'G' is not defined
+2025-11-01 11:23:14,143 - INFO - Starting experiment: exp4_leaky_relu_gen
+2025-11-01 11:23:14,143 - INFO - Config: {'activation_gen': 'leaky_relu', 'description': 'Architecture: Generator with LeakyReLU (128D baseline)'}
+2025-11-01 11:23:14,238 - ERROR - Experiment exp4_leaky_relu_gen failed: name 'G' is not defined
+2025-11-01 11:23:14,241 - INFO - Starting experiment: exp5_with_batchnorm
+2025-11-01 11:23:14,241 - INFO - Config: {'use_batchnorm': True, 'description': 'Architecture: Add batch normalization (128D baseline)'}
+2025-11-01 11:23:14,338 - ERROR - Experiment exp5_with_batchnorm failed: name 'G' is not defined
+2025-11-01 11:23:14,342 - INFO - Starting experiment: exp6_with_dropout
+2025-11-01 11:23:14,342 - INFO - Config: {'use_dropout': True, 'dropout_rate': 0.3, 'description': 'Architecture: Add dropout regularization (128D baseline)'}
+2025-11-01 11:23:14,436 - ERROR - Experiment exp6_with_dropout failed: name 'G' is not defined
+2025-11-01 11:23:14,439 - INFO - Starting experiment: exp7_larger_hidden
+2025-11-01 11:23:14,439 - INFO - Config: {'hidden_size': 384, 'description': 'Capacity: Larger hidden layers (384) with 128D latent'}
+2025-11-01 11:23:14,536 - ERROR - Experiment exp7_larger_hidden failed: name 'G' is not defined
+2025-11-01 11:23:14,540 - INFO - Starting experiment: exp8_smaller_hidden
+2025-11-01 11:23:14,540 - INFO - Config: {'hidden_size': 192, 'description': 'Capacity: Smaller hidden layers (192) with 128D latent'}
+2025-11-01 11:23:14,635 - ERROR - Experiment exp8_smaller_hidden failed: name 'G' is not defined
+2025-11-01 11:23:14,638 - INFO - Starting experiment: exp9_more_epochs
+2025-11-01 11:23:14,639 - INFO - Config: {'num_epochs': 60, 'description': 'Training: More epochs (60) with 128D latent'}
+2025-11-01 11:23:14,733 - ERROR - Experiment exp9_more_epochs failed: name 'G' is not defined
+2025-11-01 11:23:14,736 - INFO - Starting experiment: exp10_mse_loss
+2025-11-01 11:23:14,736 - INFO - Config: {'loss_function': 'mse', 'description': 'Loss: MSE instead of BCE with 128D latent'}
+2025-11-01 11:23:14,840 - ERROR - Experiment exp10_mse_loss failed: name 'G' is not defined
+2025-11-01 11:23:14,844 - INFO - 
+=== EXPERIMENT SUMMARY ===
+2025-11-01 11:23:14,844 - INFO - All experiments completed!
+2025-11-01 11:26:44,513 - INFO - Starting experiment: exp1_baseline_128
+2025-11-01 11:26:44,514 - INFO - Config: {'description': 'Baseline: 128D latent space'}
+2025-11-01 11:26:50,510 - INFO - Epoch [0/40], Step [200/469], d_loss: 0.3161, g_loss: 1.9108, D(x): 0.96, D(G(z)): 0.23
+2025-11-01 11:26:55,753 - INFO - Epoch [0/40], Step [400/469], d_loss: 0.1919, g_loss: 3.4222, D(x): 0.93, D(G(z)): 0.05
+2025-11-01 11:27:02,911 - INFO - Epoch [1/40], Step [200/469], d_loss: 0.4826, g_loss: 2.9243, D(x): 0.82, D(G(z)): 0.13
+2025-11-01 11:27:08,168 - INFO - Epoch [1/40], Step [400/469], d_loss: 0.5073, g_loss: 2.1334, D(x): 0.79, D(G(z)): 0.15
+2025-11-01 11:27:15,275 - INFO - Epoch [2/40], Step [200/469], d_loss: 0.5018, g_loss: 4.0046, D(x): 0.86, D(G(z)): 0.19
+2025-11-01 11:28:20,954 - INFO - Starting experiment: exp1_baseline
+2025-11-01 11:28:20,954 - INFO - Config: {'description': 'Baseline: Standard config with lower LR'}
+2025-11-01 11:28:27,021 - INFO - Epoch [0/40], Step [200/469], d_loss: 0.3277, g_loss: 2.0080, D(x): 0.95, D(G(z)): 0.23
+2025-11-01 11:28:32,303 - INFO - Epoch [0/40], Step [400/469], d_loss: 0.3477, g_loss: 3.7165, D(x): 0.94, D(G(z)): 0.24
+2025-11-01 11:28:39,561 - INFO - Epoch [1/40], Step [200/469], d_loss: 0.0862, g_loss: 3.8172, D(x): 0.96, D(G(z)): 0.04
+2025-11-01 11:28:44,926 - INFO - Epoch [1/40], Step [400/469], d_loss: 0.4063, g_loss: 4.6688, D(x): 0.91, D(G(z)): 0.22
+2025-11-01 11:28:51,977 - INFO - Epoch [2/40], Step [200/469], d_loss: 0.2581, g_loss: 3.5810, D(x): 0.90, D(G(z)): 0.08
+2025-11-01 11:28:57,302 - INFO - Epoch [2/40], Step [400/469], d_loss: 0.5403, g_loss: 4.1110, D(x): 0.94, D(G(z)): 0.33
+2025-11-01 11:29:04,398 - INFO - Epoch [3/40], Step [200/469], d_loss: 0.4947, g_loss: 2.1270, D(x): 0.80, D(G(z)): 0.08
+2025-11-01 11:29:09,773 - INFO - Epoch [3/40], Step [400/469], d_loss: 0.4987, g_loss: 2.9207, D(x): 0.76, D(G(z)): 0.06
+2025-11-01 11:29:16,972 - INFO - Epoch [4/40], Step [200/469], d_loss: 0.4068, g_loss: 2.9460, D(x): 0.81, D(G(z)): 0.05
+2025-11-01 11:29:22,271 - INFO - Epoch [4/40], Step [400/469], d_loss: 0.3789, g_loss: 3.5571, D(x): 0.91, D(G(z)): 0.21
+2025-11-01 11:29:29,397 - INFO - Epoch [5/40], Step [200/469], d_loss: 0.4725, g_loss: 2.7586, D(x): 0.85, D(G(z)): 0.19
+2025-11-01 11:29:34,667 - INFO - Epoch [5/40], Step [400/469], d_loss: 0.7961, g_loss: 1.4971, D(x): 0.68, D(G(z)): 0.06
+2025-11-01 11:29:41,796 - INFO - Epoch [6/40], Step [200/469], d_loss: 1.2409, g_loss: 6.3822, D(x): 0.96, D(G(z)): 0.64
+2025-11-01 11:29:47,081 - INFO - Epoch [6/40], Step [400/469], d_loss: 0.4590, g_loss: 2.6676, D(x): 0.83, D(G(z)): 0.18
+2025-11-01 11:29:54,096 - INFO - Epoch [7/40], Step [200/469], d_loss: 1.0908, g_loss: 1.2640, D(x): 0.56, D(G(z)): 0.05
+2025-11-01 11:29:59,984 - INFO - Epoch [7/40], Step [400/469], d_loss: 0.7113, g_loss: 1.4424, D(x): 0.77, D(G(z)): 0.25
+2025-11-01 11:30:08,375 - INFO - Epoch [8/40], Step [200/469], d_loss: 0.6957, g_loss: 2.4955, D(x): 0.81, D(G(z)): 0.28
+2025-11-01 11:30:14,599 - INFO - Epoch [8/40], Step [400/469], d_loss: 0.7281, g_loss: 2.0530, D(x): 0.71, D(G(z)): 0.17
+2025-11-01 11:30:22,960 - INFO - Epoch [9/40], Step [200/469], d_loss: 0.7662, g_loss: 1.6912, D(x): 0.67, D(G(z)): 0.12
+2025-11-01 11:30:29,212 - INFO - Epoch [9/40], Step [400/469], d_loss: 0.6395, g_loss: 1.9214, D(x): 0.74, D(G(z)): 0.20
+2025-11-01 11:30:37,561 - INFO - Epoch [10/40], Step [200/469], d_loss: 0.6121, g_loss: 2.1686, D(x): 0.75, D(G(z)): 0.18
+2025-11-01 11:30:43,437 - INFO - Epoch [10/40], Step [400/469], d_loss: 0.8225, g_loss: 2.0477, D(x): 0.81, D(G(z)): 0.38
+2025-11-01 12:23:48,050 - INFO - Starting experiment: exp1_baseline
+2025-11-01 12:23:48,050 - INFO - Config: {'description': 'Baseline: Standard GAN with BCE loss'}
+2025-11-01 12:23:54,487 - INFO - Epoch [0/40], Step [200/469], d_loss: 0.2996, g_loss: 1.9007, D(x): 0.97, D(G(z)): 0.23
+2025-11-01 12:24:01,032 - INFO - Epoch [0/40], Step [400/469], d_loss: 0.2073, g_loss: 3.4042, D(x): 0.93, D(G(z)): 0.09
+2025-11-01 12:24:09,783 - INFO - Epoch [1/40], Step [200/469], d_loss: 0.2963, g_loss: 3.0339, D(x): 0.87, D(G(z)): 0.06
+2025-11-01 12:24:16,108 - INFO - Epoch [1/40], Step [400/469], d_loss: 0.9004, g_loss: 1.8495, D(x): 0.58, D(G(z)): 0.03
+2025-11-01 12:24:24,473 - INFO - Epoch [2/40], Step [200/469], d_loss: 0.4533, g_loss: 2.7040, D(x): 0.80, D(G(z)): 0.08
+2025-11-01 12:24:30,837 - INFO - Epoch [2/40], Step [400/469], d_loss: 0.5157, g_loss: 4.2051, D(x): 0.89, D(G(z)): 0.23
+2025-11-01 12:24:39,434 - INFO - Epoch [3/40], Step [200/469], d_loss: 0.3823, g_loss: 3.2833, D(x): 0.88, D(G(z)): 0.15
+2025-11-01 12:24:45,773 - INFO - Epoch [3/40], Step [400/469], d_loss: 0.5689, g_loss: 3.4252, D(x): 0.88, D(G(z)): 0.31
+2025-11-01 12:24:54,312 - INFO - Epoch [4/40], Step [200/469], d_loss: 0.4878, g_loss: 2.6674, D(x): 0.82, D(G(z)): 0.18
+2025-11-01 12:25:00,653 - INFO - Epoch [4/40], Step [400/469], d_loss: 0.6523, g_loss: 3.0016, D(x): 0.82, D(G(z)): 0.26
+2025-11-01 12:25:08,669 - INFO - Epoch [5/40], Step [200/469], d_loss: 0.4302, g_loss: 3.8555, D(x): 0.90, D(G(z)): 0.24
+2025-11-01 12:25:14,084 - INFO - Epoch [5/40], Step [400/469], d_loss: 0.5414, g_loss: 3.0137, D(x): 0.87, D(G(z)): 0.25
+2025-11-01 12:25:21,273 - INFO - Epoch [6/40], Step [200/469], d_loss: 0.7502, g_loss: 2.0675, D(x): 0.68, D(G(z)): 0.06
+2025-11-01 12:25:26,648 - INFO - Epoch [6/40], Step [400/469], d_loss: 1.3710, g_loss: 2.3653, D(x): 0.53, D(G(z)): 0.03
+2025-11-01 12:25:33,867 - INFO - Epoch [7/40], Step [200/469], d_loss: 0.5055, g_loss: 2.2186, D(x): 0.84, D(G(z)): 0.21
+2025-11-01 12:25:39,169 - INFO - Epoch [7/40], Step [400/469], d_loss: 0.8783, g_loss: 1.5512, D(x): 0.62, D(G(z)): 0.06
+2025-11-01 12:25:46,314 - INFO - Epoch [8/40], Step [200/469], d_loss: 0.7453, g_loss: 1.6681, D(x): 0.71, D(G(z)): 0.18
+2025-11-01 12:25:51,642 - INFO - Epoch [8/40], Step [400/469], d_loss: 1.0249, g_loss: 2.7295, D(x): 0.80, D(G(z)): 0.45
+2025-11-01 12:25:58,820 - INFO - Epoch [9/40], Step [200/469], d_loss: 0.8593, g_loss: 2.0623, D(x): 0.74, D(G(z)): 0.28
+2025-11-01 12:26:04,131 - INFO - Epoch [9/40], Step [400/469], d_loss: 0.7856, g_loss: 1.7030, D(x): 0.71, D(G(z)): 0.22
+2025-11-01 12:26:05,997 - INFO - Saved checkpoint at epoch 10
+2025-11-01 12:26:11,419 - INFO - Epoch [10/40], Step [200/469], d_loss: 1.0276, g_loss: 1.3346, D(x): 0.55, D(G(z)): 0.13
+2025-11-01 12:26:16,786 - INFO - Epoch [10/40], Step [400/469], d_loss: 0.8723, g_loss: 1.9417, D(x): 0.70, D(G(z)): 0.28
+2025-11-01 12:26:24,087 - INFO - Epoch [11/40], Step [200/469], d_loss: 0.7980, g_loss: 1.8816, D(x): 0.82, D(G(z)): 0.38
+2025-11-01 12:26:29,519 - INFO - Epoch [11/40], Step [400/469], d_loss: 0.8376, g_loss: 1.8636, D(x): 0.72, D(G(z)): 0.27
+2025-11-01 12:26:36,805 - INFO - Epoch [12/40], Step [200/469], d_loss: 0.7187, g_loss: 1.6312, D(x): 0.71, D(G(z)): 0.20
+2025-11-01 12:26:42,189 - INFO - Epoch [12/40], Step [400/469], d_loss: 0.7334, g_loss: 2.1289, D(x): 0.74, D(G(z)): 0.25
+2025-11-01 12:26:49,432 - INFO - Epoch [13/40], Step [200/469], d_loss: 0.7435, g_loss: 1.5451, D(x): 0.69, D(G(z)): 0.21
+2025-11-01 12:26:54,784 - INFO - Epoch [13/40], Step [400/469], d_loss: 0.8604, g_loss: 1.7071, D(x): 0.66, D(G(z)): 0.25
+2025-11-01 12:27:02,010 - INFO - Epoch [14/40], Step [200/469], d_loss: 0.7908, g_loss: 1.8307, D(x): 0.70, D(G(z)): 0.28
+2025-11-01 12:27:07,369 - INFO - Epoch [14/40], Step [400/469], d_loss: 0.7050, g_loss: 2.0457, D(x): 0.82, D(G(z)): 0.34
+2025-11-01 12:27:14,612 - INFO - Epoch [15/40], Step [200/469], d_loss: 1.0251, g_loss: 2.0674, D(x): 0.74, D(G(z)): 0.45
+2025-11-01 12:27:19,971 - INFO - Epoch [15/40], Step [400/469], d_loss: 0.9851, g_loss: 2.5803, D(x): 0.77, D(G(z)): 0.43
+2025-11-01 12:27:28,379 - INFO - Epoch [16/40], Step [200/469], d_loss: 1.1259, g_loss: 2.5621, D(x): 0.78, D(G(z)): 0.50
+2025-11-01 12:27:34,747 - INFO - Epoch [16/40], Step [400/469], d_loss: 1.1213, g_loss: 1.0723, D(x): 0.52, D(G(z)): 0.17
+2025-11-01 12:27:42,645 - INFO - Epoch [17/40], Step [200/469], d_loss: 0.8609, g_loss: 2.0432, D(x): 0.76, D(G(z)): 0.36
+2025-11-01 12:27:48,040 - INFO - Epoch [17/40], Step [400/469], d_loss: 1.0252, g_loss: 1.1723, D(x): 0.61, D(G(z)): 0.30
+2025-11-01 12:27:55,296 - INFO - Epoch [18/40], Step [200/469], d_loss: 1.0124, g_loss: 1.2658, D(x): 0.58, D(G(z)): 0.27
+2025-11-01 12:28:00,634 - INFO - Epoch [18/40], Step [400/469], d_loss: 0.8560, g_loss: 1.6451, D(x): 0.69, D(G(z)): 0.31
+2025-11-01 12:28:07,828 - INFO - Epoch [19/40], Step [200/469], d_loss: 0.9017, g_loss: 1.2230, D(x): 0.61, D(G(z)): 0.25
+2025-11-01 12:28:13,158 - INFO - Epoch [19/40], Step [400/469], d_loss: 1.0061, g_loss: 1.7528, D(x): 0.72, D(G(z)): 0.41
+2025-11-01 12:28:14,997 - INFO - Saved checkpoint at epoch 20
+2025-11-01 12:28:20,388 - INFO - Epoch [20/40], Step [200/469], d_loss: 1.0935, g_loss: 1.7644, D(x): 0.74, D(G(z)): 0.45
+2025-11-01 12:28:25,717 - INFO - Epoch [20/40], Step [400/469], d_loss: 1.0041, g_loss: 1.6266, D(x): 0.64, D(G(z)): 0.33
+2025-11-01 12:28:32,901 - INFO - Epoch [21/40], Step [200/469], d_loss: 1.5772, g_loss: 0.5963, D(x): 0.35, D(G(z)): 0.14
+2025-11-01 12:28:38,231 - INFO - Epoch [21/40], Step [400/469], d_loss: 1.1097, g_loss: 1.1858, D(x): 0.60, D(G(z)): 0.32
+2025-11-01 12:28:45,413 - INFO - Epoch [22/40], Step [200/469], d_loss: 0.9586, g_loss: 1.2888, D(x): 0.68, D(G(z)): 0.37
+2025-11-01 12:28:50,741 - INFO - Epoch [22/40], Step [400/469], d_loss: 1.0674, g_loss: 2.4046, D(x): 0.77, D(G(z)): 0.49
+2025-11-01 12:28:57,926 - INFO - Epoch [23/40], Step [200/469], d_loss: 1.0223, g_loss: 1.5443, D(x): 0.68, D(G(z)): 0.39
+2025-11-01 12:29:03,247 - INFO - Epoch [23/40], Step [400/469], d_loss: 0.9925, g_loss: 1.5863, D(x): 0.66, D(G(z)): 0.37
+2025-11-01 12:29:10,433 - INFO - Epoch [24/40], Step [200/469], d_loss: 0.9927, g_loss: 1.2776, D(x): 0.68, D(G(z)): 0.39
+2025-11-01 12:29:15,760 - INFO - Epoch [24/40], Step [400/469], d_loss: 1.0981, g_loss: 1.5023, D(x): 0.64, D(G(z)): 0.39
+2025-11-01 12:29:22,938 - INFO - Epoch [25/40], Step [200/469], d_loss: 1.0548, g_loss: 1.7212, D(x): 0.76, D(G(z)): 0.47
+2025-11-01 12:29:28,265 - INFO - Epoch [25/40], Step [400/469], d_loss: 1.1108, g_loss: 1.2237, D(x): 0.57, D(G(z)): 0.32
+2025-11-01 12:29:35,433 - INFO - Epoch [26/40], Step [200/469], d_loss: 1.1316, g_loss: 1.2448, D(x): 0.61, D(G(z)): 0.38
+2025-11-01 12:29:40,807 - INFO - Epoch [26/40], Step [400/469], d_loss: 1.0269, g_loss: 1.2748, D(x): 0.69, D(G(z)): 0.43
+2025-11-01 12:29:47,996 - INFO - Epoch [27/40], Step [200/469], d_loss: 1.2725, g_loss: 0.9181, D(x): 0.52, D(G(z)): 0.33
+2025-11-01 12:29:53,322 - INFO - Epoch [27/40], Step [400/469], d_loss: 1.0894, g_loss: 0.6656, D(x): 0.51, D(G(z)): 0.26
+2025-11-01 12:30:00,513 - INFO - Epoch [28/40], Step [200/469], d_loss: 1.1103, g_loss: 0.9681, D(x): 0.52, D(G(z)): 0.26
+2025-11-01 12:30:05,824 - INFO - Epoch [28/40], Step [400/469], d_loss: 1.1176, g_loss: 0.8576, D(x): 0.55, D(G(z)): 0.29
+2025-11-01 12:30:13,032 - INFO - Epoch [29/40], Step [200/469], d_loss: 1.1501, g_loss: 1.2741, D(x): 0.58, D(G(z)): 0.36
+2025-11-01 12:30:18,411 - INFO - Epoch [29/40], Step [400/469], d_loss: 1.3154, g_loss: 1.0784, D(x): 0.63, D(G(z)): 0.50
+2025-11-01 12:30:20,273 - INFO - Saved checkpoint at epoch 30
+2025-11-01 12:30:25,393 - INFO - Epoch [30/40], Step [200/469], d_loss: 1.1361, g_loss: 1.3121, D(x): 0.62, D(G(z)): 0.42
+2025-11-01 12:30:30,645 - INFO - Epoch [30/40], Step [400/469], d_loss: 1.0916, g_loss: 1.1542, D(x): 0.55, D(G(z)): 0.32
+2025-11-01 12:30:37,817 - INFO - Epoch [31/40], Step [200/469], d_loss: 1.1214, g_loss: 1.1934, D(x): 0.57, D(G(z)): 0.33
+2025-11-01 12:30:43,151 - INFO - Epoch [31/40], Step [400/469], d_loss: 1.1625, g_loss: 1.0080, D(x): 0.53, D(G(z)): 0.33
+2025-11-01 12:30:50,324 - INFO - Epoch [32/40], Step [200/469], d_loss: 1.3028, g_loss: 0.8257, D(x): 0.46, D(G(z)): 0.28
+2025-11-01 12:30:55,645 - INFO - Epoch [32/40], Step [400/469], d_loss: 1.1575, g_loss: 1.2571, D(x): 0.64, D(G(z)): 0.44
+2025-11-01 12:31:02,901 - INFO - Epoch [33/40], Step [200/469], d_loss: 1.1159, g_loss: 1.2867, D(x): 0.59, D(G(z)): 0.38
+2025-11-01 12:31:08,251 - INFO - Epoch [33/40], Step [400/469], d_loss: 1.0461, g_loss: 1.0735, D(x): 0.62, D(G(z)): 0.38
+2025-11-01 12:31:15,405 - INFO - Epoch [34/40], Step [200/469], d_loss: 1.1336, g_loss: 1.1409, D(x): 0.61, D(G(z)): 0.40
+2025-11-01 12:31:20,782 - INFO - Epoch [34/40], Step [400/469], d_loss: 1.1267, g_loss: 0.9082, D(x): 0.53, D(G(z)): 0.31
+2025-11-01 12:31:27,968 - INFO - Epoch [35/40], Step [200/469], d_loss: 1.1950, g_loss: 1.1285, D(x): 0.64, D(G(z)): 0.46
+2025-11-01 12:31:33,353 - INFO - Epoch [35/40], Step [400/469], d_loss: 1.0881, g_loss: 1.0691, D(x): 0.62, D(G(z)): 0.39
+2025-11-01 12:31:40,530 - INFO - Epoch [36/40], Step [200/469], d_loss: 1.0625, g_loss: 1.0208, D(x): 0.58, D(G(z)): 0.34
+2025-11-01 12:31:45,838 - INFO - Epoch [36/40], Step [400/469], d_loss: 1.1150, g_loss: 1.3063, D(x): 0.64, D(G(z)): 0.42
+2025-11-01 12:31:53,004 - INFO - Epoch [37/40], Step [200/469], d_loss: 1.1849, g_loss: 1.1094, D(x): 0.58, D(G(z)): 0.41
+2025-11-01 12:31:58,339 - INFO - Epoch [37/40], Step [400/469], d_loss: 1.2155, g_loss: 1.3177, D(x): 0.66, D(G(z)): 0.50
+2025-11-01 12:32:05,510 - INFO - Epoch [38/40], Step [200/469], d_loss: 1.2188, g_loss: 1.4046, D(x): 0.59, D(G(z)): 0.44
+2025-11-01 12:32:10,813 - INFO - Epoch [38/40], Step [400/469], d_loss: 1.1236, g_loss: 1.5423, D(x): 0.67, D(G(z)): 0.44
+2025-11-01 12:32:18,038 - INFO - Epoch [39/40], Step [200/469], d_loss: 1.1288, g_loss: 1.1087, D(x): 0.58, D(G(z)): 0.38
+2025-11-01 12:32:23,378 - INFO - Epoch [39/40], Step [400/469], d_loss: 1.1388, g_loss: 1.2874, D(x): 0.65, D(G(z)): 0.46
+2025-11-01 12:32:25,222 - INFO - Saved checkpoint at epoch 40
+2025-11-01 12:32:25,824 - INFO - Calculating FID score...
+2025-11-01 12:32:28,151 - INFO - Analyzing latent space...
+2025-11-01 12:32:28,209 - INFO - Saved final models to saved_models
+2025-11-01 12:32:28,210 - INFO - Experiment exp1_baseline completed. FID: 718.52
+2025-11-01 12:32:28,216 - INFO - Starting experiment: exp2_small_latent
+2025-11-01 12:32:28,216 - INFO - Config: {'latent_size': 64, 'description': 'Latent: Smaller latent dimension (64)'}
+2025-11-01 12:32:33,634 - INFO - Epoch [0/40], Step [200/469], d_loss: 0.3796, g_loss: 1.6780, D(x): 0.94, D(G(z)): 0.27
+2025-11-01 12:32:38,941 - INFO - Epoch [0/40], Step [400/469], d_loss: 0.1855, g_loss: 3.0458, D(x): 0.92, D(G(z)): 0.04
+2025-11-01 12:32:46,325 - INFO - Epoch [1/40], Step [200/469], d_loss: 0.2836, g_loss: 3.4336, D(x): 0.90, D(G(z)): 0.12
+2025-11-01 12:32:51,656 - INFO - Epoch [1/40], Step [400/469], d_loss: 0.4961, g_loss: 4.5530, D(x): 0.92, D(G(z)): 0.25
+2025-11-01 12:32:58,842 - INFO - Epoch [2/40], Step [200/469], d_loss: 0.3592, g_loss: 3.4268, D(x): 0.83, D(G(z)): 0.03
+2025-11-01 12:33:04,222 - INFO - Epoch [2/40], Step [400/469], d_loss: 0.4499, g_loss: 3.1767, D(x): 0.86, D(G(z)): 0.16
+2025-11-01 12:33:11,553 - INFO - Epoch [3/40], Step [200/469], d_loss: 0.2544, g_loss: 3.9087, D(x): 0.87, D(G(z)): 0.05
+2025-11-01 12:33:16,886 - INFO - Epoch [3/40], Step [400/469], d_loss: 0.3998, g_loss: 2.5362, D(x): 0.83, D(G(z)): 0.07
+2025-11-01 12:33:24,371 - INFO - Epoch [4/40], Step [200/469], d_loss: 0.6638, g_loss: 2.6349, D(x): 0.70, D(G(z)): 0.06
+2025-11-01 12:33:29,780 - INFO - Epoch [4/40], Step [400/469], d_loss: 0.6890, g_loss: 3.2033, D(x): 0.86, D(G(z)): 0.35
+2025-11-01 12:33:36,981 - INFO - Epoch [5/40], Step [200/469], d_loss: 0.4727, g_loss: 3.8906, D(x): 0.91, D(G(z)): 0.27
+2025-11-01 12:33:42,325 - INFO - Epoch [5/40], Step [400/469], d_loss: 0.5297, g_loss: 1.5291, D(x): 0.75, D(G(z)): 0.05
+2025-11-01 12:33:49,457 - INFO - Epoch [6/40], Step [200/469], d_loss: 0.5108, g_loss: 2.7415, D(x): 0.83, D(G(z)): 0.21
+2025-11-01 12:33:54,734 - INFO - Epoch [6/40], Step [400/469], d_loss: 0.4794, g_loss: 2.9282, D(x): 0.82, D(G(z)): 0.17
+2025-11-01 12:34:01,880 - INFO - Epoch [7/40], Step [200/469], d_loss: 0.5596, g_loss: 2.2383, D(x): 0.79, D(G(z)): 0.16
+2025-11-01 12:34:07,202 - INFO - Epoch [7/40], Step [400/469], d_loss: 0.6633, g_loss: 2.3307, D(x): 0.74, D(G(z)): 0.15
+2025-11-01 12:34:14,336 - INFO - Epoch [8/40], Step [200/469], d_loss: 0.5267, g_loss: 3.9820, D(x): 0.88, D(G(z)): 0.28
+2025-11-01 12:34:19,663 - INFO - Epoch [8/40], Step [400/469], d_loss: 0.7488, g_loss: 2.1709, D(x): 0.81, D(G(z)): 0.27
+2025-11-01 12:34:26,826 - INFO - Epoch [9/40], Step [200/469], d_loss: 0.6699, g_loss: 1.9406, D(x): 0.72, D(G(z)): 0.10
+2025-11-01 12:34:32,134 - INFO - Epoch [9/40], Step [400/469], d_loss: 0.8375, g_loss: 2.7748, D(x): 0.83, D(G(z)): 0.38
+2025-11-01 12:34:33,958 - INFO - Saved checkpoint at epoch 10
+2025-11-01 12:34:39,257 - INFO - Epoch [10/40], Step [200/469], d_loss: 0.7005, g_loss: 2.0954, D(x): 0.75, D(G(z)): 0.23
+2025-11-01 12:34:44,548 - INFO - Epoch [10/40], Step [400/469], d_loss: 0.6820, g_loss: 1.8163, D(x): 0.70, D(G(z)): 0.15
+2025-11-01 12:34:51,748 - INFO - Epoch [11/40], Step [200/469], d_loss: 0.8518, g_loss: 2.0704, D(x): 0.76, D(G(z)): 0.34
+2025-11-01 12:34:57,045 - INFO - Epoch [11/40], Step [400/469], d_loss: 0.7228, g_loss: 2.4204, D(x): 0.81, D(G(z)): 0.32
+2025-11-01 12:35:04,173 - INFO - Epoch [12/40], Step [200/469], d_loss: 0.6980, g_loss: 1.9042, D(x): 0.77, D(G(z)): 0.27
+2025-11-01 12:35:09,427 - INFO - Epoch [12/40], Step [400/469], d_loss: 0.7694, g_loss: 2.3531, D(x): 0.79, D(G(z)): 0.33
+2025-11-01 12:35:16,547 - INFO - Epoch [13/40], Step [200/469], d_loss: 0.7431, g_loss: 1.7343, D(x): 0.77, D(G(z)): 0.29
+2025-11-01 12:35:21,818 - INFO - Epoch [13/40], Step [400/469], d_loss: 0.7913, g_loss: 2.6029, D(x): 0.82, D(G(z)): 0.38
+2025-11-01 12:35:28,962 - INFO - Epoch [14/40], Step [200/469], d_loss: 0.8210, g_loss: 1.4368, D(x): 0.65, D(G(z)): 0.19
+2025-11-01 12:35:34,257 - INFO - Epoch [14/40], Step [400/469], d_loss: 0.7520, g_loss: 2.3453, D(x): 0.76, D(G(z)): 0.32
+2025-11-01 12:35:41,412 - INFO - Epoch [15/40], Step [200/469], d_loss: 0.8959, g_loss: 2.5985, D(x): 0.77, D(G(z)): 0.36
+2025-11-01 12:35:46,747 - INFO - Epoch [15/40], Step [400/469], d_loss: 0.9015, g_loss: 1.9717, D(x): 0.73, D(G(z)): 0.35
+2025-11-01 12:35:53,929 - INFO - Epoch [16/40], Step [200/469], d_loss: 0.9359, g_loss: 2.1536, D(x): 0.72, D(G(z)): 0.32
+2025-11-01 12:35:59,226 - INFO - Epoch [16/40], Step [400/469], d_loss: 0.7813, g_loss: 1.7858, D(x): 0.70, D(G(z)): 0.26
+2025-11-01 12:36:06,393 - INFO - Epoch [17/40], Step [200/469], d_loss: 0.8622, g_loss: 1.4641, D(x): 0.67, D(G(z)): 0.26
+2025-11-01 12:36:11,693 - INFO - Epoch [17/40], Step [400/469], d_loss: 0.8011, g_loss: 1.6574, D(x): 0.67, D(G(z)): 0.24
+2025-11-01 12:36:19,016 - INFO - Epoch [18/40], Step [200/469], d_loss: 1.2441, g_loss: 1.0687, D(x): 0.50, D(G(z)): 0.19
+2025-11-01 12:36:24,355 - INFO - Epoch [18/40], Step [400/469], d_loss: 1.1030, g_loss: 2.7060, D(x): 0.81, D(G(z)): 0.51
+2025-11-01 12:36:31,464 - INFO - Epoch [19/40], Step [200/469], d_loss: 0.9013, g_loss: 1.9984, D(x): 0.76, D(G(z)): 0.40
+2025-11-01 12:36:36,779 - INFO - Epoch [19/40], Step [400/469], d_loss: 0.9237, g_loss: 1.6053, D(x): 0.65, D(G(z)): 0.27
+2025-11-01 12:36:38,596 - INFO - Saved checkpoint at epoch 20
+2025-11-01 12:36:43,868 - INFO - Epoch [20/40], Step [200/469], d_loss: 1.0387, g_loss: 1.4744, D(x): 0.64, D(G(z)): 0.33
+2025-11-01 12:36:49,131 - INFO - Epoch [20/40], Step [400/469], d_loss: 0.9279, g_loss: 1.5656, D(x): 0.72, D(G(z)): 0.34
+2025-11-01 12:36:56,196 - INFO - Epoch [21/40], Step [200/469], d_loss: 1.0943, g_loss: 2.2211, D(x): 0.77, D(G(z)): 0.47
+2025-11-01 12:37:01,474 - INFO - Epoch [21/40], Step [400/469], d_loss: 0.8882, g_loss: 1.3280, D(x): 0.63, D(G(z)): 0.26
+2025-11-01 12:37:08,536 - INFO - Epoch [22/40], Step [200/469], d_loss: 0.9182, g_loss: 1.8193, D(x): 0.73, D(G(z)): 0.38
+2025-11-01 12:37:13,765 - INFO - Epoch [22/40], Step [400/469], d_loss: 0.8594, g_loss: 1.4959, D(x): 0.64, D(G(z)): 0.24
+2025-11-01 12:37:20,826 - INFO - Epoch [23/40], Step [200/469], d_loss: 0.9397, g_loss: 1.4421, D(x): 0.64, D(G(z)): 0.28
+2025-11-01 12:37:26,082 - INFO - Epoch [23/40], Step [400/469], d_loss: 0.9544, g_loss: 1.2850, D(x): 0.66, D(G(z)): 0.31
+2025-11-01 12:37:33,141 - INFO - Epoch [24/40], Step [200/469], d_loss: 0.9461, g_loss: 1.3368, D(x): 0.62, D(G(z)): 0.28
+2025-11-01 12:37:38,367 - INFO - Epoch [24/40], Step [400/469], d_loss: 1.0698, g_loss: 1.7775, D(x): 0.76, D(G(z)): 0.48
+2025-11-01 12:37:45,428 - INFO - Epoch [25/40], Step [200/469], d_loss: 1.0852, g_loss: 1.3242, D(x): 0.63, D(G(z)): 0.37
+2025-11-01 12:37:50,656 - INFO - Epoch [25/40], Step [400/469], d_loss: 0.9411, g_loss: 1.4622, D(x): 0.79, D(G(z)): 0.46
+2025-11-01 12:37:57,741 - INFO - Epoch [26/40], Step [200/469], d_loss: 1.1180, g_loss: 2.1348, D(x): 0.78, D(G(z)): 0.52
+2025-11-01 12:38:02,965 - INFO - Epoch [26/40], Step [400/469], d_loss: 0.8408, g_loss: 1.7110, D(x): 0.72, D(G(z)): 0.35
+2025-11-01 12:38:10,060 - INFO - Epoch [27/40], Step [200/469], d_loss: 1.1073, g_loss: 0.9313, D(x): 0.56, D(G(z)): 0.25
+2025-11-01 12:38:15,334 - INFO - Epoch [27/40], Step [400/469], d_loss: 1.0216, g_loss: 1.2506, D(x): 0.61, D(G(z)): 0.29
+2025-11-01 12:38:22,446 - INFO - Epoch [28/40], Step [200/469], d_loss: 1.0548, g_loss: 1.3633, D(x): 0.65, D(G(z)): 0.35
+2025-11-01 12:38:27,675 - INFO - Epoch [28/40], Step [400/469], d_loss: 1.1306, g_loss: 0.9488, D(x): 0.54, D(G(z)): 0.28
+2025-11-01 12:38:34,794 - INFO - Epoch [29/40], Step [200/469], d_loss: 1.1389, g_loss: 1.0140, D(x): 0.55, D(G(z)): 0.31
+2025-11-01 12:38:40,089 - INFO - Epoch [29/40], Step [400/469], d_loss: 1.0663, g_loss: 1.1624, D(x): 0.58, D(G(z)): 0.29
+2025-11-01 12:38:41,922 - INFO - Saved checkpoint at epoch 30
+2025-11-01 12:38:47,251 - INFO - Epoch [30/40], Step [200/469], d_loss: 1.0170, g_loss: 1.1897, D(x): 0.65, D(G(z)): 0.36
+2025-11-01 12:38:52,544 - INFO - Epoch [30/40], Step [400/469], d_loss: 1.2139, g_loss: 0.7381, D(x): 0.48, D(G(z)): 0.24
+2025-11-01 12:38:59,675 - INFO - Epoch [31/40], Step [200/469], d_loss: 1.0376, g_loss: 1.0704, D(x): 0.61, D(G(z)): 0.33
+2025-11-01 12:39:04,951 - INFO - Epoch [31/40], Step [400/469], d_loss: 1.0236, g_loss: 1.2608, D(x): 0.63, D(G(z)): 0.34
+2025-11-01 12:39:12,043 - INFO - Epoch [32/40], Step [200/469], d_loss: 0.9887, g_loss: 1.1067, D(x): 0.61, D(G(z)): 0.32
+2025-11-01 12:39:17,328 - INFO - Epoch [32/40], Step [400/469], d_loss: 1.1050, g_loss: 0.9382, D(x): 0.58, D(G(z)): 0.34
+2025-11-01 12:39:24,439 - INFO - Epoch [33/40], Step [200/469], d_loss: 1.1018, g_loss: 1.1642, D(x): 0.62, D(G(z)): 0.38
+2025-11-01 12:39:29,685 - INFO - Epoch [33/40], Step [400/469], d_loss: 1.0321, g_loss: 0.9190, D(x): 0.64, D(G(z)): 0.38
+2025-11-01 12:39:36,742 - INFO - Epoch [34/40], Step [200/469], d_loss: 1.0696, g_loss: 1.5786, D(x): 0.73, D(G(z)): 0.47
+2025-11-01 12:39:41,998 - INFO - Epoch [34/40], Step [400/469], d_loss: 1.2720, g_loss: 1.5684, D(x): 0.69, D(G(z)): 0.53
+2025-11-01 12:39:49,121 - INFO - Epoch [35/40], Step [200/469], d_loss: 1.2405, g_loss: 0.9733, D(x): 0.52, D(G(z)): 0.34
+2025-11-01 12:39:54,393 - INFO - Epoch [35/40], Step [400/469], d_loss: 1.1475, g_loss: 1.0912, D(x): 0.60, D(G(z)): 0.40
+2025-11-01 12:40:01,455 - INFO - Epoch [36/40], Step [200/469], d_loss: 1.0912, g_loss: 0.9277, D(x): 0.59, D(G(z)): 0.37
+2025-11-01 12:40:06,723 - INFO - Epoch [36/40], Step [400/469], d_loss: 1.1550, g_loss: 1.1481, D(x): 0.56, D(G(z)): 0.34
+2025-11-01 12:40:13,814 - INFO - Epoch [37/40], Step [200/469], d_loss: 1.1235, g_loss: 1.0823, D(x): 0.54, D(G(z)): 0.32
+2025-11-01 12:40:19,059 - INFO - Epoch [37/40], Step [400/469], d_loss: 1.1688, g_loss: 1.0297, D(x): 0.59, D(G(z)): 0.40
+2025-11-01 12:40:26,223 - INFO - Epoch [38/40], Step [200/469], d_loss: 1.1800, g_loss: 0.9894, D(x): 0.59, D(G(z)): 0.41
+2025-11-01 12:40:31,579 - INFO - Epoch [38/40], Step [400/469], d_loss: 1.0530, g_loss: 1.0718, D(x): 0.61, D(G(z)): 0.37
+2025-11-01 12:40:38,774 - INFO - Epoch [39/40], Step [200/469], d_loss: 1.0638, g_loss: 1.2054, D(x): 0.58, D(G(z)): 0.33
+2025-11-01 12:40:44,100 - INFO - Epoch [39/40], Step [400/469], d_loss: 1.1134, g_loss: 1.1110, D(x): 0.60, D(G(z)): 0.39
+2025-11-01 12:40:45,938 - INFO - Saved checkpoint at epoch 40
+2025-11-01 12:40:46,504 - INFO - Calculating FID score...
+2025-11-01 12:40:48,756 - INFO - Analyzing latent space...
+2025-11-01 12:40:48,814 - INFO - Saved final models to saved_models
+2025-11-01 12:40:48,815 - INFO - Experiment exp2_small_latent completed. FID: 680.75
+2025-11-01 12:40:48,820 - INFO - Starting experiment: exp3_large_latent
+2025-11-01 12:40:48,820 - INFO - Config: {'latent_size': 256, 'description': 'Latent: Larger latent dimension (256)'}
+2025-11-01 12:40:54,259 - INFO - Epoch [0/40], Step [200/469], d_loss: 0.3161, g_loss: 1.9520, D(x): 0.97, D(G(z)): 0.25
+2025-11-01 12:40:59,636 - INFO - Epoch [0/40], Step [400/469], d_loss: 0.2872, g_loss: 3.1587, D(x): 0.89, D(G(z)): 0.09
+2025-11-01 12:41:06,986 - INFO - Epoch [1/40], Step [200/469], d_loss: 0.4363, g_loss: 3.3931, D(x): 0.79, D(G(z)): 0.06
+2025-11-01 12:41:12,384 - INFO - Epoch [1/40], Step [400/469], d_loss: 0.3730, g_loss: 4.8604, D(x): 0.91, D(G(z)): 0.21
+2025-11-01 12:41:19,727 - INFO - Epoch [2/40], Step [200/469], d_loss: 0.4049, g_loss: 2.4134, D(x): 0.81, D(G(z)): 0.05
+2025-11-01 12:41:25,120 - INFO - Epoch [2/40], Step [400/469], d_loss: 0.3491, g_loss: 4.5660, D(x): 0.94, D(G(z)): 0.22
+2025-11-01 12:41:32,385 - INFO - Epoch [3/40], Step [200/469], d_loss: 0.3367, g_loss: 3.0142, D(x): 0.88, D(G(z)): 0.12
+2025-11-01 12:41:37,747 - INFO - Epoch [3/40], Step [400/469], d_loss: 0.4536, g_loss: 2.7779, D(x): 0.80, D(G(z)): 0.05
+2025-11-01 12:41:45,022 - INFO - Epoch [4/40], Step [200/469], d_loss: 0.9602, g_loss: 2.6881, D(x): 0.63, D(G(z)): 0.02
+2025-11-01 12:41:50,436 - INFO - Epoch [4/40], Step [400/469], d_loss: 0.6227, g_loss: 1.7878, D(x): 0.71, D(G(z)): 0.06
+2025-11-01 12:41:57,762 - INFO - Epoch [5/40], Step [200/469], d_loss: 0.6181, g_loss: 3.9950, D(x): 0.90, D(G(z)): 0.35
+2025-11-01 12:42:03,184 - INFO - Epoch [5/40], Step [400/469], d_loss: 0.4581, g_loss: 3.9873, D(x): 0.90, D(G(z)): 0.25
+2025-11-01 12:42:10,483 - INFO - Epoch [6/40], Step [200/469], d_loss: 0.7831, g_loss: 4.6506, D(x): 0.92, D(G(z)): 0.44
+2025-11-01 12:42:15,936 - INFO - Epoch [6/40], Step [400/469], d_loss: 0.5571, g_loss: 2.3282, D(x): 0.75, D(G(z)): 0.12
+2025-11-01 12:42:23,220 - INFO - Epoch [7/40], Step [200/469], d_loss: 0.7641, g_loss: 2.0489, D(x): 0.68, D(G(z)): 0.11
+2025-11-01 12:42:28,524 - INFO - Epoch [7/40], Step [400/469], d_loss: 0.7101, g_loss: 1.9057, D(x): 0.80, D(G(z)): 0.31
+2025-11-01 12:42:35,726 - INFO - Epoch [8/40], Step [200/469], d_loss: 0.7570, g_loss: 1.5291, D(x): 0.67, D(G(z)): 0.15
+2025-11-01 12:42:41,064 - INFO - Epoch [8/40], Step [400/469], d_loss: 0.7694, g_loss: 2.7779, D(x): 0.79, D(G(z)): 0.32
+2025-11-01 12:42:48,324 - INFO - Epoch [9/40], Step [200/469], d_loss: 0.6613, g_loss: 3.1855, D(x): 0.85, D(G(z)): 0.35
+2025-11-01 12:42:53,754 - INFO - Epoch [9/40], Step [400/469], d_loss: 0.7928, g_loss: 1.4272, D(x): 0.63, D(G(z)): 0.10
+2025-11-01 12:42:55,622 - INFO - Saved checkpoint at epoch 10
+2025-11-01 12:43:01,405 - INFO - Epoch [10/40], Step [200/469], d_loss: 0.9591, g_loss: 3.0680, D(x): 0.82, D(G(z)): 0.44
+2025-11-01 12:43:07,710 - INFO - Epoch [10/40], Step [400/469], d_loss: 0.7803, g_loss: 1.7156, D(x): 0.66, D(G(z)): 0.16
+2025-11-01 12:43:16,264 - INFO - Epoch [11/40], Step [200/469], d_loss: 0.8418, g_loss: 2.0011, D(x): 0.74, D(G(z)): 0.32
+2025-11-01 12:43:22,591 - INFO - Epoch [11/40], Step [400/469], d_loss: 0.7581, g_loss: 1.8092, D(x): 0.73, D(G(z)): 0.26
+2025-11-01 12:43:30,630 - INFO - Epoch [12/40], Step [200/469], d_loss: 0.9470, g_loss: 1.5569, D(x): 0.70, D(G(z)): 0.29
+2025-11-01 12:43:36,082 - INFO - Epoch [12/40], Step [400/469], d_loss: 0.8309, g_loss: 1.9212, D(x): 0.74, D(G(z)): 0.32
+2025-11-01 12:43:43,339 - INFO - Epoch [13/40], Step [200/469], d_loss: 1.0679, g_loss: 1.3921, D(x): 0.62, D(G(z)): 0.31
+2025-11-01 12:43:48,715 - INFO - Epoch [13/40], Step [400/469], d_loss: 0.7892, g_loss: 2.2017, D(x): 0.71, D(G(z)): 0.29
+2025-11-01 12:43:55,950 - INFO - Epoch [14/40], Step [200/469], d_loss: 0.8865, g_loss: 1.2260, D(x): 0.61, D(G(z)): 0.21
+2025-11-01 12:44:01,287 - INFO - Epoch [14/40], Step [400/469], d_loss: 0.9257, g_loss: 2.4370, D(x): 0.77, D(G(z)): 0.41
+2025-11-01 12:44:08,515 - INFO - Epoch [15/40], Step [200/469], d_loss: 0.9351, g_loss: 1.4839, D(x): 0.68, D(G(z)): 0.32
+2025-11-01 12:44:13,890 - INFO - Epoch [15/40], Step [400/469], d_loss: 0.8316, g_loss: 2.0758, D(x): 0.75, D(G(z)): 0.34
+2025-11-01 12:44:21,133 - INFO - Epoch [16/40], Step [200/469], d_loss: 0.9186, g_loss: 2.0399, D(x): 0.83, D(G(z)): 0.47
+2025-11-01 12:44:26,524 - INFO - Epoch [16/40], Step [400/469], d_loss: 0.8776, g_loss: 1.4209, D(x): 0.66, D(G(z)): 0.30
+2025-11-01 12:44:33,732 - INFO - Epoch [17/40], Step [200/469], d_loss: 0.9168, g_loss: 2.3492, D(x): 0.80, D(G(z)): 0.45
+2025-11-01 12:44:39,126 - INFO - Epoch [17/40], Step [400/469], d_loss: 0.9599, g_loss: 1.4746, D(x): 0.66, D(G(z)): 0.33
+2025-11-01 12:44:46,370 - INFO - Epoch [18/40], Step [200/469], d_loss: 1.0154, g_loss: 1.3135, D(x): 0.57, D(G(z)): 0.23
+2025-11-01 12:44:51,733 - INFO - Epoch [18/40], Step [400/469], d_loss: 0.9839, g_loss: 2.0138, D(x): 0.74, D(G(z)): 0.43
+2025-11-01 12:44:58,927 - INFO - Epoch [19/40], Step [200/469], d_loss: 0.9816, g_loss: 1.5134, D(x): 0.61, D(G(z)): 0.27
+2025-11-01 12:45:04,255 - INFO - Epoch [19/40], Step [400/469], d_loss: 1.1074, g_loss: 1.4826, D(x): 0.64, D(G(z)): 0.39
+2025-11-01 12:45:06,109 - INFO - Saved checkpoint at epoch 20
+2025-11-01 12:45:11,496 - INFO - Epoch [20/40], Step [200/469], d_loss: 1.1706, g_loss: 1.8839, D(x): 0.71, D(G(z)): 0.47
+2025-11-01 12:45:16,871 - INFO - Epoch [20/40], Step [400/469], d_loss: 1.0854, g_loss: 1.8677, D(x): 0.71, D(G(z)): 0.46
+2025-11-01 12:45:24,065 - INFO - Epoch [21/40], Step [200/469], d_loss: 1.0373, g_loss: 1.3763, D(x): 0.64, D(G(z)): 0.35
+2025-11-01 12:45:29,373 - INFO - Epoch [21/40], Step [400/469], d_loss: 0.9827, g_loss: 1.6586, D(x): 0.70, D(G(z)): 0.41
+2025-11-01 12:45:36,562 - INFO - Epoch [22/40], Step [200/469], d_loss: 1.0991, g_loss: 1.1789, D(x): 0.60, D(G(z)): 0.35
+2025-11-01 12:45:41,905 - INFO - Epoch [22/40], Step [400/469], d_loss: 0.9637, g_loss: 1.8856, D(x): 0.76, D(G(z)): 0.45
+2025-11-01 12:45:49,087 - INFO - Epoch [23/40], Step [200/469], d_loss: 0.9695, g_loss: 1.4659, D(x): 0.64, D(G(z)): 0.33
+2025-11-01 12:45:54,393 - INFO - Epoch [23/40], Step [400/469], d_loss: 1.1831, g_loss: 1.1854, D(x): 0.57, D(G(z)): 0.35
+2025-11-01 12:46:01,592 - INFO - Epoch [24/40], Step [200/469], d_loss: 0.9682, g_loss: 1.2333, D(x): 0.64, D(G(z)): 0.30
+2025-11-01 12:46:06,918 - INFO - Epoch [24/40], Step [400/469], d_loss: 1.0595, g_loss: 1.4682, D(x): 0.62, D(G(z)): 0.35
+2025-11-01 12:46:14,094 - INFO - Epoch [25/40], Step [200/469], d_loss: 1.0974, g_loss: 1.7131, D(x): 0.71, D(G(z)): 0.47
+2025-11-01 12:46:19,425 - INFO - Epoch [25/40], Step [400/469], d_loss: 0.9982, g_loss: 1.1195, D(x): 0.65, D(G(z)): 0.37
+2025-11-01 12:46:26,622 - INFO - Epoch [26/40], Step [200/469], d_loss: 1.0067, g_loss: 1.4723, D(x): 0.63, D(G(z)): 0.34
+2025-11-01 12:46:31,935 - INFO - Epoch [26/40], Step [400/469], d_loss: 1.1401, g_loss: 1.5587, D(x): 0.70, D(G(z)): 0.48
+2025-11-01 12:46:39,103 - INFO - Epoch [27/40], Step [200/469], d_loss: 1.0959, g_loss: 1.3726, D(x): 0.63, D(G(z)): 0.40
+2025-11-01 12:46:44,438 - INFO - Epoch [27/40], Step [400/469], d_loss: 1.2458, g_loss: 1.0402, D(x): 0.54, D(G(z)): 0.36
+2025-11-01 12:46:51,627 - INFO - Epoch [28/40], Step [200/469], d_loss: 1.0163, g_loss: 1.0748, D(x): 0.60, D(G(z)): 0.32
+2025-11-01 12:46:56,954 - INFO - Epoch [28/40], Step [400/469], d_loss: 1.1468, g_loss: 0.9569, D(x): 0.58, D(G(z)): 0.38
+2025-11-01 12:47:04,163 - INFO - Epoch [29/40], Step [200/469], d_loss: 1.1110, g_loss: 1.1255, D(x): 0.59, D(G(z)): 0.36
+2025-11-01 12:47:09,517 - INFO - Epoch [29/40], Step [400/469], d_loss: 1.0908, g_loss: 1.2297, D(x): 0.63, D(G(z)): 0.41
+2025-11-01 12:47:11,364 - INFO - Saved checkpoint at epoch 30
+2025-11-01 12:47:16,799 - INFO - Epoch [30/40], Step [200/469], d_loss: 1.2601, g_loss: 0.9336, D(x): 0.49, D(G(z)): 0.27
+2025-11-01 12:47:22,158 - INFO - Epoch [30/40], Step [400/469], d_loss: 1.0264, g_loss: 1.2980, D(x): 0.63, D(G(z)): 0.35
+2025-11-01 12:47:29,354 - INFO - Epoch [31/40], Step [200/469], d_loss: 1.0981, g_loss: 1.3992, D(x): 0.65, D(G(z)): 0.43
+2025-11-01 12:47:34,681 - INFO - Epoch [31/40], Step [400/469], d_loss: 1.1958, g_loss: 1.3233, D(x): 0.57, D(G(z)): 0.38
+2025-11-01 12:47:41,860 - INFO - Epoch [32/40], Step [200/469], d_loss: 1.0906, g_loss: 1.3645, D(x): 0.63, D(G(z)): 0.42
+2025-11-01 12:47:47,165 - INFO - Epoch [32/40], Step [400/469], d_loss: 1.1869, g_loss: 1.1255, D(x): 0.56, D(G(z)): 0.38
+2025-11-01 12:47:54,357 - INFO - Epoch [33/40], Step [200/469], d_loss: 1.1543, g_loss: 1.3402, D(x): 0.70, D(G(z)): 0.49
+2025-11-01 12:47:59,667 - INFO - Epoch [33/40], Step [400/469], d_loss: 1.1285, g_loss: 1.0532, D(x): 0.57, D(G(z)): 0.36
+2025-11-01 12:48:06,826 - INFO - Epoch [34/40], Step [200/469], d_loss: 1.1705, g_loss: 0.9727, D(x): 0.58, D(G(z)): 0.39
+2025-11-01 12:48:12,153 - INFO - Epoch [34/40], Step [400/469], d_loss: 1.0963, g_loss: 1.5275, D(x): 0.62, D(G(z)): 0.41
+2025-11-01 12:48:19,397 - INFO - Epoch [35/40], Step [200/469], d_loss: 1.2606, g_loss: 1.4384, D(x): 0.72, D(G(z)): 0.56
+2025-11-01 12:48:24,761 - INFO - Epoch [35/40], Step [400/469], d_loss: 1.1061, g_loss: 1.3602, D(x): 0.58, D(G(z)): 0.35
+2025-11-01 12:48:32,041 - INFO - Epoch [36/40], Step [200/469], d_loss: 1.0352, g_loss: 1.1809, D(x): 0.59, D(G(z)): 0.33
+2025-11-01 12:48:37,398 - INFO - Epoch [36/40], Step [400/469], d_loss: 1.1273, g_loss: 1.1345, D(x): 0.58, D(G(z)): 0.36
+2025-11-01 12:48:44,587 - INFO - Epoch [37/40], Step [200/469], d_loss: 1.1292, g_loss: 1.3184, D(x): 0.64, D(G(z)): 0.43
+2025-11-01 12:48:49,917 - INFO - Epoch [37/40], Step [400/469], d_loss: 1.1208, g_loss: 0.9889, D(x): 0.56, D(G(z)): 0.36
+2025-11-01 12:48:57,049 - INFO - Epoch [38/40], Step [200/469], d_loss: 1.2016, g_loss: 1.0468, D(x): 0.61, D(G(z)): 0.44
+2025-11-01 12:49:02,366 - INFO - Epoch [38/40], Step [400/469], d_loss: 1.0690, g_loss: 1.0348, D(x): 0.55, D(G(z)): 0.31
+2025-11-01 12:49:09,539 - INFO - Epoch [39/40], Step [200/469], d_loss: 1.0972, g_loss: 0.9240, D(x): 0.59, D(G(z)): 0.37
+2025-11-01 12:49:14,749 - INFO - Epoch [39/40], Step [400/469], d_loss: 1.1162, g_loss: 1.1747, D(x): 0.62, D(G(z)): 0.41
+2025-11-01 12:49:16,593 - INFO - Saved checkpoint at epoch 40
+2025-11-01 12:49:17,152 - INFO - Calculating FID score...
+2025-11-01 12:49:19,202 - INFO - Analyzing latent space...
+2025-11-01 12:49:19,254 - INFO - Saved final models to saved_models
+2025-11-01 12:49:19,254 - INFO - Experiment exp3_large_latent completed. FID: 699.01
+2025-11-01 12:49:19,260 - INFO - Starting experiment: exp4_elu_activation
+2025-11-01 12:49:19,260 - INFO - Config: {'activation': 'elu', 'description': 'Architecture: ELU activation instead of ReLU/LeakyReLU'}
+2025-11-01 12:49:24,674 - INFO - Epoch [0/40], Step [200/469], d_loss: 0.3740, g_loss: 2.1606, D(x): 0.92, D(G(z)): 0.21
+2025-11-01 12:49:30,047 - INFO - Epoch [0/40], Step [400/469], d_loss: 0.5117, g_loss: 2.4741, D(x): 0.82, D(G(z)): 0.18
+2025-11-01 12:49:37,293 - INFO - Epoch [1/40], Step [200/469], d_loss: 0.6918, g_loss: 2.0937, D(x): 0.75, D(G(z)): 0.23
+2025-11-01 12:49:42,588 - INFO - Epoch [1/40], Step [400/469], d_loss: 0.7023, g_loss: 2.3584, D(x): 0.75, D(G(z)): 0.22
+2025-11-01 12:49:49,714 - INFO - Epoch [2/40], Step [200/469], d_loss: 0.8611, g_loss: 1.1208, D(x): 0.65, D(G(z)): 0.22
+2025-11-01 12:49:55,058 - INFO - Epoch [2/40], Step [400/469], d_loss: 0.7041, g_loss: 1.9035, D(x): 0.74, D(G(z)): 0.26
+2025-11-01 12:50:02,353 - INFO - Epoch [3/40], Step [200/469], d_loss: 0.7635, g_loss: 1.8337, D(x): 0.73, D(G(z)): 0.22
+2025-11-01 12:50:07,682 - INFO - Epoch [3/40], Step [400/469], d_loss: 0.6667, g_loss: 2.2284, D(x): 0.78, D(G(z)): 0.21
+2025-11-01 12:50:15,027 - INFO - Epoch [4/40], Step [200/469], d_loss: 0.6943, g_loss: 1.8735, D(x): 0.71, D(G(z)): 0.15
+2025-11-01 12:50:20,594 - INFO - Epoch [4/40], Step [400/469], d_loss: 0.7896, g_loss: 1.5575, D(x): 0.73, D(G(z)): 0.26
+2025-11-01 12:50:27,836 - INFO - Epoch [5/40], Step [200/469], d_loss: 0.7924, g_loss: 1.3952, D(x): 0.69, D(G(z)): 0.23
+2025-11-01 12:50:33,181 - INFO - Epoch [5/40], Step [400/469], d_loss: 1.0737, g_loss: 1.6620, D(x): 0.70, D(G(z)): 0.36
+2025-11-01 12:50:40,399 - INFO - Epoch [6/40], Step [200/469], d_loss: 1.0057, g_loss: 1.4222, D(x): 0.63, D(G(z)): 0.20
+2025-11-01 12:50:45,739 - INFO - Epoch [6/40], Step [400/469], d_loss: 0.7305, g_loss: 1.5441, D(x): 0.71, D(G(z)): 0.19
+2025-11-01 12:50:52,967 - INFO - Epoch [7/40], Step [200/469], d_loss: 0.7796, g_loss: 1.1872, D(x): 0.70, D(G(z)): 0.23
+2025-11-01 12:50:58,402 - INFO - Epoch [7/40], Step [400/469], d_loss: 0.6277, g_loss: 2.2420, D(x): 0.82, D(G(z)): 0.29
+2025-11-01 12:51:05,638 - INFO - Epoch [8/40], Step [200/469], d_loss: 0.9308, g_loss: 1.6810, D(x): 0.71, D(G(z)): 0.30
+2025-11-01 12:51:10,988 - INFO - Epoch [8/40], Step [400/469], d_loss: 0.8738, g_loss: 1.5665, D(x): 0.72, D(G(z)): 0.27
+2025-11-01 12:51:18,246 - INFO - Epoch [9/40], Step [200/469], d_loss: 0.9396, g_loss: 1.2117, D(x): 0.65, D(G(z)): 0.26
+2025-11-01 12:51:23,609 - INFO - Epoch [9/40], Step [400/469], d_loss: 0.8002, g_loss: 1.1012, D(x): 0.68, D(G(z)): 0.19
+2025-11-01 12:51:25,472 - INFO - Saved checkpoint at epoch 10
+2025-11-01 12:51:30,846 - INFO - Epoch [10/40], Step [200/469], d_loss: 0.8881, g_loss: 1.2439, D(x): 0.65, D(G(z)): 0.16
+2025-11-01 12:51:36,244 - INFO - Epoch [10/40], Step [400/469], d_loss: 0.9574, g_loss: 1.2153, D(x): 0.66, D(G(z)): 0.25
+2025-11-01 12:51:43,468 - INFO - Epoch [11/40], Step [200/469], d_loss: 0.8377, g_loss: 1.6596, D(x): 0.68, D(G(z)): 0.18
+2025-11-01 12:51:48,823 - INFO - Epoch [11/40], Step [400/469], d_loss: 0.8974, g_loss: 1.3302, D(x): 0.69, D(G(z)): 0.29
+2025-11-01 12:51:56,098 - INFO - Epoch [12/40], Step [200/469], d_loss: 0.9316, g_loss: 1.5692, D(x): 0.72, D(G(z)): 0.36
+2025-11-01 12:52:01,470 - INFO - Epoch [12/40], Step [400/469], d_loss: 0.8202, g_loss: 1.0118, D(x): 0.69, D(G(z)): 0.25
+2025-11-01 12:52:08,696 - INFO - Epoch [13/40], Step [200/469], d_loss: 0.9480, g_loss: 1.2643, D(x): 0.66, D(G(z)): 0.27
+2025-11-01 12:52:14,049 - INFO - Epoch [13/40], Step [400/469], d_loss: 0.8354, g_loss: 1.4249, D(x): 0.71, D(G(z)): 0.29
+2025-11-01 12:52:21,215 - INFO - Epoch [14/40], Step [200/469], d_loss: 0.8310, g_loss: 1.3628, D(x): 0.70, D(G(z)): 0.29
+2025-11-01 12:52:26,500 - INFO - Epoch [14/40], Step [400/469], d_loss: 0.8764, g_loss: 1.2612, D(x): 0.72, D(G(z)): 0.32
+2025-11-01 12:52:33,588 - INFO - Epoch [15/40], Step [200/469], d_loss: 0.9057, g_loss: 1.0265, D(x): 0.64, D(G(z)): 0.23
+2025-11-01 12:52:38,829 - INFO - Epoch [15/40], Step [400/469], d_loss: 0.9669, g_loss: 1.1040, D(x): 0.61, D(G(z)): 0.18
+2025-11-01 12:52:45,900 - INFO - Epoch [16/40], Step [200/469], d_loss: 0.9794, g_loss: 1.1602, D(x): 0.63, D(G(z)): 0.25
+2025-11-01 12:52:51,192 - INFO - Epoch [16/40], Step [400/469], d_loss: 0.9144, g_loss: 1.1649, D(x): 0.67, D(G(z)): 0.23
+2025-11-01 12:52:58,265 - INFO - Epoch [17/40], Step [200/469], d_loss: 0.8541, g_loss: 1.4549, D(x): 0.70, D(G(z)): 0.29
+2025-11-01 12:53:03,528 - INFO - Epoch [17/40], Step [400/469], d_loss: 0.8625, g_loss: 1.7266, D(x): 0.72, D(G(z)): 0.35
+2025-11-01 12:53:10,587 - INFO - Epoch [18/40], Step [200/469], d_loss: 0.7924, g_loss: 1.5497, D(x): 0.76, D(G(z)): 0.31
+2025-11-01 12:53:15,854 - INFO - Epoch [18/40], Step [400/469], d_loss: 0.9339, g_loss: 1.2414, D(x): 0.67, D(G(z)): 0.28
+2025-11-01 12:53:23,011 - INFO - Epoch [19/40], Step [200/469], d_loss: 1.0198, g_loss: 1.2499, D(x): 0.64, D(G(z)): 0.30
+2025-11-01 12:53:28,288 - INFO - Epoch [19/40], Step [400/469], d_loss: 0.8159, g_loss: 1.6919, D(x): 0.74, D(G(z)): 0.29
+2025-11-01 12:53:30,101 - INFO - Saved checkpoint at epoch 20
+2025-11-01 12:53:35,417 - INFO - Epoch [20/40], Step [200/469], d_loss: 0.9658, g_loss: 1.2939, D(x): 0.69, D(G(z)): 0.34
+2025-11-01 12:53:40,800 - INFO - Epoch [20/40], Step [400/469], d_loss: 0.9534, g_loss: 1.5040, D(x): 0.70, D(G(z)): 0.34
+2025-11-01 12:53:48,016 - INFO - Epoch [21/40], Step [200/469], d_loss: 0.8689, g_loss: 1.5427, D(x): 0.71, D(G(z)): 0.33
+2025-11-01 12:53:53,347 - INFO - Epoch [21/40], Step [400/469], d_loss: 0.9259, g_loss: 1.3862, D(x): 0.66, D(G(z)): 0.24
+2025-11-01 12:54:00,513 - INFO - Epoch [22/40], Step [200/469], d_loss: 0.9848, g_loss: 0.9195, D(x): 0.63, D(G(z)): 0.29
+2025-11-01 12:54:05,832 - INFO - Epoch [22/40], Step [400/469], d_loss: 1.0114, g_loss: 1.3348, D(x): 0.67, D(G(z)): 0.36
+2025-11-01 12:54:13,095 - INFO - Epoch [23/40], Step [200/469], d_loss: 1.0001, g_loss: 1.1208, D(x): 0.62, D(G(z)): 0.25
+2025-11-01 12:54:18,432 - INFO - Epoch [23/40], Step [400/469], d_loss: 0.8339, g_loss: 1.5664, D(x): 0.69, D(G(z)): 0.25
+2025-11-01 12:54:25,731 - INFO - Epoch [24/40], Step [200/469], d_loss: 0.9244, g_loss: 1.4390, D(x): 0.74, D(G(z)): 0.39
+2025-11-01 12:54:31,092 - INFO - Epoch [24/40], Step [400/469], d_loss: 0.9129, g_loss: 1.3197, D(x): 0.69, D(G(z)): 0.29
+2025-11-01 12:54:38,289 - INFO - Epoch [25/40], Step [200/469], d_loss: 1.0222, g_loss: 1.3154, D(x): 0.62, D(G(z)): 0.26
+2025-11-01 12:54:43,629 - INFO - Epoch [25/40], Step [400/469], d_loss: 0.9050, g_loss: 1.4366, D(x): 0.70, D(G(z)): 0.33
+2025-11-01 12:54:50,787 - INFO - Epoch [26/40], Step [200/469], d_loss: 0.9533, g_loss: 1.2659, D(x): 0.70, D(G(z)): 0.37
+2025-11-01 12:54:56,087 - INFO - Epoch [26/40], Step [400/469], d_loss: 1.1183, g_loss: 1.1595, D(x): 0.72, D(G(z)): 0.43
+2025-11-01 12:55:03,237 - INFO - Epoch [27/40], Step [200/469], d_loss: 1.0637, g_loss: 0.9774, D(x): 0.63, D(G(z)): 0.35
+2025-11-01 12:55:08,540 - INFO - Epoch [27/40], Step [400/469], d_loss: 1.0219, g_loss: 1.1978, D(x): 0.63, D(G(z)): 0.32
+2025-11-01 12:55:15,671 - INFO - Epoch [28/40], Step [200/469], d_loss: 1.0253, g_loss: 1.1176, D(x): 0.66, D(G(z)): 0.37
+2025-11-01 12:55:20,953 - INFO - Epoch [28/40], Step [400/469], d_loss: 0.9082, g_loss: 1.3416, D(x): 0.71, D(G(z)): 0.35
+2025-11-01 12:55:28,043 - INFO - Epoch [29/40], Step [200/469], d_loss: 1.0366, g_loss: 1.1050, D(x): 0.63, D(G(z)): 0.35
+2025-11-01 12:55:33,309 - INFO - Epoch [29/40], Step [400/469], d_loss: 0.9930, g_loss: 1.1567, D(x): 0.66, D(G(z)): 0.35
+2025-11-01 12:55:35,120 - INFO - Saved checkpoint at epoch 30
+2025-11-01 12:55:40,394 - INFO - Epoch [30/40], Step [200/469], d_loss: 1.0323, g_loss: 1.0397, D(x): 0.62, D(G(z)): 0.34
+2025-11-01 12:55:45,660 - INFO - Epoch [30/40], Step [400/469], d_loss: 1.0691, g_loss: 1.2784, D(x): 0.65, D(G(z)): 0.38
+2025-11-01 12:55:52,741 - INFO - Epoch [31/40], Step [200/469], d_loss: 0.9579, g_loss: 1.2375, D(x): 0.66, D(G(z)): 0.32
+2025-11-01 12:55:58,002 - INFO - Epoch [31/40], Step [400/469], d_loss: 0.9716, g_loss: 1.2311, D(x): 0.67, D(G(z)): 0.36
+2025-11-01 12:56:05,062 - INFO - Epoch [32/40], Step [200/469], d_loss: 0.9090, g_loss: 1.3686, D(x): 0.68, D(G(z)): 0.31
+2025-11-01 12:56:10,300 - INFO - Epoch [32/40], Step [400/469], d_loss: 0.9954, g_loss: 1.3239, D(x): 0.67, D(G(z)): 0.35
+2025-11-01 12:56:17,360 - INFO - Epoch [33/40], Step [200/469], d_loss: 0.9485, g_loss: 1.1384, D(x): 0.73, D(G(z)): 0.41
+2025-11-01 12:56:22,619 - INFO - Epoch [33/40], Step [400/469], d_loss: 1.1293, g_loss: 1.2238, D(x): 0.65, D(G(z)): 0.42
+2025-11-01 12:56:29,736 - INFO - Epoch [34/40], Step [200/469], d_loss: 1.0650, g_loss: 0.9067, D(x): 0.58, D(G(z)): 0.30
+2025-11-01 12:56:34,995 - INFO - Epoch [34/40], Step [400/469], d_loss: 1.0094, g_loss: 1.0601, D(x): 0.61, D(G(z)): 0.30
+2025-11-01 12:56:42,085 - INFO - Epoch [35/40], Step [200/469], d_loss: 1.0851, g_loss: 1.0446, D(x): 0.64, D(G(z)): 0.40
+2025-11-01 12:56:47,312 - INFO - Epoch [35/40], Step [400/469], d_loss: 1.0649, g_loss: 0.9271, D(x): 0.63, D(G(z)): 0.38
+2025-11-01 12:56:54,382 - INFO - Epoch [36/40], Step [200/469], d_loss: 0.9998, g_loss: 1.0988, D(x): 0.63, D(G(z)): 0.32
+2025-11-01 12:56:59,603 - INFO - Epoch [36/40], Step [400/469], d_loss: 0.9952, g_loss: 1.2032, D(x): 0.64, D(G(z)): 0.31
+2025-11-01 12:57:06,666 - INFO - Epoch [37/40], Step [200/469], d_loss: 1.0687, g_loss: 1.0231, D(x): 0.68, D(G(z)): 0.44
+2025-11-01 12:57:11,890 - INFO - Epoch [37/40], Step [400/469], d_loss: 1.0433, g_loss: 1.2627, D(x): 0.66, D(G(z)): 0.38
+2025-11-01 12:57:19,065 - INFO - Epoch [38/40], Step [200/469], d_loss: 0.9578, g_loss: 1.1502, D(x): 0.67, D(G(z)): 0.35
+2025-11-01 12:57:24,403 - INFO - Epoch [38/40], Step [400/469], d_loss: 1.0403, g_loss: 1.1233, D(x): 0.64, D(G(z)): 0.37
+2025-11-01 12:57:31,549 - INFO - Epoch [39/40], Step [200/469], d_loss: 1.0319, g_loss: 1.1803, D(x): 0.68, D(G(z)): 0.41
+2025-11-01 12:57:36,859 - INFO - Epoch [39/40], Step [400/469], d_loss: 1.0339, g_loss: 1.1333, D(x): 0.66, D(G(z)): 0.40
+2025-11-01 12:57:38,707 - INFO - Saved checkpoint at epoch 40
+2025-11-01 12:57:39,278 - INFO - Calculating FID score...
+2025-11-01 12:57:41,260 - INFO - Analyzing latent space...
+2025-11-01 12:57:41,317 - INFO - Saved final models to saved_models
+2025-11-01 12:57:41,317 - INFO - Experiment exp4_elu_activation completed. FID: 730.00
+2025-11-01 12:57:41,317 - INFO - Starting experiment: exp5_tanh_activation
+2025-11-01 12:57:41,317 - INFO - Config: {'activation': 'tanh', 'description': 'Architecture: Tanh activation in hidden layers'}
+2025-11-01 12:57:46,543 - INFO - Epoch [0/40], Step [200/469], d_loss: 0.3512, g_loss: 1.8490, D(x): 0.90, D(G(z)): 0.19
+2025-11-01 12:57:51,774 - INFO - Epoch [0/40], Step [400/469], d_loss: 0.1848, g_loss: 3.0365, D(x): 0.94, D(G(z)): 0.09
+2025-11-01 12:57:58,912 - INFO - Epoch [1/40], Step [200/469], d_loss: 0.3967, g_loss: 2.6029, D(x): 0.81, D(G(z)): 0.07
+2025-11-01 12:58:04,239 - INFO - Epoch [1/40], Step [400/469], d_loss: 0.4554, g_loss: 2.0323, D(x): 0.78, D(G(z)): 0.11
+2025-11-01 12:58:11,335 - INFO - Epoch [2/40], Step [200/469], d_loss: 0.4925, g_loss: 1.9474, D(x): 0.78, D(G(z)): 0.08
+2025-11-01 12:58:16,597 - INFO - Epoch [2/40], Step [400/469], d_loss: 0.6683, g_loss: 2.1978, D(x): 0.74, D(G(z)): 0.07
+2025-11-01 12:58:23,710 - INFO - Epoch [3/40], Step [200/469], d_loss: 0.6798, g_loss: 4.3240, D(x): 0.93, D(G(z)): 0.41
+2025-11-01 12:58:28,946 - INFO - Epoch [3/40], Step [400/469], d_loss: 0.6227, g_loss: 3.0276, D(x): 0.86, D(G(z)): 0.29
+2025-11-01 12:58:35,946 - INFO - Epoch [4/40], Step [200/469], d_loss: 0.5645, g_loss: 2.6151, D(x): 0.82, D(G(z)): 0.21
+2025-11-01 12:58:41,170 - INFO - Epoch [4/40], Step [400/469], d_loss: 0.5362, g_loss: 2.1400, D(x): 0.82, D(G(z)): 0.18
+2025-11-01 12:58:48,218 - INFO - Epoch [5/40], Step [200/469], d_loss: 0.6108, g_loss: 2.0601, D(x): 0.74, D(G(z)): 0.11
+2025-11-01 12:58:53,480 - INFO - Epoch [5/40], Step [400/469], d_loss: 0.5587, g_loss: 2.1020, D(x): 0.79, D(G(z)): 0.16
+2025-11-01 12:59:00,520 - INFO - Epoch [6/40], Step [200/469], d_loss: 0.6668, g_loss: 2.6335, D(x): 0.80, D(G(z)): 0.26
+2025-11-01 12:59:05,732 - INFO - Epoch [6/40], Step [400/469], d_loss: 0.5358, g_loss: 3.1591, D(x): 0.86, D(G(z)): 0.23
+2025-11-01 12:59:12,735 - INFO - Epoch [7/40], Step [200/469], d_loss: 0.6708, g_loss: 2.1942, D(x): 0.78, D(G(z)): 0.21
+2025-11-01 12:59:17,916 - INFO - Epoch [7/40], Step [400/469], d_loss: 0.5204, g_loss: 2.8857, D(x): 0.86, D(G(z)): 0.23
+2025-11-01 12:59:24,940 - INFO - Epoch [8/40], Step [200/469], d_loss: 0.5573, g_loss: 1.8907, D(x): 0.83, D(G(z)): 0.21
+2025-11-01 12:59:30,168 - INFO - Epoch [8/40], Step [400/469], d_loss: 0.6978, g_loss: 2.0582, D(x): 0.71, D(G(z)): 0.06
+2025-11-01 12:59:37,211 - INFO - Epoch [9/40], Step [200/469], d_loss: 0.5459, g_loss: 2.5376, D(x): 0.80, D(G(z)): 0.15
+2025-11-01 12:59:42,446 - INFO - Epoch [9/40], Step [400/469], d_loss: 0.6891, g_loss: 1.6370, D(x): 0.77, D(G(z)): 0.23
+2025-11-01 12:59:44,265 - INFO - Saved checkpoint at epoch 10
+2025-11-01 12:59:49,509 - INFO - Epoch [10/40], Step [200/469], d_loss: 0.7304, g_loss: 1.7255, D(x): 0.80, D(G(z)): 0.26
+2025-11-01 12:59:54,719 - INFO - Epoch [10/40], Step [400/469], d_loss: 0.5631, g_loss: 2.5176, D(x): 0.85, D(G(z)): 0.26
+2025-11-01 13:00:01,773 - INFO - Epoch [11/40], Step [200/469], d_loss: 0.8067, g_loss: 2.0966, D(x): 0.75, D(G(z)): 0.24
+2025-11-01 13:00:07,076 - INFO - Epoch [11/40], Step [400/469], d_loss: 1.1600, g_loss: 1.6836, D(x): 0.60, D(G(z)): 0.04
+2025-11-01 13:00:14,165 - INFO - Epoch [12/40], Step [200/469], d_loss: 0.4986, g_loss: 2.4978, D(x): 0.83, D(G(z)): 0.18
+2025-11-01 13:00:19,392 - INFO - Epoch [12/40], Step [400/469], d_loss: 0.5687, g_loss: 2.6206, D(x): 0.82, D(G(z)): 0.23
+2025-11-01 13:00:26,505 - INFO - Epoch [13/40], Step [200/469], d_loss: 0.6193, g_loss: 2.4694, D(x): 0.86, D(G(z)): 0.31
+2025-11-01 13:00:31,765 - INFO - Epoch [13/40], Step [400/469], d_loss: 0.7185, g_loss: 1.9373, D(x): 0.77, D(G(z)): 0.25
+2025-11-01 13:00:38,891 - INFO - Epoch [14/40], Step [200/469], d_loss: 0.8698, g_loss: 1.6613, D(x): 0.64, D(G(z)): 0.08
+2025-11-01 13:00:44,151 - INFO - Epoch [14/40], Step [400/469], d_loss: 0.6773, g_loss: 1.8008, D(x): 0.82, D(G(z)): 0.29
+2025-11-01 13:00:51,232 - INFO - Epoch [15/40], Step [200/469], d_loss: 0.5105, g_loss: 2.3407, D(x): 0.83, D(G(z)): 0.18
+2025-11-01 13:00:56,469 - INFO - Epoch [15/40], Step [400/469], d_loss: 0.6971, g_loss: 1.9734, D(x): 0.78, D(G(z)): 0.26
+2025-11-01 13:01:03,527 - INFO - Epoch [16/40], Step [200/469], d_loss: 0.5492, g_loss: 2.0122, D(x): 0.82, D(G(z)): 0.18
+2025-11-01 13:01:08,811 - INFO - Epoch [16/40], Step [400/469], d_loss: 0.5202, g_loss: 2.1587, D(x): 0.80, D(G(z)): 0.16
+2025-11-01 13:01:15,907 - INFO - Epoch [17/40], Step [200/469], d_loss: 0.5833, g_loss: 1.8042, D(x): 0.81, D(G(z)): 0.21
+2025-11-01 13:01:21,157 - INFO - Epoch [17/40], Step [400/469], d_loss: 0.6393, g_loss: 1.8015, D(x): 0.74, D(G(z)): 0.15
+2025-11-01 13:01:28,238 - INFO - Epoch [18/40], Step [200/469], d_loss: 0.6000, g_loss: 2.4726, D(x): 0.82, D(G(z)): 0.26
+2025-11-01 13:01:33,481 - INFO - Epoch [18/40], Step [400/469], d_loss: 0.6728, g_loss: 2.4162, D(x): 0.79, D(G(z)): 0.23
+2025-11-01 13:01:40,599 - INFO - Epoch [19/40], Step [200/469], d_loss: 0.7193, g_loss: 2.2464, D(x): 0.82, D(G(z)): 0.31
+2025-11-01 13:01:45,882 - INFO - Epoch [19/40], Step [400/469], d_loss: 0.8735, g_loss: 2.5084, D(x): 0.77, D(G(z)): 0.35
+2025-11-01 13:01:47,696 - INFO - Saved checkpoint at epoch 20
+2025-11-01 13:01:52,972 - INFO - Epoch [20/40], Step [200/469], d_loss: 0.7925, g_loss: 2.2208, D(x): 0.79, D(G(z)): 0.31
+2025-11-01 13:01:58,233 - INFO - Epoch [20/40], Step [400/469], d_loss: 0.7460, g_loss: 1.9284, D(x): 0.77, D(G(z)): 0.27
+2025-11-01 13:02:05,365 - INFO - Epoch [21/40], Step [200/469], d_loss: 0.6410, g_loss: 1.8035, D(x): 0.80, D(G(z)): 0.25
+2025-11-01 13:02:10,629 - INFO - Epoch [21/40], Step [400/469], d_loss: 0.8194, g_loss: 1.6794, D(x): 0.74, D(G(z)): 0.23
+2025-11-01 13:02:17,686 - INFO - Epoch [22/40], Step [200/469], d_loss: 0.6130, g_loss: 2.0177, D(x): 0.80, D(G(z)): 0.22
+2025-11-01 13:02:22,885 - INFO - Epoch [22/40], Step [400/469], d_loss: 0.9666, g_loss: 3.1042, D(x): 0.85, D(G(z)): 0.48
+2025-11-01 13:02:30,235 - INFO - Epoch [23/40], Step [200/469], d_loss: 0.8584, g_loss: 1.6763, D(x): 0.76, D(G(z)): 0.34
+2025-11-01 13:02:35,407 - INFO - Epoch [23/40], Step [400/469], d_loss: 0.8616, g_loss: 2.4952, D(x): 0.81, D(G(z)): 0.40
+2025-11-01 13:02:42,478 - INFO - Epoch [24/40], Step [200/469], d_loss: 0.8825, g_loss: 2.1890, D(x): 0.80, D(G(z)): 0.41
+2025-11-01 13:02:47,722 - INFO - Epoch [24/40], Step [400/469], d_loss: 0.8949, g_loss: 1.3251, D(x): 0.68, D(G(z)): 0.20
+2025-11-01 13:02:54,788 - INFO - Epoch [25/40], Step [200/469], d_loss: 0.8363, g_loss: 2.5209, D(x): 0.86, D(G(z)): 0.44
+2025-11-01 13:03:00,010 - INFO - Epoch [25/40], Step [400/469], d_loss: 0.8018, g_loss: 1.8194, D(x): 0.73, D(G(z)): 0.24
+2025-11-01 13:03:07,062 - INFO - Epoch [26/40], Step [200/469], d_loss: 0.8637, g_loss: 1.3816, D(x): 0.65, D(G(z)): 0.15
+2025-11-01 13:03:12,326 - INFO - Epoch [26/40], Step [400/469], d_loss: 0.8044, g_loss: 2.2538, D(x): 0.81, D(G(z)): 0.36
+2025-11-01 13:03:19,430 - INFO - Epoch [27/40], Step [200/469], d_loss: 0.9477, g_loss: 1.4801, D(x): 0.62, D(G(z)): 0.13
+2025-11-01 13:03:24,640 - INFO - Epoch [27/40], Step [400/469], d_loss: 0.8449, g_loss: 2.5871, D(x): 0.81, D(G(z)): 0.39
+2025-11-01 13:03:31,700 - INFO - Epoch [28/40], Step [200/469], d_loss: 0.6958, g_loss: 1.7244, D(x): 0.73, D(G(z)): 0.19
+2025-11-01 13:03:36,926 - INFO - Epoch [28/40], Step [400/469], d_loss: 0.7413, g_loss: 1.7333, D(x): 0.73, D(G(z)): 0.22
+2025-11-01 13:03:43,942 - INFO - Epoch [29/40], Step [200/469], d_loss: 0.5945, g_loss: 2.3779, D(x): 0.82, D(G(z)): 0.26
+2025-11-01 13:03:49,135 - INFO - Epoch [29/40], Step [400/469], d_loss: 0.7224, g_loss: 1.6119, D(x): 0.74, D(G(z)): 0.23
+2025-11-01 13:03:50,928 - INFO - Saved checkpoint at epoch 30
+2025-11-01 13:03:56,187 - INFO - Epoch [30/40], Step [200/469], d_loss: 0.7947, g_loss: 1.6344, D(x): 0.74, D(G(z)): 0.24
+2025-11-01 13:04:01,418 - INFO - Epoch [30/40], Step [400/469], d_loss: 0.8746, g_loss: 1.5685, D(x): 0.73, D(G(z)): 0.28
+2025-11-01 13:04:08,509 - INFO - Epoch [31/40], Step [200/469], d_loss: 0.8692, g_loss: 1.4954, D(x): 0.70, D(G(z)): 0.26
+2025-11-01 13:04:13,744 - INFO - Epoch [31/40], Step [400/469], d_loss: 0.8564, g_loss: 2.2495, D(x): 0.82, D(G(z)): 0.40
+2025-11-01 13:04:20,847 - INFO - Epoch [32/40], Step [200/469], d_loss: 0.9579, g_loss: 1.3987, D(x): 0.63, D(G(z)): 0.20
+2025-11-01 13:04:26,088 - INFO - Epoch [32/40], Step [400/469], d_loss: 0.9105, g_loss: 1.5940, D(x): 0.69, D(G(z)): 0.28
+2025-11-01 13:04:33,151 - INFO - Epoch [33/40], Step [200/469], d_loss: 0.7544, g_loss: 1.5091, D(x): 0.74, D(G(z)): 0.28
+2025-11-01 13:04:38,366 - INFO - Epoch [33/40], Step [400/469], d_loss: 0.8238, g_loss: 1.6053, D(x): 0.73, D(G(z)): 0.26
+2025-11-01 13:04:45,414 - INFO - Epoch [34/40], Step [200/469], d_loss: 0.8964, g_loss: 1.6481, D(x): 0.66, D(G(z)): 0.17
+2025-11-01 13:04:50,642 - INFO - Epoch [34/40], Step [400/469], d_loss: 0.8681, g_loss: 1.4795, D(x): 0.73, D(G(z)): 0.31
+2025-11-01 13:04:57,731 - INFO - Epoch [35/40], Step [200/469], d_loss: 0.8638, g_loss: 1.5164, D(x): 0.73, D(G(z)): 0.31
+2025-11-01 13:05:03,010 - INFO - Epoch [35/40], Step [400/469], d_loss: 0.8257, g_loss: 1.4980, D(x): 0.70, D(G(z)): 0.22
+2025-11-01 13:05:10,097 - INFO - Epoch [36/40], Step [200/469], d_loss: 0.8797, g_loss: 2.0681, D(x): 0.76, D(G(z)): 0.36
+2025-11-01 13:05:15,324 - INFO - Epoch [36/40], Step [400/469], d_loss: 0.9031, g_loss: 2.3768, D(x): 0.82, D(G(z)): 0.43
+2025-11-01 13:05:22,479 - INFO - Epoch [37/40], Step [200/469], d_loss: 0.8344, g_loss: 1.8996, D(x): 0.76, D(G(z)): 0.35
+2025-11-01 13:05:27,843 - INFO - Epoch [37/40], Step [400/469], d_loss: 0.8242, g_loss: 1.6784, D(x): 0.72, D(G(z)): 0.28
+2025-11-01 13:05:34,886 - INFO - Epoch [38/40], Step [200/469], d_loss: 0.8864, g_loss: 1.9388, D(x): 0.74, D(G(z)): 0.33
+2025-11-01 13:05:40,094 - INFO - Epoch [38/40], Step [400/469], d_loss: 0.8306, g_loss: 1.8093, D(x): 0.76, D(G(z)): 0.32
+2025-11-01 13:05:47,286 - INFO - Epoch [39/40], Step [200/469], d_loss: 0.8453, g_loss: 1.6596, D(x): 0.75, D(G(z)): 0.35
+2025-11-01 13:05:52,564 - INFO - Epoch [39/40], Step [400/469], d_loss: 0.7588, g_loss: 1.4356, D(x): 0.75, D(G(z)): 0.28
+2025-11-01 13:05:54,385 - INFO - Saved checkpoint at epoch 40
+2025-11-01 13:05:54,935 - INFO - Calculating FID score...
+2025-11-01 13:05:56,939 - INFO - Analyzing latent space...
+2025-11-01 13:05:56,990 - INFO - Saved final models to saved_models
+2025-11-01 13:05:56,991 - INFO - Experiment exp5_tanh_activation completed. FID: 714.56
+2025-11-01 13:05:56,991 - INFO - Starting experiment: exp6_higher_lr
+2025-11-01 13:05:56,991 - INFO - Config: {'lr': 0.001, 'description': 'Training: Higher learning rate (1e-3)'}
+2025-11-01 13:06:02,290 - INFO - Epoch [0/40], Step [200/469], d_loss: 0.5425, g_loss: 4.0766, D(x): 0.99, D(G(z)): 0.39
+2025-11-01 13:06:07,551 - INFO - Epoch [0/40], Step [400/469], d_loss: 0.9412, g_loss: 2.8283, D(x): 0.80, D(G(z)): 0.44
+2025-11-01 13:06:14,735 - INFO - Epoch [1/40], Step [200/469], d_loss: 1.8161, g_loss: 1.9041, D(x): 0.54, D(G(z)): 0.25
+2025-11-01 13:06:20,035 - INFO - Epoch [1/40], Step [400/469], d_loss: 1.0240, g_loss: 1.2906, D(x): 0.64, D(G(z)): 0.31
+2025-11-01 13:06:27,153 - INFO - Epoch [2/40], Step [200/469], d_loss: 1.2154, g_loss: 1.4852, D(x): 0.61, D(G(z)): 0.41
+2025-11-01 13:06:32,417 - INFO - Epoch [2/40], Step [400/469], d_loss: 1.2061, g_loss: 1.2155, D(x): 0.60, D(G(z)): 0.42
+2025-11-01 13:06:39,554 - INFO - Epoch [3/40], Step [200/469], d_loss: 1.1258, g_loss: 1.0679, D(x): 0.53, D(G(z)): 0.31
+2025-11-01 13:06:44,820 - INFO - Epoch [3/40], Step [400/469], d_loss: 1.2261, g_loss: 1.2172, D(x): 0.63, D(G(z)): 0.49
+2025-11-01 13:06:51,951 - INFO - Epoch [4/40], Step [200/469], d_loss: 1.2671, g_loss: 1.0899, D(x): 0.65, D(G(z)): 0.50
+2025-11-01 13:06:57,240 - INFO - Epoch [4/40], Step [400/469], d_loss: 1.2207, g_loss: 1.2643, D(x): 0.55, D(G(z)): 0.40
+2025-11-01 13:07:04,405 - INFO - Epoch [5/40], Step [200/469], d_loss: 1.2692, g_loss: 0.8701, D(x): 0.53, D(G(z)): 0.40
+2025-11-01 13:07:09,683 - INFO - Epoch [5/40], Step [400/469], d_loss: 1.1858, g_loss: 0.8353, D(x): 0.54, D(G(z)): 0.38
+2025-11-01 13:07:16,781 - INFO - Epoch [6/40], Step [200/469], d_loss: 1.3179, g_loss: 0.6195, D(x): 0.45, D(G(z)): 0.33
+2025-11-01 13:07:22,025 - INFO - Epoch [6/40], Step [400/469], d_loss: 1.2304, g_loss: 1.0201, D(x): 0.53, D(G(z)): 0.38
+2025-11-01 13:07:29,096 - INFO - Epoch [7/40], Step [200/469], d_loss: 1.3582, g_loss: 0.9399, D(x): 0.50, D(G(z)): 0.40
+2025-11-01 13:07:34,346 - INFO - Epoch [7/40], Step [400/469], d_loss: 1.2606, g_loss: 0.9854, D(x): 0.58, D(G(z)): 0.45
+2025-11-01 13:07:41,385 - INFO - Epoch [8/40], Step [200/469], d_loss: 1.2282, g_loss: 1.0958, D(x): 0.60, D(G(z)): 0.48
+2025-11-01 13:07:46,637 - INFO - Epoch [8/40], Step [400/469], d_loss: 1.2858, g_loss: 0.8092, D(x): 0.52, D(G(z)): 0.42
+2025-11-01 13:07:53,727 - INFO - Epoch [9/40], Step [200/469], d_loss: 1.3087, g_loss: 1.0269, D(x): 0.55, D(G(z)): 0.46
+2025-11-01 13:07:58,984 - INFO - Epoch [9/40], Step [400/469], d_loss: 1.2922, g_loss: 0.8474, D(x): 0.47, D(G(z)): 0.38
+2025-11-01 13:08:00,795 - INFO - Saved checkpoint at epoch 10
+2025-11-01 13:08:06,084 - INFO - Epoch [10/40], Step [200/469], d_loss: 1.2744, g_loss: 0.9666, D(x): 0.52, D(G(z)): 0.41
+2025-11-01 13:08:11,353 - INFO - Epoch [10/40], Step [400/469], d_loss: 1.2916, g_loss: 1.0915, D(x): 0.57, D(G(z)): 0.47
+2025-11-01 13:08:18,481 - INFO - Epoch [11/40], Step [200/469], d_loss: 1.2887, g_loss: 0.7617, D(x): 0.51, D(G(z)): 0.41
+2025-11-01 13:08:23,750 - INFO - Epoch [11/40], Step [400/469], d_loss: 1.3317, g_loss: 0.8337, D(x): 0.52, D(G(z)): 0.44
+2025-11-01 13:08:30,861 - INFO - Epoch [12/40], Step [200/469], d_loss: 1.2875, g_loss: 1.0131, D(x): 0.57, D(G(z)): 0.46
+2025-11-01 13:08:36,161 - INFO - Epoch [12/40], Step [400/469], d_loss: 1.2624, g_loss: 0.8989, D(x): 0.56, D(G(z)): 0.46
+2025-11-01 13:08:43,217 - INFO - Epoch [13/40], Step [200/469], d_loss: 1.2716, g_loss: 0.9132, D(x): 0.49, D(G(z)): 0.38
+2025-11-01 13:08:48,491 - INFO - Epoch [13/40], Step [400/469], d_loss: 1.2772, g_loss: 0.9143, D(x): 0.52, D(G(z)): 0.43
+2025-11-01 13:08:55,617 - INFO - Epoch [14/40], Step [200/469], d_loss: 1.2956, g_loss: 0.8001, D(x): 0.55, D(G(z)): 0.46
+2025-11-01 13:09:00,927 - INFO - Epoch [14/40], Step [400/469], d_loss: 1.3476, g_loss: 0.8612, D(x): 0.50, D(G(z)): 0.45
+2025-11-01 13:09:08,132 - INFO - Epoch [15/40], Step [200/469], d_loss: 1.2592, g_loss: 0.8566, D(x): 0.59, D(G(z)): 0.49
+2025-11-01 13:09:13,453 - INFO - Epoch [15/40], Step [400/469], d_loss: 1.2651, g_loss: 0.9322, D(x): 0.59, D(G(z)): 0.49
+2025-11-01 13:09:20,609 - INFO - Epoch [16/40], Step [200/469], d_loss: 1.3189, g_loss: 0.7973, D(x): 0.57, D(G(z)): 0.50
+2025-11-01 13:09:25,913 - INFO - Epoch [16/40], Step [400/469], d_loss: 1.3304, g_loss: 0.8389, D(x): 0.53, D(G(z)): 0.47
+2025-11-01 13:09:33,309 - INFO - Epoch [17/40], Step [200/469], d_loss: 1.2662, g_loss: 0.8899, D(x): 0.54, D(G(z)): 0.46
+2025-11-01 13:09:38,687 - INFO - Epoch [17/40], Step [400/469], d_loss: 1.3159, g_loss: 0.7461, D(x): 0.49, D(G(z)): 0.42
+2025-11-01 13:09:45,935 - INFO - Epoch [18/40], Step [200/469], d_loss: 1.2970, g_loss: 0.8930, D(x): 0.55, D(G(z)): 0.47
+2025-11-01 13:09:51,248 - INFO - Epoch [18/40], Step [400/469], d_loss: 1.2946, g_loss: 0.8588, D(x): 0.52, D(G(z)): 0.43
+2025-11-01 13:09:58,451 - INFO - Epoch [19/40], Step [200/469], d_loss: 1.3280, g_loss: 0.7732, D(x): 0.52, D(G(z)): 0.47
+2025-11-01 13:10:03,765 - INFO - Epoch [19/40], Step [400/469], d_loss: 1.3067, g_loss: 0.9313, D(x): 0.57, D(G(z)): 0.50
+2025-11-01 13:10:05,603 - INFO - Saved checkpoint at epoch 20
+2025-11-01 13:10:10,930 - INFO - Epoch [20/40], Step [200/469], d_loss: 1.2930, g_loss: 0.6859, D(x): 0.53, D(G(z)): 0.45
+2025-11-01 13:10:16,241 - INFO - Epoch [20/40], Step [400/469], d_loss: 1.3148, g_loss: 0.7181, D(x): 0.49, D(G(z)): 0.43
+2025-11-01 13:10:23,390 - INFO - Epoch [21/40], Step [200/469], d_loss: 1.3260, g_loss: 0.9591, D(x): 0.55, D(G(z)): 0.51
+2025-11-01 13:10:28,721 - INFO - Epoch [21/40], Step [400/469], d_loss: 1.4094, g_loss: 0.7178, D(x): 0.50, D(G(z)): 0.48
+2025-11-01 13:10:35,833 - INFO - Epoch [22/40], Step [200/469], d_loss: 1.3458, g_loss: 0.9618, D(x): 0.55, D(G(z)): 0.51
+2025-11-01 13:10:41,133 - INFO - Epoch [22/40], Step [400/469], d_loss: 1.3028, g_loss: 0.9038, D(x): 0.57, D(G(z)): 0.50
+2025-11-01 13:10:48,284 - INFO - Epoch [23/40], Step [200/469], d_loss: 1.3068, g_loss: 0.8337, D(x): 0.53, D(G(z)): 0.47
+2025-11-01 13:10:53,594 - INFO - Epoch [23/40], Step [400/469], d_loss: 1.3618, g_loss: 0.7292, D(x): 0.47, D(G(z)): 0.42
+2025-11-01 13:11:00,877 - INFO - Epoch [24/40], Step [200/469], d_loss: 1.2543, g_loss: 0.6987, D(x): 0.53, D(G(z)): 0.44
+2025-11-01 13:11:06,222 - INFO - Epoch [24/40], Step [400/469], d_loss: 1.3105, g_loss: 0.7504, D(x): 0.52, D(G(z)): 0.46
+2025-11-01 13:11:13,466 - INFO - Epoch [25/40], Step [200/469], d_loss: 1.3510, g_loss: 0.8253, D(x): 0.52, D(G(z)): 0.48
+2025-11-01 13:11:18,655 - INFO - Epoch [25/40], Step [400/469], d_loss: 1.3547, g_loss: 0.6832, D(x): 0.53, D(G(z)): 0.49
+2025-11-01 13:11:25,790 - INFO - Epoch [26/40], Step [200/469], d_loss: 1.3365, g_loss: 0.8281, D(x): 0.50, D(G(z)): 0.45
+2025-11-01 13:11:31,071 - INFO - Epoch [26/40], Step [400/469], d_loss: 1.3232, g_loss: 0.7381, D(x): 0.51, D(G(z)): 0.45
+2025-11-01 13:11:38,175 - INFO - Epoch [27/40], Step [200/469], d_loss: 1.3651, g_loss: 0.8928, D(x): 0.58, D(G(z)): 0.53
+2025-11-01 13:11:43,485 - INFO - Epoch [27/40], Step [400/469], d_loss: 1.3709, g_loss: 1.0944, D(x): 0.59, D(G(z)): 0.55
+2025-11-01 13:11:50,652 - INFO - Epoch [28/40], Step [200/469], d_loss: 1.2852, g_loss: 0.8021, D(x): 0.52, D(G(z)): 0.44
+2025-11-01 13:11:55,961 - INFO - Epoch [28/40], Step [400/469], d_loss: 1.3606, g_loss: 0.7977, D(x): 0.51, D(G(z)): 0.46
+2025-11-01 13:12:03,323 - INFO - Epoch [29/40], Step [200/469], d_loss: 1.3997, g_loss: 0.8564, D(x): 0.52, D(G(z)): 0.49
+2025-11-01 13:12:08,638 - INFO - Epoch [29/40], Step [400/469], d_loss: 1.3755, g_loss: 0.7646, D(x): 0.53, D(G(z)): 0.50
+2025-11-01 13:12:10,469 - INFO - Saved checkpoint at epoch 30
+2025-11-01 13:12:15,782 - INFO - Epoch [30/40], Step [200/469], d_loss: 1.3245, g_loss: 0.8494, D(x): 0.54, D(G(z)): 0.48
+2025-11-01 13:12:21,072 - INFO - Epoch [30/40], Step [400/469], d_loss: 1.3498, g_loss: 0.7695, D(x): 0.53, D(G(z)): 0.49
+2025-11-01 13:12:28,184 - INFO - Epoch [31/40], Step [200/469], d_loss: 1.3534, g_loss: 0.8395, D(x): 0.53, D(G(z)): 0.48
+2025-11-01 13:12:33,889 - INFO - Epoch [31/40], Step [400/469], d_loss: 1.3590, g_loss: 0.9120, D(x): 0.58, D(G(z)): 0.53
+2025-11-01 13:12:42,371 - INFO - Epoch [32/40], Step [200/469], d_loss: 1.3959, g_loss: 0.8321, D(x): 0.50, D(G(z)): 0.48
+2025-11-01 13:12:48,659 - INFO - Epoch [32/40], Step [400/469], d_loss: 1.3640, g_loss: 0.7652, D(x): 0.53, D(G(z)): 0.49
+2025-11-01 13:12:57,134 - INFO - Epoch [33/40], Step [200/469], d_loss: 1.3448, g_loss: 0.7543, D(x): 0.56, D(G(z)): 0.52
+2025-11-01 13:13:03,399 - INFO - Epoch [33/40], Step [400/469], d_loss: 1.3241, g_loss: 0.7636, D(x): 0.51, D(G(z)): 0.45
+2025-11-01 13:13:11,875 - INFO - Epoch [34/40], Step [200/469], d_loss: 1.3489, g_loss: 0.8455, D(x): 0.52, D(G(z)): 0.48
+2025-11-01 13:13:18,181 - INFO - Epoch [34/40], Step [400/469], d_loss: 1.3190, g_loss: 0.8428, D(x): 0.54, D(G(z)): 0.49
+2025-11-01 13:13:26,108 - INFO - Epoch [35/40], Step [200/469], d_loss: 1.3447, g_loss: 0.8712, D(x): 0.50, D(G(z)): 0.46
+2025-11-01 13:13:31,441 - INFO - Epoch [35/40], Step [400/469], d_loss: 1.3745, g_loss: 0.8099, D(x): 0.48, D(G(z)): 0.45
+2025-11-01 13:13:38,563 - INFO - Epoch [36/40], Step [200/469], d_loss: 1.3473, g_loss: 0.8463, D(x): 0.55, D(G(z)): 0.50
+2025-11-01 13:13:43,847 - INFO - Epoch [36/40], Step [400/469], d_loss: 1.3643, g_loss: 0.8155, D(x): 0.52, D(G(z)): 0.49
+2025-11-01 13:13:50,964 - INFO - Epoch [37/40], Step [200/469], d_loss: 1.3327, g_loss: 0.7327, D(x): 0.48, D(G(z)): 0.43
+2025-11-01 13:13:56,234 - INFO - Epoch [37/40], Step [400/469], d_loss: 1.3722, g_loss: 0.7943, D(x): 0.50, D(G(z)): 0.48
+2025-11-01 13:14:03,338 - INFO - Epoch [38/40], Step [200/469], d_loss: 1.3350, g_loss: 0.8440, D(x): 0.57, D(G(z)): 0.52
+2025-11-01 13:14:08,592 - INFO - Epoch [38/40], Step [400/469], d_loss: 1.3438, g_loss: 0.8289, D(x): 0.49, D(G(z)): 0.44
+2025-11-01 13:14:15,698 - INFO - Epoch [39/40], Step [200/469], d_loss: 1.3247, g_loss: 0.7666, D(x): 0.49, D(G(z)): 0.44
+2025-11-01 13:14:20,928 - INFO - Epoch [39/40], Step [400/469], d_loss: 1.3883, g_loss: 0.8442, D(x): 0.53, D(G(z)): 0.50
+2025-11-01 13:14:22,742 - INFO - Saved checkpoint at epoch 40
+2025-11-01 13:14:23,312 - INFO - Calculating FID score...
+2025-11-01 13:14:25,317 - INFO - Analyzing latent space...
+2025-11-01 13:14:25,362 - INFO - Saved final models to saved_models
+2025-11-01 13:14:25,362 - INFO - Experiment exp6_higher_lr completed. FID: 634.20
+2025-11-01 13:14:25,368 - INFO - Starting experiment: exp7_more_epochs
+2025-11-01 13:14:25,368 - INFO - Config: {'num_epochs': 80, 'lr': 0.0001, 'description': 'Training: More epochs (80) with lower LR'}
+2025-11-01 13:14:30,683 - INFO - Epoch [0/80], Step [200/469], d_loss: 0.6992, g_loss: 1.1194, D(x): 0.89, D(G(z)): 0.43
+2025-11-01 13:14:35,919 - INFO - Epoch [0/80], Step [400/469], d_loss: 0.2953, g_loss: 2.0726, D(x): 0.94, D(G(z)): 0.20
+2025-11-01 13:14:43,082 - INFO - Epoch [1/80], Step [200/469], d_loss: 0.2408, g_loss: 3.1029, D(x): 0.94, D(G(z)): 0.14
+2025-11-01 13:14:48,536 - INFO - Epoch [1/80], Step [400/469], d_loss: 0.2090, g_loss: 3.4755, D(x): 0.93, D(G(z)): 0.10
+2025-11-01 13:14:55,878 - INFO - Epoch [2/80], Step [200/469], d_loss: 0.4429, g_loss: 2.8064, D(x): 0.84, D(G(z)): 0.11
+2025-11-01 13:15:01,150 - INFO - Epoch [2/80], Step [400/469], d_loss: 0.2102, g_loss: 4.0664, D(x): 0.95, D(G(z)): 0.13
+2025-11-01 13:15:08,297 - INFO - Epoch [3/80], Step [200/469], d_loss: 0.2937, g_loss: 3.1702, D(x): 0.87, D(G(z)): 0.07
+2025-11-01 13:15:13,663 - INFO - Epoch [3/80], Step [400/469], d_loss: 0.1561, g_loss: 4.2089, D(x): 0.97, D(G(z)): 0.10
+2025-11-01 13:15:20,901 - INFO - Epoch [4/80], Step [200/469], d_loss: 0.3381, g_loss: 3.9536, D(x): 0.89, D(G(z)): 0.09
+2025-11-01 13:15:26,244 - INFO - Epoch [4/80], Step [400/469], d_loss: 0.1788, g_loss: 4.1117, D(x): 0.94, D(G(z)): 0.08
+2025-11-01 13:15:33,496 - INFO - Epoch [5/80], Step [200/469], d_loss: 0.2850, g_loss: 5.5160, D(x): 0.94, D(G(z)): 0.17
+2025-11-01 13:15:38,841 - INFO - Epoch [5/80], Step [400/469], d_loss: 0.2954, g_loss: 5.7566, D(x): 0.97, D(G(z)): 0.21
+2025-11-01 13:15:46,033 - INFO - Epoch [6/80], Step [200/469], d_loss: 0.2368, g_loss: 4.0028, D(x): 0.93, D(G(z)): 0.09
+2025-11-01 13:15:51,346 - INFO - Epoch [6/80], Step [400/469], d_loss: 0.2608, g_loss: 3.1267, D(x): 0.90, D(G(z)): 0.05
+2025-11-01 13:15:58,435 - INFO - Epoch [7/80], Step [200/469], d_loss: 0.2668, g_loss: 4.2569, D(x): 0.93, D(G(z)): 0.14
+2025-11-01 13:16:03,734 - INFO - Epoch [7/80], Step [400/469], d_loss: 0.4682, g_loss: 5.2476, D(x): 0.83, D(G(z)): 0.01
+2025-11-01 13:16:10,837 - INFO - Epoch [8/80], Step [200/469], d_loss: 0.2914, g_loss: 3.0075, D(x): 0.89, D(G(z)): 0.07
+2025-11-01 13:16:16,118 - INFO - Epoch [8/80], Step [400/469], d_loss: 0.3369, g_loss: 4.0431, D(x): 0.92, D(G(z)): 0.13
+2025-11-01 13:16:23,215 - INFO - Epoch [9/80], Step [200/469], d_loss: 0.3652, g_loss: 3.5753, D(x): 0.87, D(G(z)): 0.07
+2025-11-01 13:16:28,471 - INFO - Epoch [9/80], Step [400/469], d_loss: 0.4595, g_loss: 3.8192, D(x): 0.88, D(G(z)): 0.16
+2025-11-01 13:16:30,240 - INFO - Saved checkpoint at epoch 10
+2025-11-01 13:16:35,520 - INFO - Epoch [10/80], Step [200/469], d_loss: 0.3551, g_loss: 3.8424, D(x): 0.87, D(G(z)): 0.03
+2025-11-01 13:16:40,782 - INFO - Epoch [10/80], Step [400/469], d_loss: 0.3298, g_loss: 3.8807, D(x): 0.91, D(G(z)): 0.16
+2025-11-01 13:16:47,859 - INFO - Epoch [11/80], Step [200/469], d_loss: 0.4632, g_loss: 3.1516, D(x): 0.82, D(G(z)): 0.03
+2025-11-01 13:16:53,150 - INFO - Epoch [11/80], Step [400/469], d_loss: 0.4058, g_loss: 4.0065, D(x): 0.88, D(G(z)): 0.13
+2025-11-01 13:17:00,398 - INFO - Epoch [12/80], Step [200/469], d_loss: 0.4867, g_loss: 2.8653, D(x): 0.86, D(G(z)): 0.17
+2025-11-01 13:17:05,725 - INFO - Epoch [12/80], Step [400/469], d_loss: 0.4155, g_loss: 2.7093, D(x): 0.84, D(G(z)): 0.08
+2025-11-01 13:17:12,896 - INFO - Epoch [13/80], Step [200/469], d_loss: 0.4144, g_loss: 2.6443, D(x): 0.83, D(G(z)): 0.06
+2025-11-01 13:17:18,211 - INFO - Epoch [13/80], Step [400/469], d_loss: 0.4032, g_loss: 3.0411, D(x): 0.86, D(G(z)): 0.10
+2025-11-01 13:17:25,381 - INFO - Epoch [14/80], Step [200/469], d_loss: 0.4494, g_loss: 2.7425, D(x): 0.86, D(G(z)): 0.15
+2025-11-01 13:17:31,076 - INFO - Epoch [14/80], Step [400/469], d_loss: 0.4566, g_loss: 3.0792, D(x): 0.83, D(G(z)): 0.09
+2025-11-01 13:17:38,279 - INFO - Epoch [15/80], Step [200/469], d_loss: 0.3584, g_loss: 3.2937, D(x): 0.85, D(G(z)): 0.09
+2025-11-01 13:17:43,632 - INFO - Epoch [15/80], Step [400/469], d_loss: 0.4150, g_loss: 2.9171, D(x): 0.85, D(G(z)): 0.12
+2025-11-01 13:17:50,817 - INFO - Epoch [16/80], Step [200/469], d_loss: 0.5514, g_loss: 2.9362, D(x): 0.82, D(G(z)): 0.15
+2025-11-01 13:17:56,148 - INFO - Epoch [16/80], Step [400/469], d_loss: 0.4063, g_loss: 2.8952, D(x): 0.84, D(G(z)): 0.11
+2025-11-01 13:18:03,281 - INFO - Epoch [17/80], Step [200/469], d_loss: 0.5383, g_loss: 3.2387, D(x): 0.83, D(G(z)): 0.20
+2025-11-01 13:18:08,586 - INFO - Epoch [17/80], Step [400/469], d_loss: 0.3969, g_loss: 2.7371, D(x): 0.87, D(G(z)): 0.15
+2025-11-01 13:18:15,669 - INFO - Epoch [18/80], Step [200/469], d_loss: 0.3737, g_loss: 3.0870, D(x): 0.89, D(G(z)): 0.13
+2025-11-01 13:18:20,935 - INFO - Epoch [18/80], Step [400/469], d_loss: 0.4942, g_loss: 3.8628, D(x): 0.88, D(G(z)): 0.21
+2025-11-01 13:18:28,025 - INFO - Epoch [19/80], Step [200/469], d_loss: 0.5114, g_loss: 2.4026, D(x): 0.79, D(G(z)): 0.10
+2025-11-01 13:18:33,249 - INFO - Epoch [19/80], Step [400/469], d_loss: 0.6096, g_loss: 2.7031, D(x): 0.83, D(G(z)): 0.20
+2025-11-01 13:18:35,071 - INFO - Saved checkpoint at epoch 20
+2025-11-01 13:18:40,413 - INFO - Epoch [20/80], Step [200/469], d_loss: 0.7594, g_loss: 2.1842, D(x): 0.76, D(G(z)): 0.14
+2025-11-01 13:18:45,673 - INFO - Epoch [20/80], Step [400/469], d_loss: 0.5877, g_loss: 3.1545, D(x): 0.88, D(G(z)): 0.29
+2025-11-01 13:18:52,786 - INFO - Epoch [21/80], Step [200/469], d_loss: 0.5533, g_loss: 2.0475, D(x): 0.80, D(G(z)): 0.15
+2025-11-01 13:18:58,049 - INFO - Epoch [21/80], Step [400/469], d_loss: 0.6958, g_loss: 3.0997, D(x): 0.86, D(G(z)): 0.32
+2025-11-01 13:19:05,171 - INFO - Epoch [22/80], Step [200/469], d_loss: 0.5921, g_loss: 3.4327, D(x): 0.87, D(G(z)): 0.22
+2025-11-01 13:19:10,430 - INFO - Epoch [22/80], Step [400/469], d_loss: 0.6225, g_loss: 2.7341, D(x): 0.83, D(G(z)): 0.20
+2025-11-01 13:19:17,611 - INFO - Epoch [23/80], Step [200/469], d_loss: 0.6792, g_loss: 1.5366, D(x): 0.76, D(G(z)): 0.14
+2025-11-01 13:19:22,917 - INFO - Epoch [23/80], Step [400/469], d_loss: 0.5178, g_loss: 2.1549, D(x): 0.79, D(G(z)): 0.14
+2025-11-01 13:19:30,106 - INFO - Epoch [24/80], Step [200/469], d_loss: 0.5668, g_loss: 2.0464, D(x): 0.76, D(G(z)): 0.13
+2025-11-01 13:19:35,392 - INFO - Epoch [24/80], Step [400/469], d_loss: 0.7207, g_loss: 1.5788, D(x): 0.75, D(G(z)): 0.17
+2025-11-01 13:19:42,554 - INFO - Epoch [25/80], Step [200/469], d_loss: 0.4721, g_loss: 3.3883, D(x): 0.88, D(G(z)): 0.21
+2025-11-01 13:19:47,835 - INFO - Epoch [25/80], Step [400/469], d_loss: 0.5313, g_loss: 2.2100, D(x): 0.81, D(G(z)): 0.14
+2025-11-01 13:19:54,944 - INFO - Epoch [26/80], Step [200/469], d_loss: 0.5122, g_loss: 2.3953, D(x): 0.83, D(G(z)): 0.17
+2025-11-01 13:20:00,156 - INFO - Epoch [26/80], Step [400/469], d_loss: 0.7094, g_loss: 3.1381, D(x): 0.84, D(G(z)): 0.30
+2025-11-01 13:20:07,291 - INFO - Epoch [27/80], Step [200/469], d_loss: 0.6165, g_loss: 2.1476, D(x): 0.80, D(G(z)): 0.21
+2025-11-01 13:20:12,522 - INFO - Epoch [27/80], Step [400/469], d_loss: 0.5866, g_loss: 2.4154, D(x): 0.80, D(G(z)): 0.19
+2025-11-01 13:20:19,644 - INFO - Epoch [28/80], Step [200/469], d_loss: 0.6308, g_loss: 1.7757, D(x): 0.75, D(G(z)): 0.13
+2025-11-01 13:20:24,891 - INFO - Epoch [28/80], Step [400/469], d_loss: 0.5222, g_loss: 3.0270, D(x): 0.84, D(G(z)): 0.20
+2025-11-01 13:20:31,995 - INFO - Epoch [29/80], Step [200/469], d_loss: 0.7874, g_loss: 1.3499, D(x): 0.71, D(G(z)): 0.20
+2025-11-01 13:20:37,260 - INFO - Epoch [29/80], Step [400/469], d_loss: 0.5283, g_loss: 1.7901, D(x): 0.82, D(G(z)): 0.20
+2025-11-01 13:20:39,065 - INFO - Saved checkpoint at epoch 30
+2025-11-01 13:20:44,296 - INFO - Epoch [30/80], Step [200/469], d_loss: 0.6890, g_loss: 1.8591, D(x): 0.76, D(G(z)): 0.24
+2025-11-01 13:20:49,499 - INFO - Epoch [30/80], Step [400/469], d_loss: 0.6699, g_loss: 2.1112, D(x): 0.72, D(G(z)): 0.13
+2025-11-01 13:20:56,518 - INFO - Epoch [31/80], Step [200/469], d_loss: 0.7061, g_loss: 2.3533, D(x): 0.71, D(G(z)): 0.11
+2025-11-01 13:21:01,718 - INFO - Epoch [31/80], Step [400/469], d_loss: 0.3950, g_loss: 2.9312, D(x): 0.81, D(G(z)): 0.07
+2025-11-01 13:21:08,957 - INFO - Epoch [32/80], Step [200/469], d_loss: 0.7676, g_loss: 2.9587, D(x): 0.77, D(G(z)): 0.25
+2025-11-01 13:21:14,277 - INFO - Epoch [32/80], Step [400/469], d_loss: 0.5727, g_loss: 2.4751, D(x): 0.77, D(G(z)): 0.09
+2025-11-01 13:21:21,451 - INFO - Epoch [33/80], Step [200/469], d_loss: 0.7332, g_loss: 2.5074, D(x): 0.80, D(G(z)): 0.32
+2025-11-01 13:21:26,738 - INFO - Epoch [33/80], Step [400/469], d_loss: 0.6211, g_loss: 2.2134, D(x): 0.81, D(G(z)): 0.24
+2025-11-01 13:21:33,943 - INFO - Epoch [34/80], Step [200/469], d_loss: 0.7590, g_loss: 1.9967, D(x): 0.71, D(G(z)): 0.15
+2025-11-01 13:21:39,251 - INFO - Epoch [34/80], Step [400/469], d_loss: 0.6767, g_loss: 2.4085, D(x): 0.82, D(G(z)): 0.30
+2025-11-01 13:21:46,368 - INFO - Epoch [35/80], Step [200/469], d_loss: 0.7371, g_loss: 2.0427, D(x): 0.72, D(G(z)): 0.12
+2025-11-01 13:21:51,714 - INFO - Epoch [35/80], Step [400/469], d_loss: 0.6841, g_loss: 1.8851, D(x): 0.76, D(G(z)): 0.22
+2025-11-01 13:21:58,852 - INFO - Epoch [36/80], Step [200/469], d_loss: 0.6842, g_loss: 2.4874, D(x): 0.81, D(G(z)): 0.26
+2025-11-01 13:22:04,141 - INFO - Epoch [36/80], Step [400/469], d_loss: 0.5763, g_loss: 2.0339, D(x): 0.81, D(G(z)): 0.20
+2025-11-01 13:22:11,290 - INFO - Epoch [37/80], Step [200/469], d_loss: 0.7635, g_loss: 2.3798, D(x): 0.78, D(G(z)): 0.27
+2025-11-01 13:22:16,635 - INFO - Epoch [37/80], Step [400/469], d_loss: 0.8231, g_loss: 1.9016, D(x): 0.77, D(G(z)): 0.30
+2025-11-01 13:22:23,782 - INFO - Epoch [38/80], Step [200/469], d_loss: 0.6716, g_loss: 1.8801, D(x): 0.77, D(G(z)): 0.18
+2025-11-01 13:22:29,102 - INFO - Epoch [38/80], Step [400/469], d_loss: 0.7352, g_loss: 2.2435, D(x): 0.76, D(G(z)): 0.25
+2025-11-01 13:22:36,245 - INFO - Epoch [39/80], Step [200/469], d_loss: 0.7082, g_loss: 2.0602, D(x): 0.79, D(G(z)): 0.28
+2025-11-01 13:22:41,588 - INFO - Epoch [39/80], Step [400/469], d_loss: 0.9433, g_loss: 1.3309, D(x): 0.68, D(G(z)): 0.21
+2025-11-01 13:22:43,429 - INFO - Saved checkpoint at epoch 40
+2025-11-01 13:22:48,762 - INFO - Epoch [40/80], Step [200/469], d_loss: 0.9105, g_loss: 1.4073, D(x): 0.66, D(G(z)): 0.19
+2025-11-01 13:22:54,079 - INFO - Epoch [40/80], Step [400/469], d_loss: 0.9423, g_loss: 1.5103, D(x): 0.65, D(G(z)): 0.22
+2025-11-01 13:23:02,140 - INFO - Epoch [41/80], Step [200/469], d_loss: 0.7105, g_loss: 1.7084, D(x): 0.72, D(G(z)): 0.17
+2025-11-01 13:23:07,413 - INFO - Epoch [41/80], Step [400/469], d_loss: 0.7023, g_loss: 1.6078, D(x): 0.72, D(G(z)): 0.17
+2025-11-01 13:23:14,613 - INFO - Epoch [42/80], Step [200/469], d_loss: 0.7220, g_loss: 1.9840, D(x): 0.75, D(G(z)): 0.20
+2025-11-01 13:23:19,905 - INFO - Epoch [42/80], Step [400/469], d_loss: 0.6928, g_loss: 1.4915, D(x): 0.73, D(G(z)): 0.22
+2025-11-01 13:23:27,051 - INFO - Epoch [43/80], Step [200/469], d_loss: 0.7358, g_loss: 1.9138, D(x): 0.79, D(G(z)): 0.31
+2025-11-01 13:23:32,332 - INFO - Epoch [43/80], Step [400/469], d_loss: 0.7477, g_loss: 1.8791, D(x): 0.78, D(G(z)): 0.27
+2025-11-01 13:23:39,483 - INFO - Epoch [44/80], Step [200/469], d_loss: 0.6769, g_loss: 2.0940, D(x): 0.80, D(G(z)): 0.27
+2025-11-01 13:23:44,759 - INFO - Epoch [44/80], Step [400/469], d_loss: 0.8653, g_loss: 1.5188, D(x): 0.65, D(G(z)): 0.14
+2025-11-01 13:23:51,909 - INFO - Epoch [45/80], Step [200/469], d_loss: 0.8600, g_loss: 1.8354, D(x): 0.67, D(G(z)): 0.18
+2025-11-01 13:23:57,237 - INFO - Epoch [45/80], Step [400/469], d_loss: 0.7584, g_loss: 1.6962, D(x): 0.72, D(G(z)): 0.21
+2025-11-01 13:24:04,415 - INFO - Epoch [46/80], Step [200/469], d_loss: 0.7980, g_loss: 1.5698, D(x): 0.74, D(G(z)): 0.27
+2025-11-01 13:24:09,700 - INFO - Epoch [46/80], Step [400/469], d_loss: 1.0255, g_loss: 2.3001, D(x): 0.80, D(G(z)): 0.47
+2025-11-01 13:24:16,815 - INFO - Epoch [47/80], Step [200/469], d_loss: 0.8917, g_loss: 1.6364, D(x): 0.75, D(G(z)): 0.35
+2025-11-01 13:24:23,083 - INFO - Epoch [47/80], Step [400/469], d_loss: 0.8926, g_loss: 1.4322, D(x): 0.68, D(G(z)): 0.24
+2025-11-01 13:24:30,645 - INFO - Epoch [48/80], Step [200/469], d_loss: 0.8485, g_loss: 1.5452, D(x): 0.70, D(G(z)): 0.26
+2025-11-01 13:24:35,913 - INFO - Epoch [48/80], Step [400/469], d_loss: 0.7562, g_loss: 1.6790, D(x): 0.76, D(G(z)): 0.26
+2025-11-01 13:24:43,025 - INFO - Epoch [49/80], Step [200/469], d_loss: 0.7487, g_loss: 1.3481, D(x): 0.70, D(G(z)): 0.17
+2025-11-01 13:24:48,291 - INFO - Epoch [49/80], Step [400/469], d_loss: 0.8937, g_loss: 1.8322, D(x): 0.79, D(G(z)): 0.38
+2025-11-01 13:24:50,112 - INFO - Saved checkpoint at epoch 50
+2025-11-01 13:24:55,396 - INFO - Epoch [50/80], Step [200/469], d_loss: 0.7542, g_loss: 2.0926, D(x): 0.75, D(G(z)): 0.23
+2025-11-01 13:25:00,695 - INFO - Epoch [50/80], Step [400/469], d_loss: 0.8910, g_loss: 1.7398, D(x): 0.68, D(G(z)): 0.22
+2025-11-01 13:25:07,900 - INFO - Epoch [51/80], Step [200/469], d_loss: 0.7380, g_loss: 1.5091, D(x): 0.74, D(G(z)): 0.21
+2025-11-01 13:25:13,206 - INFO - Epoch [51/80], Step [400/469], d_loss: 0.7348, g_loss: 1.8196, D(x): 0.75, D(G(z)): 0.23
+2025-11-01 13:25:20,317 - INFO - Epoch [52/80], Step [200/469], d_loss: 0.8142, g_loss: 1.5883, D(x): 0.73, D(G(z)): 0.30
+2025-11-01 13:25:25,560 - INFO - Epoch [52/80], Step [400/469], d_loss: 0.8431, g_loss: 1.7519, D(x): 0.73, D(G(z)): 0.28
+2025-11-01 13:25:32,676 - INFO - Epoch [53/80], Step [200/469], d_loss: 0.7891, g_loss: 2.0710, D(x): 0.77, D(G(z)): 0.29
+2025-11-01 13:25:37,969 - INFO - Epoch [53/80], Step [400/469], d_loss: 0.8359, g_loss: 1.5219, D(x): 0.74, D(G(z)): 0.29
+2025-11-01 13:25:45,171 - INFO - Epoch [54/80], Step [200/469], d_loss: 0.7140, g_loss: 1.8046, D(x): 0.76, D(G(z)): 0.25
+2025-11-01 13:25:50,428 - INFO - Epoch [54/80], Step [400/469], d_loss: 1.0773, g_loss: 2.0288, D(x): 0.74, D(G(z)): 0.39
+2025-11-01 13:25:57,575 - INFO - Epoch [55/80], Step [200/469], d_loss: 0.7723, g_loss: 1.7939, D(x): 0.77, D(G(z)): 0.31
+2025-11-01 13:26:02,883 - INFO - Epoch [55/80], Step [400/469], d_loss: 0.9729, g_loss: 1.7154, D(x): 0.71, D(G(z)): 0.35
+2025-11-01 13:26:10,034 - INFO - Epoch [56/80], Step [200/469], d_loss: 0.8605, g_loss: 1.5530, D(x): 0.66, D(G(z)): 0.21
+2025-11-01 13:26:15,372 - INFO - Epoch [56/80], Step [400/469], d_loss: 0.7906, g_loss: 1.7513, D(x): 0.73, D(G(z)): 0.24
+2025-11-01 13:26:22,522 - INFO - Epoch [57/80], Step [200/469], d_loss: 0.9108, g_loss: 1.2042, D(x): 0.69, D(G(z)): 0.28
+2025-11-01 13:26:27,845 - INFO - Epoch [57/80], Step [400/469], d_loss: 0.8522, g_loss: 2.0102, D(x): 0.75, D(G(z)): 0.34
+2025-11-01 13:26:34,960 - INFO - Epoch [58/80], Step [200/469], d_loss: 0.9004, g_loss: 1.4378, D(x): 0.65, D(G(z)): 0.21
+2025-11-01 13:26:40,243 - INFO - Epoch [58/80], Step [400/469], d_loss: 0.7855, g_loss: 1.9334, D(x): 0.78, D(G(z)): 0.32
+2025-11-01 13:26:47,404 - INFO - Epoch [59/80], Step [200/469], d_loss: 0.9066, g_loss: 1.8023, D(x): 0.76, D(G(z)): 0.39
+2025-11-01 13:26:52,634 - INFO - Epoch [59/80], Step [400/469], d_loss: 0.7420, g_loss: 1.9873, D(x): 0.76, D(G(z)): 0.27
+2025-11-01 13:26:54,442 - INFO - Saved checkpoint at epoch 60
+2025-11-01 13:26:59,692 - INFO - Epoch [60/80], Step [200/469], d_loss: 0.8650, g_loss: 1.4680, D(x): 0.67, D(G(z)): 0.22
+2025-11-01 13:27:04,959 - INFO - Epoch [60/80], Step [400/469], d_loss: 0.7479, g_loss: 1.8065, D(x): 0.77, D(G(z)): 0.29
+2025-11-01 13:27:12,028 - INFO - Epoch [61/80], Step [200/469], d_loss: 0.8667, g_loss: 1.8952, D(x): 0.77, D(G(z)): 0.38
+2025-11-01 13:27:17,308 - INFO - Epoch [61/80], Step [400/469], d_loss: 0.7544, g_loss: 1.7362, D(x): 0.80, D(G(z)): 0.32
+2025-11-01 13:27:24,398 - INFO - Epoch [62/80], Step [200/469], d_loss: 1.0318, g_loss: 1.2250, D(x): 0.60, D(G(z)): 0.19
+2025-11-01 13:27:29,677 - INFO - Epoch [62/80], Step [400/469], d_loss: 0.7473, g_loss: 1.8402, D(x): 0.77, D(G(z)): 0.29
+2025-11-01 13:27:36,769 - INFO - Epoch [63/80], Step [200/469], d_loss: 0.8357, g_loss: 1.6500, D(x): 0.70, D(G(z)): 0.24
+2025-11-01 13:27:42,021 - INFO - Epoch [63/80], Step [400/469], d_loss: 0.9678, g_loss: 1.7482, D(x): 0.68, D(G(z)): 0.27
+2025-11-01 13:27:49,139 - INFO - Epoch [64/80], Step [200/469], d_loss: 0.8036, g_loss: 1.8909, D(x): 0.77, D(G(z)): 0.34
+2025-11-01 13:27:54,377 - INFO - Epoch [64/80], Step [400/469], d_loss: 0.8947, g_loss: 1.5141, D(x): 0.71, D(G(z)): 0.30
+2025-11-01 13:28:01,430 - INFO - Epoch [65/80], Step [200/469], d_loss: 1.0069, g_loss: 1.8727, D(x): 0.73, D(G(z)): 0.37
+2025-11-01 13:28:06,726 - INFO - Epoch [65/80], Step [400/469], d_loss: 0.8436, g_loss: 1.8398, D(x): 0.74, D(G(z)): 0.30
+2025-11-01 13:28:13,810 - INFO - Epoch [66/80], Step [200/469], d_loss: 0.9168, g_loss: 1.1627, D(x): 0.66, D(G(z)): 0.25
+2025-11-01 13:28:19,087 - INFO - Epoch [66/80], Step [400/469], d_loss: 1.0406, g_loss: 1.7981, D(x): 0.74, D(G(z)): 0.46
+2025-11-01 13:28:26,180 - INFO - Epoch [67/80], Step [200/469], d_loss: 0.8628, g_loss: 1.4445, D(x): 0.67, D(G(z)): 0.25
+2025-11-01 13:28:31,481 - INFO - Epoch [67/80], Step [400/469], d_loss: 0.8388, g_loss: 1.4741, D(x): 0.72, D(G(z)): 0.29
+2025-11-01 13:28:38,617 - INFO - Epoch [68/80], Step [200/469], d_loss: 0.9735, g_loss: 1.9385, D(x): 0.77, D(G(z)): 0.43
+2025-11-01 13:28:43,888 - INFO - Epoch [68/80], Step [400/469], d_loss: 0.8671, g_loss: 1.6809, D(x): 0.73, D(G(z)): 0.34
+2025-11-01 13:28:51,022 - INFO - Epoch [69/80], Step [200/469], d_loss: 0.9780, g_loss: 1.3575, D(x): 0.69, D(G(z)): 0.34
+2025-11-01 13:28:56,271 - INFO - Epoch [69/80], Step [400/469], d_loss: 0.8167, g_loss: 1.5163, D(x): 0.70, D(G(z)): 0.27
+2025-11-01 13:28:58,090 - INFO - Saved checkpoint at epoch 70
+2025-11-01 13:29:03,303 - INFO - Epoch [70/80], Step [200/469], d_loss: 0.7760, g_loss: 1.7505, D(x): 0.78, D(G(z)): 0.32
+2025-11-01 13:29:08,567 - INFO - Epoch [70/80], Step [400/469], d_loss: 0.8454, g_loss: 1.3366, D(x): 0.68, D(G(z)): 0.24
+2025-11-01 13:29:15,640 - INFO - Epoch [71/80], Step [200/469], d_loss: 0.8366, g_loss: 1.1625, D(x): 0.69, D(G(z)): 0.27
+2025-11-01 13:29:20,852 - INFO - Epoch [71/80], Step [400/469], d_loss: 0.9337, g_loss: 1.3491, D(x): 0.70, D(G(z)): 0.32
+2025-11-01 13:29:27,969 - INFO - Epoch [72/80], Step [200/469], d_loss: 0.8694, g_loss: 1.5335, D(x): 0.73, D(G(z)): 0.31
+2025-11-01 13:29:33,257 - INFO - Epoch [72/80], Step [400/469], d_loss: 0.7709, g_loss: 1.6184, D(x): 0.75, D(G(z)): 0.29
+2025-11-01 13:29:40,480 - INFO - Epoch [73/80], Step [200/469], d_loss: 0.9657, g_loss: 1.5168, D(x): 0.67, D(G(z)): 0.31
+2025-11-01 13:29:46,762 - INFO - Epoch [73/80], Step [400/469], d_loss: 1.0186, g_loss: 1.0626, D(x): 0.61, D(G(z)): 0.28
+2025-11-01 13:29:55,159 - INFO - Epoch [74/80], Step [200/469], d_loss: 0.9030, g_loss: 1.4306, D(x): 0.70, D(G(z)): 0.34
+2025-11-01 13:30:01,403 - INFO - Epoch [74/80], Step [400/469], d_loss: 0.9224, g_loss: 1.4227, D(x): 0.72, D(G(z)): 0.36
+2025-11-01 13:30:09,883 - INFO - Epoch [75/80], Step [200/469], d_loss: 0.8369, g_loss: 1.4178, D(x): 0.67, D(G(z)): 0.25
+2025-11-01 13:30:16,140 - INFO - Epoch [75/80], Step [400/469], d_loss: 1.0001, g_loss: 1.5206, D(x): 0.73, D(G(z)): 0.42
+2025-11-01 13:30:24,527 - INFO - Epoch [76/80], Step [200/469], d_loss: 0.8562, g_loss: 1.5167, D(x): 0.70, D(G(z)): 0.29
+2025-11-01 13:30:30,868 - INFO - Epoch [76/80], Step [400/469], d_loss: 0.8780, g_loss: 1.2925, D(x): 0.70, D(G(z)): 0.33
+2025-11-01 13:30:39,317 - INFO - Epoch [77/80], Step [200/469], d_loss: 0.8571, g_loss: 1.3932, D(x): 0.66, D(G(z)): 0.24
+2025-11-01 13:30:45,627 - INFO - Epoch [77/80], Step [400/469], d_loss: 0.9773, g_loss: 1.4698, D(x): 0.71, D(G(z)): 0.40
+2025-11-01 13:30:53,592 - INFO - Epoch [78/80], Step [200/469], d_loss: 0.9221, g_loss: 1.4787, D(x): 0.72, D(G(z)): 0.37
+2025-11-01 13:30:58,878 - INFO - Epoch [78/80], Step [400/469], d_loss: 0.8952, g_loss: 1.2526, D(x): 0.67, D(G(z)): 0.29
+2025-11-01 13:31:05,930 - INFO - Epoch [79/80], Step [200/469], d_loss: 0.9696, g_loss: 1.2613, D(x): 0.68, D(G(z)): 0.36
+2025-11-01 13:31:11,205 - INFO - Epoch [79/80], Step [400/469], d_loss: 0.9203, g_loss: 1.2516, D(x): 0.68, D(G(z)): 0.29
+2025-11-01 13:31:13,018 - INFO - Saved checkpoint at epoch 80
+2025-11-01 13:31:13,597 - INFO - Calculating FID score...
+2025-11-01 13:31:15,567 - INFO - Analyzing latent space...
+2025-11-01 13:31:15,614 - INFO - Saved final models to saved_models
+2025-11-01 13:31:15,614 - INFO - Experiment exp7_more_epochs completed. FID: 672.73
+2025-11-01 13:31:15,620 - INFO - Starting experiment: exp8_mse_loss
+2025-11-01 13:31:15,620 - INFO - Config: {'loss_function': 'mse', 'description': 'Loss: MSE instead of BCE'}
+2025-11-01 13:31:20,884 - INFO - Epoch [0/40], Step [200/469], d_loss: 0.0591, g_loss: 0.6667, D(x): 0.97, D(G(z)): 0.24
+2025-11-01 13:31:26,063 - INFO - Epoch [0/40], Step [400/469], d_loss: 0.0154, g_loss: 0.8991, D(x): 0.97, D(G(z)): 0.09
+2025-11-01 13:31:33,107 - INFO - Epoch [1/40], Step [200/469], d_loss: 0.2558, g_loss: 0.9946, D(x): 0.71, D(G(z)): 0.00
+2025-11-01 13:31:38,329 - INFO - Epoch [1/40], Step [400/469], d_loss: 0.1277, g_loss: 0.9314, D(x): 0.88, D(G(z)): 0.09
+2025-11-01 13:31:45,389 - INFO - Epoch [2/40], Step [200/469], d_loss: 0.1953, g_loss: 0.7925, D(x): 0.71, D(G(z)): 0.10
+2025-11-01 13:31:50,647 - INFO - Epoch [2/40], Step [400/469], d_loss: 0.2291, g_loss: 0.6710, D(x): 0.70, D(G(z)): 0.16
+2025-11-01 13:31:57,798 - INFO - Epoch [3/40], Step [200/469], d_loss: 0.1686, g_loss: 0.7811, D(x): 0.76, D(G(z)): 0.17
+2025-11-01 13:32:03,088 - INFO - Epoch [3/40], Step [400/469], d_loss: 0.1823, g_loss: 0.7902, D(x): 0.83, D(G(z)): 0.30
+2025-11-01 13:32:10,204 - INFO - Epoch [4/40], Step [200/469], d_loss: 0.2613, g_loss: 0.8118, D(x): 0.79, D(G(z)): 0.39
+2025-11-01 13:32:15,453 - INFO - Epoch [4/40], Step [400/469], d_loss: 0.3078, g_loss: 0.9802, D(x): 0.86, D(G(z)): 0.47
+2025-11-01 13:32:22,612 - INFO - Epoch [5/40], Step [200/469], d_loss: 0.2129, g_loss: 0.4763, D(x): 0.70, D(G(z)): 0.11
+2025-11-01 13:32:27,839 - INFO - Epoch [5/40], Step [400/469], d_loss: 0.2129, g_loss: 0.5938, D(x): 0.76, D(G(z)): 0.24
+2025-11-01 13:32:34,906 - INFO - Epoch [6/40], Step [200/469], d_loss: 0.1882, g_loss: 0.8551, D(x): 0.84, D(G(z)): 0.30
+2025-11-01 13:32:40,143 - INFO - Epoch [6/40], Step [400/469], d_loss: 0.3083, g_loss: 0.9347, D(x): 0.84, D(G(z)): 0.45
+2025-11-01 13:32:47,285 - INFO - Epoch [7/40], Step [200/469], d_loss: 0.2315, g_loss: 0.6585, D(x): 0.70, D(G(z)): 0.17
+2025-11-01 13:32:52,508 - INFO - Epoch [7/40], Step [400/469], d_loss: 0.2734, g_loss: 0.6958, D(x): 0.63, D(G(z)): 0.12
+2025-11-01 13:32:59,598 - INFO - Epoch [8/40], Step [200/469], d_loss: 0.2642, g_loss: 0.6884, D(x): 0.67, D(G(z)): 0.21
+2025-11-01 13:33:04,750 - INFO - Epoch [8/40], Step [400/469], d_loss: 0.3038, g_loss: 0.7344, D(x): 0.69, D(G(z)): 0.32
+2025-11-01 13:33:11,824 - INFO - Epoch [9/40], Step [200/469], d_loss: 0.2505, g_loss: 0.6344, D(x): 0.69, D(G(z)): 0.25
+2025-11-01 13:33:17,041 - INFO - Epoch [9/40], Step [400/469], d_loss: 0.3035, g_loss: 0.7034, D(x): 0.68, D(G(z)): 0.34
+2025-11-01 13:33:18,837 - INFO - Saved checkpoint at epoch 10
+2025-11-01 13:33:24,087 - INFO - Epoch [10/40], Step [200/469], d_loss: 0.3069, g_loss: 0.4596, D(x): 0.61, D(G(z)): 0.24
+2025-11-01 13:33:29,429 - INFO - Epoch [10/40], Step [400/469], d_loss: 0.4295, g_loss: 0.6391, D(x): 0.61, D(G(z)): 0.41
+2025-11-01 13:33:36,435 - INFO - Epoch [11/40], Step [200/469], d_loss: 0.3742, g_loss: 0.7941, D(x): 0.76, D(G(z)): 0.49
+2025-11-01 13:33:41,633 - INFO - Epoch [11/40], Step [400/469], d_loss: 0.2577, g_loss: 0.6471, D(x): 0.75, D(G(z)): 0.37
+2025-11-01 13:33:48,609 - INFO - Epoch [12/40], Step [200/469], d_loss: 0.3488, g_loss: 0.5527, D(x): 0.69, D(G(z)): 0.39
+2025-11-01 13:33:53,806 - INFO - Epoch [12/40], Step [400/469], d_loss: 0.3830, g_loss: 0.6203, D(x): 0.67, D(G(z)): 0.42
+2025-11-01 13:34:00,803 - INFO - Epoch [13/40], Step [200/469], d_loss: 0.4179, g_loss: 0.7151, D(x): 0.72, D(G(z)): 0.52
+2025-11-01 13:34:06,027 - INFO - Epoch [13/40], Step [400/469], d_loss: 0.2645, g_loss: 0.5203, D(x): 0.66, D(G(z)): 0.29
+2025-11-01 13:34:13,079 - INFO - Epoch [14/40], Step [200/469], d_loss: 0.2629, g_loss: 0.4555, D(x): 0.66, D(G(z)): 0.25
+2025-11-01 13:34:18,342 - INFO - Epoch [14/40], Step [400/469], d_loss: 0.3726, g_loss: 0.5541, D(x): 0.48, D(G(z)): 0.11
+2025-11-01 13:34:25,555 - INFO - Epoch [15/40], Step [200/469], d_loss: 0.3476, g_loss: 0.5933, D(x): 0.75, D(G(z)): 0.46
+2025-11-01 13:34:30,907 - INFO - Epoch [15/40], Step [400/469], d_loss: 0.3625, g_loss: 0.6433, D(x): 0.68, D(G(z)): 0.41
+2025-11-01 13:34:38,109 - INFO - Epoch [16/40], Step [200/469], d_loss: 0.3667, g_loss: 0.5462, D(x): 0.63, D(G(z)): 0.38
+2025-11-01 13:34:43,416 - INFO - Epoch [16/40], Step [400/469], d_loss: 0.4125, g_loss: 0.6591, D(x): 0.77, D(G(z)): 0.54
+2025-11-01 13:34:50,604 - INFO - Epoch [17/40], Step [200/469], d_loss: 0.3422, g_loss: 0.6076, D(x): 0.65, D(G(z)): 0.36
+2025-11-01 13:34:55,982 - INFO - Epoch [17/40], Step [400/469], d_loss: 0.3258, g_loss: 0.5359, D(x): 0.57, D(G(z)): 0.23
+2025-11-01 13:35:03,165 - INFO - Epoch [18/40], Step [200/469], d_loss: 0.3820, g_loss: 0.4007, D(x): 0.63, D(G(z)): 0.37
+2025-11-01 13:35:08,559 - INFO - Epoch [18/40], Step [400/469], d_loss: 0.3729, g_loss: 0.3447, D(x): 0.51, D(G(z)): 0.22
+2025-11-01 13:35:15,735 - INFO - Epoch [19/40], Step [200/469], d_loss: 0.3621, g_loss: 0.5737, D(x): 0.68, D(G(z)): 0.43
+2025-11-01 13:35:21,076 - INFO - Epoch [19/40], Step [400/469], d_loss: 0.3479, g_loss: 0.5254, D(x): 0.64, D(G(z)): 0.35
+2025-11-01 13:35:22,916 - INFO - Saved checkpoint at epoch 20
+2025-11-01 13:35:28,269 - INFO - Epoch [20/40], Step [200/469], d_loss: 0.3579, g_loss: 0.6130, D(x): 0.65, D(G(z)): 0.39
+2025-11-01 13:35:33,616 - INFO - Epoch [20/40], Step [400/469], d_loss: 0.3697, g_loss: 0.4428, D(x): 0.54, D(G(z)): 0.28
+2025-11-01 13:35:40,785 - INFO - Epoch [21/40], Step [200/469], d_loss: 0.3898, g_loss: 0.5329, D(x): 0.59, D(G(z)): 0.38
+2025-11-01 13:35:46,159 - INFO - Epoch [21/40], Step [400/469], d_loss: 0.3341, g_loss: 0.5507, D(x): 0.71, D(G(z)): 0.42
+2025-11-01 13:35:53,334 - INFO - Epoch [22/40], Step [200/469], d_loss: 0.3394, g_loss: 0.4577, D(x): 0.60, D(G(z)): 0.33
+2025-11-01 13:35:58,701 - INFO - Epoch [22/40], Step [400/469], d_loss: 0.3622, g_loss: 0.6196, D(x): 0.64, D(G(z)): 0.39
+2025-11-01 13:36:05,882 - INFO - Epoch [23/40], Step [200/469], d_loss: 0.3539, g_loss: 0.5211, D(x): 0.67, D(G(z)): 0.41
+2025-11-01 13:36:11,202 - INFO - Epoch [23/40], Step [400/469], d_loss: 0.3175, g_loss: 0.5027, D(x): 0.57, D(G(z)): 0.25
+2025-11-01 13:36:18,513 - INFO - Epoch [24/40], Step [200/469], d_loss: 0.3736, g_loss: 0.5533, D(x): 0.63, D(G(z)): 0.40
+2025-11-01 13:36:23,803 - INFO - Epoch [24/40], Step [400/469], d_loss: 0.3378, g_loss: 0.5989, D(x): 0.65, D(G(z)): 0.36
+2025-11-01 13:36:30,947 - INFO - Epoch [25/40], Step [200/469], d_loss: 0.3661, g_loss: 0.4870, D(x): 0.58, D(G(z)): 0.33
+2025-11-01 13:36:36,271 - INFO - Epoch [25/40], Step [400/469], d_loss: 0.3781, g_loss: 0.4451, D(x): 0.62, D(G(z)): 0.39
+2025-11-01 13:36:43,516 - INFO - Epoch [26/40], Step [200/469], d_loss: 0.4376, g_loss: 0.3796, D(x): 0.50, D(G(z)): 0.31
+2025-11-01 13:36:48,906 - INFO - Epoch [26/40], Step [400/469], d_loss: 0.3916, g_loss: 0.5021, D(x): 0.54, D(G(z)): 0.30
+2025-11-01 13:36:56,128 - INFO - Epoch [27/40], Step [200/469], d_loss: 0.3633, g_loss: 0.5512, D(x): 0.66, D(G(z)): 0.43
+2025-11-01 13:37:01,450 - INFO - Epoch [27/40], Step [400/469], d_loss: 0.3536, g_loss: 0.4234, D(x): 0.60, D(G(z)): 0.36
+2025-11-01 13:37:08,629 - INFO - Epoch [28/40], Step [200/469], d_loss: 0.3949, g_loss: 0.3971, D(x): 0.53, D(G(z)): 0.33
+2025-11-01 13:37:13,936 - INFO - Epoch [28/40], Step [400/469], d_loss: 0.4397, g_loss: 0.5216, D(x): 0.64, D(G(z)): 0.48
+2025-11-01 13:37:21,064 - INFO - Epoch [29/40], Step [200/469], d_loss: 0.3742, g_loss: 0.3873, D(x): 0.55, D(G(z)): 0.33
+2025-11-01 13:37:26,336 - INFO - Epoch [29/40], Step [400/469], d_loss: 0.3797, g_loss: 0.4460, D(x): 0.60, D(G(z)): 0.39
+2025-11-01 13:37:28,156 - INFO - Saved checkpoint at epoch 30
+2025-11-01 13:37:33,680 - INFO - Epoch [30/40], Step [200/469], d_loss: 0.3910, g_loss: 0.4527, D(x): 0.61, D(G(z)): 0.41
+2025-11-01 13:37:39,040 - INFO - Epoch [30/40], Step [400/469], d_loss: 0.3552, g_loss: 0.5104, D(x): 0.68, D(G(z)): 0.44
+2025-11-01 13:37:46,262 - INFO - Epoch [31/40], Step [200/469], d_loss: 0.3704, g_loss: 0.3230, D(x): 0.57, D(G(z)): 0.35
+2025-11-01 13:37:51,639 - INFO - Epoch [31/40], Step [400/469], d_loss: 0.4258, g_loss: 0.3522, D(x): 0.54, D(G(z)): 0.35
+2025-11-01 13:37:58,907 - INFO - Epoch [32/40], Step [200/469], d_loss: 0.3490, g_loss: 0.4769, D(x): 0.64, D(G(z)): 0.40
+2025-11-01 13:38:04,277 - INFO - Epoch [32/40], Step [400/469], d_loss: 0.3914, g_loss: 0.3555, D(x): 0.54, D(G(z)): 0.34
+2025-11-01 13:38:11,527 - INFO - Epoch [33/40], Step [200/469], d_loss: 0.4874, g_loss: 0.5279, D(x): 0.70, D(G(z)): 0.59
+2025-11-01 13:38:17,004 - INFO - Epoch [33/40], Step [400/469], d_loss: 0.4081, g_loss: 0.2957, D(x): 0.50, D(G(z)): 0.32
+2025-11-01 13:38:24,268 - INFO - Epoch [34/40], Step [200/469], d_loss: 0.4229, g_loss: 0.5146, D(x): 0.68, D(G(z)): 0.51
+2025-11-01 13:38:29,634 - INFO - Epoch [34/40], Step [400/469], d_loss: 0.4437, g_loss: 0.4102, D(x): 0.52, D(G(z)): 0.39
+2025-11-01 13:38:36,924 - INFO - Epoch [35/40], Step [200/469], d_loss: 0.4131, g_loss: 0.4796, D(x): 0.62, D(G(z)): 0.45
+2025-11-01 13:38:42,288 - INFO - Epoch [35/40], Step [400/469], d_loss: 0.4011, g_loss: 0.3955, D(x): 0.56, D(G(z)): 0.37
+2025-11-01 13:38:49,536 - INFO - Epoch [36/40], Step [200/469], d_loss: 0.3770, g_loss: 0.3537, D(x): 0.54, D(G(z)): 0.32
+2025-11-01 13:38:54,889 - INFO - Epoch [36/40], Step [400/469], d_loss: 0.4438, g_loss: 0.3818, D(x): 0.52, D(G(z)): 0.40
+2025-11-01 13:39:02,194 - INFO - Epoch [37/40], Step [200/469], d_loss: 0.3939, g_loss: 0.4732, D(x): 0.62, D(G(z)): 0.45
+2025-11-01 13:39:08,203 - INFO - Epoch [37/40], Step [400/469], d_loss: 0.4076, g_loss: 0.4432, D(x): 0.60, D(G(z)): 0.44
+2025-11-01 13:39:16,753 - INFO - Epoch [38/40], Step [200/469], d_loss: 0.4140, g_loss: 0.3294, D(x): 0.54, D(G(z)): 0.39
+2025-11-01 13:39:23,100 - INFO - Epoch [38/40], Step [400/469], d_loss: 0.4135, g_loss: 0.3911, D(x): 0.60, D(G(z)): 0.45
+2025-11-01 13:39:30,761 - INFO - Epoch [39/40], Step [200/469], d_loss: 0.4331, g_loss: 0.4152, D(x): 0.59, D(G(z)): 0.46
+2025-11-01 13:39:37,143 - INFO - Epoch [39/40], Step [400/469], d_loss: 0.3758, g_loss: 0.4012, D(x): 0.56, D(G(z)): 0.37
+2025-11-01 13:39:39,361 - INFO - Saved checkpoint at epoch 40
+2025-11-01 13:39:39,956 - INFO - Calculating FID score...
+2025-11-01 13:39:42,233 - INFO - Analyzing latent space...
+2025-11-01 13:39:42,285 - INFO - Saved final models to saved_models
+2025-11-01 13:39:42,285 - INFO - Experiment exp8_mse_loss completed. FID: 696.62
+2025-11-01 13:39:42,291 - INFO - Starting experiment: exp9_wasserstein_loss
+2025-11-01 13:39:42,291 - INFO - Config: {'loss_function': 'wasserstein', 'description': 'Loss: Wasserstein loss (remove sigmoid)'}
+2025-11-01 13:39:47,624 - INFO - Epoch [0/40], Step [200/469], d_loss: -0.9482, g_loss: -0.0202, D(x): 0.98, D(G(z)): 0.03
+2025-11-01 13:39:52,873 - INFO - Epoch [0/40], Step [400/469], d_loss: -0.9460, g_loss: -0.0215, D(x): 0.98, D(G(z)): 0.04
+2025-11-01 13:39:59,915 - INFO - Epoch [1/40], Step [200/469], d_loss: 0.0003, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:40:05,128 - INFO - Epoch [1/40], Step [400/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:40:12,198 - INFO - Epoch [2/40], Step [200/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:40:17,447 - INFO - Epoch [2/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:40:24,658 - INFO - Epoch [3/40], Step [200/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:40:30,881 - INFO - Epoch [3/40], Step [400/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:40:39,448 - INFO - Epoch [4/40], Step [200/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:40:45,751 - INFO - Epoch [4/40], Step [400/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:40:54,168 - INFO - Epoch [5/40], Step [200/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:41:00,399 - INFO - Epoch [5/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:41:08,754 - INFO - Epoch [6/40], Step [200/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:41:14,092 - INFO - Epoch [6/40], Step [400/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:41:21,159 - INFO - Epoch [7/40], Step [200/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:41:26,377 - INFO - Epoch [7/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:41:33,431 - INFO - Epoch [8/40], Step [200/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:41:38,826 - INFO - Epoch [8/40], Step [400/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:41:46,262 - INFO - Epoch [9/40], Step [200/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:41:51,776 - INFO - Epoch [9/40], Step [400/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:41:53,662 - INFO - Saved checkpoint at epoch 10
+2025-11-01 13:41:59,183 - INFO - Epoch [10/40], Step [200/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:42:04,681 - INFO - Epoch [10/40], Step [400/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:42:12,048 - INFO - Epoch [11/40], Step [200/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:42:17,384 - INFO - Epoch [11/40], Step [400/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:42:25,023 - INFO - Epoch [12/40], Step [200/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:42:31,277 - INFO - Epoch [12/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:42:39,656 - INFO - Epoch [13/40], Step [200/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:42:45,878 - INFO - Epoch [13/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:42:54,371 - INFO - Epoch [14/40], Step [200/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:43:00,645 - INFO - Epoch [14/40], Step [400/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:43:09,024 - INFO - Epoch [15/40], Step [200/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:43:15,002 - INFO - Epoch [15/40], Step [400/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:43:22,065 - INFO - Epoch [16/40], Step [200/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:43:27,542 - INFO - Epoch [16/40], Step [400/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:43:34,600 - INFO - Epoch [17/40], Step [200/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:43:39,846 - INFO - Epoch [17/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:43:46,888 - INFO - Epoch [18/40], Step [200/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:43:52,088 - INFO - Epoch [18/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:43:59,137 - INFO - Epoch [19/40], Step [200/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:44:04,485 - INFO - Epoch [19/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:44:06,285 - INFO - Saved checkpoint at epoch 20
+2025-11-01 13:44:11,519 - INFO - Epoch [20/40], Step [200/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:44:16,744 - INFO - Epoch [20/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:44:23,852 - INFO - Epoch [21/40], Step [200/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:44:29,078 - INFO - Epoch [21/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:44:36,077 - INFO - Epoch [22/40], Step [200/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:44:41,374 - INFO - Epoch [22/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:44:48,414 - INFO - Epoch [23/40], Step [200/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:44:53,682 - INFO - Epoch [23/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:45:00,753 - INFO - Epoch [24/40], Step [200/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:45:06,031 - INFO - Epoch [24/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:45:13,141 - INFO - Epoch [25/40], Step [200/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:45:18,367 - INFO - Epoch [25/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:45:25,475 - INFO - Epoch [26/40], Step [200/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:45:30,778 - INFO - Epoch [26/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:45:37,922 - INFO - Epoch [27/40], Step [200/469], d_loss: -0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:45:43,221 - INFO - Epoch [27/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:45:50,367 - INFO - Epoch [28/40], Step [200/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:45:55,642 - INFO - Epoch [28/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:46:02,757 - INFO - Epoch [29/40], Step [200/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:46:08,086 - INFO - Epoch [29/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:46:09,911 - INFO - Saved checkpoint at epoch 30
+2025-11-01 13:46:15,228 - INFO - Epoch [30/40], Step [200/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:46:20,487 - INFO - Epoch [30/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:46:27,596 - INFO - Epoch [31/40], Step [200/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:46:32,863 - INFO - Epoch [31/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:46:40,014 - INFO - Epoch [32/40], Step [200/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:46:45,317 - INFO - Epoch [32/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:46:52,443 - INFO - Epoch [33/40], Step [200/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:46:57,683 - INFO - Epoch [33/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:47:04,792 - INFO - Epoch [34/40], Step [200/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:47:10,105 - INFO - Epoch [34/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:47:17,351 - INFO - Epoch [35/40], Step [200/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:47:22,831 - INFO - Epoch [35/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:47:29,871 - INFO - Epoch [36/40], Step [200/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:47:35,085 - INFO - Epoch [36/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:47:42,114 - INFO - Epoch [37/40], Step [200/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:47:47,336 - INFO - Epoch [37/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:47:54,185 - INFO - Epoch [38/40], Step [200/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:47:59,429 - INFO - Epoch [38/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:48:06,509 - INFO - Epoch [39/40], Step [200/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:48:11,763 - INFO - Epoch [39/40], Step [400/469], d_loss: 0.0000, g_loss: -1.0000, D(x): 1.00, D(G(z)): 1.00
+2025-11-01 13:48:13,567 - INFO - Saved checkpoint at epoch 40
+2025-11-01 13:48:14,121 - INFO - Calculating FID score...
+2025-11-01 13:48:16,329 - INFO - Analyzing latent space...
+2025-11-01 13:48:16,389 - INFO - Saved final models to saved_models
+2025-11-01 13:48:16,389 - INFO - Experiment exp9_wasserstein_loss completed. FID: 1924.58
+2025-11-01 13:48:16,395 - INFO - Starting experiment: exp10_gradient_penalty
+2025-11-01 13:48:16,395 - INFO - Config: {'use_gradient_penalty': True, 'gp_weight': 10.0, 'n_critic': 5, 'loss_function': 'wasserstein', 'description': 'Stability: WGAN-GP with gradient penalty'}
+2025-11-01 13:48:33,433 - INFO - Epoch [0/40], Step [200/469], d_loss: 2.5803, g_loss: -0.2116, D(x): 0.51, D(G(z)): 0.04
+2025-11-01 13:48:50,925 - INFO - Epoch [0/40], Step [400/469], d_loss: 1.0551, g_loss: -0.1397, D(x): 0.54, D(G(z)): 0.25
+2025-11-01 13:49:13,820 - INFO - Epoch [1/40], Step [200/469], d_loss: 0.6264, g_loss: -0.2366, D(x): 0.50, D(G(z)): 0.20
+2025-11-01 13:49:30,928 - INFO - Epoch [1/40], Step [400/469], d_loss: 0.5107, g_loss: -0.2307, D(x): 0.49, D(G(z)): 0.24
+2025-11-01 13:49:53,755 - INFO - Epoch [2/40], Step [200/469], d_loss: 0.3459, g_loss: -0.1802, D(x): 0.52, D(G(z)): 0.18
+2025-11-01 13:50:10,771 - INFO - Epoch [2/40], Step [400/469], d_loss: 0.8174, g_loss: -0.2121, D(x): 0.51, D(G(z)): 0.15
+2025-11-01 13:50:33,826 - INFO - Epoch [3/40], Step [200/469], d_loss: 1.9761, g_loss: -0.2146, D(x): 0.40, D(G(z)): 0.22
+2025-11-01 13:50:50,332 - INFO - Epoch [3/40], Step [400/469], d_loss: 1.2169, g_loss: -0.3088, D(x): 0.46, D(G(z)): 0.21
+2025-11-01 13:51:13,196 - INFO - Epoch [4/40], Step [200/469], d_loss: 0.0996, g_loss: -0.2873, D(x): 0.58, D(G(z)): 0.18
+2025-11-01 13:51:30,100 - INFO - Epoch [4/40], Step [400/469], d_loss: 1.2247, g_loss: -0.3061, D(x): 0.45, D(G(z)): 0.21
+2025-11-01 13:51:53,320 - INFO - Epoch [5/40], Step [200/469], d_loss: 0.0719, g_loss: -0.3264, D(x): 0.61, D(G(z)): 0.35
+2025-11-01 13:52:10,447 - INFO - Epoch [5/40], Step [400/469], d_loss: -0.0500, g_loss: -0.3092, D(x): 0.57, D(G(z)): 0.19
+2025-11-01 13:52:33,519 - INFO - Epoch [6/40], Step [200/469], d_loss: -0.0765, g_loss: -0.2924, D(x): 0.61, D(G(z)): 0.21
+2025-11-01 13:52:50,629 - INFO - Epoch [6/40], Step [400/469], d_loss: 0.0380, g_loss: -0.4063, D(x): 0.68, D(G(z)): 0.39
+2025-11-01 13:53:13,614 - INFO - Epoch [7/40], Step [200/469], d_loss: -0.1731, g_loss: -0.4877, D(x): 0.61, D(G(z)): 0.16
+2025-11-01 13:53:30,968 - INFO - Epoch [7/40], Step [400/469], d_loss: -0.2379, g_loss: -0.2748, D(x): 0.71, D(G(z)): 0.27
+2025-11-01 13:53:54,168 - INFO - Epoch [8/40], Step [200/469], d_loss: -0.2611, g_loss: -0.2651, D(x): 0.72, D(G(z)): 0.25
+2025-11-01 13:54:11,077 - INFO - Epoch [8/40], Step [400/469], d_loss: -0.1980, g_loss: -0.3513, D(x): 0.69, D(G(z)): 0.23
+2025-11-01 13:54:34,019 - INFO - Epoch [9/40], Step [200/469], d_loss: -0.2873, g_loss: -0.1720, D(x): 0.79, D(G(z)): 0.29
+2025-11-01 13:54:50,968 - INFO - Epoch [9/40], Step [400/469], d_loss: -0.2531, g_loss: -0.2078, D(x): 0.80, D(G(z)): 0.31
+2025-11-01 13:54:56,702 - INFO - Saved checkpoint at epoch 10
+2025-11-01 13:55:13,194 - INFO - Epoch [10/40], Step [200/469], d_loss: -0.2937, g_loss: -0.2574, D(x): 0.79, D(G(z)): 0.32
+2025-11-01 13:55:30,214 - INFO - Epoch [10/40], Step [400/469], d_loss: -0.3410, g_loss: -0.3151, D(x): 0.77, D(G(z)): 0.30
+2025-11-01 13:55:53,171 - INFO - Epoch [11/40], Step [200/469], d_loss: -0.2974, g_loss: -0.3193, D(x): 0.72, D(G(z)): 0.27
+2025-11-01 13:56:09,571 - INFO - Epoch [11/40], Step [400/469], d_loss: -0.1376, g_loss: -0.2887, D(x): 0.72, D(G(z)): 0.33
+2025-11-01 13:56:32,580 - INFO - Epoch [12/40], Step [200/469], d_loss: -0.2047, g_loss: -0.2223, D(x): 0.77, D(G(z)): 0.30
+2025-11-01 13:56:49,489 - INFO - Epoch [12/40], Step [400/469], d_loss: -0.1419, g_loss: -0.5404, D(x): 0.60, D(G(z)): 0.22
+2025-11-01 13:57:12,199 - INFO - Epoch [13/40], Step [200/469], d_loss: -0.0825, g_loss: -0.3658, D(x): 0.65, D(G(z)): 0.28
+2025-11-01 13:57:29,160 - INFO - Epoch [13/40], Step [400/469], d_loss: -0.1152, g_loss: -0.3452, D(x): 0.71, D(G(z)): 0.32
+2025-11-01 13:57:52,085 - INFO - Epoch [14/40], Step [200/469], d_loss: -0.2210, g_loss: -0.3091, D(x): 0.75, D(G(z)): 0.32
+2025-11-01 13:58:09,074 - INFO - Epoch [14/40], Step [400/469], d_loss: -0.3357, g_loss: -0.2743, D(x): 0.79, D(G(z)): 0.32
+2025-11-01 13:58:31,880 - INFO - Epoch [15/40], Step [200/469], d_loss: -0.2562, g_loss: -0.3033, D(x): 0.79, D(G(z)): 0.37
+2025-11-01 13:58:48,941 - INFO - Epoch [15/40], Step [400/469], d_loss: -0.1494, g_loss: -0.3897, D(x): 0.71, D(G(z)): 0.27
+2025-11-01 13:59:11,811 - INFO - Epoch [16/40], Step [200/469], d_loss: -0.2105, g_loss: -0.3817, D(x): 0.73, D(G(z)): 0.29
+2025-11-01 13:59:28,939 - INFO - Epoch [16/40], Step [400/469], d_loss: -0.2116, g_loss: -0.3508, D(x): 0.78, D(G(z)): 0.39
+2025-11-01 13:59:51,229 - INFO - Epoch [17/40], Step [200/469], d_loss: -0.1061, g_loss: -0.2971, D(x): 0.84, D(G(z)): 0.50
+2025-11-01 14:00:08,354 - INFO - Epoch [17/40], Step [400/469], d_loss: -0.2446, g_loss: -0.2731, D(x): 0.73, D(G(z)): 0.32
+2025-11-01 14:00:31,421 - INFO - Epoch [18/40], Step [200/469], d_loss: -0.2674, g_loss: -0.3099, D(x): 0.76, D(G(z)): 0.35
+2025-11-01 14:00:48,573 - INFO - Epoch [18/40], Step [400/469], d_loss: -0.2049, g_loss: -0.4640, D(x): 0.67, D(G(z)): 0.25
+2025-11-01 14:01:11,505 - INFO - Epoch [19/40], Step [200/469], d_loss: -0.1769, g_loss: -0.4085, D(x): 0.68, D(G(z)): 0.27
+2025-11-01 14:01:28,574 - INFO - Epoch [19/40], Step [400/469], d_loss: -0.2638, g_loss: -0.2902, D(x): 0.75, D(G(z)): 0.33
+2025-11-01 14:01:34,495 - INFO - Saved checkpoint at epoch 20
+2025-11-01 14:01:51,487 - INFO - Epoch [20/40], Step [200/469], d_loss: -0.1964, g_loss: -0.3555, D(x): 0.74, D(G(z)): 0.35
+2025-11-01 14:02:08,573 - INFO - Epoch [20/40], Step [400/469], d_loss: -0.2357, g_loss: -0.3726, D(x): 0.69, D(G(z)): 0.30
+2025-11-01 14:02:31,543 - INFO - Epoch [21/40], Step [200/469], d_loss: -0.2772, g_loss: -0.3037, D(x): 0.75, D(G(z)): 0.33
+2025-11-01 14:02:48,642 - INFO - Epoch [21/40], Step [400/469], d_loss: -0.1179, g_loss: -0.3871, D(x): 0.70, D(G(z)): 0.31
+2025-11-01 14:03:11,618 - INFO - Epoch [22/40], Step [200/469], d_loss: -0.1615, g_loss: -0.3630, D(x): 0.76, D(G(z)): 0.44
+2025-11-01 14:03:28,448 - INFO - Epoch [22/40], Step [400/469], d_loss: -0.2140, g_loss: -0.3446, D(x): 0.74, D(G(z)): 0.38
+2025-11-01 14:03:51,041 - INFO - Epoch [23/40], Step [200/469], d_loss: -0.0680, g_loss: -0.3607, D(x): 0.73, D(G(z)): 0.42
+2025-11-01 14:04:08,164 - INFO - Epoch [23/40], Step [400/469], d_loss: -0.1678, g_loss: -0.3609, D(x): 0.69, D(G(z)): 0.30
+2025-11-01 14:04:31,114 - INFO - Epoch [24/40], Step [200/469], d_loss: -0.1815, g_loss: -0.3452, D(x): 0.78, D(G(z)): 0.40
+2025-11-01 14:04:48,068 - INFO - Epoch [24/40], Step [400/469], d_loss: -0.1806, g_loss: -0.3618, D(x): 0.71, D(G(z)): 0.38
+2025-11-01 14:05:10,266 - INFO - Epoch [25/40], Step [200/469], d_loss: 1.5720, g_loss: -0.2763, D(x): 0.96, D(G(z)): 0.87
+2025-11-01 14:05:27,127 - INFO - Epoch [25/40], Step [400/469], d_loss: -0.1590, g_loss: -0.3972, D(x): 0.70, D(G(z)): 0.38
+2025-11-01 14:05:49,823 - INFO - Epoch [26/40], Step [200/469], d_loss: -0.1708, g_loss: -0.3104, D(x): 0.71, D(G(z)): 0.36
+2025-11-01 14:06:06,902 - INFO - Epoch [26/40], Step [400/469], d_loss: -0.1511, g_loss: -0.3850, D(x): 0.64, D(G(z)): 0.33
+2025-11-01 14:06:29,895 - INFO - Epoch [27/40], Step [200/469], d_loss: -0.2628, g_loss: -0.3130, D(x): 0.75, D(G(z)): 0.36
+2025-11-01 14:06:43,643 - INFO - Epoch [27/40], Step [400/469], d_loss: -0.1308, g_loss: -0.3610, D(x): 0.69, D(G(z)): 0.36
+2025-11-01 14:06:59,850 - INFO - Epoch [28/40], Step [200/469], d_loss: -0.1763, g_loss: -0.3461, D(x): 0.68, D(G(z)): 0.35
+2025-11-01 14:07:16,819 - INFO - Epoch [28/40], Step [400/469], d_loss: -0.1086, g_loss: -0.3845, D(x): 0.72, D(G(z)): 0.41
+2025-11-01 14:07:39,759 - INFO - Epoch [29/40], Step [200/469], d_loss: -0.1682, g_loss: -0.3566, D(x): 0.65, D(G(z)): 0.33
+2025-11-01 14:07:56,818 - INFO - Epoch [29/40], Step [400/469], d_loss: -0.1248, g_loss: -0.3586, D(x): 0.72, D(G(z)): 0.39
+2025-11-01 14:08:02,683 - INFO - Saved checkpoint at epoch 30
+2025-11-01 14:08:19,616 - INFO - Epoch [30/40], Step [200/469], d_loss: -0.1220, g_loss: -0.3355, D(x): 0.74, D(G(z)): 0.43
+2025-11-01 14:08:36,719 - INFO - Epoch [30/40], Step [400/469], d_loss: -0.1264, g_loss: -0.3493, D(x): 0.75, D(G(z)): 0.43
+2025-11-01 14:08:59,929 - INFO - Epoch [31/40], Step [200/469], d_loss: -0.1057, g_loss: -0.3981, D(x): 0.71, D(G(z)): 0.42
+2025-11-01 14:09:17,411 - INFO - Epoch [31/40], Step [400/469], d_loss: -0.0908, g_loss: -0.4596, D(x): 0.64, D(G(z)): 0.38
+2025-11-01 14:09:40,795 - INFO - Epoch [32/40], Step [200/469], d_loss: -0.0299, g_loss: -0.4013, D(x): 0.75, D(G(z)): 0.54
+2025-11-01 14:09:57,679 - INFO - Epoch [32/40], Step [400/469], d_loss: -0.1278, g_loss: -0.3701, D(x): 0.67, D(G(z)): 0.40
+2025-11-01 14:10:21,328 - INFO - Epoch [33/40], Step [200/469], d_loss: -0.0899, g_loss: -0.3488, D(x): 0.66, D(G(z)): 0.34
+2025-11-01 14:10:38,862 - INFO - Epoch [33/40], Step [400/469], d_loss: -0.1941, g_loss: -0.4270, D(x): 0.71, D(G(z)): 0.44
+2025-11-01 14:11:01,776 - INFO - Epoch [34/40], Step [200/469], d_loss: -0.1284, g_loss: -0.3859, D(x): 0.66, D(G(z)): 0.35
+2025-11-01 14:11:18,957 - INFO - Epoch [34/40], Step [400/469], d_loss: -0.1150, g_loss: -0.5683, D(x): 0.58, D(G(z)): 0.26
+2025-11-01 14:11:42,090 - INFO - Epoch [35/40], Step [200/469], d_loss: -0.1878, g_loss: -0.3720, D(x): 0.72, D(G(z)): 0.40
+2025-11-01 14:11:59,399 - INFO - Epoch [35/40], Step [400/469], d_loss: 0.1070, g_loss: -0.4208, D(x): 0.69, D(G(z)): 0.44
+2025-11-01 14:12:24,059 - INFO - Epoch [36/40], Step [200/469], d_loss: -0.1626, g_loss: -0.3330, D(x): 0.71, D(G(z)): 0.40
+2025-11-01 14:12:44,222 - INFO - Epoch [36/40], Step [400/469], d_loss: -0.1973, g_loss: -0.4071, D(x): 0.68, D(G(z)): 0.38
+2025-11-01 14:13:10,219 - INFO - Epoch [37/40], Step [200/469], d_loss: -0.0210, g_loss: -0.5003, D(x): 0.67, D(G(z)): 0.39
+2025-11-01 14:13:29,524 - INFO - Epoch [37/40], Step [400/469], d_loss: -0.0755, g_loss: -0.4477, D(x): 0.72, D(G(z)): 0.45
+2025-11-01 14:13:56,258 - INFO - Epoch [38/40], Step [200/469], d_loss: 0.0192, g_loss: -0.4751, D(x): 0.66, D(G(z)): 0.42
+2025-11-01 14:14:14,117 - INFO - Epoch [38/40], Step [400/469], d_loss: -0.0208, g_loss: -0.4615, D(x): 0.68, D(G(z)): 0.44
+2025-11-01 14:14:32,999 - INFO - Epoch [39/40], Step [200/469], d_loss: 0.0906, g_loss: -0.5582, D(x): 0.64, D(G(z)): 0.46
+2025-11-01 14:14:49,451 - INFO - Epoch [39/40], Step [400/469], d_loss: 0.0584, g_loss: -0.4653, D(x): 0.74, D(G(z)): 0.50
+2025-11-01 14:14:55,115 - INFO - Saved checkpoint at epoch 40
+2025-11-01 14:14:55,691 - INFO - Calculating FID score...
+2025-11-01 14:14:57,737 - INFO - Analyzing latent space...
+2025-11-01 14:14:57,789 - INFO - Saved final models to saved_models
+2025-11-01 14:14:57,789 - INFO - Experiment exp10_gradient_penalty completed. FID: 896.98
+2025-11-01 14:14:57,795 - INFO - Starting experiment: exp11_spectral_norm
+2025-11-01 14:14:57,795 - INFO - Config: {'use_spectral_norm': True, 'description': 'Stability: Spectral Normalization'}
+2025-11-01 14:14:57,910 - ERROR - Experiment exp11_spectral_norm failed: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+2025-11-01 14:14:57,914 - INFO - Starting experiment: exp12_combined_stable
+2025-11-01 14:14:57,914 - INFO - Config: {'lr': 0.0001, 'use_gradient_penalty': True, 'gp_weight': 10.0, 'n_critic': 3, 'loss_function': 'wasserstein', 'description': 'Combined: WGAN-GP + Lower LR'}
+2025-11-01 14:14:57,975 - ERROR - Experiment exp12_combined_stable failed: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+2025-11-01 14:14:57,978 - INFO - Starting experiment: exp13_larger_network
+2025-11-01 14:14:57,978 - INFO - Config: {'hidden_size': 512, 'use_spectral_norm': True, 'description': 'Combined: Larger network + Spectral Norm'}
+2025-11-01 14:14:58,040 - ERROR - Experiment exp13_larger_network failed: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+2025-11-01 14:14:58,043 - INFO - Starting experiment: exp14_ultimate_stable
+2025-11-01 14:14:58,043 - INFO - Config: {'lr': 0.0001, 'use_gradient_penalty': True, 'use_spectral_norm': True, 'n_critic': 5, 'loss_function': 'wasserstein', 'description': 'Ultimate: WGAN-GP + Spectral Norm + Low LR'}
+2025-11-01 14:14:58,103 - ERROR - Experiment exp14_ultimate_stable failed: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+2025-11-01 14:14:58,109 - INFO - 
+=== EXPERIMENT SUMMARY ===
+2025-11-01 14:14:58,109 - INFO - exp1_baseline             | FID: 718.52 | Final D-Loss: 1.1677 | G-Loss: 1.0964 | Desc: Baseline: Standard G...
+2025-11-01 14:14:58,109 - INFO - exp2_small_latent         | FID: 680.75 | Final D-Loss: 1.1394 | G-Loss: 1.1218 | Desc: Latent: Smaller late...
+2025-11-01 14:14:58,109 - INFO - exp3_large_latent         | FID: 699.01 | Final D-Loss: 1.1711 | G-Loss: 1.0814 | Desc: Latent: Larger laten...
+2025-11-01 14:14:58,109 - INFO - exp4_elu_activation       | FID: 730.00 | Final D-Loss: 1.0297 | G-Loss: 1.1269 | Desc: Architecture: ELU ac...
+2025-11-01 14:14:58,109 - INFO - exp5_tanh_activation      | FID: 714.56 | Final D-Loss: 0.8555 | G-Loss: 1.5622 | Desc: Architecture: Tanh a...
+2025-11-01 14:14:58,109 - INFO - exp6_higher_lr            | FID: 634.20 | Final D-Loss: 1.3487 | G-Loss: 0.8062 | Desc: Training: Higher lea...
+2025-11-01 14:14:58,109 - INFO - exp7_more_epochs          | FID: 672.73 | Final D-Loss: 0.9055 | G-Loss: 1.4201 | Desc: Training: More epoch...
+2025-11-01 14:14:58,109 - INFO - exp8_mse_loss             | FID: 696.62 | Final D-Loss: 0.4114 | G-Loss: 0.4069 | Desc: Loss: MSE instead of...
+2025-11-01 14:14:58,109 - INFO - exp9_wasserstein_loss     | FID: 1924.58 | Final D-Loss: 0.0000 | G-Loss: -1.0000 | Desc: Loss: Wasserstein lo...
+2025-11-01 14:14:58,109 - INFO - exp10_gradient_penalty    | FID: 896.98 | Final D-Loss: -0.0235 | G-Loss: -0.4505 | Desc: Stability: WGAN-GP w...
+2025-11-01 14:14:58,109 - INFO - 
+All models saved to: saved_models
+2025-11-01 14:14:58,109 - INFO - All experiments completed!
+2025-11-02 10:02:43,256 - INFO - Starting experiment: exp1_baseline
+2025-11-02 10:02:43,256 - INFO - Config: {'description': 'Baseline: Standard GAN with BCE loss'}
+2025-11-02 10:02:49,283 - INFO - Epoch [0/10], Step [200/469], d_loss: 0.6119, g_loss: 1.1053, D(x): 0.93, D(G(z)): 0.41
+2025-11-02 10:02:57,230 - INFO - Starting experiment: exp1_baseline
+2025-11-02 10:02:57,231 - INFO - Config: {'description': 'Baseline: Standard GAN with BCE loss'}
+2025-11-02 10:03:04,390 - INFO - Epoch [0/10], Step [200/469], d_loss: 0.8704, g_loss: 0.9554, D(x): 0.80, D(G(z)): 0.46
+2025-11-02 10:03:10,982 - INFO - Epoch [0/10], Step [400/469], d_loss: 0.3842, g_loss: 1.9444, D(x): 0.95, D(G(z)): 0.28
+2025-11-02 10:03:19,795 - INFO - Epoch [1/10], Step [200/469], d_loss: 0.2380, g_loss: 3.3328, D(x): 0.91, D(G(z)): 0.08
+2025-11-02 10:03:26,207 - INFO - Epoch [1/10], Step [400/469], d_loss: 0.2745, g_loss: 2.6676, D(x): 0.92, D(G(z)): 0.14
+2025-11-02 10:03:34,911 - INFO - Epoch [2/10], Step [200/469], d_loss: 0.3481, g_loss: 3.2908, D(x): 0.91, D(G(z)): 0.17
+2025-11-02 10:03:41,354 - INFO - Epoch [2/10], Step [400/469], d_loss: 0.3969, g_loss: 2.8729, D(x): 0.84, D(G(z)): 0.13
+2025-11-02 10:03:50,120 - INFO - Epoch [3/10], Step [200/469], d_loss: 0.4559, g_loss: 3.5077, D(x): 0.91, D(G(z)): 0.25
+2025-11-02 10:03:56,569 - INFO - Epoch [3/10], Step [400/469], d_loss: 0.4304, g_loss: 2.6391, D(x): 0.84, D(G(z)): 0.14
+2025-11-02 10:04:05,331 - INFO - Epoch [4/10], Step [200/469], d_loss: 0.3874, g_loss: 3.6723, D(x): 0.93, D(G(z)): 0.24
+2025-11-02 10:04:11,745 - INFO - Epoch [4/10], Step [400/469], d_loss: 0.3984, g_loss: 3.4807, D(x): 0.88, D(G(z)): 0.18

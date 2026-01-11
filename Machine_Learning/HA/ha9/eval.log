@@ -1,0 +1,195 @@
+nohup: ignoring input
+/ssddata/zzhanglc/miniconda3/envs/ml39/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/ssddata/zzhanglc/miniconda3/envs/ml39/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=Inception_V3_Weights.IMAGENET1K_V1`. You can also use `weights=Inception_V3_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+2025-11-12 11:19:37,798 - INFO - Found 16 model files
+2025-11-12 11:19:37,799 - INFO - Evaluating: saved_models/exp1_baseline_G_final.pth
+2025-11-12 11:19:37,799 - INFO - Extracted experiment name: exp1_baseline
+2025-11-12 11:19:37,799 - INFO - Found experiment config: exp1_baseline
+2025-11-12 11:19:37,821 - INFO - 成功加载生成器: saved_models/exp1_baseline_G_final.pth
+2025-11-12 11:19:37,897 - INFO - 收集 800 张真实图像...
+2025-11-12 11:19:38,115 - INFO - 生成 800 张伪造图像...
+2025-11-12 11:19:38,324 - INFO - 计算FID分数...
+2025-11-12 11:19:52,171 - ERROR - Failed to evaluate saved_models/exp1_baseline_G_final.pth: Calculated padded input size per channel: (1 x 1). Kernel size: (3 x 3). Kernel size can't be greater than actual input size
+2025-11-12 11:19:52,172 - INFO - Evaluating: saved_models/exp2_small_latent_G_final.pth
+2025-11-12 11:19:52,173 - INFO - Extracted experiment name: exp2_small_latent
+2025-11-12 11:19:52,173 - INFO - Found experiment config: exp2_small_latent
+2025-11-12 11:19:52,182 - INFO - 成功加载生成器: saved_models/exp2_small_latent_G_final.pth
+2025-11-12 11:19:52,211 - INFO - 收集 800 张真实图像...
+2025-11-12 11:19:52,397 - INFO - 生成 800 张伪造图像...
+2025-11-12 11:19:52,399 - INFO - 计算FID分数...
+2025-11-12 11:20:00,946 - ERROR - Failed to evaluate saved_models/exp2_small_latent_G_final.pth: Calculated padded input size per channel: (1 x 1). Kernel size: (3 x 3). Kernel size can't be greater than actual input size
+2025-11-12 11:20:00,949 - INFO - Evaluating: saved_models/exp3_large_latent_G_final.pth
+2025-11-12 11:20:00,949 - INFO - Extracted experiment name: exp3_large_latent
+2025-11-12 11:20:00,950 - INFO - Found experiment config: exp3_large_latent
+2025-11-12 11:20:00,962 - INFO - 成功加载生成器: saved_models/exp3_large_latent_G_final.pth
+2025-11-12 11:20:00,984 - INFO - 收集 800 张真实图像...
+2025-11-12 11:20:01,106 - INFO - 生成 800 张伪造图像...
+2025-11-12 11:20:01,108 - INFO - 计算FID分数...
+2025-11-12 11:20:11,846 - ERROR - Failed to evaluate saved_models/exp3_large_latent_G_final.pth: Calculated padded input size per channel: (1 x 1). Kernel size: (3 x 3). Kernel size can't be greater than actual input size
+2025-11-12 11:20:11,848 - INFO - Evaluating: saved_models/exp4_elu_activation_G_final.pth
+2025-11-12 11:20:11,848 - INFO - Extracted experiment name: exp4_elu_activation
+2025-11-12 11:20:11,848 - INFO - Found experiment config: exp4_elu_activation
+2025-11-12 11:20:11,864 - INFO - 成功加载生成器: saved_models/exp4_elu_activation_G_final.pth
+2025-11-12 11:20:11,900 - INFO - 收集 800 张真实图像...
+2025-11-12 11:20:12,051 - INFO - 生成 800 张伪造图像...
+2025-11-12 11:20:12,059 - INFO - 计算FID分数...
+2025-11-12 11:20:20,484 - ERROR - Failed to evaluate saved_models/exp4_elu_activation_G_final.pth: Calculated padded input size per channel: (1 x 1). Kernel size: (3 x 3). Kernel size can't be greater than actual input size
+2025-11-12 11:20:20,485 - INFO - Evaluating: saved_models/exp5_tanh_activation_G_final.pth
+2025-11-12 11:20:20,485 - INFO - Extracted experiment name: exp5_tanh_activation
+2025-11-12 11:20:20,485 - INFO - Found experiment config: exp5_tanh_activation
+2025-11-12 11:20:20,496 - INFO - 成功加载生成器: saved_models/exp5_tanh_activation_G_final.pth
+2025-11-12 11:20:20,519 - INFO - 收集 800 张真实图像...
+2025-11-12 11:20:20,670 - INFO - 生成 800 张伪造图像...
+2025-11-12 11:20:20,671 - INFO - 计算FID分数...
+2025-11-12 11:20:30,884 - ERROR - Failed to evaluate saved_models/exp5_tanh_activation_G_final.pth: Calculated padded input size per channel: (1 x 1). Kernel size: (3 x 3). Kernel size can't be greater than actual input size
+2025-11-12 11:20:30,886 - INFO - Evaluating: saved_models/exp6_higher_lr_G_final.pth
+2025-11-12 11:20:30,887 - INFO - Extracted experiment name: exp6_higher_lr
+2025-11-12 11:20:30,887 - INFO - Found experiment config: exp6_higher_lr
+2025-11-12 11:20:30,897 - INFO - 成功加载生成器: saved_models/exp6_higher_lr_G_final.pth
+2025-11-12 11:20:30,928 - INFO - 收集 800 张真实图像...
+2025-11-12 11:20:31,091 - INFO - 生成 800 张伪造图像...
+2025-11-12 11:20:31,092 - INFO - 计算FID分数...
+2025-11-12 11:20:43,134 - ERROR - Failed to evaluate saved_models/exp6_higher_lr_G_final.pth: Calculated padded input size per channel: (1 x 1). Kernel size: (3 x 3). Kernel size can't be greater than actual input size
+2025-11-12 11:20:43,135 - INFO - Evaluating: saved_models/exp7_more_epochs_G_final.pth
+2025-11-12 11:20:43,135 - INFO - Extracted experiment name: exp7_more_epochs
+2025-11-12 11:20:43,135 - INFO - Found experiment config: exp7_more_epochs
+2025-11-12 11:20:43,149 - INFO - 成功加载生成器: saved_models/exp7_more_epochs_G_final.pth
+2025-11-12 11:20:43,177 - INFO - 收集 800 张真实图像...
+2025-11-12 11:20:43,348 - INFO - 生成 800 张伪造图像...
+2025-11-12 11:20:43,350 - INFO - 计算FID分数...
+2025-11-12 11:20:54,571 - ERROR - Failed to evaluate saved_models/exp7_more_epochs_G_final.pth: Calculated padded input size per channel: (1 x 1). Kernel size: (3 x 3). Kernel size can't be greater than actual input size
+2025-11-12 11:20:54,573 - INFO - Evaluating: saved_models/exp8_mse_loss_G_final.pth
+2025-11-12 11:20:54,573 - INFO - Extracted experiment name: exp8_mse_loss
+2025-11-12 11:20:54,573 - INFO - Found experiment config: exp8_mse_loss
+2025-11-12 11:20:54,583 - INFO - 成功加载生成器: saved_models/exp8_mse_loss_G_final.pth
+2025-11-12 11:20:54,612 - INFO - 收集 800 张真实图像...
+2025-11-12 11:20:54,763 - INFO - 生成 800 张伪造图像...
+2025-11-12 11:20:54,765 - INFO - 计算FID分数...
+2025-11-12 11:21:07,250 - ERROR - Failed to evaluate saved_models/exp8_mse_loss_G_final.pth: Calculated padded input size per channel: (1 x 1). Kernel size: (3 x 3). Kernel size can't be greater than actual input size
+2025-11-12 11:21:07,251 - INFO - Evaluating: saved_models/exp9_wasserstein_loss_G_final.pth
+2025-11-12 11:21:07,252 - INFO - Extracted experiment name: exp9_wasserstein_loss
+2025-11-12 11:21:07,252 - INFO - Found experiment config: exp9_wasserstein_loss
+2025-11-12 11:21:07,268 - INFO - 成功加载生成器: saved_models/exp9_wasserstein_loss_G_final.pth
+2025-11-12 11:21:07,297 - INFO - 收集 800 张真实图像...
+2025-11-12 11:21:07,451 - INFO - 生成 800 张伪造图像...
+2025-11-12 11:21:07,454 - INFO - 计算FID分数...
+2025-11-12 11:21:18,804 - ERROR - Failed to evaluate saved_models/exp9_wasserstein_loss_G_final.pth: Calculated padded input size per channel: (1 x 1). Kernel size: (3 x 3). Kernel size can't be greater than actual input size
+2025-11-12 11:21:18,807 - INFO - Evaluating: saved_models/exp10_gradient_penalty_G_final.pth
+2025-11-12 11:21:18,807 - INFO - Extracted experiment name: exp10_gradient_penalty
+2025-11-12 11:21:18,807 - INFO - Found experiment config: exp10_gradient_penalty
+2025-11-12 11:21:18,819 - INFO - 成功加载生成器: saved_models/exp10_gradient_penalty_G_final.pth
+2025-11-12 11:21:18,841 - INFO - 收集 800 张真实图像...
+2025-11-12 11:21:19,015 - INFO - 生成 800 张伪造图像...
+2025-11-12 11:21:19,016 - INFO - 计算FID分数...
+2025-11-12 11:21:30,656 - ERROR - Failed to evaluate saved_models/exp10_gradient_penalty_G_final.pth: Calculated padded input size per channel: (1 x 1). Kernel size: (3 x 3). Kernel size can't be greater than actual input size
+2025-11-12 11:21:30,658 - INFO - Evaluating: saved_models/exp12_g_larger_lr_G_final.pth
+2025-11-12 11:21:30,659 - INFO - Extracted experiment name: exp12_g_larger_lr
+2025-11-12 11:21:30,659 - INFO - Found experiment config: exp12_g_larger_lr
+2025-11-12 11:21:30,669 - INFO - 成功加载生成器: saved_models/exp12_g_larger_lr_G_final.pth
+2025-11-12 11:21:30,697 - INFO - 收集 800 张真实图像...
+2025-11-12 11:21:30,898 - INFO - 生成 800 张伪造图像...
+2025-11-12 11:21:30,900 - INFO - 计算FID分数...
+2025-11-12 11:21:42,648 - ERROR - Failed to evaluate saved_models/exp12_g_larger_lr_G_final.pth: Calculated padded input size per channel: (1 x 1). Kernel size: (3 x 3). Kernel size can't be greater than actual input size
+2025-11-12 11:21:42,650 - INFO - Evaluating: saved_models/exp13_g_smaller_lr_G_final.pth
+2025-11-12 11:21:42,650 - INFO - Extracted experiment name: exp13_g_smaller_lr
+2025-11-12 11:21:42,650 - INFO - Found experiment config: exp13_g_smaller_lr
+2025-11-12 11:21:42,659 - INFO - 成功加载生成器: saved_models/exp13_g_smaller_lr_G_final.pth
+2025-11-12 11:21:42,692 - INFO - 收集 800 张真实图像...
+2025-11-12 11:21:42,843 - INFO - 生成 800 张伪造图像...
+2025-11-12 11:21:42,845 - INFO - 计算FID分数...
+2025-11-12 11:21:56,045 - ERROR - Failed to evaluate saved_models/exp13_g_smaller_lr_G_final.pth: Calculated padded input size per channel: (1 x 1). Kernel size: (3 x 3). Kernel size can't be greater than actual input size
+2025-11-12 11:21:56,047 - INFO - Evaluating: saved_models/exp11_equal_lr_G_final.pth
+2025-11-12 11:21:56,047 - INFO - Extracted experiment name: exp11_equal_lr
+2025-11-12 11:21:56,047 - INFO - Found experiment config: exp11_equal_lr
+2025-11-12 11:21:56,056 - INFO - 成功加载生成器: saved_models/exp11_equal_lr_G_final.pth
+2025-11-12 11:21:56,087 - INFO - 收集 800 张真实图像...
+2025-11-12 11:21:56,215 - INFO - 生成 800 张伪造图像...
+2025-11-12 11:21:56,216 - INFO - 计算FID分数...
+2025-11-12 11:22:05,958 - ERROR - Failed to evaluate saved_models/exp11_equal_lr_G_final.pth: Calculated padded input size per channel: (1 x 1). Kernel size: (3 x 3). Kernel size can't be greater than actual input size
+2025-11-12 11:22:05,960 - INFO - Evaluating: saved_models/exp15_pure_capacity_G_final.pth
+2025-11-12 11:22:05,960 - INFO - Extracted experiment name: exp15_pure_capacity
+2025-11-12 11:22:05,960 - INFO - Found experiment config: exp15_pure_capacity
+2025-11-12 11:22:05,974 - INFO - 成功加载生成器: saved_models/exp15_pure_capacity_G_final.pth
+2025-11-12 11:22:06,011 - INFO - 收集 800 张真实图像...
+2025-11-12 11:22:06,180 - INFO - 生成 800 张伪造图像...
+2025-11-12 11:22:06,182 - INFO - 计算FID分数...
+2025-11-12 11:22:17,958 - ERROR - Failed to evaluate saved_models/exp15_pure_capacity_G_final.pth: Calculated padded input size per channel: (1 x 1). Kernel size: (3 x 3). Kernel size can't be greater than actual input size
+2025-11-12 11:22:17,959 - INFO - Evaluating: saved_models/exp16_capacity_adapted_G_final.pth
+2025-11-12 11:22:17,960 - INFO - Extracted experiment name: exp16_capacity_adapted
+2025-11-12 11:22:17,960 - INFO - Found experiment config: exp16_capacity_adapted
+2025-11-12 11:22:17,974 - INFO - 成功加载生成器: saved_models/exp16_capacity_adapted_G_final.pth
+2025-11-12 11:22:17,995 - INFO - 收集 800 张真实图像...
+2025-11-12 11:22:18,117 - INFO - 生成 800 张伪造图像...
+2025-11-12 11:22:18,118 - INFO - 计算FID分数...
+2025-11-12 11:22:25,683 - ERROR - Failed to evaluate saved_models/exp16_capacity_adapted_G_final.pth: Calculated padded input size per channel: (1 x 1). Kernel size: (3 x 3). Kernel size can't be greater than actual input size
+2025-11-12 11:22:25,685 - INFO - Evaluating: saved_models/exp14_gradient_penalty_improved_G_final.pth
+2025-11-12 11:22:25,685 - INFO - Extracted experiment name: exp14_gradient_penalty_improved
+2025-11-12 11:22:25,685 - INFO - Found experiment config: exp14_gradient_penalty_improved
+2025-11-12 11:22:25,699 - INFO - 成功加载生成器: saved_models/exp14_gradient_penalty_improved_G_final.pth
+2025-11-12 11:22:25,719 - INFO - 收集 800 张真实图像...
+2025-11-12 11:22:25,840 - INFO - 生成 800 张伪造图像...
+2025-11-12 11:22:25,842 - INFO - 计算FID分数...
+2025-11-12 11:22:38,755 - ERROR - Failed to evaluate saved_models/exp14_gradient_penalty_improved_G_final.pth: Calculated padded input size per channel: (1 x 1). Kernel size: (3 x 3). Kernel size can't be greater than actual input size
+InceptionV3特征提取器初始化完成
+==================================================
+GAN Model Comprehensive Testing Tool
+==================================================
+Scanning saved_models directory for _G_final.pth files...
+Processing model 1/16: exp1_baseline_G_final.pth
+提取真实图像特征... (800 张)
+提取生成图像特征... (800 张)
+特征提取完成: 真实800个, 生成800个
+提取真实图像特征... (800 张)
+提取生成图像特征... (800 张)
+特征提取完成: 真实800个, 生成800个
+提取真实图像特征... (800 张)
+提取生成图像特征... (800 张)
+特征提取完成: 真实800个, 生成800个
+提取真实图像特征... (800 张)
+提取生成图像特征... (800 张)
+特征提取完成: 真实800个, 生成800个
+提取真实图像特征... (800 张)
+提取生成图像特征... (800 张)
+特征提取完成: 真实800个, 生成800个
+提取真实图像特征... (800 张)
+提取生成图像特征... (800 张)
+特征提取完成: 真实800个, 生成800个
+提取真实图像特征... (800 张)
+提取生成图像特征... (800 张)
+特征提取完成: 真实800个, 生成800个
+提取真实图像特征... (800 张)
+提取生成图像特征... (800 张)
+特征提取完成: 真实800个, 生成800个
+提取真实图像特征... (800 张)
+提取生成图像特征... (800 张)
+特征提取完成: 真实800个, 生成800个
+提取真实图像特征... (800 张)
+提取生成图像特征... (800 张)
+特征提取完成: 真实800个, 生成800个
+Processing model 11/16: exp12_g_larger_lr_G_final.pth
+提取真实图像特征... (800 张)
+提取生成图像特征... (800 张)
+特征提取完成: 真实800个, 生成800个
+提取真实图像特征... (800 张)
+提取生成图像特征... (800 张)
+特征提取完成: 真实800个, 生成800个
+提取真实图像特征... (800 张)
+提取生成图像特征... (800 张)
+特征提取完成: 真实800个, 生成800个
+提取真实图像特征... (800 张)
+提取生成图像特征... (800 张)
+特征提取完成: 真实800个, 生成800个
+提取真实图像特征... (800 张)
+提取生成图像特征... (800 张)
+特征提取完成: 真实800个, 生成800个
+提取真实图像特征... (800 张)
+提取生成图像特征... (800 张)
+特征提取完成: 真实800个, 生成800个
+
+No evaluation results generated
+Please check:
+1. saved_models/ directory exists
+2. Files ending with '_G_final.pth' exist in saved_models/
+3. Model files are valid

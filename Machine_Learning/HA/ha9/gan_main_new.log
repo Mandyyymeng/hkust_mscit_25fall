@@ -1,0 +1,202 @@
+nohup: ignoring input
+/ssddata/zzhanglc/miniconda3/envs/ml39/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/ssddata/zzhanglc/miniconda3/envs/ml39/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=Inception_V3_Weights.IMAGENET1K_V1`. You can also use `weights=Inception_V3_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+2025-11-12 11:15:11,624 - INFO - Starting experiment: exp14_gradient_penalty_improved
+2025-11-12 11:15:11,624 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:15:11,624 - INFO - Config: {'use_gradient_penalty': True, 'loss_function': 'wasserstein', 'gp_weight': 10.0, 'n_critic': 3, 'd_lr': 0.0001, 'g_lr': 0.0001, 'num_epochs': 20, 'description': 'WGAN-GP with balanced training'}
+2025-11-12 11:15:11,710 - INFO - Searching for checkpoints for experiment: exp14_gradient_penalty_improved
+2025-11-12 11:15:11,711 - INFO - Found related file: exp14_gradient_penalty_improved_G_epoch_10.pth
+2025-11-12 11:15:11,711 - INFO - Found checkpoint: exp14_gradient_penalty_improved_G_epoch_10.pth -> epoch 10
+2025-11-12 11:15:11,711 - INFO - New max epoch: 10
+2025-11-12 11:15:11,711 - INFO - Found related file: exp14_gradient_penalty_improved_D_epoch_10.pth
+2025-11-12 11:15:11,711 - INFO - Found related file: exp14_gradient_penalty_improved_G_epoch_20.pth
+2025-11-12 11:15:11,711 - INFO - Found checkpoint: exp14_gradient_penalty_improved_G_epoch_20.pth -> epoch 20
+2025-11-12 11:15:11,711 - INFO - New max epoch: 20
+2025-11-12 11:15:11,711 - INFO - Found related file: exp14_gradient_penalty_improved_D_epoch_20.pth
+2025-11-12 11:15:11,711 - INFO - Found related file: exp14_gradient_penalty_improved_G_final.pth
+2025-11-12 11:15:11,711 - INFO - Final max epoch found: 20, checkpoint: exp14_gradient_penalty_improved_G_epoch_20.pth
+2025-11-12 11:15:11,711 - INFO - Loading generator from: saved_models/exp14_gradient_penalty_improved_G_epoch_20.pth
+2025-11-12 11:15:11,716 - INFO - Loading discriminator from: saved_models/exp14_gradient_penalty_improved_D_epoch_20.pth
+2025-11-12 11:15:11,719 - INFO - No optimizer state found, using fresh optimizers
+2025-11-12 11:15:11,720 - INFO - Successfully reloaded from epoch 20
+2025-11-12 11:15:11,720 - INFO - Training already completed (epoch 20/20), skipping to evaluation
+2025-11-12 11:15:11,720 - INFO - Calculating FID score...
+2025-11-12 11:15:11,966 - INFO - Using latent_size: 128 for FID calculation
+2025-11-12 11:15:24,462 - INFO - Analyzing latent space...
+2025-11-12 11:15:24,542 - INFO - Saved final models to saved_models
+2025-11-12 11:15:24,542 - INFO - Experiment exp14_gradient_penalty_improved completed. FID: 130.54
+2025-11-12 11:15:24,546 - INFO - Starting experiment: exp15_pure_capacity
+2025-11-12 11:15:24,546 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:15:24,546 - INFO - Config: {'hidden_size': 512, 'latent_size': 128, 'num_epochs': 10, 'lr': 0.0001, 'description': 'Pure Capacity: Only hidden_size↑ from 256→512, all else equal'}
+2025-11-12 11:15:24,638 - INFO - Searching for checkpoints for experiment: exp15_pure_capacity
+2025-11-12 11:15:24,639 - INFO - Found related file: exp15_pure_capacity_G_epoch_10.pth
+2025-11-12 11:15:24,639 - INFO - Found checkpoint: exp15_pure_capacity_G_epoch_10.pth -> epoch 10
+2025-11-12 11:15:24,639 - INFO - New max epoch: 10
+2025-11-12 11:15:24,639 - INFO - Found related file: exp15_pure_capacity_D_epoch_10.pth
+2025-11-12 11:15:24,639 - INFO - Found related file: exp15_pure_capacity_G_final.pth
+2025-11-12 11:15:24,639 - INFO - Final max epoch found: 10, checkpoint: exp15_pure_capacity_G_epoch_10.pth
+2025-11-12 11:15:24,639 - INFO - Loading generator from: saved_models/exp15_pure_capacity_G_epoch_10.pth
+2025-11-12 11:15:24,644 - INFO - Loading discriminator from: saved_models/exp15_pure_capacity_D_epoch_10.pth
+2025-11-12 11:15:24,655 - INFO - No optimizer state found, using fresh optimizers
+2025-11-12 11:15:24,655 - INFO - Successfully reloaded from epoch 10
+2025-11-12 11:15:24,655 - INFO - Training already completed (epoch 10/10), skipping to evaluation
+2025-11-12 11:15:24,655 - INFO - Calculating FID score...
+2025-11-12 11:15:24,823 - INFO - Using latent_size: 128 for FID calculation
+2025-11-12 11:15:39,847 - INFO - Analyzing latent space...
+2025-11-12 11:15:39,926 - INFO - Saved final models to saved_models
+2025-11-12 11:15:39,926 - INFO - Experiment exp15_pure_capacity completed. FID: 81.70
+2025-11-12 11:15:39,933 - INFO - Starting experiment: exp16_capacity_adapted
+2025-11-12 11:15:39,933 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:15:39,933 - INFO - Config: {'hidden_size': 512, 'latent_size': 128, 'num_epochs': 20, 'lr': 5e-05, 'd_lr': 4e-05, 'g_lr': 6e-05, 'description': 'Capacity Adapted: hidden_size↑ + longer training + refined LR'}
+2025-11-12 11:15:40,044 - INFO - Searching for checkpoints for experiment: exp16_capacity_adapted
+2025-11-12 11:15:40,044 - INFO - Found related file: exp16_capacity_adapted_G_epoch_10.pth
+2025-11-12 11:15:40,044 - INFO - Found checkpoint: exp16_capacity_adapted_G_epoch_10.pth -> epoch 10
+2025-11-12 11:15:40,044 - INFO - New max epoch: 10
+2025-11-12 11:15:40,044 - INFO - Found related file: exp16_capacity_adapted_D_epoch_10.pth
+2025-11-12 11:15:40,044 - INFO - Found related file: exp16_capacity_adapted_G_epoch_20.pth
+2025-11-12 11:15:40,045 - INFO - Found checkpoint: exp16_capacity_adapted_G_epoch_20.pth -> epoch 20
+2025-11-12 11:15:40,045 - INFO - New max epoch: 20
+2025-11-12 11:15:40,045 - INFO - Found related file: exp16_capacity_adapted_D_epoch_20.pth
+2025-11-12 11:15:40,045 - INFO - Found related file: exp16_capacity_adapted_G_final.pth
+2025-11-12 11:15:40,045 - INFO - Final max epoch found: 20, checkpoint: exp16_capacity_adapted_G_epoch_20.pth
+2025-11-12 11:15:40,045 - INFO - Loading generator from: saved_models/exp16_capacity_adapted_G_epoch_20.pth
+2025-11-12 11:15:40,049 - INFO - Loading discriminator from: saved_models/exp16_capacity_adapted_D_epoch_20.pth
+2025-11-12 11:15:40,060 - INFO - No optimizer state found, using fresh optimizers
+2025-11-12 11:15:40,060 - INFO - Successfully reloaded from epoch 20
+2025-11-12 11:15:40,060 - INFO - Training already completed (epoch 20/20), skipping to evaluation
+2025-11-12 11:15:40,060 - INFO - Calculating FID score...
+2025-11-12 11:15:40,240 - INFO - Using latent_size: 128 for FID calculation
+2025-11-12 11:15:55,304 - INFO - Analyzing latent space...
+2025-11-12 11:15:55,373 - INFO - Saved final models to saved_models
+2025-11-12 11:15:55,373 - INFO - Experiment exp16_capacity_adapted completed. FID: 63.77
+2025-11-12 11:15:55,377 - INFO - Starting experiment: exp1_baseline
+2025-11-12 11:15:55,377 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:15:55,377 - INFO - Config: {'description': 'Baseline: Standard GAN with BCE loss'}
+2025-11-12 11:15:55,476 - INFO - Searching for checkpoints for experiment: exp1_baseline
+2025-11-12 11:15:55,476 - INFO - Found related file: exp1_baseline_G_epoch_10.pth
+2025-11-12 11:15:55,476 - INFO - Found checkpoint: exp1_baseline_G_epoch_10.pth -> epoch 10
+2025-11-12 11:15:55,476 - INFO - New max epoch: 10
+2025-11-12 11:15:55,476 - INFO - Found related file: exp1_baseline_D_epoch_10.pth
+2025-11-12 11:15:55,476 - INFO - Found related file: exp1_baseline_G_epoch_20.pth
+2025-11-12 11:15:55,476 - INFO - Found checkpoint: exp1_baseline_G_epoch_20.pth -> epoch 20
+2025-11-12 11:15:55,476 - INFO - New max epoch: 20
+2025-11-12 11:15:55,476 - INFO - Found related file: exp1_baseline_D_epoch_20.pth
+2025-11-12 11:15:55,476 - INFO - Found related file: exp1_baseline_G_epoch_30.pth
+2025-11-12 11:15:55,476 - INFO - Found checkpoint: exp1_baseline_G_epoch_30.pth -> epoch 30
+2025-11-12 11:15:55,476 - INFO - New max epoch: 30
+2025-11-12 11:15:55,477 - INFO - Found related file: exp1_baseline_D_epoch_30.pth
+2025-11-12 11:15:55,477 - INFO - Found related file: exp1_baseline_G_epoch_40.pth
+2025-11-12 11:15:55,477 - INFO - Found checkpoint: exp1_baseline_G_epoch_40.pth -> epoch 40
+2025-11-12 11:15:55,477 - INFO - New max epoch: 40
+2025-11-12 11:15:55,477 - INFO - Found related file: exp1_baseline_D_epoch_40.pth
+2025-11-12 11:15:55,477 - INFO - Found related file: exp1_baseline_G_final.pth
+2025-11-12 11:15:55,477 - INFO - Found related file: exp1_baseline_D_final.pth
+2025-11-12 11:15:55,477 - INFO - Final max epoch found: 40, checkpoint: exp1_baseline_G_epoch_40.pth
+2025-11-12 11:15:55,477 - INFO - Loading generator from: saved_models/exp1_baseline_G_epoch_40.pth
+2025-11-12 11:15:55,481 - INFO - Loading discriminator from: saved_models/exp1_baseline_D_epoch_40.pth
+2025-11-12 11:15:55,485 - INFO - No optimizer state found, using fresh optimizers
+2025-11-12 11:15:55,485 - INFO - Successfully reloaded from epoch 40
+2025-11-12 11:15:55,485 - INFO - Training already completed (epoch 40/10), skipping to evaluation
+2025-11-12 11:15:55,485 - INFO - Calculating FID score...
+2025-11-12 11:15:55,742 - INFO - Using latent_size: 128 for FID calculation
+2025-11-12 11:16:09,802 - INFO - Analyzing latent space...
+2025-11-12 11:16:09,877 - INFO - Saved final models to saved_models
+2025-11-12 11:16:09,877 - INFO - Experiment exp1_baseline completed. FID: 27.75
+2025-11-12 11:16:09,881 - INFO - Starting experiment: exp2_small_latent
+2025-11-12 11:16:09,881 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:16:09,881 - INFO - Config: {'latent_size': 64, 'description': 'Latent: Smaller latent dimension (64)'}
+2025-11-12 11:16:09,968 - INFO - Searching for checkpoints for experiment: exp2_small_latent
+2025-11-12 11:16:09,968 - INFO - Found related file: exp2_small_latent_G_epoch_10.pth
+2025-11-12 11:16:09,968 - INFO - Found checkpoint: exp2_small_latent_G_epoch_10.pth -> epoch 10
+2025-11-12 11:16:09,968 - INFO - New max epoch: 10
+2025-11-12 11:16:09,968 - INFO - Found related file: exp2_small_latent_D_epoch_10.pth
+2025-11-12 11:16:09,968 - INFO - Found related file: exp2_small_latent_G_epoch_20.pth
+2025-11-12 11:16:09,968 - INFO - Found checkpoint: exp2_small_latent_G_epoch_20.pth -> epoch 20
+2025-11-12 11:16:09,968 - INFO - New max epoch: 20
+2025-11-12 11:16:09,968 - INFO - Found related file: exp2_small_latent_D_epoch_20.pth
+2025-11-12 11:16:09,968 - INFO - Found related file: exp2_small_latent_G_epoch_30.pth
+2025-11-12 11:16:09,968 - INFO - Found checkpoint: exp2_small_latent_G_epoch_30.pth -> epoch 30
+2025-11-12 11:16:09,968 - INFO - New max epoch: 30
+2025-11-12 11:16:09,968 - INFO - Found related file: exp2_small_latent_D_epoch_30.pth
+2025-11-12 11:16:09,968 - INFO - Found related file: exp2_small_latent_G_epoch_40.pth
+2025-11-12 11:16:09,968 - INFO - Found checkpoint: exp2_small_latent_G_epoch_40.pth -> epoch 40
+2025-11-12 11:16:09,968 - INFO - New max epoch: 40
+2025-11-12 11:16:09,968 - INFO - Found related file: exp2_small_latent_D_epoch_40.pth
+2025-11-12 11:16:09,968 - INFO - Found related file: exp2_small_latent_G_final.pth
+2025-11-12 11:16:09,968 - INFO - Found related file: exp2_small_latent_D_final.pth
+2025-11-12 11:16:09,968 - INFO - Final max epoch found: 40, checkpoint: exp2_small_latent_G_epoch_40.pth
+2025-11-12 11:16:09,968 - INFO - Loading generator from: saved_models/exp2_small_latent_G_epoch_40.pth
+2025-11-12 11:16:09,972 - INFO - Loading discriminator from: saved_models/exp2_small_latent_D_epoch_40.pth
+2025-11-12 11:16:09,974 - INFO - No optimizer state found, using fresh optimizers
+2025-11-12 11:16:09,974 - INFO - Successfully reloaded from epoch 40
+2025-11-12 11:16:09,974 - INFO - Training already completed (epoch 40/10), skipping to evaluation
+2025-11-12 11:16:09,974 - INFO - Calculating FID score...
+2025-11-12 11:16:10,144 - INFO - Using latent_size: 64 for FID calculation
+2025-11-12 11:16:21,197 - INFO - Analyzing latent space...
+2025-11-12 11:16:21,263 - INFO - Saved final models to saved_models
+2025-11-12 11:16:21,263 - INFO - Experiment exp2_small_latent completed. FID: 25.88
+2025-11-12 11:16:21,267 - INFO - Starting experiment: exp3_large_latent
+2025-11-12 11:16:21,267 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:16:21,267 - INFO - Config: {'latent_size': 256, 'description': 'Latent: Larger latent dimension (256)'}
+2025-11-12 11:16:21,350 - INFO - Searching for checkpoints for experiment: exp3_large_latent
+2025-11-12 11:16:21,350 - INFO - Found related file: exp3_large_latent_G_epoch_10.pth
+2025-11-12 11:16:21,350 - INFO - Found checkpoint: exp3_large_latent_G_epoch_10.pth -> epoch 10
+2025-11-12 11:16:21,350 - INFO - New max epoch: 10
+2025-11-12 11:16:21,350 - INFO - Found related file: exp3_large_latent_D_epoch_10.pth
+2025-11-12 11:16:21,350 - INFO - Found related file: exp3_large_latent_G_epoch_20.pth
+2025-11-12 11:16:21,350 - INFO - Found checkpoint: exp3_large_latent_G_epoch_20.pth -> epoch 20
+2025-11-12 11:16:21,350 - INFO - New max epoch: 20
+2025-11-12 11:16:21,350 - INFO - Found related file: exp3_large_latent_D_epoch_20.pth
+2025-11-12 11:16:21,350 - INFO - Found related file: exp3_large_latent_G_epoch_30.pth
+2025-11-12 11:16:21,351 - INFO - Found checkpoint: exp3_large_latent_G_epoch_30.pth -> epoch 30
+2025-11-12 11:16:21,351 - INFO - New max epoch: 30
+2025-11-12 11:16:21,351 - INFO - Found related file: exp3_large_latent_D_epoch_30.pth
+2025-11-12 11:16:21,351 - INFO - Found related file: exp3_large_latent_G_epoch_40.pth
+2025-11-12 11:16:21,351 - INFO - Found checkpoint: exp3_large_latent_G_epoch_40.pth -> epoch 40
+2025-11-12 11:16:21,351 - INFO - New max epoch: 40
+2025-11-12 11:16:21,351 - INFO - Found related file: exp3_large_latent_D_epoch_40.pth
+2025-11-12 11:16:21,351 - INFO - Found related file: exp3_large_latent_G_final.pth
+2025-11-12 11:16:21,351 - INFO - Found related file: exp3_large_latent_D_final.pth
+2025-11-12 11:16:21,351 - INFO - Final max epoch found: 40, checkpoint: exp3_large_latent_G_epoch_40.pth
+2025-11-12 11:16:21,351 - INFO - Loading generator from: saved_models/exp3_large_latent_G_epoch_40.pth
+2025-11-12 11:16:21,360 - INFO - Loading discriminator from: saved_models/exp3_large_latent_D_epoch_40.pth
+2025-11-12 11:16:21,362 - INFO - No optimizer state found, using fresh optimizers
+2025-11-12 11:16:21,362 - INFO - Successfully reloaded from epoch 40
+2025-11-12 11:16:21,362 - INFO - Training already completed (epoch 40/10), skipping to evaluation
+2025-11-12 11:16:21,362 - INFO - Calculating FID score...
+2025-11-12 11:16:21,540 - INFO - Using latent_size: 256 for FID calculation
+2025-11-12 11:16:36,428 - INFO - Analyzing latent space...
+2025-11-12 11:16:36,491 - INFO - Saved final models to saved_models
+2025-11-12 11:16:36,491 - INFO - Experiment exp3_large_latent completed. FID: 25.48
+2025-11-12 11:16:36,495 - INFO - Starting experiment: exp4_elu_activation
+2025-11-12 11:16:36,495 - INFO - Reload mode: will try to resume from latest checkpoint
+2025-11-12 11:16:36,495 - INFO - Config: {'activation': 'elu', 'description': 'Architecture: ELU activation instead of ReLU/LeakyReLU'}
+2025-11-12 11:16:36,570 - INFO - Searching for checkpoints for experiment: exp4_elu_activation
+2025-11-12 11:16:36,570 - INFO - Found related file: exp4_elu_activation_G_epoch_10.pth
+2025-11-12 11:16:36,570 - INFO - Found checkpoint: exp4_elu_activation_G_epoch_10.pth -> epoch 10
+2025-11-12 11:16:36,570 - INFO - New max epoch: 10
+2025-11-12 11:16:36,570 - INFO - Found related file: exp4_elu_activation_D_epoch_10.pth
+2025-11-12 11:16:36,570 - INFO - Found related file: exp4_elu_activation_G_epoch_20.pth
+2025-11-12 11:16:36,570 - INFO - Found checkpoint: exp4_elu_activation_G_epoch_20.pth -> epoch 20
+2025-11-12 11:16:36,570 - INFO - New max epoch: 20
+2025-11-12 11:16:36,570 - INFO - Found related file: exp4_elu_activation_D_epoch_20.pth
+2025-11-12 11:16:36,570 - INFO - Found related file: exp4_elu_activation_G_epoch_30.pth
+2025-11-12 11:16:36,570 - INFO - Found checkpoint: exp4_elu_activation_G_epoch_30.pth -> epoch 30
+2025-11-12 11:16:36,570 - INFO - New max epoch: 30
+2025-11-12 11:16:36,570 - INFO - Found related file: exp4_elu_activation_D_epoch_30.pth
+2025-11-12 11:16:36,570 - INFO - Found related file: exp4_elu_activation_G_epoch_40.pth
+2025-11-12 11:16:36,570 - INFO - Found checkpoint: exp4_elu_activation_G_epoch_40.pth -> epoch 40
+2025-11-12 11:16:36,570 - INFO - New max epoch: 40
+2025-11-12 11:16:36,570 - INFO - Found related file: exp4_elu_activation_D_epoch_40.pth
+2025-11-12 11:16:36,570 - INFO - Found related file: exp4_elu_activation_G_final.pth
+2025-11-12 11:16:36,570 - INFO - Found related file: exp4_elu_activation_D_final.pth
+2025-11-12 11:16:36,570 - INFO - Final max epoch found: 40, checkpoint: exp4_elu_activation_G_epoch_40.pth
+2025-11-12 11:16:36,570 - INFO - Loading generator from: saved_models/exp4_elu_activation_G_epoch_40.pth
+2025-11-12 11:16:36,573 - INFO - Loading discriminator from: saved_models/exp4_elu_activation_D_epoch_40.pth
+2025-11-12 11:16:36,584 - INFO - No optimizer state found, using fresh optimizers
+2025-11-12 11:16:36,585 - INFO - Successfully reloaded from epoch 40
+2025-11-12 11:16:36,585 - INFO - Training already completed (epoch 40/10), skipping to evaluation
+2025-11-12 11:16:36,585 - INFO - Calculating FID score...
+2025-11-12 11:16:36,801 - INFO - Using latent_size: 128 for FID calculation

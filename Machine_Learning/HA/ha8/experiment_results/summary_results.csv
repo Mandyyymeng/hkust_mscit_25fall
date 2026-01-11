@@ -1,0 +1,9 @@
+Method,Type,Accuracy,Correct_Predictions,Total_Images,Inference_Time,Templates_Used
+simple_baseline,baseline,0.8740,1783,2040,47.10,1
+ensemble_baseline,baseline,0.8735,1782,2040,60.81,34
+feature_average,ensemble,0.8735,1782,2040,2587.29,34
+prediction_average,ensemble,0.8676,1770,2040,1409.96,34
+majority_voting,ensemble,0.8740,1783,2040,1405.44,34
+weighted_prediction,ensemble,0.8760,1787,2040,1392.74,34
+learned_weighting,ensemble,0.8676,1770,2040,1436.93,34
+selective_ensemble,ensemble,0.8740,1783,2040,45.16,8

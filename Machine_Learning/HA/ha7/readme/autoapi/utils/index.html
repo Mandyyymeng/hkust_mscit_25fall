@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>utils &#8212; SFLM  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="model" href="../model/index.html" />
+    <link rel="prev" title="API Reference" href="../index.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-utils">
+<span id="utils"></span><h1>utils<a class="headerlink" href="#module-utils" title="Link to this heading">¶</a></h1>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#utils.LangABC" title="utils.LangABC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LangABC</span></code></a></p></td>
+<td><p>A dummy dataset of a simple formal language.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#utils.TokenizerABC" title="utils.TokenizerABC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TokenizerABC</span></code></a></p></td>
+<td><p>A simple predefined tokenizer with 5 tokens: a, b, c, ^(BOS), and $(EOS).</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="utils.LangABC">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">utils.</span></span><span class="sig-name descname"><span class="pre">LangABC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_len</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.LangABC" title="Link to this definition">¶</a></dt>
+<dd><p>A dummy dataset of a simple formal language.</p>
+<p>FORMAL LANGUAGE NOTE
+Given an alphabet <span class="math notranslate nohighlight">\(\Sigma\)</span>, a formal language <span class="math notranslate nohighlight">\(L\)</span> is defined as a subset of <span class="math notranslate nohighlight">\(\Sigma^*\)</span>.</p>
+<p>This is a NONDETERMINISTIC dummy dataset for generating strings in a formal language L,
+where <span class="math notranslate nohighlight">\(L=\{w| |w| \leq \textit{max_len}, |w|_a + |w|_b = |w|_c\}, \Sigma=\{a, b, c\}\)</span>.</p>
+<p>Attributes:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>size</strong> (<em>int</em>) – The dummy size of the dataset, would affect the # for each epoch.</p></li>
+<li><p><strong>max_len</strong> (<em>int</em>) – The maximum length of strings defined for this language.
+Note: BOS and EOS not included.</p></li>
+<li><p><strong>transform</strong> (<em>Optional</em><em>[</em><em>Callable</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em><em>]</em>) – The transform function for preprocessing.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="utils.LangABC.size">
+<span class="sig-name descname"><span class="pre">size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#utils.LangABC.size" title="Link to this definition">¶</a></dt>
+<dd><p>The dummy size of the dataset,
+required to specify how many steps for each epoch.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="utils.LangABC.max_len">
+<span class="sig-name descname"><span class="pre">max_len</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#utils.LangABC.max_len" title="Link to this definition">¶</a></dt>
+<dd><p>The maximum length of strings defined for this language.
+Note: SOS and EOS not included.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="utils.LangABC.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#utils.LangABC.transform" title="Link to this definition">¶</a></dt>
+<dd><p>The transform function for preprocessing.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="utils.TokenizerABC">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">utils.</span></span><span class="sig-name descname"><span class="pre">TokenizerABC</span></span><a class="headerlink" href="#utils.TokenizerABC" title="Link to this definition">¶</a></dt>
+<dd><p>A simple predefined tokenizer with 5 tokens: a, b, c, ^(BOS), and $(EOS).</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="utils.TokenizerABC.num_tokens">
+<span class="sig-name descname"><span class="pre">num_tokens</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#utils.TokenizerABC.num_tokens" title="Link to this definition">¶</a></dt>
+<dd><p>The number of tokens.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="utils.TokenizerABC.encode">
+<span class="sig-name descname"><span class="pre">encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_to_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.TokenizerABC.encode" title="Link to this definition">¶</a></dt>
+<dd><p>Translate a string into a Tensor of indices of tokens.</p>
+<p>The input string s would be padded with BOS and EOS(s).
+For example, if s is <code class="code docutils literal notranslate"><span class="pre">&quot;abc&quot;</span></code>, and pad_to_length is 10, s would be first padded as <code class="code docutils literal notranslate"><span class="pre">&quot;^abc$$$$$$&quot;</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> (<em>str</em>) – The input string.</p></li>
+<li><p><strong>pad_to_length</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em>) – If given, the input would be padded with tailling EOSs
+till its length, including BOS and EOSs, meets this value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The indices of tokens stored in an 1D tensor.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>torch.Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="utils.TokenizerABC.decode">
+<span class="sig-name descname"><span class="pre">decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">truncate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_special_token</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.TokenizerABC.decode" title="Link to this definition">¶</a></dt>
+<dd><p>Translate a Tensor of indices of tokens back to string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idx</strong> (<em>torch.Tensor</em>) – The indices of tokens stored in an 1D tensor.</p></li>
+<li><p><strong>truncate</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – If set to True, all contents after the first EOS would be removed.</p></li>
+<li><p><strong>remove_special_token</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – BOS and EOS would be removed if set to True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The decoded string.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, COMP5212.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../_sources/autoapi/utils/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
