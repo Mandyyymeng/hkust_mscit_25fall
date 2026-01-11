@@ -1,0 +1,15 @@
+nohup: ignoring input
+usage: preprocessor.py [-h] --data_file_path DATA_FILE_PATH
+                       --database_root_dir DATABASE_ROOT_DIR --save_root_dir
+                       SAVE_ROOT_DIR --lsh_threshold LSH_THRESHOLD
+                       --lsh_signature_size LSH_SIGNATURE_SIZE --lsh_n_gram
+                       LSH_N_GRAM --lsh_top_k LSH_TOP_K
+                       --edit_similarity_threshold EDIT_SIMILARITY_THRESHOLD
+                       --embedding_similarity_threshold
+                       EMBEDDING_SIMILARITY_THRESHOLD --n_parallel_processes
+                       N_PARALLEL_PROCESSES --max_dataset_samples
+                       MAX_DATASET_SAMPLES
+preprocessor.py: error: the following arguments are required: --lsh_threshold, --lsh_signature_size, --lsh_n_gram, --lsh_top_k, --edit_similarity_threshold, --embedding_similarity_threshold, --n_parallel_processes, --max_dataset_samples
+✅ 模型 nomic-embed-text 验证成功
+script/preprocess.sh: line 7: --lsh_threshold: command not found
+script/preprocess.sh: line 11: --edit_similarity_threshold: command not found

@@ -1,0 +1,60 @@
+=== MCTS 节点分析日志 ===
+生成时间: 2025-10-22 20:10:53
+==================================================
+
+开始分析文件: results/Qwen2.5-Coder-7B-Instruct/kramabench/dev_main/6.pkl
+分析时间: 2025-10-22 20:10:53
+============================================================
+  类型: <class 'list'>
+  长度: 32
+  列表包含 32 个推理路径
+  每个路径平均节点数: 5.5
+  路径长度分布: {3: 1, 4: 5, 5: 9, 6: 11, 7: 6}
+    路径1: 3 个节点
+      节点类型序列: ['root', 'sql_generation', 'end']
+    路径2: 4 个节点
+      节点类型序列: ['root', 'sql_generation', 'sql_revision', 'end']
+    路径3: 4 个节点
+      节点类型序列: ['root', 'identify_column_functions', 'sql_generation', 'end']
+  Question ID: 6
+  包含的SQL查询示例:
+    路径1 SQL: SELECT COUNT(t2.city) FROM roman_cities AS t1 JOIN worldcities AS t2 ON ABS(t1."Latitude (Y)" - t2.lat) <= 0.1 AND ABS(t1."Longitude (X)" - t2.lng) <= 0.1 WHERE t2.population > 100000
+    路径2 SQL: SELECT COUNT(t2.city) FROM roman_cities AS t1 JOIN worldcities AS t2 ON ABS(t1."Latitude (Y)" - t2.lat) <= 0.1 AND ABS(t1."Longitude (X)" - t2.lng) <= 0.1 WHERE t2.population > 100000
+    路径3 SQL: SELECT COUNT(*) FROM (SELECT modern_city.*, ancient_roman_city.*, (6371 * ACOS(COS(RADIANS(modern_city.lat)) * COS(RADIANS(ancient_roman_city."Latitude (Y)")) * COS(RADIANS(modern_city.lng) - RADIANS(ancient_roman_city."Longitude (X)")) + SIN(RADIANS(modern_city.lat)) * SIN(RADIANS(ancient_roman_city."Latitude (Y)")))) AS distance FROM worldcities AS modern_city INNER JOIN roman_cities AS ancient_roman_city ON 1 = 1) WHERE distance <= 0.1
+    路径4 SQL: SELECT COUNT(*) FROM (SELECT modern_city.*, ancient_roman_city.*, (6371 * ACOS(COS(RADIANS(modern_city.lat)) * COS(RADIANS(ancient_roman_city."Latitude (Y)")) * COS(RADIANS(modern_city.lng) - RADIANS(ancient_roman_city."Longitude (X)")) + SIN(RADIANS(modern_city.lat)) * SIN(RADIANS(ancient_roman_city."Latitude (Y)")))) AS distance FROM worldcities AS modern_city INNER JOIN roman_cities AS ancient_roman_city ON 1 = 1 WHERE modern_city.population > 100000) WHERE distance <= 0.1
+
+🌳 路径树结构 (长度: 3 个节点):
+==================================================
+🌱 root (深度: 0)
+  📋 根节点信息:
+    类型: root
+    深度: 0
+    问题: How many modern cities with a population of over 100k are within 0.1 degrees of ...
+    提示: Archaeological data analysis using roman_cities, worldcities
+    数据库: archeology
+    模式上下文预览: CREATE TABLE `climate_measurements` (
+	`Site` TEXT, -- Value Examples: `ODP 967`
+	`Hole` TEXT, -- Va...
+    ─────────────────────────
+  └── sql_generation (深度: 1)
+  📋 sql_generation 节点 (深度: 1):
+    父动作: SQLGenerationAction
+    SQL查询: SELECT COUNT(t2.city) FROM roman_cities AS t1 JOIN worldcities AS t2 ON ABS(t1."...
+    SQL有效性: 有效
+    一致性评分: 1.000
+    路径长度: 2
+    访问次数: 3, 累计奖励: 3.00
+    ─────────────────────────
+    └── end (深度: 2) -> SQL: SELECT COUNT(t2.city) FROM roman_cities AS t1 JOIN...
+  📋 end 节点 (深度: 2):
+    父动作: EndAction
+    SQL查询: SELECT COUNT(t2.city) FROM roman_cities AS t1 JOIN worldcities AS t2 ON ABS(t1."...
+    最终SQL: SELECT COUNT(t2.city) FROM roman_cities AS t1 JOIN worldcities AS t2 ON ABS(t1."...
+    SQL有效性: 有效
+    一致性评分: 1.000
+    路径长度: 3
+    访问次数: 2, 累计奖励: 2.00
+    ─────────────────────────
+
+============================================================
+分析完成!

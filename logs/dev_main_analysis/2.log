@@ -1,0 +1,112 @@
+=== MCTS 节点分析日志 ===
+生成时间: 2025-10-22 20:10:52
+==================================================
+
+开始分析文件: results/Qwen2.5-Coder-7B-Instruct/kramabench/dev_main/2.pkl
+分析时间: 2025-10-22 20:10:52
+============================================================
+  类型: <class 'list'>
+  长度: 36
+  列表包含 36 个推理路径
+  每个路径平均节点数: 5.9
+  路径长度分布: {6: 14, 7: 10, 5: 5, 4: 4, 3: 1, 8: 2}
+    路径1: 6 个节点
+      节点类型序列: ['root', 'identify_column_functions', 'identify_column_values', 'schema_selection', 'sql_generation', 'end']
+    路径2: 7 个节点
+      节点类型序列: ['root', 'identify_column_functions', 'identify_column_values', 'schema_selection', 'sql_generation', 'sql_revision', 'end']
+    路径3: 6 个节点
+      节点类型序列: ['root', 'identify_column_functions', 'identify_column_values', 'schema_selection', 'sql_generation', 'end']
+  Question ID: 2
+  包含的SQL查询示例:
+    路径1 SQL: SELECT ROUND(AVG(REPLACE("Barrington Atlas Rank", ' or ', ' ')), 4) AS average_rank FROM roman_cities WHERE country = 'Greece'
+    路径2 SQL: SELECT ROUND(AVG(CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' ') + 1, INSTR("Barrington Atlas Rank", ' or ') - INSTR("Barrington Atlas Rank", ' ') - 1) AS REAL) + CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' or ') + 4) AS REAL)) / 2, 4) AS average_rank FROM "roman_cities" WHERE "Country" = 'Greece'
+    路径3 SQL: SELECT ROUND(AVG(CAST(REPLACE("Barrington Atlas Rank", ' or ', '') AS REAL)), 4) AS average_rank FROM "roman_cities" WHERE "Country" = 'Greece'
+    路径4 SQL: SELECT ROUND(AVG(CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", 'or') + 3, 1) AS REAL) + CAST(SUBSTRING("Barrington Atlas Rank", 1, INSTR("Barrington Atlas Rank", 'or') - 1) AS REAL)) / 2, 4) AS avg_rank FROM roman_cities WHERE "Country" = 'Greece'
+
+🌳 路径树结构 (长度: 6 个节点):
+==================================================
+🌱 root (深度: 0)
+  📋 根节点信息:
+    类型: root
+    深度: 0
+    问题: What is the average rank of cities in Greece? Assume that if there is an 'or', t...
+    提示: Archaeological data analysis using roman_cities
+    数据库: archeology
+    模式上下文预览: CREATE TABLE `climate_measurements` (
+	`Site` TEXT, -- Value Examples: `ODP 967`
+	`Hole` TEXT, -- Va...
+    ─────────────────────────
+  └── identify_column_functions (深度: 1)
+  📋 identify_column_functions 节点 (深度: 1):
+    父动作: IdentifyColumnFunctionsAction
+    识别函数: To calculate the average rank of cities in Greece, I need to consider the `Barrington Atlas Rank` column from the `roman_cities` table. Since the rank might be given as a range (e.g., "4 or 5"), I should use a function to handle such cases. The `LIKE` operator can be used to filter cities in Greece, and the `REPLACE` function can be used to extract the rank numbers from the string. The `AVG` function will then be used to calculate the average. The `ROUND` function will round the result to 4 decimal places.
+    路径长度: 2
+    访问次数: 2, 累计奖励: 0.60
+    ─────────────────────────
+    └── identify_column_values (深度: 2)
+  📋 identify_column_values 节点 (深度: 2):
+    父动作: IdentifyColumnValuesAction
+    识别列值: To answer the question "What is the average rank of cities in Greece? Assume that if there is an 'or', the average of the two numbers. Round your answer to 4 decimal places," you need to use the following columns and functions:
+
+1. `Barrington Atlas Rank` from the `roman_cities` table.
+2. `LIKE` to filter cities in Greece.
+3. `REPLACE` to extract rank numbers from the string.
+4. `AVG` to calculate the average.
+5. `ROUND` to round the result to 4 decimal places.
+
+Specifically, you will need to use the `REPLACE` function to handle cases where the rank is given as a range (e.g., "4 or 5") and calculate the average accordingly.
+    识别函数: To calculate the average rank of cities in Greece, I need to consider the `Barrington Atlas Rank` column from the `roman_cities` table. Since the rank might be given as a range (e.g., "4 or 5"), I should use a function to handle such cases. The `LIKE` operator can be used to filter cities in Greece, and the `REPLACE` function can be used to extract the rank numbers from the string. The `AVG` function will then be used to calculate the average. The `ROUND` function will round the result to 4 decimal places.
+    路径长度: 3
+    访问次数: 1, 累计奖励: 0.20
+    ─────────────────────────
+      └── schema_selection (深度: 3)
+  📋 schema_selection 节点 (深度: 3):
+    父动作: SchemaSelectionAction
+    选择模式: CREATE TABLE `roman_cities` (
+	`Country` TEXT, -- Column Description: Data column: Country | Value Examples: `Greece`, `Romania`
+	`Barrington Atlas Rank` TEXT, -- Column Description: Data column: Barrington Atlas Rank | Value Examples: `4 or 5`, `3`, `2`
+	PRIMARY KEY ()
+);
+    识别列值: To answer the question "What is the average rank of cities in Greece? Assume that if there is an 'or', the average of the two numbers. Round your answer to 4 decimal places," you need to use the following columns and functions:
+
+1. `Barrington Atlas Rank` from the `roman_cities` table.
+2. `LIKE` to filter cities in Greece.
+3. `REPLACE` to extract rank numbers from the string.
+4. `AVG` to calculate the average.
+5. `ROUND` to round the result to 4 decimal places.
+
+Specifically, you will need to use the `REPLACE` function to handle cases where the rank is given as a range (e.g., "4 or 5") and calculate the average accordingly.
+    识别函数: To calculate the average rank of cities in Greece, I need to consider the `Barrington Atlas Rank` column from the `roman_cities` table. Since the rank might be given as a range (e.g., "4 or 5"), I should use a function to handle such cases. The `LIKE` operator can be used to filter cities in Greece, and the `REPLACE` function can be used to extract the rank numbers from the string. The `AVG` function will then be used to calculate the average. The `ROUND` function will round the result to 4 decimal places.
+    选择模式: 1表/2列
+    路径长度: 4
+    访问次数: 1, 累计奖励: 0.20
+    ─────────────────────────
+        └── sql_generation (深度: 4)
+  📋 sql_generation 节点 (深度: 4):
+    父动作: SQLGenerationAction
+    选择模式: CREATE TABLE `roman_cities` (
+	`Country` TEXT, -- Column Description: Data column: Country | Value Examples: `Greece`, `Romania`
+	`Barrington Atlas Rank` TEXT, -- Column Description: Data column: Barrington Atlas Rank | Value Examples: `4 or 5`, `3`, `2`
+	PRIMARY KEY ()
+);
+    识别列值: To answer the question "What is the average rank of cities in Greece? Assume that if there is an 'or', the average of the two numbers. Round your answer to 4 decimal places," you need to use the following columns and functions:
+
+1. `Barrington Atlas Rank` from the `roman_cities` table.
+2. `LIKE` to filter cities in Greece.
+3. `REPLACE` to extract rank numbers from the string.
+4. `AVG` to calculate the average.
+5. `ROUND` to round the result to 4 decimal places.
+
+Specifically, you will need to use the `REPLACE` function to handle cases where the rank is given as a range (e.g., "4 or 5") and calculate the average accordingly.
+    识别函数: To calculate the average rank of cities in Greece, I need to consider the `Barrington Atlas Rank` column from the `roman_cities` table. Since the rank might be given as a range (e.g., "4 or 5"), I should use a function to handle such cases. The `LIKE` operator can be used to filter cities in Greece, and the `REPLACE` function can be used to extract the rank numbers from the string. The `AVG` function will then be used to calculate the average. The `ROUND` function will round the result to 4 decimal places.
+    SQL查询: SELECT ROUND(AVG(REPLACE("Barrington Atlas Rank", ' or ', ' ')), 4) AS average_r...
+    SQL有效性: 有效
+    一致性评分: 0.200
+    选择模式: 1表/2列
+    路径长度: 5
+    访问次数: 1, 累计奖励: 0.20
+    ─────────────────────────
+          └── ... (后续节点省略)
+
+============================================================
+分析完成!

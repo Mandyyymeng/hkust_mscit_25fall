@@ -7,6 +7,7 @@ from alphasql.database.utils import build_table_ddl_statement
 from alphasql.database.lsh_index import LSHIndex
 from alphasql.database.sql_parse import extract_db_values_from_sql
 from alphasql.llm_call.openai_llm import call_openai
+from alphasql.llm_call.qwen_local import call_vllm,OllamaEmbeddings,call_ollama_qwen
 from alphasql.llm_call.prompt_factory import get_prompt
 from alphasql.llm_call.cost_recoder import CostRecorder
 from difflib import SequenceMatcher
@@ -20,14 +21,24 @@ import pickle
 from collections import defaultdict
 from copy import deepcopy
 import re
+import requests
+import time
 
 load_dotenv(override=True)
 
-EMBEDDING_MODEL_CALLABLE = OpenAIEmbeddings(model="text-embedding-3-large")
+EMBEDDING_MODEL_CALLABLE = OllamaEmbeddings() #("nomic-embed-text")
+# EMBEDDING_MODEL_CALLABLE = OpenAIEmbeddings(model="text-embedding-3-large")
 
+# original settings
+# MODEL_NAME = "gpt-4o-mini"
 COST_RECORDER = CostRecorder(model="gpt-3.5-turbo")
-MODEL_NAME = "gpt-4o-mini"
 TEMPERATURE = 0.2
+
+# local vLLM/Qwen
+VLLM_API_BASE = "http://localhost:1132"  # vLLM API   11435  
+VLLM_MODEL_NAME = "Qwen/Qwen2.5-Coder-32B-Instruct"  # Qwen/..32B
+
+# MODEL_NAME = "qwen7b-coder"  #"qwen2.5-coder:7b-instruct"
 
 class Preprocessor:
     """
@@ -95,6 +106,7 @@ class Preprocessor:
         Args:
             db_id (str): The id of the database.
         """
+        # logger.info(f"building {db_id,self.database_root_dir}")
         db_schema = DatabaseManager.get_database_schema(db_id, self.database_root_dir)
         lsh_index_dir_path = Path(db_schema.db_directory) / "lsh_index"
         if lsh_index_dir_path.exists():
@@ -106,8 +118,9 @@ class Preprocessor:
         """
         Preprocess the LSH index for all databases.
         """
+        print("ALL IDS:",self.all_db_ids)
         with ThreadPoolExecutor(max_workers=self.n_parallel_processes) as executor:
-            executor.map(self.preprocess_lsh_index_for_one_db, self.all_db_ids)
+            list(executor.map(self.preprocess_lsh_index_for_one_db, self.all_db_ids)) ###
         logger.info(f"Preprocessed LSH index for {len(self.all_db_ids)} databases")
     
     def get_keywords_for_task(self, task: Task) -> List[str]:
@@ -123,14 +136,53 @@ class Preprocessor:
         max_retries = 10
         retry_count = 0
         
+        '''
+        # 保存第一个任务的提示词到文件
+        test_task = self.tasks[0]
+        test_prompt = get_prompt("keywords_extraction", {"QUESTION": test_task.question, "HINT": test_task.evidence})
+        
+        # 保存提示词到文件
+        with open("test_prompt.txt", "w", encoding="utf-8") as f:
+            f.write("=== 任务信息 ===\n")
+            f.write(f"问题: {test_task.question}\n")
+            f.write(f"提示: {test_task.evidence}\n")
+            f.write(f"数据库: {test_task.db_id}\n")
+            f.write("\n=== 生成的提示词 ===\n")
+            f.write(test_prompt)
+        
+        print("提示词已保存到 test_prompt.txt")
+        
+        # 测试调用
+        print("正在调用vLLM...")
+        response = call_vllm(test_prompt, temperature=TEMPERATURE)
+        print("模型响应:", response)
+        
+        # 保存响应到文件
+        with open("test_response.txt", "w", encoding="utf-8") as f:
+            f.write("=== 模型响应 ===\n")
+            f.write(response)
+        
+        print("响应已保存到 test_response.txt")
+        '''
+        
         while retry_count < max_retries:
             try:
+                '''
                 raw_keywords_str = call_openai(
                     get_prompt("keywords_extraction", {"QUESTION": task.question, "HINT": task.evidence}),
-                    MODEL_NAME,
-                    TEMPERATURE,
+                    model = MODEL_NAME,
+                    temperature = TEMPERATURE,
                     cost_recorder=COST_RECORDER
                 )[0]
+                '''
+                
+                # vLLM instaed of OpenAI
+                raw_keywords_str = call_vllm(
+                    get_prompt("keywords_extraction", {"QUESTION": task.question, "HINT": task.evidence}),
+                    model= VLLM_MODEL_NAME,
+                    temperature=TEMPERATURE,
+                    base_url=VLLM_API_BASE
+                )
                 
                 # Use regex to extract content between ```python ``` tags
                 pattern = r"```python\s*\[(.*?)\]\s*```"
@@ -225,6 +277,7 @@ class Preprocessor:
         to_embeded_list = [candidate_value["value"] for candidate_value in candidate_values]
         to_embeded_list += [candidate_value["query"] for candidate_value in candidate_values]
         to_embeded_list = list(set(to_embeded_list))
+        # print("list of emb:",to_embeded_list)
         embeddings = EMBEDDING_MODEL_CALLABLE.embed_documents(to_embeded_list)
         embeddings = {to_embeded_list[i]: embeddings[i] for i in range(len(to_embeded_list))}
         
@@ -261,7 +314,7 @@ class Preprocessor:
             A dictionary with tuple of (table name, column name) as key, and a list of relevant values as value.
         """
         keywords = self.get_keywords_for_task(task)
-        print(keywords)
+        # print(keywords)
         # Step 1: Use keywords to query the LSH index to get the candidate values.
         lsh_candidate_values = []
         for keyword in keywords:
@@ -273,7 +326,7 @@ class Preprocessor:
                 n_gram=self.lsh_n_gram
             )
             lsh_candidate_values.extend(results)
-        print(lsh_candidate_values)
+        # print("========candidate values:=================", lsh_candidate_values)
         # Step 2: Use edit distance to filter the candidate values.
         edit_similarity_candidate_values = self.filter_candidate_values_by_edit_similarity(lsh_candidate_values, self.edit_similarity_threshold)
         # Step 3: Use embedding similarity to filter the candidate values.
@@ -491,6 +544,9 @@ if __name__ == "__main__":
     parser.add_argument("--max_dataset_samples", type=int, required=True, default=-1)
     args = parser.parse_args()
     
+    # Record start time
+    total_start_time = time.time()
+    
     preprocessor = Preprocessor(
         data_file_path=args.data_file_path,
         database_root_dir=args.database_root_dir,
@@ -504,8 +560,58 @@ if __name__ == "__main__":
         max_dataset_samples=args.max_dataset_samples,
         save_root_dir=args.save_root_dir
     )
+    
+    # Step 1: LSH Index Construction
+    logger.info("=" * 50)
+    logger.info("Starting Step 1: LSH Index Construction")
+    lsh_start_time = time.time()
     preprocessor.preprocess_lsh_index()
-    # gold_relevant_values_for_all_tasks = preprocessor.get_gold_relevant_values_for_all_tasks()
+    lsh_duration = time.time() - lsh_start_time
+    logger.info(f"Step 1 completed - LSH Index Construction: {lsh_duration:.2f} seconds")
+    
+    # Step 2: Keyword Extraction and Value Retrieval
+    logger.info("=" * 50)
+    logger.info("Starting Step 2: Keyword Extraction and Value Retrieval")
+    keywords_start_time = time.time()
     predicted_relevant_values_for_all_tasks = preprocessor.get_relevant_values_for_all_tasks()
-    # relevant_values_retrieval_performance = preprocessor.evaluate_relevant_values_retrieval_performance_for_all_tasks(predicted_relevant_values_for_all_tasks, gold_relevant_values_for_all_tasks)
+    keywords_duration = time.time() - keywords_start_time
+    logger.info(f"Step 2 completed - Keyword Extraction and Value Retrieval: {keywords_duration:.2f} seconds")
+    
+    # Step 3: Schema Context Preprocessing
+    logger.info("=" * 50)
+    logger.info("Starting Step 3: Schema Context Preprocessing")
+    schema_start_time = time.time()
     tasks_with_schema_context = preprocessor.preprocess_schema_context_for_all_tasks()
+    schema_duration = time.time() - schema_start_time
+    logger.info(f"Step 3 completed - Schema Context Preprocessing: {schema_duration:.2f} seconds")
+    
+    # Total timing
+    total_duration = time.time() - total_start_time
+    logger.info("=" * 50)
+    logger.info("Preprocessing pipeline completed!")
+    logger.info(f"Total time: {total_duration:.2f} seconds")
+    logger.info("Step-wise timing details:")
+    logger.info(f"  - LSH Index Construction: {lsh_duration:.2f} seconds")
+    logger.info(f"  - Keyword Extraction and Value Retrieval: {keywords_duration:.2f} seconds") 
+    logger.info(f"  - Schema Context Preprocessing: {schema_duration:.2f} seconds")
+    logger.info("=" * 50)
+    
+    # Save timing information to file
+    timing_info = {
+        "total_duration_seconds": round(total_duration, 2),
+        "step_durations": {
+            "lsh_index_construction": round(lsh_duration, 2),
+            "keyword_extraction_and_value_retrieval": round(keywords_duration, 2),
+            "schema_context_preprocessing": round(schema_duration, 2)
+        },
+        "task_count": len(preprocessor.tasks),
+        "database_count": len(preprocessor.all_db_ids),
+        "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
+    }
+    
+    timing_file = "preprocessing_timing.json"
+    with open(timing_file, "w", encoding="utf-8") as f:
+        json.dump(timing_info, f, indent=2, ensure_ascii=False)
+    
+    logger.info(f"Timing information saved to: {timing_file}")
+    

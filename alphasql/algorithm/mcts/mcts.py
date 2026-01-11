@@ -7,6 +7,18 @@ import random
 from pathlib import Path
 from typing import Dict, Any, List
 import pickle
+import logging 
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('mcts_runner.log', encoding='utf-8'),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
 
 class MCTSSolver:
     def __init__(self,
@@ -63,8 +75,9 @@ class MCTSSolver:
         return current
 
     def backpropagate(self, node: MCTSNode):
-        print("Backpropagate, Final SQL Query: ", node.final_sql_query)
-        current = node
+        # print("Backpropagate, Final SQL Query: ", node.final_sql_query)
+        logger.info(f"Backpropagate, Final SQL Query: {node.final_sql_query}")
+        current = node 
         if current.N == 0:
             reward = self.reward_model.get_reward(current)
         else:
@@ -90,7 +103,7 @@ class MCTSSolver:
             reasoning_paths.append(end_node.path_nodes)
         return reasoning_paths
     
-    def solve(self):
+    def solve(self): 
         schema_context= "\n".join([build_table_ddl_statement(
             self.task.table_schema_dict[table_name].to_dict(), 
             add_value_description=True, # new feature
@@ -112,7 +125,7 @@ class MCTSSolver:
         root_node.path_nodes = [root_node]
         
         for _ in range(self.max_rollout_steps):
-            print(f"Question ID: {self.task.question_id}, Rollout step {_ + 1} / {self.max_rollout_steps}")
+            logger.info(f"Question ID: {self.task.question_id}, Rollout step {_ + 1} / {self.max_rollout_steps}")
             leaf_node = self.select(root_node)
             if leaf_node.is_terminal():
                 self.backpropagate(leaf_node)
@@ -124,8 +137,7 @@ class MCTSSolver:
         
         all_valid_reasoning_paths = self.find_all_valid_reasoning_paths(root_node)
         save_path = Path(self.save_root_dir) / f"{self.task.question_id}.pkl"
-        print(f"Question ID: {self.task.question_id} done, Number of valid reasoning paths: {len(all_valid_reasoning_paths)}")
+        logger.info(f"save to: {save_path}")
+        logger.info(f"Question ID: {self.task.question_id} done, Number of valid reasoning paths: {len(all_valid_reasoning_paths)}")
         with open(save_path, "wb") as f:
             pickle.dump(all_valid_reasoning_paths, f)
-
-        

@@ -1,0 +1,69 @@
+=== MCTS 节点分析日志 ===
+生成时间: 2025-10-22 20:10:53
+==================================================
+
+开始分析文件: results/Qwen2.5-Coder-7B-Instruct/kramabench/dev_main/9.pkl
+分析时间: 2025-10-22 20:10:53
+============================================================
+  类型: <class 'list'>
+  长度: 35
+  列表包含 35 个推理路径
+  每个路径平均节点数: 5.4
+  路径长度分布: {4: 8, 6: 11, 5: 9, 3: 1, 7: 6}
+    路径1: 4 个节点
+      节点类型序列: ['root', 'identify_column_functions', 'sql_generation', 'end']
+    路径2: 6 个节点
+      节点类型序列: ['root', 'identify_column_functions', 'identify_column_values', 'schema_selection', 'sql_generation', 'end']
+    路径3: 5 个节点
+      节点类型序列: ['root', 'rephrase_question', 'identify_column_functions', 'sql_generation', 'end']
+  Question ID: 9
+  包含的SQL查询示例:
+    路径1 SQL: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+    路径2 SQL: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+    路径3 SQL: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+    路径4 SQL: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+
+🌳 路径树结构 (长度: 4 个节点):
+==================================================
+🌱 root (深度: 0)
+  📋 根节点信息:
+    类型: root
+    深度: 0
+    问题: Which country has the highest average population in its cities?
+    提示: Archaeological data analysis using worldcities
+    数据库: archeology
+    模式上下文预览: CREATE TABLE `climate_measurements` (
+	`Site` TEXT, -- Value Examples: `ODP 967`
+	`Hole` TEXT, -- Va...
+    ─────────────────────────
+  └── identify_column_functions (深度: 1)
+  📋 identify_column_functions 节点 (深度: 1):
+    父动作: IdentifyColumnFunctionsAction
+    识别函数: To determine which country has the highest average population in its cities, you should consider using the `AVG()` function to calculate the average population and the `GROUP BY` clause to group the results by country. This will allow you to compare the average population across different countries.
+    路径长度: 2
+    访问次数: 2, 累计奖励: 1.60
+    ─────────────────────────
+    └── sql_generation (深度: 2)
+  📋 sql_generation 节点 (深度: 2):
+    父动作: SQLGenerationAction
+    识别函数: To determine which country has the highest average population in its cities, you should consider using the `AVG()` function to calculate the average population and the `GROUP BY` clause to group the results by country. This will allow you to compare the average population across different countries.
+    SQL查询: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY coun...
+    SQL有效性: 有效
+    一致性评分: 0.600
+    路径长度: 3
+    访问次数: 1, 累计奖励: 0.60
+    ─────────────────────────
+      └── end (深度: 3) -> SQL: SELECT country, AVG(population) AS avg_population ...
+  📋 end 节点 (深度: 3):
+    父动作: EndAction
+    识别函数: To determine which country has the highest average population in its cities, you should consider using the `AVG()` function to calculate the average population and the `GROUP BY` clause to group the results by country. This will allow you to compare the average population across different countries.
+    SQL查询: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY coun...
+    最终SQL: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY coun...
+    SQL有效性: 有效
+    一致性评分: 0.600
+    路径长度: 4
+    访问次数: 1, 累计奖励: 0.60
+    ─────────────────────────
+
+============================================================
+分析完成!

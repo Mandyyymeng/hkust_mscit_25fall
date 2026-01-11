@@ -1,0 +1,41 @@
+nohup: ignoring input
+2025-10-29 15:57:50.096 | INFO     | __main__:<module>:562 - ==================================================
+2025-10-29 15:57:50.096 | INFO     | __main__:<module>:563 - Starting Step 1: LSH Index Construction
+2025-10-29 15:57:50.239 | INFO     | __main__:preprocess_lsh_index_for_one_db:112 - LSH index for database california_schools already exists, skipping...
+2025-10-29 15:57:50.589 | INFO     | __main__:preprocess_lsh_index_for_one_db:112 - LSH index for database formula_1 already exists, skipping...
+2025-10-29 15:57:51.616 | INFO     | __main__:preprocess_lsh_index_for_one_db:112 - LSH index for database card_games already exists, skipping...
+2025-10-29 15:57:51.684 | INFO     | __main__:preprocess_lsh_index_for_one_db:112 - LSH index for database thrombosis_prediction already exists, skipping...
+2025-10-29 15:57:52.032 | WARNING  | alphasql.database.utils:load_foreign_keys:90 - Target column is None and has been fixed by primary keys of target table League - id, source table: Match, source column: league_id
+2025-10-29 15:57:52.032 | WARNING  | alphasql.database.utils:load_foreign_keys:90 - Target column is None and has been fixed by primary keys of target table Country - id, source table: Match, source column: country_id
+2025-10-29 15:57:52.341 | INFO     | __main__:preprocess_lsh_index_for_one_db:112 - LSH index for database european_football_2 already exists, skipping...
+2025-10-29 15:57:52.461 | INFO     | __main__:preprocess_lsh_index_for_one_db:112 - LSH index for database financial already exists, skipping...
+2025-10-29 15:57:52.652 | INFO     | __main__:preprocess_lsh_index_for_one_db:112 - LSH index for database student_club already exists, skipping...
+2025-10-29 15:57:52.695 | WARNING  | alphasql.database.utils:load_foreign_keys:90 - Target column is None and has been fixed by primary keys of target table customers - CustomerID, source table: yearmonth, source column: CustomerID
+2025-10-29 15:57:52.695 | WARNING  | alphasql.database.utils:load_foreign_keys:90 - Target column is None and has been fixed by primary keys of target table customers - CustomerID, source table: yearmonth, source column: CustomerID
+2025-10-29 15:57:52.706 | INFO     | __main__:preprocess_lsh_index_for_one_db:112 - LSH index for database debit_card_specializing already exists, skipping...
+2025-10-29 15:57:52.741 | INFO     | __main__:preprocess_lsh_index_for_one_db:112 - LSH index for database toxicology already exists, skipping...
+2025-10-29 15:57:52.939 | INFO     | __main__:preprocess_lsh_index_for_one_db:112 - LSH index for database superhero already exists, skipping...
+2025-10-29 15:57:53.099 | INFO     | __main__:preprocess_lsh_index_for_one_db:112 - LSH index for database codebase_community already exists, skipping...
+2025-10-29 15:57:53.101 | INFO     | __main__:preprocess_lsh_index:123 - Preprocessed LSH index for 11 databases
+2025-10-29 15:57:53.101 | INFO     | __main__:<module>:567 - Step 1 completed - LSH Index Construction: 3.00 seconds
+2025-10-29 15:57:53.101 | INFO     | __main__:<module>:570 - ==================================================
+2025-10-29 15:57:53.101 | INFO     | __main__:<module>:571 - Starting Step 2: Keyword Extraction and Value Retrieval
+✅ 模型 nomic-embed-text 验证成功
+ALL IDS: ['california_schools', 'formula_1', 'card_games', 'thrombosis_prediction', 'european_football_2', 'financial', 'student_club', 'debit_card_specializing', 'toxicology', 'superhero', 'codebase_community']
+Getting relevant values for all tasks:   0%|          | 0/120 [00:00<?, ?it/s]Getting relevant values for all tasks:   1%|          | 1/120 [04:11<8:18:39, 251.42s/it]Getting relevant values for all tasks:   2%|▏         | 2/120 [04:11<3:23:51, 103.66s/it]Getting relevant values for all tasks:   2%|▎         | 3/120 [04:57<2:31:01, 77.45s/it] Getting relevant values for all tasks:  11%|█         | 13/120 [17:15<2:12:23, 74.24s/it]Getting relevant values for all tasks:  12%|█▏        | 14/120 [17:15<1:56:48, 66.12s/it]Getting relevant values for all tasks:  14%|█▍        | 17/120 [20:44<1:55:26, 67.24s/it]Getting relevant values for all tasks:  46%|████▌     | 55/120 [20:45<10:42,  9.89s/it]  /ssddata/zzhanglc/Alpha-SQL/alphasql/runner/preprocessor.py:273: RuntimeWarning: invalid value encountered in scalar divide
+  cosine_similarity = lambda x, y: np.dot(x, y) / (np.linalg.norm(x) * np.linalg.norm(y))
+Getting relevant values for all tasks:  54%|█████▍    | 65/120 [20:48<06:56,  7.57s/it]Getting relevant values for all tasks:  59%|█████▉    | 71/120 [20:52<05:12,  6.37s/it]Getting relevant values for all tasks:  65%|██████▌   | 78/120 [20:52<03:28,  4.96s/it]Getting relevant values for all tasks:  68%|██████▊   | 82/120 [21:11<03:06,  4.91s/it]Getting relevant values for all tasks:  81%|████████  | 97/120 [21:12<01:02,  2.72s/it]Getting relevant values for all tasks:  84%|████████▍ | 101/120 [21:12<00:44,  2.34s/it]Getting relevant values for all tasks:  87%|████████▋ | 104/120 [21:12<00:32,  2.03s/it]Getting relevant values for all tasks:  88%|████████▊ | 106/120 [21:15<00:27,  1.93s/it]Getting relevant values for all tasks:  95%|█████████▌| 114/120 [21:15<00:07,  1.18s/it]Getting relevant values for all tasks:  98%|█████████▊| 117/120 [21:17<00:03,  1.11s/it]Getting relevant values for all tasks:  99%|█████████▉| 119/120 [21:18<00:00,  1.03it/s]Getting relevant values for all tasks: 100%|██████████| 120/120 [21:18<00:00, 10.65s/it]
+2025-10-29 16:19:11.159 | INFO     | __main__:<module>:575 - Step 2 completed - Keyword Extraction and Value Retrieval: 1278.06 seconds
+2025-10-29 16:19:11.160 | INFO     | __main__:<module>:578 - ==================================================
+2025-10-29 16:19:11.160 | INFO     | __main__:<module>:579 - Starting Step 3: Schema Context Preprocessing
+Preprocessing schema context for all tasks: 0it [00:00, ?it/s]Preprocessing schema context for all tasks: 26it [00:00, 255.30it/s]Preprocessing schema context for all tasks: 69it [00:00, 353.74it/s]Preprocessing schema context for all tasks: 120it [00:00, 395.91it/s]
+2025-10-29 16:19:11.488 | INFO     | __main__:<module>:583 - Step 3 completed - Schema Context Preprocessing: 0.33 seconds
+2025-10-29 16:19:11.488 | INFO     | __main__:<module>:587 - ==================================================
+2025-10-29 16:19:11.489 | INFO     | __main__:<module>:588 - Preprocessing pipeline completed!
+2025-10-29 16:19:11.489 | INFO     | __main__:<module>:589 - Total time: 1281.39 seconds
+2025-10-29 16:19:11.489 | INFO     | __main__:<module>:590 - Step-wise timing details:
+2025-10-29 16:19:11.489 | INFO     | __main__:<module>:591 -   - LSH Index Construction: 3.00 seconds
+2025-10-29 16:19:11.489 | INFO     | __main__:<module>:592 -   - Keyword Extraction and Value Retrieval: 1278.06 seconds
+2025-10-29 16:19:11.489 | INFO     | __main__:<module>:593 -   - Schema Context Preprocessing: 0.33 seconds
+2025-10-29 16:19:11.489 | INFO     | __main__:<module>:594 - ==================================================
+2025-10-29 16:19:11.489 | INFO     | __main__:<module>:613 - Timing information saved to: preprocessing_timing.json

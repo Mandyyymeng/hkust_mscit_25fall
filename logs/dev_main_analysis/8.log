@@ -1,0 +1,111 @@
+=== MCTS 节点分析日志 ===
+生成时间: 2025-10-22 20:10:53
+==================================================
+
+开始分析文件: results/Qwen2.5-Coder-7B-Instruct/kramabench/dev_main/8.pkl
+分析时间: 2025-10-22 20:10:53
+============================================================
+  类型: <class 'list'>
+  长度: 30
+  列表包含 30 个推理路径
+  每个路径平均节点数: 5.7
+  路径长度分布: {4: 3, 5: 8, 6: 11, 7: 6, 3: 1, 8: 1}
+    路径1: 4 个节点
+      节点类型序列: ['root', 'schema_selection', 'sql_generation', 'end']
+    路径2: 5 个节点
+      节点类型序列: ['root', 'schema_selection', 'identify_column_values', 'sql_generation', 'end']
+    路径3: 5 个节点
+      节点类型序列: ['root', 'identify_column_functions', 'schema_selection', 'sql_generation', 'end']
+  Question ID: 8
+  包含的SQL查询示例:
+    路径1 SQL: SELECT AVG(rc."Barrington Atlas Rank") AS avg_rank, AVG(wc.population) AS avg_population FROM roman_cities AS rc INNER JOIN worldcities AS wc ON ABS(rc."Latitude (Y)" - wc.lat) <= 0.1 AND ABS(rc."Longitude (X)" - wc.lng) <= 0.1 WHERE wc.population > 1000000
+    路径2 SQL: SELECT AVG(CAST(r."Barrington Atlas Rank" AS REAL)) AS avg_rank, AVG(w.population) AS avg_population FROM worldcities AS w INNER JOIN (SELECT r."Ancient Toponym", r."Barrington Atlas Rank", r."Longitude (X)", r."Latitude (Y)", ROW_NUMBER() OVER (PARTITION BY r."Ancient Toponym" ORDER BY r."Barrington Atlas Rank") AS rn FROM roman_cities AS r) AS r ON w.lat = r."Latitude (Y)" AND w.lng = r."Longitude (X)" AND r.rn = 1
+    路径3 SQL: SELECT CORR(t1.rank, t2.population) AS correlation FROM (SELECT city, CASE WHEN city LIKE '%or%' THEN AVG(REPLACE(SUBSTRING(city, INSTR(city, 'or') + 2), ',', '')) ELSE CAST(REPLACE(SUBSTRING(city, INSTR(city, ' ') + 1), ',', '') AS REAL) END AS rank FROM roman_cities GROUP BY city) AS t1 JOIN (SELECT city, population FROM worldcities WHERE population > 1000000) AS t2 ON HAVERSINE(t1.city, t1.rank, t2.city, t2.population) < 0.1
+    路径4 SQL: WITH rankedancientcities AS (SELECT ancienttoponym, CASE WHEN ancienttoponym LIKE '%or%' THEN AVG(REPLACE(SUBSTRING(ancienttoponym, INSTR(ancienttoponym, 'or') + 2), ',', '')) ELSE CAST(REPLACE(SUBSTRING(ancienttoponym, INSTR(ancienttoponym, ' ') + 1), ',', '') AS REAL) END AS rank FROM roman_cities GROUP BY ancienttoponym), moderncities AS (SELECT city, population FROM worldcities WHERE population > 1000000) SELECT CORR(t1.rank, t2.population) AS correlation FROM rankedancientcities AS t1 INNER JOIN moderncities AS t2 ON t1.ancienttoponym = t2.city
+
+🌳 路径树结构 (长度: 4 个节点):
+==================================================
+🌱 root (深度: 0)
+  📋 根节点信息:
+    类型: root
+    深度: 0
+    问题: What is the correlation (to 6 decimal places) between the rank of ancient Roman ...
+    提示: Archaeological data analysis using roman_cities, worldcities
+    数据库: archeology
+    模式上下文预览: CREATE TABLE `climate_measurements` (
+	`Site` TEXT, -- Value Examples: `ODP 967`
+	`Hole` TEXT, -- Va...
+    ─────────────────────────
+  └── schema_selection (深度: 1)
+  📋 schema_selection 节点 (深度: 1):
+    父动作: SchemaSelectionAction
+    选择模式: CREATE TABLE `roman_cities` (
+	`Ancient Toponym` TEXT, -- Column Description: Data column: Ancient Toponym | Value Examples: `Roma`
+	`Barrington Atlas Rank` TEXT, -- Column Description: Data column: Barrington Atlas Rank | Value Examples: `4 or 5`, `3`, `2`
+	`Longitude (X)` REAL, -- Column Description: Data column: Longitude (X)
+	`Latitude (Y)` REAL, -- Column Description: Data column: Latitude (Y)
+	PRIMARY KEY ()
+);
+CREATE TABLE `worldcities` (
+	`city_ascii` TEXT, -- Column Description: Data column: city_ascii | Value Examples: `Roman`, `Roma`, `Romang`
+	`lat` REAL, -- Column Description: Data column: lat
+	`lng` REAL, -- Column Description: Data column: lng
+	`population` REAL, -- Column Description: Data column: population
+	PRIMARY KEY ()
+);
+    选择模式: 2表/8列
+    路径长度: 2
+    访问次数: 2, 累计奖励: 1.33
+    ─────────────────────────
+    └── sql_generation (深度: 2)
+  📋 sql_generation 节点 (深度: 2):
+    父动作: SQLGenerationAction
+    选择模式: CREATE TABLE `roman_cities` (
+	`Ancient Toponym` TEXT, -- Column Description: Data column: Ancient Toponym | Value Examples: `Roma`
+	`Barrington Atlas Rank` TEXT, -- Column Description: Data column: Barrington Atlas Rank | Value Examples: `4 or 5`, `3`, `2`
+	`Longitude (X)` REAL, -- Column Description: Data column: Longitude (X)
+	`Latitude (Y)` REAL, -- Column Description: Data column: Latitude (Y)
+	PRIMARY KEY ()
+);
+CREATE TABLE `worldcities` (
+	`city_ascii` TEXT, -- Column Description: Data column: city_ascii | Value Examples: `Roman`, `Roma`, `Romang`
+	`lat` REAL, -- Column Description: Data column: lat
+	`lng` REAL, -- Column Description: Data column: lng
+	`population` REAL, -- Column Description: Data column: population
+	PRIMARY KEY ()
+);
+    SQL查询: SELECT AVG(rc."Barrington Atlas Rank") AS avg_rank, AVG(wc.population) AS avg_po...
+    SQL有效性: 有效
+    一致性评分: 1.000
+    选择模式: 2表/8列
+    路径长度: 3
+    访问次数: 1, 累计奖励: 1.00
+    ─────────────────────────
+      └── end (深度: 3) -> SQL: SELECT AVG(rc."Barrington Atlas Rank") AS avg_rank...
+  📋 end 节点 (深度: 3):
+    父动作: EndAction
+    选择模式: CREATE TABLE `roman_cities` (
+	`Ancient Toponym` TEXT, -- Column Description: Data column: Ancient Toponym | Value Examples: `Roma`
+	`Barrington Atlas Rank` TEXT, -- Column Description: Data column: Barrington Atlas Rank | Value Examples: `4 or 5`, `3`, `2`
+	`Longitude (X)` REAL, -- Column Description: Data column: Longitude (X)
+	`Latitude (Y)` REAL, -- Column Description: Data column: Latitude (Y)
+	PRIMARY KEY ()
+);
+CREATE TABLE `worldcities` (
+	`city_ascii` TEXT, -- Column Description: Data column: city_ascii | Value Examples: `Roman`, `Roma`, `Romang`
+	`lat` REAL, -- Column Description: Data column: lat
+	`lng` REAL, -- Column Description: Data column: lng
+	`population` REAL, -- Column Description: Data column: population
+	PRIMARY KEY ()
+);
+    SQL查询: SELECT AVG(rc."Barrington Atlas Rank") AS avg_rank, AVG(wc.population) AS avg_po...
+    最终SQL: SELECT AVG(rc."Barrington Atlas Rank") AS avg_rank, AVG(wc.population) AS avg_po...
+    SQL有效性: 有效
+    一致性评分: 1.000
+    选择模式: 2表/8列
+    路径长度: 4
+    访问次数: 1, 累计奖励: 1.00
+    ─────────────────────────
+
+============================================================
+分析完成!

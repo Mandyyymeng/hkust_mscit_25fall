@@ -1,0 +1,16 @@
+tasks_file_path: "data/preprocessed/spider/test/qwen32b/dev/tasks.pkl"
+subset_file_path: null 
+db_root_dir: "data/spider/test_database"
+n_processes: 28
+max_rollout_steps: 24
+max_depth: 16
+exploration_constant: 1.414
+save_root_dir: "results/Qwen2.5-Coder-32B-Instruct/spider/test"
+mcts_model_kwargs:
+    model: "Qwen/Qwen2.5-Coder-32B-Instruct"
+    n: 3
+    top_p: 0.8
+    max_tokens: 4096
+    temperature: 0.8
+    n_strategy: "single"
+reward_model_kwargs: null

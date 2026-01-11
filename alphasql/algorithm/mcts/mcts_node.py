@@ -9,7 +9,7 @@ def get_valid_action_space_for_node(node: "MCTSNode") -> List["MCTSAction"]:
     valid_action_space = [action_class() for action_class in action_space_classes if action_class not in history_actions_classes]
     return valid_action_space
 
-class MCTSNode:
+class MCTSNode: 
     def __init__(self,
                  node_type: "MCTSNodeType",
                  parent_node: Optional["MCTSNode"] = None,

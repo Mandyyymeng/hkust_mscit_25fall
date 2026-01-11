@@ -1,0 +1,91 @@
+=== MCTS 节点分析日志 ===
+生成时间: 2025-10-22 20:10:53
+==================================================
+
+开始分析文件: results/Qwen2.5-Coder-7B-Instruct/kramabench/dev_main/7.pkl
+分析时间: 2025-10-22 20:10:53
+============================================================
+  类型: <class 'list'>
+  长度: 35
+  列表包含 35 个推理路径
+  每个路径平均节点数: 5.8
+  路径长度分布: {7: 7, 6: 15, 5: 9, 4: 2, 3: 1, 8: 1}
+    路径1: 7 个节点
+      节点类型序列: ['root', 'rephrase_question', 'schema_selection', 'identify_column_functions', 'identify_column_values', 'sql_generation', 'end']
+    路径2: 7 个节点
+      节点类型序列: ['root', 'rephrase_question', 'identify_column_functions', 'identify_column_values', 'sql_generation', 'sql_revision', 'end']
+    路径3: 6 个节点
+      节点类型序列: ['root', 'rephrase_question', 'identify_column_functions', 'identify_column_values', 'sql_generation', 'end']
+  Question ID: 7
+  包含的SQL查询示例:
+    路径1 SQL: SELECT COUNT(DISTINCT "Select Bibliography") AS unique_sources FROM roman_cities
+    路径2 SQL: SELECT COUNT(DISTINCT "Select Bibliography") FROM roman_cities
+    路径3 SQL: SELECT COUNT(DISTINCT "Select Bibliography") FROM roman_cities
+    路径4 SQL: SELECT COUNT(DISTINCT "Select Bibliography") FROM roman_cities
+
+🌳 路径树结构 (长度: 7 个节点):
+==================================================
+🌱 root (深度: 0)
+  📋 根节点信息:
+    类型: root
+    深度: 0
+    问题: How many unique sources were used in the Roman cities dataset?
+    提示: Archaeological data analysis using roman_cities
+    数据库: archeology
+    模式上下文预览: CREATE TABLE `climate_measurements` (
+	`Site` TEXT, -- Value Examples: `ODP 967`
+	`Hole` TEXT, -- Va...
+    ─────────────────────────
+  └── rephrase_question (深度: 1)
+  📋 rephrase_question 节点 (深度: 1):
+    父动作: RaphraseQuestionAction
+    重述问题: Given a list of conditions, please answer the question. Condition 1: The data is...
+    路径长度: 2
+    访问次数: 3, 累计奖励: 3.00
+    ─────────────────────────
+    └── schema_selection (深度: 2)
+  📋 schema_selection 节点 (深度: 2):
+    父动作: SchemaSelectionAction
+    重述问题: Given a list of conditions, please answer the question. Condition 1: The data is...
+    选择模式: CREATE TABLE `roman_cities` (
+	`Primary Key` TEXT, -- Column Description: Data column: Primary Key | Value Examples: `Hanson2016_1`, `Hanson2016_2`, `Hanson2016_3`
+	`Select Bibliography` TEXT, -- Column Description: Data column: Select Bibliography | Value Examples: `BNP; Hansen 2006; Hansen and Nielsen 2004; PECS; Sear 2006.`, `BNP; DGRG; PECS; Sear 2006.`, `BNP; DGRG; Hansen and Nielsen 2004; PECS; Sear 2006.`
+	PRIMARY KEY ()
+);
+    选择模式: 1表/2列
+    路径长度: 3
+    访问次数: 1, 累计奖励: 1.00
+    ─────────────────────────
+      └── identify_column_functions (深度: 3)
+  📋 identify_column_functions 节点 (深度: 3):
+    父动作: IdentifyColumnFunctionsAction
+    重述问题: Given a list of conditions, please answer the question. Condition 1: The data is...
+    选择模式: CREATE TABLE `roman_cities` (
+	`Primary Key` TEXT, -- Column Description: Data column: Primary Key | Value Examples: `Hanson2016_1`, `Hanson2016_2`, `Hanson2016_3`
+	`Select Bibliography` TEXT, -- Column Description: Data column: Select Bibliography | Value Examples: `BNP; Hansen 2006; Hansen and Nielsen 2004; PECS; Sear 2006.`, `BNP; DGRG; PECS; Sear 2006.`, `BNP; DGRG; Hansen and Nielsen 2004; PECS; Sear 2006.`
+	PRIMARY KEY ()
+);
+    识别函数: To answer the question, you need to identify the column that contains the bibliographic sources and then count the number of unique entries. The column `Select Bibliography` in the `roman_cities` table contains the bibliographic sources. You can use the `COUNT(DISTINCT)` function to count the number of unique sources.
+    选择模式: 1表/2列
+    路径长度: 4
+    访问次数: 1, 累计奖励: 1.00
+    ─────────────────────────
+        └── identify_column_values (深度: 4)
+  📋 identify_column_values 节点 (深度: 4):
+    父动作: IdentifyColumnValuesAction
+    重述问题: Given a list of conditions, please answer the question. Condition 1: The data is...
+    选择模式: CREATE TABLE `roman_cities` (
+	`Primary Key` TEXT, -- Column Description: Data column: Primary Key | Value Examples: `Hanson2016_1`, `Hanson2016_2`, `Hanson2016_3`
+	`Select Bibliography` TEXT, -- Column Description: Data column: Select Bibliography | Value Examples: `BNP; Hansen 2006; Hansen and Nielsen 2004; PECS; Sear 2006.`, `BNP; DGRG; PECS; Sear 2006.`, `BNP; DGRG; Hansen and Nielsen 2004; PECS; Sear 2006.`
+	PRIMARY KEY ()
+);
+    识别列值: To answer the question, you need to use the `Select Bibliography` column from the `roman_cities` table. You can use the `COUNT(DISTINCT)` function to count the number of unique sources.
+    识别函数: To answer the question, you need to identify the column that contains the bibliographic sources and then count the number of unique entries. The column `Select Bibliography` in the `roman_cities` table contains the bibliographic sources. You can use the `COUNT(DISTINCT)` function to count the number of unique sources.
+    选择模式: 1表/2列
+    路径长度: 5
+    访问次数: 1, 累计奖励: 1.00
+    ─────────────────────────
+          └── ... (后续节点省略)
+
+============================================================
+分析完成!

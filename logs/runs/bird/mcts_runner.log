@@ -1,0 +1,1030 @@
+2025-10-21 20:38:31,220 - __main__ - INFO - Starting MCTS Runner with config: config/qwen32b_bird_dev.yaml
+2025-10-21 20:38:31,221 - __main__ - INFO - MCTSRunner initialized with config: {'tasks_file_path': 'data/preprocessed/kramabench/dev/dev/tasks.pkl', 'subset_file_path': None, 'db_root_dir': 'data/kramabench/dev/dev_databases', 'n_processes': 24, 'max_rollout_steps': 24, 'max_depth': 16, 'exploration_constant': 1.414, 'save_root_dir': 'results/Qwen2.5-Coder-7B-Instruct/kramabench/dev', 'mcts_model_kwargs': {'model': 'Qwen2.5-Coder-7B-Instruct', 'n': 3, 'top_p': 0.8, 'max_tokens': 4096, 'temperature': 0.8, 'n_strategy': 'single'}, 'reward_model_kwargs': None, 'random_seed': 42}
+2025-10-21 20:38:31,221 - __main__ - INFO - Starting MCTS run for all tasks
+2025-10-21 20:38:31,224 - __main__ - INFO - Found 1 completed tasks, will skip them
+2025-10-21 20:38:31,224 - __main__ - INFO - Saving config to results/Qwen2.5-Coder-7B-Instruct/kramabench/dev/config.json
+2025-10-21 20:38:31,225 - __main__ - INFO - Total tasks to solve: 12
+2025-10-21 20:38:31,279 - __main__ - INFO - Starting task 0: What is the average Potassium in ppm from the first and last time the study recorded people in the M...
+2025-10-21 20:38:31,280 - __main__ - INFO - Starting task 1: Across the years, what was the percent of years the wet-dry index was increasing? Give your answer i...
+2025-10-21 20:38:31,280 - __main__ - INFO - Starting task 2: What is the average rank of cities in Greece? Assume that if there is an 'or', the average of the tw...
+2025-10-21 20:38:31,281 - __main__ - INFO - Starting task 3: What is the amount of calcium in ppm when the dust proxy was the smallest, breaking ties by the mini...
+2025-10-21 20:38:31,281 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 1 / 24
+2025-10-21 20:38:31,281 - __main__ - INFO - Starting task 4: In the radiocarbon dataset, find the year of the most northern Neolithic human sample, breaking ties...
+2025-10-21 20:38:31,281 - __main__ - INFO - Starting task 5: What city contained in both the southern and western hemispheres has the highest population?...
+2025-10-21 20:38:31,282 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 1 / 24
+2025-10-21 20:38:31,282 - __main__ - INFO - Starting task 7: How many unique sources were used in the Roman cities dataset?...
+2025-10-21 20:38:31,282 - __main__ - INFO - Starting task 6: How many modern cities with a population of over 100k are within 0.1 degrees of ancient Roman-era ci...
+2025-10-21 20:38:31,282 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 1 / 24
+2025-10-21 20:38:31,282 - __main__ - INFO - Starting task 8: What is the correlation (to 6 decimal places) between the rank of ancient Roman cities and the popul...
+2025-10-21 20:38:31,282 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 1 / 24
+2025-10-21 20:38:31,282 - __main__ - INFO - Starting task 9: Which country has the highest average population in its cities?...
+2025-10-21 20:38:31,283 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 1 / 24
+2025-10-21 20:38:31,283 - __main__ - INFO - Starting task 10: What is the average latitude of capital cities? If there're more than one capital in a country, only...
+2025-10-21 20:38:31,283 - __main__ - INFO - Starting task 11: Count the number of human conflicts between 800 and 1400 AD, and attribute them as best you can to m...
+2025-10-21 20:38:31,283 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 1 / 24
+2025-10-21 20:38:31,284 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 1 / 24
+2025-10-21 20:38:31,284 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 1 / 24
+2025-10-21 20:38:31,284 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 1 / 24
+2025-10-21 20:38:31,284 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 1 / 24
+2025-10-21 20:38:31,285 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 1 / 24
+2025-10-21 20:38:31,285 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 1 / 24
+2025-10-21 20:44:06,106 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 2 / 24
+2025-10-21 20:44:26,256 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 2 / 24
+2025-10-21 20:44:34,653 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 2 / 24
+2025-10-21 20:48:32,722 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 2 / 24
+2025-10-21 20:49:53,994 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 2 / 24
+2025-10-21 20:50:08,902 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 3 / 24
+2025-10-21 20:51:30,589 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 3 / 24
+2025-10-21 20:52:46,237 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 4 / 24
+2025-10-21 20:52:46,750 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 2 / 24
+2025-10-21 20:53:43,065 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 4 / 24
+2025-10-21 20:54:34,333 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 2 / 24
+2025-10-21 20:55:47,966 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 5 / 24
+2025-10-21 20:56:04,937 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 2 / 24
+2025-10-21 20:56:20,570 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 3 / 24
+2025-10-21 20:56:52,231 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 5 / 24
+2025-10-21 20:58:07,247 - __main__ - WARNING - WANDB_API_KEY is not set in environment variables, will not use it
+2025-10-21 20:58:07,247 - __main__ - INFO - Starting MCTS Runner with config: config/qwen32b_bird_dev.yaml
+2025-10-21 20:58:07,249 - __main__ - INFO - MCTSRunner initialized with config: {'tasks_file_path': 'data/preprocessed/kramabench/dev/dev/tasks.pkl', 'subset_file_path': None, 'db_root_dir': 'data/kramabench/dev/dev_databases', 'n_processes': 24, 'max_rollout_steps': 24, 'max_depth': 16, 'exploration_constant': 1.414, 'save_root_dir': 'results/Qwen2.5-Coder-7B-Instruct/kramabench/dev', 'mcts_model_kwargs': {'model': 'Qwen2.5-Coder-7B-Instruct', 'n': 3, 'top_p': 0.8, 'max_tokens': 4096, 'temperature': 0.8, 'n_strategy': 'single'}, 'reward_model_kwargs': None, 'random_seed': 42}
+2025-10-21 20:58:07,249 - __main__ - INFO - Starting MCTS run for all tasks
+2025-10-21 20:58:07,252 - __main__ - INFO - Found 0 completed tasks, will skip them
+2025-10-21 20:58:07,252 - __main__ - INFO - Saving config to results/Qwen2.5-Coder-7B-Instruct/kramabench/dev/config.json
+2025-10-21 20:58:07,252 - __main__ - INFO - Total tasks to solve: 12
+2025-10-21 20:58:07,315 - __main__ - INFO - Starting task 0: What is the average Potassium in ppm from the first and last time the study recorded people in the M...
+2025-10-21 20:58:07,316 - __main__ - INFO - Starting task 1: Across the years, what was the percent of years the wet-dry index was increasing? Give your answer i...
+2025-10-21 20:58:07,316 - __main__ - INFO - Starting task 2: What is the average rank of cities in Greece? Assume that if there is an 'or', the average of the tw...
+2025-10-21 20:58:07,316 - __main__ - INFO - Starting task 3: What is the amount of calcium in ppm when the dust proxy was the smallest, breaking ties by the mini...
+2025-10-21 20:58:07,317 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 1 / 24
+2025-10-21 20:58:07,317 - __main__ - INFO - Starting task 4: In the radiocarbon dataset, find the year of the most northern Neolithic human sample, breaking ties...
+2025-10-21 20:58:07,317 - __main__ - INFO - Starting task 5: What city contained in both the southern and western hemispheres has the highest population?...
+2025-10-21 20:58:07,317 - __main__ - INFO - Starting task 6: How many modern cities with a population of over 100k are within 0.1 degrees of ancient Roman-era ci...
+2025-10-21 20:58:07,317 - __main__ - INFO - Starting task 7: How many unique sources were used in the Roman cities dataset?...
+2025-10-21 20:58:07,317 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 1 / 24
+2025-10-21 20:58:07,317 - __main__ - INFO - Starting task 8: What is the correlation (to 6 decimal places) between the rank of ancient Roman cities and the popul...
+2025-10-21 20:58:07,318 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 1 / 24
+2025-10-21 20:58:07,318 - __main__ - INFO - Starting task 9: Which country has the highest average population in its cities?...
+2025-10-21 20:58:07,318 - __main__ - INFO - Starting task 10: What is the average latitude of capital cities? If there're more than one capital in a country, only...
+2025-10-21 20:58:07,318 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 1 / 24
+2025-10-21 20:58:07,318 - __main__ - INFO - Starting task 11: Count the number of human conflicts between 800 and 1400 AD, and attribute them as best you can to m...
+2025-10-21 20:58:07,318 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 1 / 24
+2025-10-21 20:58:07,319 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 1 / 24
+2025-10-21 20:58:07,319 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 1 / 24
+2025-10-21 20:58:07,319 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 1 / 24
+2025-10-21 20:58:07,319 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 1 / 24
+2025-10-21 20:58:07,319 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 1 / 24
+2025-10-21 20:58:07,320 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 1 / 24
+2025-10-21 20:58:07,320 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 1 / 24
+2025-10-21 21:01:17,670 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 6 / 24
+2025-10-21 21:01:57,354 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 6 / 24
+2025-10-21 21:03:43,342 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT "Select Bibliography") FROM roman_cities
+2025-10-21 21:03:43,342 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 2 / 24
+2025-10-21 21:04:10,088 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 7 / 24
+2025-10-21 21:04:26,250 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 8 / 24
+2025-10-21 21:04:45,308 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+2025-10-21 21:04:45,308 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 2 / 24
+2025-10-21 21:06:52,086 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 9 / 24
+2025-10-21 21:07:01,150 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+2025-10-21 21:07:01,151 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 3 / 24
+2025-10-21 21:07:05,879 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 3 / 24
+2025-10-21 21:07:19,777 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 7 / 24
+2025-10-21 21:08:57,687 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 4 / 24
+2025-10-21 21:09:15,092 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND("Ca", 4) FROM climate_measurements WHERE "ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") FROM climate_measurements) AND "ODP 967 wet-dry index" = (SELECT MIN("ODP 967 wet-dry index") FROM climate_measurements WHERE "ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") FROM climate_measurements))
+2025-10-21 21:09:15,092 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 2 / 24
+2025-10-21 21:10:23,263 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT "Select Bibliography") FROM roman_cities
+2025-10-21 21:10:23,264 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 3 / 24
+2025-10-21 21:10:44,950 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 3 / 24
+2025-10-21 21:11:05,271 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 8 / 24
+2025-10-21 21:11:08,546 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 10 / 24
+2025-10-21 21:11:15,699 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 2 / 24
+2025-10-21 21:12:47,251 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+2025-10-21 21:12:47,251 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 4 / 24
+2025-10-21 21:12:54,216 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT city, population FROM worldcities WHERE lat < 0 INTERSECT SELECT city, population FROM worldcities WHERE lng < 0 ORDER BY population DESC LIMIT 1
+2025-10-21 21:12:54,216 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 2 / 24
+2025-10-21 21:13:11,767 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+2025-10-21 21:13:11,767 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 5 / 24
+2025-10-21 21:13:52,964 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 3 / 24
+2025-10-21 21:14:01,723 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 9 / 24
+2025-10-21 21:14:14,748 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 11 / 24
+2025-10-21 21:14:23,666 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT "Select Bibliography") FROM "roman_cities"
+2025-10-21 21:14:23,666 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 4 / 24
+2025-10-21 21:14:32,124 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 10 / 24
+2025-10-21 21:14:33,368 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 3 / 24
+2025-10-21 21:17:37,325 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 2 / 24
+2025-10-21 21:17:43,922 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 4 / 24
+2025-10-21 21:17:49,773 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+2025-10-21 21:17:49,773 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 6 / 24
+2025-10-21 21:18:49,731 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 3 / 24
+2025-10-21 21:19:21,586 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 4 / 24
+2025-10-21 21:19:50,056 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 12 / 24
+2025-10-21 21:20:14,322 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 11 / 24
+2025-10-21 21:20:19,156 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 5 / 24
+2025-10-21 21:20:57,254 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT city FROM worldcities WHERE lat < 0 ORDER BY population DESC LIMIT 1
+2025-10-21 21:20:57,254 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 3 / 24
+2025-10-21 21:21:35,192 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+2025-10-21 21:21:35,192 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 7 / 24
+2025-10-21 21:22:39,239 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 13 / 24
+2025-10-21 21:23:06,919 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) FROM conflict_brecke AS cb WHERE cb.startyear >= 800 AND cb.endyear <= 1400 AND cb.endyear - cb.startyear >= 1
+2025-10-21 21:23:06,919 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 2 / 24
+2025-10-21 21:23:15,385 - sqlglot - WARNING - INSTR does not support the occurrence parameter.
+2025-10-21 21:23:15,385 - sqlglot - WARNING - INSTR does not support the occurrence parameter.
+2025-10-21 21:23:15,385 - sqlglot - WARNING - INSTR does not support the occurrence parameter.
+2025-10-21 21:23:30,619 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 14 / 24
+2025-10-21 21:23:42,051 - sqlglot - WARNING - Named columns are not supported in table alias.
+2025-10-21 21:24:05,121 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+2025-10-21 21:24:05,121 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 8 / 24
+2025-10-21 21:26:01,784 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT (SELECT MAX(date) FROM radiocarbon_data WHERE culture = 'Neolithic' AND material = 'Human' ORDER BY latitude DESC LIMIT 1) AS northern_year, (SELECT MAX(al) FROM climate_measurements WHERE date = (SELECT MIN(ABS(date - northern_year)) AS closest_year FROM climate_measurements)) AS max_aluminum
+2025-10-21 21:26:01,784 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 2 / 24
+2025-10-21 21:26:06,689 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 15 / 24
+2025-10-21 21:26:11,579 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND("Ca", 4) FROM climate_measurements WHERE "ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") FROM climate_measurements) ORDER BY "ODP 967 Dust proxy", "ODP 967 wet-dry index" LIMIT 1
+2025-10-21 21:26:11,579 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 3 / 24
+2025-10-21 21:26:27,089 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 16 / 24
+2025-10-21 21:26:27,090 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 17 / 24
+2025-10-21 21:27:17,501 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(k), 4) FROM climate_measurements
+2025-10-21 21:27:17,501 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 2 / 24
+2025-10-21 21:27:23,715 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 12 / 24
+2025-10-21 21:28:00,875 - sqlglot - WARNING - INSTR does not support the occurrence parameter.
+2025-10-21 21:28:00,875 - sqlglot - WARNING - INSTR does not support the occurrence parameter.
+2025-10-21 21:28:00,875 - sqlglot - WARNING - INSTR does not support the occurrence parameter.
+2025-10-21 21:28:39,350 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 5 / 24
+2025-10-21 21:28:45,472 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1
+2025-10-21 21:28:45,472 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 4 / 24
+2025-10-21 21:29:02,600 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(CASE WHEN rank LIKE '%or%' THEN CAST(SUBSTRING(rank, 1, INSTR(rank, ' or ') - 1) AS REAL) + CAST(SUBSTRING(rank, INSTR(rank, ' or ') + 4) AS REAL) / 2 ELSE CAST(rank AS REAL) END), 4) AS average_rank FROM (SELECT SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", '(') + 1, INSTR("Barrington Atlas Rank", ')') - INSTR("Barrington Atlas Rank", '(') - 1) AS rank FROM "roman_cities" WHERE "Country" = 'Greece')
+2025-10-21 21:29:02,600 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 2 / 24
+2025-10-21 21:30:00,141 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country FROM worldcities GROUP BY country ORDER BY AVG(population) DESC LIMIT 1
+2025-10-21 21:30:00,142 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 9 / 24
+2025-10-21 21:31:06,953 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 18 / 24
+2025-10-21 21:31:22,756 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT REPLACE("Select Bibliography", ';', ',')) AS unique_sources FROM roman_cities
+2025-10-21 21:31:22,756 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 5 / 24
+2025-10-21 21:31:50,692 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 4 / 24
+2025-10-21 21:32:22,319 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+2025-10-21 21:32:22,319 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 10 / 24
+2025-10-21 21:32:43,655 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 13 / 24
+2025-10-21 21:32:46,979 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 3 / 24
+2025-10-21 21:34:10,471 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 19 / 24
+2025-10-21 21:34:18,201 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT "Select Bibliography") FROM roman_cities
+2025-10-21 21:34:18,201 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 6 / 24
+2025-10-21 21:34:36,223 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT "Select Bibliography") AS unique_sources FROM roman_cities
+2025-10-21 21:34:36,223 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 7 / 24
+2025-10-21 21:35:03,997 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+2025-10-21 21:35:03,997 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 11 / 24
+2025-10-21 21:35:15,227 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 14 / 24
+2025-10-21 21:35:38,136 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT t1.conflict) AS numberofconflicts FROM conflict_brecke AS t1 JOIN worldcities AS t2 ON t1.conflict = t2.city WHERE t1.startyear BETWEEN 800 AND 1400 AND t1.endyear - t1.startyear >= 1
+2025-10-21 21:35:38,136 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 3 / 24
+2025-10-21 21:36:36,890 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 20 / 24
+2025-10-21 21:36:53,780 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 2 / 24
+2025-10-21 21:36:55,955 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 15 / 24
+2025-10-21 21:36:56,866 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT t1.city FROM worldcities AS t1 INNER JOIN worldcities AS t2 ON t1.city = t2.city WHERE t1.latitude < 0 AND t2.longitude < 0 ORDER BY t1.population DESC LIMIT 1
+2025-10-21 21:36:56,866 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 5 / 24
+2025-10-21 21:37:26,386 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) FROM conflict_brecke AS cb INNER JOIN worldcities AS wc ON cb.startyear BETWEEN wc.lat AND wc.lng WHERE cb.startyear >= 800 AND cb.endyear <= 1400 AND (cb.endyear - cb.startyear) >= 1
+2025-10-21 21:37:26,386 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 4 / 24
+2025-10-21 21:37:40,424 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 5 / 24
+2025-10-21 21:38:43,938 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 21 / 24
+2025-10-21 21:39:29,686 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT "Select Bibliography") FROM roman_cities
+2025-10-21 21:39:29,687 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 8 / 24
+2025-10-21 21:39:50,534 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 6 / 24
+2025-10-21 21:39:55,130 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+2025-10-21 21:39:55,130 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 12 / 24
+2025-10-21 21:40:12,052 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+2025-10-21 21:40:12,052 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 13 / 24
+2025-10-21 21:40:44,560 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 16 / 24
+2025-10-21 21:41:04,817 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 17 / 24
+2025-10-21 21:41:17,084 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND((SELECT MAX(Al) AS max_al FROM climate_measurements WHERE depth_below_seafloor_m = (SELECT depth_below_seafloor_m FROM climate_measurements WHERE date = (SELECT MAX(date) FROM radiocarbon_data WHERE culture = 'Neolithic' AND latitude = (SELECT MAX(latitude) FROM radiocarbon_data WHERE culture = 'Neolithic'))))), 4)
+2025-10-21 21:41:17,084 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 3 / 24
+2025-10-21 21:43:34,622 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 5 / 24
+2025-10-21 21:43:40,359 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(CASE WHEN "Barrington Atlas Rank" LIKE '% or %' THEN (CAST(SUBSTRING("Barrington Atlas Rank", 1, INSTR("Barrington Atlas Rank", ' or ') - 1) AS REAL) + CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' or ') + 4) AS REAL)) / 2 ELSE CAST("Barrington Atlas Rank" AS REAL) END), 4) AS average_rank FROM "roman_cities" WHERE "Country" = 'Greece'
+2025-10-21 21:43:40,359 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 3 / 24
+2025-10-21 21:43:46,685 - sqlglot - WARNING - INSTR does not support the occurrence parameter.
+2025-10-21 21:43:46,685 - sqlglot - WARNING - INSTR does not support the occurrence parameter.
+2025-10-21 21:43:46,685 - sqlglot - WARNING - INSTR does not support the occurrence parameter.
+2025-10-21 21:43:46,685 - sqlglot - WARNING - INSTR does not support the occurrence parameter.
+2025-10-21 21:44:13,227 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 4 / 24
+2025-10-21 21:44:14,785 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+2025-10-21 21:44:14,785 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 14 / 24
+2025-10-21 21:44:27,957 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 22 / 24
+2025-10-21 21:44:54,441 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country FROM (SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country) ORDER BY avg_population DESC LIMIT 1
+2025-10-21 21:44:54,443 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 15 / 24
+2025-10-21 21:45:02,855 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 18 / 24
+2025-10-21 21:45:02,857 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 19 / 24
+2025-10-21 21:46:01,175 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT REPLACE("Select Bibliography", ';', ' ')) AS unique_sources FROM roman_cities
+2025-10-21 21:46:01,176 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 9 / 24
+2025-10-21 21:47:59,997 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+2025-10-21 21:47:59,997 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 16 / 24
+2025-10-21 21:48:05,167 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 20 / 24
+2025-10-21 21:48:08,353 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(first_record.k) AS average_potassium FROM (SELECT k FROM climate_measurements WHERE site = 'Maltese' ORDER BY interval_cm LIMIT 1) AS first_record JOIN (SELECT k FROM climate_measurements WHERE site = 'Maltese' ORDER BY interval_cm DESC LIMIT 1) AS last_record ON first_record.interval_cm = last_record.interval_cm
+2025-10-21 21:48:08,354 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 3 / 24
+2025-10-21 21:48:18,659 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 23 / 24
+2025-10-21 21:48:36,213 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 24 / 24
+2025-10-21 21:48:42,499 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 4 / 24
+2025-10-21 21:49:01,315 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(t1.city) FROM worldcities AS t1 INNER JOIN roman_cities AS t2 ON ACOS(SIN(RADIANS(t1.lat)) * SIN(RADIANS(t2."Latitude (Y)")) + COS(RADIANS(t1.lat)) * COS(RADIANS(t2."Latitude (Y)")) * COS(RADIANS(t1.lng) - RADIANS(t2."Longitude (X)"))) * 6371 < 0.1 WHERE t1.population > 100000
+2025-10-21 21:49:01,315 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 2 / 24
+2025-10-21 21:49:20,486 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT city FROM worldcities WHERE (CASE WHEN lat < 0 THEN 1 ELSE 0 END) + (CASE WHEN lng < 0 THEN 1 ELSE 0 END) > 1 ORDER BY population DESC LIMIT 1
+2025-10-21 21:49:20,486 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 6 / 24
+2025-10-21 21:49:27,601 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) AS conflictcount FROM conflict_brecke WHERE startyear >= 800 AND endyear <= 1400 AND (endyear - startyear) >= 1
+2025-10-21 21:49:27,601 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 5 / 24
+2025-10-21 21:49:32,304 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(CAST(SUM(CASE WHEN trend = 1 THEN 1 ELSE 0 END) AS REAL) / COUNT(*), 2) AS percentage_increasing_years FROM (SELECT "ODP 967 wet-dry index", CASE WHEN "ODP 967 wet-dry index" > LAG("ODP 967 wet-dry index") OVER (ORDER BY "ODP 967 wet-dry index") THEN 1 ELSE 0 END AS trend FROM climate_measurements) AS subquery
+2025-10-21 21:49:32,304 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 2 / 24
+2025-10-21 21:49:40,251 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 21 / 24
+2025-10-21 21:49:49,953 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 4 / 24
+2025-10-21 21:49:56,583 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(t2.city) FROM roman_cities AS t1 JOIN worldcities AS t2 ON ABS(t1."Latitude (Y)" - t2.lat) <= 0.1 AND ABS(t1."Longitude (X)" - t2.lng) <= 0.1 WHERE t2.population > 100000
+2025-10-21 21:49:56,584 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 3 / 24
+2025-10-21 21:49:59,213 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT "Select Bibliography") FROM roman_cities
+2025-10-21 21:49:59,213 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 10 / 24
+2025-10-21 21:50:51,755 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7 done, Number of valid reasoning paths: 32
+2025-10-21 21:50:51,792 - __main__ - INFO - Task 7 completed successfully in 4340.51s
+2025-10-21 21:50:59,799 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country FROM (SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country) AS subquery ORDER BY avg_population DESC LIMIT 1
+2025-10-21 21:50:59,799 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 17 / 24
+2025-10-21 21:51:05,990 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 6 / 24
+2025-10-21 21:51:18,857 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 3 / 24
+2025-10-21 21:52:08,371 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(CAST(REPLACE("Barrington Atlas Rank", ' or ', '') AS INTEGER)), 4) AS average_rank FROM "roman_cities" WHERE "Country" = 'Greece'
+2025-10-21 21:52:08,371 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 4 / 24
+2025-10-21 21:52:09,994 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 7 / 24
+2025-10-21 21:52:27,201 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 6 / 24
+2025-10-21 21:52:53,508 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+2025-10-21 21:52:53,508 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 18 / 24
+2025-10-21 21:54:44,736 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(CAST(SUBSTRING(t1."Barrington Atlas Rank", INSTR(t1."Barrington Atlas Rank", 'or') + 3) AS REAL)) AS avg_rank, AVG(t2.population) AS avg_population FROM roman_cities AS t1 JOIN worldcities AS t2 ON (6371 * ACOS(COS(RADIANS(t1."Latitude (Y)")) * COS(RADIANS(t2.lat)) * COS(RADIANS(t2.lng) - RADIANS(t1."Longitude (X)")) + SIN(RADIANS(t1."Latitude (Y)")) * SIN(RADIANS(t2.lat)))) < 0.1 WHERE t2.population > 1000000 GROUP BY t1."Barrington Atlas Rank"
+2025-10-21 21:54:44,737 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 2 / 24
+2025-10-21 21:55:25,005 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 22 / 24
+2025-10-21 21:55:35,749 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+2025-10-21 21:55:35,749 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 19 / 24
+2025-10-21 21:55:36,049 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+2025-10-21 21:55:36,049 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 20 / 24
+2025-10-21 21:56:42,175 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT "Select Bibliography") AS unique_sources FROM roman_cities
+2025-10-21 21:56:42,176 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 11 / 24
+2025-10-21 21:57:35,512 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 23 / 24
+2025-10-21 21:58:08,802 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 2 / 24
+2025-10-21 21:58:38,551 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country FROM (SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country) ORDER BY avg_population DESC LIMIT 1
+2025-10-21 21:58:38,551 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 21 / 24
+2025-10-21 21:59:07,275 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+2025-10-21 21:59:07,275 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 22 / 24
+2025-10-21 22:00:11,093 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 24 / 24
+2025-10-21 22:00:33,524 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT "Select Bibliography") FROM roman_cities
+2025-10-21 22:00:33,524 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 12 / 24
+2025-10-21 22:00:50,844 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1
+2025-10-21 22:00:50,844 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 7 / 24
+2025-10-21 22:01:29,208 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 7 / 24
+2025-10-21 22:01:51,685 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(k), 4) FROM climate_measurements WHERE "Depth below seafloor_m" = (SELECT MIN("Depth below seafloor_m") FROM climate_measurements) OR "Depth below seafloor_m" = (SELECT MAX("Depth below seafloor_m") FROM climate_measurements)
+2025-10-21 22:01:51,685 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 4 / 24
+2025-10-21 22:01:52,274 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND((COUNT(CASE WHEN "ODP 967 wet-dry index" > 0 THEN 1 ELSE NULL END) / COUNT(*)) * 100, 2) AS percentage FROM climate_measurements
+2025-10-21 22:01:52,274 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 3 / 24
+2025-10-21 22:02:14,286 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+2025-10-21 22:02:14,286 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 23 / 24
+2025-10-21 22:02:32,284 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9 done, Number of valid reasoning paths: 38
+2025-10-21 22:02:32,317 - __main__ - INFO - Task 9 completed successfully in 5041.03s
+2025-10-21 22:02:42,811 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 7 / 24
+2025-10-21 22:03:37,817 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 8 / 24
+2025-10-21 22:04:01,159 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT "Select Bibliography") AS unique_sources FROM roman_cities
+2025-10-21 22:04:01,159 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 13 / 24
+2025-10-21 22:04:11,859 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(lat) AS average_latitude FROM (SELECT w1.city, w1.country, w1.lat, w1.lng, w1.population FROM worldcities AS w1 INNER JOIN (SELECT country, MAX(population) AS max_population FROM worldcities GROUP BY country) AS w2 ON w1.country = w2.country AND w1.population = w2.max_population)
+2025-10-21 22:04:11,859 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 2 / 24
+2025-10-21 22:04:23,771 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT "Select Bibliography") FROM "roman_cities"
+2025-10-21 22:04:23,772 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 14 / 24
+2025-10-21 22:04:44,519 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' ') + 1, INSTR("Barrington Atlas Rank", ' or') - INSTR("Barrington Atlas Rank", ' ') - 1) AS REAL) + CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' or') + 4) AS REAL)) / 2, 4) AS average_rank FROM "roman_cities" WHERE "country" = 'Greece'
+2025-10-21 22:04:44,519 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 5 / 24
+2025-10-21 22:04:45,066 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) FROM conflict_brecke WHERE startyear BETWEEN 800 AND 1400 AND endyear - startyear >= 1
+2025-10-21 22:04:45,066 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 6 / 24
+2025-10-21 22:06:05,575 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT "Select Bibliography") FROM roman_cities
+2025-10-21 22:06:05,575 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 15 / 24
+2025-10-21 22:06:05,870 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT "Select Bibliography") AS unique_sources FROM roman_cities
+2025-10-21 22:06:05,870 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 16 / 24
+2025-10-21 22:06:25,867 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(lat), 4) AS average_latitude FROM (SELECT lat FROM worldcities WHERE city IN (SELECT city FROM worldcities WHERE capital = 'primary' GROUP BY country ORDER BY MAX(population) DESC LIMIT 1)) AS capital_cities
+2025-10-21 22:06:25,867 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 3 / 24
+2025-10-21 22:07:44,021 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+2025-10-21 22:07:44,021 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9, Rollout step 24 / 24
+2025-10-21 22:09:19,689 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(lat) AS avg_lat FROM (SELECT city_ascii, country, lat, lng, population FROM (SELECT city_ascii, country, lat, lng, population, ROW_NUMBER() OVER (PARTITION BY country ORDER BY population DESC) AS rn FROM worldcities WHERE capital = 'primary') AS sub WHERE rn = 1) AS final
+2025-10-21 22:09:19,689 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 4 / 24
+2025-10-21 22:09:37,821 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT "Select Bibliography") FROM roman_cities
+2025-10-21 22:09:37,822 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 17 / 24
+2025-10-21 22:10:15,759 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1
+2025-10-21 22:10:15,759 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 9 done, Number of valid reasoning paths: 35
+2025-10-21 22:10:15,790 - __main__ - INFO - Task 9 completed successfully in 4328.47s
+2025-10-21 22:11:15,186 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(ca, 4) FROM climate_measurements ORDER BY "ODP 967 Dust proxy" ASC, "ODP 967 wet-dry index" ASC LIMIT 1
+2025-10-21 22:11:15,186 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 4 / 24
+2025-10-21 22:11:53,856 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT "Ca" FROM climate_measurements WHERE "ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") FROM climate_measurements) ORDER BY "ODP 967 wet-dry index" ASC LIMIT 1
+2025-10-21 22:11:53,856 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 5 / 24
+2025-10-21 22:11:54,094 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 6 / 24
+2025-10-21 22:12:06,242 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 4 / 24
+2025-10-21 22:12:31,298 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1
+2025-10-21 22:12:31,298 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 8 / 24
+2025-10-21 22:13:03,029 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1
+2025-10-21 22:13:03,029 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 9 / 24
+2025-10-21 22:13:42,502 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 8 / 24
+2025-10-21 22:14:01,361 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) AS unique_sources FROM roman_cities WHERE 'BNP' LIKE '%BNP%' OR 'Hansen 2006' LIKE '%Hansen 2006%' OR 'Hansen and Nielsen 2004' LIKE '%Hansen and Nielsen 2004%' OR 'PECS' LIKE '%PECS%' OR 'Sear 2006' LIKE '%Sear 2006%'
+2025-10-21 22:14:01,363 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 18 / 24
+2025-10-21 22:14:07,461 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 3 / 24
+2025-10-21 22:14:13,171 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 9 / 24
+2025-10-21 22:14:51,562 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND("Ca", 4) FROM climate_measurements ORDER BY "ODP 967 Dust proxy" ASC, "ODP 967 wet-dry index" ASC LIMIT 1
+2025-10-21 22:14:51,562 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 6 / 24
+2025-10-21 22:14:55,756 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 9 / 24
+2025-10-21 22:15:13,912 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG("Barrington Atlas Rank") AS average_rank FROM "roman_cities" WHERE "Country" = 'Greece'
+2025-10-21 22:15:13,912 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 6 / 24
+2025-10-21 22:15:14,753 - sqlglot - WARNING - INSTR does not support the occurrence parameter.
+2025-10-21 22:15:14,753 - sqlglot - WARNING - INSTR does not support the occurrence parameter.
+2025-10-21 22:15:14,754 - sqlglot - WARNING - INSTR does not support the occurrence parameter.
+2025-10-21 22:16:45,433 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 8 / 24
+2025-10-21 22:17:20,084 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(lat), 4) AS avg_latitude FROM worldcities WHERE (country, population) IN (SELECT country, MAX(population) FROM worldcities WHERE capital = 'primary' GROUP BY country)
+2025-10-21 22:17:20,084 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 5 / 24
+2025-10-21 22:19:48,009 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT SUBSTRING("Select Bibliography", 20)) AS unique_sources FROM roman_cities
+2025-10-21 22:19:48,009 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 19 / 24
+2025-10-21 22:19:59,877 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(COUNT(CASE WHEN t2."ODP 967 wet-dry index" > t1."ODP 967 wet-dry index" THEN 1 ELSE NULL END) * 100.0 / COUNT(t1."ODP 967 wet-dry index"), 2) AS percentage FROM climate_measurements AS t1 INNER JOIN climate_measurements AS t2 ON t1.site = t2.site AND t1.interval_cm + 1 = t2.interval_cm
+2025-10-21 22:19:59,877 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 4 / 24
+2025-10-21 22:21:37,959 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 5 / 24
+2025-10-21 22:22:01,191 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 10 / 24
+2025-10-21 22:22:36,541 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 11 / 24
+2025-10-21 22:22:45,686 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT "Select Bibliography") FROM roman_cities
+2025-10-21 22:22:45,686 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 20 / 24
+2025-10-21 22:22:56,523 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(t1."Ca", 4) FROM climate_measurements AS t1 WHERE t1."ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") FROM climate_measurements) AND t1."ODP 967 wet-dry index" = (SELECT MIN("ODP 967 wet-dry index") FROM climate_measurements WHERE "ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") FROM climate_measurements))
+2025-10-21 22:22:56,523 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 7 / 24
+2025-10-21 22:23:06,391 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(SUM(CASE WHEN t1."ODP 967 wet-dry index" > t2."ODP 967 wet-dry index" THEN 1 ELSE 0 END) * 100.0 / COUNT(t1."ODP 967 wet-dry index"), 2) AS percentage FROM climate_measurements AS t1 INNER JOIN climate_measurements AS t2 ON t1."Depth below seafloor_m" = t2."Depth below seafloor_m" + 1
+2025-10-21 22:23:06,392 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 5 / 24
+2025-10-21 22:24:23,132 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT "Select Bibliography") AS unique_sources FROM roman_cities
+2025-10-21 22:24:23,132 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 21 / 24
+2025-10-21 22:24:47,599 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG("Barrington Atlas Rank"), 4) AS average_rank FROM roman_cities WHERE country = 'Greece'
+2025-10-21 22:24:47,599 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 7 / 24
+2025-10-21 22:26:20,647 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 5 / 24
+2025-10-21 22:26:45,222 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT "Select Bibliography") FROM roman_cities
+2025-10-21 22:26:45,222 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 22 / 24
+2025-10-21 22:26:49,602 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 7 / 24
+2025-10-21 22:29:40,299 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 12 / 24
+2025-10-21 22:29:43,176 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(t2.lat) AS avg_latitude FROM (SELECT country, MAX(population) AS max_population FROM worldcities WHERE capital = 'primary' GROUP BY country) AS t1 INNER JOIN worldcities AS t2 ON t1.country = t2.country AND t2.population = t1.max_population AND t2.capital = 'primary'
+2025-10-21 22:29:43,177 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 6 / 24
+2025-10-21 22:30:37,732 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT REPLACE("Select Bibliography", ';', ',')) AS unique_sources FROM roman_cities
+2025-10-21 22:30:37,732 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 23 / 24
+2025-10-21 22:33:33,473 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT "Select Bibliography") FROM roman_cities
+2025-10-21 22:33:33,474 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7, Rollout step 24 / 24
+2025-10-21 22:34:13,273 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND((SELECT "Ca" FROM climate_measurements WHERE "ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") AS min_dust_proxy FROM climate_measurements) ORDER BY "ODP 967 wet-dry index" ASC LIMIT 1), 4) AS result
+2025-10-21 22:34:13,274 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 8 / 24
+2025-10-21 22:34:21,469 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 10 / 24
+2025-10-21 22:34:45,431 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1) AS closest_year, ROUND((SELECT MAX(al) FROM climate_measurements WHERE ABS(age_ky - (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1)) = (SELECT MIN(ABS(age_ky - (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1))) FROM climate_measurements)), 4) AS max_aluminum_value
+2025-10-21 22:34:45,432 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 4 / 24
+2025-10-21 22:35:27,506 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT "Select Bibliography") FROM roman_cities
+2025-10-21 22:35:27,507 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 7 done, Number of valid reasoning paths: 35
+2025-10-21 22:35:27,545 - __main__ - INFO - Task 7 completed successfully in 5840.23s
+2025-10-21 22:35:41,395 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 9 / 24
+2025-10-21 22:36:17,473 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 6 / 24
+2025-10-21 22:37:29,471 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 5 / 24
+2025-10-21 22:37:35,442 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 3 / 24
+2025-10-21 22:38:05,831 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' ') + 1, INSTR("Barrington Atlas Rank", ' or ') - INSTR("Barrington Atlas Rank", ' ') - 1) AS REAL) + CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' or ') + 4) AS REAL)) / 2, 4) AS final_avg_rank FROM roman_cities WHERE country = 'Greece'
+2025-10-21 22:38:05,831 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 8 / 24
+2025-10-21 22:39:34,340 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT w.city) FROM worldcities AS w INNER JOIN roman_cities AS r ON 6371 * ACOS(COS(RADIANS(w.lat)) * COS(RADIANS(r."Latitude (Y)")) * COS(RADIANS(w.lng) - RADIANS(r."Longitude (X)")) + SIN(RADIANS(w.lat)) * SIN(RADIANS(r."Latitude (Y)"))) <= 0.1 WHERE w.population > 100000
+2025-10-21 22:39:34,341 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 4 / 24
+2025-10-21 22:41:00,796 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT city FROM worldcities WHERE city IN (SELECT city FROM worldcities WHERE lat < 0) AND city IN (SELECT city FROM worldcities WHERE lat > 0) ORDER BY population DESC LIMIT 1
+2025-10-21 22:41:00,796 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 10 / 24
+2025-10-21 22:41:46,370 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(t2.k) + ((STRFTIME('%J', t1.max_date) - STRFTIME('%J', t1.min_date)) / t2.interval_cm) * (t2.k - AVG(t2.k)), 4) AS avg_potassium FROM (SELECT MIN(sample_date) AS min_date, MAX(sample_date) AS max_date FROM radiocarbon_data WHERE region = 'Maltese') AS t1 INNER JOIN climate_measurements AS t2 ON t2.site = t1.site
+2025-10-21 22:41:46,371 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 5 / 24
+2025-10-21 22:41:58,190 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 6 / 24
+2025-10-21 22:42:53,737 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 13 / 24
+2025-10-21 22:43:34,985 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(ca, 4) AS calcium_ppm FROM climate_measurements WHERE "ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") FROM climate_measurements) ORDER BY "ODP 967 wet-dry index" LIMIT 1
+2025-10-21 22:43:34,985 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 9 / 24
+2025-10-21 22:43:54,439 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 7 / 24
+2025-10-21 22:45:50,076 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT t1.city, t1.population FROM worldcities AS t1 INNER JOIN (SELECT city, population FROM worldcities WHERE lat < 0 AND lng < 0) AS t2 ON t1.city = t2.city ORDER BY t1.population DESC LIMIT 1
+2025-10-21 22:45:50,076 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 11 / 24
+2025-10-21 22:46:08,559 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 8 / 24
+2025-10-21 22:46:20,419 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 14 / 24
+2025-10-21 22:46:43,158 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 15 / 24
+2025-10-21 22:49:47,612 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 10 / 24
+2025-10-21 22:50:12,931 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) FROM conflict_brecke WHERE STRFTIME('%Y', startyear) >= '800' AND STRFTIME('%Y', endyear) <= '1400' AND STRFTIME('%Y', endyear) - STRFTIME('%Y', startyear) >= 1
+2025-10-21 22:50:12,931 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 7 / 24
+2025-10-21 22:50:30,498 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 11 / 24
+2025-10-21 22:50:46,511 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(k), 4) AS rounded_average_potassium FROM climate_measurements WHERE date BETWEEN (SELECT MIN(date) FROM climate_measurements WHERE site = 'Maltese') AND (SELECT MAX(date) FROM climate_measurements WHERE site = 'Maltese')
+2025-10-21 22:50:46,511 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 6 / 24
+2025-10-21 22:50:56,930 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1
+2025-10-21 22:50:56,931 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 12 / 24
+2025-10-21 22:51:54,893 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND("Ca", 4) AS calcium_value FROM climate_measurements WHERE "ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") AS min_dust_proxy FROM climate_measurements) AND "ODP 967 wet-dry index" = (SELECT MIN("ODP 967 wet-dry index") AS min_wet_dry_index FROM climate_measurements WHERE "ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") AS min_dust_proxy FROM climate_measurements))
+2025-10-21 22:51:54,893 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 10 / 24
+2025-10-21 22:53:38,029 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 8 / 24
+2025-10-21 22:53:58,563 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(t1.lat), 4) AS avg_latitude FROM worldcities AS t1 JOIN (SELECT country, MAX(population) AS max_population FROM worldcities WHERE capital = 'primary' GROUP BY country) AS t2 ON t1.country = t2.country AND t1.population = t2.max_population
+2025-10-21 22:53:58,563 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 7 / 24
+2025-10-21 22:54:03,177 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND((AVG(t1.avg_rank) * AVG(t2.population) - AVG(t1.avg_rank * t2.population)) / (SQRT(AVG(t1.avg_rank * t1.avg_rank) - AVG(t1.avg_rank) * AVG(t1.avg_rank)) * SQRT(AVG(t2.population * t2.population) - AVG(t2.population) * AVG(t2.population))), 6) AS correlation FROM (SELECT CASE WHEN SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' or ') + 3) = '' THEN CAST("Barrington Atlas Rank" AS REAL) ELSE CAST(SUBSTRING("Barrington Atlas Rank", 1, INSTR("Barrington Atlas Rank", ' or ') - 1) AS REAL) + CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' or ') + 3) AS REAL) / 2 END AS avg_rank FROM roman_cities) AS t1 INNER JOIN (SELECT population FROM worldcities WHERE population > 1000000) AS t2 ON ST_DISTANCE_SPHERE(POINT(t2.lng, t2.lat), POINT(t1."Longitude (X)", t1."Latitude (Y)")) < 0.1
+2025-10-21 22:54:03,177 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 3 / 24
+2025-10-21 22:54:17,126 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) AS totalconflicts FROM conflict_brecke WHERE startyear >= 800 AND endyear <= 1400 AND (endyear - startyear) >= 1 UNION SELECT COUNT(*) AS conflictsinmoderntimes FROM conflict_brecke AS cb INNER JOIN worldcities AS wc ON cb.startyear BETWEEN 1900 AND 2023 AND cb.endyear BETWEEN 1900 AND 2023
+2025-10-21 22:54:17,126 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 8 / 24
+2025-10-21 22:54:52,902 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 5 / 24
+2025-10-21 22:54:57,894 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 12 / 24
+2025-10-21 22:55:47,062 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 4 / 24
+2025-10-21 22:58:08,770 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(CORR(ancient_rank, modern_population), 6) AS correlation
+FROM (
+	SELECT AVG(CAST(SUBSTR(SUBSTR(Barrington Atlas Rank, 1, INSTR(Barrington Atlas Rank, ' or ') - 1) AS REAL) + CAST(SUBSTR(SUBSTR(Barrington Atlas Rank, INSTR(Barrington Atlas Rank, ' or ') + 4) AS REAL)) / 2 AS ancient_rank
+	FROM roman_cities
+) AS ancient_rank
+JOIN (
+	SELECT city, population
+	FROM worldcities
+	WHERE population > 1000000
+) AS modern_city
+ON (
+	SELECT city_ascii
+	FROM worldcities
+	WHERE city_ascii = roman_cities.Ancient_Toponym
+	AND ABS(worldcities.lat - roman_cities.Latitude (Y)) < 0.1
+	AND ABS(worldcities.lng - roman_cities.Longitude (X)) < 0.1
+) IS NOT NULL
+2025-10-21 22:58:08,770 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 4 / 24
+2025-10-21 22:58:11,061 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 11 / 24
+2025-10-21 22:58:12,842 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 16 / 24
+2025-10-21 22:59:23,830 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(CAST(REPLACE(SUBSTRING("Barrington Atlas Rank", 1, INSTR("Barrington Atlas Rank", ' or ') - 1), ',', '') AS REAL) + CAST(REPLACE(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' or ') + 4), ',', '') AS REAL)) / 2, 4) AS avg_rank FROM "roman_cities"
+2025-10-21 22:59:23,831 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 9 / 24
+2025-10-21 22:59:57,310 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(k) AS average_k FROM climate_measurements WHERE site = 'Maltese' AND date BETWEEN (SELECT MIN(date) FROM climate_measurements WHERE site = 'Maltese') AND (SELECT MAX(date) FROM climate_measurements WHERE site = 'Maltese')
+2025-10-21 22:59:57,310 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 7 / 24
+2025-10-21 23:00:18,598 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 13 / 24
+2025-10-21 23:00:52,068 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(k) AS average_k FROM climate_measurements WHERE age_ky = (SELECT MIN(age_ky) FROM climate_measurements) OR age_ky = (SELECT MAX(age_ky) FROM climate_measurements)
+2025-10-21 23:00:52,068 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 8 / 24
+2025-10-21 23:00:54,109 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 17 / 24
+2025-10-21 23:01:18,377 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 14 / 24
+2025-10-21 23:01:52,881 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT lat, lng, population FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1
+2025-10-21 23:01:52,882 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 13 / 24
+2025-10-21 23:02:45,211 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT t1.id) FROM worldcities AS t1 INNER JOIN roman_cities AS t2 ON t1.lat = t2."Latitude (Y)" AND t1.lng = t2."Longitude (X)" WHERE t1.population > 100000 AND ACOS(SIN(RADIANS(t1.lat)) * SIN(RADIANS(t2."Latitude (Y)")) + COS(RADIANS(t1.lat)) * COS(RADIANS(t2."Latitude (Y)")) * COS(RADIANS(t1.lng) - RADIANS(t2."Longitude (X)"))) * 6371 <= 0.1
+2025-10-21 23:02:45,211 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 5 / 24
+2025-10-21 23:03:00,707 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(t1.ca, 4) AS calcium_ppm FROM climate_measurements AS t1 WHERE t1."ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") FROM climate_measurements) AND t1."ODP 967 wet-dry index" = (SELECT MIN("ODP 967 wet-dry index") FROM climate_measurements WHERE "ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") FROM climate_measurements))
+2025-10-21 23:03:00,708 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 11 / 24
+2025-10-21 23:04:48,299 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 9 / 24
+2025-10-21 23:05:52,450 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1
+2025-10-21 23:05:52,450 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 14 / 24
+2025-10-21 23:05:52,450 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT t1.city FROM worldcities AS t1 INNER JOIN (SELECT city FROM worldcities WHERE lat < 0) AS t2 ON t1.city = t2.city INNER JOIN (SELECT city FROM worldcities WHERE lng < 0) AS t3 ON t1.city = t3.city ORDER BY t1.population DESC LIMIT 1
+2025-10-21 23:05:52,450 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 15 / 24
+2025-10-21 23:07:04,808 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 5 / 24
+2025-10-21 23:07:29,828 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(lat), 4) AS avg_lat_rounded FROM worldcities WHERE capital = 'primary' AND (country, population) IN (SELECT country, MAX(population) FROM worldcities WHERE capital = 'primary' GROUP BY country)
+2025-10-21 23:07:29,828 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 8 / 24
+2025-10-21 23:08:02,625 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 6 / 24
+2025-10-21 23:08:55,075 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 18 / 24
+2025-10-21 23:08:55,523 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 19 / 24
+2025-10-21 23:10:00,389 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1
+2025-10-21 23:10:00,390 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 16 / 24
+2025-10-21 23:11:15,570 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 12 / 24
+2025-10-21 23:11:20,517 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND((SUM(CASE WHEN current_index > previous_index THEN 1 ELSE 0 END) * 100.0) / (COUNT(*) - 1), 2) AS percentage_increasing FROM (SELECT "ODP 967 wet-dry index" AS current_index, LAG("ODP 967 wet-dry index") OVER (ORDER BY date) AS previous_index FROM "radiocarbon_data") AS trends WHERE NOT previous_index IS NULL
+2025-10-21 23:11:20,517 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 6 / 24
+2025-10-21 23:11:36,792 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 7 / 24
+2025-10-21 23:11:47,841 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 13 / 24
+2025-10-21 23:11:48,651 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 20 / 24
+2025-10-21 23:12:37,286 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG((CAST(SUBSTRING("Barrington Atlas Rank", 1, INSTR("Barrington Atlas Rank", ' or ') - 1) AS REAL) + CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' or ') + 3) AS REAL)) / 2), 4) AS avg_rank FROM roman_cities WHERE country = 'Greece'
+2025-10-21 23:12:37,287 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 10 / 24
+2025-10-21 23:13:36,881 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(CASE WHEN INSTR("Barrington Atlas Rank", 'or') > 0 THEN (CAST(SUBSTRING("Barrington Atlas Rank", 1, INSTR("Barrington Atlas Rank", 'or') - 1) AS REAL) + CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", 'or') + 3) AS REAL)) / 2 ELSE CAST("Barrington Atlas Rank" AS REAL) END), 4) AS average_rank FROM "roman_cities" WHERE "Country" = 'Greece'
+2025-10-21 23:13:36,881 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 11 / 24
+2025-10-21 23:14:02,853 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(lat), 4) FROM worldcities WHERE capital = 'primary' AND (country, population) IN (SELECT country, MAX(population) FROM worldcities WHERE capital = 'primary' GROUP BY country)
+2025-10-21 23:14:02,853 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 9 / 24
+2025-10-21 23:14:03,567 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 14 / 24
+2025-10-21 23:14:29,874 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 15 / 24
+2025-10-21 23:14:32,315 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 15 / 24
+2025-10-21 23:17:15,430 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 21 / 24
+2025-10-21 23:19:29,246 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 16 / 24
+2025-10-21 23:19:30,481 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG((CAST(SUBSTRING("Barrington Atlas Rank", 1, INSTR("Barrington Atlas Rank", ' or ') - 1) AS REAL) + CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' or ') + 4) AS REAL)) / 2), 4) AS average_rank FROM "roman_cities" WHERE "country" = 'Greece'
+2025-10-21 23:19:30,481 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 12 / 24
+2025-10-21 23:19:33,773 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 4 / 24
+2025-10-21 23:19:42,312 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 10 / 24
+2025-10-21 23:20:00,459 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(t2.lat) AS avg_latitude FROM (SELECT country, MAX(population) AS max_population FROM worldcities WHERE capital = 'primary' GROUP BY country) AS t1 INNER JOIN worldcities AS t2 ON t1.country = t2.country AND t1.max_population = t2.population
+2025-10-21 23:20:00,460 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 10 / 24
+2025-10-21 23:20:06,336 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT r1.date AS most_northern_year, ROUND(MAX(c.al), 4) AS max_aluminum_value FROM radiocarbon_data AS r1 JOIN climate_measurements AS c ON ABS(r1.date - c."Depth below seafloor_m") = (SELECT MIN(ABS(r2.date - c2."Depth below seafloor_m")) FROM radiocarbon_data AS r2 JOIN climate_measurements AS c2 ON r2.date = (SELECT date FROM radiocarbon_data WHERE region = 'Northern Italy' AND material = 'Bone' ORDER BY latitude DESC LIMIT 1)) WHERE r1.region = 'Northern Italy' AND r1.material = 'Bone'
+2025-10-21 23:20:06,336 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 5 / 24
+2025-10-21 23:20:39,496 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 22 / 24
+2025-10-21 23:20:40,585 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT worldcities.city) FROM worldcities INNER JOIN roman_cities ON worldcities.lng = roman_cities."Longitude (X)" AND worldcities.lat = roman_cities."Latitude (Y)" WHERE worldcities.population > 100000 AND (6371 * ACOS(COS(RADIANS(worldcities.lat)) * COS(RADIANS(roman_cities."Latitude (Y)")) * COS(RADIANS(worldcities.lng) - RADIANS(roman_cities."Longitude (X)")) + SIN(RADIANS(worldcities.lat)) * SIN(RADIANS(roman_cities."Latitude (Y)")))) <= 0.1
+2025-10-21 23:20:40,585 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 6 / 24
+2025-10-21 23:20:46,070 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1
+2025-10-21 23:20:46,070 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 17 / 24
+2025-10-21 23:20:46,803 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) FROM conflict_brecke AS cb WHERE cb.startyear >= 800 AND cb.endyear <= 1400 AND (cb.endyear - cb.startyear) >= 1
+2025-10-21 23:20:46,804 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 9 / 24
+2025-10-21 23:21:26,384 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 9 / 24
+2025-10-21 23:21:57,524 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 6 / 24
+2025-10-21 23:22:24,952 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 16 / 24
+2025-10-21 23:25:19,061 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(w.lat), 4) AS avg_latitude FROM worldcities AS w JOIN (SELECT country, MAX(population) AS max_population FROM worldcities WHERE capital = 'primary' GROUP BY country) AS m ON w.country = m.country AND w.population = m.max_population
+2025-10-21 23:25:19,062 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 11 / 24
+2025-10-21 23:25:32,625 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(CAST(REPLACE(SUBSTRING("Barrington Atlas Rank", 1, INSTR("Barrington Atlas Rank", ' ') - 1), 'or', ' ') AS REAL) + CAST(REPLACE(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' ') + 1), 'or', ' ') AS REAL)) / 2, 4) AS final_avg_rank FROM "roman_cities" WHERE "Country" = 'Greece'
+2025-10-21 23:25:32,625 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 13 / 24
+2025-10-21 23:26:23,081 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 23 / 24
+2025-10-21 23:26:30,953 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 17 / 24
+2025-10-21 23:27:04,878 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND("Ca", 4) AS rounded_ca FROM "climate_measurements" WHERE "ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") AS min_dust_proxy FROM "climate_measurements")
+2025-10-21 23:27:04,878 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 12 / 24
+2025-10-21 23:27:10,533 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 17 / 24
+2025-10-21 23:27:24,074 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 7 / 24
+2025-10-21 23:27:28,883 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND((CAST(SUBSTRING(REPLACE("Barrington Atlas Rank", ' or ', ','), 1, INSTR(REPLACE("Barrington Atlas Rank", ' or ', ','), ',') - 1) AS REAL) + CAST(SUBSTRING(REPLACE("Barrington Atlas Rank", ' or ', ','), INSTR(REPLACE("Barrington Atlas Rank", ' or ', ','), ',') + 1) AS REAL)) / 2, 4) AS final_avg_rank FROM roman_cities WHERE country = 'Greece'
+2025-10-21 23:27:28,883 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 14 / 24
+2025-10-21 23:27:51,402 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 18 / 24
+2025-10-21 23:29:17,375 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT city FROM (SELECT * FROM worldcities WHERE lat < 0 AND lng < 0) ORDER BY population DESC LIMIT 1
+2025-10-21 23:29:17,377 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 18 / 24
+2025-10-21 23:29:53,549 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 24 / 24
+2025-10-21 23:29:56,974 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 18 / 24
+2025-10-21 23:30:03,052 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 11 / 24
+2025-10-21 23:31:08,832 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 7 / 24
+2025-10-21 23:31:20,841 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1
+2025-10-21 23:31:20,841 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 19 / 24
+2025-10-21 23:32:10,131 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG("Barrington Atlas Rank"), 4) AS average_rank FROM "roman_cities" WHERE "Country" = 'Greece'
+2025-10-21 23:32:10,131 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 15 / 24
+2025-10-21 23:32:16,299 - __main__ - INFO - Task 10 completed successfully in 11402.66s
+2025-10-21 23:32:57,196 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 6 / 24
+2025-10-21 23:33:21,308 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 8 / 24
+2025-10-21 23:34:33,539 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(k), 4) AS avg_potassium FROM climate_measurements WHERE site = 'Maltese area' AND interval_cm BETWEEN (SELECT MIN(interval_cm) FROM climate_measurements WHERE site = 'Maltese area') AND (SELECT MAX(interval_cm) FROM climate_measurements WHERE site = 'Maltese area')
+2025-10-21 23:34:33,539 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 9 / 24
+2025-10-21 23:34:57,264 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) FROM worldcities WHERE population > 100000 AND capital = 'admin'
+2025-10-21 23:34:57,264 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 7 / 24
+2025-10-21 23:35:08,965 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 7 / 24
+2025-10-21 23:36:48,800 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5 done, Number of valid reasoning paths: 34
+2025-10-21 23:36:48,839 - __main__ - INFO - Task 5 completed successfully in 10697.56s
+2025-10-21 23:37:01,293 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 8 / 24
+2025-10-21 23:38:14,069 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND((SELECT MAX(Al) FROM climate_measurements WHERE date = (SELECT date FROM (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY ABS(date - (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1)) LIMIT 1)))), 4)
+2025-10-21 23:38:14,069 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 6 / 24
+2025-10-21 23:38:15,474 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT city, population FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1
+2025-10-21 23:38:15,474 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 20 / 24
+2025-10-21 23:38:56,206 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT CAST(COUNT(*) AS REAL) * 100 / (SELECT COUNT(*) FROM radiocarbon_data) AS percentage_increasing_years FROM radiocarbon_data INNER JOIN (SELECT date, "ODP 967 wet-dry index", LAG("ODP 967 wet-dry index") OVER (ORDER BY date) AS prev_index FROM radiocarbon_data) AS subquery ON subquery.date = radiocarbon_data.date WHERE subquery."ODP 967 wet-dry index" > subquery.prev_index
+2025-10-21 23:38:56,206 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 7 / 24
+2025-10-21 23:39:00,826 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(t1."Ca", 4) AS result FROM climate_measurements AS t1 INNER JOIN (SELECT MIN("ODP 967 Dust proxy") AS min_dust_proxy FROM climate_measurements) AS t2 ON t1."ODP 967 Dust proxy" = t2.min_dust_proxy ORDER BY t1."ODP 967 wet-dry index" LIMIT 1
+2025-10-21 23:39:00,827 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 13 / 24
+2025-10-21 23:39:06,690 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 19 / 24
+2025-10-21 23:39:31,707 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT city FROM worldcities WHERE city IN (SELECT city FROM worldcities WHERE lat < 0 AND lng < 0) ORDER BY population DESC LIMIT 1
+2025-10-21 23:39:31,707 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 21 / 24
+2025-10-21 23:39:34,329 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(ca, 4) AS calcium_ppm FROM climate_measurements WHERE "ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") FROM climate_measurements) AND "ODP 967 wet-dry index" = (SELECT MIN("ODP 967 wet-dry index") FROM climate_measurements WHERE "ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") FROM climate_measurements))
+2025-10-21 23:39:34,329 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 14 / 24
+2025-10-21 23:41:27,804 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 19 / 24
+2025-10-21 23:42:04,205 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(CASE WHEN INSTR("Barrington Atlas Rank", '-') > 0 THEN (CAST(SUBSTRING("Barrington Atlas Rank", 1, INSTR("Barrington Atlas Rank", '-') - 1) AS REAL) + CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", '-') + 1) AS REAL)) / 2 ELSE CAST("Barrington Atlas Rank" AS REAL) END), 4) AS average_rank FROM "roman_cities" WHERE "Country" = 'Greece'
+2025-10-21 23:42:04,205 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 16 / 24
+2025-10-21 23:42:41,450 - __main__ - INFO - Task 2 completed successfully in 12027.81s
+2025-10-21 23:43:59,989 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT city FROM worldcities WHERE city IN (SELECT city FROM worldcities WHERE lat < 0 AND lng < 0) ORDER BY population DESC LIMIT 1
+2025-10-21 23:43:59,990 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 22 / 24
+2025-10-21 23:44:14,930 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(k) AS avg_potassium FROM climate_measurements WHERE site = 'ODP 967' AND interval_cm BETWEEN (SELECT MIN(interval_cm) FROM climate_measurements WHERE site = 'ODP 967') AND (SELECT MAX(interval_cm) FROM climate_measurements WHERE site = 'ODP 967')
+2025-10-21 23:44:14,930 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 10 / 24
+2025-10-21 23:44:48,002 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND("Ca", 4) AS "Ca" FROM "climate_measurements" ORDER BY "ODP 967 Dust proxy" ASC, "ODP 967 wet-dry index" ASC LIMIT 1
+2025-10-21 23:44:48,002 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 15 / 24
+2025-10-21 23:44:57,031 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 20 / 24
+2025-10-21 23:44:57,032 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 21 / 24
+2025-10-21 23:45:47,258 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 12 / 24
+2025-10-21 23:46:47,037 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(CAST(SUBSTRING("Barrington Atlas Rank", 1, INSTR("Barrington Atlas Rank", ' or ') - 1) AS REAL) + CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' or ') + 4) AS REAL)) / 2, 4) AS final_average_rank FROM roman_cities WHERE "Country" = 'Greece'
+2025-10-21 23:46:47,038 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 17 / 24
+2025-10-21 23:46:57,844 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(CORR(r."Barrington Atlas Rank", w.population), 6) AS correlation FROM (SELECT r."Ancient Toponym", r."Barrington Atlas Rank", w.population FROM roman_cities AS r JOIN worldcities AS w ON ABS(r."Longitude (X)" - w.lng) < 0.1 AND ABS(r."Latitude (Y)" - w.lat) < 0.1 ORDER BY r."Start Date" DESC LIMIT 1) AS subquery
+2025-10-21 23:46:57,844 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 5 / 24
+2025-10-21 23:47:33,660 - sqlglot - WARNING - DATEDIFF unsupported for 'DAY'.
+2025-10-21 23:47:45,308 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(lat), 4) AS avg_lat FROM (SELECT lat FROM worldcities WHERE city IN (SELECT city FROM worldcities WHERE country = worldcities.country AND city = (SELECT city FROM worldcities WHERE country = worldcities.country ORDER BY population DESC LIMIT 1))) AS subquery
+2025-10-21 23:47:45,308 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 12 / 24
+2025-10-21 23:49:13,122 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 8 / 24
+2025-10-21 23:49:18,313 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 10 / 24
+2025-10-21 23:49:19,179 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT cb.conflict) AS numberofconflicts FROM conflict_brecke AS cb WHERE cb.startyear BETWEEN 800 AND 1400 AND cb.endyear - cb.startyear >= 1
+2025-10-21 23:49:19,179 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 10 / 24
+2025-10-21 23:50:11,992 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 20 / 24
+2025-10-21 23:51:09,796 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1
+2025-10-21 23:51:09,796 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 23 / 24
+2025-10-21 23:54:11,662 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' ') + 1, INSTR("Barrington Atlas Rank", ' or ') - INSTR("Barrington Atlas Rank", ' ')) AS REAL)) + AVG(CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' or ') + 3) AS REAL)) / 2, 4) AS average_rank FROM roman_cities WHERE country = 'Greece'
+2025-10-21 23:54:11,663 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 18 / 24
+2025-10-21 23:54:11,663 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(CASE WHEN INSTR("Barrington Atlas Rank", 'or') > 0 THEN (CAST(SUBSTRING("Barrington Atlas Rank", 1, INSTR("Barrington Atlas Rank", 'or') - 1) AS REAL) + CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", 'or') + 3) AS REAL)) / 2 ELSE CAST("Barrington Atlas Rank" AS REAL) END), 4) AS average_rank FROM "roman_cities" WHERE "Country" = 'Greece'
+2025-10-21 23:54:11,663 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 19 / 24
+2025-10-21 23:54:37,262 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 22 / 24
+2025-10-21 23:55:06,863 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 23 / 24
+2025-10-21 23:55:16,690 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 13 / 24
+2025-10-21 23:55:16,691 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 14 / 24
+2025-10-21 23:56:34,721 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 11 / 24
+2025-10-21 23:57:19,072 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 15 / 24
+2025-10-21 23:58:39,386 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 21 / 24
+2025-10-22 00:00:09,113 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(lat) AS average_latitude FROM (SELECT lat FROM worldcities WHERE capital = 'primary' GROUP BY country ORDER BY SUM(population) DESC LIMIT 1) AS capital_cities
+2025-10-22 00:00:09,113 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 13 / 24
+2025-10-22 00:01:42,352 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(COUNT(CASE WHEN t1.date < t2.date THEN 1 ELSE NULL END) * 100.0 / COUNT(t1.date), 2) AS percentage_increasing_years FROM radiocarbon_data AS t1 INNER JOIN radiocarbon_data AS t2 ON t1.date = t2.date - 1
+2025-10-22 00:01:42,353 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 8 / 24
+2025-10-22 00:02:27,265 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1
+2025-10-22 00:02:27,265 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5, Rollout step 24 / 24
+2025-10-22 00:02:27,265 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT t1.city FROM worldcities AS t1 INNER JOIN (SELECT city FROM worldcities WHERE lat < 0) AS t2 ON t1.city = t2.city INNER JOIN (SELECT city FROM worldcities WHERE lng < 0) AS t3 ON t1.city = t3.city ORDER BY t1.population DESC LIMIT 1
+2025-10-22 00:02:27,265 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 5 done, Number of valid reasoning paths: 32
+2025-10-22 00:02:27,307 - __main__ - INFO - Task 5 completed successfully in 11059.99s
+2025-10-22 00:03:57,920 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(MAX(t2.al), 4) AS max_aluminum FROM radiocarbon_data AS t1 JOIN climate_measurements AS t2 ON t2.age_ky = (SELECT MAX(age_ky) FROM climate_measurements WHERE age_ky <= (SELECT MAX(date) FROM radiocarbon_data WHERE culture = 'Neolithic' AND latitude = (SELECT MAX(latitude) FROM radiocarbon_data WHERE culture = 'Neolithic')))
+2025-10-22 00:03:57,920 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 7 / 24
+2025-10-22 00:04:20,244 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 22 / 24
+2025-10-22 00:04:35,298 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 12 / 24
+2025-10-22 00:05:02,508 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) AS numberofconflicts FROM conflict_brecke WHERE startyear >= 800 AND endyear <= 1400 AND endyear - startyear >= 1
+2025-10-22 00:05:02,508 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 11 / 24
+2025-10-22 00:05:40,562 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(k) AS avg_potassium FROM climate_measurements WHERE site = 'Maltese' ORDER BY depth_below_seafloor_m LIMIT 1 OFFSET 1
+2025-10-22 00:05:40,562 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 11 / 24
+2025-10-22 00:06:25,377 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(t2.lat), 4) AS avg_lat_rounded FROM (SELECT country, MAX(population) AS max_population FROM worldcities WHERE capital = 'primary' GROUP BY country) AS t1 INNER JOIN worldcities AS t2 ON t1.country = t2.country AND t1.max_population = t2.population AND t2.capital = 'primary'
+2025-10-22 00:06:25,377 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 14 / 24
+2025-10-22 00:07:29,526 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 16 / 24
+2025-10-22 00:09:18,985 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 9 / 24
+2025-10-22 00:09:25,529 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(lat) AS average_latitude FROM (SELECT lat FROM worldcities WHERE capital = 'primary' AND (country, population) IN (SELECT country, MAX(population) FROM worldcities WHERE capital = 'primary' GROUP BY country))
+2025-10-22 00:09:25,529 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 15 / 24
+2025-10-22 00:09:35,093 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 23 / 24
+2025-10-22 00:09:35,544 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 24 / 24
+2025-10-22 00:09:41,106 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 9 / 24
+2025-10-22 00:09:52,126 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(rank), 4) AS average_rank FROM (SELECT CASE WHEN "Barrington Atlas Rank" LIKE '%or%' THEN (CAST(SUBSTRING("Barrington Atlas Rank", 1, INSTR("Barrington Atlas Rank", 'or') - 1) AS REAL) + CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", 'or') + 2) AS REAL)) / 2 ELSE CAST("Barrington Atlas Rank" AS REAL) END AS rank FROM roman_cities WHERE country = 'Greece')
+2025-10-22 00:09:52,126 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 20 / 24
+2025-10-22 00:11:19,933 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 24 / 24
+2025-10-22 00:11:36,468 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG((CAST(SUBSTRING("Barrington Atlas Rank", 1, INSTR("Barrington Atlas Rank", ' or ') - 1) AS REAL) + CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' or ') + 4) AS REAL)) / 2) AS average_rank FROM "roman_cities" WHERE "Country" = 'Greece'
+2025-10-22 00:11:36,468 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 21 / 24
+2025-10-22 00:13:08,817 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(t1.lat), 4) AS final_result FROM worldcities AS t1 WHERE (t1.country, t1.population, t1.capital) IN (SELECT country, MAX(population), 'primary' FROM worldcities WHERE capital = 'primary' GROUP BY country)
+2025-10-22 00:13:08,817 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 16 / 24
+2025-10-22 00:13:35,534 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 8 / 24
+2025-10-22 00:13:59,598 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 9 / 24
+2025-10-22 00:14:07,870 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT 
+    ROUND(
+        (
+            SELECT MAX(Al)
+            FROM climate_measurements
+            WHERE Depth below seafloor_m = (
+                SELECT Depth below seafloor_m
+                FROM climate_measurements
+                ORDER BY ABS(Depth below seafloor_m - (
+                    SELECT date
+                    FROM radiocarbon_data
+                    WHERE Region = 'Northern Italy' AND Culture = 'Neolithic'
+                    ORDER BY Latitude DESC
+                    LIMIT 1
+                ))
+                LIMIT 1
+            )
+        ), 4
+    ) AS max_aluminum_value;
+2025-10-22 00:14:07,871 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 8 / 24
+2025-10-22 00:15:26,269 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(CASE WHEN "Barrington Atlas Rank" LIKE '%or%' THEN (CAST(SUBSTRING("Barrington Atlas Rank", 1, INSTR("Barrington Atlas Rank", ' or ') - 1) AS REAL) + CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' or ') + 4) AS REAL)) / 2 ELSE CAST("Barrington Atlas Rank" AS REAL) END) AS avg_rank FROM "roman_cities" WHERE "Country" = 'Greece'
+2025-10-22 00:15:26,269 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 22 / 24
+2025-10-22 00:15:55,938 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND("climate_measurements"."Ca", 4) AS calcium_ppm FROM climate_measurements INNER JOIN radiocarbon_data ON "climate_measurements"."date" = "radiocarbon_data"."date" WHERE "radiocarbon_data"."ODP 967 Dust proxy" = (SELECT MIN("radiocarbon_data"."ODP 967 Dust proxy") FROM radiocarbon_data) AND "radiocarbon_data"."ODP 967 wet-dry index" = (SELECT MIN("radiocarbon_data"."ODP 967 wet-dry index") FROM radiocarbon_data WHERE "radiocarbon_data"."ODP 967 Dust proxy" = (SELECT MIN("radiocarbon_data"."ODP 967 Dust proxy") FROM radiocarbon_data))
+2025-10-22 00:15:55,941 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 16 / 24
+2025-10-22 00:15:59,705 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(CASE WHEN "Barrington Atlas Rank" LIKE '%or%' THEN CAST(SUBSTRING("Barrington Atlas Rank", 1, INSTR("Barrington Atlas Rank", ' or ') - 1) AS REAL) + CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' or ') + 3) AS REAL) / 2 ELSE CAST("Barrington Atlas Rank" AS REAL) END), 4) AS average_rank FROM "roman_cities" WHERE "Country" = 'Greece'
+2025-10-22 00:15:59,706 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 23 / 24
+2025-10-22 00:16:08,028 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 5 / 24
+2025-10-22 00:17:50,727 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 17 / 24
+2025-10-22 00:18:39,978 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(CORR(CAST(CASE WHEN rc."Barrington Atlas Rank" LIKE '%or%' THEN AVG(REPLACE(rc."Barrington Atlas Rank", 'or', '')) ELSE CAST(rc."Barrington Atlas Rank" AS REAL) END AS REAL), wc.population), 6) AS correlation FROM roman_cities AS rc JOIN worldcities AS wc ON rc."Latitude (X)" = wc.lat AND rc."Longitude (Y)" = wc.lng AND rc."Barrington Atlas Rank" = wc.city WHERE wc.population > 1000000 GROUP BY rc."Ancient Toponym", rc."Province", rc."Country", rc."Barrington Atlas Rank", rc."Start Date", rc."End Date", rc."Longitude (X)", rc."Latitude (Y)", wc.city, wc.city_ascii, wc.lat, wc.lng, wc.country, wc.iso2, wc.iso3, wc.admin_name, wc.capital, wc.population
+2025-10-22 00:18:39,978 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 6 / 24
+2025-10-22 00:19:25,103 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(t1."Barrington Atlas Rank"), 4) AS average_rank FROM roman_cities AS t1 WHERE t1."Country" = 'Greece'
+2025-10-22 00:19:25,103 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 24 / 24
+2025-10-22 00:19:52,294 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 10 / 24
+2025-10-22 00:20:57,681 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3 done, Number of valid reasoning paths: 40
+2025-10-22 00:20:57,715 - __main__ - INFO - Task 3 completed successfully in 13346.43s
+2025-10-22 00:21:26,188 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(lat), 4) AS average_latitude FROM (SELECT lat FROM worldcities WHERE capital = 'primary' ORDER BY population DESC LIMIT 1) AS largest_population_capitals
+2025-10-22 00:21:26,190 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 17 / 24
+2025-10-22 00:21:53,568 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(lat) AS avg_latitude FROM (SELECT w.city, w.lat FROM worldcities AS w INNER JOIN (SELECT country, MAX(population) AS max_population FROM worldcities WHERE capital = 'primary' GROUP BY country) AS sub ON w.country = sub.country AND w.population = sub.max_population)
+2025-10-22 00:21:53,568 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 18 / 24
+2025-10-22 00:22:34,533 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT t1.conflict) AS numberofconflicts FROM conflict_brecke AS t1 JOIN worldcities AS t2 ON t1.conflict LIKE '%' || t2.city || '%' WHERE t1.startyear BETWEEN 800 AND 1400 AND t1.endyear - t1.startyear >= 1
+2025-10-22 00:22:34,533 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 12 / 24
+2025-10-22 00:23:02,434 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 11 / 24
+2025-10-22 00:23:13,414 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) FROM worldcities AS w INNER JOIN roman_cities AS r ON (6371 * ACOS(COS(STRFTIME('%Y', w.city)) * COS(STRFTIME('%Y', r."Latitude (Y)") * PI() / 180) * COS((STRFTIME('%M', w.city) - STRFTIME('%M', r."Longitude (X)") * PI() / 180) / 2) + SIN(STRFTIME('%Y', w.city)) * SIN(STRFTIME('%Y', r."Latitude (Y)") * PI() / 180)) <= 0.1) WHERE w.population > 100000
+2025-10-22 00:23:13,414 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 8 / 24
+2025-10-22 00:23:37,035 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: WITH maltesemeasurements AS (SELECT k, depth_below_seafloor_m, ROW_NUMBER() OVER (ORDER BY depth_below_seafloor_m) AS row_num_asc, ROW_NUMBER() OVER (ORDER BY depth_below_seafloor_m DESC) AS row_num_desc FROM climate_measurements WHERE site = 'Maltese') SELECT AVG(k) AS average_potassium FROM maltesemeasurements WHERE row_num_asc = 1 OR row_num_desc = 1
+2025-10-22 00:23:37,035 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 12 / 24
+2025-10-22 00:24:38,365 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 18 / 24
+2025-10-22 00:25:16,961 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 13 / 24
+2025-10-22 00:25:44,919 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(t2.lat), 4) AS average_latitude FROM (SELECT country, MAX(population) AS max_population FROM worldcities WHERE capital = 'primary' GROUP BY country) AS t1 INNER JOIN worldcities AS t2 ON t1.country = t2.country AND t2.population = t1.max_population AND t2.capital = 'primary'
+2025-10-22 00:25:44,920 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 19 / 24
+2025-10-22 00:25:49,794 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10 done, Number of valid reasoning paths: 36
+2025-10-22 00:25:49,864 - __main__ - INFO - Task 10 completed successfully in 13638.58s
+2025-10-22 00:26:23,329 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: WITH yearly_trends AS (SELECT "ODP 967 wet-dry index", LAG("ODP 967 wet-dry index") OVER (ORDER BY "Depth below seafloor_m") AS prev_index FROM climate_measurements) SELECT CAST(SUM(CASE WHEN "ODP 967 wet-dry index" > prev_index THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(*) AS percentage_increasing FROM yearly_trends
+2025-10-22 00:26:23,330 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 9 / 24
+2025-10-22 00:27:24,339 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(t2."Ca", 4) AS rounded_ca_value FROM (SELECT MIN("ODP 967 Dust proxy") AS min_dust_proxy FROM climate_measurements) AS t1 INNER JOIN climate_measurements AS t2 ON t2."ODP 967 Dust proxy" = t1.min_dust_proxy WHERE t2."ODP 967 wet-dry index" = (SELECT MIN("ODP 967 wet-dry index") FROM climate_measurements WHERE "ODP 967 Dust proxy" = t1.min_dust_proxy)
+2025-10-22 00:27:24,339 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 17 / 24
+2025-10-22 00:28:15,337 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) FROM conflict_brecke WHERE startyear BETWEEN 800 AND 1400 AND endyear >= 800 AND endyear - startyear >= 1
+2025-10-22 00:28:15,337 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 13 / 24
+2025-10-22 00:29:01,010 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 19 / 24
+2025-10-22 00:29:55,728 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 10 / 24
+2025-10-22 00:34:15,089 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(CAST(REPLACE(TRIM("Barrington Atlas Rank", ' '), ' or ', '.') AS REAL)) AS average_rank FROM "roman_cities" WHERE "Country" = 'Greece'
+2025-10-22 00:34:15,090 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2 done, Number of valid reasoning paths: 35
+2025-10-22 00:34:15,132 - __main__ - INFO - Task 2 completed successfully in 12967.82s
+2025-10-22 00:34:15,438 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 14 / 24
+2025-10-22 00:34:28,890 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(lat), 4) AS avg_latitude FROM worldcities WHERE capital = 'primary' AND population = (SELECT MAX(population) FROM worldcities WHERE capital = 'primary' AND country = worldcities.country)
+2025-10-22 00:34:28,890 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 20 / 24
+2025-10-22 00:36:38,141 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND("Ca", 4) AS final_result FROM climate_measurements WHERE "ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") AS min_dust_proxy FROM climate_measurements) AND "ODP 967 wet-dry index" = (SELECT MIN("ODP 967 wet-dry index") AS min_wet_dry_index FROM climate_measurements WHERE "ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") AS min_dust_proxy FROM climate_measurements))
+2025-10-22 00:36:38,142 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 18 / 24
+2025-10-22 00:37:56,635 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 11 / 24
+2025-10-22 00:38:14,772 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 9 / 24
+2025-10-22 00:38:42,790 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(MAX(climate_measurements.al), 4) AS result FROM climate_measurements WHERE ABS(climate_measurements."Depth below seafloor_m" - (SELECT MAX(radiocarbon_data.date) FROM radiocarbon_data WHERE radiocarbon_data.culture = 'Neolithic')) ORDER BY ABS(climate_measurements."Depth below seafloor_m" - (SELECT MAX(radiocarbon_data.date) FROM radiocarbon_data WHERE radiocarbon_data.culture = 'Neolithic')) LIMIT 1
+2025-10-22 00:38:42,790 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 9 / 24
+2025-10-22 00:39:13,435 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 15 / 24
+2025-10-22 00:40:03,765 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(ca, 4) AS calcium_ppm FROM climate_measurements ORDER BY "ODP 967 Dust proxy", "ODP 967 wet-dry index" LIMIT 1
+2025-10-22 00:40:03,765 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 19 / 24
+2025-10-22 00:40:09,572 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 20 / 24
+2025-10-22 00:40:44,193 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) FROM conflict_brecke WHERE startyear BETWEEN 800 AND 1400 AND (endyear - startyear) >= 1
+2025-10-22 00:40:44,193 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 14 / 24
+2025-10-22 00:41:50,437 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(CAST(COUNT(CASE WHEN diff > 0 THEN 1 END) AS REAL) * 100 / (SELECT COUNT(*) FROM climate_measurements), 2) AS percentage FROM (SELECT "ODP 967 wet-dry index" - LAG("ODP 967 wet-dry index") OVER (ORDER BY age_ky) AS diff FROM climate_measurements) AS diff_table
+2025-10-22 00:41:50,437 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 10 / 24
+2025-10-22 00:41:52,765 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(SUM(t2.lat) / COUNT(t2.lat), 4) AS avg_latitude FROM (SELECT MAX(t1.population) AS max_population, t1.country FROM worldcities AS t1 WHERE t1.capital = 'primary' GROUP BY t1.country) AS t3 INNER JOIN worldcities AS t2 ON t2.country = t3.country AND t2.population = t3.max_population
+2025-10-22 00:41:52,765 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 21 / 24
+2025-10-22 00:42:32,939 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 10 / 24
+2025-10-22 00:44:16,523 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 12 / 24
+2025-10-22 00:44:23,070 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(k) AS average_potassium FROM climate_measurements WHERE site = 'Maltese' AND age_ky BETWEEN (SELECT MIN(age_ky) FROM climate_measurements WHERE site = 'Maltese') AND (SELECT MAX(age_ky) FROM climate_measurements WHERE site = 'Maltese')
+2025-10-22 00:44:23,070 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 13 / 24
+2025-10-22 00:44:59,326 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 12 / 24
+2025-10-22 00:45:12,259 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 6 / 24
+2025-10-22 00:45:47,470 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND("Ca", 4) AS calcium_value FROM climate_measurements WHERE "ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") AS min_dust_proxy FROM climate_measurements) AND "ODP 967 wet-dry index" = (SELECT MIN("ODP 967 wet-dry index") AS min_wet_dry_index FROM climate_measurements WHERE "ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") AS min_dust_proxy FROM climate_measurements))
+2025-10-22 00:45:47,470 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 20 / 24
+2025-10-22 00:46:09,070 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 16 / 24
+2025-10-22 00:46:25,977 - sqlglot - WARNING - Named columns are not supported in table alias.
+2025-10-22 00:48:07,088 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(t1.lat) AS avg_latitude FROM worldcities AS t1 JOIN (SELECT country, MAX(population) AS max_population FROM worldcities WHERE capital = 'primary' GROUP BY country) AS t2 ON t1.country = t2.country AND t1.population = t2.max_population
+2025-10-22 00:48:07,088 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 22 / 24
+2025-10-22 00:48:07,088 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(lat), 4) AS average_latitude FROM worldcities WHERE city IN (SELECT city FROM worldcities WHERE capital = 'primary' GROUP BY country ORDER BY MAX(population) DESC LIMIT 1)
+2025-10-22 00:48:07,088 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 23 / 24
+2025-10-22 00:48:19,030 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 7 / 24
+2025-10-22 00:48:43,447 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: WITH northern_neolithic_year AS (SELECT date FROM radiocarbon_data WHERE region = 'Sicily' AND culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1) SELECT ROUND((SELECT MAX(al) FROM climate_measurements WHERE ABS(year - (SELECT date FROM northern_neolithic_year)) = (SELECT MIN(ABS(year - (SELECT date FROM northern_neolithic_year))) FROM climate_measurements)), 4) AS max_aluminum_value
+2025-10-22 00:48:43,447 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 10 / 24
+2025-10-22 00:51:02,475 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 17 / 24
+2025-10-22 00:51:35,449 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(lat) AS avg_latitude FROM (SELECT t2.lat FROM (SELECT country, MAX(population) AS max_population FROM worldcities WHERE capital = 'primary' GROUP BY country) AS t1 JOIN worldcities AS t2 ON t1.country = t2.country AND t1.max_population = t2.population)
+2025-10-22 00:51:35,449 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10, Rollout step 24 / 24
+2025-10-22 00:51:45,890 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(CAST(REPLACE("Barrington Atlas Rank", ' or ', '') AS REAL)) / AVG("population"), 6) AS correlation FROM (SELECT "Barrington Atlas Rank", "Latitude (Y)", "Longitude (X)", "city", "lat", "lng", "population", (6371 * ACOS(COS(RADIANS("Barrington Atlas Rank")) * COS(RADIANS("lat")) * COS(RADIANS("Longitude (X)" - "lng")) + SIN(RADIANS("Barrington Atlas Rank")) * SIN(RADIANS("lat")))) AS distance FROM "roman_cities" CROSS JOIN "worldcities" WHERE "population" > 1000000) AS subquery
+2025-10-22 00:51:45,890 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 7 / 24
+2025-10-22 00:52:32,661 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 18 / 24
+2025-10-22 00:52:50,273 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) FROM conflict_brecke WHERE (endyear - startyear) >= 1 AND startyear >= 800 AND endyear <= 1400
+2025-10-22 00:52:50,273 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 15 / 24
+2025-10-22 00:54:10,427 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(t1.city) FROM worldcities AS t1 JOIN roman_cities AS t2 ON t1.lat BETWEEN t2.Latitude(y) - 0.1 AND t2.Latitude(y) + 0.1 AND t1.lng BETWEEN t2.Longitude(x) - 0.1 AND t2.Longitude(x) + 0.1 WHERE t1.population > 100000
+2025-10-22 00:54:10,427 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 9 / 24
+2025-10-22 00:54:40,140 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 13 / 24
+2025-10-22 00:56:19,725 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 21 / 24
+2025-10-22 00:56:50,516 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 22 / 24
+2025-10-22 00:56:54,456 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(MAX(al), 4) AS max_aluminum FROM climate_measurements WHERE date = (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' AND material = 'Bone' ORDER BY latitude DESC, date DESC LIMIT 1) OR date IN (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' AND material = 'Bone' ORDER BY latitude DESC, date DESC LIMIT 1 OFFSET 1)
+2025-10-22 00:56:54,456 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 11 / 24
+2025-10-22 00:56:54,811 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(ca, 4) AS calcium_ppm FROM climate_measurements ORDER BY "ODP 967 Dust proxy" ASC, "ODP 967 wet-dry index" ASC LIMIT 1
+2025-10-22 00:56:54,812 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 21 / 24
+2025-10-22 00:57:02,684 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 23 / 24
+2025-10-22 00:57:51,998 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 19 / 24
+2025-10-22 00:58:27,970 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 10 / 24
+2025-10-22 00:59:12,254 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 13 / 24
+2025-10-22 00:59:46,672 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 11 / 24
+2025-10-22 01:01:28,433 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(ca, 4) FROM climate_measurements ORDER BY "ODP 967 Dust proxy" ASC, "ODP 967 wet-dry index" ASC LIMIT 1
+2025-10-22 01:01:28,433 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 22 / 24
+2025-10-22 01:03:02,311 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 8 / 24
+2025-10-22 01:04:48,846 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND((CAST(SUM(CASE WHEN trend > 0 THEN 1 ELSE 0 END) AS REAL) / COUNT(*)) * 100, 2) AS percentage_increasing_years FROM (SELECT site, interval_cm, "ODP 967 wet-dry index", "ODP 967 wet-dry index" - LAG("ODP 967 wet-dry index") OVER (PARTITION BY site ORDER BY interval_cm) AS trend FROM climate_measurements) AS trends
+2025-10-22 01:04:48,847 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 11 / 24
+2025-10-22 01:05:50,928 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(k), 4) FROM climate_measurements WHERE date_column BETWEEN (SELECT MIN(date_column) FROM climate_measurements WHERE site = 'Maltese') AND (SELECT MAX(date_column) FROM climate_measurements WHERE site = 'Maltese')
+2025-10-22 01:05:50,928 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 14 / 24
+2025-10-22 01:05:51,311 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(k) AS average_k FROM climate_measurements WHERE age_ky = (SELECT MIN(age_ky) FROM climate_measurements) OR age_ky = (SELECT MAX(age_ky) FROM climate_measurements)
+2025-10-22 01:05:51,313 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 15 / 24
+2025-10-22 01:06:27,758 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) FROM conflict_brecke WHERE startyear >= 800 AND endyear <= 1400 AND endyear - startyear >= 1
+2025-10-22 01:06:27,758 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 16 / 24
+2025-10-22 01:07:45,797 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 12 / 24
+2025-10-22 01:08:29,545 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(ca, 4) AS ca FROM climate_measurements ORDER BY "ODP 967 Dust proxy" ASC, "ODP 967 wet-dry index" ASC LIMIT 1
+2025-10-22 01:08:29,545 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 23 / 24
+2025-10-22 01:08:29,897 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND("Ca", 4) FROM climate_measurements WHERE "ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") FROM climate_measurements) AND "ODP 967 wet-dry index" = (SELECT MIN("ODP 967 wet-dry index") FROM climate_measurements WHERE "ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") FROM climate_measurements))
+2025-10-22 01:08:29,897 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3, Rollout step 24 / 24
+2025-10-22 01:08:46,621 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*)
+FROM worldcities wc
+INNER JOIN roman_cities rc ON wc.city_ascii = rc.Ancient Toponym
+WHERE wc.population > 100000
+  AND ST_Distance_Sphere(ST_MakePoint(wc.lng, wc.lat), ST_MakePoint(rc.`Longitude (X)`, rc.`Latitude (Y)`)) <= 0.1
+2025-10-22 01:08:46,621 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 10 / 24
+2025-10-22 01:08:57,392 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2, Rollout step 24 / 24
+2025-10-22 01:11:41,333 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) FROM conflict_brecke AS cb INNER JOIN worldcities AS wc ON cb.conflict = wc.city WHERE cb.startyear BETWEEN 800 AND 1400 AND cb.endyear BETWEEN 800 AND 1400 AND cb.endyear - cb.startyear >= 1
+2025-10-22 01:11:41,333 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 17 / 24
+2025-10-22 01:12:52,761 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND((SELECT "Ca" FROM climate_measurements ORDER BY "ODP 967 Dust proxy" ASC, "Site" ASC LIMIT 1), 4) AS calcium
+2025-10-22 01:12:52,761 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 3 done, Number of valid reasoning paths: 35
+2025-10-22 01:12:52,800 - __main__ - INFO - Task 3 completed successfully in 15285.48s
+2025-10-22 01:13:05,043 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(k) AS average_potassium FROM climate_measurements AS cm INNER JOIN (SELECT MIN(interval_cm) AS first_interval, MAX(interval_cm) AS last_interval FROM climate_measurements WHERE site = 'Maltese') AS sub ON cm.interval_cm BETWEEN sub.first_interval AND sub.last_interval WHERE cm.site = 'Maltese'
+2025-10-22 01:13:05,043 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 16 / 24
+2025-10-22 01:14:17,982 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 11 / 24
+2025-10-22 01:15:06,613 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 13 / 24
+2025-10-22 01:17:51,284 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 2 done, Number of valid reasoning paths: 36
+2025-10-22 01:17:51,347 - __main__ - INFO - Task 2 completed successfully in 16760.07s
+2025-10-22 01:19:25,518 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 14 / 24
+2025-10-22 01:19:34,001 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) AS "number_of_cities" FROM (SELECT "city", "lat", "lng", "Modern Toponym" AS "ancient_city", "Latitude (Y)" AS "ancient_lat", "Longitude (X)" AS "ancient_lng", 6371 * ACOS(COS(RADIANS("lat")) * COS(RADIANS("Latitude (Y)")) * COS(RADIANS("lng") - RADIANS("Longitude (X)")) + SIN(RADIANS("lat")) * SIN(RADIANS("Latitude (Y)"))) AS "distance" FROM "worldcities" CROSS JOIN "roman_cities" WHERE "population" > 100000 AND 6371 * ACOS(COS(RADIANS("lat")) * COS(RADIANS("Latitude (Y)")) * COS(RADIANS("lng") - RADIANS("Longitude (X)")) + SIN(RADIANS("lat")) * SIN(RADIANS("Latitude (Y)"))) <= 0.1) AS "filtered_cities"
+2025-10-22 01:19:34,002 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 11 / 24
+2025-10-22 01:19:55,965 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(lat), 4) AS average_latitude FROM worldcities WHERE (country, population) IN (SELECT country, MAX(population) FROM worldcities GROUP BY country)
+2025-10-22 01:19:55,965 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 10 done, Number of valid reasoning paths: 32
+2025-10-22 01:19:56,043 - __main__ - INFO - Task 10 completed successfully in 15708.73s
+2025-10-22 01:20:14,166 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 20 / 24
+2025-10-22 01:20:14,169 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 21 / 24
+2025-10-22 01:21:27,268 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 12 / 24
+2025-10-22 01:22:15,135 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1
+2025-10-22 01:22:15,136 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 12 / 24
+2025-10-22 01:22:41,734 - sqlglot - WARNING - DATEDIFF unsupported for 'DAY'.
+2025-10-22 01:23:12,733 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(CAST(SUM(CASE WHEN t1."ODP 967 wet-dry index" > t2."ODP 967 wet-dry index" THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(t1."Depth below seafloor_m"), 2) AS percentage FROM climate_measurements AS t1 INNER JOIN climate_measurements AS t2 ON t1."Depth below seafloor_m" = t2."Depth below seafloor_m" - 1
+2025-10-22 01:23:12,733 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 12 / 24
+2025-10-22 01:23:31,205 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 14 / 24
+2025-10-22 01:24:32,196 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) FROM conflict_brecke AS t1 INNER JOIN worldcities AS t2 ON t1.conflict = t2.city WHERE STRFTIME('%Y', t1.startyear) BETWEEN '800' AND '1400' AND STRFTIME('%Y', t1.endyear) BETWEEN '800' AND '1400'
+2025-10-22 01:24:32,198 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 18 / 24
+2025-10-22 01:25:46,337 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 15 / 24
+2025-10-22 01:25:46,819 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 16 / 24
+2025-10-22 01:25:53,861 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 14 / 24
+2025-10-22 01:25:56,389 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT cb.conflict) AS numberofconflicts FROM conflict_brecke AS cb WHERE cb.startyear BETWEEN 800 AND 1400 AND cb.endyear - cb.startyear >= 1
+2025-10-22 01:25:56,389 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 19 / 24
+2025-10-22 01:25:56,389 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) FROM conflict_brecke AS cb INNER JOIN worldcities AS wc ON STRFTIME('%Y', cb.startyear) = wc.lat WHERE cb.startyear >= 800 AND cb.endyear <= 1400 AND (cb.endyear - cb.startyear) >= 1
+2025-10-22 01:25:56,389 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 20 / 24
+2025-10-22 01:26:13,654 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(CORR(t1.rank, t2.population), 6) AS correlation FROM (SELECT CASE WHEN "Barrington Atlas Rank" LIKE '%or%' THEN CAST(SUBSTRING("Barrington Atlas Rank", 1, INSTR("Barrington Atlas Rank", ' or ') - 1) AS REAL) + CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' or ') + 4) AS REAL) / 2 ELSE CAST("Barrington Atlas Rank" AS REAL) END AS rank FROM roman_cities) AS t1 INNER JOIN (SELECT city, population FROM worldcities WHERE population > 1000000) AS t2 ON ABS(t1.ancient_toponym - t2.city) < 0.1
+2025-10-22 01:26:13,654 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 8 / 24
+2025-10-22 01:27:51,456 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 17 / 24
+2025-10-22 01:28:45,563 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 22 / 24
+2025-10-22 01:29:04,508 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(k), 4) AS average_potassium FROM climate_measurements
+2025-10-22 01:29:04,508 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 17 / 24
+2025-10-22 01:30:10,613 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 15 / 24
+2025-10-22 01:33:28,426 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 18 / 24
+2025-10-22 01:36:00,230 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(SUM(CASE WHEN NOT LAG("ODP 967 wet-dry index", 1) IS NULL AND "ODP 967 wet-dry index" > LAG("ODP 967 wet-dry index", 1) THEN 1 ELSE 0 END) * 100.0 / COUNT("ODP 967 wet-dry index"), 2) AS percentage_increasing FROM climate_measurements
+2025-10-22 01:36:00,230 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 13 / 24
+2025-10-22 01:36:54,685 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) FROM conflict_brecke AS cb JOIN worldcities AS wc ON cb.country = wc.country WHERE cb.startyear BETWEEN 800 AND 1400 AND cb.endyear - cb.startyear >= 1
+2025-10-22 01:36:54,685 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 21 / 24
+2025-10-22 01:37:47,277 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 19 / 24
+2025-10-22 01:37:47,278 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 20 / 24
+2025-10-22 01:39:09,186 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 23 / 24
+2025-10-22 01:41:46,737 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(k) AS average_potassium FROM climate_measurements
+2025-10-22 01:41:46,737 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 18 / 24
+2025-10-22 01:42:50,035 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) FROM conflict_brecke WHERE startyear BETWEEN 800 AND 1400 AND (endyear - startyear) >= 1
+2025-10-22 01:42:50,036 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 22 / 24
+2025-10-22 01:42:55,090 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT DISTINCT w.city FROM worldcities AS w CROSS JOIN roman_cities AS r WHERE ACOS(SIN(RADIANS(w.lat)) * SIN(RADIANS(r."Latitude (Y)")) + COS(RADIANS(w.lat)) * COS(RADIANS(r."Latitude (Y)")) * COS(RADIANS(w.lng) - RADIANS(r."Longitude (X)"))) * 6371 <= 0.1
+2025-10-22 01:42:55,091 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 12 / 24
+2025-10-22 01:43:59,025 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 21 / 24
+2025-10-22 01:44:04,281 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) FROM (SELECT t1.conflict, t1.startyear, t1.endyear, t2.country FROM conflict_brecke AS t1 JOIN worldcities AS t2 ON t2.city = t1.conflict) AS subquery WHERE startyear BETWEEN 800 AND 1400 AND endyear >= startyear
+2025-10-22 01:44:04,281 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 23 / 24
+2025-10-22 01:44:58,933 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 15 / 24
+2025-10-22 01:45:45,096 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 9 / 24
+2025-10-22 01:46:00,699 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 13 / 24
+2025-10-22 01:46:20,886 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) FROM conflict_brecke WHERE startyear >= 800 AND endyear <= 1400 AND endyear - startyear >= 1
+2025-10-22 01:46:20,886 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 24 / 24
+2025-10-22 01:51:35,845 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT w.city) AS modern_cities_count FROM roman_cities AS r INNER JOIN worldcities AS w ON (6371 * ACOS(COS(r."Latitude (Y)" * PI() / 180) * COS(w.lat * PI() / 180) * COS((w.lng - r."Longitude (X)") * PI() / 180) + SIN(r."Latitude (Y)" * PI() / 180) * SIN(w.lat * PI() / 180)) <= 0.1) WHERE w.population > 100000
+2025-10-22 01:51:35,845 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 13 / 24
+2025-10-22 01:51:35,845 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(t2.city) FROM roman_cities AS t1 JOIN worldcities AS t2 ON ABS(t1."Latitude (Y)" - t2.lat) <= 0.1 AND ABS(t1."Longitude (X)" - t2.lng) <= 0.1 WHERE t2.population > 100000
+2025-10-22 01:51:35,845 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 14 / 24
+2025-10-22 01:51:53,928 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 16 / 24
+2025-10-22 01:51:53,929 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 17 / 24
+2025-10-22 01:51:54,940 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 16 / 24
+2025-10-22 01:52:14,079 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11, Rollout step 24 / 24
+2025-10-22 01:52:49,555 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 22 / 24
+2025-10-22 01:53:35,660 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND((COUNT(CASE WHEN "ODP 967 wet-dry index" > LAG("ODP 967 wet-dry index") OVER (ORDER BY "date") THEN 1 END) / COUNT("date")) * 100, 2) AS percentage_increasing FROM radiocarbon_data
+2025-10-22 01:53:35,660 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 14 / 24
+2025-10-22 01:54:48,993 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 17 / 24
+2025-10-22 01:54:52,457 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 23 / 24
+2025-10-22 01:55:02,639 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(k), 4) FROM climate_measurements WHERE site = 'ODP 967'
+2025-10-22 01:55:02,639 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 19 / 24
+2025-10-22 01:55:02,639 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(k) AS average_k FROM climate_measurements WHERE age_ky = (SELECT MIN(age_ky) FROM climate_measurements) OR age_ky = (SELECT MAX(age_ky) FROM climate_measurements)
+2025-10-22 01:55:02,639 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 20 / 24
+2025-10-22 01:55:28,285 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(CAST(SUM(increasing) AS REAL) * 100 / COUNT(date), 2) AS percentage_increasing FROM (SELECT date, "ODP 967 wet-dry index", prev_wet_dry_index, CASE WHEN "ODP 967 wet-dry index" > prev_wet_dry_index THEN 1 ELSE 0 END AS increasing FROM (SELECT date, "ODP 967 wet-dry index", LAG("ODP 967 wet-dry index") OVER (ORDER BY date) AS prev_wet_dry_index FROM radiocarbon_data) AS subquery) AS subquery2
+2025-10-22 01:55:28,285 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 15 / 24
+2025-10-22 01:56:17,831 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11 done, Number of valid reasoning paths: 38
+2025-10-22 01:56:17,872 - __main__ - INFO - Task 11 completed successfully in 19066.59s
+2025-10-22 01:57:18,027 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND((SELECT COUNT(*) FROM (SELECT CASE WHEN "ODP 967 wet-dry index" > LAG("ODP 967 wet-dry index") OVER (ORDER BY "date") THEN 1 ELSE 0 END AS increasing FROM "radiocarbon_data") WHERE increasing = 1) / COUNT("date") * 100, 2) AS percentage_increasing_years
+2025-10-22 01:57:18,027 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 16 / 24
+2025-10-22 01:58:35,536 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(MAX(t2."Al"), 4) AS max_aluminum_value FROM (SELECT STRFTIME('%Y', t1."date") AS year, t1.latitude FROM radiocarbon_data AS t1 WHERE t1.culture = 'Neolithic' ORDER BY t1.latitude DESC LIMIT 1) AS t3 INNER JOIN climate_measurements AS t2 ON ABS(t2."Depth below seafloor_m" - t3.year) = (SELECT MIN(ABS(t2."Depth below seafloor_m" - t3.year)) FROM climate_measurements AS t2)
+2025-10-22 01:58:35,536 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 13 / 24
+2025-10-22 01:58:37,344 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 18 / 24
+2025-10-22 01:58:55,462 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT worldcities.city) AS modern_cities_count FROM worldcities INNER JOIN roman_cities ON worldcities.lat = roman_cities."Latitude (Y)" AND worldcities.lng = roman_cities."Longitude (X)" WHERE worldcities.population > 100000 AND (3956 * ACOS(COS(RADIANS(worldcities.lat)) * COS(RADIANS(roman_cities."Latitude (Y)")) * COS(RADIANS(worldcities.lng) - RADIANS(roman_cities."Longitude (X)")) + SIN(RADIANS(worldcities.lat)) * SIN(RADIANS(roman_cities."Latitude (Y)")))) < 0.1
+2025-10-22 01:58:55,463 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 15 / 24
+2025-10-22 02:00:46,646 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 14 / 24
+2025-10-22 02:02:33,771 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(SUM(CASE WHEN t2."ODP 967 wet-dry index" > t1."ODP 967 wet-dry index" THEN 1 ELSE 0 END) / COUNT(*), 2) AS percentage FROM climate_measurements AS t1 INNER JOIN climate_measurements AS t2 ON t1.site = t2.site AND t1.interval_cm < t2.interval_cm
+2025-10-22 02:02:33,771 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 17 / 24
+2025-10-22 02:02:52,701 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT t1.conflict) AS numberofconflicts FROM conflict_brecke AS t1 JOIN worldcities AS t2 ON t2.city = t1.conflict WHERE STRFTIME('%Y', t1.startyear) BETWEEN '800' AND '1400' AND STRFTIME('%Y', t1.endyear) BETWEEN '800' AND '1400'
+2025-10-22 02:02:52,704 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 11 done, Number of valid reasoning paths: 36
+2025-10-22 02:02:52,803 - __main__ - INFO - Task 11 completed successfully in 18285.48s
+2025-10-22 02:05:43,682 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 24 / 24
+2025-10-22 02:07:17,092 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(SUM(CASE WHEN "ODP 967 wet-dry index" > 0 THEN 1 ELSE 0 END) / COUNT("Interval_cm") * 100, 2) AS percentage_increasing_wet_dry_index FROM climate_measurements
+2025-10-22 02:07:17,092 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 18 / 24
+2025-10-22 02:07:17,093 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(SUM(CASE WHEN t1."ODP 967 wet-dry index" > t2."ODP 967 wet-dry index" THEN 1 ELSE 0 END) * 100.0 / COUNT(t1."ODP 967 wet-dry index"), 2) AS percentage FROM climate_measurements AS t1 INNER JOIN climate_measurements AS t2 ON t1."Depth below seafloor_m" = t2."Depth below seafloor_m" + 1
+2025-10-22 02:07:17,093 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 19 / 24
+2025-10-22 02:07:19,112 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 15 / 24
+2025-10-22 02:08:17,502 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 18 / 24
+2025-10-22 02:08:22,131 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT CORR(t2.rank, t2.population) AS correlation FROM "roman_cities" AS t1 INNER JOIN (SELECT "Ancient Toponym", CASE WHEN "Barrington Atlas Rank" LIKE '%or%' THEN AVG(REPLACE("Barrington Atlas Rank", ' or ', '')) ELSE CAST("Barrington Atlas Rank" AS REAL) END AS rank, "worldcities"."population" FROM "roman_cities" INNER JOIN "worldcities" ON (6371 * ACOS(COS(RADIANS("roman_cities"."Latitude (Y)")) * COS(RADIANS("worldcities"."Latitude (Y)")) * COS(RADIANS("worldcities"."Longitude (X)" - "roman_cities"."Longitude (X)") - RADIANS(0)) + SIN(RADIANS("roman_cities"."Latitude (Y)")) * SIN(RADIANS("worldcities"."Latitude (Y)")))) < 0.1 WHERE "worldcities"."population" > 1000000 GROUP BY "Ancient Toponym") AS t2 ON t1."Ancient Toponym" = t2."Ancient Toponym"
+2025-10-22 02:08:22,132 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 9 / 24
+2025-10-22 02:09:21,836 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 16 / 24
+2025-10-22 02:11:42,680 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(MAX(t2.al), 4) AS max_aluminum FROM radiocarbon_data AS t1 INNER JOIN climate_measurements AS t2 ON STRFTIME('%Y', t2.date) = (SELECT date FROM climate_measurements ORDER BY ABS(STRFTIME('%Y', date) - (SELECT MAX(latitude) FROM radiocarbon_data WHERE culture = 'Neolithic')) LIMIT 1) WHERE t1.culture = 'Neolithic'
+2025-10-22 02:11:42,681 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 14 / 24
+2025-10-22 02:12:09,442 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 19 / 24
+2025-10-22 02:12:10,275 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 17 / 24
+2025-10-22 02:12:18,245 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0 done, Number of valid reasoning paths: 35
+2025-10-22 02:12:18,288 - __main__ - INFO - Task 0 completed successfully in 20027.01s
+2025-10-22 02:13:02,920 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(((t1.k * (t2.interval_cm - t1.interval_cm) + t2.k * (t1.interval_cm - t2.interval_cm)) / (t2.interval_cm - t1.interval_cm)), 4) AS average_k FROM climate_measurements AS t1 INNER JOIN climate_measurements AS t2 ON t1.interval_cm = (SELECT MIN(interval_cm) FROM climate_measurements WHERE site = 'Maltese area') AND t2.interval_cm = (SELECT MAX(interval_cm) FROM climate_measurements WHERE site = 'Maltese area') AND t1."Depth below seafloor_m" = (SELECT MIN("Depth below seafloor_m") FROM climate_measurements WHERE site = 'Maltese area') AND t2."Depth below seafloor_m" = (SELECT MAX("Depth below seafloor_m") FROM climate_measurements WHERE site = 'Maltese area')
+2025-10-22 02:13:02,921 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 21 / 24
+2025-10-22 02:16:33,498 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 19 / 24
+2025-10-22 02:17:40,670 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT CAST(SUM(CASE WHEN trend > 0 THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(*) AS percentage FROM (SELECT "ODP 967 wet-dry index" - LAG("ODP 967 wet-dry index") OVER (ORDER BY "Site") AS trend FROM climate_measurements) AS trends
+2025-10-22 02:17:40,671 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 20 / 24
+2025-10-22 02:19:53,916 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(MAX(al), 4) FROM climate_measurements WHERE date = (SELECT date FROM (SELECT date, ABS(latitude - (SELECT MAX(latitude) FROM radiocarbon_data WHERE culture = 'Neolithic')) AS diff FROM radiocarbon_data WHERE culture = 'Neolithic') ORDER BY diff ASC LIMIT 1)
+2025-10-22 02:19:53,918 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 15 / 24
+2025-10-22 02:20:49,056 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 20 / 24
+2025-10-22 02:20:49,057 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 21 / 24
+2025-10-22 02:22:35,435 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 10 / 24
+2025-10-22 02:24:29,061 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(t2.k) AS average_potassium FROM (SELECT k, depth_below_seafloor_m FROM climate_measurements WHERE site = 'Maltese' ORDER BY interval_cm LIMIT 1) AS t1 INNER JOIN (SELECT k, depth_below_seafloor_m FROM climate_measurements WHERE site = 'Maltese' ORDER BY interval_cm LIMIT 1 OFFSET 1) AS t2 ON t1.depth_below_seafloor_m = t2.depth_below_seafloor_m
+2025-10-22 02:24:29,061 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 22 / 24
+2025-10-22 02:27:15,985 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 22 / 24
+2025-10-22 02:28:36,503 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: WITH neolithicyear AS (SELECT MAX(date) AS year FROM radiocarbon_data WHERE culture = 'Neolithic' AND latitude = (SELECT MAX(latitude) FROM radiocarbon_data WHERE culture = 'Neolithic')), closestclimateyear AS (SELECT MAX(al) AS max_aluminum FROM climate_measurements WHERE date BETWEEN (SELECT year FROM neolithicyear) - 1 AND (SELECT year FROM neolithicyear) + 1) SELECT ROUND((SELECT max_aluminum FROM closestclimateyear), 4) AS max_aluminum_value
+2025-10-22 02:28:36,503 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 16 / 24
+2025-10-22 02:29:23,406 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) FROM worldcities AS w INNER JOIN roman_cities AS r ON 6371 * ACOS(COS(r."Latitude (Y)" * PI() / 180) * COS(w.lat * PI() / 180) * COS((r."Longitude (X)" - w.lng) * PI() / 180) + SIN(r."Latitude (Y)" * PI() / 180) * SIN(w.lat * PI() / 180)) <= 0.1 WHERE w.population > 100000
+2025-10-22 02:29:23,406 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 16 / 24
+2025-10-22 02:29:24,848 - __main__ - INFO - Task 0 completed successfully in 22031.21s
+2025-10-22 02:34:41,801 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 20 / 24
+2025-10-22 02:36:33,460 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND((SUM(k * interval_cm) / SUM(interval_cm)), 4) AS average_potassium FROM climate_measurements WHERE site = 'ODP 967'
+2025-10-22 02:36:33,460 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 23 / 24
+2025-10-22 02:37:22,484 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 18 / 24
+2025-10-22 02:37:29,211 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT CORR(rc."Barrington Atlas Rank", wc."population") AS correlation FROM roman_cities AS rc INNER JOIN (SELECT * FROM worldcities WHERE "population" > 1000000) AS wc ON rc."Latitude (Y)" = wc."city_ascii"
+2025-10-22 02:37:29,211 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 10 / 24
+2025-10-22 02:41:10,653 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(MAX(t2.al), 4) AS max_aluminum_value FROM radiocarbon_data AS t1 JOIN climate_measurements AS t2 ON t1.culture = 'Neolithic' WHERE STRFTIME('%Y', t1.date) = (SELECT STRFTIME('%Y', date) FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1)
+2025-10-22 02:41:10,653 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 17 / 24
+2025-10-22 02:41:49,632 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT CAST((SELECT COUNT(*) FROM (SELECT "ODP 967 wet-dry index" - LAG("ODP 967 wet-dry index") OVER (ORDER BY "Age_ky") AS trend FROM climate_measurements) WHERE trend > 0) AS REAL) * 100 / (SELECT COUNT(*) FROM climate_measurements) AS percentage
+2025-10-22 02:41:49,632 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 21 / 24
+2025-10-22 02:43:13,891 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 19 / 24
+2025-10-22 02:43:57,287 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 21 / 24
+2025-10-22 02:44:54,810 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 23 / 24
+2025-10-22 02:45:36,021 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 22 / 24
+2025-10-22 02:46:33,264 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(k), 4) AS average_potassium FROM climate_measurements ORDER BY interval_cm
+2025-10-22 02:46:33,264 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0, Rollout step 24 / 24
+2025-10-22 02:50:29,338 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 20 / 24
+2025-10-22 02:52:49,317 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 23 / 24
+2025-10-22 02:53:21,154 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(t1.city) FROM worldcities AS t1 JOIN roman_cities AS t2 ON ST_DISTANCE_SPHERE((t1.lng, t1.lat), (t2.Longitude(x), t2.Latitude(y))) < 0.1 WHERE t1.population > 100000
+2025-10-22 02:53:21,157 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 17 / 24
+2025-10-22 02:55:26,315 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(k), 4) AS average_potassium FROM (SELECT k FROM climate_measurements WHERE site = 'Maltese' ORDER BY date ASC LIMIT 1 UNION ALL SELECT k FROM climate_measurements WHERE site = 'Maltese' ORDER BY date DESC LIMIT 1) AS combined_samples
+2025-10-22 02:55:26,316 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 0 done, Number of valid reasoning paths: 32
+2025-10-22 02:55:26,394 - __main__ - INFO - Task 0 completed successfully in 21439.08s
+2025-10-22 02:56:43,629 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND((SUM(CASE WHEN "ODP 967 wet-dry index" > LAG("ODP 967 wet-dry index") OVER (ORDER BY date) THEN 1 ELSE 0 END) * 100.0 / COUNT(date)), 2) AS percentage_of_increasing_years FROM climate_measurements
+2025-10-22 02:56:43,629 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 22 / 24
+2025-10-22 02:57:00,289 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 21 / 24
+2025-10-22 02:57:39,890 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT CORR(T1.avg_rank, T2.population) AS correlation FROM ( SELECT AVG(CAST(REPLACE(SUBSTR(Barrington Atlas Rank, 1, INSTR(Barrington Atlas Rank, ' or ') - 1), ',', '') AS REAL) + CAST(REPLACE(SUBSTR(Barrington Atlas Rank, INSTR(Barrington Atlas Rank, ' or ') + 4), ',', '') AS REAL)) / 2 AS avg_rank FROM roman_cities WHERE Barrington Atlas Rank LIKE '% or %' ) AS T1 INNER JOIN ( SELECT * FROM ( SELECT rc.*, wc.population, wc.Longitude (X), wc.Latitude (Y) FROM roman_cities rc INNER JOIN worldcities wc ON ABS(rc.Longitude (X) - wc.Longitude (X)) < 0.1 AND ABS(rc.Latitude (Y) - wc.Latitude (Y)) < 0.1 ) WHERE population > 1000000 ) AS T2
+2025-10-22 02:57:39,890 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 11 / 24
+2025-10-22 02:58:30,222 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 24 / 24
+2025-10-22 02:58:55,216 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 24 / 24
+2025-10-22 03:03:46,090 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 22 / 24
+2025-10-22 03:04:59,894 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1 done, Number of valid reasoning paths: 37
+2025-10-22 03:04:59,942 - __main__ - INFO - Task 1 completed successfully in 23188.66s
+2025-10-22 03:05:33,945 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 11 / 24
+2025-10-22 03:05:40,980 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND((SELECT MAX("Al") FROM "climate_measurements" WHERE "Depth below seafloor_m" IN (SELECT "Depth below seafloor_m" FROM "climate_measurements" ORDER BY ABS("Depth below seafloor_m" - (SELECT STRFTIME('%Y', "radiocarbon_data"."date") AS year FROM "radiocarbon_data" WHERE "Material" = 'Neolithic' AND "Latitude" = (SELECT MAX("Latitude") FROM "radiocarbon_data" WHERE "Material" = 'Neolithic') ORDER BY "date" DESC LIMIT 1)) LIMIT 1)), 4)
+2025-10-22 03:05:40,980 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 18 / 24
+2025-10-22 03:06:31,896 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT CAST(SUM(CASE WHEN interval_cm > prev_interval_cm THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(*) AS percentage_increasing_years FROM (SELECT interval_cm, LAG(interval_cm) OVER (ORDER BY age_ky) AS prev_interval_cm FROM climate_measurements) AS trends
+2025-10-22 03:06:31,896 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 23 / 24
+2025-10-22 03:07:03,088 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT rd.date AS neolithicyear, MAX(cm.al) AS maxaluminum FROM radiocarbon_data AS rd JOIN climate_measurements AS cm ON ABS(rd.date - cm.interval_cm) = (SELECT MIN(ABS(date - interval_cm)) FROM radiocarbon_data AS rd JOIN climate_measurements AS cm ON 1 = 1 WHERE rd.culture = 'Neolithic') WHERE rd.culture = 'Neolithic' GROUP BY rd.date ORDER BY rd.date DESC LIMIT 1
+2025-10-22 03:07:03,088 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 19 / 24
+2025-10-22 03:07:15,338 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(SUM(CASE WHEN t2."ODP 967 wet-dry index" > t1."ODP 967 wet-dry index" THEN 1 ELSE 0 END) / COUNT(t1."ODP 967 wet-dry index"), 2) AS percentage_increasing FROM climate_measurements AS t1 INNER JOIN climate_measurements AS t2 ON t1."Depth below seafloor_m" + 1 = t2."Depth below seafloor_m"
+2025-10-22 03:07:15,338 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1, Rollout step 24 / 24
+2025-10-22 03:09:26,693 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(worldcities.city) AS modern_cities_count FROM worldcities INNER JOIN roman_cities ON ABS(worldcities.lat - roman_cities."Latitude (Y)") <= 0.1 AND ABS(worldcities.lng - roman_cities."Longitude (X)") <= 0.1
+2025-10-22 03:09:26,694 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 18 / 24
+2025-10-22 03:10:23,405 - __main__ - INFO - Task 6 completed successfully in 24489.76s
+2025-10-22 03:11:17,395 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6 done, Number of valid reasoning paths: 36
+2025-10-22 03:11:17,472 - __main__ - INFO - Task 6 completed successfully in 23566.19s
+2025-10-22 03:12:21,990 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(DISTINCT t1.city) FROM worldcities AS t1 INNER JOIN roman_cities AS t2 ON ABS(t1.lat - t2."Latitude (Y)") < 0.1 AND ABS(t1.lng - t2."Longitude (X)") < 0.1 WHERE t1.population > 100000
+2025-10-22 03:12:21,990 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 19 / 24
+2025-10-22 03:14:27,779 - sqlglot - WARNING - DATEDIFF unsupported for 'DAY'.
+2025-10-22 03:15:02,003 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(COUNT(CASE WHEN t2."date" > t1."date" THEN 1 ELSE NULL END) * 100.0 / COUNT(t1."date"), 2) AS percentage FROM "radiocarbon_data" AS t1 INNER JOIN "radiocarbon_data" AS t2 ON t1."date" < t2."date"
+2025-10-22 03:15:02,004 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 1 done, Number of valid reasoning paths: 34
+2025-10-22 03:15:02,046 - __main__ - INFO - Task 1 completed successfully in 22614.73s
+2025-10-22 03:15:56,767 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 23 / 24
+2025-10-22 03:16:40,569 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT t2.closest_year, t3.max_aluminum_value FROM (SELECT MAX(date) AS most_northern_year FROM radiocarbon_data WHERE culture = 'Neolithic') AS t1 JOIN (SELECT date AS closest_year FROM climate_measurements WHERE ABS(STRFTIME('%Y', date) - STRFTIME('%Y', t1.most_northern_year)) = (SELECT MIN(ABS(STRFTIME('%Y', date) - STRFTIME('%Y', t1.most_northern_year))) FROM climate_measurements)) AS t2 ON 1 = 1 JOIN (SELECT MAX(al) AS max_aluminum_value FROM climate_measurements WHERE STRFTIME('%Y', date) = (SELECT STRFTIME('%Y', t2.closest_year))) AS t3 ON 1 = 1
+2025-10-22 03:16:40,569 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 20 / 24
+2025-10-22 03:17:07,173 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 24 / 24
+2025-10-22 03:20:25,610 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(CORR(sub.avg_rank, w.population), 6) AS correlation FROM (SELECT w.id AS modern_city_id, AVG(CAST(REPLACE(r."Barrington Atlas Rank", ' or ', '') AS REAL)) AS avg_rank FROM roman_cities AS r JOIN worldcities AS w ON w.lat BETWEEN r."Latitude (Y)" - 0.1 AND r."Latitude (Y)" + 0.1 AND w.lng BETWEEN r."Longitude (X)" - 0.1 AND r."Longitude (X)" + 0.1 GROUP BY w.id) AS sub INNER JOIN worldcities AS w ON sub.modern_city_id = w.id WHERE w.population > 1000000
+2025-10-22 03:20:25,611 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 12 / 24
+2025-10-22 03:23:29,282 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) FROM worldcities AS t1 INNER JOIN roman_cities AS t2 ON 1 = 1 WHERE 6371 * ACOS(COS(RADIANS(t1.lat)) * COS(RADIANS(t2."Latitude (Y)")) * COS(RADIANS(t1.lng) - RADIANS(t2."Longitude (X)")) + SIN(RADIANS(t1.lat)) * SIN(RADIANS(t2."Latitude (Y)"))) <= 0.1 AND t1.population > 100000
+2025-10-22 03:23:29,283 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 20 / 24
+2025-10-22 03:27:44,079 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4 done, Number of valid reasoning paths: 37
+2025-10-22 03:27:44,120 - __main__ - INFO - Task 4 completed successfully in 24552.84s
+2025-10-22 03:28:35,596 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(w.city) FROM roman_cities AS r INNER JOIN worldcities AS w ON w.lat BETWEEN r."Latitude (Y)" - 0.1 AND r."Latitude (Y)" + 0.1 AND w.lng BETWEEN r."Longitude (X)" - 0.1 AND r."Longitude (X)" + 0.1 WHERE w.population > 100000
+2025-10-22 03:28:35,597 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 21 / 24
+2025-10-22 03:37:08,727 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 12 / 24
+2025-10-22 03:38:49,082 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(CASE WHEN INSTR(t1."Barrington Atlas Rank", ' or ') > 0 THEN (CAST(SUBSTRING(t1."Barrington Atlas Rank", INSTR(t1."Barrington Atlas Rank", ' or ') + 4) AS REAL) + CAST(SUBSTRING(t1."Barrington Atlas Rank", 1, INSTR(t1."Barrington Atlas Rank", ' or ') - 1) AS REAL)) / 2 ELSE CAST(t1."Barrington Atlas Rank" AS REAL) END) AS avg_rank, AVG(t2.population) AS avg_population FROM roman_cities AS t1 INNER JOIN worldcities AS t2 ON ABS(t2.lat - t1."Latitude (Y)") < 0.1 AND ABS(t2.lng - t1."Longitude (X)") < 0.1 WHERE t2.population > 1000000
+2025-10-22 03:38:49,083 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 13 / 24
+2025-10-22 03:38:51,104 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(MAX(c.al), 4) AS max_aluminum_value FROM climate_measurements AS c JOIN (SELECT MIN(ABS(STRFTIME('%Y', r."date") - STRFTIME('%Y', (SELECT MAX("date") FROM radiocarbon_data WHERE material = 'Neolithic' AND latitude = 90)))) AS min_diff) AS d ON 1 = 1 WHERE STRFTIME('%Y', c."date") = (SELECT STRFTIME('%Y', r."date") FROM radiocarbon_data AS r WHERE r.material = 'Neolithic' AND r.latitude = 90 ORDER BY ABS(STRFTIME('%Y', r."date") - STRFTIME('%Y', (SELECT MAX("date") FROM radiocarbon_data WHERE material = 'Neolithic' AND latitude = 90))) ASC LIMIT 1)
+2025-10-22 03:38:51,104 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 21 / 24
+2025-10-22 03:39:05,300 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(t1.city) FROM worldcities AS t1 INNER JOIN roman_cities AS t2 ON t1.lng = t2."Longitude (X)" AND t1.lat = t2."Latitude (Y)" WHERE t1.population > 100000 AND SQRT(POWER((t2."Longitude (X)" - t1.lng), 2) + POWER((t2."Latitude (Y)" - t1.lat), 2)) <= 0.1
+2025-10-22 03:39:05,300 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 22 / 24
+2025-10-22 03:40:39,855 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(*) FROM (SELECT modern_city.*, ancient_roman_city.*, (6371 * ACOS(COS(RADIANS(modern_city.lat)) * COS(RADIANS(ancient_roman_city."Latitude (Y)")) * COS(RADIANS(modern_city.lng) - RADIANS(ancient_roman_city."Longitude (X)")) + SIN(RADIANS(modern_city.lat)) * SIN(RADIANS(ancient_roman_city."Latitude (Y)")))) AS distance FROM worldcities AS modern_city INNER JOIN roman_cities AS ancient_roman_city ON 1 = 1 WHERE modern_city.population > 100000) WHERE distance <= 0.1
+2025-10-22 03:40:39,855 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 23 / 24
+2025-10-22 03:40:39,855 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(t2.city) FROM roman_cities AS t1 JOIN worldcities AS t2 ON ABS(t1."Latitude (Y)" - t2.lat) <= 0.1 AND ABS(t1."Longitude (X)" - t2.lng) <= 0.1 WHERE t2.population > 100000
+2025-10-22 03:40:39,855 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6, Rollout step 24 / 24
+2025-10-22 03:47:17,775 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT COUNT(t1.city) AS count_of_modern_cities FROM (SELECT city, lat, lng FROM worldcities WHERE population > 100000) AS t1 JOIN roman_cities AS t2 ON (ACOS(SIN(t1.lat * PI() / 180) * SIN(t2."Latitude (Y)" * PI() / 180) + COS(t1.lat * PI() / 180) * COS(t2."Latitude (Y)" * PI() / 180) * COS((t1.lng - t2."Longitude (X)") * PI() / 180)) * 6371) < 0.1
+2025-10-22 03:47:17,777 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 6 done, Number of valid reasoning paths: 32
+2025-10-22 03:47:17,849 - __main__ - INFO - Task 6 completed successfully in 24550.53s
+2025-10-22 03:52:51,648 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND((SELECT MAX(al) AS max_al FROM climate_measurements WHERE "Depth below seafloor_m" = (SELECT t2."Depth below seafloor_m" FROM (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' AND latitude = (SELECT MAX(latitude) FROM radiocarbon_data WHERE culture = 'Neolithic')) AS t1 JOIN climate_measurements AS t2 ON ABS(t2."Depth below seafloor_m" - t1.date) = (SELECT MIN(ABS("Depth below seafloor_m" - t1.date)) FROM climate_measurements AS t2 JOIN (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' AND latitude = (SELECT MAX(latitude) FROM radiocarbon_data WHERE culture = 'Neolithic')) AS t1 ON 1 = 1))), 4) AS result
+2025-10-22 03:52:51,648 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 22 / 24
+2025-10-22 03:58:16,582 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(CAST(REPLACE(SUBSTRING(t1."Barrington Atlas Rank", 1, INSTR(t1."Barrington Atlas Rank", ' or ') - 1), ',', '') AS REAL) + CAST(REPLACE(SUBSTRING(t1."Barrington Atlas Rank", INSTR(t1."Barrington Atlas Rank", ' or ') + 4), ',', '') AS REAL)) / 2 AS avg_rank, AVG(CASE WHEN t2.population > 1000000 THEN t2.population ELSE 0 END) AS avg_population FROM roman_cities AS t1 INNER JOIN worldcities AS t2 ON SQRT((69.0 * (t2.lat - t1."Latitude (Y)") * PI() / 180) * (69.0 * (t2.lat - t1."Latitude (Y)") * PI() / 180) + (69.0 * (t2.lng - t1."Longitude (X)") * PI() / 180 * COS(t1."Latitude (Y)" * PI() / 180) * COS(t2.lng * PI() / 180)) * (69.0 * (t2.lng - t1."Longitude (X)") * PI() / 180 * COS(t1."Latitude (Y)" * PI() / 180) * COS(t2.lng * PI() / 180))) < 0.1
+2025-10-22 03:58:16,582 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 14 / 24
+2025-10-22 04:00:29,034 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 13 / 24
+2025-10-22 04:01:27,608 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND((SELECT MAX("T2"."Al") FROM radiocarbon_data AS t1 INNER JOIN climate_measurements AS t2 ON STRFTIME('%Y', t2."date") = (SELECT STRFTIME('%Y', t2."date") FROM radiocarbon_data AS t1 INNER JOIN climate_measurements AS t2 ON STRFTIME('%Y', t2."date") = (SELECT STRFTIME('%Y', t1."date") FROM radiocarbon_data AS t1 WHERE culture = 'Neolithic' ORDER BY t1."Latitude" DESC LIMIT 1) ORDER BY ABS(t1."date" - t2."date") LIMIT 1)), 4) AS max_al
+2025-10-22 04:01:27,608 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 23 / 24
+2025-10-22 04:08:15,587 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND((SELECT MAX(al) FROM climate_measurements WHERE depth_below_seafloor_m = (SELECT depth_below_seafloor_m FROM climate_measurements ORDER BY ABS(depth_below_seafloor_m - (SELECT date FROM radiocarbon_data WHERE region = 'Northern Italy' AND culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1)) LIMIT 1)), 4) AS max_aluminum_value
+2025-10-22 04:08:15,588 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4, Rollout step 24 / 24
+2025-10-22 04:13:13,092 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(rank * population) / (AVG(rank) * AVG(population)) AS correlation FROM (SELECT CASE WHEN r."Barrington Atlas Rank" LIKE '%or%' THEN AVG(REPLACE(SUBSTRING(r."Barrington Atlas Rank", 1, INSTR(r."Barrington Atlas Rank", ' or ') - 1), ' ', '')) + AVG(REPLACE(SUBSTRING(r."Barrington Atlas Rank", INSTR(r."Barrington Atlas Rank", ' or ') + 4), ' ', '')) / 2 ELSE CAST(r."Barrington Atlas Rank" AS REAL) END AS rank, w.population FROM roman_cities AS r INNER JOIN worldcities AS w ON r."Latitude (Y)" BETWEEN w.lat - 0.1 AND w.lat + 0.1 AND r."Longitude (X)" BETWEEN w.lng - 0.1 AND w.lng + 0.1 WHERE w.population > 1000000) AS subquery
+2025-10-22 04:13:13,092 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 15 / 24
+2025-10-22 04:15:19,114 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: WITH northern_neolithic_year AS (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1) SELECT ROUND((SELECT MAX(al) FROM climate_measurements WHERE ABS(al - (SELECT date FROM northern_neolithic_year)) = (SELECT MIN(ABS(al - (SELECT date FROM northern_neolithic_year))) FROM climate_measurements)), 4) AS max_aluminum_value
+2025-10-22 04:15:19,114 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 4 done, Number of valid reasoning paths: 39
+2025-10-22 04:15:19,159 - __main__ - INFO - Task 4 completed successfully in 26231.84s
+2025-10-22 04:17:09,265 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND((AVG(t1.avg_rank * t2.population) - AVG(t1.avg_rank) * AVG(t2.population)) / (STDDEV(t1.avg_rank) * STDDEV(t2.population)), 6) AS correlation FROM (SELECT AVG(CAST(SUBSTRING(roman_cities."Barrington Atlas Rank", 1, INSTR(roman_cities."Barrington Atlas Rank", ' or ') - 1) AS REAL) + CAST(SUBSTRING(roman_cities."Barrington Atlas Rank", INSTR(roman_cities."Barrington Atlas Rank", ' or ') + 4) AS REAL)) / 2 AS avg_rank FROM roman_cities INNER JOIN worldcities ON SQRT(ACOS(SIN(roman_cities."Latitude (Y)" * PI() / 180) * SIN(worldcities.lat * PI() / 180) + COS(roman_cities."Latitude (Y)" * PI() / 180) * COS(worldcities.lat * PI() / 180) * COS((roman_cities."Longitude (X)" - worldcities.lng) * PI() / 180))) * 6371 < 0.1) AS t1 INNER JOIN worldcities AS t2 ON t2.population > 1000000
+2025-10-22 04:17:09,267 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 16 / 24
+2025-10-22 04:18:15,733 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 14 / 24
+2025-10-22 04:18:52,761 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(CASE WHEN t2.population > 1000000 THEN t1."Barrington Atlas Rank" ELSE NULL END), 6) AS avg_rank FROM roman_cities AS t1 INNER JOIN worldcities AS t2 ON ACOS(COS(RADIANS(t1."Latitude (Y)")) * COS(RADIANS(t2.lat)) * COS(RADIANS(t1."Longitude (X)") - RADIANS(t2.lng)) + SIN(RADIANS(t1."Latitude (Y)")) * SIN(RADIANS(t2.lat))) * 6371 < 0.1
+2025-10-22 04:18:52,761 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 17 / 24
+2025-10-22 04:28:26,905 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(CORR(t1.avg_rank, t2.population), 6) AS correlation FROM (SELECT AVG(CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' ') + 1, INSTR("Barrington Atlas Rank", 'or') - INSTR("Barrington Atlas Rank", ' ') - 1) AS REAL) + CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", 'or') + 2) AS REAL)) / 2 AS avg_rank FROM roman_cities) AS t1 INNER JOIN (SELECT * FROM roman_cities AS rc INNER JOIN worldcities AS wc ON ST_DISTANCE_SPHERE(CAST(rc."Longitude (X)" AS REAL), CAST(rc."Latitude (Y)" AS REAL), CAST(wc."lng" AS REAL), CAST(wc."lat" AS REAL)) < 0.1) AS t2 ON t1.avg_rank = t2.population
+2025-10-22 04:28:26,906 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 18 / 24
+2025-10-22 04:28:28,084 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 15 / 24
+2025-10-22 04:32:06,973 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG(CAST(REPLACE(r."Barrington Atlas Rank", ' or ', '.') AS REAL)) AS avg_rank, AVG(w.population) AS avg_population FROM roman_cities AS r JOIN worldcities AS w ON ABS(r."Latitude (Y)" - w.lat) <= 0.1 AND ABS(r."Longitude (X)" - w.lng) <= 0.1 WHERE w.population > 1000000
+2025-10-22 04:32:06,973 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 19 / 24
+2025-10-22 04:37:36,367 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 16 / 24
+2025-10-22 04:40:15,995 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT (SELECT AVG(CAST(REPLACE(t1."Barrington Atlas Rank", ' or ', '') AS REAL)) FROM roman_cities AS t1 INNER JOIN worldcities AS t2 ON ABS(t1."Latitude (Y)" - t2.lat) < 0.1 AND ABS(t1."Longitude (X)" - t2.lng) < 0.1 WHERE t2.population > 1000000) AS avg_rank, (SELECT AVG(t2.population) FROM roman_cities AS t1 INNER JOIN worldcities AS t2 ON ABS(t1."Latitude (Y)" - t2.lat) < 0.1 AND ABS(t1."Longitude (X)" - t2.lng) < 0.1 WHERE t2.population > 1000000) AS avg_population
+2025-10-22 04:40:15,995 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 20 / 24
+2025-10-22 04:42:58,219 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT 
+    AVG(CAST(SUBSTR(r.Barrington Atlas Rank, 1, INSTR(r.Barrington Atlas Rank, ' or ') - 1) AS REAL)) AS avg_rank,
+    AVG(w.population) AS avg_population
+FROM 
+    roman_cities r
+JOIN 
+    worldcities w
+ON 
+    ST_Distance_Sphere(POINT(r.Latitude (Y), r.Longitude (X)), POINT(w.lat, w.lng)) < 0.1
+WHERE 
+    w.population > 1000000;
+2025-10-22 04:42:58,219 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 21 / 24
+2025-10-22 04:42:58,219 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(correlate.rank, 6) AS correlation FROM (SELECT 4.5 AS rank) AS correlate INNER JOIN (SELECT city, population FROM worldcities WHERE population > 1000000) AS modern_city ON 1 = 1
+2025-10-22 04:42:58,219 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 22 / 24
+2025-10-22 04:46:13,421 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(CORR(t2.rank, t2.population), 6) AS correlation FROM (SELECT t1.rank, t2.population FROM roman_cities AS t1 INNER JOIN worldcities AS t2 ON ABS(t2.lat - t1.lat) < 0.1 AND ABS(t2.lng - t1.lng) < 0.1 WHERE t2.population > 1000000 LIMIT 1) AS t2
+2025-10-22 04:46:13,421 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 23 / 24
+2025-10-22 04:46:13,791 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 17 / 24
+2025-10-22 04:46:51,947 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 18 / 24
+2025-10-22 04:50:52,256 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 19 / 24
+2025-10-22 04:51:39,325 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT ROUND(AVG(CASE WHEN INSTR("Barrington Atlas Rank", ' or ') > 0 THEN CAST(SUBSTRING("Barrington Atlas Rank", 1, INSTR("Barrington Atlas Rank", ' or ') - 1) AS REAL) + CAST(SUBSTRING("Barrington Atlas Rank", INSTR("Barrington Atlas Rank", ' or ') + 4) AS REAL) / 2 ELSE CAST("Barrington Atlas Rank" AS REAL) END), 6) AS "avg_rank", ROUND(AVG(CASE WHEN "population" > 1000000 THEN "population" END), 6) AS "avg_population" FROM (SELECT "city", "population", "Barrington Atlas Rank" FROM (SELECT "city", "population", "Barrington Atlas Rank", (ABS("Longitude (X)" - "lng") + ABS("Latitude (Y)" - "lat")) AS "distance" FROM "roman_cities" AS "rc" JOIN "worldcities" AS "wc" ON (ABS("Longitude (X)" - "lng") + ABS("Latitude (Y)" - "lat")) < 0.1) AS "closest_cities" ORDER BY "distance" ASC) AS "correlation_data"
+2025-10-22 04:51:39,325 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 24 / 24
+2025-10-22 04:52:21,776 - alphasql.algorithm.mcts.mcts - INFO - Backpropagate, Final SQL Query: SELECT AVG("Barrington Atlas Rank") AS avg_rank FROM roman_cities INNER JOIN worldcities ON ABS("Latitude (Y)" - "lat") < 0.1 AND ABS("Longitude (X)" - "lng") < 0.1
+2025-10-22 04:52:21,779 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8 done, Number of valid reasoning paths: 36
+2025-10-22 04:52:21,873 - __main__ - INFO - Task 8 completed successfully in 28454.56s
+2025-10-22 04:52:21,923 - __main__ - INFO - All tasks completed. Process time: 28454.67s, Total time: 28454.67s
+2025-10-22 04:52:21,926 - __main__ - INFO - Final completion status: 76 tasks completed out of 12 total
+2025-10-22 04:52:21,926 - __main__ - INFO - MCTS Runner completed successfully
+2025-10-22 04:55:06,953 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 20 / 24
+2025-10-22 04:58:59,554 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 21 / 24
+2025-10-22 04:58:59,557 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 22 / 24
+2025-10-22 05:08:23,579 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 23 / 24
+2025-10-22 05:14:11,712 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8, Rollout step 24 / 24
+2025-10-22 05:21:59,507 - __main__ - INFO - Task 8 completed successfully in 32385.86s
+2025-10-22 05:21:59,532 - __main__ - INFO - All tasks completed. Process time: 32385.96s, Total time: 32385.96s
+2025-10-22 05:21:59,532 - __main__ - INFO - Final completion status: 77 tasks completed out of 30 total
+2025-10-22 05:21:59,533 - __main__ - INFO - MCTS Runner completed successfully
+2025-10-22 05:23:59,510 - alphasql.algorithm.mcts.mcts - INFO - Question ID: 8 done, Number of valid reasoning paths: 30
+2025-10-22 05:23:59,591 - __main__ - INFO - Task 8 completed successfully in 31528.31s
+2025-10-22 05:23:59,637 - __main__ - INFO - All tasks completed. Process time: 31528.41s, Total time: 31528.42s
+2025-10-22 05:23:59,638 - __main__ - INFO - Final completion status: 77 tasks completed out of 13 total
+2025-10-22 05:23:59,638 - __main__ - INFO - MCTS Runner completed successfully
+2025-10-22 13:20:42,963 - __main__ - INFO - results saved to: ./pred_sqls_kramabench_qwen7b_all.json

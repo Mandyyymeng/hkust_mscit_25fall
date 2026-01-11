@@ -1,0 +1,86 @@
+=== MCTS 节点分析日志 ===
+生成时间: 2025-10-22 20:10:52
+==================================================
+
+开始分析文件: results/Qwen2.5-Coder-7B-Instruct/kramabench/dev_main/1.pkl
+分析时间: 2025-10-22 20:10:52
+============================================================
+  类型: <class 'list'>
+  长度: 34
+  列表包含 34 个推理路径
+  每个路径平均节点数: 5.9
+  路径长度分布: {6: 14, 7: 9, 5: 5, 3: 1, 4: 4, 8: 1}
+    路径1: 6 个节点
+      节点类型序列: ['root', 'rephrase_question', 'identify_column_functions', 'identify_column_values', 'sql_generation', 'end']
+    路径2: 7 个节点
+      节点类型序列: ['root', 'rephrase_question', 'identify_column_values', 'schema_selection', 'identify_column_functions', 'sql_generation', 'end']
+    路径3: 5 个节点
+      节点类型序列: ['root', 'schema_selection', 'identify_column_values', 'sql_generation', 'end']
+  Question ID: 1
+  包含的SQL查询示例:
+    路径1 SQL: SELECT ROUND(SUM(CASE WHEN "ODP 967 wet-dry index" > 0 THEN 1 ELSE 0 END) / COUNT("Interval_cm") * 100, 2) AS percentage_increasing_wet_dry_index FROM climate_measurements
+    路径2 SQL: SELECT ROUND((COUNT(CASE WHEN "ODP 967 wet-dry index" > 0 THEN 1 ELSE NULL END) / COUNT(*)) * 100, 2) AS percentage FROM climate_measurements
+    路径3 SQL: SELECT ROUND((SELECT COUNT(*) FROM climate_measurements AS t2 WHERE t2.interval_cm > t1.interval_cm AND t2."ODP 967 wet-dry index" > t1."ODP 967 wet-dry index") / COUNT(*), 2) AS percentage FROM climate_measurements AS t1
+    路径4 SQL: SELECT ROUND(SUM(CASE WHEN t2."ODP 967 wet-dry index" > t1."ODP 967 wet-dry index" THEN 1 ELSE 0 END) / COUNT(*), 2) AS percentage FROM climate_measurements AS t1 INNER JOIN climate_measurements AS t2 ON t1.site = t2.site AND t1.interval_cm < t2.interval_cm
+
+🌳 路径树结构 (长度: 6 个节点):
+==================================================
+🌱 root (深度: 0)
+  📋 根节点信息:
+    类型: root
+    深度: 0
+    问题: Across the years, what was the percent of years the wet-dry index was increasing...
+    提示: Percentage of increasing years = COUNT(increasing) / TOTAL years where increasin...
+    数据库: archeology
+    模式上下文预览: CREATE TABLE `climate_measurements` (
+	`Site` TEXT, -- Value Examples: `ODP 967`
+	`Hole` TEXT, -- Va...
+    ─────────────────────────
+  └── rephrase_question (深度: 1)
+  📋 rephrase_question 节点 (深度: 1):
+    父动作: RaphraseQuestionAction
+    重述问题: Given a list of conditions, please answer the question. Condition 1: Calculate t...
+    路径长度: 2
+    访问次数: 2, 累计奖励: 1.60
+    ─────────────────────────
+    └── identify_column_functions (深度: 2)
+  📋 identify_column_functions 节点 (深度: 2):
+    父动作: IdentifyColumnFunctionsAction
+    重述问题: Given a list of conditions, please answer the question. Condition 1: Calculate t...
+    识别函数: To calculate the percentage of years where the wet-dry index trend is positive, you need to use the `SUM` function to count the number of years with an increasing wet-dry index (i.e., where the trend is positive) and then divide this by the total number of years. Since the wet-dry index trend is stored in the `ODP 967 wet-dry index` column, you can use the `SUM` function with a conditional expression to count the number of years with an increasing trend. You can then divide this by the total number of years to get the percentage. To round the result to 2 decimal places, you can use the `ROUND` function.
+    路径长度: 3
+    访问次数: 1, 累计奖励: 1.00
+    ─────────────────────────
+      └── identify_column_values (深度: 3)
+  📋 identify_column_values 节点 (深度: 3):
+    父动作: IdentifyColumnValuesAction
+    重述问题: Given a list of conditions, please answer the question. Condition 1: Calculate t...
+    识别列值: To calculate the percentage of years where the wet-dry index trend is positive, you need to use the `SUM` function to count the number of years with an increasing wet-dry index (i.e., where the trend is positive) and then divide this by the total number of years. Since the wet-dry index trend is stored in the `ODP 967 wet-dry index` column, you can use the `SUM` function with a conditional expression to count the number of years with an increasing trend. You can then divide this by the total number of years to get the percentage. To round the result to 2 decimal places, you can use the `ROUND` function.
+
+The essential columns for this query are:
+- `ODP 967 wet-dry index`
+- `Interval_cm` or any other column that represents the years or time periods.
+    识别函数: To calculate the percentage of years where the wet-dry index trend is positive, you need to use the `SUM` function to count the number of years with an increasing wet-dry index (i.e., where the trend is positive) and then divide this by the total number of years. Since the wet-dry index trend is stored in the `ODP 967 wet-dry index` column, you can use the `SUM` function with a conditional expression to count the number of years with an increasing trend. You can then divide this by the total number of years to get the percentage. To round the result to 2 decimal places, you can use the `ROUND` function.
+    路径长度: 4
+    访问次数: 1, 累计奖励: 1.00
+    ─────────────────────────
+        └── sql_generation (深度: 4)
+  📋 sql_generation 节点 (深度: 4):
+    父动作: SQLGenerationAction
+    重述问题: Given a list of conditions, please answer the question. Condition 1: Calculate t...
+    识别列值: To calculate the percentage of years where the wet-dry index trend is positive, you need to use the `SUM` function to count the number of years with an increasing wet-dry index (i.e., where the trend is positive) and then divide this by the total number of years. Since the wet-dry index trend is stored in the `ODP 967 wet-dry index` column, you can use the `SUM` function with a conditional expression to count the number of years with an increasing trend. You can then divide this by the total number of years to get the percentage. To round the result to 2 decimal places, you can use the `ROUND` function.
+
+The essential columns for this query are:
+- `ODP 967 wet-dry index`
+- `Interval_cm` or any other column that represents the years or time periods.
+    识别函数: To calculate the percentage of years where the wet-dry index trend is positive, you need to use the `SUM` function to count the number of years with an increasing wet-dry index (i.e., where the trend is positive) and then divide this by the total number of years. Since the wet-dry index trend is stored in the `ODP 967 wet-dry index` column, you can use the `SUM` function with a conditional expression to count the number of years with an increasing trend. You can then divide this by the total number of years to get the percentage. To round the result to 2 decimal places, you can use the `ROUND` function.
+    SQL查询: SELECT ROUND(SUM(CASE WHEN "ODP 967 wet-dry index" > 0 THEN 1 ELSE 0 END) / COUN...
+    SQL有效性: 有效
+    一致性评分: 1.000
+    路径长度: 5
+    访问次数: 1, 累计奖励: 1.00
+    ─────────────────────────
+          └── ... (后续节点省略)
+
+============================================================
+分析完成!

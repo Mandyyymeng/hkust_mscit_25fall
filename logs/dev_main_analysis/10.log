@@ -1,0 +1,162 @@
+=== MCTS 节点分析日志 ===
+生成时间: 2025-10-22 20:10:53
+==================================================
+
+开始分析文件: results/Qwen2.5-Coder-7B-Instruct/kramabench/dev_main/10.pkl
+分析时间: 2025-10-22 20:10:53
+============================================================
+  类型: <class 'list'>
+  长度: 34
+  列表包含 34 个推理路径
+  每个路径平均节点数: 5.8
+  路径长度分布: {6: 10, 4: 6, 7: 8, 5: 6, 3: 1, 8: 3}
+    路径1: 6 个节点
+      节点类型序列: ['root', 'schema_selection', 'identify_column_values', 'identify_column_functions', 'sql_generation', 'end']
+    路径2: 4 个节点
+      节点类型序列: ['root', 'schema_selection', 'sql_generation', 'end']
+    路径3: 6 个节点
+      节点类型序列: ['root', 'schema_selection', 'identify_column_values', 'identify_column_functions', 'sql_generation', 'end']
+  Question ID: 10
+  包含的SQL查询示例:
+    路径1 SQL: SELECT index FROM (SELECT index, CASE WHEN NOT age_ky IS NULL AND NOT al IS NULL AND NOT si IS NULL AND NOT s IS NULL AND NOT k IS NULL AND NOT ca IS NULL AND NOT ti IS NULL AND NOT mn IS NULL AND NOT fe IS NULL AND NOT rb IS NULL AND NOT sr IS NULL AND NOT zr IS NULL AND NOT ba IS NULL AND NOT age_ky.1 IS NULL AND NOT age_ky.2 IS NULL AND NOT odp_967_dust_proxy IS NULL AND NOT age_ky.3 IS NULL AND NOT odp_967_wet_dry_index IS NULL THEN 0 ELSE 1 END AS has_nan FROM climate_measurements) AS subquery WHERE has_nan = 1
+    路径2 SQL: SELECT rowid - 1 AS index FROM climate_measurements WHERE rowid IN (SELECT rowid FROM climate_measurements WHERE NOT age_ky IS NULL AND NOT al IS NULL AND NOT si IS NULL AND NOT s IS NULL AND NOT k IS NULL AND NOT ca IS NULL AND NOT ti IS NULL AND NOT mn IS NULL AND NOT fe IS NULL AND NOT rb IS NULL AND NOT sr IS NULL AND NOT zr IS NULL AND NOT ba IS NULL AND NOT age_ky.1 IS NULL AND NOT age_ky.2 IS NULL AND NOT odp_967_dust_proxy IS NULL AND NOT age_ky.3 IS NULL AND NOT odp_967_wet_dry_index IS NULL)
+    路径3 SQL: SELECT rowid FROM climate_measurements WHERE (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT age_ky IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT al IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT si IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT s IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT k IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT ca IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT ti IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT mn IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT fe IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT rb IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT sr IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT zr IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT ba IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT age_ky.1 IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT pc1 IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT pc2 IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT age_ky.2 IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT odp_967_dust_proxy IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT age_ky.3 IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT odp_967_wet_dry_index IS NULL)) = 0
+    路径4 SQL: SELECT rowid FROM climate_measurements WHERE COUNT(CASE WHEN NOT age_ky IS NULL THEN 1 END) + COUNT(CASE WHEN NOT al IS NULL THEN 1 END) + COUNT(CASE WHEN NOT si IS NULL THEN 1 END) + COUNT(CASE WHEN NOT s IS NULL THEN 1 END) + COUNT(CASE WHEN NOT k IS NULL THEN 1 END) + COUNT(CASE WHEN NOT ca IS NULL THEN 1 END) + COUNT(CASE WHEN NOT ti IS NULL THEN 1 END) + COUNT(CASE WHEN NOT mn IS NULL THEN 1 END) + COUNT(CASE WHEN NOT fe IS NULL THEN 1 END) + COUNT(CASE WHEN NOT rb IS NULL THEN 1 END) + COUNT(CASE WHEN NOT sr IS NULL THEN 1 END) + COUNT(CASE WHEN NOT zr IS NULL THEN 1 END) + COUNT(CASE WHEN NOT ba IS NULL THEN 1 END) + COUNT(CASE WHEN NOT age_ky_1 IS NULL THEN 1 END) + COUNT(CASE WHEN NOT pc1 IS NULL THEN 1 END) + COUNT(CASE WHEN NOT pc2 IS NULL THEN 1 END) + COUNT(CASE WHEN NOT age_ky_2 IS NULL THEN 1 END) + COUNT(CASE WHEN NOT odp_967_dust_proxy IS NULL THEN 1 END) + COUNT(CASE WHEN NOT age_ky_3 IS NULL THEN 1 END) + COUNT(CASE WHEN NOT odp_967_wet_dry_index IS NULL THEN 1 END) = 37
+
+🌳 路径树结构 (长度: 6 个节点):
+==================================================
+🌱 root (深度: 0)
+  📋 根节点信息:
+    类型: root
+    深度: 0
+    问题: What are the indices (0-indexed) in rows in the climate measurement dataframe th...
+    提示: Find row indices with all NaN values for data cleaning
+    数据库: archeology
+    模式上下文预览: CREATE TABLE `climate_measurements` (
+	`Site` TEXT, -- Value Examples: `ODP 967`
+	`Hole` TEXT, -- Va...
+    ─────────────────────────
+  └── schema_selection (深度: 1)
+  📋 schema_selection 节点 (深度: 1):
+    父动作: SchemaSelectionAction
+    选择模式: CREATE TABLE `climate_measurements` (
+	`Age_ky` REAL,
+	`Al` REAL,
+	`Si` REAL,
+	`S` REAL,
+	`K` REAL,
+	`Ca` REAL,
+	`Ti` REAL,
+	`Mn` REAL,
+	`Fe` REAL,
+	`Rb` REAL,
+	`Sr` REAL,
+	`Zr` REAL,
+	`Ba` REAL,
+	`Age_ky.1` REAL,
+	`Age_ky.2` REAL,
+	`ODP 967 Dust proxy` REAL,
+	`Age_ky.3` REAL,
+	`ODP 967 wet-dry index` REAL,
+	PRIMARY KEY ()
+);
+    选择模式: 1表/18列
+    路径长度: 2
+    访问次数: 2, 累计奖励: 0.00
+    ─────────────────────────
+    └── identify_column_values (深度: 2)
+  📋 identify_column_values 节点 (深度: 2):
+    父动作: IdentifyColumnValuesAction
+    选择模式: CREATE TABLE `climate_measurements` (
+	`Age_ky` REAL,
+	`Al` REAL,
+	`Si` REAL,
+	`S` REAL,
+	`K` REAL,
+	`Ca` REAL,
+	`Ti` REAL,
+	`Mn` REAL,
+	`Fe` REAL,
+	`Rb` REAL,
+	`Sr` REAL,
+	`Zr` REAL,
+	`Ba` REAL,
+	`Age_ky.1` REAL,
+	`Age_ky.2` REAL,
+	`ODP 967 Dust proxy` REAL,
+	`Age_ky.3` REAL,
+	`ODP 967 wet-dry index` REAL,
+	PRIMARY KEY ()
+);
+    识别列值: To identify the indices of rows with all NaN values in the `climate_measurements` table, you need to use the `NaN` values in the columns.
+    选择模式: 1表/18列
+    路径长度: 3
+    访问次数: 1, 累计奖励: 0.00
+    ─────────────────────────
+      └── identify_column_functions (深度: 3)
+  📋 identify_column_functions 节点 (深度: 3):
+    父动作: IdentifyColumnFunctionsAction
+    选择模式: CREATE TABLE `climate_measurements` (
+	`Age_ky` REAL,
+	`Al` REAL,
+	`Si` REAL,
+	`S` REAL,
+	`K` REAL,
+	`Ca` REAL,
+	`Ti` REAL,
+	`Mn` REAL,
+	`Fe` REAL,
+	`Rb` REAL,
+	`Sr` REAL,
+	`Zr` REAL,
+	`Ba` REAL,
+	`Age_ky.1` REAL,
+	`Age_ky.2` REAL,
+	`ODP 967 Dust proxy` REAL,
+	`Age_ky.3` REAL,
+	`ODP 967 wet-dry index` REAL,
+	PRIMARY KEY ()
+);
+    识别列值: To identify the indices of rows with all NaN values in the `climate_measurements` table, you need to use the `NaN` values in the columns.
+    识别函数: To identify the indices of rows with all NaN values in the `climate_measurements` table, you should use the `isna()` function to check for NaN values in each row and then apply the `all()` function to determine if all values in a row are NaN. Additionally, you may want to use the `reset_index()` function to get the original indices of these rows for data cleaning purposes.
+    选择模式: 1表/18列
+    路径长度: 4
+    访问次数: 1, 累计奖励: 0.00
+    ─────────────────────────
+        └── sql_generation (深度: 4)
+  📋 sql_generation 节点 (深度: 4):
+    父动作: SQLGenerationAction
+    选择模式: CREATE TABLE `climate_measurements` (
+	`Age_ky` REAL,
+	`Al` REAL,
+	`Si` REAL,
+	`S` REAL,
+	`K` REAL,
+	`Ca` REAL,
+	`Ti` REAL,
+	`Mn` REAL,
+	`Fe` REAL,
+	`Rb` REAL,
+	`Sr` REAL,
+	`Zr` REAL,
+	`Ba` REAL,
+	`Age_ky.1` REAL,
+	`Age_ky.2` REAL,
+	`ODP 967 Dust proxy` REAL,
+	`Age_ky.3` REAL,
+	`ODP 967 wet-dry index` REAL,
+	PRIMARY KEY ()
+);
+    识别列值: To identify the indices of rows with all NaN values in the `climate_measurements` table, you need to use the `NaN` values in the columns.
+    识别函数: To identify the indices of rows with all NaN values in the `climate_measurements` table, you should use the `isna()` function to check for NaN values in each row and then apply the `all()` function to determine if all values in a row are NaN. Additionally, you may want to use the `reset_index()` function to get the original indices of these rows for data cleaning purposes.
+    SQL查询: SELECT index FROM (SELECT index, CASE WHEN NOT age_ky IS NULL AND NOT al IS NULL...
+    SQL有效性: 无效
+    一致性评分: 0.000
+    选择模式: 1表/18列
+    路径长度: 5
+    访问次数: 1, 累计奖励: 0.00
+    ─────────────────────────
+          └── ... (后续节点省略)
+
+============================================================
+分析完成!

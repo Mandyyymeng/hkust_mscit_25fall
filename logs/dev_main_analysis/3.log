@@ -1,0 +1,112 @@
+=== MCTS 节点分析日志 ===
+生成时间: 2025-10-22 20:10:52
+==================================================
+
+开始分析文件: results/Qwen2.5-Coder-7B-Instruct/kramabench/dev_main/3.pkl
+分析时间: 2025-10-22 20:10:52
+============================================================
+  类型: <class 'list'>
+  长度: 35
+  列表包含 35 个推理路径
+  每个路径平均节点数: 5.7
+  路径长度分布: {7: 8, 8: 2, 5: 4, 6: 12, 4: 8, 3: 1}
+    路径1: 7 个节点
+      节点类型序列: ['root', 'rephrase_question', 'identify_column_values', 'identify_column_functions', 'schema_selection', 'sql_generation', 'end']
+    路径2: 8 个节点
+      节点类型序列: ['root', 'rephrase_question', 'identify_column_values', 'identify_column_functions', 'schema_selection', 'sql_generation', 'sql_revision', 'end']
+    路径3: 5 个节点
+      节点类型序列: ['root', 'rephrase_question', 'identify_column_functions', 'sql_generation', 'end']
+  Question ID: 3
+  包含的SQL查询示例:
+    路径1 SQL: SELECT ROUND(ca, 4) AS calcium_ppm FROM climate_measurements ORDER BY "ODP 967 Dust proxy" ASC, "ODP 967 wet-dry index" ASC LIMIT 1
+    路径2 SQL: SELECT ROUND(ca, 4) AS calcium_ppm FROM climate_measurements ORDER BY "ODP 967 Dust proxy" ASC, "ODP 967 wet-dry index" ASC LIMIT 1
+    路径3 SQL: SELECT ROUND("Ca", 4) FROM climate_measurements WHERE "ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") FROM climate_measurements) ORDER BY "ODP 967 Dust proxy", "ODP 967 wet-dry index" LIMIT 1
+    路径4 SQL: SELECT ROUND("Ca", 4) FROM climate_measurements WHERE "ODP 967 Dust proxy" = (SELECT MIN("ODP 967 Dust proxy") FROM climate_measurements) ORDER BY "ODP 967 Dust proxy", "ODP 967 wet-dry index" LIMIT 1
+
+🌳 路径树结构 (长度: 7 个节点):
+==================================================
+🌱 root (深度: 0)
+  📋 根节点信息:
+    类型: root
+    深度: 0
+    问题: What is the amount of calcium in ppm when the dust proxy was the smallest, break...
+    提示: Archaeological data analysis using climateMeasurements
+    数据库: archeology
+    模式上下文预览: CREATE TABLE `climate_measurements` (
+	`Site` TEXT, -- Value Examples: `ODP 967`
+	`Hole` TEXT, -- Va...
+    ─────────────────────────
+  └── rephrase_question (深度: 1)
+  📋 rephrase_question 节点 (深度: 1):
+    父动作: RaphraseQuestionAction
+    重述问题: Given a list of conditions, please answer the question. Condition 1: The dust pr...
+    路径长度: 2
+    访问次数: 2, 累计奖励: 1.80
+    ─────────────────────────
+    └── identify_column_values (深度: 2)
+  📋 identify_column_values 节点 (深度: 2):
+    父动作: IdentifyColumnValuesAction
+    重述问题: Given a list of conditions, please answer the question. Condition 1: The dust pr...
+    识别列值: To answer this question, you need to use the following columns from the `climate_measurements` table:
+
+1. `ODP 967 Dust proxy` - to find the smallest dust proxy value.
+2. `ODP 967 wet-dry index` - to break ties in case of equal dust proxy values.
+3. `Ca` - to get the amount of calcium in ppm.
+
+You will need to order the data by `ODP 967 Dust proxy` in ascending order and then by `ODP 967 wet-dry index` in ascending order to ensure that the smallest dust proxy value is selected, and in case of ties, the one with the minimum wet-dry index is chosen. Finally, you will select the `Ca` column and round the result to 4 decimal places.
+    路径长度: 3
+    访问次数: 1, 累计奖励: 1.00
+    ─────────────────────────
+      └── identify_column_functions (深度: 3)
+  📋 identify_column_functions 节点 (深度: 3):
+    父动作: IdentifyColumnFunctionsAction
+    重述问题: Given a list of conditions, please answer the question. Condition 1: The dust pr...
+    识别列值: To answer this question, you need to use the following columns from the `climate_measurements` table:
+
+1. `ODP 967 Dust proxy` - to find the smallest dust proxy value.
+2. `ODP 967 wet-dry index` - to break ties in case of equal dust proxy values.
+3. `Ca` - to get the amount of calcium in ppm.
+
+You will need to order the data by `ODP 967 Dust proxy` in ascending order and then by `ODP 967 wet-dry index` in ascending order to ensure that the smallest dust proxy value is selected, and in case of ties, the one with the minimum wet-dry index is chosen. Finally, you will select the `Ca` column and round the result to 4 decimal places.
+    识别函数: To answer this question, you need to use the following columns from the `climate_measurements` table:
+
+1. `ODP 967 Dust proxy` - to find the smallest dust proxy value.
+2. `ODP 967 wet-dry index` - to break ties in case of equal dust proxy values.
+3. `Ca` - to get the amount of calcium in ppm.
+
+You will need to order the data by `ODP 967 Dust proxy` in ascending order and then by `ODP 967 wet-dry index` in ascending order to ensure that the smallest dust proxy value is selected, and in case of ties, the one with the minimum wet-dry index is chosen. Finally, you will select the `Ca` column and round the result to 4 decimal places.
+    路径长度: 4
+    访问次数: 1, 累计奖励: 1.00
+    ─────────────────────────
+        └── schema_selection (深度: 4)
+  📋 schema_selection 节点 (深度: 4):
+    父动作: SchemaSelectionAction
+    重述问题: Given a list of conditions, please answer the question. Condition 1: The dust pr...
+    选择模式: CREATE TABLE `climate_measurements` (
+	`Ca` REAL,
+	`ODP 967 Dust proxy` REAL,
+	`ODP 967 wet-dry index` REAL,
+	PRIMARY KEY ()
+);
+    识别列值: To answer this question, you need to use the following columns from the `climate_measurements` table:
+
+1. `ODP 967 Dust proxy` - to find the smallest dust proxy value.
+2. `ODP 967 wet-dry index` - to break ties in case of equal dust proxy values.
+3. `Ca` - to get the amount of calcium in ppm.
+
+You will need to order the data by `ODP 967 Dust proxy` in ascending order and then by `ODP 967 wet-dry index` in ascending order to ensure that the smallest dust proxy value is selected, and in case of ties, the one with the minimum wet-dry index is chosen. Finally, you will select the `Ca` column and round the result to 4 decimal places.
+    识别函数: To answer this question, you need to use the following columns from the `climate_measurements` table:
+
+1. `ODP 967 Dust proxy` - to find the smallest dust proxy value.
+2. `ODP 967 wet-dry index` - to break ties in case of equal dust proxy values.
+3. `Ca` - to get the amount of calcium in ppm.
+
+You will need to order the data by `ODP 967 Dust proxy` in ascending order and then by `ODP 967 wet-dry index` in ascending order to ensure that the smallest dust proxy value is selected, and in case of ties, the one with the minimum wet-dry index is chosen. Finally, you will select the `Ca` column and round the result to 4 decimal places.
+    选择模式: 1表/3列
+    路径长度: 5
+    访问次数: 1, 累计奖励: 1.00
+    ─────────────────────────
+          └── ... (后续节点省略)
+
+============================================================
+分析完成!

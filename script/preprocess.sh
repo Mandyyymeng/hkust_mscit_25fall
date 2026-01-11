@@ -1,7 +1,7 @@
 #! /bin/bash
-
+# automatically saved to save_root_dir/dev (data_split)
 python -m alphasql.runner.preprocessor \
-    --data_file_path "data/bird/dev/dev.json" \
+    --data_file_path "data/bird/dev/dev_all.json" \
     --database_root_dir "data/bird/dev/dev_databases" \
     --save_root_dir "data/preprocessed/bird/dev" \
     --lsh_threshold 0.5 \

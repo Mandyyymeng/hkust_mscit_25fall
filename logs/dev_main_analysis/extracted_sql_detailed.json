@@ -1,0 +1,2486 @@
+{
+  "0": [
+    {
+      "path_index": 0,
+      "sql": "SELECT AVG(t1.k) AS average_potassium FROM (SELECT k FROM climate_measurements WHERE site = 'Maltese' ORDER BY interval_cm LIMIT 1) AS t1 INNER JOIN (SELECT k FROM climate_measurements WHERE site = 'Maltese' ORDER BY interval_cm LIMIT 1 OFFSET 1) AS t2 ON t1.depth_below_seafloor_m = t2.depth_below_seafloor_m",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 1,
+      "sql": "SELECT AVG(t2.k) AS average_potassium FROM (SELECT k, depth_below_seafloor_m FROM climate_measurements WHERE site = 'Maltese' ORDER BY interval_cm LIMIT 1) AS t1 INNER JOIN (SELECT k, depth_below_seafloor_m FROM climate_measurements WHERE site = 'Maltese' ORDER BY interval_cm LIMIT 1 OFFSET 1) AS t2 ON t1.depth_below_seafloor_m = t2.depth_below_seafloor_m",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 2,
+      "sql": "SELECT AVG(k) AS average_potassium FROM (SELECT k FROM climate_measurements WHERE site = 'Maltese' ORDER BY interval_cm LIMIT 1) AS first_record JOIN (SELECT k FROM climate_measurements WHERE site = 'Maltese' ORDER BY interval_cm DESC LIMIT 1) AS last_record ON first_record.interval_cm = last_record.interval_cm",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 3,
+      "sql": "SELECT AVG(first_record.k) AS average_potassium FROM (SELECT k FROM climate_measurements WHERE site = 'Maltese' ORDER BY interval_cm LIMIT 1) AS first_record JOIN (SELECT k FROM climate_measurements WHERE site = 'Maltese' ORDER BY interval_cm DESC LIMIT 1) AS last_record ON first_record.interval_cm = last_record.interval_cm",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 4,
+      "sql": "SELECT AVG(k) AS average_potassium FROM climate_measurements",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 5,
+      "sql": "SELECT ROUND(((t1.k * (t2.interval_cm - t1.interval_cm) + t2.k * (t1.interval_cm - t2.interval_cm)) / (t2.interval_cm - t1.interval_cm)), 4) AS average_k FROM climate_measurements AS t1 INNER JOIN climate_measurements AS t2 ON t1.interval_cm = (SELECT MIN(interval_cm) FROM climate_measurements WHERE site = 'Maltese area') AND t2.interval_cm = (SELECT MAX(interval_cm) FROM climate_measurements WHERE site = 'Maltese area') AND t1.\"Depth below seafloor_m\" = (SELECT MIN(\"Depth below seafloor_m\") FROM climate_measurements WHERE site = 'Maltese area') AND t2.\"Depth below seafloor_m\" = (SELECT MAX(\"Depth below seafloor_m\") FROM climate_measurements WHERE site = 'Maltese area')",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 6,
+      "sql": "SELECT ROUND(AVG(k), 4) FROM climate_measurements WHERE \"Depth below seafloor_m\" = (SELECT MIN(\"Depth below seafloor_m\") FROM climate_measurements) OR \"Depth below seafloor_m\" = (SELECT MAX(\"Depth below seafloor_m\") FROM climate_measurements)",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 7,
+      "sql": "SELECT ROUND((SUM(k * interval_cm) / SUM(interval_cm)), 4) AS average_potassium FROM climate_measurements WHERE site = 'ODP 967'",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 8,
+      "sql": "SELECT ROUND((SUM(k * interval_cm) / SUM(interval_cm)), 4) AS average_potassium FROM climate_measurements WHERE site = 'Maltese'",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 9,
+      "sql": "SELECT ROUND(AVG(t2.k) + ((STRFTIME('%J', t1.max_date) - STRFTIME('%J', t1.min_date)) / t2.interval_cm) * (t2.k - AVG(t2.k)), 4) AS avg_potassium FROM (SELECT MIN(sample_date) AS min_date, MAX(sample_date) AS max_date FROM radiocarbon_data WHERE region = 'Maltese') AS t1 INNER JOIN climate_measurements AS t2 ON t2.site = t1.site",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 10,
+      "sql": "SELECT ROUND(AVG(k), 4) AS average_potassium FROM climate_measurements ORDER BY interval_cm",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 11,
+      "sql": "SELECT ROUND(AVG(k), 4) AS average_potassium FROM climate_measurements WHERE site = 'Maltese area' ORDER BY interval_cm",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 12,
+      "sql": "SELECT ROUND(AVG(k), 4) AS rounded_average_potassium FROM climate_measurements WHERE date BETWEEN (SELECT MIN(date) FROM climate_measurements WHERE site = 'Maltese') AND (SELECT MAX(date) FROM climate_measurements WHERE site = 'Maltese')",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 13,
+      "sql": "SELECT ROUND(AVG(k), 4) AS average_potassium FROM (SELECT k FROM climate_measurements WHERE site = 'Maltese' ORDER BY date ASC LIMIT 1 UNION ALL SELECT k FROM climate_measurements WHERE site = 'Maltese' ORDER BY date DESC LIMIT 1) AS combined_samples",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 14,
+      "sql": "SELECT AVG(k) AS average_k FROM climate_measurements WHERE site = 'Maltese' AND date BETWEEN (SELECT MIN(date) FROM climate_measurements WHERE site = 'Maltese') AND (SELECT MAX(date) FROM climate_measurements WHERE site = 'Maltese')",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 15,
+      "sql": "SELECT AVG(k) AS average_k FROM climate_measurements WHERE age_ky = (SELECT MIN(age_ky) FROM climate_measurements) OR age_ky = (SELECT MAX(age_ky) FROM climate_measurements)",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 16,
+      "sql": "SELECT AVG(k) AS average_k FROM climate_measurements WHERE age_ky = (SELECT MIN(age_ky) FROM climate_measurements) OR age_ky = (SELECT MAX(age_ky) FROM climate_measurements)",
+      "path_length": 3,
+      "node_type": "end"
+    },
+    {
+      "path_index": 17,
+      "sql": "SELECT ROUND(AVG(k), 4) AS avg_potassium FROM climate_measurements WHERE site = 'Maltese area' AND interval_cm BETWEEN (SELECT MIN(interval_cm) FROM climate_measurements WHERE site = 'Maltese area') AND (SELECT MAX(interval_cm) FROM climate_measurements WHERE site = 'Maltese area')",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 18,
+      "sql": "SELECT AVG(k) AS avg_potassium FROM climate_measurements WHERE site = 'ODP 967' AND interval_cm BETWEEN (SELECT MIN(interval_cm) FROM climate_measurements WHERE site = 'ODP 967') AND (SELECT MAX(interval_cm) FROM climate_measurements WHERE site = 'ODP 967')",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 19,
+      "sql": "SELECT AVG(k) AS avg_potassium FROM climate_measurements WHERE site = 'Maltese area' AND interval_cm BETWEEN (SELECT MIN(interval_cm) FROM climate_measurements WHERE site = 'Maltese area') AND (SELECT MAX(interval_cm) FROM climate_measurements WHERE site = 'Maltese area')",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 20,
+      "sql": "SELECT AVG(k) AS average_potassium FROM climate_measurements AS cm INNER JOIN (SELECT MIN(interval_cm) AS first_interval, MAX(interval_cm) AS last_interval FROM climate_measurements WHERE site = 'Maltese') AS sub ON cm.interval_cm BETWEEN sub.first_interval AND sub.last_interval WHERE cm.site = 'Maltese'",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 21,
+      "sql": "SELECT AVG(k) AS avg_potassium FROM climate_measurements WHERE site = 'Maltese'",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 22,
+      "sql": "SELECT AVG(k) AS avg_potassium FROM climate_measurements WHERE site = 'Maltese' ORDER BY depth_below_seafloor_m LIMIT 1 OFFSET 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 23,
+      "sql": "WITH maltesemeasurements AS (SELECT k, depth_below_seafloor_m, ROW_NUMBER() OVER (ORDER BY depth_below_seafloor_m) AS row_num_asc, ROW_NUMBER() OVER (ORDER BY depth_below_seafloor_m DESC) AS row_num_desc FROM climate_measurements WHERE site = 'Maltese') SELECT AVG(k) AS average_potassium FROM maltesemeasurements WHERE row_num_asc = 1 OR row_num_desc = 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 24,
+      "sql": "SELECT AVG(k) AS average_potassium FROM climate_measurements WHERE site = 'Maltese' AND age_ky BETWEEN (SELECT MIN(age_ky) FROM climate_measurements WHERE site = 'Maltese') AND (SELECT MAX(age_ky) FROM climate_measurements WHERE site = 'Maltese')",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 25,
+      "sql": "SELECT ROUND(AVG(k), 4) FROM climate_measurements WHERE date_column BETWEEN (SELECT MIN(date_column) FROM climate_measurements WHERE site = 'Maltese') AND (SELECT MAX(date_column) FROM climate_measurements WHERE site = 'Maltese')",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 26,
+      "sql": "SELECT ROUND(AVG(k), 4) AS average_potassium FROM climate_measurements",
+      "path_length": 8,
+      "node_type": "end"
+    },
+    {
+      "path_index": 27,
+      "sql": "SELECT ROUND(AVG(k), 4) AS average_potassium FROM climate_measurements",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 28,
+      "sql": "SELECT ROUND(AVG(k), 4) FROM climate_measurements",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 29,
+      "sql": "SELECT ROUND(AVG(k), 4) FROM climate_measurements",
+      "path_length": 8,
+      "node_type": "end"
+    },
+    {
+      "path_index": 30,
+      "sql": "SELECT ROUND(AVG(k), 4) FROM climate_measurements WHERE site = 'Maltese'",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 31,
+      "sql": "SELECT ROUND(AVG(k), 4) FROM climate_measurements WHERE site = 'ODP 967'",
+      "path_length": 8,
+      "node_type": "end"
+    }
+  ],
+  "1": [
+    {
+      "path_index": 0,
+      "sql": "SELECT ROUND(SUM(CASE WHEN \"ODP 967 wet-dry index\" > 0 THEN 1 ELSE 0 END) / COUNT(\"Interval_cm\") * 100, 2) AS percentage_increasing_wet_dry_index FROM climate_measurements",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 1,
+      "sql": "SELECT ROUND((COUNT(CASE WHEN \"ODP 967 wet-dry index\" > 0 THEN 1 ELSE NULL END) / COUNT(*)) * 100, 2) AS percentage FROM climate_measurements",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 2,
+      "sql": "SELECT ROUND((SELECT COUNT(*) FROM climate_measurements AS t2 WHERE t2.interval_cm > t1.interval_cm AND t2.\"ODP 967 wet-dry index\" > t1.\"ODP 967 wet-dry index\") / COUNT(*), 2) AS percentage FROM climate_measurements AS t1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 3,
+      "sql": "SELECT ROUND(SUM(CASE WHEN t2.\"ODP 967 wet-dry index\" > t1.\"ODP 967 wet-dry index\" THEN 1 ELSE 0 END) / COUNT(*), 2) AS percentage FROM climate_measurements AS t1 INNER JOIN climate_measurements AS t2 ON t1.site = t2.site AND t1.interval_cm < t2.interval_cm",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 4,
+      "sql": "SELECT ROUND(COUNT(CASE WHEN t2.\"ODP 967 wet-dry index\" > t1.\"ODP 967 wet-dry index\" THEN 1 ELSE NULL END) * 100.0 / COUNT(t1.\"ODP 967 wet-dry index\"), 2) AS percentage FROM climate_measurements AS t1 INNER JOIN climate_measurements AS t2 ON t1.site = t2.site AND t1.interval_cm + 1 = t2.interval_cm",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 5,
+      "sql": "SELECT ROUND(COUNT(CASE WHEN t2.\"ODP 967 wet-dry index\" > t1.\"ODP 967 wet-dry index\" THEN 1 ELSE NULL END) * 100.0 / COUNT(t1.\"ODP 967 wet-dry index\"), 2) AS percentage FROM climate_measurements AS t1 INNER JOIN climate_measurements AS t2 ON t1.site = t2.site AND t1.interval_cm = t2.interval_cm - 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 6,
+      "sql": "SELECT ROUND(SUM(CASE WHEN t1.\"ODP 967 wet-dry index\" > t2.\"ODP 967 wet-dry index\" THEN 1 ELSE 0 END) * 100.0 / COUNT(t1.\"ODP 967 wet-dry index\"), 2) AS percentage FROM climate_measurements AS t1 INNER JOIN climate_measurements AS t2 ON t1.\"Depth below seafloor_m\" = t2.\"Depth below seafloor_m\" + 1",
+      "path_length": 3,
+      "node_type": "end"
+    },
+    {
+      "path_index": 7,
+      "sql": "SELECT ROUND(SUM(CASE WHEN t1.\"ODP 967 wet-dry index\" > t2.\"ODP 967 wet-dry index\" THEN 1 ELSE 0 END) * 100.0 / COUNT(t1.\"ODP 967 wet-dry index\"), 2) AS percentage FROM climate_measurements AS t1 INNER JOIN climate_measurements AS t2 ON t1.\"Depth below seafloor_m\" = t2.\"Depth below seafloor_m\" + 1",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 8,
+      "sql": "SELECT ROUND((SUM(CASE WHEN current_index > previous_index THEN 1 ELSE 0 END) * 100.0) / COUNT(*), 2) AS percentage_increasing FROM (SELECT \"ODP 967 wet-dry index\" AS current_index, LAG(\"ODP 967 wet-dry index\") OVER (ORDER BY date) AS previous_index FROM \"radiocarbon_data\") AS trends",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 9,
+      "sql": "SELECT ROUND((SUM(CASE WHEN current_index > previous_index THEN 1 ELSE 0 END) * 100.0) / (COUNT(*) - 1), 2) AS percentage_increasing FROM (SELECT \"ODP 967 wet-dry index\" AS current_index, LAG(\"ODP 967 wet-dry index\") OVER (ORDER BY date) AS previous_index FROM \"radiocarbon_data\") AS trends WHERE NOT previous_index IS NULL",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 10,
+      "sql": "SELECT ROUND(CAST(SUM(increasing) AS REAL) * 100 / COUNT(date), 2) AS percentage_increasing FROM (SELECT date, \"ODP 967 wet-dry index\", prev_wet_dry_index, CASE WHEN \"ODP 967 wet-dry index\" > prev_wet_dry_index THEN 1 ELSE 0 END AS increasing FROM (SELECT date, \"ODP 967 wet-dry index\", LAG(\"ODP 967 wet-dry index\") OVER (ORDER BY date) AS prev_wet_dry_index FROM radiocarbon_data) AS subquery) AS subquery2",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 11,
+      "sql": "SELECT ROUND((SELECT COUNT(*) FROM (SELECT CASE WHEN \"ODP 967 wet-dry index\" > LAG(\"ODP 967 wet-dry index\") OVER (ORDER BY \"date\") THEN 1 ELSE 0 END AS increasing FROM \"radiocarbon_data\") WHERE increasing = 1) / COUNT(\"date\") * 100, 2) AS percentage_increasing_years",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 12,
+      "sql": "SELECT CAST(COUNT(*) AS REAL) * 100 / (SELECT COUNT(*) FROM radiocarbon_data) AS percentage_increasing_years FROM radiocarbon_data INNER JOIN (SELECT date, \"ODP 967 wet-dry index\", LAG(\"ODP 967 wet-dry index\") OVER (ORDER BY date) AS prev_index FROM radiocarbon_data) AS subquery ON subquery.date = radiocarbon_data.date WHERE subquery.\"ODP 967 wet-dry index\" > subquery.prev_index",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 13,
+      "sql": "SELECT ROUND(COUNT(CASE WHEN t2.\"date\" > t1.\"date\" THEN 1 ELSE NULL END) * 100.0 / COUNT(t1.\"date\"), 2) AS percentage FROM \"radiocarbon_data\" AS t1 INNER JOIN \"radiocarbon_data\" AS t2 ON t1.\"date\" < t2.\"date\"",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 14,
+      "sql": "SELECT ROUND(COUNT(CASE WHEN t2.\"date\" - t1.\"date\" > 0 THEN 1 ELSE NULL END) * 100.0 / COUNT(t1.\"date\"), 2) AS percentage FROM \"radiocarbon_data\" AS t1 INNER JOIN \"radiocarbon_data\" AS t2 ON t1.\"date\" = t2.\"date\" - 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 15,
+      "sql": "SELECT ROUND(COUNT(CASE WHEN t1.date < t2.date THEN 1 ELSE NULL END) * 100.0 / COUNT(t1.date), 2) AS percentage_increasing_years FROM radiocarbon_data AS t1 INNER JOIN radiocarbon_data AS t2 ON t1.date = t2.date - 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 16,
+      "sql": "SELECT CAST(SUM(CASE WHEN trend > 0 THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(*) AS percentage FROM (SELECT \"ODP 967 wet-dry index\" - LAG(\"ODP 967 wet-dry index\") OVER (ORDER BY \"Site\") AS trend FROM climate_measurements) AS trends",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 17,
+      "sql": "SELECT CAST(SUM(CASE WHEN trend > 0 THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(*) AS percentage FROM (SELECT \"ODP 967 wet-dry index\" - LAG(\"ODP 967 wet-dry index\") OVER (ORDER BY \"Site\") AS trend FROM climate_measurements) AS trends",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 18,
+      "sql": "WITH yearly_trends AS (SELECT \"ODP 967 wet-dry index\", LAG(\"ODP 967 wet-dry index\") OVER (ORDER BY \"Depth below seafloor_m\") AS prev_index FROM climate_measurements) SELECT CAST(SUM(CASE WHEN \"ODP 967 wet-dry index\" > prev_index THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(*) AS percentage_increasing FROM yearly_trends",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 19,
+      "sql": "SELECT CAST(SUM(CASE WHEN \"ODP 967 wet-dry index\" > LAG(\"ODP 967 wet-dry index\") OVER (ORDER BY \"Depth below seafloor_m\") THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(*) AS percentage_increasing FROM climate_measurements",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 20,
+      "sql": "SELECT CAST(COUNT(*) AS REAL) * 100 / (SELECT COUNT(*) FROM climate_measurements) AS percentage FROM (SELECT \"ODP 967 wet-dry index\" - LAG(\"ODP 967 wet-dry index\") OVER (ORDER BY age_ky) AS diff FROM climate_measurements) AS diff_table WHERE diff > 0",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 21,
+      "sql": "SELECT ROUND(CAST(COUNT(CASE WHEN diff > 0 THEN 1 END) AS REAL) * 100 / (SELECT COUNT(*) FROM climate_measurements), 2) AS percentage FROM (SELECT \"ODP 967 wet-dry index\" - LAG(\"ODP 967 wet-dry index\") OVER (ORDER BY age_ky) AS diff FROM climate_measurements) AS diff_table",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 22,
+      "sql": "SELECT CAST((SELECT COUNT(*) FROM (SELECT \"ODP 967 wet-dry index\" - LAG(\"ODP 967 wet-dry index\") OVER (ORDER BY \"Age_ky\") AS trend FROM climate_measurements) WHERE trend > 0) AS REAL) * 100 / (SELECT COUNT(*) FROM climate_measurements) AS percentage",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 23,
+      "sql": "SELECT ROUND((SUM(CASE WHEN \"ODP 967 wet-dry index\" > LAG(\"ODP 967 wet-dry index\") OVER (ORDER BY date) THEN 1 ELSE 0 END) * 100.0 / COUNT(date)), 2) AS percentage_of_increasing_years FROM climate_measurements",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 24,
+      "sql": "SELECT ROUND(CAST(SUM(CASE WHEN trend = 1 THEN 1 ELSE 0 END) AS REAL) / COUNT(*), 2) AS percentage_increasing_years FROM (SELECT \"ODP 967 wet-dry index\", CASE WHEN \"ODP 967 wet-dry index\" > LAG(\"ODP 967 wet-dry index\") OVER (ORDER BY \"ODP 967 wet-dry index\") THEN 1 ELSE 0 END AS trend FROM climate_measurements) AS subquery",
+      "path_length": 8,
+      "node_type": "end"
+    },
+    {
+      "path_index": 25,
+      "sql": "SELECT ROUND(CAST(SUM(CASE WHEN \"ODP 967 wet-dry index\" > LAG(\"ODP 967 wet-dry index\") THEN 1 ELSE 0 END) AS REAL) / COUNT(*), 2) AS percentage_increasing_years FROM climate_measurements",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 26,
+      "sql": "SELECT CAST(SUM(CASE WHEN interval_cm > prev_interval_cm THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(*) AS percentage_increasing_years FROM (SELECT interval_cm, LAG(interval_cm) OVER (ORDER BY age_ky) AS prev_interval_cm FROM climate_measurements) AS trends",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 27,
+      "sql": "SELECT CAST(increasing_years AS REAL) * 100 / COUNT(*) AS percentage_increasing_years FROM (SELECT site, interval_cm, LAG(interval_cm) OVER (PARTITION BY site ORDER BY age_ky) AS prev_interval_cm FROM climate_measurements) AS trends INNER JOIN (SELECT COUNT(*) AS increasing_years FROM (SELECT site, interval_cm, LAG(interval_cm) OVER (PARTITION BY site ORDER BY age_ky) AS prev_interval_cm FROM climate_measurements) AS trends WHERE interval_cm > prev_interval_cm) AS increasing_years_count ON TRUE",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 28,
+      "sql": "SELECT ROUND((CAST(SUM(CASE WHEN trend > 0 THEN 1 ELSE 0 END) AS REAL) / COUNT(*)) * 100, 2) AS percentage_increasing_years FROM (SELECT site, interval_cm, \"ODP 967 wet-dry index\", \"ODP 967 wet-dry index\" - LAG(\"ODP 967 wet-dry index\") OVER (PARTITION BY site ORDER BY interval_cm) AS trend FROM climate_measurements) AS trends",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 29,
+      "sql": "SELECT ROUND(SUM(CASE WHEN t2.\"ODP 967 wet-dry index\" > t1.\"ODP 967 wet-dry index\" THEN 1 ELSE 0 END) / COUNT(t1.\"ODP 967 wet-dry index\"), 2) AS percentage_increasing FROM climate_measurements AS t1 INNER JOIN climate_measurements AS t2 ON t1.\"Depth below seafloor_m\" + 1 = t2.\"Depth below seafloor_m\"",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 30,
+      "sql": "SELECT ROUND(CAST(SUM(CASE WHEN t1.\"ODP 967 wet-dry index\" > t2.\"ODP 967 wet-dry index\" THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(t1.\"Depth below seafloor_m\"), 2) AS percentage FROM climate_measurements AS t1 INNER JOIN climate_measurements AS t2 ON t1.\"Depth below seafloor_m\" = t2.\"Depth below seafloor_m\" - 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 31,
+      "sql": "SELECT ROUND(CAST(SUM(CASE WHEN t1.\"ODP 967 wet-dry index\" > t2.\"ODP 967 wet-dry index\" THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(t1.\"Depth below seafloor_m\"), 2) AS percentage FROM climate_measurements AS t1 INNER JOIN climate_measurements AS t2 ON t1.\"Depth below seafloor_m\" = t2.\"Depth below seafloor_m\" + 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 32,
+      "sql": "SELECT ROUND(SUM(CASE WHEN NOT LAG(\"ODP 967 wet-dry index\", 1) IS NULL AND \"ODP 967 wet-dry index\" > LAG(\"ODP 967 wet-dry index\", 1) THEN 1 ELSE 0 END) * 100.0 / COUNT(\"ODP 967 wet-dry index\"), 2) AS percentage_increasing FROM climate_measurements",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 33,
+      "sql": "SELECT ROUND((COUNT(CASE WHEN \"ODP 967 wet-dry index\" > LAG(\"ODP 967 wet-dry index\") OVER (ORDER BY \"date\") THEN 1 END) / COUNT(\"date\")) * 100, 2) AS percentage_increasing FROM radiocarbon_data",
+      "path_length": 6,
+      "node_type": "end"
+    }
+  ],
+  "2": [
+    {
+      "path_index": 0,
+      "sql": "SELECT ROUND(AVG(REPLACE(\"Barrington Atlas Rank\", ' or ', ' ')), 4) AS average_rank FROM roman_cities WHERE country = 'Greece'",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 1,
+      "sql": "SELECT ROUND(AVG(CAST(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", ' ') + 1, INSTR(\"Barrington Atlas Rank\", ' or ') - INSTR(\"Barrington Atlas Rank\", ' ') - 1) AS REAL) + CAST(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", ' or ') + 4) AS REAL)) / 2, 4) AS average_rank FROM \"roman_cities\" WHERE \"Country\" = 'Greece'",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 2,
+      "sql": "SELECT ROUND(AVG(CAST(REPLACE(\"Barrington Atlas Rank\", ' or ', '') AS REAL)), 4) AS average_rank FROM \"roman_cities\" WHERE \"Country\" = 'Greece'",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 3,
+      "sql": "SELECT ROUND(AVG(CAST(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", 'or') + 3, 1) AS REAL) + CAST(SUBSTRING(\"Barrington Atlas Rank\", 1, INSTR(\"Barrington Atlas Rank\", 'or') - 1) AS REAL)) / 2, 4) AS avg_rank FROM roman_cities WHERE \"Country\" = 'Greece'",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 4,
+      "sql": "SELECT AVG(CAST(SUBSTRING('Barrington Atlas Rank', INSTR('Barrington Atlas Rank', 'or') + 3) AS REAL)) AS avg_rank FROM roman_cities WHERE country = 'Greece'",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 5,
+      "sql": "SELECT ROUND(AVG(CAST(SUBSTRING(\"Barrington Atlas Reference\", 1, INSTR(\"Barrington Atlas Reference\", ' or ') - 1) AS REAL) + CAST(SUBSTRING(\"Barrington Atlas Reference\", INSTR(\"Barrington Atlas Reference\", ' or ') + 3) AS REAL)) / 2, 4) AS avg_rank FROM \"roman_cities\" WHERE \"Country\" = 'Greece'",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 6,
+      "sql": "SELECT AVG(CAST(num1 AS REAL) + CAST(num2 AS REAL) / 2) AS avg_rank FROM (SELECT SUBSTRING(\"Barrington Atlas Reference\", 1, INSTR(\"Barrington Atlas Reference\", ' or ') - 1) AS num1, SUBSTRING(\"Barrington Atlas Reference\", INSTR(\"Barrington Atlas Reference\", ' or ') + 3) AS num2 FROM \"roman_cities\" WHERE \"Country\" = 'Greece')",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 7,
+      "sql": "SELECT ROUND(CASE WHEN \"Barrington Atlas Rank\" LIKE '% or %' THEN (CAST(SUBSTRING(\"Barrington Atlas Rank\", 1, INSTR(\"Barrington Atlas Rank\", ' or ') - 1) AS INTEGER) + CAST(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", ' or ') + 4) AS INTEGER)) / 2 ELSE CAST(\"Barrington Atlas Rank\" AS INTEGER) END, 4) AS average_rank FROM \"roman_cities\" WHERE \"Country\" = 'Greece'",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 8,
+      "sql": "SELECT ROUND((CAST(SUBSTRING(\"Barrington Atlas Rank\", 1, INSTR(\"Barrington Atlas Rank\", ' or ') - 1) AS INTEGER) + CAST(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", ' or ') + 4) AS INTEGER)) / 2, 4) AS average_rank FROM \"roman_cities\" WHERE \"Country\" = 'Greece'",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 9,
+      "sql": "SELECT ROUND(AVG(CAST(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", ' or ') + 4) AS REAL)), 4) AS average_rank FROM \"roman_cities\" WHERE \"Barrington Atlas Rank\" LIKE '% or %'",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 10,
+      "sql": "SELECT ROUND(AVG(CAST(SUBSTRING('Barrington Atlas Rank', INSTR('Barrington Atlas Rank', 'or') - 2, 2) AS REAL)), 4) AS avg_rank FROM roman_cities WHERE country = 'Greece'",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 11,
+      "sql": "SELECT ROUND(AVG(REPLACE(REPLACE(Barrington Atlas Rank, ' or ', ''), ' ', '')), 4) AS average_rank FROM roman_cities WHERE country = 'Greece'",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 12,
+      "sql": "SELECT ROUND(IF(INSTR(Barrington Atlas Rank, 'or') > 0, AVG(SUBSTR(Barrington Atlas Rank, INSTR(Barrington Atlas Rank, 'or') + 3), SUBSTR(Barrington Atlas Rank, 1, INSTR(Barrington Atlas Rank, 'or') - 1)), AVG(Barrington Atlas Rank)), 4) AS average_rank FROM roman_cities WHERE country = 'Greece'",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 13,
+      "sql": "SELECT AVG(CAST(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", ' ') + 1, LENGTH(\"Barrington Atlas Rank\") - INSTR(\"Barrington Atlas Rank\", ' ')) AS REAL)) AS avg_rank FROM roman_cities WHERE country = 'Greece'",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 14,
+      "sql": "SELECT ROUND(AVG(CAST(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", ' ') + 1, LENGTH(\"Barrington Atlas Rank\") - INSTR(\"Barrington Atlas Rank\", ' ')) AS REAL) + CAST(SUBSTRING(\"Barrington Atlas Rank\", 1, INSTR(\"Barrington Atlas Rank\", ' ') - 1) AS REAL)) / 2, 4) AS avg_rank FROM roman_cities WHERE \"Country\" = 'Greece'",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 15,
+      "sql": "SELECT ROUND(AVG(CASE WHEN INSTR(\"Barrington Atlas Rank\", ' or ') > 0 THEN (CAST(REPLACE(SUBSTRING(\"Barrington Atlas Rank\", 1, INSTR(\"Barrington Atlas Rank\", ' or ') - 1), ',', '') AS REAL) + CAST(REPLACE(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", ' or ') + 4), ',', '') AS REAL)) / 2 ELSE CAST(REPLACE(\"Barrington Atlas Rank\", ',', '') AS REAL) END), 4) AS average_rank FROM \"roman_cities\" WHERE \"Country\" = 'Greece'",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 16,
+      "sql": "SELECT AVG(CAST(SUBSTRING(\"Barrington Atlas Rank\", 1, INSTR(\"Barrington Atlas Rank\", ' or ') - 1) AS REAL) + CAST(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", ' or ') + 4) AS REAL)) / 2 AS avg_rank FROM \"roman_cities\" WHERE \"Country\" = 'Greece'",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 17,
+      "sql": "SELECT AVG(CAST(SUBSTRING(\"Barrington Atlas Rank\", 1, INSTR(\"Barrington Atlas Rank\", ' or ') - 1) AS REAL) + CAST(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", ' or ') + 4) AS REAL)) / 2 AS avg_rank FROM \"roman_cities\" WHERE \"Country\" = 'Greece'",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 18,
+      "sql": "SELECT ROUND(AVG(CAST(REPLACE(SUBSTRING(\"Barrington Atlas Rank\", 1, INSTR(\"Barrington Atlas Rank\", ' or ') - 1), ' ', '') AS REAL)) + AVG(CAST(REPLACE(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", ' or ') + 3), ' ', '') AS REAL)) / 2, 4) AS avg_rank FROM \"roman_cities\" WHERE \"Country\" = 'Greece'",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 19,
+      "sql": "SELECT ROUND(AVG(CASE WHEN \"Barrington Atlas Rank\" = '4 or 5' THEN (4 + 5) / 2 ELSE CAST(\"Barrington Atlas Rank\" AS REAL) END), 4) AS avg_rank FROM \"roman_cities\" WHERE \"Country\" = 'Greece'",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 20,
+      "sql": "SELECT ROUND(AVG(CASE WHEN \"Barrington Atlas Rank\" LIKE '%or%' THEN (CAST(SUBSTRING(\"Barrington Atlas Rank\", 1, INSTR(\"Barrington Atlas Rank\", ' or ') - 1) AS REAL) + CAST(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", ' or ') + 4) AS REAL)) / 2 ELSE CAST(\"Barrington Atlas Rank\" AS REAL) END), 4) AS average_rank FROM roman_cities",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 21,
+      "sql": "SELECT ROUND(AVG(CASE WHEN \"Barrington Atlas Rank\" LIKE '%or%' THEN (CAST(SUBSTRING(\"Barrington Atlas Rank\", 1, INSTR(\"Barrington Atlas Rank\", ' or ') - 1) AS REAL) + CAST(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", ' or ') + 4) AS REAL)) / 2 ELSE CAST(\"Barrington Atlas Rank\" AS REAL) END), 4) AS average_rank FROM \"roman_cities\" WHERE \"Country\" = 'Greece'",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 22,
+      "sql": "SELECT ROUND(AVG(CASE WHEN \"Barrington Atlas Rank\" LIKE '%or%' THEN (CAST(SUBSTRING(\"Barrington Atlas Rank\", 1, INSTR(\"Barrington Atlas Rank\", ' or ') - 1) AS REAL) + CAST(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", ' or ') + 4) AS REAL)) / 2 ELSE CAST(\"Barrington Atlas Rank\" AS REAL) END), 4) AS average_rank FROM \"roman_cities\" WHERE \"Country\" = 'Greece'",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 23,
+      "sql": "SELECT ROUND(AVG(CASE WHEN INSTR(\"Barrington Atlas Rank\", 'or') > 0 THEN (CAST(SUBSTRING(\"Barrington Atlas Rank\", 1, INSTR(\"Barrington Atlas Rank\", 'or') - 1) AS REAL) + CAST(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", 'or') + 3) AS REAL)) / 2 ELSE CAST(\"Barrington Atlas Rank\" AS REAL) END), 4) AS average_rank FROM \"roman_cities\" WHERE \"Country\" = 'Greece'",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 24,
+      "sql": "SELECT ROUND(AVG(CASE WHEN INSTR(\"Barrington Atlas Rank\", 'or') > 0 THEN (CAST(SUBSTRING(\"Barrington Atlas Rank\", 1, INSTR(\"Barrington Atlas Rank\", 'or') - 1) AS REAL) + CAST(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", 'or') + 3) AS REAL)) / 2 ELSE CAST(\"Barrington Atlas Rank\" AS REAL) END), 4) AS average_rank FROM \"roman_cities\" WHERE \"Country\" = 'Greece'",
+      "path_length": 3,
+      "node_type": "end"
+    },
+    {
+      "path_index": 25,
+      "sql": "SELECT ROUND(AVG(CAST(SUBSTRING(\"Barrington Atlas Rank\", 1, INSTR(\"Barrington Atlas Rank\", ' or') - 1) AS REAL)), 4) AS average_rank FROM roman_cities WHERE country = 'Greece' UNION ALL SELECT ROUND(AVG(CAST(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", ' or') + 3) AS REAL)), 4) AS average_rank FROM roman_cities WHERE country = 'Greece'",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 26,
+      "sql": "SELECT ROUND(AVG(CAST(SUBSTRING(\"Barrington Atlas Rank\", 1, INSTR(\"Barrington Atlas Rank\", ' or ') - 1) AS REAL) + CAST(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", ' or ') + 3) AS REAL)), 4) AS avg_rank FROM \"roman_cities\" WHERE \"Country\" LIKE 'Greece'",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 27,
+      "sql": "SELECT ROUND(AVG(CAST(CASE WHEN \"Barrington Atlas Rank\" LIKE '% or %' THEN CAST(SUBSTRING(\"Barrington Atlas Rank\", 1, INSTR(\"Barrington Atlas Rank\", ' or ') - 1) AS REAL) + CAST(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", ' or ') + 3) AS REAL) ELSE CAST(\"Barrington Atlas Rank\" AS REAL) END AS REAL)), 4) AS avg_rank FROM \"roman_cities\" WHERE \"Country\" = 'Greece'",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 28,
+      "sql": "SELECT ROUND(AVG(\"Barrington Atlas Rank\"), 4) AS average_rank FROM \"roman_cities\" WHERE \"Country\" = 'Greece'",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 29,
+      "sql": "SELECT ROUND(AVG(\"Barrington Atlas Rank\"), 4) AS average_rank FROM \"roman_cities\" WHERE \"Country\" = 'Greece'",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 30,
+      "sql": "SELECT AVG(\"Barrington Atlas Rank\") AS average_rank FROM \"roman_cities\" WHERE \"Country\" = 'Greece'",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 31,
+      "sql": "SELECT ROUND(AVG(\"Barrington Atlas Rank\"), 4) AS average_rank FROM \"roman_cities\" WHERE \"Country\" LIKE 'Greece'",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 32,
+      "sql": "SELECT AVG(REPLACE(\"Barrington Atlas Rank\", ' or ', '.')) AS average_rank FROM \"roman_cities\" WHERE \"country\" = 'Greece'",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 33,
+      "sql": "SELECT ROUND(AVG(REPLACE(\"Barrington Atlas Rank\", ' or ', '.')), 4) AS average_rank FROM roman_cities WHERE \"country\" = 'Greece'",
+      "path_length": 8,
+      "node_type": "end"
+    },
+    {
+      "path_index": 34,
+      "sql": "SELECT ROUND(AVG(CASE WHEN \"Barrington Atlas Rank\" LIKE '%or%' THEN (CAST(SUBSTRING(\"Barrington Atlas Rank\", 1, INSTR(\"Barrington Atlas Rank\", ' or ') - 1) AS REAL) + CAST(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", ' or ') + 4) AS REAL)) / 2 ELSE CAST(\"Barrington Atlas Rank\" AS REAL) END), 4) AS average_rank FROM \"roman_cities\" WHERE \"Country\" = 'Greece'",
+      "path_length": 8,
+      "node_type": "end"
+    },
+    {
+      "path_index": 35,
+      "sql": "SELECT ROUND(AVG(CASE WHEN \"Barrington Atlas Rank\" LIKE '%or%' THEN (CAST(SUBSTRING(\"Barrington Atlas Rank\", 1, INSTR(\"Barrington Atlas Rank\", ' or ') - 1) AS REAL) + CAST(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", ' or ') + 4) AS REAL)) / 2 ELSE CAST(\"Barrington Atlas Rank\" AS REAL) END), 4) AS average_rank FROM \"roman_cities\" WHERE \"Country\" = 'Greece'",
+      "path_length": 7,
+      "node_type": "end"
+    }
+  ],
+  "3": [
+    {
+      "path_index": 0,
+      "sql": "SELECT ROUND(ca, 4) AS calcium_ppm FROM climate_measurements ORDER BY \"ODP 967 Dust proxy\" ASC, \"ODP 967 wet-dry index\" ASC LIMIT 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 1,
+      "sql": "SELECT ROUND(ca, 4) AS calcium_ppm FROM climate_measurements ORDER BY \"ODP 967 Dust proxy\" ASC, \"ODP 967 wet-dry index\" ASC LIMIT 1",
+      "path_length": 8,
+      "node_type": "end"
+    },
+    {
+      "path_index": 2,
+      "sql": "SELECT ROUND(\"Ca\", 4) FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") FROM climate_measurements) ORDER BY \"ODP 967 Dust proxy\", \"ODP 967 wet-dry index\" LIMIT 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 3,
+      "sql": "SELECT ROUND(\"Ca\", 4) FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") FROM climate_measurements) ORDER BY \"ODP 967 Dust proxy\", \"ODP 967 wet-dry index\" LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 4,
+      "sql": "SELECT ROUND(ca, 4) AS calcium_ppm FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") FROM climate_measurements) AND \"ODP 967 wet-dry index\" = (SELECT MIN(\"ODP 967 wet-dry index\") FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") FROM climate_measurements))",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 5,
+      "sql": "SELECT ROUND(ca, 4) FROM climate_measurements ORDER BY \"ODP 967 Dust proxy\" ASC, \"ODP 967 wet-dry index\" ASC LIMIT 1",
+      "path_length": 8,
+      "node_type": "end"
+    },
+    {
+      "path_index": 6,
+      "sql": "SELECT ROUND(ca, 4) FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") FROM climate_measurements) AND \"ODP 967 wet-dry index\" = (SELECT MIN(\"ODP 967 wet-dry index\") FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") FROM climate_measurements))",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 7,
+      "sql": "SELECT \"Ca\" FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") FROM climate_measurements) ORDER BY \"ODP 967 wet-dry index\" ASC LIMIT 1",
+      "path_length": 3,
+      "node_type": "end"
+    },
+    {
+      "path_index": 8,
+      "sql": "SELECT ROUND(\"Ca\", 4) FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") FROM climate_measurements) AND \"ODP 967 wet-dry index\" = (SELECT MIN(\"ODP 967 wet-dry index\") FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") FROM climate_measurements))",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 9,
+      "sql": "SELECT ROUND(\"Ca\", 4) AS \"Ca\" FROM \"climate_measurements\" ORDER BY \"ODP 967 Dust proxy\" ASC, \"ODP 967 wet-dry index\" ASC LIMIT 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 10,
+      "sql": "SELECT \"Ca\" FROM \"climate_measurements\" WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") FROM \"climate_measurements\") AND \"ODP 967 wet-dry index\" = (SELECT MIN(\"ODP 967 wet-dry index\") FROM \"climate_measurements\" WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") FROM \"climate_measurements\"))",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 11,
+      "sql": "SELECT ROUND(\"Ca\", 4) FROM climate_measurements ORDER BY \"ODP 967 Dust proxy\" ASC, \"ODP 967 wet-dry index\" ASC LIMIT 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 12,
+      "sql": "SELECT ca FROM climate_measurements ORDER BY \"ODP 967 Dust proxy\" ASC, \"ODP 967 wet-dry index\" ASC LIMIT 1",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 13,
+      "sql": "SELECT ROUND(\"climate_measurements\".\"Ca\", 4) AS calcium_ppm FROM climate_measurements INNER JOIN radiocarbon_data ON \"climate_measurements\".\"date\" = \"radiocarbon_data\".\"date\" WHERE \"radiocarbon_data\".\"ODP 967 Dust proxy\" = (SELECT MIN(\"radiocarbon_data\".\"ODP 967 Dust proxy\") FROM radiocarbon_data) AND \"radiocarbon_data\".\"ODP 967 wet-dry index\" = (SELECT MIN(\"radiocarbon_data\".\"ODP 967 wet-dry index\") FROM radiocarbon_data WHERE \"radiocarbon_data\".\"ODP 967 Dust proxy\" = (SELECT MIN(\"radiocarbon_data\".\"ODP 967 Dust proxy\") FROM radiocarbon_data))",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 14,
+      "sql": "SELECT ROUND(\"Ca\", 4) FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") FROM climate_measurements) AND \"ODP 967 wet-dry index\" = (SELECT MIN(\"ODP 967 wet-dry index\") FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") FROM climate_measurements))",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 15,
+      "sql": "SELECT ROUND(t2.\"Ca\", 4) AS rounded_ca_value FROM (SELECT MIN(\"ODP 967 Dust proxy\") AS min_dust_proxy FROM climate_measurements) AS t1 INNER JOIN climate_measurements AS t2 ON t2.\"ODP 967 Dust proxy\" = t1.min_dust_proxy WHERE t2.\"ODP 967 wet-dry index\" = (SELECT MIN(\"ODP 967 wet-dry index\") FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = t1.min_dust_proxy)",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 16,
+      "sql": "SELECT ROUND(\"Ca\", 4) FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") FROM climate_measurements) AND \"ODP 967 wet-dry index\" = (SELECT MIN(\"ODP 967 wet-dry index\") FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") FROM climate_measurements))",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 17,
+      "sql": "SELECT ROUND(t1.\"Ca\", 4) FROM climate_measurements AS t1 WHERE t1.\"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") FROM climate_measurements) AND t1.\"ODP 967 wet-dry index\" = (SELECT MIN(\"ODP 967 wet-dry index\") FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") FROM climate_measurements))",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 18,
+      "sql": "SELECT ROUND((SELECT \"Ca\" FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") AS min_dust_proxy FROM climate_measurements) ORDER BY \"ODP 967 wet-dry index\" ASC LIMIT 1), 4) AS result",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 19,
+      "sql": "SELECT ROUND(\"Ca\", 4) AS final_result FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") AS min_dust_proxy FROM climate_measurements) AND \"ODP 967 wet-dry index\" = (SELECT MIN(\"ODP 967 wet-dry index\") AS min_wet_dry_index FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") AS min_dust_proxy FROM climate_measurements))",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 20,
+      "sql": "SELECT ROUND(\"Ca\", 4) AS final_result FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") AS min_dust_proxy FROM climate_measurements) AND \"ODP 967 wet-dry index\" = (SELECT MIN(\"ODP 967 wet-dry index\") AS min_wet_dry_index FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") AS min_dust_proxy FROM climate_measurements))",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 21,
+      "sql": "SELECT ROUND(ca, 4) AS calcium_ppm FROM climate_measurements ORDER BY \"ODP 967 Dust proxy\", \"ODP 967 wet-dry index\" LIMIT 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 22,
+      "sql": "SELECT ROUND(ca, 4) AS calcium_ppm FROM climate_measurements ORDER BY \"ODP 967 Dust proxy\", \"ODP 967 wet-dry index\" LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 23,
+      "sql": "SELECT ROUND(ca, 4) AS calcium_ppm FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") FROM climate_measurements) ORDER BY \"ODP 967 wet-dry index\" LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 24,
+      "sql": "SELECT ROUND(\"Ca\", 4) AS calcium_value FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") AS min_dust_proxy FROM climate_measurements) AND \"ODP 967 wet-dry index\" = (SELECT MIN(\"ODP 967 wet-dry index\") AS min_wet_dry_index FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") AS min_dust_proxy FROM climate_measurements))",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 25,
+      "sql": "SELECT ROUND(ca, 4) FROM climate_measurements ORDER BY \"ODP 967 Dust proxy\" ASC, \"ODP 967 wet-dry index\" ASC LIMIT 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 26,
+      "sql": "SELECT ROUND(ca, 4) FROM climate_measurements ORDER BY \"ODP 967 Dust proxy\" ASC, \"ODP 967 wet-dry index\" ASC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 27,
+      "sql": "SELECT ca FROM climate_measurements ORDER BY \"ODP 967 Dust proxy\" ASC, \"ODP 967 wet-dry index\" ASC LIMIT 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 28,
+      "sql": "SELECT ROUND(ca, 4) AS ca FROM climate_measurements ORDER BY \"ODP 967 Dust proxy\" ASC, \"ODP 967 wet-dry index\" ASC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 29,
+      "sql": "SELECT ROUND(t1.ca, 4) AS calcium_ppm FROM climate_measurements AS t1 WHERE t1.\"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") FROM climate_measurements) AND t1.\"ODP 967 wet-dry index\" = (SELECT MIN(\"ODP 967 wet-dry index\") FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") FROM climate_measurements))",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 30,
+      "sql": "SELECT ROUND(\"Ca\", 4) AS rounded_ca FROM \"climate_measurements\" WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") AS min_dust_proxy FROM \"climate_measurements\")",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 31,
+      "sql": "SELECT ROUND(\"Ca\", 4) AS calcium FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") FROM climate_measurements)",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 32,
+      "sql": "SELECT ROUND((SELECT \"Ca\" FROM climate_measurements ORDER BY \"ODP 967 Dust proxy\" ASC, \"Site\" ASC LIMIT 1), 4) AS calcium",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 33,
+      "sql": "SELECT ROUND(\"Ca\", 4) AS calcium_value FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") AS min_dust_proxy FROM climate_measurements) AND \"ODP 967 wet-dry index\" = (SELECT MIN(\"ODP 967 wet-dry index\") AS min_wet_dry_index FROM climate_measurements WHERE \"ODP 967 Dust proxy\" = (SELECT MIN(\"ODP 967 Dust proxy\") AS min_dust_proxy FROM climate_measurements))",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 34,
+      "sql": "SELECT ROUND(t1.\"Ca\", 4) AS result FROM climate_measurements AS t1 INNER JOIN (SELECT MIN(\"ODP 967 Dust proxy\") AS min_dust_proxy FROM climate_measurements) AS t2 ON t1.\"ODP 967 Dust proxy\" = t2.min_dust_proxy ORDER BY t1.\"ODP 967 wet-dry index\" LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    }
+  ],
+  "4": [
+    {
+      "path_index": 0,
+      "sql": "SELECT ROUND((SELECT MAX(al) AS max_al FROM climate_measurements WHERE \"Depth below seafloor_m\" = (SELECT t2.\"Depth below seafloor_m\" FROM (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' AND latitude = (SELECT MAX(latitude) FROM radiocarbon_data WHERE culture = 'Neolithic')) AS t1 JOIN climate_measurements AS t2 ON ABS(t2.\"Depth below seafloor_m\" - t1.date) = (SELECT MIN(ABS(\"Depth below seafloor_m\" - t1.date)) FROM climate_measurements AS t2 JOIN (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' AND latitude = (SELECT MAX(latitude) FROM radiocarbon_data WHERE culture = 'Neolithic')) AS t1 ON 1 = 1))), 4) AS result",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 1,
+      "sql": "SELECT ROUND((SELECT MAX(Al) AS max_al FROM climate_measurements WHERE depth_below_seafloor_m = (SELECT depth_below_seafloor_m FROM climate_measurements WHERE date = (SELECT MAX(date) FROM radiocarbon_data WHERE culture = 'Neolithic' AND latitude = (SELECT MAX(latitude) FROM radiocarbon_data WHERE culture = 'Neolithic'))))), 4)",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 2,
+      "sql": "SELECT ROUND((SELECT MAX(al) AS max_al FROM climate_measurements WHERE depth_below_seafloor_m = (SELECT depth_below_seafloor_m FROM climate_measurements WHERE date = (SELECT MAX(date) FROM radiocarbon_data WHERE culture = 'Neolithic' AND latitude = (SELECT MAX(latitude) FROM radiocarbon_data WHERE culture = 'Neolithic')))), 4)",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 3,
+      "sql": "SELECT ROUND((SELECT MAX(\"Al\") FROM \"climate_measurements\" WHERE \"Depth below seafloor_m\" IN (SELECT \"Depth below seafloor_m\" FROM \"climate_measurements\" ORDER BY ABS(\"Depth below seafloor_m\" - (SELECT STRFTIME('%Y', \"radiocarbon_data\".\"date\") AS year FROM \"radiocarbon_data\" WHERE \"Material\" = 'Neolithic' AND \"Latitude\" = (SELECT MAX(\"Latitude\") FROM \"radiocarbon_data\" WHERE \"Material\" = 'Neolithic') ORDER BY \"date\" DESC LIMIT 1)) LIMIT 1)), 4)",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 4,
+      "sql": "SELECT ROUND(MAX(c.al), 4) AS max_aluminum_value FROM climate_measurements AS c JOIN (SELECT MIN(ABS(STRFTIME('%Y', r.\"date\") - STRFTIME('%Y', (SELECT MAX(\"date\") FROM radiocarbon_data WHERE material = 'Neolithic' AND latitude = 90)))) AS min_diff) AS d ON 1 = 1 WHERE STRFTIME('%Y', c.\"date\") = (SELECT STRFTIME('%Y', r.\"date\") FROM radiocarbon_data AS r WHERE r.material = 'Neolithic' AND r.latitude = 90 ORDER BY ABS(STRFTIME('%Y', r.\"date\") - STRFTIME('%Y', (SELECT MAX(\"date\") FROM radiocarbon_data WHERE material = 'Neolithic' AND latitude = 90))) ASC LIMIT 1)",
+      "path_length": 8,
+      "node_type": "end"
+    },
+    {
+      "path_index": 5,
+      "sql": "SELECT ROUND(MAX(al), 4) AS max_aluminum_value FROM climate_measurements CROSS JOIN (SELECT MAX(STRFTIME('%Y', \"date\")) AS most_northern_year FROM radiocarbon_data WHERE material = 'Neolithic' AND latitude = 90) WHERE STRFTIME('%Y', \"date\") = (SELECT most_northern_year - MIN(ABS(STRFTIME('%Y', \"date\") - most_northern_year)) AS closest_year_difference FROM climate_measurements CROSS JOIN (SELECT MAX(STRFTIME('%Y', \"date\")) AS most_northern_year FROM radiocarbon_data WHERE material = 'Neolithic' AND latitude = 90))",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 6,
+      "sql": "SELECT (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1) AS closest_year, (SELECT MAX(al) FROM climate_measurements INNER JOIN (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1) AS rd ON ABS(age_ky - rd.date) = (SELECT MIN(ABS(age_ky - rd.date)) FROM climate_measurements)) AS max_aluminum_value",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 7,
+      "sql": "SELECT (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1) AS closest_year, ROUND((SELECT MAX(al) FROM climate_measurements WHERE ABS(age_ky - (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1)) = (SELECT MIN(ABS(age_ky - (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1))) FROM climate_measurements)), 4) AS max_aluminum_value",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 8,
+      "sql": "SELECT rd.date AS neolithicyear, MAX(cm.al) AS maxaluminum FROM radiocarbon_data AS rd JOIN climate_measurements AS cm ON ABS(rd.date - cm.interval_cm) = (SELECT MIN(ABS(date - interval_cm)) FROM radiocarbon_data AS rd JOIN climate_measurements AS cm ON 1 = 1 WHERE rd.culture = 'Neolithic') WHERE rd.culture = 'Neolithic' GROUP BY rd.date ORDER BY rd.date DESC LIMIT 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 9,
+      "sql": "SELECT (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' AND latitude = (SELECT MAX(latitude) FROM radiocarbon_data WHERE culture = 'Neolithic')) AS neolithicyear, (SELECT MAX(al) FROM climate_measurements WHERE date = (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' AND latitude = (SELECT MAX(latitude) FROM radiocarbon_data WHERE culture = 'Neolithic'))) AS maxaluminum",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 10,
+      "sql": "SELECT r1.date AS most_northern_year, MAX(c.al) AS max_aluminum_value FROM radiocarbon_data AS r1 JOIN climate_measurements AS c ON ABS(r1.date - c.\"Depth below seafloor_m\") = (SELECT MIN(ABS(r2.date - c2.\"Depth below seafloor_m\")) FROM radiocarbon_data AS r2 JOIN climate_measurements AS c2 ON r2.date = (SELECT date FROM radiocarbon_data WHERE region = 'Northern Italy' AND material = 'Bone' ORDER BY latitude DESC LIMIT 1)) WHERE r1.region = 'Northern Italy' AND r1.material = 'Bone'",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 11,
+      "sql": "SELECT r1.date AS most_northern_year, ROUND(MAX(c.al), 4) AS max_aluminum_value FROM radiocarbon_data AS r1 JOIN climate_measurements AS c ON ABS(r1.date - c.\"Depth below seafloor_m\") = (SELECT MIN(ABS(r2.date - c2.\"Depth below seafloor_m\")) FROM radiocarbon_data AS r2 JOIN climate_measurements AS c2 ON r2.date = (SELECT date FROM radiocarbon_data WHERE region = 'Northern Italy' AND material = 'Bone' ORDER BY latitude DESC LIMIT 1)) WHERE r1.region = 'Northern Italy' AND r1.material = 'Bone'",
+      "path_length": 8,
+      "node_type": "end"
+    },
+    {
+      "path_index": 12,
+      "sql": "SELECT ROUND((SELECT MAX(Al) FROM climate_measurements WHERE date = (SELECT date FROM (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY ABS(date - (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1)) LIMIT 1)))), 4)",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 13,
+      "sql": "SELECT ROUND((SELECT MAX(al) FROM climate_measurements WHERE date = (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY ABS(date - (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1)) LIMIT 1)), 4)",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 14,
+      "sql": "SELECT ROUND((SELECT MAX(\"T2\".\"Al\") FROM radiocarbon_data AS t1 INNER JOIN climate_measurements AS t2 ON STRFTIME('%Y', t2.\"date\") = (SELECT STRFTIME('%Y', t2.\"date\") FROM radiocarbon_data AS t1 INNER JOIN climate_measurements AS t2 ON STRFTIME('%Y', t2.\"date\") = (SELECT STRFTIME('%Y', t1.\"date\") FROM radiocarbon_data AS t1 WHERE culture = 'Neolithic' ORDER BY t1.\"Latitude\" DESC LIMIT 1) ORDER BY ABS(t1.\"date\" - t2.\"date\") LIMIT 1)), 4) AS max_al",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 15,
+      "sql": "SELECT ROUND((SELECT MAX(al) FROM climate_measurements WHERE STRFTIME('%Y', date) = (SELECT STRFTIME('%Y', date) FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1)), 4) AS max_aluminum_value",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 16,
+      "sql": "SELECT ROUND(MAX(t2.al), 4) AS max_aluminum_value FROM radiocarbon_data AS t1 JOIN climate_measurements AS t2 ON t1.culture = 'Neolithic' WHERE STRFTIME('%Y', t1.date) = (SELECT STRFTIME('%Y', date) FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1)",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 17,
+      "sql": "SELECT t2.closest_year, t3.max_aluminum_value FROM (SELECT MAX(date) AS most_northern_year FROM radiocarbon_data WHERE culture = 'Neolithic') AS t1 JOIN (SELECT date AS closest_year FROM climate_measurements WHERE STRFTIME('%Y', date) = (SELECT STRFTIME('%Y', MAX(date)) FROM radiocarbon_data WHERE culture = 'Neolithic')) AS t2 ON 1 = 1 JOIN (SELECT MAX(al) AS max_aluminum_value FROM climate_measurements WHERE STRFTIME('%Y', date) = (SELECT STRFTIME('%Y', MAX(date)) FROM radiocarbon_data WHERE culture = 'Neolithic')) AS t3 ON 1 = 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 18,
+      "sql": "SELECT t2.closest_year, t3.max_aluminum_value FROM (SELECT MAX(date) AS most_northern_year FROM radiocarbon_data WHERE culture = 'Neolithic') AS t1 JOIN (SELECT date AS closest_year FROM climate_measurements WHERE ABS(STRFTIME('%Y', date) - STRFTIME('%Y', t1.most_northern_year)) = (SELECT MIN(ABS(STRFTIME('%Y', date) - STRFTIME('%Y', t1.most_northern_year))) FROM climate_measurements)) AS t2 ON 1 = 1 JOIN (SELECT MAX(al) AS max_aluminum_value FROM climate_measurements WHERE STRFTIME('%Y', date) = (SELECT STRFTIME('%Y', t2.closest_year))) AS t3 ON 1 = 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 19,
+      "sql": "SELECT MAX(al) AS max_aluminum FROM climate_measurements WHERE age_ky = (SELECT age_ky FROM climate_measurements WHERE age_ky = (SELECT MAX(age_ky) FROM climate_measurements WHERE age_ky <= (SELECT MAX(date) FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1)))",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 20,
+      "sql": "SELECT ROUND(MAX(t2.al), 4) AS max_aluminum FROM radiocarbon_data AS t1 JOIN climate_measurements AS t2 ON t2.age_ky = (SELECT MAX(age_ky) FROM climate_measurements WHERE age_ky <= (SELECT MAX(date) FROM radiocarbon_data WHERE culture = 'Neolithic' AND latitude = (SELECT MAX(latitude) FROM radiocarbon_data WHERE culture = 'Neolithic')))",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 21,
+      "sql": "SELECT ROUND((SELECT MAX(al) FROM climate_measurements WHERE depth_below_seafloor_m = (SELECT depth_below_seafloor_m FROM climate_measurements ORDER BY ABS(depth_below_seafloor_m - (SELECT date FROM radiocarbon_data WHERE region = 'Northern Italy' AND culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1)) LIMIT 1)), 4) AS max_aluminum_value",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 22,
+      "sql": "SELECT \n    ROUND(\n        (\n            SELECT MAX(Al)\n            FROM climate_measurements\n            WHERE Depth below seafloor_m = (\n                SELECT Depth below seafloor_m\n                FROM climate_measurements\n                ORDER BY ABS(Depth below seafloor_m - (\n                    SELECT date\n                    FROM radiocarbon_data\n                    WHERE Region = 'Northern Italy' AND Culture = 'Neolithic'\n                    ORDER BY Latitude DESC\n                    LIMIT 1\n                ))\n                LIMIT 1\n            )\n        ), 4\n    ) AS max_aluminum_value;",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 23,
+      "sql": "SELECT ROUND(MAX(t2.al), 4) AS max_aluminum FROM radiocarbon_data AS t1 INNER JOIN climate_measurements AS t2 ON STRFTIME('%Y', t2.date) = (SELECT date FROM climate_measurements ORDER BY ABS(STRFTIME('%Y', date) - (SELECT MAX(latitude) FROM radiocarbon_data WHERE culture = 'Neolithic')) LIMIT 1) WHERE t1.culture = 'Neolithic'",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 24,
+      "sql": "SELECT ROUND(MAX(climate_measurements.al), 4) AS result FROM climate_measurements WHERE ABS(climate_measurements.\"Depth below seafloor_m\" - (SELECT MAX(radiocarbon_data.date) FROM radiocarbon_data WHERE radiocarbon_data.culture = 'Neolithic')) ORDER BY ABS(climate_measurements.\"Depth below seafloor_m\" - (SELECT MAX(radiocarbon_data.date) FROM radiocarbon_data WHERE radiocarbon_data.culture = 'Neolithic')) LIMIT 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 25,
+      "sql": "SELECT ROUND(max_al, 4) AS result FROM (SELECT MAX(al) AS max_al FROM climate_measurements WHERE STRFTIME('%Y', date) = (SELECT STRFTIME('%Y', date) AS closest_year FROM climate_measurements ORDER BY ABS(STRFTIME('%Y', date) - (SELECT MAX(date) AS max_date FROM radiocarbon_data WHERE culture = 'Neolithic')) LIMIT 1))",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 26,
+      "sql": "WITH northern_neolithic_year AS (SELECT date FROM radiocarbon_data WHERE region = 'Sicily' AND culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1) SELECT ROUND((SELECT MAX(al) FROM climate_measurements AS cm JOIN northern_neolithic_year AS nny ON ABS(cm.year - nny.date) = (SELECT MIN(ABS(cm.year - nny.date)) FROM climate_measurements AS cm JOIN northern_neolithic_year AS nny ON 1 = 1)), 4) AS max_aluminum_value",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 27,
+      "sql": "WITH northern_neolithic_year AS (SELECT date FROM radiocarbon_data WHERE region = 'Sicily' AND culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1) SELECT ROUND((SELECT MAX(al) FROM climate_measurements WHERE ABS(year - (SELECT date FROM northern_neolithic_year)) = (SELECT MIN(ABS(year - (SELECT date FROM northern_neolithic_year))) FROM climate_measurements)), 4) AS max_aluminum_value",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 28,
+      "sql": "WITH northern_neolithic_year AS (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1) SELECT ROUND((SELECT MAX(al) FROM climate_measurements AS cm JOIN northern_neolithic_year AS nny ON ABS(cm.year - nny.date) = (SELECT MIN(ABS(cm.year - nny.date)) FROM climate_measurements AS cm JOIN northern_neolithic_year AS nny ON cm.year = nny.date)), 4) AS max_aluminum_value",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 29,
+      "sql": "WITH northern_neolithic_year AS (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1) SELECT ROUND((SELECT MAX(al) FROM climate_measurements WHERE ABS(al - (SELECT date FROM northern_neolithic_year)) = (SELECT MIN(ABS(al - (SELECT date FROM northern_neolithic_year))) FROM climate_measurements)), 4) AS max_aluminum_value",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 30,
+      "sql": "SELECT ROUND(MAX(al), 4) AS max_aluminum FROM climate_measurements WHERE date = (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' AND material = 'Bone' ORDER BY latitude DESC, date DESC LIMIT 1)",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 31,
+      "sql": "SELECT ROUND(MAX(al), 4) AS max_aluminum FROM climate_measurements WHERE date = (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' AND material = 'Bone' ORDER BY latitude DESC, date DESC LIMIT 1) OR date IN (SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' AND material = 'Bone' ORDER BY latitude DESC, date DESC LIMIT 1 OFFSET 1)",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 32,
+      "sql": "SELECT ROUND(MAX(al), 4) FROM climate_measurements WHERE date = (SELECT date FROM (SELECT date, ABS(latitude - (SELECT MAX(latitude) FROM radiocarbon_data WHERE culture = 'Neolithic')) AS diff FROM radiocarbon_data WHERE culture = 'Neolithic') ORDER BY diff ASC LIMIT 1)",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 33,
+      "sql": "SELECT date FROM radiocarbon_data WHERE culture = 'Neolithic' ORDER BY latitude DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 34,
+      "sql": "WITH neolithicyear AS (SELECT MAX(date) AS year FROM radiocarbon_data WHERE culture = 'Neolithic' AND latitude = (SELECT MAX(latitude) FROM radiocarbon_data WHERE culture = 'Neolithic')), closestclimateyear AS (SELECT MAX(al) AS max_aluminum FROM climate_measurements WHERE date BETWEEN (SELECT year FROM neolithicyear) - 1 AND (SELECT year FROM neolithicyear) + 1) SELECT ROUND((SELECT max_aluminum FROM closestclimateyear), 4) AS max_aluminum_value",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 35,
+      "sql": "WITH neolithicyear AS (SELECT MAX(date) AS year FROM radiocarbon_data WHERE culture = 'Neolithic'), closestclimateyear AS (SELECT MAX(al) AS max_aluminum FROM climate_measurements WHERE date BETWEEN (SELECT year FROM neolithicyear) - 1 AND (SELECT year FROM neolithicyear) + 1) SELECT ROUND((SELECT max_aluminum FROM closestclimateyear), 4) AS max_aluminum_value",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 36,
+      "sql": "SELECT ROUND(MAX(t2.\"Al\"), 4) AS max_aluminum_value FROM (SELECT STRFTIME('%Y', t1.\"date\") AS year, t1.latitude FROM radiocarbon_data AS t1 WHERE t1.culture = 'Neolithic' ORDER BY t1.latitude DESC LIMIT 1) AS t3 INNER JOIN climate_measurements AS t2 ON ABS(t2.\"Depth below seafloor_m\" - t3.year) = (SELECT MIN(ABS(t2.\"Depth below seafloor_m\" - t3.year)) FROM climate_measurements AS t2)",
+      "path_length": 8,
+      "node_type": "end"
+    },
+    {
+      "path_index": 37,
+      "sql": "SELECT ROUND(MAX(t2.al), 4) AS max_aluminum_value FROM (SELECT STRFTIME('%Y', t1.\"date\") AS year, t1.latitude FROM radiocarbon_data AS t1 WHERE t1.culture = 'Neolithic' ORDER BY t1.latitude DESC LIMIT 1) AS t3 INNER JOIN climate_measurements AS t2 ON ABS(t2.\"date\" - t3.year) = (SELECT MIN(ABS(t2.\"date\" - t3.year)) FROM climate_measurements AS t2)",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 38,
+      "sql": "SELECT (SELECT MAX(date) FROM radiocarbon_data WHERE culture = 'Neolithic' AND material = 'Human' ORDER BY latitude DESC LIMIT 1) AS northern_year, (SELECT MAX(al) FROM climate_measurements WHERE date = (SELECT MIN(ABS(date - northern_year)) AS closest_year FROM climate_measurements)) AS max_aluminum",
+      "path_length": 3,
+      "node_type": "end"
+    }
+  ],
+  "5": [
+    {
+      "path_index": 0,
+      "sql": "SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 1,
+      "sql": "SELECT w1.city FROM worldcities AS w1 INNER JOIN worldcities AS w2 ON w1.city = w2.city WHERE w1.lat < 0 AND w2.lng < 0 ORDER BY w1.population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 2,
+      "sql": "SELECT city FROM worldcities WHERE lat < 0 ORDER BY population DESC LIMIT 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 3,
+      "sql": "SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 4,
+      "sql": "SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 5,
+      "sql": "SELECT * FROM worldcities WHERE lat < 0 AND lng < 0 AND population = (SELECT MAX(population) FROM worldcities WHERE lat < 0 AND lng < 0)",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 6,
+      "sql": "SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1",
+      "path_length": 8,
+      "node_type": "end"
+    },
+    {
+      "path_index": 7,
+      "sql": "SELECT city FROM worldcities WHERE city IN (SELECT city FROM worldcities WHERE lat < 0) AND city IN (SELECT city FROM worldcities WHERE lng < 0) ORDER BY population DESC LIMIT 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 8,
+      "sql": "SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 9,
+      "sql": "SELECT t1.city FROM worldcities AS t1 INNER JOIN worldcities AS t2 ON t1.city = t2.city WHERE t1.latitude < 0 AND t2.longitude < 0 ORDER BY t1.population DESC LIMIT 1",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 10,
+      "sql": "SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 11,
+      "sql": "SELECT city FROM worldcities WHERE (CASE WHEN lat < 0 THEN 1 ELSE 0 END) + (CASE WHEN lng < 0 THEN 1 ELSE 0 END) > 1 ORDER BY population DESC LIMIT 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 12,
+      "sql": "SELECT city FROM (SELECT * FROM worldcities WHERE lat < 0 AND lng < 0) ORDER BY population DESC LIMIT 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 13,
+      "sql": "SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 14,
+      "sql": "SELECT city FROM worldcities WHERE city IN (SELECT city FROM worldcities WHERE lat < 0 AND lng < 0) ORDER BY population DESC LIMIT 1",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 15,
+      "sql": "SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 16,
+      "sql": "SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 17,
+      "sql": "SELECT t1.city FROM worldcities AS t1 INNER JOIN (SELECT city FROM worldcities WHERE lat < 0) AS t2 ON t1.city = t2.city INNER JOIN (SELECT city FROM worldcities WHERE lng < 0) AS t3 ON t1.city = t3.city ORDER BY t1.population DESC LIMIT 1",
+      "path_length": 3,
+      "node_type": "end"
+    },
+    {
+      "path_index": 18,
+      "sql": "SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 19,
+      "sql": "SELECT city FROM worldcities WHERE city IN (SELECT city FROM worldcities WHERE lat < 0) AND city IN (SELECT city FROM worldcities WHERE lat > 0) ORDER BY population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 20,
+      "sql": "SELECT city FROM worldcities WHERE city IN (SELECT city FROM worldcities WHERE lat < 0 AND lng < 0) ORDER BY population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 21,
+      "sql": "SELECT t1.city, t1.population FROM worldcities AS t1 INNER JOIN (SELECT city, population FROM worldcities WHERE lat < 0 AND lng < 0) AS t2 ON t1.city = t2.city ORDER BY t1.population DESC LIMIT 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 22,
+      "sql": "SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 23,
+      "sql": "SELECT city, population FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 24,
+      "sql": "SELECT city, population FROM worldcities WHERE lat < 0 INTERSECT SELECT city, population FROM worldcities WHERE lng < 0 ORDER BY population DESC LIMIT 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 25,
+      "sql": "SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 26,
+      "sql": "SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 27,
+      "sql": "SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 28,
+      "sql": "SELECT city FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 29,
+      "sql": "SELECT t1.city FROM worldcities AS t1 INNER JOIN worldcities AS t2 ON t1.city = t2.city WHERE t1.lat < 0 AND t2.lng < 0 ORDER BY t1.population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 30,
+      "sql": "SELECT name FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 31,
+      "sql": "SELECT lat, lng, population FROM worldcities WHERE lat < 0 AND lng < 0 ORDER BY population DESC LIMIT 1",
+      "path_length": 7,
+      "node_type": "end"
+    }
+  ],
+  "6": [
+    {
+      "path_index": 0,
+      "sql": "SELECT COUNT(t2.city) FROM roman_cities AS t1 JOIN worldcities AS t2 ON ABS(t1.\"Latitude (Y)\" - t2.lat) <= 0.1 AND ABS(t1.\"Longitude (X)\" - t2.lng) <= 0.1 WHERE t2.population > 100000",
+      "path_length": 3,
+      "node_type": "end"
+    },
+    {
+      "path_index": 1,
+      "sql": "SELECT COUNT(t2.city) FROM roman_cities AS t1 JOIN worldcities AS t2 ON ABS(t1.\"Latitude (Y)\" - t2.lat) <= 0.1 AND ABS(t1.\"Longitude (X)\" - t2.lng) <= 0.1 WHERE t2.population > 100000",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 2,
+      "sql": "SELECT COUNT(*) FROM (SELECT modern_city.*, ancient_roman_city.*, (6371 * ACOS(COS(RADIANS(modern_city.lat)) * COS(RADIANS(ancient_roman_city.\"Latitude (Y)\")) * COS(RADIANS(modern_city.lng) - RADIANS(ancient_roman_city.\"Longitude (X)\")) + SIN(RADIANS(modern_city.lat)) * SIN(RADIANS(ancient_roman_city.\"Latitude (Y)\")))) AS distance FROM worldcities AS modern_city INNER JOIN roman_cities AS ancient_roman_city ON 1 = 1) WHERE distance <= 0.1",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 3,
+      "sql": "SELECT COUNT(*) FROM (SELECT modern_city.*, ancient_roman_city.*, (6371 * ACOS(COS(RADIANS(modern_city.lat)) * COS(RADIANS(ancient_roman_city.\"Latitude (Y)\")) * COS(RADIANS(modern_city.lng) - RADIANS(ancient_roman_city.\"Longitude (X)\")) + SIN(RADIANS(modern_city.lat)) * SIN(RADIANS(ancient_roman_city.\"Latitude (Y)\")))) AS distance FROM worldcities AS modern_city INNER JOIN roman_cities AS ancient_roman_city ON 1 = 1 WHERE modern_city.population > 100000) WHERE distance <= 0.1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 4,
+      "sql": "SELECT COUNT(t1.city) FROM worldcities AS t1 INNER JOIN roman_cities AS t2 ON ACOS(SIN(RADIANS(t1.lat)) * SIN(RADIANS(t2.\"Latitude (Y)\")) + COS(RADIANS(t1.lat)) * COS(RADIANS(t2.\"Latitude (Y)\")) * COS(RADIANS(t1.lng) - RADIANS(t2.\"Longitude (X)\"))) * 6371 < 0.1 WHERE t1.population > 100000",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 5,
+      "sql": "SELECT COUNT(DISTINCT worldcities.city) AS modern_cities_count FROM worldcities INNER JOIN roman_cities ON worldcities.lat = roman_cities.\"Latitude (Y)\" AND worldcities.lng = roman_cities.\"Longitude (X)\" WHERE worldcities.population > 100000 AND (3956 * ACOS(COS(RADIANS(worldcities.lat)) * COS(RADIANS(roman_cities.\"Latitude (Y)\")) * COS(RADIANS(worldcities.lng) - RADIANS(roman_cities.\"Longitude (X)\")) + SIN(RADIANS(worldcities.lat)) * SIN(RADIANS(roman_cities.\"Latitude (Y)\")))) < 0.1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 6,
+      "sql": "SELECT COUNT(DISTINCT worldcities.city) AS modern_cities_count FROM worldcities INNER JOIN roman_cities ON worldcities.lat = roman_cities.\"Latitude (Y)\" AND worldcities.lng = roman_cities.\"Longitude (X)\" WHERE worldcities.population > 100000 AND (3956 * ACOS(COS(RADIANS(worldcities.lat)) * COS(RADIANS(roman_cities.\"Latitude (Y)\")) * COS(RADIANS(worldcities.lng) - RADIANS(roman_cities.\"Longitude (X)\")) + SIN(RADIANS(worldcities.lat)) * SIN(RADIANS(roman_cities.\"Latitude (Y)\")))) < 0.1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 7,
+      "sql": "SELECT COUNT(t1.city) AS count_of_modern_cities FROM (SELECT city, lat, lng FROM worldcities WHERE population > 100000) AS t1 JOIN roman_cities AS t2 ON (ACOS(SIN(t1.lat * PI() / 180) * SIN(t2.\"Latitude (Y)\" * PI() / 180) + COS(t1.lat * PI() / 180) * COS(t2.\"Latitude (Y)\" * PI() / 180) * COS((t1.lng - t2.\"Longitude (X)\") * PI() / 180)) * 6371) < 0.1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 8,
+      "sql": "SELECT COUNT(DISTINCT w.city) FROM worldcities AS w INNER JOIN roman_cities AS r ON 6371 * ACOS(COS(RADIANS(w.lat)) * COS(RADIANS(r.\"Latitude (Y)\")) * COS(RADIANS(w.lng) - RADIANS(r.\"Longitude (X)\")) + SIN(RADIANS(w.lat)) * SIN(RADIANS(r.\"Latitude (Y)\"))) <= 0.1 WHERE w.population > 100000",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 9,
+      "sql": "SELECT COUNT(DISTINCT city) FROM worldcities AS w INNER JOIN roman_cities AS r ON w.lat BETWEEN r.\"Latitude (Y)\" - 0.1 AND r.\"Latitude (Y)\" + 0.1 AND w.lng BETWEEN r.\"Longitude (X)\" - 0.1 AND r.\"Longitude (X)\" + 0.1 WHERE w.population > 100000 AND 6371 * ACOS(COS(RADIANS(w.lat)) * COS(RADIANS(r.\"Latitude (Y)\")) * COS(RADIANS(w.lng) - RADIANS(r.\"Longitude (X)\")) + SIN(RADIANS(w.lat)) * SIN(RADIANS(r.\"Latitude (Y)\"))) <= 0.1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 10,
+      "sql": "SELECT COUNT(worldcities.city) AS modern_cities_count FROM worldcities INNER JOIN roman_cities ON ABS(worldcities.lat - roman_cities.\"Latitude (Y)\") <= 0.1 AND ABS(worldcities.lng - roman_cities.\"Longitude (X)\") <= 0.1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 11,
+      "sql": "SELECT COUNT(DISTINCT t1.id) FROM worldcities AS t1 INNER JOIN roman_cities AS t2 ON t1.lat = t2.\"Latitude (Y)\" AND t1.lng = t2.\"Longitude (X)\" WHERE t1.population > 100000 AND ACOS(SIN(RADIANS(t1.lat)) * SIN(RADIANS(t2.\"Latitude (Y)\")) + COS(RADIANS(t1.lat)) * COS(RADIANS(t2.\"Latitude (Y)\")) * COS(RADIANS(t1.lng) - RADIANS(t2.\"Longitude (X)\"))) * 6371 <= 0.1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 12,
+      "sql": "SELECT COUNT(DISTINCT t1.id) FROM worldcities AS t1 INNER JOIN roman_cities AS t2 ON t1.lat = t2.\"Latitude (Y)\" AND t1.lng = t2.\"Longitude (X)\" WHERE t1.population > 100000 AND ACOS(SIN(RADIANS(t1.lat)) * SIN(RADIANS(t2.\"Latitude (Y)\")) + COS(RADIANS(t1.lat)) * COS(RADIANS(t2.\"Latitude (Y)\")) * COS(RADIANS(t1.lng) - RADIANS(t2.\"Longitude (X)\"))) * 6371 <= 0.1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 13,
+      "sql": "SELECT COUNT(DISTINCT t1.city) FROM worldcities AS t1 INNER JOIN roman_cities AS t2 ON ABS(t1.lat - t2.\"Latitude (Y)\") < 0.1 AND ABS(t1.lng - t2.\"Longitude (X)\") < 0.1 WHERE t1.population > 100000",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 14,
+      "sql": "SELECT COUNT(DISTINCT t1.city) FROM worldcities AS t1 INNER JOIN roman_cities AS t2 ON ABS(t1.lat - t2.\"Latitude (Y)\") < 0.1 AND ABS(t1.lng - t2.\"Longitude (X)\") < 0.1 WHERE t1.population > 100000",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 15,
+      "sql": "SELECT COUNT(DISTINCT worldcities.city) FROM worldcities INNER JOIN roman_cities ON worldcities.lng = roman_cities.\"Longitude (X)\" AND worldcities.lat = roman_cities.\"Latitude (Y)\" WHERE worldcities.population > 100000 AND ABS(worldcities.lng - roman_cities.\"Longitude (X)\") <= 0.1 AND ABS(worldcities.lat - roman_cities.\"Latitude (Y)\") <= 0.1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 16,
+      "sql": "SELECT COUNT(DISTINCT worldcities.city) FROM worldcities INNER JOIN roman_cities ON worldcities.lng = roman_cities.\"Longitude (X)\" AND worldcities.lat = roman_cities.\"Latitude (Y)\" WHERE worldcities.population > 100000 AND (6371 * ACOS(COS(RADIANS(worldcities.lat)) * COS(RADIANS(roman_cities.\"Latitude (Y)\")) * COS(RADIANS(worldcities.lng) - RADIANS(roman_cities.\"Longitude (X)\")) + SIN(RADIANS(worldcities.lat)) * SIN(RADIANS(roman_cities.\"Latitude (Y)\")))) <= 0.1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 17,
+      "sql": "SELECT COUNT(*) FROM worldcities AS w INNER JOIN roman_cities AS r ON 6371 * ACOS(COS(r.\"Latitude (Y)\" * PI() / 180) * COS(w.lat * PI() / 180) * COS((r.\"Longitude (X)\" - w.lng) * PI() / 180) + SIN(r.\"Latitude (Y)\" * PI() / 180) * SIN(w.lat * PI() / 180)) <= 0.1 WHERE w.population > 100000",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 18,
+      "sql": "SELECT COUNT(*) FROM worldcities WHERE population > 100000 AND capital = 'admin'",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 19,
+      "sql": "SELECT COUNT(t1.city) FROM worldcities AS t1 JOIN roman_cities AS t2 ON ST_DISTANCE_SPHERE((t1.lng, t1.lat), (t2.Longitude(x), t2.Latitude(y))) < 0.1 WHERE t1.population > 100000",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 20,
+      "sql": "SELECT COUNT(*) FROM worldcities AS w INNER JOIN roman_cities AS r ON (6371 * ACOS(COS(STRFTIME('%Y', w.city)) * COS(STRFTIME('%Y', r.\"Latitude (Y)\") * PI() / 180) * COS((STRFTIME('%M', w.city) - STRFTIME('%M', r.\"Longitude (X)\") * PI() / 180) / 2) + SIN(STRFTIME('%Y', w.city)) * SIN(STRFTIME('%Y', r.\"Latitude (Y)\") * PI() / 180)) <= 0.1) WHERE w.population > 100000",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 21,
+      "sql": "SELECT COUNT(t1.city) FROM worldcities AS t1 JOIN roman_cities AS t2 ON t1.lat BETWEEN t2.Latitude(y) - 0.1 AND t2.Latitude(y) + 0.1 AND t1.lng BETWEEN t2.Longitude(x) - 0.1 AND t2.Longitude(x) + 0.1 WHERE t1.population > 100000",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 22,
+      "sql": "SELECT COUNT(*)\nFROM worldcities wc\nINNER JOIN roman_cities rc ON wc.city_ascii = rc.Ancient Toponym\nWHERE wc.population > 100000\n  AND ST_Distance_Sphere(ST_MakePoint(wc.lng, wc.lat), ST_MakePoint(rc.`Longitude (X)`, rc.`Latitude (Y)`)) <= 0.1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 23,
+      "sql": "SELECT COUNT(*) FROM worldcities AS t1 INNER JOIN roman_cities AS t2 ON 1 = 1 WHERE 6371 * ACOS(COS(RADIANS(t1.lat)) * COS(RADIANS(t2.\"Latitude (Y)\")) * COS(RADIANS(t1.lng) - RADIANS(t2.\"Longitude (X)\")) + SIN(RADIANS(t1.lat)) * SIN(RADIANS(t2.\"Latitude (Y)\"))) <= 0.1 AND t1.population > 100000",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 24,
+      "sql": "SELECT COUNT(*) AS \"number_of_cities\" FROM (SELECT \"city\", \"lat\", \"lng\", \"Modern Toponym\" AS \"ancient_city\", \"Latitude (Y)\" AS \"ancient_lat\", \"Longitude (X)\" AS \"ancient_lng\", 6371 * ACOS(COS(RADIANS(\"lat\")) * COS(RADIANS(\"Latitude (Y)\")) * COS(RADIANS(\"lng\") - RADIANS(\"Longitude (X)\")) + SIN(RADIANS(\"lat\")) * SIN(RADIANS(\"Latitude (Y)\"))) AS \"distance\" FROM \"worldcities\" CROSS JOIN \"roman_cities\" WHERE 6371 * ACOS(COS(RADIANS(\"lat\")) * COS(RADIANS(\"Latitude (Y)\")) * COS(RADIANS(\"lng\") - RADIANS(\"Longitude (X)\")) + SIN(RADIANS(\"lat\")) * SIN(RADIANS(\"Latitude (Y)\"))) <= 0.1) AS \"filtered_cities\"",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 25,
+      "sql": "SELECT COUNT(*) AS \"number_of_cities\" FROM (SELECT \"city\", \"lat\", \"lng\", \"Modern Toponym\" AS \"ancient_city\", \"Latitude (Y)\" AS \"ancient_lat\", \"Longitude (X)\" AS \"ancient_lng\", 6371 * ACOS(COS(RADIANS(\"lat\")) * COS(RADIANS(\"Latitude (Y)\")) * COS(RADIANS(\"lng\") - RADIANS(\"Longitude (X)\")) + SIN(RADIANS(\"lat\")) * SIN(RADIANS(\"Latitude (Y)\"))) AS \"distance\" FROM \"worldcities\" CROSS JOIN \"roman_cities\" WHERE \"population\" > 100000 AND 6371 * ACOS(COS(RADIANS(\"lat\")) * COS(RADIANS(\"Latitude (Y)\")) * COS(RADIANS(\"lng\") - RADIANS(\"Longitude (X)\")) + SIN(RADIANS(\"lat\")) * SIN(RADIANS(\"Latitude (Y)\"))) <= 0.1) AS \"filtered_cities\"",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 26,
+      "sql": "SELECT COUNT(t1.city) FROM worldcities AS t1 INNER JOIN roman_cities AS t2 ON 1 = 1 WHERE t1.population > 100000 AND SQRT(POWER((t2.\"Longitude (X)\" - t1.lng), 2) + POWER((t2.\"Latitude (Y)\" - t1.lat), 2)) <= 0.1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 27,
+      "sql": "SELECT COUNT(t1.city) FROM worldcities AS t1 INNER JOIN roman_cities AS t2 ON t1.lng = t2.\"Longitude (X)\" AND t1.lat = t2.\"Latitude (Y)\" WHERE t1.population > 100000 AND SQRT(POWER((t2.\"Longitude (X)\" - t1.lng), 2) + POWER((t2.\"Latitude (Y)\" - t1.lat), 2)) <= 0.1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 28,
+      "sql": "SELECT DISTINCT w.city FROM worldcities AS w CROSS JOIN roman_cities AS r WHERE ACOS(SIN(RADIANS(w.lat)) * SIN(RADIANS(r.\"Latitude (Y)\")) + COS(RADIANS(w.lat)) * COS(RADIANS(r.\"Latitude (Y)\")) * COS(RADIANS(w.lng) - RADIANS(r.\"Longitude (X)\"))) * 6371 <= 0.1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 29,
+      "sql": "SELECT COUNT(w.city) FROM roman_cities AS r INNER JOIN worldcities AS w ON w.lat BETWEEN r.\"Latitude (Y)\" - 0.1 AND r.\"Latitude (Y)\" + 0.1 AND w.lng BETWEEN r.\"Longitude (X)\" - 0.1 AND r.\"Longitude (X)\" + 0.1 WHERE w.population > 100000",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 30,
+      "sql": "SELECT COUNT(DISTINCT w.city) AS modern_cities_count FROM roman_cities AS r INNER JOIN worldcities AS w ON (6371 * ACOS(COS(r.\"Latitude (Y)\" * PI() / 180) * COS(w.lat * PI() / 180) * COS((w.lng - r.\"Longitude (X)\") * PI() / 180) + SIN(r.\"Latitude (Y)\" * PI() / 180) * SIN(w.lat * PI() / 180)) <= 0.1) WHERE w.population > 100000",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 31,
+      "sql": "SELECT COUNT(DISTINCT w.city) AS modern_cities_count FROM roman_cities AS r INNER JOIN worldcities AS w ON (6371 * ACOS(COS(r.\"Latitude (Y)\" * PI() / 180) * COS(w.lat * PI() / 180) * COS((w.lng - r.\"Longitude (X)\") * PI() / 180) + SIN(r.\"Latitude (Y)\" * PI() / 180) * SIN(w.lat * PI() / 180)) <= 0.1) WHERE w.population > 100000",
+      "path_length": 4,
+      "node_type": "end"
+    }
+  ],
+  "7": [
+    {
+      "path_index": 0,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") AS unique_sources FROM roman_cities",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 1,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") FROM roman_cities",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 2,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") FROM roman_cities",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 3,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") FROM roman_cities",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 4,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") FROM roman_cities",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 5,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") FROM \"roman_cities\"",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 6,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") FROM \"roman_cities\"",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 7,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") FROM roman_cities",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 8,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") FROM roman_cities",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 9,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") FROM \"roman_cities\"",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 10,
+      "sql": "SELECT COUNT(DISTINCT REPLACE(\"Select Bibliography\", ';', ',')) AS unique_sources FROM roman_cities",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 11,
+      "sql": "SELECT COUNT(DISTINCT REPLACE(\"Select Bibliography\", ';', ',')) AS unique_sources FROM roman_cities",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 12,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") FROM roman_cities",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 13,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") FROM roman_cities",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 14,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") FROM roman_cities",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 15,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") FROM roman_cities",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 16,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") AS unique_sources FROM roman_cities",
+      "path_length": 3,
+      "node_type": "end"
+    },
+    {
+      "path_index": 17,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") AS unique_sources FROM roman_cities",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 18,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") FROM roman_cities",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 19,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") FROM roman_cities",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 20,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") FROM roman_cities",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 21,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") FROM roman_cities",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 22,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") FROM roman_cities",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 23,
+      "sql": "SELECT COUNT(*) AS unique_sources FROM roman_cities WHERE 'BNP' LIKE '%BNP%' OR 'Hansen 2006' LIKE '%Hansen 2006%' OR 'Hansen and Nielsen 2004' LIKE '%Hansen and Nielsen 2004%' OR 'PECS' LIKE '%PECS%' OR 'Sear 2006' LIKE '%Sear 2006%'",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 24,
+      "sql": "SELECT COUNT(DISTINCT REPLACE(\"Select Bibliography\", ';', ' ')) AS unique_sources FROM roman_cities",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 25,
+      "sql": "SELECT COUNT(DISTINCT REPLACE(\"Select Bibliography\", ';', ' ')) AS unique_sources FROM roman_cities",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 26,
+      "sql": "SELECT COUNT(DISTINCT SUBSTRING(\"Select Bibliography\", 20)) AS unique_sources FROM roman_cities",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 27,
+      "sql": "SELECT COUNT(DISTINCT SUBSTRING(\"Select Bibliography\", 20)) AS unique_sources FROM roman_cities",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 28,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") FROM roman_cities",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 29,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") FROM roman_cities",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 30,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") AS unique_sources FROM roman_cities",
+      "path_length": 8,
+      "node_type": "end"
+    },
+    {
+      "path_index": 31,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") AS unique_sources FROM roman_cities",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 32,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") AS unique_sources FROM roman_cities",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 33,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") AS unique_sources FROM roman_cities",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 34,
+      "sql": "SELECT COUNT(DISTINCT \"Select Bibliography\") FROM roman_cities",
+      "path_length": 6,
+      "node_type": "end"
+    }
+  ],
+  "8": [
+    {
+      "path_index": 0,
+      "sql": "SELECT AVG(rc.\"Barrington Atlas Rank\") AS avg_rank, AVG(wc.population) AS avg_population FROM roman_cities AS rc INNER JOIN worldcities AS wc ON ABS(rc.\"Latitude (Y)\" - wc.lat) <= 0.1 AND ABS(rc.\"Longitude (X)\" - wc.lng) <= 0.1 WHERE wc.population > 1000000",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 1,
+      "sql": "SELECT AVG(CAST(r.\"Barrington Atlas Rank\" AS REAL)) AS avg_rank, AVG(w.population) AS avg_population FROM worldcities AS w INNER JOIN (SELECT r.\"Ancient Toponym\", r.\"Barrington Atlas Rank\", r.\"Longitude (X)\", r.\"Latitude (Y)\", ROW_NUMBER() OVER (PARTITION BY r.\"Ancient Toponym\" ORDER BY r.\"Barrington Atlas Rank\") AS rn FROM roman_cities AS r) AS r ON w.lat = r.\"Latitude (Y)\" AND w.lng = r.\"Longitude (X)\" AND r.rn = 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 2,
+      "sql": "SELECT CORR(t1.rank, t2.population) AS correlation FROM (SELECT city, CASE WHEN city LIKE '%or%' THEN AVG(REPLACE(SUBSTRING(city, INSTR(city, 'or') + 2), ',', '')) ELSE CAST(REPLACE(SUBSTRING(city, INSTR(city, ' ') + 1), ',', '') AS REAL) END AS rank FROM roman_cities GROUP BY city) AS t1 JOIN (SELECT city, population FROM worldcities WHERE population > 1000000) AS t2 ON HAVERSINE(t1.city, t1.rank, t2.city, t2.population) < 0.1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 3,
+      "sql": "WITH rankedancientcities AS (SELECT ancienttoponym, CASE WHEN ancienttoponym LIKE '%or%' THEN AVG(REPLACE(SUBSTRING(ancienttoponym, INSTR(ancienttoponym, 'or') + 2), ',', '')) ELSE CAST(REPLACE(SUBSTRING(ancienttoponym, INSTR(ancienttoponym, ' ') + 1), ',', '') AS REAL) END AS rank FROM roman_cities GROUP BY ancienttoponym), moderncities AS (SELECT city, population FROM worldcities WHERE population > 1000000) SELECT CORR(t1.rank, t2.population) AS correlation FROM rankedancientcities AS t1 INNER JOIN moderncities AS t2 ON t1.ancienttoponym = t2.city",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 4,
+      "sql": "SELECT ROUND(CORR(rc.\"Barrington Atlas Rank\", wc.\"population\"), 6) AS correlation FROM \"roman_cities\" AS rc INNER JOIN \"worldcities\" AS wc ON ABS(rc.\"Latitude (Y)\" - wc.\"lat\") < 0.1 AND ABS(rc.\"Longitude (X)\" - wc.\"lng\") < 0.1 WHERE wc.\"population\" > 1000000",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 5,
+      "sql": "SELECT ROUND(AVG(rc.\"Barrington Atlas Rank\"), 6) AS avg_rank, ROUND(AVG(wc.\"population\"), 6) AS avg_population FROM roman_cities AS rc INNER JOIN worldcities AS wc ON ABS(rc.\"Latitude (Y)\" - wc.\"lat\") <= 0.1 AND ABS(rc.\"Longitude (X)\" - wc.\"lng\") <= 0.1 WHERE wc.\"population\" > 1000000",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 6,
+      "sql": "SELECT ROUND(AVG(CASE WHEN rc.\"Barrington Atlas Rank\" LIKE '%or%' THEN CAST(SUBSTRING(rc.\"Barrington Atlas Rank\", 1, INSTR(rc.\"Barrington Atlas Rank\", ' or ') - 1) AS REAL) + CAST(SUBSTRING(rc.\"Barrington Atlas Rank\", INSTR(rc.\"Barrington Atlas Rank\", ' or ') + 4) AS REAL) / 2 ELSE CAST(rc.\"Barrington Atlas Rank\" AS REAL) END), 6) AS avg_rank, ROUND(AVG(wc.\"population\"), 6) AS avg_population FROM roman_cities AS rc INNER JOIN worldcities AS wc ON (6371 * ACOS(COS(RADIANS(rc.\"Latitude (Y)\")) * COS(RADIANS(wc.\"lat\")) * COS(RADIANS(wc.\"lng\") - RADIANS(rc.\"Longitude (X)\")) + SIN(RADIANS(rc.\"Latitude (Y)\")) * SIN(RADIANS(wc.\"lat\")))) <= 0.1 WHERE wc.\"population\" > 1000000",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 7,
+      "sql": "SELECT \n    ROUND(CORR(CAST(REPLACE(T1.Barrington Atlas Rank, ' or ', '') AS REAL), AVG(T2.population)), 6) AS correlation\nFROM \n    roman_cities AS T1\nJOIN \n    worldcities AS T2\nON \n    (ABS(T1.Latitude (Y) - T2.lat) < 0.1 AND ABS(T1.Longitude (X) - T2.lng) < 0.1)\nWHERE \n    T2.population > 1000000\nGROUP BY \n    T1.Ancient Toponym",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 8,
+      "sql": "SELECT \n    Barrington Atlas Rank,\n    AVG(CAST(REPLACE(Barrington Atlas Rank, ' or ', '') AS REAL)) AS avg_rank,\n    AVG(population) AS avg_population,\n    MIN(distance) AS min_distance,\n    CORR(CAST(REPLACE(Barrington Atlas Rank, ' or ', '') AS REAL), AVG(population)) AS correlation\nFROM \n    (\n        SELECT \n            Barrington Atlas Rank,\n            T2.lat,\n            T2.lng,\n            T2.population,\n            6371 * acos(\n                cos(radians(T1.Latitude (Y))) * cos(radians(T2.lat)) * cos(radians(T2.lng) - radians(T1.Longitude (X))) + \n                sin(radians(T1.Latitude (Y))) * sin(radians(T2.lat))\n            ) AS distance\n        FROM \n            roman_cities AS T1\n        JOIN \n            worldcities AS T2\n        ON \n            (ABS(T1.Latitude (Y) - T2.lat) < 0.1 AND ABS(T1.Longitude (X) - T2.lng) < 0.1)\n    ) AS ranked_cities\nWHERE \n    population > 1000000\nGROUP BY \n    Barrington Atlas Rank",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 9,
+      "sql": "SELECT CORR(T1.Rank, T2.population) AS correlation FROM (SELECT CASE WHEN Barrington Atlas Rank LIKE '%or%' THEN AVG(REPLACE(SUBSTR(Barrington Atlas Rank, 1, INSTR(Barrington Atlas Rank, ' or ') - 1), ',', '')) + AVG(REPLACE(SUBSTR(Barrington Atlas Rank, INSTR(Barrington Atlas Rank, ' or ') + 4), ',', '')) / 2 ELSE REPLACE(Barrington Atlas Rank, ',', '') END AS Rank FROM roman_cities) AS T1 JOIN (SELECT city FROM worldcities WHERE population > 1000000) AS T2 ON T2.city = T1.city",
+      "path_length": 3,
+      "node_type": "end"
+    },
+    {
+      "path_index": 10,
+      "sql": "SELECT ROUND(CORR(T1.[Rank], T2.population), 6) AS correlation \nFROM (\n    SELECT \n        CASE \n            WHEN Barrington Atlas Rank LIKE '%or%' THEN \n                AVG(REPLACE(SUBSTR(Barrington Atlas Rank, 1, INSTR(Barrington Atlas Rank, ' or ') - 1), ',', '')) + \n                AVG(REPLACE(SUBSTR(Barrington Atlas Rank, INSTR(Barrington Atlas Rank, ' or ') + 4), ',', '')) / 2 \n            ELSE \n                REPLACE(Barrington Atlas Rank, ',', '') \n        END AS [Rank] \n    FROM roman_cities\n) AS T1 \nJOIN (\n    SELECT city \n    FROM worldcities \n    WHERE population > 1000000\n) AS T2 \nON T2.city = T1.city",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 11,
+      "sql": "SELECT AVG(CASE WHEN \"roman_cities\".\"Barrington Atlas Rank\" LIKE '%or%' THEN (CAST(SUBSTRING(\"roman_cities\".\"Barrington Atlas Rank\", 1, INSTR(\"roman_cities\".\"Barrington Atlas Rank\", ' or ') - 1) AS REAL) + CAST(SUBSTRING(\"roman_cities\".\"Barrington Atlas Rank\", INSTR(\"roman_cities\".\"Barrington Atlas Rank\", ' or ') + 4) AS REAL)) / 2 ELSE CAST(\"roman_cities\".\"Barrington Atlas Rank\" AS REAL) END) AS correlation FROM \"roman_cities\" INNER JOIN \"worldcities\" ON ABS(\"roman_cities\".\"Latitude (Y)\" - \"worldcities\".\"lat\") < 0.1 AND ABS(\"roman_cities\".\"Longitude (X)\" - \"worldcities\".\"lng\") < 0.1 WHERE \"worldcities\".\"population\" > 1000000",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 12,
+      "sql": "SELECT AVG(CASE WHEN \"roman_cities\".\"Barrington Atlas Rank\" LIKE '%or%' THEN (CAST(SUBSTRING(\"roman_cities\".\"Barrington Atlas Rank\", 1, INSTR(\"roman_cities\".\"Barrington Atlas Rank\", ' or ') - 1) AS REAL) + CAST(SUBSTRING(\"roman_cities\".\"Barrington Atlas Rank\", INSTR(\"roman_cities\".\"Barrington Atlas Rank\", ' or ') + 4) AS REAL)) / 2 ELSE CAST(\"roman_cities\".\"Barrington Atlas Rank\" AS REAL) END) AS correlation FROM \"roman_cities\" INNER JOIN \"worldcities\" ON ABS(\"roman_cities\".\"Latitude (Y)\" - \"worldcities\".\"lat\") < 0.1 AND ABS(\"roman_cities\".\"Longitude (X)\" - \"worldcities\".\"lng\") < 0.1 WHERE \"worldcities\".\"population\" > 1000000",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 13,
+      "sql": "SELECT ROUND(CORR(T1.rank, T2.population), 6) AS correlation\nFROM (\n    SELECT \n        CASE \n            WHEN INSTR(Barrington Atlas Rank, 'or') > 0 \n            THEN AVG(CAST(SUBSTR(Barrington Atlas Rank, 1, INSTR(Barrington Atlas Rank, ' or') - 1) AS REAL), CAST(SUBSTR(Barrington Atlas Rank, INSTR(Barrington Atlas Rank, ' or') + 4) AS REAL)) \n            ELSE CAST(Barrington Atlas Rank AS REAL) \n        END AS rank,\n        Latitude (Y),\n        Longitude (X)\n    FROM roman_cities\n) AS T1\nINNER JOIN worldcities AS T2 \nON ST_Distance_Sphere(T1.Latitude (Y), T1.Longitude (X), T2.lat, T2.lng) < 0.1\nWHERE T2.population > 1000000;",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 14,
+      "sql": "SELECT AVG(CAST(REPLACE(r.\"Barrington Atlas Rank\", ' or ', '') AS REAL)) AS avg_rank, AVG(w.\"population\") AS avg_population FROM roman_cities AS r INNER JOIN worldcities AS w ON ABS(r.\"Latitude (Y)\" - w.\"lat\") < 0.1 AND ABS(r.\"Longitude (X)\" - w.\"lng\") < 0.1 WHERE w.\"population\" > 1000000",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 15,
+      "sql": "SELECT AVG(CAST(SUBSTRING(t1.\"Barrington Atlas Rank\", INSTR(t1.\"Barrington Atlas Rank\", ' ') + 1) AS REAL) + CAST(SUBSTRING(t1.\"Barrington Atlas Rank\", 1, INSTR(t1.\"Barrington Atlas Rank\", ' ') - 1) AS REAL)) / 2 AS avg_rank, AVG(t2.population) AS avg_population FROM roman_cities AS t1 INNER JOIN worldcities AS t2 ON t1.\"Latitude (Y)\" BETWEEN t2.lat - 0.1 AND t2.lat + 0.1 AND t1.\"Longitude (X)\" BETWEEN t2.lng - 0.1 AND t2.lng + 0.1 WHERE t2.population > 1000000",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 16,
+      "sql": "SELECT ROUND(CORR(r.\"Barrington Atlas Rank\", w.population), 6) AS correlation FROM roman_cities AS r JOIN worldcities AS w ON ABS(r.\"Latitude (Y)\" - w.lat) < 0.1 AND ABS(r.\"Longitude (X)\" - w.lng) < 0.1 WHERE w.population > 1000000 GROUP BY w.city, w.country, w.lat, w.lng, w.population ORDER BY w.city, w.country, w.lat, w.lng, w.population DESC LIMIT 1",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 17,
+      "sql": "SELECT ROUND(((COUNT(*) * SUM(r.\"Barrington Atlas Rank\" * w.population) - SUM(r.\"Barrington Atlas Rank\") * SUM(w.population)) / SQRT((COUNT(*) * SUM(r.\"Barrington Atlas Rank\" * r.\"Barrington Atlas Rank\") - SUM(r.\"Barrington Atlas Rank\") * SUM(r.\"Barrington Atlas Rank\")) * (COUNT(*) * SUM(w.population * w.population) - SUM(w.population) * SUM(w.population)))), 6) AS correlation FROM roman_cities AS r JOIN worldcities AS w ON ABS(r.\"Latitude (Y)\" - w.lat) < 0.1 AND ABS(r.\"Longitude (X)\" - w.lng) < 0.1 WHERE w.population > 1000000",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 18,
+      "sql": "SELECT ROUND(AVG(CAST(REPLACE(SUBSTRING(r.\"Barrington Atlas Rank\", INSTR(r.\"Barrington Atlas Rank\", 'or') + 2), ',', '') AS REAL)), 6) AS avg_rank, AVG(w.\"population\") AS avg_population FROM \"roman_cities\" AS r INNER JOIN \"worldcities\" AS w ON SQRT(POWER(r.\"Latitude (Y)\" - w.\"lat\", 2) + POWER(r.\"Longitude (X)\" - w.\"lng\", 2)) < 0.1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 19,
+      "sql": "SELECT \n    ROUND(CORR(r.avg_rank, w.population), 6) AS correlation\nFROM \n    (SELECT \n        Primary Key, \n        CAST(SUBSTR(Barrington Atlas Rank, 1, INSTR(Barrington Atlas Rank, ' or ') - 1) AS REAL) + \n        CAST(SUBSTR(Barrington Atlas Rank, INSTR(Barrington Atlas Rank, ' or ') + 4) AS REAL) / 2 AS avg_rank\n     FROM roman_cities WHERE Barrington Atlas Rank LIKE '% or %') r\nJOIN \n    (SELECT \n        Primary Key, \n        MIN(6371 * acos(cos(radians(w.lat)) * cos(radians(r.Latitude (Y))) * cos(radians(r.Longitude (X)) - radians(w.lng)) + sin(radians(w.lat)) * sin(radians(r.Latitude (Y))))) AS distance\n     FROM roman_cities r\n     JOIN worldcities w ON 6371 * acos(cos(radians(w.lat)) * cos(radians(r.Latitude (Y))) * cos(radians(r.Longitude (X)) - radians(w.lng)) + sin(radians(w.lat)) * sin(radians(r.Latitude (Y)))) < 0.1\n     GROUP BY r.Primary Key) w ON r.Primary Key = w.Primary Key",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 20,
+      "sql": "SELECT ROUND(\n    (AVG(rc.Barrington Atlas Rank) * AVG(wc.population) - AVG(rc.Barrington Atlas Rank * wc.population)) / \n    (SQRT(AVG(rc.Barrington Atlas Rank * rc.Barrington Atlas Rank) - AVG(rc.Barrington Atlas Rank) * AVG(rc.Barrington Atlas Rank)) * \n    SQRT(AVG(wc.population * wc.population) - AVG(wc.population) * AVG(wc.population)))\n, 6) AS correlation\nFROM roman_cities rc\nINNER JOIN worldcities wc ON ST_Distance_Sphere(rc.Latitude (Y), rc.Longitude (X), wc.lat, wc.lng) < 0.1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 21,
+      "sql": "SELECT ROUND(AVG(T1.Barrington Atlas Rank), 6) AS Correlation\nFROM roman_cities AS T1\nJOIN worldcities AS T2\nON ST_Distance_Sphere(POINT(T1.Longitude (X), T1.Latitude (Y)), POINT(T2.lng, T2.lat)) < 0.1\nWHERE T2.population > 1000000;",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 22,
+      "sql": "SELECT ROUND(AVG(CAST(T1.Barrington Atlas Rank AS REAL)), 6) AS Correlation\nFROM roman_cities AS T1\nJOIN worldcities AS T2\nON ST_Distance_Sphere(POINT(T1.Longitude (X), T1.Latitude (Y)), POINT(T2.lng, T2.lat)) < 0.1\nWHERE T2.population > 1000000;",
+      "path_length": 8,
+      "node_type": "end"
+    },
+    {
+      "path_index": 23,
+      "sql": "SELECT ROUND(CORR(t2.rank, t1.population), 6) AS correlation FROM worldcities AS t1 INNER JOIN (SELECT city, lat, lng, population, RANK() OVER (PARTITION BY city ORDER BY STRFTIME('%Y', CURRENT_TIMESTAMP) DESC) AS rank FROM worldcities INNER JOIN roman_cities ON city = t1.city WHERE population > 1000000) AS t2 ON t1.city = t2.city",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 24,
+      "sql": "WITH filtered_data AS (\n    SELECT \n        rc.Ancient Toponym, \n        rc.Barrington Atlas Rank, \n        wc.population\n    FROM \n        roman_cities rc\n    INNER JOIN \n        worldcities wc\n    ON \n        rc.Ancient Toponym = wc.city\n    WHERE \n        wc.population > 1000000\n    ORDER BY \n        rc.Ancient Toponym DESC, \n        rc.Barrington Atlas Rank DESC\n    LIMIT 1\n),\ncorrelation AS (\n    SELECT \n        CAST(SUM(T1.Ancient Toponym * T1.population) AS REAL) - \n        (CAST(SUM(T1.Ancient Toponym) AS REAL) * CAST(SUM(T1.population) AS REAL)) / COUNT(*) AS numerator,\n        SQRT(\n            (CAST(SUM(T1.Ancient Toponym * T1.Ancient Toponym) AS REAL) - \n             (CAST(SUM(T1.Ancient Toponym) AS REAL) * CAST(SUM(T1.Ancient Toponym) AS REAL)) / COUNT(*)) *\n            (CAST(SUM(T1.population * T1.population) AS REAL) - \n             (CAST(SUM(T1.population) AS REAL) * CAST(SUM(T1.population) AS REAL)) / COUNT(*))\n        ) AS denominator\n    FROM \n        filtered_data T1\n)\nSELECT \n    ROUND(numerator / denominator, 6) AS correlation\nFROM \n    correlation",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 25,
+      "sql": "SELECT ROUND(CORR(rank, worldcities.population), 6) AS correlation FROM (SELECT CASE WHEN INSTR(roman_cities.\"Barrington Atlas Rank\", 'or') > 0 THEN (CAST(SUBSTRING(roman_cities.\"Barrington Atlas Rank\", 1, INSTR(roman_cities.\"Barrington Atlas Rank\", 'or') - 1) AS REAL) + CAST(SUBSTRING(roman_cities.\"Barrington Atlas Rank\", INSTR(roman_cities.\"Barrington Atlas Rank\", 'or') + 3) AS REAL)) / 2 ELSE CAST(roman_cities.\"Barrington Atlas Rank\" AS REAL) END AS rank, SQRT(POWER(roman_cities.\"Longitude (X)\" - worldcities.longitude, 2) + POWER(roman_cities.\"Latitude (Y)\" - worldcities.latitude, 2)) AS distance FROM roman_cities INNER JOIN worldcities ON SQRT(POWER(roman_cities.\"Longitude (X)\" - worldcities.longitude, 2) + POWER(roman_cities.\"Latitude (Y)\" - worldcities.latitude, 2)) < 0.1 WHERE worldcities.population > 1000000)",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 26,
+      "sql": "SELECT CORR(rank, \"worldcities\".\"population\") AS correlation FROM (SELECT CASE WHEN INSTR(\"Barrington Atlas Rank\", 'or') > 0 THEN (CAST(SUBSTRING(\"Barrington Atlas Rank\", 1, INSTR(\"Barrington Atlas Rank\", 'or') - 1) AS REAL) + CAST(SUBSTRING(\"Barrington Atlas Rank\", INSTR(\"Barrington Atlas Rank\", 'or') + 3) AS REAL)) / 2 ELSE CAST(\"Barrington Atlas Rank\" AS REAL) END AS rank, SQRT(POWER(\"roman_cities\".\"Longitude (X)\" - \"worldcities\".\"Longitude (X)\", 2) + POWER(\"roman_cities\".\"Latitude (Y)\" - \"worldcities\".\"Latitude (Y)\", 2)) AS distance FROM \"roman_cities\" INNER JOIN \"worldcities\" ON SQRT(POWER(\"roman_cities\".\"Longitude (X)\" - \"worldcities\".\"Longitude (X)\", 2) + POWER(\"roman_cities\".\"Latitude (Y)\" - \"worldcities\".\"Latitude (Y)\", 2)) < 0.1 WHERE \"worldcities\".\"population\" > 1000000)",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 27,
+      "sql": "SELECT ROUND(CORR(AVG((t2.\"Barrington Atlas Rank\" - 0.5) / 2), t1.population), 6) AS correlation FROM worldcities AS t1 INNER JOIN roman_cities AS t2 ON 1 = 1 WHERE t1.population > 1000000 GROUP BY t1.id",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 28,
+      "sql": "SELECT ROUND(CORR(subquery.rank, subquery.population), 6) AS correlation FROM (SELECT rc.ancient_toponym, rc.latitude_y, rc.longitude_x, wc.city, wc.lat, wc.lng, (6371 * ACOS(COS(RADIANS(rc.latitude_y)) * COS(RADIANS(wc.lat)) * COS(RADIANS(wc.lng) - RADIANS(rc.longitude_x)) + SIN(RADIANS(rc.latitude_y)) * SIN(RADIANS(wc.lat)))) AS distance, CASE WHEN rc.barrington_atlas_rank LIKE '%or%' THEN (CAST(SUBSTRING(rc.barrington_atlas_rank, 1, INSTR(rc.barrington_atlas_rank, ' or ') - 1) AS REAL) + CAST(SUBSTRING(rc.barrington_atlas_rank, INSTR(rc.barrington_atlas_rank, ' or ') + 4) AS REAL)) / 2 ELSE CAST(rc.barrington_atlas_rank AS REAL) END AS rank FROM roman_cities AS rc JOIN worldcities AS wc ON rc.latitude_y = wc.lat AND rc.longitude_x = wc.lng) AS subquery WHERE distance < 0.1 AND subquery.population > 1000000",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 29,
+      "sql": "SELECT \n  AVG(rank) AS avg_rank, \n  AVG(population) AS avg_population\nFROM \n  (\n    SELECT \n      rc.Ancient Toponym, \n      rc.Latitude (Y), \n      rc.Longitude (X), \n      wc.city, \n      wc.lat, \n      wc.lng, \n      (6371 * acos(cos(radians(rc.Latitude (Y))) * cos(radians(wc.lat)) * cos(radians(wc.lng) - radians(rc.Longitude (X))) + sin(radians(rc.Latitude (Y))) * sin(radians(wc.lat)))) AS distance,\n      CASE \n        WHEN rc.Barrington Atlas Rank LIKE '%or%' THEN (CAST(SUBSTR(rc.Barrington Atlas Rank, 1, INSTR(rc.Barrington Atlas Rank, ' or ') - 1) AS REAL) + CAST(SUBSTR(rc.Barrington Atlas Rank, INSTR(rc.Barrington Atlas Rank, ' or ') + 4) AS REAL)) / 2\n        ELSE CAST(rc.Barrington Atlas Rank AS REAL)\n      END AS rank\n    FROM \n      roman_cities rc\n    JOIN \n      worldcities wc\n    ON \n      rc.Latitude (Y) = wc.lat AND rc.Longitude (X) = wc.lng\n  ) AS subquery\nWHERE \n  distance < 0.1\nGROUP BY \n  rank, \n  population\nORDER BY \n  rank, \n  population DESC;",
+      "path_length": 5,
+      "node_type": "end"
+    }
+  ],
+  "9": [
+    {
+      "path_index": 0,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 1,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 2,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 3,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 4,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 5,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 3,
+      "node_type": "end"
+    },
+    {
+      "path_index": 6,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 7,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 8,
+      "sql": "SELECT country FROM (SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country) ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 9,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 10,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 11,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 12,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 13,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 14,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 15,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 16,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 17,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 18,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 19,
+      "sql": "SELECT country FROM (SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country) ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 20,
+      "sql": "SELECT country FROM worldcities GROUP BY country ORDER BY AVG(population) DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 21,
+      "sql": "SELECT country FROM worldcities GROUP BY country ORDER BY AVG(population) DESC LIMIT 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 22,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 23,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 24,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 25,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 26,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 27,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 28,
+      "sql": "SELECT country FROM (SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country) AS subquery ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 29,
+      "sql": "SELECT country FROM (SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country) AS subquery ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 30,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 31,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 32,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 33,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 34,
+      "sql": "SELECT country, AVG(population) AS avg_population FROM worldcities GROUP BY country ORDER BY avg_population DESC LIMIT 1",
+      "path_length": 6,
+      "node_type": "end"
+    }
+  ],
+  "10": [
+    {
+      "path_index": 0,
+      "sql": "SELECT index FROM (SELECT index, CASE WHEN NOT age_ky IS NULL AND NOT al IS NULL AND NOT si IS NULL AND NOT s IS NULL AND NOT k IS NULL AND NOT ca IS NULL AND NOT ti IS NULL AND NOT mn IS NULL AND NOT fe IS NULL AND NOT rb IS NULL AND NOT sr IS NULL AND NOT zr IS NULL AND NOT ba IS NULL AND NOT age_ky.1 IS NULL AND NOT age_ky.2 IS NULL AND NOT odp_967_dust_proxy IS NULL AND NOT age_ky.3 IS NULL AND NOT odp_967_wet_dry_index IS NULL THEN 0 ELSE 1 END AS has_nan FROM climate_measurements) AS subquery WHERE has_nan = 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 1,
+      "sql": "SELECT rowid - 1 AS index FROM climate_measurements WHERE rowid IN (SELECT rowid FROM climate_measurements WHERE NOT age_ky IS NULL AND NOT al IS NULL AND NOT si IS NULL AND NOT s IS NULL AND NOT k IS NULL AND NOT ca IS NULL AND NOT ti IS NULL AND NOT mn IS NULL AND NOT fe IS NULL AND NOT rb IS NULL AND NOT sr IS NULL AND NOT zr IS NULL AND NOT ba IS NULL AND NOT age_ky.1 IS NULL AND NOT age_ky.2 IS NULL AND NOT odp_967_dust_proxy IS NULL AND NOT age_ky.3 IS NULL AND NOT odp_967_wet_dry_index IS NULL)",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 2,
+      "sql": "SELECT rowid FROM climate_measurements WHERE (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT age_ky IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT al IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT si IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT s IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT k IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT ca IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT ti IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT mn IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT fe IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT rb IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT sr IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT zr IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT ba IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT age_ky.1 IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT pc1 IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT pc2 IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT age_ky.2 IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT odp_967_dust_proxy IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT age_ky.3 IS NULL)) = 0 AND (SELECT COUNT(*) FROM (SELECT * FROM climate_measurements WHERE NOT odp_967_wet_dry_index IS NULL)) = 0",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 3,
+      "sql": "SELECT rowid FROM climate_measurements WHERE COUNT(CASE WHEN NOT age_ky IS NULL THEN 1 END) + COUNT(CASE WHEN NOT al IS NULL THEN 1 END) + COUNT(CASE WHEN NOT si IS NULL THEN 1 END) + COUNT(CASE WHEN NOT s IS NULL THEN 1 END) + COUNT(CASE WHEN NOT k IS NULL THEN 1 END) + COUNT(CASE WHEN NOT ca IS NULL THEN 1 END) + COUNT(CASE WHEN NOT ti IS NULL THEN 1 END) + COUNT(CASE WHEN NOT mn IS NULL THEN 1 END) + COUNT(CASE WHEN NOT fe IS NULL THEN 1 END) + COUNT(CASE WHEN NOT rb IS NULL THEN 1 END) + COUNT(CASE WHEN NOT sr IS NULL THEN 1 END) + COUNT(CASE WHEN NOT zr IS NULL THEN 1 END) + COUNT(CASE WHEN NOT ba IS NULL THEN 1 END) + COUNT(CASE WHEN NOT age_ky_1 IS NULL THEN 1 END) + COUNT(CASE WHEN NOT pc1 IS NULL THEN 1 END) + COUNT(CASE WHEN NOT pc2 IS NULL THEN 1 END) + COUNT(CASE WHEN NOT age_ky_2 IS NULL THEN 1 END) + COUNT(CASE WHEN NOT odp_967_dust_proxy IS NULL THEN 1 END) + COUNT(CASE WHEN NOT age_ky_3 IS NULL THEN 1 END) + COUNT(CASE WHEN NOT odp_967_wet_dry_index IS NULL THEN 1 END) = 37",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 4,
+      "sql": "SELECT rowid FROM climate_measurements WHERE age_ky IS NULL AND al IS NULL AND si IS NULL AND s IS NULL AND k IS NULL AND ca IS NULL AND ti IS NULL AND mn IS NULL AND fe IS NULL AND rb IS NULL AND sr IS NULL AND zr IS NULL AND ba IS NULL AND age_ky.1 IS NULL AND pc1 IS NULL AND pc2 IS NULL AND age_ky.2 IS NULL AND odp_967_dust_proxy IS NULL AND age_ky.3 IS NULL AND odp_967_wet_dry_index IS NULL",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 5,
+      "sql": "SELECT rowid FROM climate_measurements WHERE rowid IN (SELECT rowid FROM climate_measurements WHERE age_ky IS NULL OR al IS NULL OR si IS NULL OR s IS NULL OR k IS NULL OR ca IS NULL OR ti IS NULL OR mn IS NULL OR fe IS NULL OR rb IS NULL OR sr IS NULL OR zr IS NULL OR ba IS NULL OR age_ky_1 IS NULL OR pc1 IS NULL OR pc2 IS NULL OR age_ky_2 IS NULL OR odp_967_dust_proxy IS NULL OR age_ky_3 IS NULL OR odp_967_wet_dry_index IS NULL)",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 6,
+      "sql": "SELECT rowid FROM climate_measurements WHERE age_ky IS NULL AND al IS NULL AND si IS NULL AND s IS NULL AND k IS NULL AND ca IS NULL AND ti IS NULL AND mn IS NULL AND fe IS NULL AND rb IS NULL AND sr IS NULL AND zr IS NULL AND ba IS NULL AND pc1 IS NULL AND pc2 IS NULL AND \"ODP 967 Dust proxy\" IS NULL AND \"ODP 967 wet-dry index\" IS NULL",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 7,
+      "sql": "SELECT index FROM climate_measurements WHERE NOT EXISTS(SELECT 1 FROM climate_measurements WHERE NOT ISNULL(age_ky) OR NOT ISNULL(al) OR NOT ISNULL(si) OR NOT ISNULL(s) OR NOT ISNULL(k) OR NOT ISNULL(ca) OR NOT ISNULL(ti) OR NOT ISNULL(mn) OR NOT ISNULL(fe) OR NOT ISNULL(rb) OR NOT ISNULL(sr) OR NOT ISNULL(zr) OR NOT ISNULL(ba) OR NOT ISNULL(pc1) OR NOT ISNULL(pc2) OR NOT ISNULL(\"ODP 967 Dust proxy\") OR NOT ISNULL(\"ODP 967 wet-dry index\"))",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 8,
+      "sql": "SELECT * FROM climate_measurements WHERE al IS NULL OR si IS NULL OR s IS NULL OR k IS NULL",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 9,
+      "sql": "SELECT * FROM climate_measurements WHERE al IS NULL AND si IS NULL AND s IS NULL AND k IS NULL",
+      "path_length": 3,
+      "node_type": "end"
+    },
+    {
+      "path_index": 10,
+      "sql": "SELECT t2.rowid - 1 AS row_index FROM (SELECT rowid, COUNT(*) AS non_nan_count FROM climate_measurements WHERE NOT (site IS NULL OR hole IS NULL OR core IS NULL OR section IS NULL OR interval_cm IS NULL OR depth_below_seafloor_m IS NULL OR splice_depth_m IS NULL OR age_ky IS NULL OR al IS NULL OR si IS NULL OR s IS NULL OR k IS NULL OR ca IS NULL OR ti IS NULL OR mn IS NULL OR fe IS NULL OR rb IS NULL OR sr IS NULL OR zr IS NULL OR ba IS NULL OR \"ODP 967 Dust proxy\" IS NULL OR \"ODP 967 wet-dry index\" IS NULL) GROUP BY rowid) AS t1 INNER JOIN (SELECT rowid FROM climate_measurements) AS t2 ON t1.rowid = t2.rowid WHERE t1.non_nan_count = 0",
+      "path_length": 8,
+      "node_type": "end"
+    },
+    {
+      "path_index": 11,
+      "sql": "SELECT t2.rowid - 1 AS index FROM (SELECT rowid, COUNT(*) AS non_nan_count FROM climate_measurements WHERE NOT (site IS NULL OR hole IS NULL OR core IS NULL OR section IS NULL OR interval_cm IS NULL OR depth_below_seafloor_m IS NULL OR splice_depth_m IS NULL OR age_ky IS NULL OR al IS NULL OR si IS NULL OR s IS NULL OR k IS NULL OR ca IS NULL OR ti IS NULL OR mn IS NULL OR fe IS NULL OR rb IS NULL OR sr IS NULL OR zr IS NULL OR ba IS NULL OR \"ODP 967 Dust proxy\" IS NULL OR \"ODP 967 wet-dry index\" IS NULL) GROUP BY rowid) AS t1 INNER JOIN (SELECT rowid FROM climate_measurements) AS t2 ON t1.rowid = t2.rowid WHERE t1.non_nan_count = 0",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 12,
+      "sql": "SELECT rowid FROM climate_measurements WHERE rowid IN (SELECT rowid FROM climate_measurements WHERE NOT (NOT core IS NULL OR NOT section IS NULL OR NOT interval_cm IS NULL OR NOT depth_below_seafloor_m IS NULL OR NOT splice_depth_m IS NULL OR NOT age_ky IS NULL OR NOT al IS NULL OR NOT si IS NULL OR NOT s IS NULL OR NOT k IS NULL OR NOT ca IS NULL OR NOT ti IS NULL OR NOT mn IS NULL OR NOT fe IS NULL OR NOT rb IS NULL OR NOT sr IS NULL OR NOT zr IS NULL OR NOT ba IS NULL OR NOT age_ky_1 IS NULL OR NOT pc1 IS NULL OR NOT pc2 IS NULL OR NOT age_ky_2 IS NULL OR NOT odp_967_dust_proxy IS NULL OR NOT odp_967_wet_dry_index IS NULL))",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 13,
+      "sql": "SELECT index FROM climate_measurements WHERE ISNULL(core, section, interval_cm, depth_below_seafloor_m, splice_depth_m, age_ky, al, si, s, k, ca, ti, mn, fe, rb, sr, zr, ba, age_ky_1, pc1, pc2, age_ky_2, odp_967_dust_proxy, odp_967_wet_dry_index) = 1",
+      "path_length": 8,
+      "node_type": "end"
+    },
+    {
+      "path_index": 14,
+      "sql": "SELECT DISTINCT ROWID\nFROM climate_measurements\nWHERE <condition>\nORDER BY ROWID;",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 15,
+      "sql": "SELECT DISTINCT rowid FROM climate_measurements WHERE al IS NULL AND si IS NULL AND s IS NULL AND k IS NULL AND ca IS NULL AND ti IS NULL AND mn IS NULL AND fe IS NULL AND rb IS NULL AND sr IS NULL AND zr IS NULL AND ba IS NULL AND \"Unnamed: 20\" IS NULL AND \"Age_ky.1\" IS NULL AND pc1 IS NULL AND pc2 IS NULL AND \"Unnamed: 24\" IS NULL AND \"Age_ky.2\" IS NULL AND \"ODP 967 Dust proxy\" IS NULL AND \"Unnamed: 27\" IS NULL AND \"Age_ky.3\" IS NULL AND \"ODP 967 wet-dry index\" IS NULL ORDER BY rowid",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 16,
+      "sql": "SELECT rowid FROM climate_measurements WHERE column1 IS NULL AND column2 IS NULL AND column3 IS NULL AND column4 IS NULL AND column5 IS NULL AND column6 IS NULL AND column7 IS NULL AND column8 IS NULL AND column9 IS NULL AND column10 IS NULL AND column11 IS NULL AND column12 IS NULL AND column13 IS NULL AND column14 IS NULL AND column15 IS NULL AND column16 IS NULL AND column17 IS NULL AND column18 IS NULL AND column19 IS NULL AND column20 IS NULL",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 17,
+      "sql": "SELECT ROW_NUMBER() OVER (ORDER BY site) - 1 AS row_index FROM climate_measurements WHERE site IS NULL AND hole IS NULL AND core IS NULL AND section IS NULL AND interval_cm IS NULL AND age_ky IS NULL AND al IS NULL AND si IS NULL AND s IS NULL AND k IS NULL AND ca IS NULL AND ti IS NULL AND mn IS NULL AND fe IS NULL AND rb IS NULL AND sr IS NULL AND zr IS NULL AND ba IS NULL AND unnamed_20 IS NULL AND age_ky_1 IS NULL AND pc1 IS NULL AND pc2 IS NULL AND unnamed_24 IS NULL AND age_ky_2 IS NULL AND odp_967_dust_proxy IS NULL AND unnamed_27 IS NULL AND age_ky_3 IS NULL AND odp_967_wet_dry_index IS NULL",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 18,
+      "sql": "SELECT ROW_NUMBER() OVER (ORDER BY Site) - 1 AS row_index \nFROM climate_measurements \nWHERE Site IS NULL AND Hole IS NULL AND Core IS NULL AND Section IS NULL AND Interval_cm IS NULL \nAND Age_ky IS NULL AND Al IS NULL AND Si IS NULL AND S IS NULL AND K IS NULL AND Ca IS NULL \nAND Ti IS NULL AND Mn IS NULL AND Fe IS NULL AND Rb IS NULL AND Sr IS NULL \nAND Zr IS NULL AND Ba IS NULL AND Unnamed_20 IS NULL AND Age_ky_1 IS NULL \nAND PC1 IS NULL AND PC2 IS NULL AND Unnamed_24 IS NULL AND Age_ky_2 IS NULL \nAND ODP 967 Dust proxy IS NULL AND Unnamed_27 IS NULL AND Age_ky_3 IS NULL \nAND `ODP 967 wet-dry index` IS NULL;",
+      "path_length": 8,
+      "node_type": "end"
+    },
+    {
+      "path_index": 19,
+      "sql": "SELECT id FROM climate_measurements WHERE core IS NULL AND section IS NULL AND interval_cm IS NULL AND depth_below_seafloor_m IS NULL AND splice_depth_m IS NULL AND age_ky IS NULL AND al IS NULL AND si IS NULL AND s IS NULL AND k IS NULL AND ca IS NULL AND ti IS NULL AND mn IS NULL AND fe IS NULL AND rb IS NULL AND sr IS NULL AND zr IS NULL AND ba IS NULL AND age_ky.1 IS NULL AND pc1 IS NULL AND pc2 IS NULL AND age_ky.2 IS NULL AND odp_967_dust_proxy IS NULL AND age_ky.3 IS NULL AND odp_967_wet_dry_index IS NULL",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 20,
+      "sql": "SELECT * FROM climate_measurements WHERE NOT site IS NULL AND SUM(ISNULL(column_name, 0)) = nan",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 21,
+      "sql": "SELECT * FROM climate_measurements WHERE NOT site IS NULL AND NOT al IS NULL AND NOT si IS NULL AND NOT s IS NULL AND NOT k IS NULL AND NOT ca IS NULL AND NOT ti IS NULL AND NOT mn IS NULL AND NOT fe IS NULL AND NOT rb IS NULL AND NOT sr IS NULL AND NOT zr IS NULL AND NOT ba IS NULL",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 22,
+      "sql": "SELECT rowid FROM climate_measurements WHERE (CASE WHEN NOT \"Unnamed: 20\" IS NULL THEN 1 ELSE 0 END) + (CASE WHEN NOT \"Unnamed: 24\" IS NULL THEN 1 ELSE 0 END) = 0",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 23,
+      "sql": "SELECT rowid FROM climate_measurements WHERE \"Unnamed: 20\" IS NULL AND \"Unnamed: 24\" IS NULL",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 24,
+      "sql": "SELECT t.rowid FROM climate_measurements AS t INNER JOIN (SELECT 1 AS idx WHERE NOT \"Al\" IS NULL INTERSECT SELECT 1 AS idx WHERE NOT \"Si\" IS NULL INTERSECT SELECT 1 AS idx WHERE NOT \"S\" IS NULL INTERSECT SELECT 1 AS idx WHERE NOT \"K\" IS NULL INTERSECT SELECT 1 AS idx WHERE NOT \"Ca\" IS NULL INTERSECT SELECT 1 AS idx WHERE NOT \"Ti\" IS NULL INTERSECT SELECT 1 AS idx WHERE NOT \"Mn\" IS NULL INTERSECT SELECT 1 AS idx WHERE NOT \"Fe\" IS NULL INTERSECT SELECT 1 AS idx WHERE NOT \"Rb\" IS NULL INTERSECT SELECT 1 AS idx WHERE NOT \"Sr\" IS NULL INTERSECT SELECT 1 AS idx WHERE NOT \"Zr\" IS NULL INTERSECT SELECT 1 AS idx WHERE NOT \"Ba\" IS NULL INTERSECT SELECT 1 AS idx WHERE NOT \"Age_ky.2\" IS NULL INTERSECT SELECT 1 AS idx WHERE NOT \"ODP 967 Dust proxy\" IS NULL INTERSECT SELECT 1 AS idx WHERE NOT \"ODP 967 wet-dry index\" IS NULL) AS s ON 1 = 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 25,
+      "sql": "SELECT rowid FROM climate_measurements WHERE NOT \"Al\" IS NULL OR NOT \"Si\" IS NULL OR NOT \"S\" IS NULL OR NOT \"K\" IS NULL OR NOT \"Ca\" IS NULL OR NOT \"Ti\" IS NULL OR NOT \"Mn\" IS NULL OR NOT \"Fe\" IS NULL OR NOT \"Rb\" IS NULL OR NOT \"Sr\" IS NULL OR NOT \"Zr\" IS NULL OR NOT \"Ba\" IS NULL OR NOT \"Age_ky.2\" IS NULL OR NOT \"ODP 967 Dust proxy\" IS NULL OR NOT \"ODP 967 wet-dry index\" IS NULL EXCEPT SELECT rowid FROM climate_measurements WHERE NOT \"Al\" IS NULL AND NOT \"Si\" IS NULL AND NOT \"S\" IS NULL AND NOT \"K\" IS NULL AND NOT \"Ca\" IS NULL AND NOT \"Ti\" IS NULL AND NOT \"Mn\" IS NULL AND NOT \"Fe\" IS NULL AND NOT \"Rb\" IS NULL AND NOT \"Sr\" IS NULL AND NOT \"Zr\" IS NULL AND NOT \"Ba\" IS NULL AND NOT \"Age_ky.2\" IS NULL AND NOT \"ODP 967 Dust proxy\" IS NULL AND NOT \"ODP 967 wet-dry index\" IS NULL",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 26,
+      "sql": "SELECT * FROM climate_measurements WHERE NOT EXISTS(SELECT 1 FROM climate_measurements WHERE NOT (site IS NULL AND hole IS NULL AND core IS NULL AND section IS NULL AND interval_cm IS NULL AND depth_below_seafloor_m IS NULL AND splice_depth_m IS NULL AND age_ky IS NULL AND al IS NULL AND si IS NULL AND s IS NULL AND k IS NULL AND ca IS NULL AND ti IS NULL AND mn IS NULL AND fe IS NULL AND rb IS NULL AND sr IS NULL AND zr IS NULL AND ba IS NULL AND odp_967_dust_proxy IS NULL AND odp_967_wet_dry_index IS NULL) LIMIT 1)",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 27,
+      "sql": "SELECT * FROM climate_measurements WHERE NOT EXISTS(SELECT 1 FROM climate_measurements WHERE NOT ISNULL(site) LIMIT 1)",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 28,
+      "sql": "SELECT * FROM climate_measurements WHERE NOT EXISTS(SELECT 1 FROM climate_measurements WHERE NOT ISNULL(column_name) LIMIT 1)",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 29,
+      "sql": "SELECT rowid FROM climate_measurements WHERE site IS NULL AND hole IS NULL AND core IS NULL AND section IS NULL AND interval_cm IS NULL AND depth_below_seafloor_m IS NULL AND splice_depth_m IS NULL AND age_ky IS NULL AND al IS NULL AND si IS NULL AND s IS NULL AND k IS NULL AND ca IS NULL AND ti IS NULL AND mn IS NULL AND fe IS NULL AND rb IS NULL AND sr IS NULL AND zr IS NULL AND ba IS NULL AND \"Unnamed: 20\" IS NULL AND age_ky.1 IS NULL AND pc1 IS NULL AND pc2 IS NULL AND \"Unnamed: 24\" IS NULL AND age_ky.2 IS NULL AND \"ODP 967 Dust proxy\" IS NULL AND \"Unnamed: 27\" IS NULL AND age_ky.3 IS NULL AND \"ODP 967 wet-dry index\" IS NULL",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 30,
+      "sql": "SELECT rowid FROM climate_measurements WHERE ISNULL(site) AND ISNULL(hole) AND ISNULL(core) AND ISNULL(section) AND ISNULL(interval_cm) AND ISNULL(depth_below_seafloor_m) AND ISNULL(splice_depth_m) AND ISNULL(age_ky) AND ISNULL(al) AND ISNULL(si) AND ISNULL(s) AND ISNULL(k) AND ISNULL(ca) AND ISNULL(ti) AND ISNULL(mn) AND ISNULL(fe) AND ISNULL(rb) AND ISNULL(sr) AND ISNULL(zr) AND ISNULL(ba) AND ISNULL(\"Unnamed: 20\") AND ISNULL(age_ky.1) AND ISNULL(pc1) AND ISNULL(pc2) AND ISNULL(\"Unnamed: 24\") AND ISNULL(age_ky.2) AND ISNULL(\"ODP 967 Dust proxy\") AND ISNULL(\"Unnamed: 27\") AND ISNULL(age_ky.3) AND ISNULL(\"ODP 967 wet-dry index\")",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 31,
+      "sql": "SELECT rowid FROM climate_measurements WHERE site IS NULL AND hole IS NULL AND core IS NULL AND section IS NULL AND interval_cm IS NULL AND depth_below_seafloor_m IS NULL AND splice_depth_m IS NULL AND age_ky IS NULL AND al IS NULL AND si IS NULL AND s IS NULL AND k IS NULL AND ca IS NULL AND ti IS NULL AND mn IS NULL AND fe IS NULL AND rb IS NULL AND sr IS NULL AND zr IS NULL AND ba IS NULL AND \"Unnamed: 20\" IS NULL AND age_ky.1 IS NULL AND pc1 IS NULL AND pc2 IS NULL AND \"Unnamed: 24\" IS NULL AND age_ky.2 IS NULL AND \"ODP 967 Dust proxy\" IS NULL AND \"Unnamed: 27\" IS NULL AND age_ky.3 IS NULL AND \"ODP 967 wet-dry index\" IS NULL",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 32,
+      "sql": "SELECT rowid - 1 AS index FROM climate_measurements WHERE SUM(ISNULL(site)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(hole)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(core)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(section)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(interval_cm)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(depth_below_seafloor_m)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(splice_depth_m)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(age_ky)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(al)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(si)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(s)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(k)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(ca)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(ti)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(mn)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(fe)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(rb)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(sr)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(zr)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(ba)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(pc1)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(pc2)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(odp_967_dust_proxy)) = (SELECT COUNT(*) FROM climate_measurements) AND SUM(ISNULL(odp_967_wet_dry_index)) = (SELECT COUNT(*) FROM climate_measurements)",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 33,
+      "sql": "SELECT id FROM climate_measurements WHERE site IS NULL AND hole IS NULL AND core IS NULL AND section IS NULL AND interval_cm IS NULL AND age_ky IS NULL AND al IS NULL AND si IS NULL AND s IS NULL AND k IS NULL AND ca IS NULL AND ti IS NULL AND mn IS NULL AND fe IS NULL AND rb IS NULL AND sr IS NULL AND zr IS NULL AND ba IS NULL AND \"Unnamed: 20\" IS NULL AND age_ky.1 IS NULL AND pc1 IS NULL AND pc2 IS NULL AND \"Unnamed: 24\" IS NULL AND age_ky.2 IS NULL AND odp_967_dust_proxy IS NULL AND \"Unnamed: 27\" IS NULL AND age_ky.3 IS NULL AND odp_967_wet_dry_index IS NULL",
+      "path_length": 6,
+      "node_type": "end"
+    }
+  ],
+  "11": [
+    {
+      "path_index": 0,
+      "sql": "SELECT COUNT(DISTINCT t1.conflict) AS numberofconflicts FROM conflict_brecke AS t1 JOIN worldcities AS t2 ON t1.conflict = t2.city WHERE t1.startyear BETWEEN 800 AND 1400 AND t1.endyear - t1.startyear >= 1",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 1,
+      "sql": "SELECT COUNT(DISTINCT t1.conflict) AS numberofconflicts FROM conflict_brecke AS t1 JOIN worldcities AS t2 ON t2.city = t1.conflict WHERE STRFTIME('%Y', t1.startyear) BETWEEN '800' AND '1400' AND STRFTIME('%Y', t1.endyear) BETWEEN '800' AND '1400'",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 2,
+      "sql": "SELECT COUNT(*) FROM conflict_brecke AS cb INNER JOIN worldcities AS wc ON cb.startyear BETWEEN wc.lat AND wc.lng WHERE cb.startyear >= 800 AND cb.endyear <= 1400 AND (cb.endyear - cb.startyear) >= 1",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 3,
+      "sql": "SELECT COUNT(*) FROM conflict_brecke AS cb INNER JOIN worldcities AS wc ON STRFTIME('%Y', cb.startyear) = wc.lat WHERE cb.startyear >= 800 AND cb.endyear <= 1400 AND (cb.endyear - cb.startyear) >= 1",
+      "path_length": 3,
+      "node_type": "end"
+    },
+    {
+      "path_index": 4,
+      "sql": "SELECT COUNT(*) FROM conflict_brecke WHERE (endyear - startyear) >= 1 AND startyear >= 800 AND endyear <= 1400",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 5,
+      "sql": "SELECT COUNT(*) AS conflictcount FROM conflict_brecke WHERE startyear >= 800 AND endyear <= 1400 AND (endyear - startyear) >= 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 6,
+      "sql": "SELECT COUNT(*) AS conflictcount FROM conflict_brecke WHERE startyear >= 800 AND endyear <= 1400 AND (endyear - startyear) >= 1",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 7,
+      "sql": "SELECT COUNT(*) FROM conflict_brecke AS cb JOIN worldcities AS wc ON cb.country = wc.country WHERE cb.startyear BETWEEN 800 AND 1400 AND cb.endyear - cb.startyear >= 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 8,
+      "sql": "SELECT COUNT(*) FROM conflict_brecke WHERE startyear BETWEEN 800 AND 1400 AND endyear - startyear >= 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 9,
+      "sql": "SELECT COUNT(*) FROM conflict_brecke AS t1 INNER JOIN worldcities AS t2 ON t2.country = 'Modern Country' WHERE t1.startyear >= 800 AND t1.endyear <= 1400 AND t1.endyear - t1.startyear >= 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 10,
+      "sql": "SELECT COUNT(*) FROM conflict_brecke WHERE startyear >= 800 AND endyear <= 1400 AND endyear - startyear >= 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 11,
+      "sql": "SELECT COUNT(*) FROM conflict_brecke WHERE STRFTIME('%Y', startyear) >= '800' AND STRFTIME('%Y', endyear) <= '1400' AND STRFTIME('%Y', endyear) - STRFTIME('%Y', startyear) >= 1",
+      "path_length": 8,
+      "node_type": "end"
+    },
+    {
+      "path_index": 12,
+      "sql": "SELECT COUNT(*) FROM (SELECT * FROM conflict_brecke WHERE STRFTIME('%Y', startyear) >= '800' AND STRFTIME('%Y', endyear) <= '1400' AND STRFTIME('%Y', endyear) - STRFTIME('%Y', startyear) >= 1)",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 13,
+      "sql": "SELECT COUNT(*) FROM conflict_brecke WHERE startyear BETWEEN 800 AND 1400 AND (endyear - startyear) >= 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 14,
+      "sql": "SELECT COUNT(*) FROM conflict_brecke WHERE startyear BETWEEN 800 AND 1400 AND (endyear - startyear) >= 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 15,
+      "sql": "SELECT COUNT(*) AS totalconflicts FROM conflict_brecke WHERE startyear >= 800 AND endyear <= 1400 AND (endyear - startyear) >= 1 UNION SELECT COUNT(*) AS conflictsinmoderntimes FROM conflict_brecke AS cb INNER JOIN worldcities AS wc ON cb.startyear BETWEEN 1900 AND 2023 AND cb.endyear BETWEEN 1900 AND 2023",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 16,
+      "sql": "SELECT COUNT(*) AS totalconflicts FROM conflict_brecke WHERE startyear >= 800 AND endyear <= 1400 AND (endyear - startyear) >= 1 UNION SELECT COUNT(*) AS conflictsinmoderntimes FROM conflict_brecke AS cb INNER JOIN worldcities AS wc ON cb.startyear BETWEEN 1900 AND 2023 OR cb.endyear BETWEEN 1900 AND 2023",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 17,
+      "sql": "SELECT COUNT(*) FROM conflict_brecke AS cb INNER JOIN worldcities AS wc ON cb.conflict = wc.city WHERE cb.startyear BETWEEN 800 AND 1400 AND cb.endyear BETWEEN 800 AND 1400 AND cb.endyear - cb.startyear >= 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 18,
+      "sql": "SELECT COUNT(*) FROM conflict_brecke AS cb WHERE cb.startyear >= 800 AND cb.endyear <= 1400 AND (cb.endyear - cb.startyear) >= 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 19,
+      "sql": "SELECT COUNT(*) FROM conflict_brecke AS cb JOIN worldcities AS wc ON cb.startyear <= wc.lat AND cb.endyear >= wc.lat WHERE cb.startyear >= 800 AND cb.endyear <= 1400",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 20,
+      "sql": "SELECT COUNT(DISTINCT cb.conflict) AS numberofconflicts FROM conflict_brecke AS cb WHERE cb.startyear BETWEEN 800 AND 1400 AND cb.endyear - cb.startyear >= 1",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 21,
+      "sql": "SELECT COUNT(DISTINCT cb.conflict) AS numberofconflicts FROM conflict_brecke AS cb WHERE cb.startyear BETWEEN 800 AND 1400 AND cb.endyear - cb.startyear >= 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 22,
+      "sql": "SELECT COUNT(DISTINCT cb.conflict) AS numberofconflicts FROM conflict_brecke AS cb WHERE cb.startyear BETWEEN 800 AND 1400 AND cb.endyear - cb.startyear >= 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 23,
+      "sql": "SELECT COUNT(DISTINCT cb.conflict) AS numberofconflicts FROM conflict_brecke AS cb WHERE cb.startyear BETWEEN 800 AND 1400 AND cb.endyear - cb.startyear >= 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 24,
+      "sql": "SELECT COUNT(*) AS numberofconflicts FROM conflict_brecke WHERE startyear >= 800 AND endyear <= 1400 AND endyear - startyear >= 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 25,
+      "sql": "SELECT COUNT(DISTINCT t1.conflict) AS numberofconflicts FROM conflict_brecke AS t1 JOIN worldcities AS t2 ON t1.conflict LIKE '%' || t2.city || '%' WHERE t1.startyear BETWEEN 800 AND 1400 AND t1.endyear - t1.startyear >= 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 26,
+      "sql": "SELECT COUNT(DISTINCT t1.conflict) AS numberofconflicts FROM conflict_brecke AS t1 JOIN worldcities AS t2 ON t1.conflict LIKE '%' || t2.city || '%' WHERE t1.startyear BETWEEN 800 AND 1400 AND t1.endyear - t1.startyear >= 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 27,
+      "sql": "SELECT COUNT(*) FROM (SELECT t1.conflict, t1.startyear, t1.endyear, t2.country FROM conflict_brecke AS t1 JOIN worldcities AS t2 ON t2.city = t1.conflict) AS subquery WHERE startyear BETWEEN 800 AND 1400 AND endyear >= startyear",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 28,
+      "sql": "SELECT COUNT(*) FROM conflict_brecke AS cb INNER JOIN worldcities AS wc ON cb.conflict = wc.city WHERE cb.startyear >= 800 AND cb.endyear <= 1400 AND cb.endyear - cb.startyear >= 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 29,
+      "sql": "SELECT COUNT(*) FROM conflict_brecke AS cb WHERE cb.startyear >= 800 AND cb.endyear <= 1400 AND cb.endyear - cb.startyear >= 1",
+      "path_length": 7,
+      "node_type": "end"
+    },
+    {
+      "path_index": 30,
+      "sql": "SELECT COUNT(*) FROM conflict_brecke AS t1 INNER JOIN worldcities AS t2 ON t1.conflict = t2.city WHERE STRFTIME('%Y', t1.startyear) BETWEEN '800' AND '1400' AND STRFTIME('%Y', t1.endyear) BETWEEN '800' AND '1400'",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 31,
+      "sql": "SELECT COUNT(*) FROM conflict_brecke WHERE startyear BETWEEN 800 AND 1400 AND endyear >= 800 AND endyear - startyear >= 1",
+      "path_length": 5,
+      "node_type": "end"
+    },
+    {
+      "path_index": 32,
+      "sql": "SELECT COUNT(*) FROM conflict_brecke WHERE startyear BETWEEN 800 AND 1400 AND endyear >= 800 AND endyear - startyear >= 1",
+      "path_length": 4,
+      "node_type": "end"
+    },
+    {
+      "path_index": 33,
+      "sql": "SELECT COUNT(*) FROM conflict_brecke WHERE startyear >= 800 AND endyear <= 1400 AND endyear - startyear >= 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 34,
+      "sql": "SELECT COUNT(DISTINCT conflict_brecke.conflict) FROM conflict_brecke JOIN worldcities ON conflict_brecke.conflict = worldcities.city WHERE conflict_brecke.startyear BETWEEN 800 AND 1400 AND (conflict_brecke.endyear - conflict_brecke.startyear) >= 1",
+      "path_length": 6,
+      "node_type": "end"
+    },
+    {
+      "path_index": 35,
+      "sql": "SELECT COUNT(*) FROM conflict_brecke WHERE startyear BETWEEN 800 AND 1400 AND (endyear - startyear) >= 1",
+      "path_length": 7,
+      "node_type": "end"
+    }
+  ]
+}

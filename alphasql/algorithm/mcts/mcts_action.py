@@ -6,7 +6,7 @@ from alphasql.database.sql_execution import (
     normalize_sql,
     is_valid_execution_result,
     format_execution_result
-)
+) 
 from alphasql.database.schema import TableSchema
 from alphasql.database.utils import build_table_ddl_statement
 from typing import Dict, Any, List, Optional, Tuple 
@@ -113,7 +113,7 @@ class SchemaSelectionAction(MCTSAction):
                     all_schema_selection_dicts.append(schema_selection_dict)
                 else:
                     continue
-        new_nodes = []
+        new_nodes = [] 
         hash_selection_dict_fn = lambda schema_selection_dict: frozenset([(table_name.lower(), column_name.lower()) for table_name, column_names in schema_selection_dict.items() for column_name in column_names])
         temp_set = set()
         for node, schema_selection_dict in zip(nodes, all_schema_selection_dicts):

@@ -1,0 +1,87 @@
+=== MCTS 节点分析日志 ===
+生成时间: 2025-10-22 20:10:53
+==================================================
+
+开始分析文件: results/Qwen2.5-Coder-7B-Instruct/kramabench/dev_main/11.pkl
+分析时间: 2025-10-22 20:10:53
+============================================================
+  类型: <class 'list'>
+  长度: 36
+  列表包含 36 个推理路径
+  每个路径平均节点数: 5.5
+  路径长度分布: {4: 7, 6: 14, 3: 1, 5: 8, 7: 5, 8: 1}
+    路径1: 4 个节点
+      节点类型序列: ['root', 'identify_column_values', 'sql_generation', 'end']
+    路径2: 6 个节点
+      节点类型序列: ['root', 'identify_column_values', 'identify_column_functions', 'schema_selection', 'sql_generation', 'end']
+    路径3: 4 个节点
+      节点类型序列: ['root', 'sql_generation', 'sql_revision', 'end']
+  Question ID: 11
+  包含的SQL查询示例:
+    路径1 SQL: SELECT COUNT(DISTINCT t1.conflict) AS numberofconflicts FROM conflict_brecke AS t1 JOIN worldcities AS t2 ON t1.conflict = t2.city WHERE t1.startyear BETWEEN 800 AND 1400 AND t1.endyear - t1.startyear >= 1
+    路径2 SQL: SELECT COUNT(DISTINCT t1.conflict) AS numberofconflicts FROM conflict_brecke AS t1 JOIN worldcities AS t2 ON t2.city = t1.conflict WHERE STRFTIME('%Y', t1.startyear) BETWEEN '800' AND '1400' AND STRFTIME('%Y', t1.endyear) BETWEEN '800' AND '1400'
+    路径3 SQL: SELECT COUNT(*) FROM conflict_brecke AS cb INNER JOIN worldcities AS wc ON cb.startyear BETWEEN wc.lat AND wc.lng WHERE cb.startyear >= 800 AND cb.endyear <= 1400 AND (cb.endyear - cb.startyear) >= 1
+    路径4 SQL: SELECT COUNT(*) FROM conflict_brecke AS cb INNER JOIN worldcities AS wc ON STRFTIME('%Y', cb.startyear) = wc.lat WHERE cb.startyear >= 800 AND cb.endyear <= 1400 AND (cb.endyear - cb.startyear) >= 1
+
+🌳 路径树结构 (长度: 4 个节点):
+==================================================
+🌱 root (深度: 0)
+  📋 根节点信息:
+    类型: root
+    深度: 0
+    问题: Count the number of human conflicts between 800 and 1400 AD, and attribute them ...
+    提示: Archaeological data analysis using conflict_brecke, worldcities
+    数据库: archeology
+    模式上下文预览: CREATE TABLE `climate_measurements` (
+	`Site` TEXT, -- Value Examples: `ODP 967`
+	`Hole` TEXT, -- Va...
+    ─────────────────────────
+  └── identify_column_values (深度: 1)
+  📋 identify_column_values 节点 (深度: 1):
+    父动作: IdentifyColumnValuesAction
+    识别列值: To answer the question, you need to use the `conflict_brecke` table to identify conflicts between 800 and 1400 AD and then attribute them to modern countries using the `worldcities` table. The essential columns for this query are:
+
+1. `conflict_brecke`.`Conflict` - to identify the conflict
+2. `conflict_brecke`.`StartYear` and `conflict_brecke`.`EndYear` - to filter conflicts between 800 and 1400 AD
+3. `worldcities`.`city` and `worldcities`.`country` - to attribute conflicts to modern countries
+
+You can join these tables based on the geographical information to attribute the conflicts to modern countries.
+    路径长度: 2
+    访问次数: 2, 累计奖励: 1.20
+    ─────────────────────────
+    └── sql_generation (深度: 2)
+  📋 sql_generation 节点 (深度: 2):
+    父动作: SQLGenerationAction
+    识别列值: To answer the question, you need to use the `conflict_brecke` table to identify conflicts between 800 and 1400 AD and then attribute them to modern countries using the `worldcities` table. The essential columns for this query are:
+
+1. `conflict_brecke`.`Conflict` - to identify the conflict
+2. `conflict_brecke`.`StartYear` and `conflict_brecke`.`EndYear` - to filter conflicts between 800 and 1400 AD
+3. `worldcities`.`city` and `worldcities`.`country` - to attribute conflicts to modern countries
+
+You can join these tables based on the geographical information to attribute the conflicts to modern countries.
+    SQL查询: SELECT COUNT(DISTINCT t1.conflict) AS numberofconflicts FROM conflict_brecke AS ...
+    SQL有效性: 有效
+    一致性评分: 0.400
+    路径长度: 3
+    访问次数: 1, 累计奖励: 0.40
+    ─────────────────────────
+      └── end (深度: 3) -> SQL: SELECT COUNT(DISTINCT t1.conflict) AS numberofconf...
+  📋 end 节点 (深度: 3):
+    父动作: EndAction
+    识别列值: To answer the question, you need to use the `conflict_brecke` table to identify conflicts between 800 and 1400 AD and then attribute them to modern countries using the `worldcities` table. The essential columns for this query are:
+
+1. `conflict_brecke`.`Conflict` - to identify the conflict
+2. `conflict_brecke`.`StartYear` and `conflict_brecke`.`EndYear` - to filter conflicts between 800 and 1400 AD
+3. `worldcities`.`city` and `worldcities`.`country` - to attribute conflicts to modern countries
+
+You can join these tables based on the geographical information to attribute the conflicts to modern countries.
+    SQL查询: SELECT COUNT(DISTINCT t1.conflict) AS numberofconflicts FROM conflict_brecke AS ...
+    最终SQL: SELECT COUNT(DISTINCT t1.conflict) AS numberofconflicts FROM conflict_brecke AS ...
+    SQL有效性: 有效
+    一致性评分: 0.400
+    路径长度: 4
+    访问次数: 1, 累计奖励: 0.40
+    ─────────────────────────
+
+============================================================
+分析完成!

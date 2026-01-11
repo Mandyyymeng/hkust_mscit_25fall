@@ -1,0 +1,11 @@
+{
+  "total_duration_seconds": 219.19,
+  "step_durations": {
+    "lsh_index_construction": 2.19,
+    "keyword_extraction_and_value_retrieval": 214.96,
+    "schema_context_preprocessing": 1.97
+  },
+  "task_count": 2147,
+  "database_count": 40,
+  "timestamp": "2025-11-24 09:53:04"
+}

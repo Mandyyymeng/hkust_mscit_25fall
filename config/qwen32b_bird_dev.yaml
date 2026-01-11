@@ -1,13 +1,13 @@
-tasks_file_path: "data/preprocessed/bird/dev/tasks.pkl"
+tasks_file_path: "data/preprocessed/bird/dev/dev_all/tasks.pkl"  # kramabench/dev/dev/tasks.pkl
 subset_file_path: null
 db_root_dir: "data/bird/dev/dev_databases"
-n_processes: 32
-max_rollout_steps: 24
+n_processes: 28  # 32 16 24
+max_rollout_steps: 24  # 16:6min each
 max_depth: 16
 exploration_constant: 1.414
-save_root_dir: "results/Qwen2.5-Coder-32B-Instruct/bird/dev"
+save_root_dir: "results/Qwen2.5-Coder-32B-Instruct/bird/dev_all" ### remember to change the dir name!!
 mcts_model_kwargs:
-    model: "Qwen/Qwen2.5-Coder-32B-Instruct"
+    model: "Qwen/Qwen2.5-Coder-32B-Instruct"  # Qwen7B
     n: 3
     top_p: 0.8
     max_tokens: 4096
