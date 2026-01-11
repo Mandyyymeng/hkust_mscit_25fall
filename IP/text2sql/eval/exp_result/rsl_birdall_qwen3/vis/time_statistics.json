@@ -1,0 +1,178 @@
+{
+  "california_schools": {
+    "predicted_sql": {
+      "count": 5300,
+      "mean_time": 0.006593138496830778,
+      "std_time": 0.003958858716500369,
+      "min_time": 8.916854858398438e-05,
+      "max_time": 0.04264116287231445
+    },
+    "ground_truth_sql": {
+      "count": 5300,
+      "mean_time": 0.005472698571547022,
+      "std_time": 0.003869764474774251,
+      "min_time": 9.655952453613281e-05,
+      "max_time": 0.019903182983398438
+    }
+  },
+  "financial": {
+    "predicted_sql": {
+      "count": 7000,
+      "mean_time": 0.02056257142339434,
+      "std_time": 0.08434426016754576,
+      "min_time": 7.176399230957031e-05,
+      "max_time": 0.5539624691009521
+    },
+    "ground_truth_sql": {
+      "count": 7000,
+      "mean_time": 0.035675957986286706,
+      "std_time": 0.12948411528925224,
+      "min_time": 7.2479248046875e-05,
+      "max_time": 0.6583824157714844
+    }
+  },
+  "toxicology": {
+    "predicted_sql": {
+      "count": 8500,
+      "mean_time": 0.0011213511298684513,
+      "std_time": 0.0020724499421838328,
+      "min_time": 5.030632019042969e-05,
+      "max_time": 0.017208337783813477
+    },
+    "ground_truth_sql": {
+      "count": 8500,
+      "mean_time": 0.0009306617063634536,
+      "std_time": 0.0016011326128677632,
+      "min_time": 5.0067901611328125e-05,
+      "max_time": 0.024576663970947266
+    }
+  },
+  "card_games": {
+    "predicted_sql": {
+      "count": 10900,
+      "mean_time": 0.036738910937528,
+      "std_time": 0.057692670652332446,
+      "min_time": 0.00011134147644042969,
+      "max_time": 0.3829634189605713
+    },
+    "ground_truth_sql": {
+      "count": 10900,
+      "mean_time": 0.03763216642064786,
+      "std_time": 0.05707139489747485,
+      "min_time": 0.00011754035949707031,
+      "max_time": 0.37976646423339844
+    }
+  },
+  "codebase_community": {
+    "predicted_sql": {
+      "count": 12700,
+      "mean_time": 0.03761342981668908,
+      "std_time": 0.057781270616644946,
+      "min_time": 9.584426879882812e-05,
+      "max_time": 0.3398551940917969
+    },
+    "ground_truth_sql": {
+      "count": 12700,
+      "mean_time": 0.03676670896725392,
+      "std_time": 0.054760528537118505,
+      "min_time": 9.632110595703125e-05,
+      "max_time": 0.29631853103637695
+    }
+  },
+  "superhero": {
+    "predicted_sql": {
+      "count": 11000,
+      "mean_time": 0.00027863019162958317,
+      "std_time": 0.00036702354409203305,
+      "min_time": 7.152557373046875e-05,
+      "max_time": 0.0042726993560791016
+    },
+    "ground_truth_sql": {
+      "count": 11000,
+      "mean_time": 0.0002661444273861972,
+      "std_time": 0.0003244021634528738,
+      "min_time": 7.224082946777344e-05,
+      "max_time": 0.0036003589630126953
+    }
+  },
+  "formula_1": {
+    "predicted_sql": {
+      "count": 10100,
+      "mean_time": 0.0026425445197832465,
+      "std_time": 0.007341576581919707,
+      "min_time": 0.00013256072998046875,
+      "max_time": 0.048732757568359375
+    },
+    "ground_truth_sql": {
+      "count": 10100,
+      "mean_time": 0.0024266506185626037,
+      "std_time": 0.007010662828436542,
+      "min_time": 0.0001323223114013672,
+      "max_time": 0.06204819679260254
+    }
+  },
+  "european_football_2": {
+    "predicted_sql": {
+      "count": 9200,
+      "mean_time": 0.04686830740907918,
+      "std_time": 0.05469707582576032,
+      "min_time": 0.00016498565673828125,
+      "max_time": 0.2343120574951172
+    },
+    "ground_truth_sql": {
+      "count": 9200,
+      "mean_time": 0.04665268037630164,
+      "std_time": 0.05378238088328333,
+      "min_time": 0.0001697540283203125,
+      "max_time": 0.2346358299255371
+    }
+  },
+  "thrombosis_prediction": {
+    "predicted_sql": {
+      "count": 9400,
+      "mean_time": 0.0008046655705634583,
+      "std_time": 0.0010453054245363107,
+      "min_time": 7.724761962890625e-05,
+      "max_time": 0.04699397087097168
+    },
+    "ground_truth_sql": {
+      "count": 9400,
+      "mean_time": 0.0007967229599648334,
+      "std_time": 0.000894817849643125,
+      "min_time": 7.653236389160156e-05,
+      "max_time": 0.008182048797607422
+    }
+  },
+  "student_club": {
+    "predicted_sql": {
+      "count": 13500,
+      "mean_time": 0.00017118183771769205,
+      "std_time": 0.00048013626553864244,
+      "min_time": 7.390975952148438e-05,
+      "max_time": 0.004978656768798828
+    },
+    "ground_truth_sql": {
+      "count": 13500,
+      "mean_time": 0.00016978802504362883,
+      "std_time": 0.0004725646477702108,
+      "min_time": 7.367134094238281e-05,
+      "max_time": 0.004634380340576172
+    }
+  },
+  "debit_card_specializing": {
+    "predicted_sql": {
+      "count": 4100,
+      "mean_time": 0.018089765513815532,
+      "std_time": 0.0415946598065383,
+      "min_time": 6.0558319091796875e-05,
+      "max_time": 0.21520018577575684
+    },
+    "ground_truth_sql": {
+      "count": 4100,
+      "mean_time": 0.015555515987117116,
+      "std_time": 0.03653861707634814,
+      "min_time": 6.508827209472656e-05,
+      "max_time": 0.21610450744628906
+    }
+  }
+}

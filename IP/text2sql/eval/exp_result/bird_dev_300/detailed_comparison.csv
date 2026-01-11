@@ -1,0 +1,272 @@
+question_id,db_name,difficulty,is_correct,gt_length,pred_length,element_overlap_rate,gt_answer_preview,pred_answer_preview,analysis
+2,california_schools,simple,正确,5,5,1.00,"['93726-5309', '93628-9602', '93706-2611', '93726-5208', '93706-2819']","['93726-5309', '93628-9602', '93706-2611', '93726-5208', '93706-2819']",GT长度:5; Pred长度:5; 重叠率:1.00; 位置匹配率:1.00
+4,california_schools,moderate,正确,751,751,1.00,"[None, '(510) 596-8901', None, '(510) 686-4131', '(510) 452-2063', '(510) 842-1181', '(510) 748-4008...","[None, '(510) 596-8901', None, '(510) 686-4131', '(510) 452-2063', '(510) 842-1181', '(510) 748-4008...",GT长度:751; Pred长度:751; 重叠率:1.00; 位置匹配率:1.00
+8,california_schools,simple,正确,1,1,1.00,[459],[459],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+9,california_schools,simple,正确,1,1,1.00,[2],[2],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+10,california_schools,simple,正确,1,1,1.00,[136.0],[136.0],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+17,california_schools,simple,错误,50,50,0.00,"[['0210', 630, 1], ['0890', 593, 2], ['0290', 582, 3], ['0930', 579, 4], ['1169', 576, 5], ['1079', ...","['0210', '0890', '0290', '0930', '1169', '1079', '0120', '0747', '0612', '0759', '1071', '0572', '06...",GT长度:50; Pred长度:50; 重叠率:0.00; 位置匹配率:0.00
+18,california_schools,simple,正确,1,1,1.00,[14],[14],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+20,california_schools,simple,正确,1,1,1.00,[3],[3],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+27,california_schools,moderate,错误,8574,749,0.09,"[['FAME Public Charter', None, None], ['Envision Academy for Arts & Technology', None, '(510) 596-89...","[['Crescent View West Charter', None, '(559) 222-8439'], ['Hume Lake Charter', None, '(559) 305-7565...",GT长度:8574; Pred长度:749; 重叠率:0.09; 位置匹配率:0.00
+28,california_schools,challenging,错误,57,49,0.00,"[['Mountain Oaks', '00'], ['Castle Rock', '00'], ['Charter Community School Home Study Academy', '00...","[['Mountain Oaks', 'County Office of Education (COE)'], ['Castle Rock', 'County Office of Education ...",GT长度:57; Pred长度:49; 重叠率:0.00; 位置匹配率:0.00
+33,california_schools,moderate,错误,2,3,0.67,"[['http://lhs.lynwood.edlioschool.com/', 'Lynwood High'], ['www.auhsd.us/katella', 'Katella High']]","[[None, 'South Gate Middle'], ['http://lhs.lynwood.edlioschool.com/', 'Lynwood High'], ['www.auhsd.u...",GT长度:2; Pred长度:3; 重叠率:0.67; 位置匹配率:0.00
+36,california_schools,challenging,正确,1,1,1.00,"[['Michelle', 'King', None, None, None, None]]","[['Michelle', 'King', None, None, None, None]]",GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+62,california_schools,challenging,错误,1,1,0.00,[1],[201],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+64,california_schools,simple,正确,1,1,1.00,[3],[3],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+65,california_schools,moderate,错误,1,1,0.00,[33.333333333333336],[2.5641025641025643],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+74,california_schools,moderate,正确,1,1,1.00,['K'],['K'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+75,california_schools,simple,正确,8,8,1.00,"[['Elementary', 'Lemon Grove Academy for the Sciences and Humanities'], ['Elementary', 'Monterey Hei...","[['Elementary', 'Lemon Grove Academy for the Sciences and Humanities'], ['Elementary', 'Monterey Hei...",GT长度:8; Pred长度:8; 重叠率:1.00; 位置匹配率:1.00
+76,california_schools,moderate,正确,1,1,1.00,['Le Grand'],['Le Grand'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+77,california_schools,moderate,正确,2,2,1.00,"[['White Oak Elementary', 3.755868544600939], ['The Accelerated', 97.63888888888889]]","[['White Oak Elementary', 3.755868544600939], ['The Accelerated', 97.63888888888889]]",GT长度:2; Pred长度:2; 重叠率:1.00; 位置匹配率:1.00
+79,california_schools,moderate,正确,1,1,1.00,"[['San Diego', 8]]","[['San Diego', 8]]",GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+81,california_schools,moderate,错误,1,1,0.00,"[['Oroville', '7', 'Central Middle - RISE']]","[['San Ysidro', 'K', 'Willow Elementary']]",GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+83,california_schools,challenging,正确,1,1,1.00,"[['Adelanto', 1]]","[['Adelanto', 1]]",GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+87,california_schools,challenging,错误,1,1,0.00,"[['a.lucero@realjourney.org', 'j.hernandez@realjourney.org']]","[['a.lucero@realjourney.org', 'j.hernandez@realjourney.org', None]]",GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+91,financial,simple,正确,1,1,1.00,['1996'],['1996'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+92,financial,simple,正确,1,1,1.00,[69],[69],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+94,financial,challenging,错误,1,1,0.00,"[[6, 4431]]","[[3214, 4431]]",GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+99,financial,moderate,正确,1,1,1.00,[10451],[10451],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+101,financial,simple,错误,1,359,0.00,[9],"[9, 9, 9, 35, 36, 40, 40, 50, 66, 71, 83, 90, 104, 107, 112, 112, 112, 119, 123, 126, 128, 128, 153,...",GT长度:1; Pred长度:359; 重叠率:0.00; 位置匹配率:1.00
+115,financial,challenging,正确,1,1,1.00,[44.26229508196721],[44.26229508196721],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+116,financial,challenging,错误,1,1,0.00,[430.45454545454544],[400],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+125,financial,challenging,错误,45,45,0.00,"[40.0, 39.25925925925924, 115.0, 22.49999999999999, 20.0, None, 11.666666666666677, None, 44.375, 13...","[['Strakonice', 'south Bohemia', 40.0], ['Chrudim', 'east Bohemia', 39.259259259259245], ['Hl.m. Pra...",GT长度:45; Pred长度:45; 重叠率:0.00; 位置匹配率:0.00
+130,financial,moderate,错误,1,1,0.00,[74],[0],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+131,financial,moderate,正确,1,1,1.00,['south Moravia'],['south Moravia'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+134,financial,simple,正确,1,1,1.00,[554],[554],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+136,financial,moderate,正确,1,1,1.00,[65],[65],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+138,financial,moderate,正确,1,1,1.00,[96],[96],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+147,financial,simple,正确,1,1,1.00,[231],[231],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+148,financial,moderate,正确,48,48,1.00,"[12, 19, 48, 105, 123, 143, 181, 396, 635, 652, 662, 785, 933, 946, 979, 1023, 1333, 1350, 1549, 174...","[12, 19, 48, 105, 123, 143, 181, 396, 635, 652, 662, 785, 933, 946, 979, 1023, 1333, 1350, 1549, 174...",GT长度:48; Pred长度:48; 重叠率:1.00; 位置匹配率:1.00
+149,financial,challenging,正确,461,461,1.00,"['DISPONENT', 'DISPONENT', 'DISPONENT', 'DISPONENT', 'DISPONENT', 'DISPONENT', 'DISPONENT', 'DISPONE...","['DISPONENT', 'DISPONENT', 'DISPONENT', 'DISPONENT', 'DISPONENT', 'DISPONENT', 'DISPONENT', 'DISPONE...",GT长度:461; Pred长度:461; 重叠率:1.00; 位置匹配率:1.00
+155,financial,simple,正确,1,1,1.00,[3.9237668161434978],[3.9237668161434978],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+161,financial,simple,正确,1,1,1.00,['junior'],['junior'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+166,financial,simple,正确,1,1,1.00,[48],[48],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+168,financial,moderate,正确,1,1,1.00,[49.609984399375975],[49.609984399375975],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+169,financial,challenging,错误,1,1,0.00,[25.300191222790616],[0],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+173,financial,challenging,错误,1,1,0.00,"[['POPLATEK MESICNE', 'POJISTNE']]","[[13, None]]",GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+183,financial,simple,正确,1,1,1.00,[8],[8],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+188,financial,moderate,正确,1,1,1.00,[6453],[6453],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+189,financial,moderate,错误,1,1,0.00,[1743],[3214],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+198,toxicology,challenging,错误,1,1,0.00,[732.125],[20.25],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+200,toxicology,simple,正确,2,2,1.00,"['TR041', 'TR499']","['TR041', 'TR499']",GT长度:2; Pred长度:2; 重叠率:1.00; 位置匹配率:1.00
+207,toxicology,challenging,错误,14,5,0.36,"['c', 'o', 'cl', 'h', 's', 'n', 'p', 'f', 'sn', 'pb', 'te', 'ca', 'br', 'cu']","['c', 'o', 'n', 's', 'ca']",GT长度:14; Pred长度:5; 重叠率:0.36; 位置匹配率:0.40
+212,toxicology,challenging,正确,1,1,1.00,['ca'],['ca'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+214,toxicology,simple,正确,2,2,1.00,"['+', '-']","['+', '-']",GT长度:2; Pred长度:2; 重叠率:1.00; 位置匹配率:1.00
+220,toxicology,challenging,错误,3,3,0.67,"['c', 'cl', 'h']","['c', 'cl', 'cl']",GT长度:3; Pred长度:3; 重叠率:0.67; 位置匹配率:0.67
+234,toxicology,moderate,错误,1,1,0.00,[1],[6],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+236,toxicology,moderate,正确,2,2,1.00,"[['-', 'TR001_6', 'TR001_9'], ['-', 'TR001_9', 'TR001_6']]","[['-', 'TR001_6', 'TR001_9'], ['-', 'TR001_9', 'TR001_6']]",GT长度:2; Pred长度:2; 重叠率:1.00; 位置匹配率:1.00
+240,toxicology,challenging,正确,6,24,1.00,"['s', 'n', 'o', 'c', 'h', 'p']","['s', 'n', 'o', 'c', 'h', 'h', 'h', 'h', 'h', 'h', 'h', 'p', 'h', 'h', 'h', 'h', 'h', 's', 'o', 'o',...",GT长度:6; Pred长度:24; 重叠率:1.00; 位置匹配率:0.83
+246,toxicology,moderate,正确,77,77,1.00,"[['-', 'TR006_45_46'], ['-', 'TR006_45_47'], ['-', 'TR021_29_45'], ['-', 'TR030_3_45'], ['-', 'TR039...","[['-', 'TR006_45_46'], ['-', 'TR006_45_47'], ['-', 'TR021_29_45'], ['-', 'TR030_3_45'], ['-', 'TR039...",GT长度:77; Pred长度:77; 重叠率:1.00; 位置匹配率:1.00
+247,toxicology,challenging,错误,3,49,0.60,"['na', 'zn', 'k']","['na', 'na', 'na', 'na', 'na', 'na', 'na', 'cl', 'na', 'na', 'na', 'na', 'na', 'na', 'na', 'na', 'h'...",GT长度:3; Pred长度:49; 重叠率:0.60; 位置匹配率:0.33
+248,toxicology,simple,正确,4,4,1.00,"[['TR041_10', 'TR041_7'], ['TR041_7', 'TR041_10'], ['TR041_8', 'TR041_9'], ['TR041_9', 'TR041_8']]","[['TR041_10', 'TR041_7'], ['TR041_7', 'TR041_10'], ['TR041_8', 'TR041_9'], ['TR041_9', 'TR041_8']]",GT长度:4; Pred长度:4; 重叠率:1.00; 位置匹配率:1.00
+249,toxicology,challenging,错误,2,2,0.00,"['h', 'c']","[['h', 'c'], ['c', 'h']]",GT长度:2; Pred长度:2; 重叠率:0.00; 位置匹配率:0.00
+250,toxicology,moderate,正确,1,1,1.00,['TR430'],['TR430'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+254,toxicology,moderate,错误,1,1,0.00,[85.04725745213668],[33.68608126666128],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+256,toxicology,simple,正确,1,1,1.00,[10123],[10123],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+257,toxicology,simple,正确,268,268,1.00,"['TR004_2', 'TR004_8', 'TR015_2', 'TR015_3', 'TR018_13', 'TR018_15', 'TR018_16', 'TR018_17', 'TR018_...","['TR004_2', 'TR004_8', 'TR015_2', 'TR015_3', 'TR018_13', 'TR018_15', 'TR018_16', 'TR018_17', 'TR018_...",GT长度:268; Pred长度:268; 重叠率:1.00; 位置匹配率:1.00
+259,toxicology,simple,错误,1,1,0.00,[17],[16],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+263,toxicology,challenging,错误,1,1,0.00,[2.6840451814272206],[2.013677811550152],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+277,toxicology,challenging,正确,2,2,1.00,"['cl', 'c']","['cl', 'c']",GT长度:2; Pred长度:2; 重叠率:1.00; 位置匹配率:1.00
+283,toxicology,moderate,正确,1,1,1.00,['-'],['-'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+284,toxicology,moderate,正确,4,4,1.00,"['-', '=', '#', None]","['-', '=', '#', None]",GT长度:4; Pred长度:4; 重叠率:1.00; 位置匹配率:1.00
+287,toxicology,moderate,正确,1,1,1.00,[21.428571428571427],[21.428571428571427],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+290,toxicology,challenging,正确,5,5,1.00,"['n', 'h', 'pb', 's', 'c']","['n', 'h', 'pb', 's', 'c']",GT长度:5; Pred长度:5; 重叠率:1.00; 位置匹配率:1.00
+300,toxicology,simple,正确,41,41,1.00,"['TR186_1', 'TR186_10', 'TR186_11', 'TR186_12', 'TR186_13', 'TR186_14', 'TR186_15', 'TR186_16', 'TR1...","['TR186_1', 'TR186_10', 'TR186_11', 'TR186_12', 'TR186_13', 'TR186_14', 'TR186_15', 'TR186_16', 'TR1...",GT长度:41; Pred长度:41; 重叠率:1.00; 位置匹配率:1.00
+302,toxicology,challenging,正确,1,1,1.00,['c'],['c'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+304,toxicology,challenging,正确,563,3692,1.00,"[['TR000', 'cl'], ['TR000', 'c'], ['TR000', 'h'], ['TR001', 'c'], ['TR001', 'o'], ['TR001', 'cl'], [...","[['TR000', 'cl'], ['TR000', 'c'], ['TR000', 'cl'], ['TR000', 'cl'], ['TR000', 'h'], ['TR001', 'c'], ...",GT长度:563; Pred长度:3692; 重叠率:1.00; 位置匹配率:0.00
+318,toxicology,simple,正确,1,1,1.00,['TR001'],['TR001'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+322,toxicology,challenging,正确,1,1,1.00,['cl'],['cl'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+326,toxicology,simple,错误,68,47,0.69,"['TR004', 'TR015', 'TR018', 'TR020', 'TR024', 'TR031', 'TR045', 'TR046', 'TR047', 'TR050', 'TR051', ...","['TR018', 'TR020', 'TR031', 'TR045', 'TR046', 'TR050', 'TR051', 'TR056', 'TR062', 'TR084', 'TR101', ...",GT长度:68; Pred长度:47; 重叠率:0.69; 位置匹配率:0.00
+327,toxicology,moderate,正确,186,186,1.00,"['TR002', 'TR004', 'TR007', 'TR008', 'TR009', 'TR010', 'TR011', 'TR012', 'TR014', 'TR015', 'TR017', ...","['TR002', 'TR004', 'TR007', 'TR008', 'TR009', 'TR010', 'TR011', 'TR012', 'TR014', 'TR015', 'TR017', ...",GT长度:186; Pred长度:186; 重叠率:1.00; 位置匹配率:1.00
+340,card_games,simple,错误,25061,25061,0.00,"[4, 5, 6, 9, 10, 13, 17, 18, 19, 21, 22, 23, 24, 26, 27, 29, 31, 34, 35, 36, 37, 40, 41, 43, 44, 45,...","['Ballista Squad', 'Bandage', 'Beacon of Immortality', 'Cho-Manno, Revolutionary', 'Condemn', 'Demys...",GT长度:25061; Pred长度:25061; 重叠率:0.00; 位置匹配率:0.00
+347,card_games,moderate,正确,23,23,1.00,"[[29, 'You can’t put an Aura card from your hand onto the battlefield this way if that Aura can’t le...","[[29, 'You can’t put an Aura card from your hand onto the battlefield this way if that Aura can’t le...",GT长度:23; Pred长度:23; 重叠率:1.00; 位置匹配率:1.00
+352,card_games,moderate,错误,1,1,0.00,[8.773399659641314],[8.772787168500694],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+367,card_games,simple,正确,3,3,1.00,"['Igor Kieryluk', 'Titus Lunter', 'Daarken']","['Igor Kieryluk', 'Titus Lunter', 'Daarken']",GT长度:3; Pred长度:3; 重叠率:1.00; 位置匹配率:1.00
+371,card_games,challenging,正确,1,1,1.00,[10.0],[10.0],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+383,card_games,simple,正确,1,1,1.00,[258],[258],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+391,card_games,moderate,正确,8,80,1.00,"[""Executioner's Capsule"", 'Immortal Coil', 'Onyx Goblet', 'Netherborn Altar', 'Scepter of Fugue', 'W...","[""Executioner's Capsule"", ""Executioner's Capsule"", ""Executioner's Capsule"", ""Executioner's Capsule"",...",GT长度:8; Pred长度:80; 重叠率:1.00; 位置匹配率:0.12
+397,card_games,moderate,正确,11446,11446,1.00,"['{5}{W}{W}', '{4}{W}', '{3}{W}', '{3}{W}', '{W}', '{5}{W}', '{2}{W}', '{2}{W}', '{2}{W}{W}', '{W}',...","['{5}{W}{W}', '{4}{W}', '{3}{W}', '{3}{W}', '{W}', '{5}{W}', '{2}{W}', '{2}{W}', '{2}{W}{W}', '{W}',...",GT长度:11446; Pred长度:11446; 重叠率:1.00; 位置匹配率:1.00
+409,card_games,moderate,正确,1,1,1.00,[16],[16],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+414,card_games,simple,正确,10,10,1.00,"['Chinese Simplified', 'Chinese Traditional', 'French', 'German', 'Italian', 'Japanese', 'Korean', '...","['Chinese Simplified', 'Chinese Traditional', 'French', 'German', 'Italian', 'Japanese', 'Korean', '...",GT长度:10; Pred长度:10; 重叠率:1.00; 位置匹配率:1.00
+415,card_games,challenging,正确,1,1,1.00,[100.0],[100.0],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+431,card_games,challenging,错误,10,21,0.00,"[[""Commander's Arsenal"", 50], ['Premium Deck Series: Fire and Lightning', 307], ['From the Vault: Ex...","[61, 109, 117, 133, 197, 237, 245, 269, 277, 301, 317, 325, 333, 349, 421, 429, 437, 453, 461, 469, ...",GT长度:10; Pred长度:21; 重叠率:0.00; 位置匹配率:0.00
+440,card_games,simple,正确,1,6,1.00,['Portuguese (Brazil)'],"['Portuguese (Brazil)', 'Portuguese (Brazil)', 'Portuguese (Brazil)', 'Portuguese (Brazil)', 'Portug...",GT长度:1; Pred长度:6; 重叠率:1.00; 位置匹配率:1.00
+456,card_games,simple,正确,1,7,1.00,"[['Elemental', 'Legendary']]","[['Elemental', 'Legendary'], ['Elemental', 'Legendary'], ['Elemental', 'Legendary'], ['Elemental', '...",GT长度:1; Pred长度:7; 重叠率:1.00; 位置匹配率:1.00
+459,card_games,moderate,正确,1,1,1.00,['Serra Angel'],['Serra Angel'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+465,card_games,moderate,错误,1,1,0.00,['YES'],[0],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+470,card_games,simple,正确,3,4,1.00,"['2007-07-13', '2002-05-27', '2018-12-07']","['2007-07-13', '2007-07-13', '2002-05-27', '2018-12-07']",GT长度:3; Pred长度:4; 重叠率:1.00; 位置匹配率:0.33
+474,card_games,moderate,正确,1,1,1.00,[30],[30],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+477,card_games,challenging,正确,2,2,1.00,"['Chippy', 'Jeremy Jarvis']","['Jeremy Jarvis', 'Chippy']",GT长度:2; Pred长度:2; 重叠率:1.00; 位置匹配率:0.00
+479,card_games,moderate,正确,1,1,1.00,[6],[6],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+482,card_games,simple,错误,1,2,0.00,['Creature — Human Cleric'],"['Kreatur — Mensch, Kleriker', 'Kreatur — Kleriker']",GT长度:1; Pred长度:2; 重叠率:0.00; 位置匹配率:0.00
+487,card_games,challenging,正确,1,1,1.00,[100.0],[100.0],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+494,card_games,challenging,错误,113,113,0.00,"[['If Oubliette leaves the battlefield before its triggered ability resolves, the target creature wo...","[['If Oubliette leaves the battlefield before its triggered ability resolves, the target creature wo...",GT长度:113; Pred长度:113; 重叠率:0.00; 位置匹配率:0.00
+495,card_games,simple,正确,8,8,1.00,"['2007-07-13', '2001-04-11', '2003-07-28', '2005-07-29', '2016-11-11', '2010-06-04', '2011-01-01', '...","['2007-07-13', '2001-04-11', '2003-07-28', '2005-07-29', '2016-11-11', '2010-06-04', '2011-01-01', '...",GT长度:8; Pred长度:8; 重叠率:1.00; 位置匹配率:1.00
+506,card_games,challenging,正确,1,1,1.00,[11.570247933884298],[11.570247933884298],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+507,card_games,challenging,正确,1,1,1.00,[0.8264462809917356],[0.8264462809917356],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+513,card_games,challenging,正确,1,1,1.00,[37],[37],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+521,card_games,challenging,正确,1,2,1.00,['Banned'],"['Banned', 'Banned']",GT长度:1; Pred长度:2; 重叠率:1.00; 位置匹配率:1.00
+528,card_games,challenging,正确,1664,1890,1.00,"[['Act of Heroism', 'commander'], ['Act of Heroism', 'duel'], ['Act of Heroism', 'legacy'], ['Act of...","[['Act of Heroism', 'commander'], ['Act of Heroism', 'duel'], ['Act of Heroism', 'legacy'], ['Act of...",GT长度:1664; Pred长度:1890; 重叠率:1.00; 位置匹配率:0.73
+555,codebase_community,simple,正确,1,1,1.00,[9.0],[9.0],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+556,codebase_community,simple,正确,1,1,1.00,[48.570093457943926],[48.570093457943926],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+559,codebase_community,simple,正确,1,1,1.00,['2010-07-20'],['2010-07-20'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+563,codebase_community,moderate,正确,1,1,1.00,[3],[3],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+571,codebase_community,moderate,错误,1,1,0.00,[3.0],[0.375],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+572,codebase_community,moderate,正确,1,1,1.00,[60],[60],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+576,codebase_community,simple,正确,1,1,1.00,['Preets'],['Preets'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+586,codebase_community,challenging,错误,2,2,0.00,"[['chl', 'How to combine confidence intervals for a variance component of a mixed-effects model when...","['chl', 'shabbychef']",GT长度:2; Pred长度:2; 重叠率:0.00; 位置匹配率:0.00
+598,codebase_community,challenging,正确,1,1,1.00,[-9.544015626052403],[-9.544015626052403],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+599,codebase_community,simple,正确,7,2,1.00,"[[2, 3], [5, 3], [5, 3], [5, 3], [5, 3], [5, 3], [5, 3]]","[[2, 3], [5, 3]]",GT长度:7; Pred长度:2; 重叠率:1.00; 位置匹配率:1.00
+615,codebase_community,moderate,正确,1,1,1.00,[0.7334963325183375],[0.7334963325183375],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+617,codebase_community,simple,正确,1,1,1.00,"[""That's just an example - it might have a median that is much smaller, on the order of 200 (it depe...","[""That's just an example - it might have a median that is much smaller, on the order of 200 (it depe...",GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+632,codebase_community,simple,错误,1,1,0.00,[65],[2],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+633,codebase_community,moderate,正确,1,1,1.00,[351],[351],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+634,codebase_community,challenging,正确,1,1,1.00,['Harvey Motulsky'],['Harvey Motulsky'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+636,codebase_community,simple,正确,1,1,1.00,[136],[136],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+639,codebase_community,challenging,错误,1,1,0.00,[0.19569471624266144],[0.0],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+649,codebase_community,simple,错误,12,1,0.00,"[[259, '2012-01-22 20:18:28.0'], [260, '2012-01-22 20:18:28.0'], [261, '2012-01-22 20:18:28.0'], [26...","[[12, '2012-01-22 20:18:28.0']]",GT长度:12; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+657,codebase_community,moderate,正确,1,1,1.00,"[['probabilityislogic', None]]","[['probabilityislogic', None]]",GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+663,codebase_community,simple,正确,1,1,1.00,[805],[805],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+665,codebase_community,moderate,正确,1,1,1.00,[8.666666666666666],[8.666666666666666],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+672,codebase_community,moderate,错误,1,1,0.00,[19],[14],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+692,codebase_community,moderate,错误,1,1,0.00,[1],[83.04526620404795],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+701,codebase_community,challenging,错误,1,1,0.00,timeout,timeout,GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+719,superhero,moderate,正确,1,1,1.00,[56],[56],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+725,superhero,simple,正确,1,1,1.00,[387],[387],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+730,superhero,challenging,正确,201,200,1.00,"['3-D Man', 'A-Bomb', 'Abomination', 'Abraxas', 'Absorbing Man', 'Agent Zero', 'Air-Walker', 'Ajax',...","['3-D Man', 'A-Bomb', 'Abomination', 'Abraxas', 'Absorbing Man', 'Agent Zero', 'Air-Walker', 'Ajax',...",GT长度:201; Pred长度:200; 重叠率:1.00; 位置匹配率:0.10
+740,superhero,moderate,正确,1,1,1.00,[12],[12],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+743,superhero,challenging,错误,1,1,0.00,"[[28.266666666666666, 118.0]]","[[28.60998650472335, 118]]",GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+744,superhero,challenging,正确,1,1,1.00,[163],[163],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+745,superhero,simple,正确,1,1,1.00,[20],[20],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+769,superhero,challenging,正确,1,1,1.00,['Dash'],['Dash'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+770,superhero,simple,正确,1,1,1.00,['Blue'],['Blue'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+772,superhero,challenging,错误,5,5,0.00,"[[14, 6, 1], [9, 9, 1], [1, 1, 1], [1, 1, 28], [30, 4, 1]]","[['Green', 'Blond', 'No Colour'], ['Brown', 'Brown', 'No Colour'], ['No Colour', 'No Colour', 'No Co...",GT长度:5; Pred长度:5; 重叠率:0.00; 位置匹配率:0.00
+773,superhero,challenging,正确,157,157,1.00,"[['Agent Zero', 'Marvel Comics'], ['Alex Mercer', 'Wildstorm'], ['Alex Woolsly', 'NBC - Heroes'], ['...","[['Agent Zero', 'Marvel Comics'], ['Alex Mercer', 'Wildstorm'], ['Alex Woolsly', 'NBC - Heroes'], ['...",GT长度:157; Pred长度:157; 重叠率:1.00; 位置匹配率:1.00
+775,superhero,challenging,正确,1,1,1.00,[2.4630541871921183],[2.4630541871921183],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+785,superhero,simple,正确,28,28,1.00,"['Ares', 'Bizarro', 'Black Flash', 'Brundlefly', 'Captain Cold', 'Copycat', 'Deadpool', 'Deathstroke...","['Ares', 'Bizarro', 'Black Flash', 'Brundlefly', 'Captain Cold', 'Copycat', 'Deadpool', 'Deathstroke...",GT长度:28; Pred长度:28; 重叠率:1.00; 位置匹配率:1.00
+787,superhero,simple,正确,1,1,1.00,"[['Alpha', 'Good']]","[['Alpha', 'Good']]",GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+788,superhero,challenging,错误,1,1,0.00,[54.95049504950495],[28.68217054263566],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+790,superhero,moderate,正确,1,1,1.00,[351],[351],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+792,superhero,simple,正确,8,8,1.00,"['Accelerated Healing', 'Intelligence', 'Super Strength', 'Stamina', 'Super Speed', 'Invulnerability...","['Accelerated Healing', 'Intelligence', 'Super Strength', 'Stamina', 'Super Speed', 'Invulnerability...",GT长度:8; Pred长度:8; 重叠率:1.00; 位置匹配率:1.00
+794,superhero,moderate,错误,1,40,0.03,['Air-Walker'],"['Air-Walker', 'Angela', 'Ardina', 'Aurora', 'Ben 10', 'Beyonder', 'Binary', 'Bizarro', 'Black Bolt'...",GT长度:1; Pred长度:40; 重叠率:0.03; 位置匹配率:1.00
+800,superhero,moderate,正确,1,1,1.00,[31.2],[31.2],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+808,superhero,simple,正确,2,6,1.00,"['-', 'Human']","['-', 'Human', '-', 'Human', '-', '-']",GT长度:2; Pred长度:6; 重叠率:1.00; 位置匹配率:1.00
+814,superhero,moderate,正确,10,279,1.00,"['No Colour', 'Grey', 'Blue', 'Green', 'White', 'Gold', 'Blue/White', 'Purple', 'Red', 'Silver']","['No Colour', 'No Colour', 'Grey', 'No Colour', 'Blue', 'No Colour', 'Green', 'No Colour', 'No Colou...",GT长度:10; Pred长度:279; 重叠率:1.00; 位置匹配率:0.10
+817,superhero,moderate,正确,3,3,1.00,"['Mutant', '-', 'Strontian']","['Mutant', '-', 'Strontian']",GT长度:3; Pred长度:3; 重叠率:1.00; 位置匹配率:1.00
+818,superhero,challenging,正确,1,1,1.00,[16.50943396226415],[16.50943396226415],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+819,superhero,challenging,正确,1,1,1.00,[-122],[-122],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+823,superhero,moderate,正确,1,1,1.00,[111],[111],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+825,superhero,moderate,正确,1,1,1.00,['Female'],['Female'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+828,superhero,simple,正确,1,1,1.00,[40],[40],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+829,superhero,challenging,正确,1,1,1.00,[-163],[-163],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+834,superhero,challenging,正确,1,1,1.00,[13.333333333333334],[13.333333333333334],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+841,superhero,simple,正确,1,1,1.00,"[[63, 'Human']]","[[63, 'Human']]",GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+858,formula_1,simple,错误,1,1,0.00,['Italian'],[5],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+880,formula_1,challenging,正确,1,1,1.00,[32.50155167390781],[32.50155167390781],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+881,formula_1,moderate,正确,1,1,1.00,[17.24137931034483],[17.24137931034483],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+894,formula_1,moderate,错误,1,1,0.00,"[[67411, 'Lewis', 'Hamilton', 'Austrian Grand Prix']]","[['Lewis', 'Hamilton', 'Austrian Grand Prix']]",GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+896,formula_1,challenging,错误,1,1,0.00,[74.0],[55.333333333333336],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+898,formula_1,simple,正确,1,1,1.00,"[[39, 'Kamui', 'Kobayashi']]","[[39, 'Kamui', 'Kobayashi']]",GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+909,formula_1,moderate,正确,1,1,1.00,[52.17391304347826],[52.17391304347826],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+912,formula_1,simple,正确,1,1,1.00,['marina_bay'],['marina_bay'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+928,formula_1,moderate,错误,1,1,0.00,"[['Fernando', 'Alonso', 'alonso']]",['hamilton'],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+934,formula_1,moderate,正确,1,1,1.00,"[['Alessandro', 'Nannini']]","[['Alessandro', 'Nannini']]",GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+946,formula_1,simple,正确,11,11,1.00,"[[39.795, -86.2347], [33.4479, -112.075], [42.3298, -83.0401], [32.7774, -96.7587], [33.7651, -118.1...","[[39.795, -86.2347], [33.4479, -112.075], [42.3298, -83.0401], [32.7774, -96.7587], [33.7651, -118.1...",GT长度:11; Pred长度:11; 重叠率:1.00; 位置匹配率:1.00
+954,formula_1,challenging,正确,1,1,1.00,[27.272727272727273],[27.272727272727273],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+955,formula_1,challenging,错误,25,25,0.00,"[[1950, 9712.01842857143], [1951, 10870.343222222224], [1952, 11061.26325], [1953, 10828.01566666666...","[[1950, 9712.595714285713], [1951, 10870.532222222222], [1952, 11061.585], [1953, 10828.476666666666...",GT长度:25; Pred长度:25; 重叠率:0.00; 位置匹配率:0.00
+957,formula_1,simple,正确,1,1,1.00,[2911],[2911],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+958,formula_1,moderate,错误,1,1,0.00,"[['Lewis', 'Hamilton', '1:07.411']]","[['Lewis', 'Hamilton']]",GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+959,formula_1,simple,正确,17,17,1.00,"[17, 18, 42, 11, 17, 49, 40, 16, 37, 16, 39, 42, 48, 36, 43, 25, 54]","[17, 18, 42, 11, 17, 49, 40, 16, 37, 16, 39, 42, 48, 36, 43, 25, 54]",GT长度:17; Pred长度:17; 重叠率:1.00; 位置匹配率:1.00
+962,formula_1,challenging,正确,1,1,1.00,[64.6189376443418],[64.6189376443418],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+963,formula_1,moderate,错误,1,1,0.00,[24465],[9],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+981,formula_1,moderate,错误,1,1,0.00,"[[2017, 'Australian Grand Prix', '2017-03-26', '05:00:00']]","[['2017', 'Australian Grand Prix', '2017-03-26', '05:00:00']]",GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+988,formula_1,challenging,正确,3,3,1.00,"[['Nico', 'Rosberg'], ['Adrian', 'Sutil'], ['Timo', 'Glock']]","[['Nico', 'Rosberg'], ['Adrian', 'Sutil'], ['Timo', 'Glock']]",GT长度:3; Pred长度:3; 重叠率:1.00; 位置匹配率:1.00
+994,formula_1,challenging,错误,1,1,0.00,"[[218.5, 'McLaren', 'British']]","[['McLaren', 'British', 1145.5]]",GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+999,formula_1,simple,正确,1,1,1.00,['Austrian Grand Prix'],['Austrian Grand Prix'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1001,formula_1,challenging,错误,1,1,0.00,"[['Felipe', 'Massa']]","[['Jarno', 'Trulli']]",GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1006,formula_1,challenging,错误,1,1,0.00,['2:00.000'],[67411],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1007,formula_1,simple,正确,1,1,1.00,['35.688'],['35.688'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1010,formula_1,simple,错误,11340,1,0.00,"['1:49.088', '1:33.740', '1:31.600', '1:31.067', '1:32.129', '1:30.469', '1:29.488', '1:30.302', '1:...",['19:16.450'],GT长度:11340; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1011,formula_1,challenging,错误,20,20,0.00,"[['Nico', 'Hülkenberg', 807], ['Daniel', 'Ricciardo', 817], ['Adrian', 'Sutil', 16], ['Kevin', 'Magn...","[['Anthony', 'Davidson'], ['Enrique', 'Bernoldi'], ['Christian', 'Klien'], ['Timo', 'Glock'], ['Kevi...",GT长度:20; Pred长度:20; 重叠率:0.00; 位置匹配率:0.00
+1016,formula_1,challenging,正确,1,1,1.00,['20.761'],['20.761'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1019,formula_1,moderate,正确,1,1,1.00,[90064.80409421088],[90064.80409421088],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1161,thrombosis_prediction,challenging,正确,1,1,1.00,[6.120833333333334],[6.120833333333334],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1166,thrombosis_prediction,simple,错误,1,1,0.00,"[['CNS susp', 'SLE']]","[['CNS susp', 'SLE+Psy']]",GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1168,thrombosis_prediction,challenging,错误,1,1,0.00,"[['1981-07-31', 69, '1917-04-18']]","[['1981-07-31', 69]]",GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1169,thrombosis_prediction,challenging,正确,1,1,1.00,[0.20566810835419985],[0.20566810835419985],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1171,thrombosis_prediction,challenging,正确,1,1,1.00,[1],[1],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1178,thrombosis_prediction,simple,错误,1,1,0.00,['F'],['M'],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1183,thrombosis_prediction,challenging,正确,1,1,1.00,['SLE'],['SLE'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1187,thrombosis_prediction,moderate,正确,63,63,1.00,"[27654, 71417, 912147, 944797, 1078741, 1650222, 2265184, 2371753, 2436816, 2933261, 3178036, 318252...","[27654, 71417, 912147, 944797, 1078741, 1650222, 2265184, 2371753, 2436816, 2933261, 3178036, 318252...",GT长度:63; Pred长度:63; 重叠率:1.00; 位置匹配率:1.00
+1189,thrombosis_prediction,challenging,错误,1,1,0.00,[3],[0],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1190,thrombosis_prediction,challenging,正确,1,1,1.00,[61.00217864923747],[61.00217864923747],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1193,thrombosis_prediction,moderate,正确,1,1,1.00,[3],[3],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1197,thrombosis_prediction,simple,错误,1,1,0.00,"[[None, 'SLE']]","[['1997-08-13', 'SLE']]",GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1203,thrombosis_prediction,simple,错误,1,1,0.00,[641],[88],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1207,thrombosis_prediction,moderate,正确,97,97,1.00,"[['M', '1937-11-24'], ['M', '1923-07-25'], ['F', '1943-07-06'], ['F', '1941-11-21'], ['F', '1975-02-...","[['M', '1937-11-24'], ['M', '1923-07-25'], ['F', '1943-07-06'], ['F', '1941-11-21'], ['F', '1975-02-...",GT长度:97; Pred长度:97; 重叠率:1.00; 位置匹配率:1.00
+1220,thrombosis_prediction,simple,正确,20,44,1.00,"[[27654, 'F', '1936-03-25'], [444499, 'M', '1954-01-24'], [912147, 'F', '1975-02-17'], [1138737, 'F'...","[[27654, 'F', '1936-03-25'], [27654, 'F', '1936-03-25'], [444499, 'M', '1954-01-24'], [444499, 'M', ...",GT长度:20; Pred长度:44; 重叠率:1.00; 位置匹配率:0.05
+1221,thrombosis_prediction,simple,正确,38,1360,1.00,"[[57266, 'M', '1923-07-25'], [71417, 'F', '1929-10-20'], [130312, 'F', '1948-02-23'], [130370, 'F', ...","[[57266, 'M', '1923-07-25'], [57266, 'M', '1923-07-25'], [57266, 'M', '1923-07-25'], [57266, 'M', '1...",GT长度:38; Pred长度:1360; 重叠率:1.00; 位置匹配率:0.03
+1223,thrombosis_prediction,challenging,错误,1,1,0.00,['True'],[1],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1230,thrombosis_prediction,simple,正确,154,154,1.00,"[30609, 43003, 52199, 58139, 71417, 81043, 122405, 128012, 128041, 250391, 283032, 287122, 287861, 2...","[30609, 43003, 52199, 58139, 71417, 81043, 122405, 128012, 128041, 250391, 283032, 287122, 287861, 2...",GT长度:154; Pred长度:154; 重叠率:1.00; 位置匹配率:1.00
+1231,thrombosis_prediction,challenging,正确,1,1,1.00,[2],[2],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1233,thrombosis_prediction,moderate,错误,74,82,0.01,"[[304157, 91], [304157, 95], [304157, 102], [912147, 69], [912147, 81], [912147, 118], [912147, 91],...","[[3554252, 148], [3554252, 146], [3554252, 133], [3554252, 167], [3554252, 126], [3554252, 119], [35...",GT长度:74; Pred长度:82; 重叠率:0.01; 位置匹配率:0.00
+1239,thrombosis_prediction,challenging,正确,3,3,1.00,"[[2307640, 72], [3182521, 73], [4007151, 57]]","[[2307640, 72], [3182521, 73], [4007151, 57]]",GT长度:3; Pred长度:3; 重叠率:1.00; 位置匹配率:1.00
+1243,thrombosis_prediction,challenging,错误,1,1,0.00,[1.2037369744879627],[78.3625730994152],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1250,thrombosis_prediction,moderate,正确,24,24,1.00,"[48473, 250391, 460574, 668398, 1066089, 1086485, 1130007, 1185720, 1567380, 1665879, 1755350, 23076...","[48473, 250391, 460574, 668398, 1066089, 1086485, 1130007, 1185720, 1567380, 1665879, 1755350, 23076...",GT长度:24; Pred长度:24; 重叠率:1.00; 位置匹配率:1.00
+1274,thrombosis_prediction,moderate,错误,1,1,0.00,[4],[0],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1279,thrombosis_prediction,moderate,错误,1,1,0.00,[1],[32.1626617375231],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1282,thrombosis_prediction,simple,正确,3,3,1.00,"['1943-06-02', '1943-06-02', '1953-04-06']","['1943-06-02', '1943-06-02', '1953-04-06']",GT长度:3; Pred长度:3; 重叠率:1.00; 位置匹配率:1.00
+1284,thrombosis_prediction,moderate,错误,1,1,0.00,['1992-05-11'],['1989-12-02'],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1288,thrombosis_prediction,simple,正确,544,31,1.00,"['RA, SLE susp', 'RA, SLE susp', 'RA, SLE susp', 'RA, SLE susp', 'RA, SLE susp', 'RA, SLE susp', 'RA...","['RA, SLE susp', 'RA', 'SLE', 'PSS', 'MRA', 'MCTD, SJS', 'SJS, MCTD, AORTITIS', 'RA,SJS', 'PM, SJS s...",GT长度:544; Pred长度:31; 重叠率:1.00; 位置匹配率:0.03
+1292,thrombosis_prediction,challenging,正确,1,1,1.00,"[[1.3, 2.0, 3]]","[[1.3, 2.0, 3]]",GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1297,thrombosis_prediction,moderate,错误,1,1,0.00,[14],[2],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1305,thrombosis_prediction,moderate,错误,1,1,0.00,[3688],[115],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1316,student_club,moderate,正确,17,17,1.00,"['905-555-5035', '716-555-3845', '442-555-5882', '109-555-7016', '435-555-8128', '260-555-4328', '47...","['905-555-5035', '716-555-3845', '442-555-5882', '109-555-7016', '435-555-8128', '260-555-4328', '47...",GT长度:17; Pred长度:17; 重叠率:1.00; 位置匹配率:1.00
+1317,student_club,moderate,正确,1,1,1.00,[7],[7],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1328,student_club,simple,正确,2,2,1.00,"['Snay', 'Mccray']","['Snay', 'Mccray']",GT长度:2; Pred长度:2; 重叠率:1.00; 位置匹配率:1.00
+1332,student_club,moderate,正确,1,1,1.00,[101.94],[101.94],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1339,student_club,challenging,正确,1,1,1.00,[74.0775],[74.0775],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1351,student_club,simple,正确,1,1,1.00,['Business Education'],['Business Education'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1359,student_club,challenging,错误,1,1,0.00,[2.727272727272727],[2],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1362,student_club,simple,正确,1,1,1.00,[7],[7],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1373,student_club,simple,正确,1,1,1.00,[3],[3],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1376,student_club,moderate,正确,1,1,1.00,['September Speaker'],['September Speaker'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1388,student_club,moderate,错误,1,1,0.00,"[['Connor', 'Hilton', 'Dues']]","[['Adela', ""O'Gallagher"", 'Dues']]",GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1390,student_club,moderate,正确,1,1,1.00,[21.530164665276477],[21.530164665276477],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1399,student_club,moderate,错误,14,1,0.00,"['YES', None, None, None, None, None, None, None, None, None, None, None, None, None]",[0],GT长度:14; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1420,student_club,simple,正确,1,1,1.00,['Communication Studies'],['Communication Studies'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1427,student_club,moderate,错误,4,16,0.00,"[['Speaker Gifts', 'Guest Speaker'], ['Food', 'Guest Speaker'], ['Parking', 'Guest Speaker'], ['Adve...","['Speaker Gifts', 'Food', 'Parking', 'Advertisement', 'Speaker Gifts', 'Speaker Gifts', 'Food', 'Foo...",GT长度:4; Pred长度:16; 重叠率:0.00; 位置匹配率:0.00
+1429,student_club,challenging,正确,1,1,1.00,['Laugh Out Loud'],['Laugh Out Loud'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1433,student_club,simple,错误,1424,52,0.00,"['Lares Municipio', 'Vega Baja Municipio', 'Culebra Municipio', 'Aibonito Municipio', 'San Juan Muni...","['Puerto Rico', 'Massachusetts', 'Rhode Island', 'New Hampshire', 'Maine', 'Vermont', 'Connecticut',...",GT长度:1424; Pred长度:52; 重叠率:0.00; 位置匹配率:0.00
+1437,student_club,challenging,正确,46,472,1.00,"[['rec4BLdZHS2Blfp4v', 'recEVTik3MlqbvLFi'], ['rec4BLdZHS2Blfp4v', 'recGxVCwaLW3mDIa3'], ['rec4BLdZH...","[['rec4BLdZHS2Blfp4v', 'recEVTik3MlqbvLFi'], ['rec4BLdZHS2Blfp4v', 'recGxVCwaLW3mDIa3'], ['rec4BLdZH...",GT长度:46; Pred长度:472; 重叠率:1.00; 位置匹配率:1.00
+1438,student_club,simple,正确,1,1,1.00,['College of Natural Resources'],['College of Natural Resources'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1440,student_club,moderate,正确,3,20,1.00,"['elijah.allen@lpu.edu', 'phillip.cullen@lpu.edu', 'sacha.harrison@lpu.edu']","['elijah.allen@lpu.edu', 'phillip.cullen@lpu.edu', 'sacha.harrison@lpu.edu', 'elijah.allen@lpu.edu',...",GT长度:3; Pred长度:20; 重叠率:1.00; 位置匹配率:1.00
+1443,student_club,simple,正确,21,21,1.00,"[['rec0Si5cQ4rJRVzd6', 'MU 215', 'Open'], ['rec0akZnLLpGUloLH', None, 'Open'], ['rec0dZPcWXF0QjNnE',...","[['rec0Si5cQ4rJRVzd6', 'MU 215', 'Open'], ['rec0akZnLLpGUloLH', None, 'Open'], ['rec0dZPcWXF0QjNnE',...",GT长度:21; Pred长度:21; 重叠率:1.00; 位置匹配率:1.00
+1445,student_club,simple,正确,8,8,1.00,"[['Grant', 'Gilmour'], ['Randy', 'Woodard'], ['Connor', 'Hilton'], ['Christof', 'Nielson'], ['Philli...","[['Grant', 'Gilmour'], ['Randy', 'Woodard'], ['Connor', 'Hilton'], ['Christof', 'Nielson'], ['Philli...",GT长度:8; Pred长度:8; 重叠率:1.00; 位置匹配率:1.00
+1448,student_club,challenging,正确,4,4,1.00,"[['September Meeting', '2019-09-10T12:00:00'], ['October Speaker', '2019-10-22T12:00:00'], ['Novembe...","[['September Meeting', '2019-09-10T12:00:00'], ['October Speaker', '2019-10-22T12:00:00'], ['Novembe...",GT长度:4; Pred长度:4; 重叠率:1.00; 位置匹配率:1.00
+1451,student_club,challenging,正确,1,1,1.00,['rec4BLdZHS2Blfp4v'],['rec4BLdZHS2Blfp4v'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1457,student_club,challenging,正确,3,11,1.00,"[['Sacha', 'Harrison', '840-555-4781'], ['Phillip', 'Cullen', '905-555-5035'], ['Elijah', 'Allen', '...","[['Sacha', 'Harrison', '840-555-4781'], ['Sacha', 'Harrison', '840-555-4781'], ['Phillip', 'Cullen',...",GT长度:3; Pred长度:11; 重叠率:1.00; 位置匹配率:0.33
+1460,student_club,challenging,正确,1,1,1.00,"[['Elijah', 'Allen', 28.15]]","[['Elijah', 'Allen', 28.15]]",GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1464,student_club,challenging,正确,2,2,1.00,"[['Sacha', 'Harrison', 50], ['Carlo', 'Jacobs', 50]]","[['Sacha', 'Harrison', 50], ['Carlo', 'Jacobs', 50]]",GT长度:2; Pred长度:2; 重叠率:1.00; 位置匹配率:1.00
+1473,debit_card_specializing,moderate,正确,1,1,1.00,[459.9562642870894],[459.9562642870894],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1476,debit_card_specializing,challenging,正确,1,1,1.00,[402524570.17],[402524570.17],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1481,debit_card_specializing,challenging,错误,1,1,0.00,"[[0.0, 582092.86, -582092.86]]","[[-12438.07, 579634.8099999999, -567196.74]]",GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1482,debit_card_specializing,challenging,错误,1,1,0.00,"[[545.4018999790969, 681.5824574939339, 708.1124062978664]]","[['SME', 'LAM']]",GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1490,debit_card_specializing,moderate,正确,1,1,1.00,[98.5267932135058],[98.5267932135058],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1491,debit_card_specializing,simple,错误,1,2,0.00,"[['CZE', 597]]","[['CZE', 466], ['SVK', 131]]",GT长度:1; Pred长度:2; 重叠率:0.00; 位置匹配率:0.00
+1495,debit_card_specializing,simple,正确,1,1,1.00,[12459],[12459],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1496,debit_card_specializing,simple,错误,1,1,0.00,['KAM'],['LAM'],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1498,debit_card_specializing,simple,错误,1,1,0.00,[51787161.74],[445279.69],GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1501,debit_card_specializing,moderate,正确,2,2,1.00,"['CZE', 'SVK']","['CZE', 'SVK']",GT长度:2; Pred长度:2; 重叠率:1.00; 位置匹配率:1.00
+1506,debit_card_specializing,moderate,正确,21,933,1.00,"['Nafta', 'Provoz.nápl.', 'Natural', 'Nemrz.kapal.', 'Oleje,tuky', 'Diesel +', 'LPG', 'Mytí vozidel'...","['Nafta', 'Nafta', 'Provoz.nápl.', 'Natural', 'Nafta', 'Natural', 'Natural', 'Nemrz.kapal.', 'Nafta'...",GT长度:21; Pred长度:933; 重叠率:1.00; 位置匹配率:0.05
+1507,debit_card_specializing,simple,正确,2,2,1.00,"['14:29:00', '11:55:00']","['14:29:00', '11:55:00']",GT长度:2; Pred长度:2; 重叠率:1.00; 位置匹配率:1.00
+1513,debit_card_specializing,simple,正确,1,1,1.00,['CZE'],['CZE'],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1516,debit_card_specializing,moderate,正确,1,1,1.00,[68],[68],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1519,debit_card_specializing,simple,正确,1,1,1.00,[2],[2],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1520,debit_card_specializing,moderate,错误,2,1,0.00,"[[40333, '201201', 4084.9], [7630, '201201', 24953.81]]","[['201201', 4084.9]]",GT长度:2; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1526,debit_card_specializing,challenging,错误,1,81,0.00,[-5.815242674672346],"[-3.706775004774782, -5.838024920623918, -6.389453191424641, -6.011259011622544, -7.000946479053043,...",GT长度:1; Pred长度:81; 重叠率:0.00; 位置匹配率:0.00
+1528,debit_card_specializing,simple,正确,1,1,1.00,[35.68181818181818],[35.68181818181818],GT长度:1; Pred长度:1; 重叠率:1.00; 位置匹配率:1.00
+1529,debit_card_specializing,moderate,错误,1,1,0.00,"[[68740.2, 3437.01]]","[[148, 0]]",GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1530,debit_card_specializing,simple,错误,5,5,0.40,"['Nafta', 'Diesel +', 'Nafta', 'Nafta', 'Nafta']","['Nafta', 'Diesel +', 'Natural', 'Diesel', 'Nat.Super']",GT长度:5; Pred长度:5; 重叠率:0.40; 位置匹配率:0.40
+1531,debit_card_specializing,moderate,错误,1,1,0.00,"[[12459, 203.8560787354258, 'CZK']]","[[13665, 5762.49, 'CZK']]",GT长度:1; Pred长度:1; 重叠率:0.00; 位置匹配率:0.00
+1533,debit_card_specializing,moderate,正确,10,10,1.00,"[1903.2, 88265.39, 1129.2, 126157.7, 126157.7, 58.19, 1142.95, 8878.07, 69331.72, 45937.22]","[1903.2, 88265.39, 1129.2, 126157.7, 126157.7, 58.19, 1142.95, 8878.07, 69331.72, 45937.22]",GT长度:10; Pred长度:10; 重叠率:1.00; 位置匹配率:1.00
