@@ -1,0 +1,33 @@
+nohup: ignoring input
+starting to compare for ex
+Filtered SQL keys count: 2147
+Filtered SQL keys count: 2147
+Detailed execution results saved to: ./exp_result/spider_test_alpha_qwen32b/execution_results.json
+Detailed statistics saved to: ./exp_result/spider_test_alpha_qwen32b/detailed_statistics.txt
+Detailed comparison saved to: ./exp_result/spider_test_alpha_qwen32b/detailed_comparison.csv
+path:  ./exp_result/spider_test_alpha_qwen32b/vis
+Accuracy analysis plot saved to: ./exp_result/spider_test_alpha_qwen32b/vis/accuracy_analysis.png
+Accuracy statistics saved to: ./exp_result/spider_test_alpha_qwen32b/vis/accuracy_statistics.json
+start calculate
+                     simple               moderate             challenging          total               
+count                362                  1259                 526                  2147                
+======================================    ACCURACY    =====================================
+accuracy             92.82                84.91                78.14                84.58               
+===========================================================================================
+Finished evaluation
+starting to compare for ves
+./exp_result/spider_test_alpha_qwen32b/vis
+Filtered SQL keys count: 2147
+Filtered SQL keys count: 2147
+Found 40 databases in results: ['soccer_3', 'e_commerce', 'bbc_channels', 'tv_shows', 'vehicle_driver', 'online_exams', 'customers_and_orders', 'region_building', 'government_shift', 'vehicle_rent', 'cre_Students_Information_Systems', 'book_1', 'book_review', 'restaurant_bills', 'club_leader', 'cre_Doc_and_collections', 'sing_contest', 'address_1', 'boat_1', 'headphone_store', 'aan_1', 'conference', 'pilot_1', 'district_spokesman', 'art_1', 'car_road_race', 'country_language', 'real_estate_rentals', 'bike_racing', 'bakery_1', 'car_racing', 'institution_sports', 'warehouse_1', 'university_rank', 'movie_2', 'planet_1', 'video_game', 'book_press', 'cre_Doc_Workflow', 'advertising_agencies']
+Time distribution plot saved to: ./exp_result/spider_test_alpha_qwen32b/vis/time_distribution.png
+Time statistics saved to: ./exp_result/spider_test_alpha_qwen32b/vis/time_statistics.json
+Advanced time analysis plot saved to: ./exp_result/spider_test_alpha_qwen32b/vis/advanced_time_analysis.png
+Total databases analyzed: 40
+start calculate
+                     simple               moderate             challenging          total               
+count                362                  1259                 526                  2147                
+=========================================    VES   ========================================
+ves                  92.55                85.36                81.03                85.51               
+===========================================================================================
+Finished evaluation

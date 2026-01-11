@@ -1,0 +1,642 @@
+{
+  "soccer_3": {
+    "predicted_sql": {
+      "count": 3700,
+      "mean_time": 8.035305384043101e-05,
+      "std_time": 8.903259102578412e-05,
+      "min_time": 3.910064697265625e-05,
+      "max_time": 0.002631664276123047
+    },
+    "ground_truth_sql": {
+      "count": 3700,
+      "mean_time": 7.958328401720202e-05,
+      "std_time": 0.00010377547089952459,
+      "min_time": 4.00543212890625e-05,
+      "max_time": 0.002722501754760742
+    }
+  },
+  "e_commerce": {
+    "predicted_sql": {
+      "count": 6700,
+      "mean_time": 0.00010936039597240846,
+      "std_time": 7.2222634340617e-05,
+      "min_time": 6.937980651855469e-05,
+      "max_time": 0.0031890869140625
+    },
+    "ground_truth_sql": {
+      "count": 6700,
+      "mean_time": 0.00012213208782139108,
+      "std_time": 0.0010794845193351004,
+      "min_time": 6.914138793945312e-05,
+      "max_time": 0.0881352424621582
+    }
+  },
+  "bbc_channels": {
+    "predicted_sql": {
+      "count": 1400,
+      "mean_time": 7.20029217856271e-05,
+      "std_time": 1.733198708267357e-05,
+      "min_time": 4.9114227294921875e-05,
+      "max_time": 0.00022864341735839844
+    },
+    "ground_truth_sql": {
+      "count": 1400,
+      "mean_time": 7.171154022216796e-05,
+      "std_time": 5.1549983221518685e-05,
+      "min_time": 4.9114227294921875e-05,
+      "max_time": 0.00189971923828125
+    }
+  },
+  "tv_shows": {
+    "predicted_sql": {
+      "count": 1300,
+      "mean_time": 8.899633701031024e-05,
+      "std_time": 8.922386070976032e-05,
+      "min_time": 5.53131103515625e-05,
+      "max_time": 0.002226114273071289
+    },
+    "ground_truth_sql": {
+      "count": 1300,
+      "mean_time": 8.256013576801007e-05,
+      "std_time": 1.8749692885569527e-05,
+      "min_time": 5.3882598876953125e-05,
+      "max_time": 0.0002048015594482422
+    }
+  },
+  "vehicle_driver": {
+    "predicted_sql": {
+      "count": 3700,
+      "mean_time": 7.85678141825908e-05,
+      "std_time": 3.7847959944885414e-05,
+      "min_time": 4.458427429199219e-05,
+      "max_time": 0.0019342899322509766
+    },
+    "ground_truth_sql": {
+      "count": 3700,
+      "mean_time": 8.180476523734428e-05,
+      "std_time": 0.00011679997754343188,
+      "min_time": 4.410743713378906e-05,
+      "max_time": 0.0034008026123046875
+    }
+  },
+  "online_exams": {
+    "predicted_sql": {
+      "count": 3700,
+      "mean_time": 9.994023555033916e-05,
+      "std_time": 8.558853131985025e-05,
+      "min_time": 6.651878356933594e-05,
+      "max_time": 0.002758026123046875
+    },
+    "ground_truth_sql": {
+      "count": 3700,
+      "mean_time": 9.896136618949271e-05,
+      "std_time": 9.430031877455416e-05,
+      "min_time": 6.628036499023438e-05,
+      "max_time": 0.0033965110778808594
+    }
+  },
+  "customers_and_orders": {
+    "predicted_sql": {
+      "count": 7800,
+      "mean_time": 8.363042122278458e-05,
+      "std_time": 7.252836026576876e-05,
+      "min_time": 4.673004150390625e-05,
+      "max_time": 0.002457857131958008
+    },
+    "ground_truth_sql": {
+      "count": 7800,
+      "mean_time": 8.057774641574957e-05,
+      "std_time": 5.1866261435585075e-05,
+      "min_time": 4.649162292480469e-05,
+      "max_time": 0.0020608901977539062
+    }
+  },
+  "region_building": {
+    "predicted_sql": {
+      "count": 3800,
+      "mean_time": 6.823238573576274e-05,
+      "std_time": 3.6138809444519325e-05,
+      "min_time": 3.7670135498046875e-05,
+      "max_time": 0.0020439624786376953
+    },
+    "ground_truth_sql": {
+      "count": 3800,
+      "mean_time": 6.691706807989823e-05,
+      "std_time": 1.606565636429034e-05,
+      "min_time": 3.838539123535156e-05,
+      "max_time": 0.00018024444580078125
+    }
+  },
+  "government_shift": {
+    "predicted_sql": {
+      "count": 2700,
+      "mean_time": 9.186312004371925e-05,
+      "std_time": 2.4182038955531814e-05,
+      "min_time": 5.7220458984375e-05,
+      "max_time": 0.00035071372985839844
+    },
+    "ground_truth_sql": {
+      "count": 2700,
+      "mean_time": 9.008963902791341e-05,
+      "std_time": 2.143886931981968e-05,
+      "min_time": 5.53131103515625e-05,
+      "max_time": 0.0001914501190185547
+    }
+  },
+  "vehicle_rent": {
+    "predicted_sql": {
+      "count": 4000,
+      "mean_time": 8.378809690475464e-05,
+      "std_time": 4.663822064380217e-05,
+      "min_time": 4.9591064453125e-05,
+      "max_time": 0.001999378204345703
+    },
+    "ground_truth_sql": {
+      "count": 4000,
+      "mean_time": 8.3060622215271e-05,
+      "std_time": 2.0665274638299806e-05,
+      "min_time": 4.839897155761719e-05,
+      "max_time": 0.00025725364685058594
+    }
+  },
+  "cre_Students_Information_Systems": {
+    "predicted_sql": {
+      "count": 5500,
+      "mean_time": 0.00014822335676713423,
+      "std_time": 0.00014539067569068582,
+      "min_time": 9.202957153320312e-05,
+      "max_time": 0.0038411617279052734
+    },
+    "ground_truth_sql": {
+      "count": 5500,
+      "mean_time": 0.00014167408509687944,
+      "std_time": 7.750645539140716e-05,
+      "min_time": 9.322166442871094e-05,
+      "max_time": 0.003113985061645508
+    }
+  },
+  "book_1": {
+    "predicted_sql": {
+      "count": 7400,
+      "mean_time": 0.00010117691916388434,
+      "std_time": 2.4463863676788e-05,
+      "min_time": 5.9604644775390625e-05,
+      "max_time": 0.0003726482391357422
+    },
+    "ground_truth_sql": {
+      "count": 7400,
+      "mean_time": 9.933375023506783e-05,
+      "std_time": 2.301881037677567e-05,
+      "min_time": 5.888938903808594e-05,
+      "max_time": 0.0003554821014404297
+    }
+  },
+  "book_review": {
+    "predicted_sql": {
+      "count": 1900,
+      "mean_time": 6.679672943918328e-05,
+      "std_time": 1.6379957101425936e-05,
+      "min_time": 4.124641418457031e-05,
+      "max_time": 0.00018262863159179688
+    },
+    "ground_truth_sql": {
+      "count": 1900,
+      "mean_time": 6.610230395668431e-05,
+      "std_time": 1.513725195584203e-05,
+      "min_time": 4.1484832763671875e-05,
+      "max_time": 0.00018668174743652344
+    }
+  },
+  "restaurant_bills": {
+    "predicted_sql": {
+      "count": 2800,
+      "mean_time": 7.451730115073067e-05,
+      "std_time": 4.1666221931573695e-05,
+      "min_time": 4.3392181396484375e-05,
+      "max_time": 0.0020475387573242188
+    },
+    "ground_truth_sql": {
+      "count": 2800,
+      "mean_time": 7.485185350690569e-05,
+      "std_time": 6.737632684537875e-05,
+      "min_time": 4.124641418457031e-05,
+      "max_time": 0.0025222301483154297
+    }
+  },
+  "club_leader": {
+    "predicted_sql": {
+      "count": 1300,
+      "mean_time": 6.695508956909179e-05,
+      "std_time": 1.5601864839685582e-05,
+      "min_time": 4.291534423828125e-05,
+      "max_time": 0.00019216537475585938
+    },
+    "ground_truth_sql": {
+      "count": 1300,
+      "mean_time": 7.02069355891301e-05,
+      "std_time": 8.913780527656678e-05,
+      "min_time": 4.291534423828125e-05,
+      "max_time": 0.002000093460083008
+    }
+  },
+  "cre_Doc_and_collections": {
+    "predicted_sql": {
+      "count": 5800,
+      "mean_time": 9.724436135127627e-05,
+      "std_time": 2.025042589892536e-05,
+      "min_time": 6.103515625e-05,
+      "max_time": 0.00024437904357910156
+    },
+    "ground_truth_sql": {
+      "count": 5800,
+      "mean_time": 9.781611376795275e-05,
+      "std_time": 4.708424777600562e-05,
+      "min_time": 6.127357482910156e-05,
+      "max_time": 0.0024480819702148438
+    }
+  },
+  "sing_contest": {
+    "predicted_sql": {
+      "count": 1800,
+      "mean_time": 7.462938626607259e-05,
+      "std_time": 4.3550122960013456e-05,
+      "min_time": 4.506111145019531e-05,
+      "max_time": 0.0017442703247070312
+    },
+    "ground_truth_sql": {
+      "count": 1800,
+      "mean_time": 7.657554414537218e-05,
+      "std_time": 9.639066958113047e-05,
+      "min_time": 4.6253204345703125e-05,
+      "max_time": 0.0025763511657714844
+    }
+  },
+  "address_1": {
+    "predicted_sql": {
+      "count": 6800,
+      "mean_time": 9.265359710244572e-05,
+      "std_time": 3.5572767132105016e-05,
+      "min_time": 4.673004150390625e-05,
+      "max_time": 0.002112865447998047
+    },
+    "ground_truth_sql": {
+      "count": 6800,
+      "mean_time": 9.078544728896198e-05,
+      "std_time": 3.8715022330151675e-05,
+      "min_time": 4.601478576660156e-05,
+      "max_time": 0.0018951892852783203
+    }
+  },
+  "boat_1": {
+    "predicted_sql": {
+      "count": 6900,
+      "mean_time": 7.045151530832484e-05,
+      "std_time": 4.9025289371452214e-05,
+      "min_time": 3.886222839355469e-05,
+      "max_time": 0.002374410629272461
+    },
+    "ground_truth_sql": {
+      "count": 6900,
+      "mean_time": 6.81026085563328e-05,
+      "std_time": 3.4265453137025215e-05,
+      "min_time": 3.910064697265625e-05,
+      "max_time": 0.0015728473663330078
+    }
+  },
+  "headphone_store": {
+    "predicted_sql": {
+      "count": 3000,
+      "mean_time": 7.910339037577311e-05,
+      "std_time": 8.361104779804227e-05,
+      "min_time": 4.982948303222656e-05,
+      "max_time": 0.0023956298828125
+    },
+    "ground_truth_sql": {
+      "count": 3000,
+      "mean_time": 7.392875353495279e-05,
+      "std_time": 1.6106025878781517e-05,
+      "min_time": 4.9114227294921875e-05,
+      "max_time": 0.0002143383026123047
+    }
+  },
+  "aan_1": {
+    "predicted_sql": {
+      "count": 4700,
+      "mean_time": 0.02310892510921397,
+      "std_time": 0.04446078629935849,
+      "min_time": 6.532669067382812e-05,
+      "max_time": 0.2821211814880371
+    },
+    "ground_truth_sql": {
+      "count": 4700,
+      "mean_time": 0.023074542309375518,
+      "std_time": 0.05306552129889839,
+      "min_time": 6.961822509765625e-05,
+      "max_time": 0.26073622703552246
+    }
+  },
+  "conference": {
+    "predicted_sql": {
+      "count": 3800,
+      "mean_time": 7.103738031889263e-05,
+      "std_time": 2.0536804589051476e-05,
+      "min_time": 4.57763671875e-05,
+      "max_time": 0.0002624988555908203
+    },
+    "ground_truth_sql": {
+      "count": 3800,
+      "mean_time": 7.119266610396535e-05,
+      "std_time": 5.443518863089911e-05,
+      "min_time": 4.57763671875e-05,
+      "max_time": 0.001653909683227539
+    }
+  },
+  "pilot_1": {
+    "predicted_sql": {
+      "count": 6500,
+      "mean_time": 5.694866180419922e-05,
+      "std_time": 4.816263501953808e-05,
+      "min_time": 3.910064697265625e-05,
+      "max_time": 0.0020532608032226562
+    },
+    "ground_truth_sql": {
+      "count": 6500,
+      "mean_time": 5.4332843193641076e-05,
+      "std_time": 1.180907375803419e-05,
+      "min_time": 3.886222839355469e-05,
+      "max_time": 0.00020623207092285156
+    }
+  },
+  "district_spokesman": {
+    "predicted_sql": {
+      "count": 1700,
+      "mean_time": 6.438493728637696e-05,
+      "std_time": 6.114246662233077e-05,
+      "min_time": 4.5299530029296875e-05,
+      "max_time": 0.001924276351928711
+    },
+    "ground_truth_sql": {
+      "count": 1700,
+      "mean_time": 6.253565058988684e-05,
+      "std_time": 1.7579804530374483e-05,
+      "min_time": 4.5299530029296875e-05,
+      "max_time": 0.00020742416381835938
+    }
+  },
+  "art_1": {
+    "predicted_sql": {
+      "count": 7400,
+      "mean_time": 6.258748673103951e-05,
+      "std_time": 4.658905609440524e-05,
+      "min_time": 4.029273986816406e-05,
+      "max_time": 0.0018985271453857422
+    },
+    "ground_truth_sql": {
+      "count": 7400,
+      "mean_time": 6.0768675159763646e-05,
+      "std_time": 2.9053447378309008e-05,
+      "min_time": 3.981590270996094e-05,
+      "max_time": 0.0016331672668457031
+    }
+  },
+  "car_road_race": {
+    "predicted_sql": {
+      "count": 4300,
+      "mean_time": 6.387178287949673e-05,
+      "std_time": 4.1094470903300725e-05,
+      "min_time": 4.124641418457031e-05,
+      "max_time": 0.0018455982208251953
+    },
+    "ground_truth_sql": {
+      "count": 4300,
+      "mean_time": 6.160203800644986e-05,
+      "std_time": 1.5544191740449207e-05,
+      "min_time": 3.814697265625e-05,
+      "max_time": 0.00027823448181152344
+    }
+  },
+  "country_language": {
+    "predicted_sql": {
+      "count": 3100,
+      "mean_time": 6.0974859422253025e-05,
+      "std_time": 1.6982009972959332e-05,
+      "min_time": 4.172325134277344e-05,
+      "max_time": 0.00021767616271972656
+    },
+    "ground_truth_sql": {
+      "count": 3100,
+      "mean_time": 5.920148664905179e-05,
+      "std_time": 1.4399071223693168e-05,
+      "min_time": 3.981590270996094e-05,
+      "max_time": 0.0001804828643798828
+    }
+  },
+  "real_estate_rentals": {
+    "predicted_sql": {
+      "count": 4600,
+      "mean_time": 0.00012606164683466372,
+      "std_time": 8.151548555167009e-05,
+      "min_time": 9.584426879882812e-05,
+      "max_time": 0.0029265880584716797
+    },
+    "ground_truth_sql": {
+      "count": 4600,
+      "mean_time": 0.00012390908987625787,
+      "std_time": 9.275542189520699e-05,
+      "min_time": 9.417533874511719e-05,
+      "max_time": 0.0029916763305664062
+    }
+  },
+  "bike_racing": {
+    "predicted_sql": {
+      "count": 1600,
+      "mean_time": 6.921976804733277e-05,
+      "std_time": 8.90645908483766e-05,
+      "min_time": 4.4345855712890625e-05,
+      "max_time": 0.002079486846923828
+    },
+    "ground_truth_sql": {
+      "count": 1600,
+      "mean_time": 6.33324682712555e-05,
+      "std_time": 1.3896989508698209e-05,
+      "min_time": 4.482269287109375e-05,
+      "max_time": 0.00015926361083984375
+    }
+  },
+  "bakery_1": {
+    "predicted_sql": {
+      "count": 7500,
+      "mean_time": 0.00012817557652791342,
+      "std_time": 0.00011655007096857992,
+      "min_time": 4.57763671875e-05,
+      "max_time": 0.0019147396087646484
+    },
+    "ground_truth_sql": {
+      "count": 7500,
+      "mean_time": 0.00011615476608276367,
+      "std_time": 9.418264548976289e-05,
+      "min_time": 4.506111145019531e-05,
+      "max_time": 0.0005252361297607422
+    }
+  },
+  "car_racing": {
+    "predicted_sql": {
+      "count": 4700,
+      "mean_time": 7.308782415187106e-05,
+      "std_time": 6.066880075659955e-05,
+      "min_time": 4.9591064453125e-05,
+      "max_time": 0.002208709716796875
+    },
+    "ground_truth_sql": {
+      "count": 4700,
+      "mean_time": 6.870330648219331e-05,
+      "std_time": 1.416732657011593e-05,
+      "min_time": 4.76837158203125e-05,
+      "max_time": 0.0002315044403076172
+    }
+  },
+  "institution_sports": {
+    "predicted_sql": {
+      "count": 3500,
+      "mean_time": 5.939967291695731e-05,
+      "std_time": 1.4302464716383757e-05,
+      "min_time": 3.790855407714844e-05,
+      "max_time": 0.0002155303955078125
+    },
+    "ground_truth_sql": {
+      "count": 3500,
+      "mean_time": 5.802154541015625e-05,
+      "std_time": 1.3550844813834185e-05,
+      "min_time": 3.8623809814453125e-05,
+      "max_time": 0.00018858909606933594
+    }
+  },
+  "warehouse_1": {
+    "predicted_sql": {
+      "count": 5500,
+      "mean_time": 6.135654449462891e-05,
+      "std_time": 1.5197614319430317e-05,
+      "min_time": 3.886222839355469e-05,
+      "max_time": 0.00020003318786621094
+    },
+    "ground_truth_sql": {
+      "count": 5500,
+      "mean_time": 5.816563692959872e-05,
+      "std_time": 1.2643139454455483e-05,
+      "min_time": 3.886222839355469e-05,
+      "max_time": 0.00020623207092285156
+    }
+  },
+  "university_rank": {
+    "predicted_sql": {
+      "count": 3800,
+      "mean_time": 7.545239047000283e-05,
+      "std_time": 3.831257813431946e-05,
+      "min_time": 5.2928924560546875e-05,
+      "max_time": 0.001676797866821289
+    },
+    "ground_truth_sql": {
+      "count": 3800,
+      "mean_time": 7.418720345748098e-05,
+      "std_time": 1.5564283099284035e-05,
+      "min_time": 5.316734313964844e-05,
+      "max_time": 0.0002129077911376953
+    }
+  },
+  "movie_2": {
+    "predicted_sql": {
+      "count": 3500,
+      "mean_time": 5.413736615862165e-05,
+      "std_time": 1.2732229183440708e-05,
+      "min_time": 3.457069396972656e-05,
+      "max_time": 0.00018358230590820312
+    },
+    "ground_truth_sql": {
+      "count": 3500,
+      "mean_time": 5.301550456455776e-05,
+      "std_time": 4.393783597608512e-05,
+      "min_time": 3.4332275390625e-05,
+      "max_time": 0.0015468597412109375
+    }
+  },
+  "planet_1": {
+    "predicted_sql": {
+      "count": 5600,
+      "mean_time": 8.177059037344796e-05,
+      "std_time": 5.3450812951266626e-05,
+      "min_time": 5.626678466796875e-05,
+      "max_time": 0.002262115478515625
+    },
+    "ground_truth_sql": {
+      "count": 5600,
+      "mean_time": 8.107010807309832e-05,
+      "std_time": 4.98551488944848e-05,
+      "min_time": 5.698204040527344e-05,
+      "max_time": 0.0022690296173095703
+    }
+  },
+  "video_game": {
+    "predicted_sql": {
+      "count": 4100,
+      "mean_time": 7.182877238203839e-05,
+      "std_time": 1.847569614155838e-05,
+      "min_time": 4.887580871582031e-05,
+      "max_time": 0.0002579689025878906
+    },
+    "ground_truth_sql": {
+      "count": 4100,
+      "mean_time": 7.065953277960056e-05,
+      "std_time": 1.8478403316028088e-05,
+      "min_time": 4.887580871582031e-05,
+      "max_time": 0.00024247169494628906
+    }
+  },
+  "book_press": {
+    "predicted_sql": {
+      "count": 2900,
+      "mean_time": 6.893347049581593e-05,
+      "std_time": 1.6576928645572006e-05,
+      "min_time": 4.57763671875e-05,
+      "max_time": 0.0002090930938720703
+    },
+    "ground_truth_sql": {
+      "count": 2900,
+      "mean_time": 6.859713587267645e-05,
+      "std_time": 5.8386018160406535e-05,
+      "min_time": 4.57763671875e-05,
+      "max_time": 0.002320528030395508
+    }
+  },
+  "cre_Doc_Workflow": {
+    "predicted_sql": {
+      "count": 3900,
+      "mean_time": 9.156551116552108e-05,
+      "std_time": 5.212377787397248e-05,
+      "min_time": 7.224082946777344e-05,
+      "max_time": 0.002337217330932617
+    },
+    "ground_truth_sql": {
+      "count": 3900,
+      "mean_time": 8.904304259862655e-05,
+      "std_time": 1.432994389273963e-05,
+      "min_time": 7.224082946777344e-05,
+      "max_time": 0.0002770423889160156
+    }
+  },
+  "advertising_agencies": {
+    "predicted_sql": {
+      "count": 8000,
+      "mean_time": 7.929280400276184e-05,
+      "std_time": 3.699455699720945e-05,
+      "min_time": 5.4836273193359375e-05,
+      "max_time": 0.001901388168334961
+    },
+    "ground_truth_sql": {
+      "count": 8000,
+      "mean_time": 7.628896832466126e-05,
+      "std_time": 1.6473174003684206e-05,
+      "min_time": 5.364418029785156e-05,
+      "max_time": 0.0003349781036376953
+    }
+  }
+}

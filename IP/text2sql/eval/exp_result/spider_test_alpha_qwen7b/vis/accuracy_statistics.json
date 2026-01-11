@@ -1,0 +1,221 @@
+{
+  "database_performance": {
+    "soccer_3": {
+      "total": 40,
+      "correct": 37,
+      "accuracy": 92.5
+    },
+    "e_commerce": {
+      "total": 80,
+      "correct": 67,
+      "accuracy": 83.75
+    },
+    "bbc_channels": {
+      "total": 16,
+      "correct": 14,
+      "accuracy": 87.5
+    },
+    "tv_shows": {
+      "total": 15,
+      "correct": 13,
+      "accuracy": 86.66666666666667
+    },
+    "vehicle_driver": {
+      "total": 42,
+      "correct": 37,
+      "accuracy": 88.09523809523809
+    },
+    "online_exams": {
+      "total": 40,
+      "correct": 37,
+      "accuracy": 92.5
+    },
+    "customers_and_orders": {
+      "total": 82,
+      "correct": 78,
+      "accuracy": 95.1219512195122
+    },
+    "region_building": {
+      "total": 40,
+      "correct": 38,
+      "accuracy": 95.0
+    },
+    "government_shift": {
+      "total": 40,
+      "correct": 27,
+      "accuracy": 67.5
+    },
+    "vehicle_rent": {
+      "total": 44,
+      "correct": 40,
+      "accuracy": 90.9090909090909
+    },
+    "cre_Students_Information_Systems": {
+      "total": 76,
+      "correct": 55,
+      "accuracy": 72.36842105263158
+    },
+    "book_1": {
+      "total": 78,
+      "correct": 74,
+      "accuracy": 94.87179487179486
+    },
+    "book_review": {
+      "total": 21,
+      "correct": 19,
+      "accuracy": 90.47619047619048
+    },
+    "restaurant_bills": {
+      "total": 30,
+      "correct": 28,
+      "accuracy": 93.33333333333333
+    },
+    "club_leader": {
+      "total": 17,
+      "correct": 13,
+      "accuracy": 76.47058823529412
+    },
+    "cre_Doc_and_collections": {
+      "total": 80,
+      "correct": 58,
+      "accuracy": 72.5
+    },
+    "sing_contest": {
+      "total": 20,
+      "correct": 18,
+      "accuracy": 90.0
+    },
+    "address_1": {
+      "total": 80,
+      "correct": 68,
+      "accuracy": 85.0
+    },
+    "boat_1": {
+      "total": 78,
+      "correct": 69,
+      "accuracy": 88.46153846153845
+    },
+    "headphone_store": {
+      "total": 44,
+      "correct": 30,
+      "accuracy": 68.18181818181817
+    },
+    "aan_1": {
+      "total": 90,
+      "correct": 47,
+      "accuracy": 52.22222222222223
+    },
+    "conference": {
+      "total": 44,
+      "correct": 38,
+      "accuracy": 86.36363636363636
+    },
+    "pilot_1": {
+      "total": 82,
+      "correct": 65,
+      "accuracy": 79.26829268292683
+    },
+    "district_spokesman": {
+      "total": 21,
+      "correct": 17,
+      "accuracy": 80.95238095238095
+    },
+    "art_1": {
+      "total": 114,
+      "correct": 74,
+      "accuracy": 64.91228070175438
+    },
+    "car_road_race": {
+      "total": 44,
+      "correct": 43,
+      "accuracy": 97.72727272727273
+    },
+    "country_language": {
+      "total": 40,
+      "correct": 31,
+      "accuracy": 77.5
+    },
+    "real_estate_rentals": {
+      "total": 72,
+      "correct": 46,
+      "accuracy": 63.888888888888886
+    },
+    "bike_racing": {
+      "total": 17,
+      "correct": 16,
+      "accuracy": 94.11764705882352
+    },
+    "bakery_1": {
+      "total": 104,
+      "correct": 75,
+      "accuracy": 72.11538461538461
+    },
+    "car_racing": {
+      "total": 50,
+      "correct": 47,
+      "accuracy": 94.0
+    },
+    "institution_sports": {
+      "total": 40,
+      "correct": 35,
+      "accuracy": 87.5
+    },
+    "warehouse_1": {
+      "total": 78,
+      "correct": 55,
+      "accuracy": 70.51282051282051
+    },
+    "university_rank": {
+      "total": 44,
+      "correct": 38,
+      "accuracy": 86.36363636363636
+    },
+    "movie_2": {
+      "total": 51,
+      "correct": 35,
+      "accuracy": 68.62745098039215
+    },
+    "planet_1": {
+      "total": 76,
+      "correct": 56,
+      "accuracy": 73.68421052631578
+    },
+    "video_game": {
+      "total": 42,
+      "correct": 41,
+      "accuracy": 97.61904761904762
+    },
+    "book_press": {
+      "total": 44,
+      "correct": 29,
+      "accuracy": 65.9090909090909
+    },
+    "cre_Doc_Workflow": {
+      "total": 40,
+      "correct": 39,
+      "accuracy": 97.5
+    },
+    "advertising_agencies": {
+      "total": 90,
+      "correct": 80,
+      "accuracy": 88.88888888888889
+    }
+  },
+  "difficulty_performance": {
+    "moderate": {
+      "total": 1258,
+      "correct": 1022,
+      "accuracy": 81.24006359300478
+    },
+    "simple": {
+      "total": 362,
+      "correct": 331,
+      "accuracy": 91.4364640883978
+    },
+    "challenging": {
+      "total": 526,
+      "correct": 374,
+      "accuracy": 71.10266159695817
+    }
+  }
+}

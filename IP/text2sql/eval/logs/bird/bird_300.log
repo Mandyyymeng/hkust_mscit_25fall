@@ -1,0 +1,29 @@
+nohup: ignoring input
+starting to compare for ex
+Filtered SQL keys count: 271
+Filtered SQL keys count: 271
+Detailed execution results saved to: ./exp_result/bird_dev_300/execution_results.json
+Detailed statistics saved to: ./exp_result/bird_dev_300/detailed_statistics.txt
+Detailed comparison saved to: ./exp_result/bird_dev_300/detailed_comparison.csv
+path:  ./exp_result/bird_dev_300/vis
+Accuracy analysis plot saved to: ./exp_result/bird_dev_300/vis/accuracy_analysis.png
+Accuracy statistics saved to: ./exp_result/bird_dev_300/vis/accuracy_statistics.json
+start calculate
+                     simple               moderate             challenging          total               
+count                91            Found 10 databases in results: ['california_schools', 'financial', 'toxicology', 'card_games', 'codebase_community', 'superhero', 'formula_1', 'thrombosis_prediction', 'student_club', 'debit_card_specializing']
+Time distribution plot saved to: ./exp_result/bird_dev_300/vis/time_distribution.png
+Time statistics saved to: ./exp_result/bird_dev_300/vis/time_statistics.json
+/ssddata/zzhanglc/eval/./src/evaluation_ves_cp.py:235: MatplotlibDeprecationWarning: The 'labels' parameter of boxplot() hFound 10 databases in results: ['california_schools', 'financial', 'toxicology', 'card_games', 'codebase_community', 'superhero', 'formula_1', 'thrombosis_prediction', 'student_club', 'debit_card_specializing']
+Time distribution plot saved to: ./exp_result/bird_dev_300/vis/time_distribution.png
+Time statistics saved to: ./exp_result/bird_dev_300/vis/time_statistics.json
+/ssddata/zzhanglc/eval/./src/evaluation_ves_cp.py:235: MatplotlibDeprecationWarning: The 'labels' parameter of boxplot() has been renamed 'tick_labels' since Matplotlib 3.9; support for the old name will be dropped in 3.11.
+  box = ax1.boxplot(boxplot_data, labels=boxplot_labels, patch_artist=True)
+Advanced time analysis plot saved to: ./exp_result/bird_dev_300/vis/advanced_time_analysis.png
+Total databases analyzed: 10
+start calculate
+                     simple               moderate             challenging          total               
+count                91                   91                   89                   271                 
+=========================================    VES   ========================================
+ves                  71.68                65.63                71.70                69.65               
+===========================================================================================
+Finished evaluation

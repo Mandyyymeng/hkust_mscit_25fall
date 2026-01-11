@@ -1,0 +1,486 @@
+SQL Schema Correctness Analysis Report
+============================================================
+
+OVERALL STATISTICS:
+----------------------------------------
+Total SQL queries analyzed: 271
+Average table correctness: 85.12%
+Average column correctness: 44.98%
+UNION usage: 0.37%
+
+CONDITIONAL ERROR ANALYSIS:
+----------------------------------------
+When Tables Are CORRECT:
+  Total column errors: 147
+  - Fictional column: 123 errors (83.7%)
+  - column_in_other_db: 24 errors (16.3%)
+
+When Tables Are INCORRECT:
+  Total column errors: 636
+  - Fictional column: 244 errors (38.4%)
+  - column_in_other_db: 98 errors (15.4%)
+  - column_in_same_db_other_table: 294 errors (46.2%)
+
+STATISTICS BY DATABASE:
+========================================
+
+Database: california_schools
+------------------------------
+Total queries: 23
+Table correctness: 100.00%
+Column correctness: 26.45%
+UNION usage: 0.00%
+
+Column Error Analysis (29 total errors):
+  - fictional_column_valid_table: 9 errors (31.0%)
+  - column_in_other_db: 6 errors (20.7%)
+  - invalid_table_fictional_column: 10 errors (34.5%)
+  - column_in_same_db_other_table: 4 errors (13.8%)
+
+Sample Problematic Queries:
+  - Question 2:
+    Column correctness: 0.0%
+    Error types: {'fictional_column_valid_table': 2, 'column_in_other_db': 1}
+    SQL: SELECT DISTINCT schools.zip FROM frpm INNER JOIN schools ON frpm.cdscode = schools.cdscode WHERE frp...
+    Column details (first 5):
+      ✗ frpm.cdscode (valid table but fictional column)
+      ✗ schools.zip (valid table, column in other DBs: ['student_club'])
+      ✗ schools.cdscode (valid table but fictional column)
+  - Question 4:
+    Column correctness: 0.0%
+    Error types: {'invalid_table_fictional_column': 3, 'column_in_other_db': 1}
+    SQL: SELECT s.phone FROM schools AS s JOIN frpm AS f ON s.cdscode = f.cdscode WHERE f."Charter School (Y/...
+    Column details (first 5):
+      ✗ f.cdscode (invalid table + fictional column)
+      ✗ s.opendate (invalid table + fictional column)
+      ✗ s.phone (invalid table, column in other DBs: ['student_club'])
+      ✗ s.cdscode (invalid table + fictional column)
+  - Question 8:
+    Column correctness: 0.0%
+    Error types: {'invalid_table_fictional_column': 2, 'column_in_same_db_other_table': 1}
+    SQL: SELECT s.numtsttakr FROM frpm AS f INNER JOIN satscores AS s ON f.cdscode = s.cds WHERE f."FRPM Coun...
+    Column details (first 5):
+      ✗ s.numtsttakr (invalid table + fictional column)
+      ✗ s.cds (invalid table, column in same DB tables: ['satscores'])
+      ✗ f.cdscode (invalid table + fictional column)
+
+Database: financial
+------------------------------
+Total queries: 25
+Table correctness: 100.00%
+Column correctness: 62.99%
+UNION usage: 0.00%
+
+Column Error Analysis (22 total errors):
+  - invalid_table_fictional_column: 7 errors (31.8%)
+  - column_in_same_db_other_table: 7 errors (31.8%)
+  - fictional_column_valid_table: 8 errors (36.4%)
+
+Sample Problematic Queries:
+  - Question 92:
+    Column correctness: 0.0%
+    Error types: {'invalid_table_fictional_column': 1, 'column_in_same_db_other_table': 3}
+    SQL: SELECT COUNT(DISTINCT d.district_id) FROM district AS d INNER JOIN client AS c ON d.district_id = c....
+    Column details (first 5):
+      ✗ d.a11 (invalid table + fictional column)
+      ✗ c.gender (invalid table, column in same DB tables: ['client'])
+      ✗ d.district_id (invalid table, column in same DB tables: ['account', 'client', 'district'])
+      ✗ c.district_id (invalid table, column in same DB tables: ['account', 'client', 'district'])
+  - Question 94:
+    Column correctness: 0.0%
+    Error types: {'invalid_table_fictional_column': 1, 'column_in_same_db_other_table': 8}
+    SQL: SELECT t1.account_id, ((SELECT MAX(a11) FROM district) - (SELECT MIN(a11) FROM district)) AS salary_...
+    Column details (first 5):
+      ✗ t4.a11 (invalid table + fictional column)
+      ✗ t2.account_id (invalid table, column in same DB tables: ['account', 'disp', 'loan', 'order', 'trans'])
+      ✗ t3.birth_date (invalid table, column in same DB tables: ['client'])
+      ✗ t1.district_id (invalid table, column in same DB tables: ['account', 'client', 'district'])
+      ✗ t1.account_id (invalid table, column in same DB tables: ['account', 'disp', 'loan', 'order', 'trans'])
+  - Question 116:
+    Column correctness: 0.0%
+    Error types: {'column_in_same_db_other_table': 10}
+    SQL: SELECT ((t1.balance - t2.balance) / NULLIF(t2.balance, 0)) * 100 AS increase_rate FROM trans AS t1 I...
+    Column details (first 5):
+      ✗ t1.balance (invalid table, column in same DB tables: ['trans'])
+      ✗ l.account_id (invalid table, column in same DB tables: ['account', 'disp', 'loan', 'order', 'trans'])
+      ✗ l.loan_id (invalid table, column in same DB tables: ['loan'])
+      ✗ d.account_id (invalid table, column in same DB tables: ['account', 'disp', 'loan', 'order', 'trans'])
+      ✗ l.date (invalid table, column in same DB tables: ['account', 'loan', 'trans'])
+
+Database: toxicology
+------------------------------
+Total queries: 31
+Table correctness: 98.39%
+Column correctness: 62.21%
+UNION usage: 3.23%
+
+Column Error Analysis (13 total errors):
+  - column_in_same_db_other_table: 12 errors (92.3%)
+  - invalid_table_fictional_column: 1 errors (7.7%)
+
+Sample Problematic Queries:
+  - Question 198:
+    Column correctness: 0.0%
+    Error types: {'column_in_same_db_other_table': 5}
+    SQL: SELECT CAST(COUNT(b.bond_id) AS REAL) / COUNT(DISTINCT m.molecule_id) AS average_single_bonds FROM m...
+    Column details (first 5):
+      ✗ b.bond_id (invalid table, column in same DB tables: ['bond', 'connected'])
+      ✗ m.molecule_id (invalid table, column in same DB tables: ['atom', 'bond', 'molecule'])
+      ✗ b.molecule_id (invalid table, column in same DB tables: ['atom', 'bond', 'molecule'])
+      ✗ b.bond_type (invalid table, column in same DB tables: ['bond'])
+      ✗ m.label (invalid table, column in same DB tables: ['molecule'])
+  - Question 200:
+    Column correctness: 0.0%
+    Error types: {'column_in_same_db_other_table': 4}
+    SQL: SELECT DISTINCT m.molecule_id FROM bond AS b INNER JOIN molecule AS m ON b.molecule_id = m.molecule_...
+    Column details (first 5):
+      ✗ m.molecule_id (invalid table, column in same DB tables: ['atom', 'bond', 'molecule'])
+      ✗ b.molecule_id (invalid table, column in same DB tables: ['atom', 'bond', 'molecule'])
+      ✗ m.label (invalid table, column in same DB tables: ['molecule'])
+      ✗ b.bond_type (invalid table, column in same DB tables: ['bond'])
+  - Question 207:
+    Column correctness: 0.0%
+    Error types: {'column_in_same_db_other_table': 7}
+    SQL: SELECT DISTINCT t1.element FROM atom AS t1 INNER JOIN connected AS t2 ON t1.atom_id = t2.atom_id OR ...
+    Column details (first 5):
+      ✗ t3.bond_id (invalid table, column in same DB tables: ['bond', 'connected'])
+      ✗ t2.atom_id2 (invalid table, column in same DB tables: ['connected'])
+      ✗ t2.bond_id (invalid table, column in same DB tables: ['bond', 'connected'])
+      ✗ t1.element (invalid table, column in same DB tables: ['atom'])
+      ✗ t2.atom_id (invalid table, column in same DB tables: ['atom', 'connected'])
+
+Database: card_games
+------------------------------
+Total queries: 29
+Table correctness: 100.00%
+Column correctness: 65.08%
+UNION usage: 0.00%
+
+Column Error Analysis (25 total errors):
+  - fictional_column_valid_table: 13 errors (52.0%)
+  - invalid_table_fictional_column: 6 errors (24.0%)
+  - column_in_same_db_other_table: 6 errors (24.0%)
+
+Sample Problematic Queries:
+  - Question 352:
+    Column correctness: 0.0%
+    Error types: {'invalid_table_fictional_column': 1, 'column_in_same_db_other_table': 1}
+    SQL: SELECT (SUM(IIF(t.language = 'Chinese Simplified', 1, 0)) * 100.0 / COUNT(*)) AS percentage FROM for...
+    Column details (first 5):
+      ✗ 100.0 (invalid table + fictional column)
+      ✗ t.language (invalid table, column in same DB tables: ['foreign_data', 'set_translations'])
+  - Question 414:
+    Column correctness: 0.0%
+    Error types: {'column_in_same_db_other_table': 3, 'invalid_table_fictional_column': 2}
+    SQL: SELECT DISTINCT t2.language FROM sets AS t1 INNER JOIN set_translations AS t2 ON t1.code = t2.setcod...
+    Column details (first 5):
+      ✗ t1.block (invalid table, column in same DB tables: ['sets'])
+      ✗ t1.code (invalid table, column in same DB tables: ['sets'])
+      ✗ t1.basesetsize (invalid table + fictional column)
+      ✗ t2.language (invalid table, column in same DB tables: ['foreign_data', 'set_translations'])
+      ✗ t2.setcode (invalid table + fictional column)
+  - Question 431:
+    Column correctness: 0.0%
+    Error types: {'invalid_table_fictional_column': 2, 'column_in_same_db_other_table': 3}
+    SQL: SELECT s.id FROM sets AS s JOIN foreign_data AS fd ON s.id = fd.id WHERE s.isforeignonly = 0 AND s.i...
+    Column details (first 5):
+      ✗ s.isfoilonly (invalid table + fictional column)
+      ✗ fd.id (invalid table, column in same DB tables: ['cards', 'foreign_data', 'legalities', 'sets', 'set_translations', 'rulings'])
+      ✗ fd.language (invalid table, column in same DB tables: ['foreign_data', 'set_translations'])
+      ✗ s.id (invalid table, column in same DB tables: ['cards', 'foreign_data', 'legalities', 'sets', 'set_translations', 'rulings'])
+      ✗ s.isforeignonly (invalid table + fictional column)
+
+Database: codebase_community
+------------------------------
+Total queries: 24
+Table correctness: 92.36%
+Column correctness: 20.83%
+UNION usage: 0.00%
+
+Column Error Analysis (37 total errors):
+  - column_in_other_db: 18 errors (48.6%)
+  - invalid_table_fictional_column: 9 errors (24.3%)
+  - fictional_column_valid_table: 10 errors (27.0%)
+
+Sample Problematic Queries:
+  - Question 555:
+    Column correctness: 0.0%
+    Error types: {'column_in_other_db': 1, 'invalid_table_fictional_column': 3}
+    SQL: SELECT AVG(p.score) FROM posts AS p JOIN users AS u ON p.owneruserid = u.id WHERE u.displayname = 'c...
+    Column details (first 5):
+      ✗ u.id (invalid table, column in other DBs: ['card_games', 'european_football_2', 'superhero'])
+      ✗ p.score (invalid table + fictional column)
+      ✗ u.displayname (invalid table + fictional column)
+      ✗ p.owneruserid (invalid table + fictional column)
+  - Question 556:
+    Column correctness: 0.0%
+    Error types: {'column_in_other_db': 1, 'invalid_table_fictional_column': 3}
+    SQL: SELECT CAST(SUM(t2.badgecount) AS REAL) / COUNT(t1.id) AS averagebadges FROM users AS t1 INNER JOIN ...
+    Column details (first 5):
+      ✗ t1.id (invalid table, column in other DBs: ['card_games', 'european_football_2', 'superhero'])
+      ✗ t2.userid (invalid table + fictional column)
+      ✗ t1.views (invalid table + fictional column)
+      ✗ t2.badgecount (invalid table + fictional column)
+  - Question 563:
+    Column correctness: 0.0%
+    Error types: {'fictional_column_valid_table': 4, 'column_in_other_db': 1}
+    SQL: SELECT posts.favoritecount FROM posts INNER JOIN comments ON posts.id = comments.postid WHERE commen...
+    Column details (first 5):
+      ✗ comments.postid (valid table but fictional column)
+      ✗ comments.creationdate (valid table but fictional column)
+      ✗ posts.id (valid table, column in other DBs: ['card_games', 'european_football_2', 'superhero'])
+      ✗ posts.favoritecount (valid table but fictional column)
+      ✗ comments.userid (valid table but fictional column)
+
+Database: superhero
+------------------------------
+Total queries: 30
+Table correctness: 100.00%
+Column correctness: 64.59%
+UNION usage: 0.00%
+
+Column Error Analysis (12 total errors):
+  - column_in_same_db_other_table: 12 errors (100.0%)
+
+Sample Problematic Queries:
+  - Question 743:
+    Column correctness: 0.0%
+    Error types: {'column_in_same_db_other_table': 7}
+    SQL: SELECT CAST(SUM(CASE WHEN t2.alignment = 'Bad' THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(t1.id) AS b...
+    Column details (first 5):
+      ✗ t3.publisher_name (invalid table, column in same DB tables: ['publisher'])
+      ✗ t3.id (invalid table, column in same DB tables: ['alignment', 'attribute', 'colour', 'gender', 'publisher', 'race', 'superhero', 'superpower'])
+      ✗ t2.id (invalid table, column in same DB tables: ['alignment', 'attribute', 'colour', 'gender', 'publisher', 'race', 'superhero', 'superpower'])
+      ✗ t1.id (invalid table, column in same DB tables: ['alignment', 'attribute', 'colour', 'gender', 'publisher', 'race', 'superhero', 'superpower'])
+      ✗ t1.publisher_id (invalid table, column in same DB tables: ['superhero'])
+  - Question 769:
+    Column correctness: 0.0%
+    Error types: {'column_in_same_db_other_table': 19}
+    SQL: SELECT s.superhero_name FROM superhero AS s INNER JOIN hero_attribute AS ha ON s.id = ha.hero_id INN...
+    Column details (first 5):
+      ✗ ha.hero_id (invalid table, column in same DB tables: ['hero_attribute', 'hero_power'])
+      ✗ s.id (invalid table, column in same DB tables: ['alignment', 'attribute', 'colour', 'gender', 'publisher', 'race', 'superhero', 'superpower'])
+      ✗ ha2.hero_id (invalid table, column in same DB tables: ['hero_attribute', 'hero_power'])
+      ✗ ha.attribute_id (invalid table, column in same DB tables: ['hero_attribute'])
+      ✗ ha2.attribute_id (invalid table, column in same DB tables: ['hero_attribute'])
+  - Question 770:
+    Column correctness: 0.0%
+    Error types: {'column_in_same_db_other_table': 4}
+    SQL: SELECT t2.colour FROM superhero AS t1 INNER JOIN colour AS t2 ON t1.eye_colour_id = t2.id WHERE t1.f...
+    Column details (first 5):
+      ✗ t1.eye_colour_id (invalid table, column in same DB tables: ['superhero'])
+      ✗ t2.id (invalid table, column in same DB tables: ['alignment', 'attribute', 'colour', 'gender', 'publisher', 'race', 'superhero', 'superpower'])
+      ✗ t2.colour (invalid table, column in same DB tables: ['colour'])
+      ✗ t1.full_name (invalid table, column in same DB tables: ['superhero'])
+
+Database: formula_1
+------------------------------
+Total queries: 29
+Table correctness: 80.46%
+Column correctness: 36.28%
+UNION usage: 0.00%
+
+Column Error Analysis (44 total errors):
+  - invalid_table_fictional_column: 18 errors (40.9%)
+  - column_in_same_db_other_table: 17 errors (38.6%)
+  - fictional_column_valid_table: 9 errors (20.5%)
+
+Sample Problematic Queries:
+  - Question 880:
+    Column correctness: 0.0%
+    Error types: {'invalid_table_fictional_column': 2}
+    SQL: SELECT ((r853.fastestlapspeed - r854.fastestlapspeed) / r853.fastestlapspeed) * 100 AS percentage_di...
+    Column details (first 5):
+      ✗ r854.fastestlapspeed (invalid table + fictional column)
+      ✗ r853.fastestlapspeed (invalid table + fictional column)
+  - Question 881:
+    Column correctness: 0.0%
+    Error types: {'invalid_table_fictional_column': 3, 'column_in_same_db_other_table': 2}
+    SQL: SELECT CAST(SUM(CASE WHEN NOT t2.time IS NULL THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(t2.driverid)...
+    Column details (first 5):
+      ✗ t2.driverid (invalid table + fictional column)
+      ✗ t2.raceid (invalid table + fictional column)
+      ✗ t1.date (invalid table, column in same DB tables: ['races'])
+      ✗ t2.time (invalid table, column in same DB tables: ['races', 'lapTimes', 'pitStops', 'results'])
+      ✗ t1.raceid (invalid table + fictional column)
+  - Question 894:
+    Column correctness: 37.5%
+    Error types: {'invalid_table_fictional_column': 2, 'column_in_same_db_other_table': 1, 'fictional_column_valid_table': 2}
+    SQL: SELECT drivers.forename, drivers.surname, races.name FROM laptimes INNER JOIN drivers ON laptimes.dr...
+    Column details (first 5):
+      ✓ drivers.forename
+      ✓ races.name
+      ✗ laptimes.driverid (invalid table + fictional column)
+      ✓ drivers.surname
+      ✗ laptimes.milliseconds (invalid table, column in same DB tables: ['lapTimes', 'pitStops', 'results'])
+
+Database: thrombosis_prediction
+------------------------------
+Total queries: 31
+Table correctness: 0.00%
+Column correctness: 9.68%
+UNION usage: 0.00%
+
+Column Error Analysis (52 total errors):
+  - invalid_table_fictional_column: 26 errors (50.0%)
+  - column_in_other_db: 26 errors (50.0%)
+
+Sample Problematic Queries:
+  - Question 1161:
+    Column correctness: 0.0%
+    Error types: {'invalid_table_fictional_column': 1, 'column_in_other_db': 3}
+    SQL: SELECT AVG(examination."aCL IgG") AS average_acl_igg FROM patient INNER JOIN examination ON patient....
+    Column details (first 5):
+      ✗ patient.admission (invalid table + fictional column)
+      ✗ examination.id (invalid table, column in other DBs: ['card_games', 'european_football_2', 'superhero'])
+      ✗ patient.birthday (invalid table, column in other DBs: ['european_football_2'])
+      ✗ patient.id (invalid table, column in other DBs: ['card_games', 'european_football_2', 'superhero'])
+  - Question 1166:
+    Column correctness: 0.0%
+    Error types: {'column_in_other_db': 3, 'invalid_table_fictional_column': 2}
+    SQL: SELECT examination.symptoms, examination.diagnosis FROM patient INNER JOIN examination ON patient.id...
+    Column details (first 5):
+      ✗ examination.id (invalid table, column in other DBs: ['card_games', 'european_football_2', 'superhero'])
+      ✗ patient.id (invalid table, column in other DBs: ['card_games', 'european_football_2', 'superhero'])
+      ✗ examination.symptoms (invalid table + fictional column)
+      ✗ examination.diagnosis (invalid table + fictional column)
+      ✗ patient.birthday (invalid table, column in other DBs: ['european_football_2'])
+  - Question 1168:
+    Column correctness: 0.0%
+    Error types: {'column_in_other_db': 4, 'invalid_table_fictional_column': 1}
+    SQL: SELECT l.date AS labcompletiondate, CAST(STRFTIME('%Y', p."First Date") AS INTEGER) - CAST(STRFTIME(...
+    Column details (first 5):
+      ✗ p.id (invalid table, column in other DBs: ['card_games', 'european_football_2', 'superhero'])
+      ✗ l.id (invalid table, column in other DBs: ['card_games', 'european_football_2', 'superhero'])
+      ✗ l.date (invalid table, column in other DBs: ['financial', 'formula_1', 'card_games', 'european_football_2'])
+      ✗ p.diagnosis (invalid table + fictional column)
+      ✗ p.birthday (invalid table, column in other DBs: ['european_football_2'])
+
+Database: student_club
+------------------------------
+Total queries: 27
+Table correctness: 100.00%
+Column correctness: 66.67%
+UNION usage: 0.00%
+
+Column Error Analysis (9 total errors):
+  - column_in_same_db_other_table: 9 errors (100.0%)
+
+Sample Problematic Queries:
+  - Question 1332:
+    Column correctness: 0.0%
+    Error types: {'column_in_same_db_other_table': 6}
+    SQL: SELECT SUM(b.spent) AS total_spent_on_food FROM event AS e INNER JOIN budget AS b ON e.event_id = b....
+    Column details (first 5):
+      ✗ e.event_date (invalid table, column in same DB tables: ['event'])
+      ✗ b.link_to_event (invalid table, column in same DB tables: ['attendance', 'budget'])
+      ✗ e.event_id (invalid table, column in same DB tables: ['event'])
+      ✗ b.category (invalid table, column in same DB tables: ['budget'])
+      ✗ e.event_name (invalid table, column in same DB tables: ['event'])
+  - Question 1359:
+    Column correctness: 0.0%
+    Error types: {'column_in_same_db_other_table': 5}
+    SQL: SELECT (SUM(CASE WHEN t1.event_name = 'Yearly Kickoff' THEN t2.amount ELSE 0 END) / SUM(CASE WHEN t1...
+    Column details (first 5):
+      ✗ t2.link_to_event (invalid table, column in same DB tables: ['attendance', 'budget'])
+      ✗ t2.category (invalid table, column in same DB tables: ['budget'])
+      ✗ t2.amount (invalid table, column in same DB tables: ['budget', 'income'])
+      ✗ t1.event_id (invalid table, column in same DB tables: ['event'])
+      ✗ t1.event_name (invalid table, column in same DB tables: ['event'])
+  - Question 1376:
+    Column correctness: 0.0%
+    Error types: {'column_in_same_db_other_table': 6}
+    SQL: SELECT e.event_name FROM event AS e INNER JOIN budget AS b ON e.event_id = b.link_to_event WHERE e.s...
+    Column details (first 5):
+      ✗ b.link_to_event (invalid table, column in same DB tables: ['attendance', 'budget'])
+      ✗ b.amount (invalid table, column in same DB tables: ['budget', 'income'])
+      ✗ e.event_id (invalid table, column in same DB tables: ['event'])
+      ✗ e.status (invalid table, column in same DB tables: ['event'])
+      ✗ e.event_name (invalid table, column in same DB tables: ['event'])
+
+Database: debit_card_specializing
+------------------------------
+Total queries: 22
+Table correctness: 94.03%
+Column correctness: 27.27%
+UNION usage: 0.00%
+
+Column Error Analysis (28 total errors):
+  - column_in_other_db: 11 errors (39.3%)
+  - invalid_table_fictional_column: 13 errors (46.4%)
+  - fictional_column_valid_table: 4 errors (14.3%)
+
+Sample Problematic Queries:
+  - Question 1473:
+    Column correctness: 0.0%
+    Error types: {'column_in_other_db': 1, 'invalid_table_fictional_column': 4}
+    SQL: SELECT AVG(y.consumption) / 12 AS averagemonthlyconsumption FROM yearmonth AS y INNER JOIN customers...
+    Column details (first 5):
+      ✗ y.date (invalid table, column in other DBs: ['financial', 'formula_1', 'card_games', 'european_football_2'])
+      ✗ c.customerid (invalid table + fictional column)
+      ✗ c.segment (invalid table + fictional column)
+      ✗ y.customerid (invalid table + fictional column)
+      ✗ y.consumption (invalid table + fictional column)
+  - Question 1476:
+    Column correctness: 0.0%
+    Error types: {'fictional_column_valid_table': 4, 'column_in_other_db': 1}
+    SQL: SELECT SUM(CASE WHEN customers.currency = 'CZK' THEN yearmonth.consumption ELSE 0 END) - SUM(CASE WH...
+    Column details (first 5):
+      ✗ customers.currency (valid table but fictional column)
+      ✗ yearmonth.consumption (valid table but fictional column)
+      ✗ yearmonth.date (valid table, column in other DBs: ['financial', 'formula_1', 'card_games', 'european_football_2'])
+      ✗ customers.customerid (valid table but fictional column)
+      ✗ yearmonth.customerid (valid table but fictional column)
+  - Question 1481:
+    Column correctness: 0.0%
+    Error types: {'column_in_other_db': 1, 'invalid_table_fictional_column': 12}
+    SQL: WITH filtered_data AS (SELECT c.segment, y.consumption FROM yearmonth AS y INNER JOIN customers AS c...
+    Column details (first 5):
+      ✗ y.date (invalid table, column in other DBs: ['financial', 'formula_1', 'card_games', 'european_football_2'])
+      ✗ c.currency (invalid table + fictional column)
+      ✗ t.totalconsumption (invalid table + fictional column)
+      ✗ s.segment (invalid table + fictional column)
+      ✗ c.customerid (invalid table + fictional column)
+
+============================================================
+STATISTICS BY DIFFICULTY:
+========================================
+
+Difficulty: simple
+--------------------
+Total queries: 91
+Table correctness: 86.81%
+Column correctness: 57.40%
+UNION usage: 0.00%
+
+Error Analysis:
+  - fictional_column_valid_table: 18 errors (24.7%)
+  - column_in_other_db: 16 errors (21.9%)
+  - invalid_table_fictional_column: 25 errors (34.2%)
+  - column_in_same_db_other_table: 14 errors (19.2%)
+
+Difficulty: moderate
+--------------------
+Total queries: 91
+Table correctness: 86.81%
+Column correctness: 40.47%
+UNION usage: 0.00%
+
+Error Analysis:
+  - invalid_table_fictional_column: 32 errors (32.0%)
+  - column_in_other_db: 24 errors (24.0%)
+  - column_in_same_db_other_table: 25 errors (25.0%)
+  - fictional_column_valid_table: 19 errors (19.0%)
+
+Difficulty: challenging
+--------------------
+Total queries: 89
+Table correctness: 81.67%
+Column correctness: 36.88%
+UNION usage: 1.12%
+
+Error Analysis:
+  - invalid_table_fictional_column: 33 errors (33.7%)
+  - column_in_same_db_other_table: 28 errors (28.6%)
+  - fictional_column_valid_table: 16 errors (16.3%)
+  - column_in_other_db: 21 errors (21.4%)

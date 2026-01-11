@@ -1,0 +1,33 @@
+nohup: ignoring input
+starting to compare for ex
+Filtered SQL keys count: 1534
+Filtered SQL keys count: 1534
+Detailed execution results saved to: ./exp_result/bird_rsl_7b/execution_results.json
+Detailed statistics saved to: ./exp_result/bird_rsl_7b/detailed_statistics.txt
+Detailed comparison saved to: ./exp_result/bird_rsl_7b/detailed_comparison.csv
+path:  ./exp_result/bird_rsl_7b/vis
+Accuracy analysis plot saved to: ./exp_result/bird_rsl_7b/vis/accuracy_analysis.png
+Accuracy statistics saved to: ./exp_result/bird_rsl_7b/vis/accuracy_statistics.json
+start calculate
+                     simple               moderate             challenging          total               
+count                925                  464                  145                  1534                
+======================================    ACCURACY    =====================================
+accuracy             73.19                55.82                54.48                66.17               
+===========================================================================================
+Finished evaluation
+starting to compare for ves
+./exp_result/bird_rsl_7b/vis
+Filtered SQL keys count: 1534
+Filtered SQL keys count: 1534
+Found 11 databases in results: ['california_schools', 'financial', 'toxicology', 'card_games', 'codebase_community', 'superhero', 'formula_1', 'european_football_2', 'thrombosis_prediction', 'student_club', 'debit_card_specializing']
+Time distribution plot saved to: ./exp_result/bird_rsl_7b/vis/time_distribution.png
+Time statistics saved to: ./exp_result/bird_rsl_7b/vis/time_statistics.json
+Advanced time analysis plot saved to: ./exp_result/bird_rsl_7b/vis/advanced_time_analysis.png
+Total databases analyzed: 11
+start calculate
+                     simple               moderate             challenging          total               
+count                925                  464                  145                  1534                
+=========================================    VES   ========================================
+ves                  80.02                59.44                55.49                71.48               
+===========================================================================================
+Finished evaluation

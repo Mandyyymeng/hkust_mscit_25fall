@@ -1,0 +1,71 @@
+{
+  "database_performance": {
+    "california_schools": {
+      "total": 89,
+      "correct": 47,
+      "accuracy": 52.80898876404494
+    },
+    "financial": {
+      "total": 106,
+      "correct": 70,
+      "accuracy": 66.0377358490566
+    },
+    "toxicology": {
+      "total": 145,
+      "correct": 90,
+      "accuracy": 62.06896551724138
+    },
+    "card_games": {
+      "total": 189,
+      "correct": 114,
+      "accuracy": 60.317460317460316
+    },
+    "codebase_community": {
+      "total": 186,
+      "correct": 135,
+      "accuracy": 72.58064516129032
+    },
+    "superhero": {
+      "total": 129,
+      "correct": 113,
+      "accuracy": 87.59689922480621
+    },
+    "formula_1": {
+      "total": 174,
+      "correct": 99,
+      "accuracy": 56.896551724137936
+    },
+    "thrombosis_prediction": {
+      "total": 163,
+      "correct": 96,
+      "accuracy": 58.895705521472394
+    },
+    "student_club": {
+      "total": 158,
+      "correct": 129,
+      "accuracy": 81.64556962025317
+    },
+    "debit_card_specializing": {
+      "total": 64,
+      "correct": 40,
+      "accuracy": 62.5
+    }
+  },
+  "difficulty_performance": {
+    "simple": {
+      "total": 859,
+      "correct": 636,
+      "accuracy": 74.0395809080326
+    },
+    "moderate": {
+      "total": 413,
+      "correct": 228,
+      "accuracy": 55.205811138014525
+    },
+    "challenging": {
+      "total": 131,
+      "correct": 69,
+      "accuracy": 52.67175572519084
+    }
+  }
+}
